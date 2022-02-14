@@ -7,6 +7,7 @@ https://github.com/shingha1124/swift-photoframe
 
 | 날짜       | 번호 | 내용                     | 비고                                                         |
 | ---------- | :--- | ------------------------ | ------------------------------------------------------------ |
+| 2022.02.14 | PF-4 | ViewController 연결하기  | 뷰 컨트롤러 클래스를 생성하고, Scene에 연결하여 동작하도록 한다 |
 | 2022.02.14 | PF-3 | Scene을 Segue로 연결하기 | 스토리보드에 Scene을 생성하고, 버튼이벤트를 통해 연결해본다. |
 |            | PF-2 | IBOutlet 연결하기        | 스토리보드에서 IBOutlet을 연결해본다                         |
 |            |      | IBAction 연결하기        | 스토리보드에서 IBAction을 연결해본다                         |
@@ -14,7 +15,106 @@ https://github.com/shingha1124/swift-photoframe
 |            |      | 탭바 컨트롤러 추가       | 1. 기존 생성된 ViewController 대신 TabBarController로 변경<br />2. 새로운 뷰를 추가하여 메뉴 추가<br />3. 확인 로그 출력 |
 |            |      |                          |                                                              |
 
+------
 
+## [PF-4] ViewController 연결하기
+
+### 요구사항
+
+- [x] 스토리보드 구성요소와 클래스 코드를 연결해서 동작을 확장한다.
+  - [x] ColorView1, 2 클래스 생성
+  - [x] 기존에 생성한 컬러뷰 두개를 연결한다
+
+- [x] 닫기버튼 구현
+  - [x] 닫기버튼 추가
+  - [x] 닫기버튼 이벤트 연결
+  - [x] 닫기 버튼 기능 구현
+
+- [x] 뷰 컨트롤러 콜백함수를 생성하고 로그 출력
+
+### 학습키워드
+
+* ViewController
+
+
+
+### 고민과 해결
+
+
+
+### 구현과정
+
+1. 컬러뷰에 사용할 클래스 2개 제작한다.
+
+2. 생성한 클래스를 각각 뷰에 연결시킨다
+
+   ![스크린샷 2022-02-14 오후 10 07 18](https://user-images.githubusercontent.com/5019378/153869913-676d0698-95d8-4117-bc38-e4fe6c31fa40.png)
+
+3. 컬러뷰에 닫기버튼을 생성한다
+
+   1. 버튼생성은 아래에서 많이 해봤으므로 설명은 생략한다!
+
+4. 버튼에 이벤트를 연결한다
+
+   1. 버튼 이벤트도 많이 해봤으므로 설명은 생략한다!
+
+5. 생성한 이벤트가 발생하면 해당 뷰를 닫는 코드를 작성한다
+
+   ```swift
+   @IBAction func closeButtonTouched(_ sender: Any) {
+     self.dismiss(animated: true, completion: nil)
+   }
+   ```
+
+6. ViewController의 콜백함수를 등록하고 로그를 찍어 어떤 순서로 호출되는지 파악한다
+
+   ```swift
+   class ColorView1: UIViewController {
+       
+       override func viewDidLoad() {
+           print(#file, #line, #function, #column)
+       }
+       
+       override func viewWillAppear(_ animated: Bool) {
+           print(#file, #line, #function, #column)
+       }
+       
+       override func viewDidAppear(_ animated: Bool) {
+           print(#file, #line, #function, #column)
+       }
+       
+       override func viewWillDisappear(_ animated: Bool) {
+           print(#file, #line, #function, #column)
+       }
+       
+       override func viewDidDisappear(_ animated: Bool) {
+           print(#file, #line, #function, #column)
+       }
+   
+       @IBAction func closeButtonTouched(_ sender: Any) {
+           self.dismiss(animated: true, completion: nil)
+       }
+   }
+   ```
+
+7. 결과화면
+
+   ![Simulator Screen Recording - iPhone 12 - 2022-02-14 at 22 10 53](https://user-images.githubusercontent.com/5019378/153870679-f8191796-4411-4834-b6a6-8fe86afcde97.gif)
+
+   ```
+   PhotoFrame/PhotoFrame/Sources/Presentation/ColorView1/ColorView1.swift 13 viewDidLoad() 40
+   PhotoFrame/PhotoFrame/Sources/Presentation/ColorView1/ColorView1.swift 17 viewWillAppear(_:) 40
+   PhotoFrame/PhotoFrame/Sources/Presentation/ColorView1/ColorView1.swift 21 viewDidAppear(_:) 40
+   PhotoFrame/PhotoFrame/Sources/Presentation/ColorView2/ColorView2.swift 14 viewDidLoad() 40
+   PhotoFrame/PhotoFrame/Sources/Presentation/ColorView2/ColorView2.swift 18 viewWillAppear(_:) 40
+   PhotoFrame/PhotoFrame/Sources/Presentation/ColorView2/ColorView2.swift 22 viewDidAppear(_:) 40
+   PhotoFrame/PhotoFrame/Sources/Presentation/ColorView2/ColorView2.swift 26 viewWillDisappear(_:) 40
+   PhotoFrame/PhotoFrame/Sources/Presentation/ColorView2/ColorView2.swift 30 viewDidDisappear(_:) 40
+   PhotoFrame/PhotoFrame/Sources/Presentation/ColorView1/ColorView1.swift 25 viewWillDisappear(_:) 40
+   PhotoFrame/PhotoFrame/Sources/Presentation/ColorView1/ColorView1.swift 29 viewDidDisappear(_:) 40
+   ```
+
+   
 
 ------
 
