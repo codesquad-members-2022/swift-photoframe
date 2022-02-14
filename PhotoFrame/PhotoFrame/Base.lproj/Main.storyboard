@@ -35,22 +35,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="First View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qeC-WM-Po3">
-                                <rect key="frame" x="84" y="412" width="247" height="72"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First View" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qeC-WM-Po3">
+                                <rect key="frame" x="144" y="430" width="126" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PN4-29-WSY"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <constraints>
+                            <constraint firstItem="qeC-WM-Po3" firstAttribute="centerX" secondItem="8HV-tI-Tik" secondAttribute="centerX" id="1jt-1I-DwI"/>
+                            <constraint firstItem="qeC-WM-Po3" firstAttribute="centerY" secondItem="8HV-tI-Tik" secondAttribute="centerY" id="IqK-IW-DwS"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="blue" image="cloud" catalog="system" id="9yc-jF-uJi"/>
+                    <connections>
+                        <outlet property="firstLabel" destination="qeC-WM-Po3" id="xfU-BS-UbN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qCD-Fm-gwn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1014" y="-386"/>
+            <point key="canvasLocation" x="1013.0434782608696" y="-386.38392857142856"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="z2t-jV-vW8">
