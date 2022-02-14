@@ -5,15 +5,63 @@ https://github.com/shingha1124/swift-photoframe
 
 # 작업내역
 
-| 날짜       | 번호 | 내용                     | 비고                                                         |
-| ---------- | :--- | ------------------------ | ------------------------------------------------------------ |
-| 2022.02.14 | PF-4 | ViewController 연결하기  | 뷰 컨트롤러 클래스를 생성하고, Scene에 연결하여 동작하도록 한다 |
-| 2022.02.14 | PF-3 | Scene을 Segue로 연결하기 | 스토리보드에 Scene을 생성하고, 버튼이벤트를 통해 연결해본다. |
-|            | PF-2 | IBOutlet 연결하기        | 스토리보드에서 IBOutlet을 연결해본다                         |
-|            |      | IBAction 연결하기        | 스토리보드에서 IBAction을 연결해본다                         |
-|            | PF-1 | 프로젝트 생성            | Fork를 하고, 로컬에 Clone<br />iOS app 템플릿으로 생성       |
-|            |      | 탭바 컨트롤러 추가       | 1. 기존 생성된 ViewController 대신 TabBarController로 변경<br />2. 새로운 뷰를 추가하여 메뉴 추가<br />3. 확인 로그 출력 |
-|            |      |                          |                                                              |
+| 날짜       | 번호 | 내용                              | 비고                                                         |
+| ---------- | :--- | --------------------------------- | ------------------------------------------------------------ |
+| 2022.02.14 | PF-5 | Container ViewController 활용하기 |                                                              |
+|            | PF-4 | ViewController 연결하기           | 뷰 컨트롤러 클래스를 생성하고, Scene에 연결하여 동작하도록 한다 |
+|            | PF-3 | Scene을 Segue로 연결하기          | 스토리보드에 Scene을 생성하고, 버튼이벤트를 통해 연결해본다. |
+|            | PF-2 | IBOutlet 연결하기                 | 스토리보드에서 IBOutlet을 연결해본다                         |
+|            |      | IBAction 연결하기                 | 스토리보드에서 IBAction을 연결해본다                         |
+|            | PF-1 | 프로젝트 생성                     | Fork를 하고, 로컬에 Clone<br />iOS app 템플릿으로 생성       |
+|            |      | 탭바 컨트롤러 추가                | 1. 기존 생성된 ViewController 대신 TabBarController로 변경<br />2. 새로운 뷰를 추가하여 메뉴 추가<br />3. 확인 로그 출력 |
+|            |      |                                   |                                                              |
+
+------
+
+## [PF-5] Container ViewController 활용하기
+
+### 요구사항
+
+- [x] First Scene의 Embed를 Navigation Controller 항목으로 변경한다
+- [x] 기존 구현한 닫기버튼의 코드를 수정한다.
+
+### 학습키워드
+
+* ViewController, Navigation Bar
+
+
+
+### 고민과 해결
+
+
+
+### 구현과정
+
+1. First Scene을 선택하고 메뉴에서 editor > Embed In > Navigation Controller항목을 선택한다
+
+   ![스크린샷 2022-02-14 오후 10 39 08](https://user-images.githubusercontent.com/5019378/153874674-2db83e26-5caa-40bb-97a8-416d3cf04bf4.png)
+
+2. 기존에 구현한 닫기버튼의 코드를 수정한다
+
+   ```swift
+   @IBAction func closeButtonTouched(_ sender: Any) {
+     self.navigationController?.popViewController(animated: true)
+   }
+   ```
+
+   
+
+3. 동작을 확인한다
+
+   ![Simulator Screen Recording - iPhone 12 - 2022-02-14 at 22 41 16](https://user-images.githubusercontent.com/5019378/153875150-6849b13f-6bb9-46ea-8b68-c73636c5a858.gif)
+
+### 추가학습거리
+
+- 뷰컨트롤러 컨테이너는 또 어떤 클래스가 있는지 찾아보고 학습한다.
+- 내비게이션 컨트롤러가 있을 경우와 없을 경우 화면 전환 동작이 어떻게 다른지, 화면들 포함관계가 있는지 학습한다.
+- 내비게이션 컨트롤러 관련 메서드가 왜 push / pop 인지 학습한다.
+
+
 
 ------
 
