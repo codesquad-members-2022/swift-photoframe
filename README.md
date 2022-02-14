@@ -37,6 +37,22 @@ https://github.com/shingha1124/swift-photoframe
 
 
 
+### 학습 키워드
+
+- storyBoard, TabBarController, ViewController, Entry Point, Segue
+
+### 고민과 해결
+
+- 기존에는 UI를 만들때 모두 코드로만 작성을 했었다. 
+  처음으로 StroyBoard를 사용해보니 어느부분을 만져야 원하는 결과가 나오는지 헤멨다. 
+- Main.stroyboard 를 TabBarController로 변경하는 부분에서 조금 헤멨다.
+  - Editor -> Embed in -> Tab Bar Controller로 변경하는 과정
+  - UIViewController가 사라지고 Scene의 메뉴가 변경되었다.
+  - 1개의 메뉴는 자동으로 추가가 되었지만 두번째는 어떻게 추가하는지 몰랐다.
+  - 구글링을 통해 제작방법을 찾아서 만들고, ViewController을 연결하여 마무리 했다
+
+
+
 ### 프로젝트 생성 및 Git 연결
 
 1. Git Fork를 해서 내 레피지토리로 가져온다.
