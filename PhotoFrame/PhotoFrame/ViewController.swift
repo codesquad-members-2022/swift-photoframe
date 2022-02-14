@@ -18,6 +18,7 @@ class ViewController: UIViewController {
         view.backgroundColor = .systemTeal
         
         photoLabel.translatesAutoresizingMaskIntoConstraints = false
+        firstDescription.translatesAutoresizingMaskIntoConstraints = false
         
         photoLabel.text = "Mase의 사진액자"
         photoLabel.textColor = .systemBlue
@@ -28,5 +29,16 @@ class ViewController: UIViewController {
         
         photoLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         photoLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        
+        
+        firstDescription.text = "첫 번째 Scene"
+        firstDescription.textColor = .systemBlue
+        firstDescription.font = firstDescription.font.withSize(CGFloat(20.0))
+        firstDescription.textAlignment = .center
+        firstDescription.backgroundColor = .systemGray6
+        firstDescription.alpha = 0.7
+        
+        firstDescription.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        firstDescription.centerYAnchor.constraint(equalTo: photoLabel.bottomAnchor, constant: 50).isActive = true
     }
 }
