@@ -12,7 +12,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var photoLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(#file, #line, #function, #column)
+        self.photoLabel.text = "Sol의 Label"
+        self.photoLabel.textColor = .systemBackground
+        self.photoLabel.backgroundColor = .systemGray
+        self.photoLabel.alpha = 0.5
+        self.photoLabel.font = .systemFont(ofSize: 70)
     }
 
 
