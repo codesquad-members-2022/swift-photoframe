@@ -13,6 +13,7 @@
 		E496DA7527B9EF18004D486A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E496DA7327B9EF18004D486A /* Main.storyboard */; };
 		E496DA7727B9EF19004D486A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E496DA7627B9EF19004D486A /* Assets.xcassets */; };
 		E496DA7A27B9EF19004D486A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E496DA7827B9EF19004D486A /* LaunchScreen.storyboard */; };
+		E496DA8427BA5B48004D486A /* YellowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E496DA8327BA5B48004D486A /* YellowViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		E496DA7627B9EF19004D486A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E496DA7927B9EF19004D486A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E496DA7B27B9EF19004D486A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E496DA8327BA5B48004D486A /* YellowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				E496DA6D27B9EF18004D486A /* AppDelegate.swift */,
 				E496DA6F27B9EF18004D486A /* SceneDelegate.swift */,
 				E496DA7127B9EF18004D486A /* ViewController.swift */,
+				E496DA8327BA5B48004D486A /* YellowViewController.swift */,
 				E496DA7327B9EF18004D486A /* Main.storyboard */,
 				E496DA7627B9EF19004D486A /* Assets.xcassets */,
 				E496DA7827B9EF19004D486A /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E496DA8427BA5B48004D486A /* YellowViewController.swift in Sources */,
 				E496DA7227B9EF18004D486A /* ViewController.swift in Sources */,
 				E496DA6E27B9EF18004D486A /* AppDelegate.swift in Sources */,
 				E496DA7027B9EF18004D486A /* SceneDelegate.swift in Sources */,
