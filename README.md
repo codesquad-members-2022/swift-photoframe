@@ -36,3 +36,31 @@ iOS 포토프레임 프로젝트 저장소 by. Damagucci-Juice
 
 ![]()
 
+## Label을 생성하고 code와 연결
+```
+1. 스토리 보드 영역을 클릭한 채로 cmd + shift + l 을 눌러  객체 추가 창을 연다
+2. label을 검색해 원하는 scene에 드래그한다.
+3. 파일 탭 네비게이션 바 부분에서 "=" 코드처럼 생긴 기호룰 누른다. Assist mode
+4. 해당 Label을 ctrl 키를 누른 상태에서 클래스 내부에 프로퍼티로 선언하게끔 댕겨온다.
+5. viewDidLoad() 메서드 안에서 각종 설정을 수행한다.
+```
+
+## label의 property를 변경
+```
+class ViewController1 : UIViewController {
+ 
+    @IBOutlet weak var photoLabel: UILabel!
+    
+    @IBOutlet weak var detailDescription: UILabel!
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+        self.photoLabel.text = "Damagucci-Juice의 포토 프레임"    			// 글자 선언
+        self.photoLabel.font = UIFont.systemFont(ofSize: CGFloat(15))			// 폰트 사이즈
+        self.photoLabel.textColor = UIColor.blue					// 글자 색
+        self.photoLabel.backgroundColor = UIColor.darkGray.withAlphaComponent(0.5)	// 배경 색.투명도
+        
+    }
+}
+
+```
