@@ -24,10 +24,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xaK-1S-cG1">
-                                <rect key="frame" x="186.5" y="478.5" width="41.5" height="20.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="y58-Cn-CbV"/>
-                                </constraints>
+                                <rect key="frame" x="30" y="478.5" width="354" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -37,9 +34,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Gci-I5-6FZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Cdh-oe-zTi"/>
-                            <constraint firstItem="xaK-1S-cG1" firstAttribute="top" secondItem="Gci-I5-6FZ" secondAttribute="bottom" constant="20" id="CsG-qX-S3x"/>
-                            <constraint firstItem="xaK-1S-cG1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eqA-KN-ScW"/>
+                            <constraint firstItem="xaK-1S-cG1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="nCb-Yi-9vM"/>
                             <constraint firstItem="Gci-I5-6FZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="sfY-EC-bBk"/>
+                            <constraint firstItem="xaK-1S-cG1" firstAttribute="top" secondItem="Gci-I5-6FZ" secondAttribute="bottom" constant="20" id="tTS-JY-Fp7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xaK-1S-cG1" secondAttribute="trailing" constant="30" id="yU4-YW-dAo"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="36r-sk-bcE"/>
