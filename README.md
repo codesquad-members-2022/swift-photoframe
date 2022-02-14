@@ -5,13 +5,65 @@ https://github.com/shingha1124/swift-photoframe
 
 # 작업내역
 
-| 날짜       | 번호 | 내용               | 비고                                                         |
-| ---------- | :--- | ------------------ | ------------------------------------------------------------ |
-| 2022.02.14 | PF-2 | IBOutlet 연결하기  | 스토리보드에서 IBOutlet을 연결해본다                         |
-|            |      | IBAction 연결하기  | 스토리보드에서 IBAction을 연결해본다                         |
-|            | PF-1 | 프로젝트 생성      | Fork를 하고, 로컬에 Clone<br />iOS app 템플릿으로 생성       |
-|            |      | 탭바 컨트롤러 추가 | 1. 기존 생성된 ViewController 대신 TabBarController로 변경<br />2. 새로운 뷰를 추가하여 메뉴 추가<br />3. 확인 로그 출력 |
-|            |      |                    |                                                              |
+| 날짜       | 번호 | 내용                     | 비고                                                         |
+| ---------- | :--- | ------------------------ | ------------------------------------------------------------ |
+| 2022.02.14 | PF-3 | Scene을 Segue로 연결하기 | 스토리보드에 Scene을 생성하고, 버튼이벤트를 통해 연결해본다. |
+|            | PF-2 | IBOutlet 연결하기        | 스토리보드에서 IBOutlet을 연결해본다                         |
+|            |      | IBAction 연결하기        | 스토리보드에서 IBAction을 연결해본다                         |
+|            | PF-1 | 프로젝트 생성            | Fork를 하고, 로컬에 Clone<br />iOS app 템플릿으로 생성       |
+|            |      | 탭바 컨트롤러 추가       | 1. 기존 생성된 ViewController 대신 TabBarController로 변경<br />2. 새로운 뷰를 추가하여 메뉴 추가<br />3. 확인 로그 출력 |
+|            |      |                          |                                                              |
+
+
+
+------
+
+## [PF-3] Scene을 Segue로 연결하기
+
+### 요구사항
+
+- [x] 스토리보드에 새로운 Scene을 추가하고 Segue로 연결한다
+  - [x] 새로운 Scene 추가하기
+  - [x] 배경색 변경하기
+  - [x] 버튼 이벤트 연결하기
+
+### 학습키워드
+
+* Segue Actions
+
+
+
+### 고민과 해결
+
+
+
+### Scene을 Segue로 연결하기
+
+1. 스토리보드에 새로운 Scene을 추가한다
+
+   1. Command + shift + L 을 눌러 ViewController를 찾아서 드래그 앤 드롭으로 해당 뷰에 추가한다
+
+   2. 배경색을 변경한다
+
+      ![스크린샷 2022-02-14 오후 9 22 00](https://user-images.githubusercontent.com/5019378/153863505-d30eb2ec-46a1-4a2a-888f-f73dd09cd958.png)
+
+2. 기존에 생성한 버튼에서 ctrl + 우클릭 드래그로 위에서 생성한 Scene와 연결한다
+
+   1. Action Segue에서 Show를 선택한다.
+
+   ![스크린샷 2022-02-14 오후 9 22 45](https://user-images.githubusercontent.com/5019378/153863756-f435305c-e825-4cb8-aa55-f86a819f44ce.png)
+
+3. 위 과정을 한번 더 진행하여 Scene과 Button을 만들고 연결해준다
+
+   ![스크린샷 2022-02-14 오후 9 25 48](https://user-images.githubusercontent.com/5019378/153864078-4a7681e5-93fd-4769-bbb3-c0b9ee8caeda.png)
+
+   
+
+4. 결과
+
+   ![Simulator Screen Recording - iPhone 12 - 2022-02-14 at 21 29 22](https://user-images.githubusercontent.com/5019378/153865521-707ba0e0-5d12-4047-83cc-7eb4a3650bce.gif)
+
+   
 
 
 
@@ -31,7 +83,7 @@ https://github.com/shingha1124/swift-photoframe
 
 ### 학습 키워드
 
-- storyBoard, TabBarController, ViewController, Entry Point, Segue
+- IBOutlet, IBAction, action, outlet
 
 ### 고민과 해결
 
@@ -101,7 +153,13 @@ https://github.com/shingha1124/swift-photoframe
    }
    ```
 
-   
+4. 결과 스크린샷
+
+   ![스크린샷 2022-02-14 오후 8 40 39](https://user-images.githubusercontent.com/5019378/153857896-58e339dc-283b-4617-8668-f24fd4cb0938.png)
+
+
+
+
 
 ------
 
