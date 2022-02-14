@@ -9,6 +9,7 @@ import UIKit
 
 class FirstSceneViewController: UIViewController {
 
+<<<<<<< HEAD
     @IBOutlet weak var firstLabel: UILabel!
     @IBOutlet weak var firstDescription: UILabel!
     
@@ -32,6 +33,12 @@ class FirstSceneViewController: UIViewController {
         }()
         
         label.font = editFontSize
+=======
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        print(#file, #line, #function, #column)
+        // Do any additional setup after loading the view.
+>>>>>>> fc53ee0 (Convert InitialViewController as UITabBarController)
     }
     
 
