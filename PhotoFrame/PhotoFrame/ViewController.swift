@@ -9,10 +9,17 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    // MARK:- IBOutlet
+    @IBOutlet weak var firstLabel: UILabel!
+    @IBOutlet weak var firstDescription: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         print(#file, #line, #function, #column)
+        
+        self.firstLabel.text = "Rosa의 사진액자"
+        self.firstDescription.text = "잡다한 사진 저장소"
     }
 }
 

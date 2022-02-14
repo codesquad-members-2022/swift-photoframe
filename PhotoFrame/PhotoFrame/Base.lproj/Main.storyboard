@@ -43,6 +43,10 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="cMd-Aj-omU"/>
+                    <connections>
+                        <outlet property="firstDescription" destination="B6e-45-qLm" id="uJJ-60-gLj"/>
+                        <outlet property="firstLabel" destination="jlr-oM-uC5" id="kjr-NU-D2P"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
