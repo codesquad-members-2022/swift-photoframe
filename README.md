@@ -6,6 +6,7 @@ iOS 포토프레임 프로젝트 저장소
 ## 프로젝트 생성하기
 
 ### 기능 요구 사항
+
 > [x] 포토프레임 프로젝트 저장소를 본인 저장소로 fork하고 로컬에 clone한다.
 >
 > [x] iOS 프로젝트 중에 App 템플릿을 만들고, 프로젝트 이름을 "PhotoFrame"으로 지정하고, 위에 만든 로컬 저장소 경로에 생성한다.
@@ -13,7 +14,6 @@ iOS 포토프레임 프로젝트 저장소
 > [x] 스토리보드에서 TabBar Controller를 직접 추가한다.
 >
 > [x] 단계별로 미션을 해결하고 리뷰를 받고나면 readme.md 파일에 주요 작업 내용(바뀐 화면 이미지, 핵심 기능 설명)과 완성 날짜시간을 기록한다.
->
 
 ### 구현 과정
 1. 프로젝트 fork 후 내 저장소로 clone하기.
@@ -28,6 +28,7 @@ iOS 포토프레임 프로젝트 저장소
 
 ### 실행결과
 <img width="835" alt="스크린샷 2022-02-14 오전 11 29 08" src="https://user-images.githubusercontent.com/62687919/153795641-c85ae290-9cc7-4620-b38f-c17ddfa1903a.png">
+
 
 ### 추가문제
 TabBarViewController, UITabBar의 차이점 : TabBarViewController는 UITabBar를 View에 추가한 ViewController로 알고 있습니다. (ViewController를 상속)\
@@ -118,3 +119,4 @@ UIView를 상속받기에 이와 관련된 속성을 모두 사용할 수 있습
 
 
 ----
+
