@@ -1,4 +1,5 @@
 # iOS-사진 액자 앱
+
 ## 1. 프로젝트 생성하기
 
 ### 📌체크 리스트
@@ -78,3 +79,109 @@
 
 ---
 
+## 2. IBOutlet 연결하기
+
+### 📌체크 리스트
+
+- [x] First Scene의 `First View` UILabel을 IBOutlet으로 연결
+- [x] 연결한 아웃렛 변수에 값을 변경
+- [x] 실행한 화면을 캡쳐해서 README.md 파일에 포함
+
+---
+
+### 💻진행 과정
+
+1. First Scene에 새로운 UILabel을 생성하고 해당 UILabel을 ViewController 코드에 IBOutlet으로 연결했습니다.
+
+2. UILabel을 추가한 ViewController의 viewDidLoad() 메서드 내에 아래의 코드를 추가하여, 해당 아웃렛 변수의 글자색, 배경색, 투명도, 글자 크기를 수정했습니다.
+
+	```swift
+	// class ViewController
+	// override func viewDidLoad()
+	self.photoLabel.text = "Sol의 Label"
+	self.photoLabel.textColor = .systemBackground
+	self.photoLabel.backgroundColor = .systemGray
+	self.photoLabel.alpha = 0.5
+	self.photoLabel.font = .systemFont(ofSize: 70)
+	```
+
+	위의 코드를 추가하고 나서 앱을 실행시켰을 때 아래와 같은 변화를 볼 수 있습니다.
+
+	* 코드 추가 전
+
+		<img src="https://user-images.githubusercontent.com/92504186/153872095-202bf114-24ab-42bd-a50b-b89d2cec2465.jpg" alt="SS 2022-02-14 PM 10 18 50" width="20%;" />
+
+	* 코드 추가 후
+
+		<img src="https://user-images.githubusercontent.com/92504186/153872155-8ee917ca-92c2-4d39-bf0b-d8ad9f64e2a2.jpg" alt="SS 2022-02-14 PM 10 22 13" width="20%;" />
+
+
+
+---
+
+### 📝추가 학습거리
+
+* UILabel 클래스 프로퍼티에는 어떤게 있는지 학습해보자!
+
+	1. Accessing the Text Attributes (텍스트 속성 엑세스)
+
+		| 프로퍼티 이름                         | 타입                               | 내용                                                         |
+		| ------------------------------------- | ---------------------------------- | ------------------------------------------------------------ |
+		| **text**                              | String?                            | Label이 보여주는 Text                                        |
+		| **attributedText**                    | NSAttributedString?                | Label이 보여주는 "스타일이 지정된 Text"                      |
+		| **font**                              | UIFont!                            | Text의 폰트                                                  |
+		| **textColor**                         | UIColor!                           | Text의 색상                                                  |
+		| **textAlignment**                     | NSTextAlignment                    | Text 정렬 기술                                               |
+		| **lineBreakMode**                     | NSLineBreakMode                    | Label의 Text를 줄 바꿈하고 자르는 기술                       |
+		| **lineBreakStrategy**                 | NSParagraphStyle.LineBreakStrategy | 여러 줄의 Text를 배치할 때 시스템이 줄을 끊는 데 사용하는 전략 |
+		| **isEnabled**                         | Bool                               | Label이 활성화된 상태에서 해당 Text를 나타낼지 여부를 결정하는 Boolean Value |
+		| **enablesMarqueeWhenAncestorFocused** | Bool                               | 포함된 view들 중 하나가 포커싱된 동안 Label이 Text를 스크롤할지 여부를 결정하는 Boolean Value |
+		| **showExpansionTextWhenTruncated**    | Bool                               | 잘린 Text 위에 포인터가 있을 경우, Label의 전체 Text가 표시되는지 여부를 결정하는 Boolean Value |
+
+		
+
+	2. Sizing the Label's Text (Label 텍스트 크기 조정)
+
+		| 프로퍼티 이름                            | 타입                 | 내용                                                         |
+		| ---------------------------------------- | -------------------- | ------------------------------------------------------------ |
+		| **adjustsFontSizeToFitWidth**            | Bool                 | Label이 Label의 경계 rectangle에  title String을 맞추기 위해 텍스트의 글꼴 크기를 줄이는지 여부를 결정하는 Bool값([참고](https://leehonghwa.github.io/blog/adjustsFontSizeToFitWidth/)) |
+		| **allowsDefaultTighteningForTruncation** | Bool                 | Label이 자르기 전에 텍스트의 간격을 좁힐지 여부를 결정하는 Bool값 |
+		| **baselineAdjustment**                   | UIBaselineAdjustment | Label에 맞게 텍스트를 축소해야 할 때 텍스트의 기준선이 고정된 상태로 유지되는지 여부를 제어하는 옵션 |
+		| **minimumScaleFactor**                   | CGFloat              | Label 텍스트의 최소 축척 비율                                |
+		| **numberOfLines**                        | Int                  | 텍스트를 렌더링하기 위한 최대 줄 수                          |
+
+		
+
+	3. Managing Highlight Values (하이라이트 값 관리)
+
+		| 프로퍼티 이름            | 타입     | 내용                                                         |
+		| ------------------------ | -------- | ------------------------------------------------------------ |
+		| **highlightedTextColor** | UIColor? | Lebel 텍스트의 하이라이트 컬러                               |
+		| **isHighlighted**        | Bool     | Label이 하이라이트된 텍스트를 나타낼지 여부를 결정하는 Bool값 |
+
+		
+
+	4. Drawing a Shadow (그림자 그리기)
+
+		| 프로퍼티 이름    | 타입     | 내용                          |
+		| ---------------- | -------- | ----------------------------- |
+		| **shadowColor**  | UIColor? | 텍스트의 그림자 색상          |
+		| **shadowOffset** | CGSize   | 텍스트의 그림자 오프셋(point) |
+
+		
+
+	5. Getting the Layout Constraints (레이아웃 제약)
+
+		| 프로퍼티 이름               | 타입    | 내용                                           |
+		| --------------------------- | ------- | ---------------------------------------------- |
+		| **preferredMaxLayoutWidth** | CGFloat | 여러 줄을 가지는 Label의 기본 최대 너비(point) |
+
+		
+
+	6. Accessing Additional Attributes (추가 속성 엑세스)
+
+		| 프로퍼티 이름                | 타입 | 내용                                                         |
+		| ---------------------------- | ---- | ------------------------------------------------------------ |
+		| **isUserInteractionEnabled** | Bool | 시스템이 이벤트 queue에서 이 Label에 대한 사용자 이벤트를 무시하고 제거할지 여부를 결정하는 Bool값 |
+
+		
