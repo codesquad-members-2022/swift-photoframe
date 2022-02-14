@@ -13,6 +13,8 @@
 		B7174EF827BA50F300684E94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7174EF627BA50F300684E94 /* Main.storyboard */; };
 		B7174EFA27BA50F300684E94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7174EF927BA50F300684E94 /* Assets.xcassets */; };
 		B7174EFD27BA50F300684E94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7174EFB27BA50F300684E94 /* LaunchScreen.storyboard */; };
+		B77BB99127BABC3A00620D5C /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77BB99027BABC3A00620D5C /* SecondViewController.swift */; };
+		B77BB99327BABD9300620D5C /* myTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77BB99227BABD9300620D5C /* myTabBarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		B7174EF927BA50F300684E94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B7174EFC27BA50F300684E94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B7174EFE27BA50F300684E94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B77BB99027BABC3A00620D5C /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		B77BB99227BABD9300620D5C /* myTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myTabBarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 				B7174EF027BA50F300684E94 /* AppDelegate.swift */,
 				B7174EF227BA50F300684E94 /* SceneDelegate.swift */,
 				B7174EF427BA50F300684E94 /* ViewController.swift */,
+				B77BB99027BABC3A00620D5C /* SecondViewController.swift */,
+				B77BB99227BABD9300620D5C /* myTabBarViewController.swift */,
 				B7174EF627BA50F300684E94 /* Main.storyboard */,
 				B7174EF927BA50F300684E94 /* Assets.xcassets */,
 				B7174EFB27BA50F300684E94 /* LaunchScreen.storyboard */,
@@ -138,6 +144,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B77BB99127BABC3A00620D5C /* SecondViewController.swift in Sources */,
+				B77BB99327BABD9300620D5C /* myTabBarViewController.swift in Sources */,
 				B7174EF527BA50F300684E94 /* ViewController.swift in Sources */,
 				B7174EF127BA50F300684E94 /* AppDelegate.swift in Sources */,
 				B7174EF327BA50F300684E94 /* SceneDelegate.swift in Sources */,
