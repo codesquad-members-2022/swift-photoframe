@@ -7,8 +7,9 @@ https://github.com/shingha1124/swift-photoframe
 
 | 날짜       | 번호 | 내용                              | 비고                                                         |
 | ---------- | :--- | --------------------------------- | ------------------------------------------------------------ |
-| 2022.02.14 | PF-6 | 다른 화면 연결하기                |                                                              |
-| 2022.02.14 | PF-5 | Container ViewController 활용하기 | 네비게이션 컨트롤러를 사용하여 화면을 구성해본다             |
+| 2022.02.14 | PF-7 | 사진 앨범 선택하기                | 사진앨범에서 사진을 선택하고, 선택한 이미지를 보여준다       |
+|            | PF-6 | 다른 화면 연결하기                | ImageView를 사용하여 이미지를 출력하고, 변경해본다           |
+|            | PF-5 | Container ViewController 활용하기 | 네비게이션 컨트롤러를 사용하여 화면을 구성해본다             |
 |            | PF-4 | ViewController 연결하기           | 뷰 컨트롤러 클래스를 생성하고, Scene에 연결하여 동작하도록 한다 |
 |            | PF-3 | Scene을 Segue로 연결하기          | 스토리보드에 Scene을 생성하고, 버튼이벤트를 통해 연결해본다. |
 |            | PF-2 | IBOutlet 연결하기                 | 스토리보드에서 IBOutlet을 연결해본다                         |
@@ -16,6 +17,134 @@ https://github.com/shingha1124/swift-photoframe
 |            | PF-1 | 프로젝트 생성                     | Fork를 하고, 로컬에 Clone<br />iOS app 템플릿으로 생성       |
 |            |      | 탭바 컨트롤러 추가                | 1. 기존 생성된 ViewController 대신 TabBarController로 변경<br />2. 새로운 뷰를 추가하여 메뉴 추가<br />3. 확인 로그 출력 |
 |            |      |                                   |                                                              |
+
+------
+
+## [PF-7] 사진 앨범 선택하기
+
+### 요구사항
+
+##### 사진 테두리 만들기
+
+- [x] 겹처서 디자인 되는 부분을 파악하고, 해당 부분의 z축을 설정하여 디자인한다
+
+##### 사진첩 열기
+
+- [x] 사진앨범을 열고, 원하는 이미지를 보여준다
+  - [x] 선택 버튼을 생성한다.
+  - [x] 선택 버튼 이벤트 발생시, 사진첩을 연다
+  - [x] 선택한 사진을 가지고 온다
+
+
+
+### 학습키워드
+
+* UIImagePickerController, PhotosUI, PHPickerConfiguration, NSItemProvider
+
+
+
+### 고민과 해결
+
+* UIImagePickerController를 사용하려고 보니, 앞으로의 버전에서 없어진다고한다.
+  * 경고의 내용을 보니 UIImagePickerController대신 PHPicker를 사용하라고 안내가 있다.
+  * PHPicker를 구글링을하여 해당 프로젝트에 적용시켰다.
+
+
+
+### 구현과정
+
+#### 사진 테두리 만들기
+
+1. 기존에 생성한 이미지 뷰에 테두리를 입힌다
+
+   1. 기존 240사이즈 보다 큰 270사이즈로 이미지 뷰를 생성한다
+
+   2. 새로 생성한 이미지 뷰에 테두리로 사용할 이미지를(photoframe-border) 넣어준다
+
+      ![스크린샷 2022-02-14 오후 11 25 06](https://user-images.githubusercontent.com/5019378/153882206-c87986eb-4c21-4021-bd7e-cbece6b79cc6.png)
+
+2. 새로 추가한 이미지를 기존 생성한 이미지 뒤로 배치한다
+
+   1. 기존생성한 뷰인 PhotoFrame보다 위쪽으로 photo frame-border를 이동시킨다.
+   2. 뷰에서 그리는 순서는 위에서 아래 순으로 그리게 되므로, 보더가 먼저 그려지고, 그 위에 PhotoFrame이 그려진다
+
+   ![스크린샷 2022-02-14 오후 11 26 19](https://user-images.githubusercontent.com/5019378/153882418-d2fcc06f-e002-4b93-8574-b6de180f75b2.png)
+
+3. 결과화면 
+
+   ![스크린샷 2022-02-14 오후 11 57 27](https://user-images.githubusercontent.com/5019378/153887920-cd79bc42-878c-4172-8532-37e83b5813d4.png)
+
+
+
+#### 사진첩을 열고, 사진 가져오기
+
+1. 선택버튼을 만들고, 이벤트를 생성한다.
+
+2. PHPickerViewController를 사용하여 사진첩을 사용한다
+
+   ```swift
+   /*
+   PHPickerViewController: 사진첩을 사용하기위한 컨트롤러
+   */
+   import PhotosUI
+   
+   class SecondViewController: UIViewController {
+     var picker: PHPickerViewController?
+     
+     override func viewDidLoad() {
+       super.viewDidLoad()
+       
+       var config = PHPickerConfiguration()
+       config.selectionLimit = 1							//선택할 수 있는 이미지 갯수, 0이면 무한
+       config.filter = .any(of: [.images])		//사진첩에 보여지는 이미지 종류( 비디오, 라이브, 이미지 등이 있다)
+       picker = PHPickerViewController(configuration: config)		//위에 설정한 Config를 바탕으로 컨트롤러 생성
+       picker?.delegate = self								//PHPickerViewController.delegate 연결
+     }  
+     
+     //...
+     
+     @IBAction func selectButtonTouched(_ sender: Any) {
+       guard let picker = self.picker else {
+         return
+       }
+       self.present(picker, animated: true)
+     }
+   }
+   
+   extension SecondViewController: PHPickerViewControllerDelegate {
+       func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {       
+         picker.dismiss(animated: true)		//열었던 사진첩을 닫는다.     
+        
+         //가져온 이미지를 UIImage로 로드할 수 있는지 체크
+         guard let itemProvider = results.first?.itemProvider,
+         			itemProvider.canLoadObject(ofClass: UIImage.self) else {
+           return
+         }        
+         
+         //변환이 가능한 타입이면 가져온 이미지를 출력한다
+         itemProvider.loadObject(ofClass: UIImage.self) { 
+           image, error in
+           DispatchQueue.main.async {
+             self.photoImageView.image = image as? UIImage
+           }
+         }
+       }    
+   }
+   ```
+
+3. 결과화면
+
+   ![Simulator Screen Recording - iPhone 12 - 2022-02-15 at 00 07 16](https://user-images.githubusercontent.com/5019378/153889805-cddba5aa-69d9-4997-a450-c0da11097888.gif)
+
+#### 추가학습거리
+
+- UIImagePickerController처럼 이미 만들어놓은 시스템 컨트롤러들에 대해 .
+  - [뷰컨트롤러 애플 개발자 문서](https://developer.apple.com/documentation/uikit/view_controllers)
+- 델리게이트(Delegate)와 프로토콜(Protocol) 상관 관계에 대해 학습한다.
+
+
+
+
 
 ------
 
