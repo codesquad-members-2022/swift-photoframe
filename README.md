@@ -2,7 +2,7 @@
 
 - [x] 프로젝트 생성하기
 - [x] IBOutlet 연결하기
-- [ ] IBAction 연결하기
+- [x] IBAction 연결하기
 - [ ] Scene을 Segue로 연결하기
 - [ ] ViewController 연결하기
 - [ ] Container ViewController 활용하기
