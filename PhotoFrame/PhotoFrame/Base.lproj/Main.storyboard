@@ -42,7 +42,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rW9-lg-vfx">
-                                <rect key="frame" x="135.5" y="481" width="143" height="24"/>
+                                <rect key="frame" x="135.5" y="486" width="143" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -53,12 +53,13 @@
                         <constraints>
                             <constraint firstItem="qeC-WM-Po3" firstAttribute="centerX" secondItem="8HV-tI-Tik" secondAttribute="centerX" id="1jt-1I-DwI"/>
                             <constraint firstItem="qeC-WM-Po3" firstAttribute="centerY" secondItem="8HV-tI-Tik" secondAttribute="centerY" id="IqK-IW-DwS"/>
-                            <constraint firstItem="rW9-lg-vfx" firstAttribute="top" secondItem="qeC-WM-Po3" secondAttribute="bottom" constant="15" id="LhZ-yS-OuM"/>
+                            <constraint firstItem="rW9-lg-vfx" firstAttribute="top" secondItem="qeC-WM-Po3" secondAttribute="bottom" constant="20" id="MTh-qG-0Oh"/>
                             <constraint firstItem="rW9-lg-vfx" firstAttribute="centerX" secondItem="8HV-tI-Tik" secondAttribute="centerX" id="d9S-B0-sLG"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="blue" image="cloud" catalog="system" id="9yc-jF-uJi"/>
                     <connections>
+                        <outlet property="firstDesciption" destination="rW9-lg-vfx" id="yQf-ZS-95Q"/>
                         <outlet property="firstLabel" destination="qeC-WM-Po3" id="xfU-BS-UbN"/>
                     </connections>
                 </viewController>
