@@ -7,7 +7,8 @@ https://github.com/shingha1124/swift-photoframe
 
 | 날짜       | 번호 | 내용                              | 비고                                                         |
 | ---------- | :--- | --------------------------------- | ------------------------------------------------------------ |
-| 2022.02.14 | PF-5 | Container ViewController 활용하기 |                                                              |
+| 2022.02.14 | PF-6 | 다른 화면 연결하기                |                                                              |
+| 2022.02.14 | PF-5 | Container ViewController 활용하기 | 네비게이션 컨트롤러를 사용하여 화면을 구성해본다             |
 |            | PF-4 | ViewController 연결하기           | 뷰 컨트롤러 클래스를 생성하고, Scene에 연결하여 동작하도록 한다 |
 |            | PF-3 | Scene을 Segue로 연결하기          | 스토리보드에 Scene을 생성하고, 버튼이벤트를 통해 연결해본다. |
 |            | PF-2 | IBOutlet 연결하기                 | 스토리보드에서 IBOutlet을 연결해본다                         |
@@ -15,6 +16,72 @@ https://github.com/shingha1124/swift-photoframe
 |            | PF-1 | 프로젝트 생성                     | Fork를 하고, 로컬에 Clone<br />iOS app 템플릿으로 생성       |
 |            |      | 탭바 컨트롤러 추가                | 1. 기존 생성된 ViewController 대신 TabBarController로 변경<br />2. 새로운 뷰를 추가하여 메뉴 추가<br />3. 확인 로그 출력 |
 |            |      |                                   |                                                              |
+
+------
+
+## [PF-6] 다른 화면 연결하기
+
+### 요구사항
+
+- [x] 두번째 화면 디자인을 변경하고 액자 앱 동작을 구현한다
+- [x] 사용할 이미지를 다운받아 Assets에 추가한다
+- [x] 버튼을 누르면 이미지를 변경하는 코드를 작성한다
+
+### 학습키워드
+
+* UIImageView, UIImage
+
+### 구현과정
+
+1. SecondScene 화면을 구성한다
+
+   1. 이미지를 보여줄 ImageView를 추가한다
+
+   2. 이미지를 변경할 Button을 추가한다
+
+      ![스크린샷 2022-02-14 오후 11 11 32](https://user-images.githubusercontent.com/5019378/153879885-b92c82f2-1098-47e4-9422-07a8dc668849.png)
+
+2. ImageView를 IBOutlet으로 프로퍼티로 추가한다
+
+3. Button의 Action함수를 연결한다
+
+4. 다음 버튼을 누르면 이미지를 변경하는 코드를 제작한다
+
+   ```swift
+   class SecondViewController: UIViewController {
+   
+       @IBOutlet weak var photoImageView: UIImageView!
+       
+       override func viewDidLoad() {
+           super.viewDidLoad()
+           // Do any additional setup after loading the view.
+           setRandomImage()
+       }
+       @IBAction func nextImageButtonTouched(_ sender: Any) {
+           setRandomImage()
+       }
+       
+       private func setRandomImage() {
+           let randomIndex = Int.random(in: 1...22)
+           self.photoImageView.image = UIImage(named: String(format: "%02d.jpg", randomIndex))
+       }
+   }
+   ```
+
+5. 결과를 확인한다
+
+   ![Simulator Screen Recording - iPhone 12 - 2022-02-14 at 23 14 11](https://user-images.githubusercontent.com/5019378/153880418-dce20548-e716-4c35-8237-4797ebb80a36.gif)
+
+
+
+### 추가학습거리
+
+- UIImageView 와 UIImage 클래스는 각각 어떤 역할을 담당하는지 학습한다.
+- 이미지 뷰의 속성은 어떤 것들이 있는지 애플 개발자 문서를 참고한다.
+
+
+
+
 
 ------
 
