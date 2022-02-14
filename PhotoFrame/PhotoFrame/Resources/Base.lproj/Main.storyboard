@@ -36,12 +36,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nJM-IP-WCw">
-                                <rect key="frame" x="174" y="239" width="67" height="31"/>
+                                <rect key="frame" x="179" y="244" width="75" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Next">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="onTappedButton:" destination="01J-lp-oVM" eventType="touchUpInside" id="nGK-AV-8uJ"/>
+                                    <segue destination="rt4-cO-aGs" kind="show" id="wwN-ZS-IgV"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gvy-oH-jsk">
@@ -65,6 +68,52 @@
             </objects>
             <point key="canvasLocation" x="928.98550724637687" y="713.83928571428567"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="k7V-Y2-pa6">
+            <objects>
+                <viewController id="rt4-cO-aGs" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FmN-Gf-5wn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gCN-ES-ELo">
+                                <rect key="frame" x="170" y="182" width="75" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Next">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onTappedButton:" destination="01J-lp-oVM" eventType="touchUpInside" id="I6s-t5-uUN"/>
+                                    <segue destination="Ych-LA-AU3" kind="show" id="r1e-aW-Oef"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7fy-6c-tD1"/>
+                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="2lh-Dy-AAl"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lnd-av-CD2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2003" y="725"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="9l4-6d-Bem">
+            <objects>
+                <viewController id="Ych-LA-AU3" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BXK-Q5-wVO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="BZH-zj-8y0"/>
+                        <color key="backgroundColor" systemColor="systemBrownColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="bas-at-MLd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xgo-tE-L8X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3014" y="725"/>
+        </scene>
         <!--second-->
         <scene sceneID="QiO-16-KdG">
             <objects>
@@ -83,8 +132,14 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
