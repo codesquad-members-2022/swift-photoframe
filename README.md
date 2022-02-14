@@ -1,6 +1,7 @@
 # swift-photoframe
 iOS 포토프레임 프로젝트 저장소 by. Damagucci-Juice
 
+![대문사진]()
 
 # Monday Session
 > HIG(Human Interface Guideline)에 대해서 알아보고 앱을 구성하는 다양한 인터페이스들이 어떠한 방식으로 디자인되는지에 대해 실제 앱을 조사해보며 학습
