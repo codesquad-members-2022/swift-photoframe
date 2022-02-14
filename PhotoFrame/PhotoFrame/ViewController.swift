@@ -25,5 +25,9 @@ class ViewController: UIViewController {
         self.photoDescription.numberOfLines = 0
         
     }
-
+    
+    @IBAction func nextButtonTouched(_ sender: Any) {
+        self.photoLabel.textColor = .blue
+        self.photoLabel.backgroundColor = .yellow.withAlphaComponent(0.5)
+    }
 }

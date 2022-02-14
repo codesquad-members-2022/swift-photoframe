@@ -28,18 +28,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hgn-Mx-rGh">
-                                <rect key="frame" x="174" y="644" width="67" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pF5-me-NnN">
+                                <rect key="frame" x="173.5" y="277" width="67" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="nextButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cfR-b9-ecj"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Gci-I5-6FZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Cdh-oe-zTi"/>
+                            <constraint firstItem="pF5-me-NnN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jlU-Zb-dy3"/>
                             <constraint firstItem="xaK-1S-cG1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="nCb-Yi-9vM"/>
+                            <constraint firstItem="Gci-I5-6FZ" firstAttribute="top" secondItem="pF5-me-NnN" secondAttribute="bottom" constant="130" id="okf-vj-eGW"/>
                             <constraint firstItem="Gci-I5-6FZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="sfY-EC-bBk"/>
                             <constraint firstItem="xaK-1S-cG1" firstAttribute="top" secondItem="Gci-I5-6FZ" secondAttribute="bottom" constant="20" id="tTS-JY-Fp7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xaK-1S-cG1" secondAttribute="trailing" constant="30" id="yU4-YW-dAo"/>
@@ -53,7 +57,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="836" y="-152"/>
+            <point key="canvasLocation" x="834.78260869565224" y="-152.00892857142856"/>
         </scene>
         <!--Settings-->
         <scene sceneID="cTa-YB-6jF">
