@@ -1,6 +1,6 @@
 # swift-photoframe
 
-## 프로젝트 생성하기
+## 1. 프로젝트 생성하기
 
 ### 과정
 
@@ -13,7 +13,9 @@
 
 > <img src="https://user-images.githubusercontent.com/78553659/153794276-405277b2-8d1c-4a49-be92-91cded9a6614.png"  width="400" height="50"/>
 
-## IBOutlet
+---
+
+## 2. IBOutlet
 
 ### 과정
 
@@ -29,3 +31,22 @@ UIlabel property
 ### 실행화면
 
 > <img src="https://user-images.githubusercontent.com/78553659/153851665-5628b4dd-a609-4851-b999-2b7ea47f6d3f.png"  width="300" height="500"/>
+
+---
+
+## 3. IBAction
+
+### 과정
+
+1. UIButton 추가
+2. IBAction 연결
+3. nextButtonTouched 구현
+4.
+
+### 검색 키워드
+
+UIlabel property
+
+### 실행화면
+
+> <img src="https://user-images.githubusercontent.com/78553659/153863324-4ee040b0-b9d1-4d11-ba9f-386feeee1e4a.png"  width="300" height="500"/>
