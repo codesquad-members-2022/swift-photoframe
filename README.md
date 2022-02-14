@@ -21,4 +21,19 @@ iOS 포토프레임 프로젝트 저장소
 >실행한 화면을 캡처해서 readme.md 파일에 포함한다.
 >
 
+### 구현 과정
+1. 프로젝트 fork 후 내 저장소로 clone하기.
+<img width="556" alt="스크린샷 2022-02-14 오후 12 26 48" src="https://user-images.githubusercontent.com/62687919/153795164-ebf76977-4b4f-4051-a8b8-4230595b7fc2.png">
+
+2. 해당 폴더에 iOS프로젝트 생성
+3. ebony브랜치로 스위칭
+4. 기존 스토리보드의 ViewController삭제 후 TabBarController 생성
+5. 생성 후 초기ViewController 설정 해주기 ( 필수 )
+6. ViewController 두개 생성 후 TabBarController에 ViewControllers 추가
+<img width="466" alt="스크린샷 2022-02-14 오전 11 25 47" src="https://user-images.githubusercontent.com/62687919/153795522-6b0810e2-7a24-486d-aeae-6b2dc042dfd2.png">
+
+### 실행결과
+<img width="835" alt="스크린샷 2022-02-14 오전 11 29 08" src="https://user-images.githubusercontent.com/62687919/153795641-c85ae290-9cc7-4620-b38f-c17ddfa1903a.png">
+
+
 
