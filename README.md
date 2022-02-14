@@ -41,11 +41,6 @@ UIlabel property
 1. UIButton 추가
 2. IBAction 연결
 3. nextButtonTouched 구현
-4.
-
-### 검색 키워드
-
-UIlabel property
 
 ### 실행화면
 
