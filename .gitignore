@@ -96,6 +96,8 @@ iOSInjectionProject/
 
 ### Xcode ###
 
+*.xcuserstate
+
 ## Xcode 8 and earlier
 
 ### Xcode Patch ###
