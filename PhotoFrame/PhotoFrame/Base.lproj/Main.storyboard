@@ -49,13 +49,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y1f-hs-0PQ">
-                                <rect key="frame" x="153" y="206" width="113" height="31"/>
+                                <rect key="frame" x="176" y="206" width="67" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
-                                    <action selector="nextButtonTouched:" destination="6wT-tc-Cka" eventType="touchUpInside" id="XTg-f0-2uq"/>
-                                    <action selector="touche:" destination="6wT-tc-Cka" eventType="touchUpInside" id="FSJ-en-oDJ"/>
+                                    <action selector="nextButtonTouched:" destination="6wT-tc-Cka" eventType="touchUpInside" id="beW-UW-p1t"/>
                                 </connections>
                             </button>
                         </subviews>
