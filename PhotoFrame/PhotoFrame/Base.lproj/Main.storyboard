@@ -29,11 +29,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pF5-me-NnN">
-                                <rect key="frame" x="173.5" y="277" width="67" height="31"/>
+                                <rect key="frame" x="183" y="277" width="48.5" height="31"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="다음"/>
                                 <connections>
                                     <action selector="nextButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cfR-b9-ecj"/>
+                                    <segue destination="pD7-my-rOB" kind="show" id="WDX-3B-AKt"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -50,6 +51,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="36r-sk-bcE"/>
+                    <navigationItem key="navigationItem" id="qXO-WI-RAW"/>
                     <connections>
                         <outlet property="photoDescription" destination="xaK-1S-cG1" id="ftn-wf-aiq"/>
                         <outlet property="photoLabel" destination="Gci-I5-6FZ" id="K1v-i0-cHH"/>
@@ -58,6 +60,52 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="834.78260869565224" y="-152.00892857142856"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="jei-dw-Wan">
+            <objects>
+                <viewController id="pD7-my-rOB" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="79Y-x5-l1X">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ih-hI-B7S">
+                                <rect key="frame" x="183" y="405.5" width="48.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="다음"/>
+                                <connections>
+                                    <segue destination="Z29-XM-XrQ" kind="show" id="0Rh-f7-DP0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5vz-Q9-o40"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <constraints>
+                            <constraint firstItem="2Ih-hI-B7S" firstAttribute="centerY" secondItem="79Y-x5-l1X" secondAttribute="centerY" id="0sv-cJ-teB"/>
+                            <constraint firstItem="2Ih-hI-B7S" firstAttribute="centerX" secondItem="79Y-x5-l1X" secondAttribute="centerX" id="oYr-D8-aIX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="UvI-gH-ha6"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kKU-iN-KYP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1661" y="-152"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Qhk-rI-0Y7">
+            <objects>
+                <viewController id="Z29-XM-XrQ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kPi-mU-tgV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="OaE-0O-NPR"/>
+                        <color key="backgroundColor" systemColor="linkColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Lky-BC-sxa"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="agv-Xu-7JR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2449" y="-152"/>
         </scene>
         <!--Settings-->
         <scene sceneID="cTa-YB-6jF">
@@ -100,11 +148,17 @@
     <resources>
         <image name="gearshape.fill" catalog="system" width="128" height="121"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
