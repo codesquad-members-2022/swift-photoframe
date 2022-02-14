@@ -68,10 +68,10 @@
             </objects>
             <point key="canvasLocation" x="928.98550724637687" y="713.83928571428567"/>
         </scene>
-        <!--View Controller-->
+        <!--Color View1-->
         <scene sceneID="k7V-Y2-pa6">
             <objects>
-                <viewController id="rt4-cO-aGs" sceneMemberID="viewController">
+                <viewController id="rt4-cO-aGs" customClass="ColorView1" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FmN-Gf-5wn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -85,7 +85,18 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="onTappedButton:" destination="01J-lp-oVM" eventType="touchUpInside" id="I6s-t5-uUN"/>
-                                    <segue destination="Ych-LA-AU3" kind="show" id="r1e-aW-Oef"/>
+                                    <segue destination="Ych-LA-AU3" kind="show" id="kjt-J6-s6D"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qbw-Kh-mCj">
+                                <rect key="frame" x="328" y="20" width="66" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="닫기">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="24"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="closeButtonTouched:" destination="rt4-cO-aGs" eventType="touchUpInside" id="pXA-Jh-tmy"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -98,13 +109,26 @@
             </objects>
             <point key="canvasLocation" x="2003" y="725"/>
         </scene>
-        <!--View Controller-->
+        <!--Color View2-->
         <scene sceneID="9l4-6d-Bem">
             <objects>
-                <viewController id="Ych-LA-AU3" sceneMemberID="viewController">
+                <viewController id="Ych-LA-AU3" customClass="ColorView2" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BXK-Q5-wVO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nfl-hV-5BZ">
+                                <rect key="frame" x="328" y="20" width="66" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="닫기">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="24"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="closeButtonTouched:" destination="Ych-LA-AU3" eventType="touchUpInside" id="S8v-MT-ZqG"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="BZH-zj-8y0"/>
                         <color key="backgroundColor" systemColor="systemBrownColor"/>
                     </view>
