@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class SecondViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
     @IBOutlet weak var photoImageView: UIImageView!
     
@@ -29,8 +29,7 @@ class SecondViewController: UIViewController {
     }
     */
 
-    @IBAction func nextImageButtonTouched(_ sender: Any) {
-        let num = Int.random(in: 01...22)
-        self.photoImageView.image = UIImage(named: "\(num < 10 ? "0\(num)" : "\(num)").jpg")
+    @IBAction func selectButtonTouched(_ sender: Any) {
+        
     }
 }

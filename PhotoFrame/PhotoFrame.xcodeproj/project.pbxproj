@@ -38,6 +38,7 @@
 		E496DAB127BA6157004D486A /* 08.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E496DA9B27BA6157004D486A /* 08.jpg */; };
 		E496DAB227BA6157004D486A /* 10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E496DA9C27BA6157004D486A /* 10.jpg */; };
 		E496DAB427BA62D1004D486A /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E496DAB327BA62D1004D486A /* SecondViewController.swift */; };
+		E496DAB627BA64A8004D486A /* photoframe-border.png in Resources */ = {isa = PBXBuildFile; fileRef = E496DAB527BA64A8004D486A /* photoframe-border.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		E496DA9B27BA6157004D486A /* 08.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 08.jpg; sourceTree = "<group>"; };
 		E496DA9C27BA6157004D486A /* 10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 10.jpg; sourceTree = "<group>"; };
 		E496DAB327BA62D1004D486A /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		E496DAB527BA64A8004D486A /* photoframe-border.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photoframe-border.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 				E496DA9227BA6157004D486A /* 20.jpg */,
 				E496DA9A27BA6157004D486A /* 21.jpg */,
 				E496DA9127BA6157004D486A /* 22.jpg */,
+				E496DAB527BA64A8004D486A /* photoframe-border.png */,
 			);
 			path = PhotoFrame;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 				E496DAA027BA6157004D486A /* 09.jpg in Resources */,
 				E496DA7527B9EF18004D486A /* Main.storyboard in Resources */,
 				E496DAA927BA6157004D486A /* 15.jpg in Resources */,
+				E496DAB627BA64A8004D486A /* photoframe-border.png in Resources */,
 				E496DAAD27BA6157004D486A /* 11.jpg in Resources */,
 				E496DAA427BA6157004D486A /* 16.jpg in Resources */,
 				E496DA9F27BA6157004D486A /* 05.jpg in Resources */,
