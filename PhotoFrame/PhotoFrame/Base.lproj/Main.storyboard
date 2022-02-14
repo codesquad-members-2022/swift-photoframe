@@ -61,10 +61,10 @@
             </objects>
             <point key="canvasLocation" x="834.78260869565224" y="-152.00892857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Yellow View Controller-->
         <scene sceneID="jei-dw-Wan">
             <objects>
-                <viewController id="pD7-my-rOB" sceneMemberID="viewController">
+                <viewController id="pD7-my-rOB" customClass="YellowViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="79Y-x5-l1X">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -77,12 +77,22 @@
                                     <segue destination="Z29-XM-XrQ" kind="show" id="0Rh-f7-DP0"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lvp-I6-G9T">
+                                <rect key="frame" x="251.5" y="405.5" width="49" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="닫기"/>
+                                <connections>
+                                    <action selector="closeButtonTouched:" destination="pD7-my-rOB" eventType="touchUpInside" id="zpv-bk-L4t"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5vz-Q9-o40"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                         <constraints>
                             <constraint firstItem="2Ih-hI-B7S" firstAttribute="centerY" secondItem="79Y-x5-l1X" secondAttribute="centerY" id="0sv-cJ-teB"/>
                             <constraint firstItem="2Ih-hI-B7S" firstAttribute="centerX" secondItem="79Y-x5-l1X" secondAttribute="centerX" id="oYr-D8-aIX"/>
+                            <constraint firstItem="lvp-I6-G9T" firstAttribute="centerY" secondItem="79Y-x5-l1X" secondAttribute="centerY" id="teE-w4-tdx"/>
+                            <constraint firstItem="lvp-I6-G9T" firstAttribute="leading" secondItem="2Ih-hI-B7S" secondAttribute="trailing" constant="20" id="vWt-D2-Mh2"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="UvI-gH-ha6"/>
