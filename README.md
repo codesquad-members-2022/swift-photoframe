@@ -7,15 +7,103 @@ https://github.com/shingha1124/swift-photoframe
 
 | 날짜       | 번호 | 내용               | 비고                                                         |
 | ---------- | :--- | ------------------ | ------------------------------------------------------------ |
-| 2022.02.14 | PF-1 | 프로젝트 생성      | Fork를 하고, 로컬에 Clone<br />iOS app 템플릿으로 생성       |
+| 2022.02.14 | PF-2 | IBOutlet 연결하기  | 스토리보드에서 IBOutlet을 연결해본다                         |
+|            |      | IBAction 연결하기  | 스토리보드에서 IBAction을 연결해본다                         |
+|            | PF-1 | 프로젝트 생성      | Fork를 하고, 로컬에 Clone<br />iOS app 템플릿으로 생성       |
 |            |      | 탭바 컨트롤러 추가 | 1. 기존 생성된 ViewController 대신 TabBarController로 변경<br />2. 새로운 뷰를 추가하여 메뉴 추가<br />3. 확인 로그 출력 |
 |            |      |                    |                                                              |
-|            |      |                    |                                                              |
-|            |      |                    |                                                              |
-|            |      |                    |                                                              |
-|            |      |                    |                                                              |
 
 
+
+------
+
+## [PF-2] IBOutlet 연결하기
+
+### 요구사항
+
+- [x] IBOutlet 연결하기
+  - [x] 스토리 보드에 Label 추가
+  - [x] viewDidLoad() 함수에 텍스트 변경 코드 추가
+- [x] IBAction 연결하기
+  - [x] 스토리 보드에 Button 추가
+  - [x] Button Event 연결
+  - [x] Button Event 발생 시 라벨 속성변경 코드 추가
+
+### 학습 키워드
+
+- storyBoard, TabBarController, ViewController, Entry Point, Segue
+
+### 고민과 해결
+
+* StoryBoard에서 UI만드는 과정이 아직까진 어색하다
+  * 드래그 앤 드롭으로 UI 변수 등록 및 이벤트 연결하는 과정이 아직까진 어색하다.
+  * 속성값들도 UI로 보니 어떤값들인지 잘 모르겠어서 이것저것 눌러보며 찾아가고 있다.
+
+
+
+### IBOutlet 연결하기
+
+1. Label을 넣을 뷰를 선택 후 Label을 추가한다
+
+   1. Command + shift + L 을 눌러 Label을 찾아서 드래그 앤 드롭으로 해당 뷰에 추가한다
+
+   ![스크린샷 2022-02-14 오후 7 38 16](https://user-images.githubusercontent.com/5019378/153848531-65904506-38a9-4879-9058-821627958cd1.png)
+
+   
+
+2. 생성한 라벨을 선택 후 ctrl + 드래그 후 원하는 위치에 드롭, 후에 나오는 메뉴에서 이름을 적어 프로퍼티를 생성한다
+
+   ![스크린샷 2022-02-14 오후 7 39 53](https://user-images.githubusercontent.com/5019378/153848801-5d6f4445-1a10-4a61-a055-f6a8fb719361.png)
+
+   
+
+3. viewDidLoad() 함수에서 firstLabel의 텍스트를 변경하는 코드를 넣어준다
+
+   ```swift
+   override func viewDidLoad() {
+     super.viewDidLoad()
+     // Do any additional setup after loading the view.
+     print(#file, #line, #function, #column)
+     firstLabel.text = "Shingha의 사진액자"      
+   }
+   ```
+
+   
+
+
+
+### IBAction 연결하기
+
+1. Button을 넣을 뷰를 선택 후 Button을 추가한다
+
+   1. Command + shift + L 을 눌러 Label을 찾아서 드래그 앤 드롭으로 해당 뷰에 추가한다
+
+   ![스크린샷 2022-02-14 오후 8 26 58](https://user-images.githubusercontent.com/5019378/153855864-b8d491ad-a54f-4ec7-9ad4-d06178630de9.png)
+
+   
+
+2. 생성한 버튼을 선택 후 ctrl + 드래그 후 원하는 위치에 드롭
+
+   1.  나오는 메뉴에서 Connection메뉴에서 Outlet를 선택 후 이름을 적어 프로퍼티 생성
+   2.  나오는 메뉴에서 Connection메뉴에서 Actioni를 선택 후 함수이름을 적어 프로퍼티 생성
+
+   ![스크린샷 2022-02-14 오후 8 27 48](https://user-images.githubusercontent.com/5019378/153856053-1650bf26-2a58-48d1-bec3-e3c1693bce7f.png)
+
+   
+
+3. 생성한 이벤트 함수에 라벨의 옵션을 변경하는 코드를 넣어 완성
+
+   ```swift
+   @IBAction func onTappedButton(_ sender: Any) {
+     self.firstLabel.textColor = UIColor.blue
+     self.firstLabel.backgroundColor = UIColor.yellow
+     self.firstLabel.alpha = 0.5
+   }
+   ```
+
+   
+
+------
 
 ## [PF-1] 작업 정리
 
@@ -137,5 +225,3 @@ https://github.com/shingha1124/swift-photoframe
       /Users/seonghashin/Desktop/CodeSquad/PhotoFrame/PhotoFrame/PhotoFrame/Sources/Presentation/SecondView/SecondViewController.swift 16 viewDidLoad() 40
       /Users/seonghashin/Desktop/CodeSquad/PhotoFrame/PhotoFrame/PhotoFrame/Sources/Presentation/FirstView/FirstViewController.swift 16 viewDidLoad() 40
       ```
-
-      
