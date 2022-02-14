@@ -21,6 +21,11 @@ class FirstViewController:UIViewController {
         self.photoLabel.textColor = .red //색깔
         self.photoLabel.textAlignment = .center //정렬
         self.photoLabel.font = .systemFont(ofSize: 40.0, weight: .bold) //사이즈,폰트
+        
+        self.descriptionLabel.text = "이 액자를 본 당신은 오늘 행운이 찾아올겁니다!"
+        self.descriptionLabel.textColor = .secondaryLabel //색깔
+        self.descriptionLabel.textAlignment = .center //정렬
+        self.descriptionLabel.font = .systemFont(ofSize: 20.0, weight: .light) //사이즈,폰트
     }
     
 }
