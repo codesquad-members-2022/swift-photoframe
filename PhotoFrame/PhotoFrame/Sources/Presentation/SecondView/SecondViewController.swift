@@ -10,9 +10,19 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
+    @IBOutlet weak var photoImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        print(#file, #line, #function, #column)
+        setRandomImage()
+    }
+    @IBAction func nextImageButtonTouched(_ sender: Any) {
+        setRandomImage()
+    }
+    
+    private func setRandomImage() {
+        let randomIndex = Int.random(in: 1...22)
+        self.photoImageView.image = UIImage(named: String(format: "%02d.jpg", randomIndex))
     }
 }
