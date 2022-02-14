@@ -30,12 +30,19 @@ DerivedData/
 /*.gcno
 
 ### Xcode Patch ###
+<<<<<<< HEAD
 *.xcodeproj/
+=======
+*.xcodeproj/*
+>>>>>>> f926bde (Add and Commit Project Folder)
 !*.xcodeproj/project.pbxproj
 !*.xcodeproj/xcshareddata/
 !*.xcworkspace/contents.xcworkspacedata
 **/xcshareddata/WorkspaceSettings.xcsettings
 
+<<<<<<< HEAD
 ### AppCode Path ###
 .idea
+=======
+>>>>>>> f926bde (Add and Commit Project Folder)
 # End of https://www.toptal.com/developers/gitignore/api/xcode
