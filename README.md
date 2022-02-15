@@ -185,3 +185,135 @@
 		| **isUserInteractionEnabled** | Bool | 시스템이 이벤트 queue에서 이 Label에 대한 사용자 이벤트를 무시하고 제거할지 여부를 결정하는 Bool값 |
 
 		
+
+---
+
+---
+
+## 3. IBAction 연결하기
+
+### 📌체크 리스트
+
+- [x] First Scene에 UIButton을 추가하고 IBAction으로 연결
+- [x] 연결한 액션에 대한 메서드를 구현
+	- [x] 버튼이 눌러지면 `photoLabel` 의 프로퍼티를 변경시켜본다.
+
+---
+
+### 💻진행 과정
+
+1. First Scene에 UIButton을 추가하여 ViewController에 IBAction으로 연결했습니다.
+
+2. IBAction 메서드에서, 버튼이 눌려지면 앞서 만들었던 `photoLabel` 의 프로퍼티가 변경되도록 아래와 같은 코드를 작성했습니다.
+
+	```swift
+	// class ViewController
+	@IBAction func nextButtonTouched(_ sender: UIButton) {
+		self.photoLabel.text = "버튼이 눌러졌어요"
+		self.photoLabel.backgroundColor = .systemRed
+		self.photoLabel.textColor = .systemYellow
+		self.photoLabel.alpha = 1
+	    self.photoLabel.font = .systemFont(ofSize: 30)
+	}
+	```
+
+	<img src="https://user-images.githubusercontent.com/92504186/153981767-e19186e9-19ed-4c62-86e1-2945082af341.gif" alt="SS 2022-02-15 AM 11 34 55" width="30%;" />
+
+
+
+---
+
+### 📝추가 학습거리
+
+* IBAction과 IBOutlet의 연결 구조에 대해 이해한 내용 정리
+
+	> IBAction:
+	>
+	> - 유저의 조작과 메서드를 연결하여, 유저가 View를 조작했을 때 실행할 일을 지정해준다.
+	> - View에서 이벤트가 발생했을 때 호출되는 메서드
+
+	> IBOutlet:
+	>
+	> - 인터페이스 빌더에서 프로그램과의 연결통로
+	> - Controller 함수에서 Button 등 View의 Control에 접근하기 위한 변수
+
+	컨트롤러에서 IBOutlet 변수를 이용해 View의 프로퍼티(속성)을 변화시켜줄 수 있고, 유저가 View에 조작을 가했을 때 IBAction 메서드가 컨트롤러에 특정 입력을 주게 됩니다.
+
+* 버튼에 IBAction을 추가할 때 이벤트 종류에는 어떤 것들이 있는지 학습
+
+	| 이벤트 종류(이름)          | 내용                                                         |
+	| -------------------------- | ------------------------------------------------------------ |
+	| **touchDown**              | 컨트롤을 터치할 때 발생하는 이벤트                           |
+	| **touchDownRepeat**        | 컨트롤을 연속 터치할 때 발생하는 이벤트                      |
+	| **touchDragInside**        | 컨트롤 범위 내에서 터치한 영역을 드래그할 때 발생하는 이벤트 |
+	| **touchDragOutside**       | 터치 영역이 컨트롤의 바깥쪽에서 드래그할 때 발생하는 이벤트  |
+	| **touchDragEnter**         | 터치 영역이 컨트롤의 일정 영역 바깥쪽으로 나갔다가 다시 들어왔을 때 발생하는 이벤트 |
+	| **touchDragExit**          | 터치 영역이 컨트롤의 일정 영역 바깥쪽으로 나갔을 때 발생하는 이벤트 |
+	| **touchUpInside**          | 컨트롤 영역 안쪽에서 터치 후 뗐을 때 발생하는 이벤트         |
+	| **touchUpOutside**         | 컨트롤 영역 안쪽에서 터치 후 컨트롤 밖에서 뗐을 때 발생하는 이벤트 |
+	| **touchCancel**            | 터치를 취소하는 이벤트(touchUp 이벤트가 발생되지 않음)       |
+	| **valueChanged**           | 터치를 드래그 및 다른 방법으로 조작하여 값이 변경되었을 때 발생하는 이벤트 |
+	| **primaryActionTriggered** | 버튼이 눌릴 때 발생하는 이벤트(iOS보다는 tvOS에서 사용)      |
+	| **editingDidBegin**        | `UITextField` 에서 편집이 시작될 때 호출되는 이벤트          |
+	| **editingChanged**         | `UITextField` 에서 값이 바뀔 때마다 호출되는 이벤트          |
+	| **editingDidEnd**          | `UITextField` 에서 외부 객체와의 상호작용으로 인해 편집이 종료되었을 때 발생하는 이벤트 |
+	| **editingDidEndOnExit**    | `UITextField` 의 편집 상태에서 키보드의 `return` 키를 터치했을 때 발생하는 이벤트 |
+	| **allTouchEvents**         | 모든 터치시 발생하는 이벤트                                  |
+	| **allEditingEvents**       | `UITextField` 에서 모든 편집 작업시 발생하는 이벤트          |
+	| **applicationReserved**    | 각각의 애플리케이션에서 프로그래머가 임의로 지정할 수 있는 이벤트 값의 범위 |
+	| **systemReserved**         | 프레임워크 내에서 사용하느 예약된 이벤트 값의 범위           |
+	| **allEvents**              | 시스템 이벤트를 포함한 모든 이벤트                           |
+
+* 버튼에 액션을 여러 개 추가할 수 있을까?
+
+	직접 코드를 작성해 가능 여부를 확인해보기 위해 3개의 UIView와 1개의 UIButton을 만들어, 하나의 UIButton을 3개의 IBAction 메서드와 연결했습니다. 각각의 IBAction 메서드는 View의 backgroundColor 프로퍼티를 바꾸도록 했고, 작성한 코드는 아래와 같습니다.
+
+	```swift
+	@IBAction func buttonTouched(_ sender: UIButton) {
+	    if toggledWhenTouched[0] == false {
+	        firstView.backgroundColor = .blue
+	    } else {
+	        firstView.backgroundColor = .red
+	    }
+	    toggledWhenTouched[0] = !toggledWhenTouched[0]
+	}
+	@IBAction func buttonTouched1(_ sender: UIButton) {
+	    if toggledWhenTouched[1] == false {
+	        secondeView.backgroundColor = .red
+	    } else {
+	        secondeView.backgroundColor = .blue
+	    }
+	    toggledWhenTouched[1] = !toggledWhenTouched[1]
+	}
+	@IBAction func buttonTouched2(_ sender: UIButton) {
+	    if toggledWhenTouched[2] == false {
+	        thirdView.backgroundColor = .blue
+	    } else {
+	        thirdView.backgroundColor = .red
+	    }
+	    toggledWhenTouched[2] = !toggledWhenTouched[2]
+	}
+	```
+
+	해당 코드를 추가한 후 앱을 동작시키면 아래와 같은 동작을 확인할 수 있었고, 하나의 버튼이 여러 액션을 할 수 있음을 확인할 수 있었습니다.
+
+	<img src="https://user-images.githubusercontent.com/92504186/153898684-3ef9c88a-d68e-46b5-90da-0ca526d12df6.gif" alt="SS 2022-02-15 AM 12 55 19" width="30%;" />
+
+* 여러 버튼을 동시에 하나의 액션에 연결할 수 있을까?
+
+	이번 내용도 직접 코드를 작성해 가능 여부를 확인해보기 위해 3개의 UIButton과 1개의 UIView를 만들었습니다. 그리고 3개의 UIButton은 모두 아래의 코드에 연결하여 버튼이 눌리면 View의 Background Color가 바뀌도록 동작하도록 했습니다.
+
+	```swift
+	@IBAction func buttonTouched(_ sender: UIButton) {
+	    if toggledWhenTouched == false {
+	        firstView.backgroundColor = .blue
+	    } else {
+	        firstView.backgroundColor = .red
+	    }
+	    toggledWhenTouched = !toggledWhenTouched
+	}
+	```
+
+	해당 코드를 추가한 후 앱을 동작시키면 아래와 같은 동작을 확인할 수 있었고, 여러 버튼을 동시에 하나의 액션에 연결할 수 있음을 확인할 수 있었습니다.
+
+	<img src="https://user-images.githubusercontent.com/92504186/153900416-96abfe15-5a67-4b1c-8eb5-dfcb458bb7ad.gif" alt="SS 2022-02-15 AM 01 04 06" width="30%;" />
