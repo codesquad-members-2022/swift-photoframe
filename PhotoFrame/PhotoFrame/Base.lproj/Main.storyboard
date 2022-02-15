@@ -58,18 +58,27 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Test1"/>
+                                <connections>
+                                    <action selector="testButtonTouchedUpInside:" destination="DvB-Gi-ecE" eventType="touchUpInside" id="bJ7-iN-PtT"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6l4-D8-03R">
                                 <rect key="frame" x="177" y="536" width="60" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Test2"/>
+                                <connections>
+                                    <action selector="testButtonTouchedUpInside:" destination="DvB-Gi-ecE" eventType="touchUpInside" id="hes-Xw-dng"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mXg-VM-ole">
                                 <rect key="frame" x="297" y="536" width="60" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Test3"/>
+                                <connections>
+                                    <action selector="testButtonTouchedUpInside:" destination="DvB-Gi-ecE" eventType="touchUpInside" id="RBE-Nc-Ixw"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kKw-VU-FyD"/>

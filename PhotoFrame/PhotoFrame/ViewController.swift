@@ -17,6 +17,10 @@ class ViewController: UIViewController {
         print("touched up inside")
     }
   
+    @IBAction func testButtonTouchedUpInside(_ sender: UIButton) {
+        print("\(sender.hash) : test button touched up inside")
+    }
+    
     @IBAction func nextButtonTouchedUpOutside(_ sender: Any) {
         self.firstLabel.textColor = UIColor.red
         print("touched up outside")
