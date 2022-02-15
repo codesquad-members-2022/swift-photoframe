@@ -38,7 +38,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func nextButtonTouched(_ sender: Any) {
-        
+        photoLabel.textColor = UIColor(red: 255, green: 92, blue: 141)
+        photoLabel.backgroundColor = UIColor(red: 82, green: 74, blue: 78)
+        photoLabel.alpha = 0.7
     }
 }
 
