@@ -49,7 +49,17 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="다음"/>
                                 <connections>
+                                    <action selector="nextButtonTouched2:" destination="fL3-1V-XyL" eventType="touchUpInside" id="yB1-rz-eRf"/>
                                     <action selector="nextButtonTouched:" destination="fL3-1V-XyL" eventType="touchUpInside" id="iIC-m1-y2h"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8jK-TB-kxk">
+                                <rect key="frame" x="180" y="633" width="57" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="다음2"/>
+                                <connections>
+                                    <action selector="nextButtonTouched:" destination="fL3-1V-XyL" eventType="touchUpInside" id="Q6R-UD-aGh"/>
                                 </connections>
                             </button>
                         </subviews>
