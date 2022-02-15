@@ -36,4 +36,7 @@ DerivedData/
 !*.xcworkspace/contents.xcworkspacedata
 **/xcshareddata/WorkspaceSettings.xcsettings
 
+### AppCode Paths ###
+*.idea
+
 # End of https://www.toptal.com/developers/gitignore/api/xcode
