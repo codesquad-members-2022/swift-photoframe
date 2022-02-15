@@ -9,10 +9,29 @@ import UIKit
 
 class FirstSceneViewController: UIViewController {
 
+    @IBOutlet weak var firstLabel: UILabel!
+    @IBOutlet weak var firstDescription: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(#file, #line, #function, #column)
-        // Do any additional setup after loading the view.
+        
+        firstLabel.text = "Beck의 사진액자"
+        
+        editLabel(firstLabel)
+        editLabel(firstDescription)
+    }
+    
+    func editLabel(_ label: UILabel) {
+        
+        label.textColor = .systemBrown
+        label.backgroundColor = .systemMint
+        label.layer.opacity = 0.5
+        
+        let editFontSize: UIFont = {
+            label.font.withSize(label.font.pointSize + 7)
+        }()
+        
+        label.font = editFontSize
     }
     
 
