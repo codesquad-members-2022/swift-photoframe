@@ -8,6 +8,49 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="pHK-NO-aTK">
+            <objects>
+                <viewController id="hbo-mB-i4C" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HWQ-BT-4es">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3V6-3w-h8d">
+                                <rect key="frame" x="167" y="161" width="80" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <segue destination="1hC-tI-ead" kind="show" id="JvL-2j-5Ad"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="WyN-OD-sCw"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="bzt-jQ-sTZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GUS-RS-sZh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1057.9710144927537" y="-616.07142857142856"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="l1T-hF-PlJ">
+            <objects>
+                <viewController id="1hC-tI-ead" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kS6-S6-zg8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="LlQ-Ng-1kP"/>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="wAc-xC-bKf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ut3-bN-lec" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1883" y="-616"/>
+        </scene>
         <!--Photo Tab Bar Controller-->
         <scene sceneID="Cpj-YA-fLt">
             <objects>
@@ -49,12 +92,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y1f-hs-0PQ">
-                                <rect key="frame" x="176" y="206" width="67" height="31"/>
+                                <rect key="frame" x="166" y="207" width="81" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
                                     <action selector="nextButtonTouched:" destination="6wT-tc-Cka" eventType="touchUpInside" id="beW-UW-p1t"/>
+                                    <segue destination="hbo-mB-i4C" kind="show" id="wbz-8r-Vbe"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -92,6 +136,12 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

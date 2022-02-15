@@ -119,3 +119,41 @@ UIView를 상속받기에 이와 관련된 속성을 모두 사용할 수 있습
 
 ----
 
+## Scene Segue
+
+### 기능 요구 사항
+> [x] First Scene에 버튼(UIButton)을 추가하고 IBAction으로 연결한다.
+>
+> [x] 연결한 액션에 대한 메서드를 구현한다.
+>
+> [x] 실행하고 버튼을 터치하기 이전/이후 화면을 캡처해서 readme.md 파일에 포함한다
+>
+
+### 구현 과정
+1. UIButton을 첫ViewController에 추가.
+2. IBAction으로 추가.
+3. 추가한 함수에 로직 구현.
+
+### 실행결과
+<img width="341" alt="스크린샷 2022-02-15 오전 12 57 37" src="https://user-images.githubusercontent.com/62687919/153899060-3ceacd2d-2233-4748-8711-8714fe45f54c.png">
+
+<img width="353" alt="스크린샷 2022-02-15 오전 1 00 51" src="https://user-images.githubusercontent.com/62687919/153899696-a6d35869-b1a5-4ad4-848b-a841de0eb0f5.png">
+
+### 추가학습
+- 버튼에 IBAction을 추가할 때 이벤트(Event) 종류에는 어떤 것들이 있는지 학습한다.
+<img width="392" alt="스크린샷 2022-02-15 오전 1 05 06" src="https://user-images.githubusercontent.com/62687919/153900504-1dfe3875-822c-4db9-b91d-8edeb192f1bd.png">
+이와 같은 이벤트가 있고 일반적으로 버튼터치 시 감지되는 이벤트는 touchUpInsdie로 알고 있습니다.
+
+- 버튼에 액션을 여러개 추가할 수 있을까? : 네!
+- 여러 버튼을 동시에 하나의 액션에 연결할 수 있을까? : 네!
+
+### 궁금증 정리
+
+버튼의 이벤트를 받아오는 방법은 어떤게 있을까?
+- 검색결과 
+1. IBAction
+2. #selector
+3. RxCocoa 등이 있었습니다.
+
+
+----
