@@ -10,6 +10,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet var photoLabel: UILabel!
+    @IBOutlet var firstDescriptionLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,8 +35,14 @@ class ViewController: UIViewController {
         photoLabel.center.x = self.view.frame.width/2
         
         
+        firstDescriptionLabel.text = "PhotoFrame Description"
+        firstDescriptionLabel.textColor = .yellow
+        firstDescriptionLabel.backgroundColor = .blue
+        firstDescriptionLabel.alpha = 0.5
+        firstDescriptionLabel.font = UIFont.italicSystemFont(ofSize: 20)
         
-        
+        firstDescriptionLabel.sizeToFit()  // 사이즈를 텍스트에 맞게 조정
+        firstDescriptionLabel.center.x = self.view.frame.width/2
         
         
         
