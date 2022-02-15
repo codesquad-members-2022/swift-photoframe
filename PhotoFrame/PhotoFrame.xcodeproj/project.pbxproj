@@ -40,8 +40,11 @@
 		1BBB4BB827BB60590002A9F7 /* Project_Forder_File_Missing.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BBB4BB727BB60590002A9F7 /* Project_Forder_File_Missing.png */; };
 		1BBB4BBA27BB60840002A9F7 /* Correct_Files_Conflict.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BBB4BB927BB60840002A9F7 /* Correct_Files_Conflict.png */; };
 		1BBB4BBC27BB60B20002A9F7 /* After_Git_Stash.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BBB4BBB27BB60B20002A9F7 /* After_Git_Stash.png */; };
+<<<<<<< HEAD
 		1BBB4BC027BB7CCE0002A9F7 /* UITabBarController_Complement_Image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1BBB4BBF27BB7CCD0002A9F7 /* UITabBarController_Complement_Image.jpg */; };
 		1BBB4BC227BB92A80002A9F7 /* Step2_Result.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BBB4BC127BB92A80002A9F7 /* Step2_Result.png */; };
+=======
+>>>>>>> 25ad5e9 (Correct Conflict when git PULL)
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,8 +102,11 @@
 		1BBB4BB727BB60590002A9F7 /* Project_Forder_File_Missing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Project_Forder_File_Missing.png; sourceTree = "<group>"; };
 		1BBB4BB927BB60840002A9F7 /* Correct_Files_Conflict.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Correct_Files_Conflict.png; sourceTree = "<group>"; };
 		1BBB4BBB27BB60B20002A9F7 /* After_Git_Stash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = After_Git_Stash.png; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		1BBB4BBF27BB7CCD0002A9F7 /* UITabBarController_Complement_Image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = UITabBarController_Complement_Image.jpg; sourceTree = "<group>"; };
 		1BBB4BC127BB92A80002A9F7 /* Step2_Result.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Step2_Result.png; sourceTree = "<group>"; };
+=======
+>>>>>>> 25ad5e9 (Correct Conflict when git PULL)
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,8 +191,11 @@
 		1BAD84EB27BA7FB300640DF8 /* README_images */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
 				1BBB4BC127BB92A80002A9F7 /* Step2_Result.png */,
 				1BBB4BBF27BB7CCD0002A9F7 /* UITabBarController_Complement_Image.jpg */,
+=======
+>>>>>>> 25ad5e9 (Correct Conflict when git PULL)
 				1BBB4BBB27BB60B20002A9F7 /* After_Git_Stash.png */,
 				1BBB4BB927BB60840002A9F7 /* Correct_Files_Conflict.png */,
 				1BBB4BB727BB60590002A9F7 /* Project_Forder_File_Missing.png */,
@@ -336,7 +345,10 @@
 				1BAD850527BA816900640DF8 /* FirstSceneViewController_Edited.png in Resources */,
 				1BAD850A27BA816900640DF8 /* FirstSceneViewController_CustomClass_Admit.png in Resources */,
 				1BAD84BF27B9EB7000640DF8 /* Assets.xcassets in Resources */,
+<<<<<<< HEAD
 				1BBB4BC227BB92A80002A9F7 /* Step2_Result.png in Resources */,
+=======
+>>>>>>> 25ad5e9 (Correct Conflict when git PULL)
 				1BBB4BBC27BB60B20002A9F7 /* After_Git_Stash.png in Resources */,
 				1BAD850627BA816900640DF8 /* Library_Search_UITabBarController.png in Resources */,
 				1BAD850427BA816900640DF8 /* FirstSceneViewController.png in Resources */,

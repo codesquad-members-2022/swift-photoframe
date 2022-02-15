@@ -41,8 +41,13 @@ DerivedData/
 **/xcshareddata/WorkspaceSettings.xcsettings
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ### AppCode Path ###
 .idea
 =======
 >>>>>>> f926bde (Add and Commit Project Folder)
+=======
+### AppCode Path ###
+.idea
+>>>>>>> 25ad5e9 (Correct Conflict when git PULL)
 # End of https://www.toptal.com/developers/gitignore/api/xcode
