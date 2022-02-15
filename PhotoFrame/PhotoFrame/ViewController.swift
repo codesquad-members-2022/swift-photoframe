@@ -2,6 +2,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBAction func nextButtonTouched(_ sender: Any) {
+        self.firstLabel.textColor = UIColor.blue
+        self.firstLabel.backgroundColor = UIColor.yellow
+        self.firstLabel.alpha = 0.5
+    }
+    
     @IBOutlet weak var firstLabel: UILabel!
     
     override func viewDidLoad() {
