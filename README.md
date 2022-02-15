@@ -54,3 +54,6 @@ PhotoFrame/ViewController.swift:18: Fatal error: Unexpectedly found nil while im
 
 ### photoLabel 아래 레이블도 firstDescription Outlet 연결
 <img src="https://user-images.githubusercontent.com/92699723/154013944-ff568ccf-708f-4c8a-9c90-3c08eaf522ed.png" width="800" height="400"/>   
+
+# 추가 학습 내용
+- UILabel 클래스 속성(Property)는 어떤게 있는지 학습한다.
