@@ -14,7 +14,6 @@ class FirstViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         
         self.photoLabel.text = "Alex의 사진액자"
         self.photoLabel.font = self.photoLabel.font.withSize(36)
