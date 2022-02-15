@@ -31,6 +31,17 @@ class ViewController: UIViewController {
     }
     
     @IBAction func colorButtonTouched(_ sender: UIButton) {
-        print(sender.tag)
+        var buttonTitle: String = "Touched"
+        switch sender.tag {
+        case 0:
+            buttonTitle += "Blue"
+        case 1:
+            buttonTitle += "Orange"
+        case 2:
+            buttonTitle += "Purple"
+        default:
+            break
+        }
+        sender.setTitle(buttonTitle, for: .normal)
     }
 }
