@@ -11,9 +11,9 @@
         <!--Yellow View Controller-->
         <scene sceneID="pHK-NO-aTK">
             <objects>
-                <viewController id="hbo-mB-i4C" customClass="YellowViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="YellowVC" id="hbo-mB-i4C" customClass="YellowViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HWQ-BT-4es">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3V6-3w-h8d">
@@ -22,7 +22,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
-                                    <segue destination="1hC-tI-ead" kind="presentation" id="1Sc-SA-gZb"/>
+                                    <action selector="openButtonTouched:" destination="hbo-mB-i4C" eventType="touchUpInside" id="3Se-gc-TkR"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cNK-Jz-zkT">
@@ -50,9 +50,9 @@
         <!--Green View Controller-->
         <scene sceneID="l1T-hF-PlJ">
             <objects>
-                <viewController id="1hC-tI-ead" customClass="GreenViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GreenVC" id="1hC-tI-ead" customClass="GreenViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kS6-S6-zg8">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ZU-qK-ab9">
@@ -124,7 +124,6 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
                                     <action selector="nextButtonTouched:" destination="6wT-tc-Cka" eventType="touchUpInside" id="beW-UW-p1t"/>
-                                    <segue destination="hbo-mB-i4C" kind="presentation" id="Ar8-av-m59"/>
                                 </connections>
                             </button>
                         </subviews>

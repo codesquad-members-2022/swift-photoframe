@@ -12,6 +12,13 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var firstLabel: UILabel!
     @IBOutlet weak var firstDescription: UILabel!
+    //lazy var yellowVC = YellowViewController() -> 스토리보드에서 ViewController를 찾아오지 않을 시 GreenViewController에 View 생성이 안됨.
+    private var yellowVC: UIViewController?
+    
+    override func loadView() {
+        super.loadView()
+        self.yellowVC = self.storyboard?.instantiateViewController(withIdentifier: "YellowVC")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +27,6 @@ class ViewController: UIViewController {
         firstLabel.text = "ebony의 액자"
         firstLabel.textAlignment = .center
         firstLabel.font = UIFont.systemFont(ofSize: 24)
-        
         
         firstDescription.text = "first description"
         firstDescription.textColor = .blue
@@ -33,8 +39,10 @@ class ViewController: UIViewController {
         self.firstLabel.textColor = UIColor.blue
         self.firstLabel.backgroundColor = UIColor.yellow
         self.firstLabel.alpha = 0.5
-        
-        
+        guard let yellowVC = self.yellowVC else {
+            return
+        }
+        self.present(yellowVC, animated: true, completion: nil)
     }
 }
 
