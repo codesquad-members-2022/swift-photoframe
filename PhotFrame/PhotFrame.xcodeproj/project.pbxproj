@@ -13,6 +13,7 @@
 		3774AA0827BA763600C839E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3774AA0627BA763600C839E3 /* Main.storyboard */; };
 		3774AA0A27BA763700C839E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3774AA0927BA763700C839E3 /* Assets.xcassets */; };
 		3774AA0D27BA763700C839E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3774AA0B27BA763700C839E3 /* LaunchScreen.storyboard */; };
+		3774AA1527BB949000C839E3 /* YellowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3774AA1427BB949000C839E3 /* YellowViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		3774AA0927BA763700C839E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3774AA0C27BA763700C839E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3774AA0E27BA763700C839E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3774AA1427BB949000C839E3 /* YellowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				3774AA0027BA763600C839E3 /* AppDelegate.swift */,
 				3774AA0227BA763600C839E3 /* SceneDelegate.swift */,
 				3774AA0427BA763600C839E3 /* ViewController.swift */,
+				3774AA1427BB949000C839E3 /* YellowViewController.swift */,
 				3774AA0627BA763600C839E3 /* Main.storyboard */,
 				3774AA0927BA763700C839E3 /* Assets.xcassets */,
 				3774AA0B27BA763700C839E3 /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3774AA1527BB949000C839E3 /* YellowViewController.swift in Sources */,
 				3774AA0527BA763600C839E3 /* ViewController.swift in Sources */,
 				3774AA0127BA763600C839E3 /* AppDelegate.swift in Sources */,
 				3774AA0327BA763600C839E3 /* SceneDelegate.swift in Sources */,
