@@ -7,4 +7,6 @@
 - Initial ViewController로 지정한다.
 - 첫번째 Scene을 `ViewController`와 연결한다. 
 
-![Screenshot](/PhotoFrame/PhotoFrame/Assets.xcassets/Screenshot1.imageset/Screenshot2.png)
+![Tab bar](/PhotoFrame/PhotoFrame/Assets.xcassets/Screenshot1.imageset/Screenshot2.png)
+
+![Console](/PhotoFrame/PhotoFrame/Assets.xcassets/Screenshot2.imageset/Screen Shot 2022-02-15 at 2.50.11 PM.png)
