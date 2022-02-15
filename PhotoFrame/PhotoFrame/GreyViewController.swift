@@ -14,6 +14,18 @@ class GreyViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    override func viewWillAppear(_ animated: Bool) {
+        print(#file, #line, #function, #column)
+    }
+    override  func viewDidAppear(_ animated: Bool) {
+        print(#file, #line, #function, #column)
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        print(#file, #line, #function, #column)
+    }
+    override func viewDidDisappear(_ animated: Bool) {
+        print(#file, #line, #function, #column)
+    }
     
     @IBAction func closeButtonTouched(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
