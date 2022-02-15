@@ -48,7 +48,9 @@
                                     <color key="baseBackgroundColor" systemColor="systemGray3Color"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="nextButtonTouched:" destination="DvB-Gi-ecE" eventType="touchUpInside" id="iie-eU-NdI"/>
+                                    <action selector="nextButtonTouchedDown:" destination="DvB-Gi-ecE" eventType="touchDown" id="0Uy-AX-bVu"/>
+                                    <action selector="nextButtonTouchedUpInside:" destination="DvB-Gi-ecE" eventType="touchUpInside" id="jVQ-6O-TQM"/>
+                                    <action selector="nextButtonTouchedUpOutside:" destination="DvB-Gi-ecE" eventType="touchUpOutside" id="Gfn-UI-h7Z"/>
                                 </connections>
                             </button>
                         </subviews>

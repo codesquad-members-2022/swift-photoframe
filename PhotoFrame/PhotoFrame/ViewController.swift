@@ -1,15 +1,26 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    @IBAction func nextButtonTouched(_ sender: Any) {
+    
+    @IBOutlet weak var firstLabel: UILabel!
+    
+    @IBAction func nextButtonTouchedUpInside(_ sender: Any) {
         self.firstLabel.textColor = UIColor.blue
         self.firstLabel.backgroundColor = UIColor.yellow
         self.firstLabel.alpha = 0.5
-        print("clicked!")
+        
+        print("touched up inside")
+    }
+  
+    @IBAction func nextButtonTouchedUpOutside(_ sender: Any) {
+        self.firstLabel.textColor = UIColor.red
+        print("touched up outside")
     }
     
-    @IBOutlet weak var firstLabel: UILabel!
+    @IBAction func nextButtonTouchedDown(_ sender: Any) {
+        self.firstLabel.textColor = UIColor.white
+        print("touched down")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
