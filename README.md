@@ -50,4 +50,7 @@ PhotoFrame/ViewController.swift:18: Fatal error: Unexpectedly found nil while im
 " height="400"/>   
 <img src="https://user-images.githubusercontent.com/92699723/154010450-46fc4bb2-5d9d-4111-a5bd-2893a63c4ff1.png" width="800" height="400"/>   
 ### photoLabel의 속성을 변경해본다.
-<img src="https://user-images.githubusercontent.com/92699723/154013140-110ab0ec-a9e2-4235-91b0-c0dc29c2b133.png" width="400" height="400"/>
+<img src="https://user-images.githubusercontent.com/92699723/154013140-110ab0ec-a9e2-4235-91b0-c0dc29c2b133.png" width="400" height="400"/>   
+
+### photoLabel 아래 레이블도 firstDescription Outlet 연결
+<img src="https://user-images.githubusercontent.com/92699723/154013944-ff568ccf-708f-4c8a-9c90-3c08eaf522ed.png" width="800" height="400"/>   
