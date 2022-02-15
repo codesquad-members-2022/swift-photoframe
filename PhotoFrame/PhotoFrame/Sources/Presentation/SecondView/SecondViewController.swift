@@ -25,6 +25,7 @@ class SecondViewController: UIViewController {
         picker?.delegate = self
         setRandomImage()
     }
+    
     @IBAction func nextImageButtonTouched(_ sender: Any) {
         setRandomImage()
     }
@@ -33,8 +34,8 @@ class SecondViewController: UIViewController {
         let randomIndex = Int.random(in: 1...22)
         self.photoImageView.image = UIImage(named: String(format: "%02d.jpg", randomIndex))
     }
+    
     @IBAction func selectButtonTouched(_ sender: Any) {
-        
         guard let picker = self.picker else {
             return
         }
