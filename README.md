@@ -7,7 +7,7 @@
 - [x]  TabBarController에 Tab을 2개로 지정하고, Scene을 각각 연결
 - [x]  첫 번째 Scene에 Custom Class를 ViewController로 지정
 - [x]  로그출력 코드 추가
-<img width="717" alt="프로젝트 생성 콘솔" src="https://user-images.githubusercontent.com/92635121/154050381-2b9680db-8255-4351-8345-43ce78014753.png">
+<img width="700" alt="프로젝트 생성 콘솔" src="https://user-images.githubusercontent.com/92635121/154050381-2b9680db-8255-4351-8345-43ce78014753.png">
 
 
 ## Step 2. IBOutlet 연결하기
@@ -51,7 +51,7 @@
 | Touch Up Outside | 통제가 안되는 영역에서 터치 업할 때 |
 | Value Changed | 값이 변경될 때 |
 
-<img width="1007" alt="IBOutlet 연결" src="https://user-images.githubusercontent.com/92635121/154050395-91b0a72a-d7ae-4caa-9b25-8a944fe6fa6e.png">
+<img width="700" alt="IBOutlet 연결" src="https://user-images.githubusercontent.com/92635121/154050395-91b0a72a-d7ae-4caa-9b25-8a944fe6fa6e.png">
 
 ### IBOutlet / IBAction
 * 접두어 IB는 `Interface Builder`의 약자이다.
@@ -63,5 +63,5 @@
 2. 하나의 액션이 여러 버튼을 가질 수 있는가? `Yes`  
 3. 한 버튼에 IBOutlet과 IBAction을 연결할 수 있는가? `Yes`  
 
-<img width="1430" alt="다양한 액션 연결" src="https://user-images.githubusercontent.com/92635121/154049243-25cdd3f8-b7d0-4927-af04-87daa7f28b89.png">  
-<img width="761" alt="스크린샷 2022-02-15 오후 8 07 39" src="https://user-images.githubusercontent.com/92635121/154050134-176bd5b0-a18d-43a2-8af0-668e7e02ac62.png">
+<img width="700" alt="다양한 액션 연결" src="https://user-images.githubusercontent.com/92635121/154049243-25cdd3f8-b7d0-4927-af04-87daa7f28b89.png">  
+<img width="400" alt="스크린샷 2022-02-15 오후 8 07 39" src="https://user-images.githubusercontent.com/92635121/154050134-176bd5b0-a18d-43a2-8af0-668e7e02ac62.png">
