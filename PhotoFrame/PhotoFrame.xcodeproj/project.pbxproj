@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D26F844D27BB3A430010CB37 /* FirstSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26F844C27BB3A430010CB37 /* FirstSheetViewController.swift */; };
+		D26F844F27BB3CF60010CB37 /* SecondSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26F844E27BB3CF60010CB37 /* SecondSheetViewController.swift */; };
 		D274C77227B9EEBE00BF786F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D274C77127B9EEBE00BF786F /* AppDelegate.swift */; };
 		D274C77427B9EEBE00BF786F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D274C77327B9EEBE00BF786F /* SceneDelegate.swift */; };
 		D274C77627B9EEBE00BF786F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D274C77527B9EEBE00BF786F /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D26F844C27BB3A430010CB37 /* FirstSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSheetViewController.swift; sourceTree = "<group>"; };
+		D26F844E27BB3CF60010CB37 /* SecondSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSheetViewController.swift; sourceTree = "<group>"; };
 		D274C76E27B9EEBE00BF786F /* PhotoFrame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoFrame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D274C77127B9EEBE00BF786F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D274C77327B9EEBE00BF786F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +63,8 @@
 				D274C77127B9EEBE00BF786F /* AppDelegate.swift */,
 				D274C77327B9EEBE00BF786F /* SceneDelegate.swift */,
 				D274C77527B9EEBE00BF786F /* ViewController.swift */,
+				D26F844C27BB3A430010CB37 /* FirstSheetViewController.swift */,
+				D26F844E27BB3CF60010CB37 /* SecondSheetViewController.swift */,
 				D274C77727B9EEBE00BF786F /* Main.storyboard */,
 				D274C77A27B9EEBE00BF786F /* Assets.xcassets */,
 				D274C77C27B9EEBE00BF786F /* LaunchScreen.storyboard */,
@@ -138,7 +144,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D26F844F27BB3CF60010CB37 /* SecondSheetViewController.swift in Sources */,
 				D274C77627B9EEBE00BF786F /* ViewController.swift in Sources */,
+				D26F844D27BB3A430010CB37 /* FirstSheetViewController.swift in Sources */,
 				D274C77227B9EEBE00BF786F /* AppDelegate.swift in Sources */,
 				D274C77427B9EEBE00BF786F /* SceneDelegate.swift in Sources */,
 			);
