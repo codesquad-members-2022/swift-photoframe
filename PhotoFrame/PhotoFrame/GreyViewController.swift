@@ -15,7 +15,9 @@ class GreyViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func closeButtonTouched(_ sender: Any) {
+    }
+    
     /*
     // MARK: - Navigation
 
