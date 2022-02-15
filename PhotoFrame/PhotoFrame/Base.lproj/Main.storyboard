@@ -71,6 +71,20 @@
                     <view key="view" contentMode="scaleToFill" id="vLR-h7-7Dk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AaS-7F-Hmj">
+                                <rect key="frame" x="160" y="241" width="95" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="다음">
+                                    <color key="baseBackgroundColor" systemColor="systemIndigoColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="nextButtonTouched:" destination="axr-Qa-V1D" eventType="touchUpInside" id="piz-1v-Npp"/>
+                                    <segue destination="TT9-Mj-S2w" kind="presentation" modalTransitionStyle="flipHorizontal" id="J7c-KM-ygG"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Y3f-eV-Rqp"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                     </view>
@@ -79,6 +93,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fpx-BN-j4b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1571" y="-704"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="BSf-3w-Qlh">
+            <objects>
+                <viewController id="TT9-Mj-S2w" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d6e-e0-GeN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="er1-zO-3f4"/>
+                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="rzM-b5-pOJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r29-QY-DJ4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2310" y="-704"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="PuS-vG-WsY">
@@ -102,6 +132,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
