@@ -23,6 +23,20 @@ iOS 포토프레임 프로젝트 저장소
 - [x] 특정한 시뮬레이터를 하나 골라서 실행한다.
 - [x] readme.md 파일을 자신의 프로젝트에 대한 설명으로 변경한다.
 
+<<<<<<< HEAD
+=======
+##### 15일(화)
+
+- [x] 사진액자 앱 - 시작하기 요구사항을 구현한 상태로 시작한다.
+- [ ] First Scene에 만들어져 있는 레이블을 IBOutlet으로 연결한다.
+- [ ] 연결한 아웃렛 변수에 값을 변경한다.
+- [ ] 실행한 화면을 캡처해서 readme.md 파일에 포함한다.
+
+### 출력 확인
+
+<img width="521" alt="스크린샷 2022-02-14 오후 8 42 44" src="https://user-images.githubusercontent.com/84652513/153862683-524ed1f8-a8f5-448d-8991-f52700081b5a.png">
+
+>>>>>>> day2_tue
 ### 참조링크
 
 - 깃학습(https://learngitbranching.js.org/?locale=ko)
