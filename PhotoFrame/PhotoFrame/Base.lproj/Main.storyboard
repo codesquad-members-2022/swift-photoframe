@@ -43,9 +43,10 @@
                                 <rect key="frame" x="160" y="292" width="95" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="next"/>
+                                <buttonConfiguration key="configuration" style="filled" title="다음"/>
                                 <connections>
                                     <action selector="nextButtonTouched:" destination="axr-Qa-V1D" eventType="touchUpInside" id="OVT-4u-JZg"/>
+                                    <segue destination="fz6-B5-ZgN" kind="show" id="UKT-K8-QAt"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -60,6 +61,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Hw-ln-BAa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="839.13043478260875" y="-704.46428571428567"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="R9r-CZ-MRm">
+            <objects>
+                <viewController id="fz6-B5-ZgN" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vLR-h7-7Dk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Y3f-eV-Rqp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="58H-e2-C6P"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fpx-BN-j4b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1571" y="-704"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="PuS-vG-WsY">
