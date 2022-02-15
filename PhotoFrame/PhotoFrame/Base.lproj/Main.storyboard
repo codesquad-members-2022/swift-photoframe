@@ -31,8 +31,21 @@
                     <view key="view" contentMode="scaleToFill" id="r7f-XS-ZdA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First View" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qtq-aH-YCa">
+                                <rect key="frame" x="16" y="429.5" width="382" height="37"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Lhz-k6-Zqu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Lhz-k6-Zqu" firstAttribute="trailing" secondItem="Qtq-aH-YCa" secondAttribute="trailing" constant="16" id="Ceh-hU-jdV"/>
+                            <constraint firstItem="Qtq-aH-YCa" firstAttribute="leading" secondItem="Lhz-k6-Zqu" secondAttribute="leading" constant="16" id="GRc-pa-AWl"/>
+                            <constraint firstItem="Qtq-aH-YCa" firstAttribute="centerY" secondItem="r7f-XS-ZdA" secondAttribute="centerY" id="HIE-Yy-acN"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="D8U-M4-Ods"/>
                 </viewController>
