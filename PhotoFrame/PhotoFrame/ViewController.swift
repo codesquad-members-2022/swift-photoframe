@@ -18,7 +18,9 @@ class ViewController: UIViewController {
         self.photoLabel.alpha = 0.5
         self.photoLabel.font = .systemFont(ofSize: 70)
     }
-
+    @IBAction func nextButtonTouched(_ sender: UIButton) {
+    }
+    
 
 }
 
