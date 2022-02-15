@@ -6,6 +6,7 @@ class ViewController: UIViewController {
         self.firstLabel.textColor = UIColor.blue
         self.firstLabel.backgroundColor = UIColor.yellow
         self.firstLabel.alpha = 0.5
+        print("clicked!")
     }
     
     @IBOutlet weak var firstLabel: UILabel!
