@@ -18,8 +18,8 @@ class ViewController: UIViewController {
         
         print(#file, #line, #function, #column)
         
-        self.firstLabel.text = "Rosa의 사진액자"
         self.firstDescription.text = "잡다한 사진 저장소"
+        self.firstDescription.textColor = .gray
     }
 }
 
