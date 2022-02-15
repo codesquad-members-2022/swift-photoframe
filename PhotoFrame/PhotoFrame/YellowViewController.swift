@@ -13,4 +13,6 @@ class YellowViewController: UIViewController {
         super.viewDidLoad()
 
     }
+    @IBAction func closedButtonTouched(_ sender: UIButton) {
+    }
 }
