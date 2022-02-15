@@ -15,7 +15,15 @@ class ViewController: UIViewController {
     let firstButton = UIButton(type: UIButton.ButtonType.system) as UIButton
     
     @objc func buttonAction(_ sender:UIButton!) {
-        print("Button tapped")
+        print("First Button tapped")
+    }
+    
+    
+    @IBAction func nextButtonTouched(_ sender: UIButton) {
+        print("Second Button Tapped")
+        self.firstLabel.textColor = UIColor.blue
+        self.firstLabel.backgroundColor = UIColor.yellow
+        self.firstLabel.alpha = 0.5
     }
     
     
