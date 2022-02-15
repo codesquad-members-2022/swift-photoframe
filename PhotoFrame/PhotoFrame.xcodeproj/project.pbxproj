@@ -37,6 +37,9 @@
 		1BAD850D27BA816900640DF8 /* New_File_Cocoa_Touch_Class_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BAD84FE27BA816900640DF8 /* New_File_Cocoa_Touch_Class_3.png */; };
 		1BAD850F27BA82C200640DF8 /* initialViewController_Error.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BAD850E27BA82C200640DF8 /* initialViewController_Error.png */; };
 		1BAD851327BB529B00640DF8 /* Git_Push_Error_First.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1BAD851227BB529B00640DF8 /* Git_Push_Error_First.jpg */; };
+		1BBB4BB827BB60590002A9F7 /* Project_Forder_File_Missing.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BBB4BB727BB60590002A9F7 /* Project_Forder_File_Missing.png */; };
+		1BBB4BBA27BB60840002A9F7 /* Correct_Files_Conflict.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BBB4BB927BB60840002A9F7 /* Correct_Files_Conflict.png */; };
+		1BBB4BBC27BB60B20002A9F7 /* After_Git_Stash.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BBB4BBB27BB60B20002A9F7 /* After_Git_Stash.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +94,9 @@
 		1BAD84FE27BA816900640DF8 /* New_File_Cocoa_Touch_Class_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = New_File_Cocoa_Touch_Class_3.png; sourceTree = "<group>"; };
 		1BAD850E27BA82C200640DF8 /* initialViewController_Error.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = initialViewController_Error.png; sourceTree = "<group>"; };
 		1BAD851227BB529B00640DF8 /* Git_Push_Error_First.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Git_Push_Error_First.jpg; sourceTree = "<group>"; };
+		1BBB4BB727BB60590002A9F7 /* Project_Forder_File_Missing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Project_Forder_File_Missing.png; sourceTree = "<group>"; };
+		1BBB4BB927BB60840002A9F7 /* Correct_Files_Conflict.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Correct_Files_Conflict.png; sourceTree = "<group>"; };
+		1BBB4BBB27BB60B20002A9F7 /* After_Git_Stash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = After_Git_Stash.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +181,9 @@
 		1BAD84EB27BA7FB300640DF8 /* README_images */ = {
 			isa = PBXGroup;
 			children = (
+				1BBB4BBB27BB60B20002A9F7 /* After_Git_Stash.png */,
+				1BBB4BB927BB60840002A9F7 /* Correct_Files_Conflict.png */,
+				1BBB4BB727BB60590002A9F7 /* Project_Forder_File_Missing.png */,
 				1BAD851227BB529B00640DF8 /* Git_Push_Error_First.jpg */,
 				1BAD84EC27BA7FDB00640DF8 /* Basic_Storyboard_Image.png */,
 				1BAD84EE27BA801900640DF8 /* Basic_Storyboard_Image_isInitialViewController_off.png */,
@@ -304,9 +313,11 @@
 			files = (
 				1BAD850C27BA816900640DF8 /* New_File_Cocoa_Touch_Class_2.png in Resources */,
 				1BAD850D27BA816900640DF8 /* New_File_Cocoa_Touch_Class_3.png in Resources */,
+				1BBB4BB827BB60590002A9F7 /* Project_Forder_File_Missing.png in Resources */,
 				1BAD851327BB529B00640DF8 /* Git_Push_Error_First.jpg in Resources */,
 				1BAD850227BA816900640DF8 /* New_File_Cocoa_Touch_Class_1.png in Resources */,
 				1BAD850127BA816900640DF8 /* Empty_Storyboard.png in Resources */,
+				1BBB4BBA27BB60840002A9F7 /* Correct_Files_Conflict.png in Resources */,
 				1BAD850927BA816900640DF8 /* Library_Search_UIViewController.png in Resources */,
 				1BAD850B27BA816900640DF8 /* Result_Image.png in Resources */,
 				1BAD84C227B9EB7000640DF8 /* LaunchScreen.storyboard in Resources */,
@@ -319,6 +330,7 @@
 				1BAD850527BA816900640DF8 /* FirstSceneViewController_Edited.png in Resources */,
 				1BAD850A27BA816900640DF8 /* FirstSceneViewController_CustomClass_Admit.png in Resources */,
 				1BAD84BF27B9EB7000640DF8 /* Assets.xcassets in Resources */,
+				1BBB4BBC27BB60B20002A9F7 /* After_Git_Stash.png in Resources */,
 				1BAD850627BA816900640DF8 /* Library_Search_UITabBarController.png in Resources */,
 				1BAD850427BA816900640DF8 /* FirstSceneViewController.png in Resources */,
 				1BAD850827BA816900640DF8 /* Storyboard_Drag.png in Resources */,
