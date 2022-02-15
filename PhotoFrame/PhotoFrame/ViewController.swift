@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var firstLabel: UILabel!
     @IBOutlet weak var firstDescription: UILabel!
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,5 +22,10 @@ class ViewController: UIViewController {
         self.firstDescription.text = "잡다한 사진 저장소"
         self.firstDescription.textColor = .gray
     }
+    
+    @IBAction func nextButtonTouched(_ sender: Any) {
+        self.firstLabel.textColor = .blue
+        self.firstLabel.backgroundColor = .yellow
+        self.firstLabel.alpha = 0.5
+    }
 }
-
