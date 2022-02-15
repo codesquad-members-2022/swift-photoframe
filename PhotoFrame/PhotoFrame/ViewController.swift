@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var firstLabel: UILabel!
     @IBOutlet weak var firstDescription: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -25,12 +26,15 @@ class ViewController: UIViewController {
         firstDescription.textColor = .blue
         firstDescription.textAlignment = .center
         firstDescription.font = UIFont.systemFont(ofSize: 18)
+        
     }
     
     @IBAction func nextButtonTouched(_ sender: Any) {
         self.firstLabel.textColor = UIColor.blue
         self.firstLabel.backgroundColor = UIColor.yellow
         self.firstLabel.alpha = 0.5
+        
+        
     }
 }
 
