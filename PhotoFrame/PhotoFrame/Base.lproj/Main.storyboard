@@ -107,10 +107,10 @@
             </objects>
             <point key="canvasLocation" x="1571" y="-704"/>
         </scene>
-        <!--View Controller-->
+        <!--Blue View Controller-->
         <scene sceneID="BSf-3w-Qlh">
             <objects>
-                <viewController storyboardIdentifier="blueModal" id="TT9-Mj-S2w" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="blueModal" id="TT9-Mj-S2w" customClass="BlueViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="d6e-e0-GeN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
