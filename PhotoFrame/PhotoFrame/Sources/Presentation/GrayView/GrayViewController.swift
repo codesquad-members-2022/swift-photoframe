@@ -1,15 +1,14 @@
 //
-//  ColorView2.swift
+//  ColorView1.swift
 //  PhotoFrame
 //
 //  Created by seongha shin on 2022/02/14.
 //
 
-import Foundation
 import UIKit
 
-class ColorView2: UIViewController {
-
+class GrayViewController: UIViewController {
+    
     override func viewDidLoad() {
         print(#file, #line, #function, #column)
     }
@@ -29,7 +28,7 @@ class ColorView2: UIViewController {
     override func viewDidDisappear(_ animated: Bool) {
         print(#file, #line, #function, #column)
     }
-    
+
     @IBAction func closeButtonTouched(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }

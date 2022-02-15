@@ -68,10 +68,10 @@
             </objects>
             <point key="canvasLocation" x="1839.1304347826087" y="713.83928571428567"/>
         </scene>
-        <!--Color View1-->
+        <!--Gray View Controller-->
         <scene sceneID="k7V-Y2-pa6">
             <objects>
-                <viewController id="rt4-cO-aGs" customClass="ColorView1" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="rt4-cO-aGs" customClass="GrayViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FmN-Gf-5wn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -109,10 +109,10 @@
             </objects>
             <point key="canvasLocation" x="2913.04347826087" y="724.55357142857144"/>
         </scene>
-        <!--Color View2-->
+        <!--Brown View Controller-->
         <scene sceneID="9l4-6d-Bem">
             <objects>
-                <viewController id="Ych-LA-AU3" customClass="ColorView2" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Ych-LA-AU3" customClass="BrownViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BXK-Q5-wVO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -217,7 +217,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="photoframe-border" width="720" height="720"/>
+        <image name="photoframe-border" width="180" height="180"/>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
