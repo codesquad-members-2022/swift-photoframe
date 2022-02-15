@@ -90,6 +90,7 @@ ViewController 2
 5. View Controller2의 class 를 GreyView Controller로 변경
 6. View Controller2의 다음버튼을 GreyView Controller의 IBAction과 연결
 7. GreyView Controller 에 viewWillAppear, viewDidAppear,viewWillDisappear,viewDidDisappear 콜백함수 추가
+8. View Controller1 -> View Controller2 segue 삭제
 
 ### 실행화면
 
