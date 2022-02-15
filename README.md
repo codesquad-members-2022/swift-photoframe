@@ -32,7 +32,7 @@ UIlabel property
 
 ### 실행화면
 
-<img src="https://user-images.githubusercontent.com/78553659/153851665-5628b4dd-a609-4851-b999-2b7ea47f6d3f.png"  width="300" height="500"/>
+<img src="https://user-images.githubusercontent.com/78553659/153851665-5628b4dd-a609-4851-b999-2b7ea47f6d3f.png"  width="300" height="600"/>
 
 ---
 
@@ -48,7 +48,7 @@ UIlabel property
 
 ### 실행화면
 
-<img src="https://user-images.githubusercontent.com/78553659/153863324-4ee040b0-b9d1-4d11-ba9f-386feeee1e4a.png"  width="300" height="500"/>
+<img src="https://user-images.githubusercontent.com/78553659/153863324-4ee040b0-b9d1-4d11-ba9f-386feeee1e4a.png"  width="300" height="600"/>
 
 ---
 
@@ -69,8 +69,33 @@ UIlabel property
 
 ViewContoller 1
 
-<img src="https://user-images.githubusercontent.com/78553659/153980850-b2a4cb08-c1f2-4bd6-be1e-57083a4c32f3.png"  width="300" height="500"/>
+<img src="https://user-images.githubusercontent.com/78553659/153980850-b2a4cb08-c1f2-4bd6-be1e-57083a4c32f3.png"  width="300" height="600"/>
 <br></br>
 ViewController 2
 
-<img src="https://user-images.githubusercontent.com/78553659/153980855-affba82f-d64e-467f-ab33-f4797d577785.png"  width="300" height="500"/>
+<img src="https://user-images.githubusercontent.com/78553659/153980855-affba82f-d64e-467f-ab33-f4797d577785.png"  width="300" height="600"/>
+
+---
+
+<br></br>
+
+## 5. ViewController 연결하기
+
+### 과정
+
+1. GreyView Controller1.swift 추가
+2. View Controller1의 배경색상을 grey로 바꾸고 다음버튼 추가
+3. View Controller1의 class 를 GreyView Controller로 변경
+4. View Controller1의 다음버튼을 GreyView Controller에 IBAction으로 추가 후 dismiss구문 작성
+5. View Controller2의 class 를 GreyView Controller로 변경
+6. View Controller2의 다음버튼을 GreyView Controller의 IBAction과 연결
+
+### 실행화면
+
+ViewContoller 1
+
+<img src="https://user-images.githubusercontent.com/78553659/153984839-24ec3305-4609-4650-a349-178de624ac19.png"  width="300" height="600"/>
+<br></br>
+ViewController 2
+
+<img src="https://user-images.githubusercontent.com/78553659/153984845-cb88c314-a0ca-47a0-b59c-90dd3b084e85.png"  width="300" height="600"/>
