@@ -1,108 +1,157 @@
-# STEP01. 프로젝트 생성하기
+# STEP02. IBOutlet 연결하기
 
-> 2022.02.14
+> 2022.02.15
 
 ### 요구사항
 
-- [x] TabBar Controller를 추가하고 Initial ViewController로 지정한다.
-- [x] TabBarController에 Tab을 2개로 지정하고, Scene을 각각 연결한다
-- [x] 두 개 Scene 중에 첫 번째 Scene에 Custom Class를 ViewController로 지정한다
-- [x] 자동 생성된 ViewController 클래스 viewDidLoad() 함수에서 `print(#file, #line, #function, #column)` 코드를 추가하고 실행하면 콘솔 영역에 무엇이 출력되는지 확인한다
+- [x] 사진액자 앱 - 시작하기 요구사항을 구현한 상태로 시작한다.
+- [x] First Scene에 만들어져 있는 레이블을 IBOutlet으로 연결한다.
+- [x] 연결한 아웃렛 변수에 값을 변경한다.
+- [x] 실행한 화면을 캡처해서 readme.md 파일에 포함한다.
 
 <br/>
 <br/>
 
 ### 과정
 
-1. 스토리 보드의 Initial ViewController 선택
-2. Editor → Embed In → Tab Bar Controller
-3. 2번째 ViewController 생성
-4. Tab Bar Controller 에서 마우스 우클릭+ 드래그
-5. Relationship Segue-view controllers 선택
-6. ViewController 파일의 `viewDidLoad()` 에 Literal Expression 코드 추가
+1. 스토리보드 UI 구성
+   1. Label 2개 추가
+   2. Stack view 를 사용해 Label 들을 감싸고, Stack View 에 제약조건을 걸어 화면 정렬
+2. Label Outlet 과 ViewController 파일의 코드 연결
+3. `viewDidLoad()` 메서드에서 Label 의 속성 코드로 변경
+4. Inspector 영역에 UILabel의 커스텀 속성 추가
 
 ### 실행화면
 
-<img src="https://user-images.githubusercontent.com/12508578/153888099-e528bbfe-f71e-4bf6-a61e-29410b179e79.png" width="100%" height="859px"/>
+<img src="https://user-images.githubusercontent.com/12508578/153988353-4a9798a9-2dfc-4380-80c7-2985994a8a09.png" width="100%" height="854px"/>
 
 <br/>
 
 ## 배경 지식 학습
 
-### Primary Expressions(으뜸 표현식)
+### IB(Interface Builder)
 
-기본 종류의 표현식. 그 자체로 표현식으로 사용할 수 있으며 다른 ‘낱말 (tokens)’ 과 조합하여 ‘접두사 표현식’, ‘이항 표현식’, ‘접미사 표현식’ 을 만들 수도 있다.
+> UI 요소를 쉽게 배치하기 위해 Apple 에서 제공해주는 응용 프로그램.
+>
+> Xcode 에서는 Storyboard 를 뜻한다.
 
-더 자세한 내용은 [SWIFT PROGRAMMING LANGUAGE(문서)](https://docs.swift.org/swift-book/ReferenceManual/Expressions.html#ID389) 에서 확인 가능
+스토리보드와 우리가 만든 코드를 연결시킬때 IB 로 시작하는 Attribute 들을 사용해야 한다.
 
-**Literal Expression:**
+IBOutlet, IBAction, IBInspectable, IBDesignable 과 같은 Attribute 들은 스토리 보드와 연관있다.
 
-| Literal   | Type   | Value                          |
-| --------- | ------ | ------------------------------ |
-| #file     | String | 파일의 경로                    |
-| #fileID   | String | 파일과 파일이 속한 모듈의 이름 |
-| #filePath | String | 파일의 경로                    |
-| #line     | Int    | 줄의 번호                      |
-| #column   | Int    | 열의 번호                      |
-| #function | String | 선언의 이름                    |
+**IBOutlet, IBAction**
+
+- Interface Builder Annotation(주석)
+- Annotation이 붙은 프로퍼티나 메서드는 앱이 빌드될때 컴파일러가 체크하고 연결정보를 찾아 인터페이스 빌더의 객체와 서로 연결해 준다.
+
+### @IBOutlet
+
+- 아울렛 변수
+- 인터페이스의 빌더를 참조하는 프로퍼티임을 표시
+- 화면상의 객체를 소스코드에서 참조하기 위해 사용
+- 파일과 연결시 **Storage**를 weak, strong 값 중에서 고를 수 있다. (ARC)
+  - weak 을 선택했을때 `@IBOutlet weak var firstLabel: UILabel!`
+  - weak 타입으로 선언하면 참조되고 있어도 시스템이 임의로 메모리에서 제거할 수 있어 상호 참조에서 벗어날 수 있다.
+
+### @IBAction
+
+- 액션 메서드
+- 객체의 이벤트를 제어할때 사용
+- 인터페이스 빌더의 객체에서 일어나는 이벤트를 받는 메서드임을 표시
+- 연결 정보는 Connection Attribute Tab(인스펙터 탭의 마지막) 에서 확인 가능하다
+
+<aside>
+💡 Annotation(주석): 
+컴파일러에게 변수나 메서드의 성격을 알려주는 역할
+</aside>
+
+## @IBInspectable
+
+> 인스펙터 영역에 커스텀 Attribute 를 추가할때 사용
+
+get, set 이 가능한 연산 프로퍼티 여야 한다.
+
+```swift
+class CustomLabel: UILabel {
+    @IBInspectable var MyColor: UIColor {
+        get {
+            return self.MyColor
+        }
+        set {
+            self.textColor = newValue
+        }
+    }
+}
+```
+
+![set 연산으로 값 변경](https://user-images.githubusercontent.com/12508578/153988756-6578b33b-2a19-4ad9-8718-da80c36415d1.png)
+
+인스펙터에서 set 연산으로 값 변경을 할 수 있다.
+
+1. 스토리보드에서 ViewController 에 Label 을 넣는다.
+2. Label 의 Identity Inspector 에서 `Custom class: CustomLabel` 로 설정
+3. 스토리보드의 Attributes Inspector 에서 속성값이 추가되었는지 확인
+
+스토리보드의 인스펙터에서 컬러를 바꾸어도 UILabel 의 컬러는 그대로 인것을 볼 수 있을 것이다. 하지만 실행해 시뮬레이터에서 확인하면 변경된 컬러를 확인할 수 있다.
+
+실시간으로 확인해 보려면 추가적으로 **IBDesignable** 이 필요하다.
+
+### @IBDesignable
+
+> 인터페이스 빌더에서 실시간으로 렌더링할때 사용
+
+위에서 작성한 CustomLabel 클래스 코드 앞에 **@IBDesignable** 을 붙여보자:
+
+```swift
+@IBDesignable
+class CustomLabel: UILabel {...
+```
+
+![IBDesignable을 적용한 익스펙터 화면](https://user-images.githubusercontent.com/12508578/153988947-d25cae45-94ad-4594-ad44-9728600f9849.png)
+
+스토리보드가 업데이트되며, 빌드에 성공하면 `Designables` 가 생긴것을 볼 수 있다.
+
+이제 추가한 속성값을 변경해보면, 스토리보드의 Label 이 실시간으로 변경되는 것을 확인할 수 있다.
 
 <br/>
 
 ## 🧁 추가 학습거리
 
-> iOS 는 디바이스를 가득 채우는 하나의 화면만을 표시할 수 있으며, window 와 view 객체가 이를 위해 사용된다.
+### UILabel
 
-- window:
-  - 디바이스를 가득 채우기 위해 사용하는 객체
-  - 유저 인터페이스 표현 계층의 최상위에 위치
-  - 뷰의 일종이지만 컨텐츠를 가지지 않는다.
+> 하나 이상의 text 를 표시하는 view
 
-### ViewControllers
+가장 최근에 설정한 속성이 화면에 표시된다.
 
-> ViewControllers 를 사용하여 UIKit 앱의 인터페이스를 관리하고
->
-> 앱의 content 를 쉽게 탐색할 수 있도록 도와준다
->
-> [👉 문서에서 보기](https://developer.apple.com/documentation/uikit/view_controllers)
+속성(property):
 
-- 모든 앱에는 main window 컨텐츠가 있는 View Controller 가 적어도 1개 이상 존재한다.
-- 컨텐츠를 한 화면에 담아낼 수 없다면, 여러개의 View Controller 를 이용해 관리한다.
-- **container view controller** 는 다른 view controller 를 root view 에 내장(embed)한다.대표적으로 UITabBarController, UINavigationController 가 있다.
+- attributedText
+  - `NSAttributedString` API 를 사용해 개별 문자 및 문자 그룹의 모양을 제어할 수 있다
 
-### UITabBarController
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b70cdd7a-c0da-4c74-aa9c-f45fa0eaf259/Untitled.png)
 
-> 다중선택 인터페이스를 관리하는 container view controller
+- NSString
+  - text 형식을 균일하게 지정하려면 text property 를 NSString 로 설정한다.
+  - NSString 은 font, textColor, textAlignment, lineBreakMode ...등의 property 를 포함할 수 있다.
 
-- Array 기반
-  - index 로 뷰컨트롤러 이동
-- UIViewController 를 상속받음
-- root view controller 를 custom view controller 나 navigation controller 로 사용할 수 있다.
-  - navigation controller 인 경우 tabbar controller 는 tabbar 와 겹치지 않도록 화면의 navigation content 의 크기를 조정한다.
+### NSAttributedString
 
-### UINavigationController
+> text 일부에 대한 관련 속성이 있는 string(문자열)
 
-> stack 을 베이스로 하는 계층구조를 가지는 container view controller
+[Apple Document-AttributedStrings](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/AttributedStrings/AttributedStrings.html#//apple_ref/doc/uid/10000036i)
 
-navigation bar 와 child view controller들을 관리하는 기능을 제공한다. child view controller 를 stack 으로 관리하며 child view controller 를 stack에서 add, remove 할 수 있는 API 를 제공한다.
+- NSObject 를 상속받은 class
+- Swift 문자열에서는 부분적으로 문자의 컬러를 바꿀 수 있는 기능이 없기때문에 Objective-C 의 NSAttributedString 을 사용한다.
 
-- navigation stack 이라는 정렬된 배열을 사용해 하위 뷰컨트롤러를 관리
-  - push, pop 로 뷰컨트롤러 이동
-- UIViewController 를 상속받음
+### NSString
 
-### UIViewController
+> String 과 bridge 하는 plain-text Unicode string 객체
+> Foundation 관련 동작이 필요한 경우 NSString을 사용
 
-UIKit 앱의 view 계층을 관리하는 객체
-
-- UIResponder 를 상속받음
-- 데이터 변화에 따른 view 컨텐츠 업데이트
-- view 에 대한 유저의 상호작용(interaction) 에 응답
-- view 크기 조정 및 전체 인터페이스의 레이아웃 관리
-- 앱 내의 다른 객체(다른 view controller 를 포함)와의 조정
-
-### UIResponder
-
-이벤트에 응답하고 처리하기 위한 추상 인터페이스
-
-- UIApplication, UIViewController, UIView, UIWindow 등 많은 객체들도 responder 이다.
-- 이벤트가 발생하면 UIKit 이 처리를 위해 responder 객체에게 해당 이벤트를 발송한다.
-- event에는 터치, 모션, remote-control, press 등이 있으며 이 이벤트를 처리하려면 responder 가 해당 메서드를 재정의 해야한다.
+- NSObject 를 상속받은 Class
+  - Swift 의 String 은 Struct
+- String ↔ NSString 은 쉽게 변환 가능(toll-free bridged)
+  ```swift
+  NSString as String
+  String as NSString
+  ```
