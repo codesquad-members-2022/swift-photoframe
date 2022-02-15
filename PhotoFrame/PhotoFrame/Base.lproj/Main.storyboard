@@ -48,6 +48,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="D8U-M4-Ods"/>
+                    <connections>
+                        <outlet property="photoLabel" destination="Qtq-aH-YCa" id="d0V-Sm-hKF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JIU-4Y-4Z4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
