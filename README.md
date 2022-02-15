@@ -61,7 +61,7 @@
 ### 🤔 궁금증해소
 1. 하나의 버튼에 여러 액션을 연결할 수 있는가? `Yes`  
 <img width="1430" alt="다양한 액션 연결" src="https://user-images.githubusercontent.com/92635121/154049243-25cdd3f8-b7d0-4927-af04-87daa7f28b89.png">
-2. 하나의 액션이 여러 버튼을 가질 수 있는가? `Yes`
+2. 하나의 액션이 여러 버튼을 가질 수 있는가? `Yes`  \
 3. 한 버튼에 IBOutlet과 IBAction을 연결할 수 있는가? `Yes`  
 
 <img width="761" alt="스크린샷 2022-02-15 오후 8 07 39" src="https://user-images.githubusercontent.com/92635121/154050134-176bd5b0-a18d-43a2-8af0-668e7e02ac62.png">
