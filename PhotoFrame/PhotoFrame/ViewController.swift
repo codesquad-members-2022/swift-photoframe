@@ -20,11 +20,6 @@ class ViewController: UIViewController {
     }
     
     @IBAction func nextButtonTouched(_ sender: UIButton) {
-        self.photoLabel.text = "버튼이 눌러졌어요"
-        self.photoLabel.backgroundColor = .systemRed
-        self.photoLabel.textColor = .systemYellow
-        self.photoLabel.alpha = 1
-        self.photoLabel.font = .systemFont(ofSize: 30)
     }
     
     
