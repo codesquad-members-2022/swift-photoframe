@@ -12,8 +12,8 @@ class ViewController: UIViewController {
     // MARK:- IBOutlet
     @IBOutlet weak var firstLabel: UILabel!
     @IBOutlet weak var firstDescription: UILabel!
-    
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,9 +23,14 @@ class ViewController: UIViewController {
         self.firstDescription.textColor = .gray
     }
     
+    // MARK:- IBAction
     @IBAction func nextButtonTouched(_ sender: Any) {
         self.firstLabel.textColor = .blue
         self.firstLabel.backgroundColor = .yellow
         self.firstLabel.alpha = 0.5
+    }
+    
+    @IBAction func colorButtonTouched(_ sender: UIButton) {
+        print(sender.tag)
     }
 }
