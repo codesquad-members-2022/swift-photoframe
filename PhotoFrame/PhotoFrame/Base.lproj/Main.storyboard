@@ -81,7 +81,6 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="nextButtonTouched:" destination="fz6-B5-ZgN" eventType="touchUpInside" id="8u8-pr-Eaz"/>
-                                    <action selector="nextButtonTouched:" destination="axr-Qa-V1D" eventType="touchUpInside" id="piz-1v-Npp"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0FR-cp-hq1">
@@ -93,8 +92,7 @@
                                     <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="closedButtonTouched:" destination="fz6-B5-ZgN" eventType="touchUpInside" id="uu8-FT-y2G"/>
-                                    <action selector="nextButtonTouched:" destination="axr-Qa-V1D" eventType="touchUpInside" id="hHj-mN-csA"/>
+                                    <action selector="closeButtonTouched:" destination="fz6-B5-ZgN" eventType="touchUpInside" id="KvJ-x1-qLd"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -107,10 +105,10 @@
             </objects>
             <point key="canvasLocation" x="1571" y="-704"/>
         </scene>
-        <!--Blue View Controller-->
+        <!--View Controller-->
         <scene sceneID="BSf-3w-Qlh">
             <objects>
-                <viewController storyboardIdentifier="blueModal" id="TT9-Mj-S2w" customClass="BlueViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="blueModal" id="TT9-Mj-S2w" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="d6e-e0-GeN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
