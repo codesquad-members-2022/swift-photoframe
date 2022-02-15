@@ -14,7 +14,7 @@
 		6C20B2FB27B9EB9A0063F639 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C20B2FA27B9EB9A0063F639 /* Assets.xcassets */; };
 		6C20B2FE27B9EB9A0063F639 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C20B2FC27B9EB9A0063F639 /* LaunchScreen.storyboard */; };
 		6CC3AA8F27BB4926003B3236 /* GreyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC3AA8E27BB4926003B3236 /* GreyViewController.swift */; };
-		6CF5FF7C27BB8ECF0002EEF6 /* tintViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF5FF7B27BB8ECF0002EEF6 /* tintViewController.swift */; };
+		6CF5FF7C27BB8ECF0002EEF6 /* TintViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF5FF7B27BB8ECF0002EEF6 /* TintViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +27,7 @@
 		6C20B2FD27B9EB9A0063F639 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6C20B2FF27B9EB9A0063F639 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6CC3AA8E27BB4926003B3236 /* GreyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreyViewController.swift; sourceTree = "<group>"; };
-		6CF5FF7B27BB8ECF0002EEF6 /* tintViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tintViewController.swift; sourceTree = "<group>"; };
+		6CF5FF7B27BB8ECF0002EEF6 /* TintViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TintViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +65,7 @@
 				6C20B2F327B9EB990063F639 /* SceneDelegate.swift */,
 				6C20B2F527B9EB990063F639 /* ViewController.swift */,
 				6C20B2F727B9EB990063F639 /* Main.storyboard */,
-				6CF5FF7B27BB8ECF0002EEF6 /* tintViewController.swift */,
+				6CF5FF7B27BB8ECF0002EEF6 /* TintViewController.swift */,
 				6C20B2FA27B9EB9A0063F639 /* Assets.xcassets */,
 				6C20B2FC27B9EB9A0063F639 /* LaunchScreen.storyboard */,
 				6C20B2FF27B9EB9A0063F639 /* Info.plist */,
@@ -144,7 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6CF5FF7C27BB8ECF0002EEF6 /* tintViewController.swift in Sources */,
+				6CF5FF7C27BB8ECF0002EEF6 /* TintViewController.swift in Sources */,
 				6C20B2F627B9EB990063F639 /* ViewController.swift in Sources */,
 				6CC3AA8F27BB4926003B3236 /* GreyViewController.swift in Sources */,
 				6C20B2F227B9EB990063F639 /* AppDelegate.swift in Sources */,
