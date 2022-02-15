@@ -58,20 +58,20 @@ UIlabel property
 
 ### 과정
 
-1. View Controller1 추가 및 배경 색상 orange로 변경
+1. scene2 추가 및 배경 색상 orange로 변경
 2. scene1에 button 추가 및 '다음'으로 title 변경
-3. scene1 -> View Controller 1 segue 추가
-4. View Controller2 추가 및 배경 색상 tint로 변경
-5. View Controller1 에 button 추가 및 '다음'으로 title 변경
-6. View Controller1 -> View Controller 2 segue 추가
+3. scene1 -> scene2 segue 추가
+4. scene3 추가 및 배경 색상 tint로 변경
+5. scene2 에 button 추가 및 '다음'으로 title 변경
+6. scene2 -> View Controller 2 segue 추가
 
 ### 실행화면
 
-ViewContoller 1
+scene2
 
 <img src="https://user-images.githubusercontent.com/78553659/153980850-b2a4cb08-c1f2-4bd6-be1e-57083a4c32f3.png"  width="300" height="600"/>
 <br></br>
-ViewController 2
+scene3
 
 <img src="https://user-images.githubusercontent.com/78553659/153980855-affba82f-d64e-467f-ab33-f4797d577785.png"  width="300" height="600"/>
 
@@ -84,21 +84,21 @@ ViewController 2
 ### 과정
 
 1. GreyView Controller.swift 추가
-2. View Controller1의 배경색상을 grey로 바꾸고 다음버튼 추가
-3. View Controller1의 class 를 GreyView Controller로 변경
-4. View Controller1의 다음버튼을 GreyView Controller에 IBAction으로 추가 후 dismiss구문 작성
-5. View Controller2의 class 를 GreyView Controller로 변경
-6. View Controller2의 다음버튼을 GreyView Controller의 IBAction과 연결
+2. scene2의 배경색상을 grey로 바꾸고 다음버튼 추가
+3. scene2의 class 를 GreyView Controller로 변경
+4. scene2의 다음버튼을 GreyView Controller에 IBAction으로 추가 후 dismiss구문 작성
+5. scene3의 class 를 GreyView Controller로 변경
+6. scene3의 다음버튼을 GreyView Controller의 IBAction과 연결
 7. GreyView Controller 에 viewWillAppear, viewDidAppear,viewWillDisappear,viewDidDisappear 콜백함수 추가
-8. View Controller1 -> View Controller2 segue 삭제
+8. scene2 -> scene3 segue 삭제
 
 ### 실행화면
 
-ViewContoller 1
+scene2
 
 <img src="https://user-images.githubusercontent.com/78553659/153984839-24ec3305-4609-4650-a349-178de624ac19.png"  width="300" height="600"/>
 <br></br>
-ViewController 2
+scene3
 
 <img src="https://user-images.githubusercontent.com/78553659/153984845-cb88c314-a0ca-47a0-b59c-90dd3b084e85.png"  width="300" height="600"/>
 <br></br>
