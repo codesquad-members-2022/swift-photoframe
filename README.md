@@ -9,7 +9,7 @@
 - [x]  로그출력 코드 추가
 <img width="700" alt="프로젝트 생성 콘솔" src="https://user-images.githubusercontent.com/92635121/154050381-2b9680db-8255-4351-8345-43ce78014753.png">
 
-
+<br>
 ## Step 2. IBOutlet 연결하기
 
 - [x]  레이블 2개 추가하고, IBOutlet 연결
@@ -21,6 +21,8 @@
 * `변화된 값`을 화면에 띄운다.
 * 컨트롤러 헤더 파일에 선언한 객체를 인터페이스 빌더가 알아 볼 수 있도록 하는 역할
 * 인터페이스 빌더의 객체와 클래스의 프로퍼티는 서로 타입이 일치해야한다.
+
+<br>
 
 ## Step3. IBAction 연결하기
 
@@ -53,15 +55,19 @@
 
 <img width="700" alt="IBOutlet 연결" src="https://user-images.githubusercontent.com/92635121/154050395-91b0a72a-d7ae-4caa-9b25-8a944fe6fa6e.png">
 
+<br>
+
 ### IBOutlet / IBAction
 * 접두어 IB는 `Interface Builder`의 약자이다.
 * IBOutlet과 IBAction을 Interface Builder Annotation이라고 부른다.
 * 위 프로퍼티와 메서드는 앱이 처음 빌드될 때, 컴파일러가 체크하고 연결 정보를 찾아 인터페이스 빌더 객체와 연결해준다.
+
+---
 
 ### 🤔 궁금증해소
 1. 하나의 버튼에 여러 액션을 연결할 수 있는가? `Yes`  
 2. 하나의 액션이 여러 버튼을 가질 수 있는가? `Yes`  
 3. 한 버튼에 IBOutlet과 IBAction을 연결할 수 있는가? `Yes`  
 
-<img width="700" alt="다양한 액션 연결" src="https://user-images.githubusercontent.com/92635121/154049243-25cdd3f8-b7d0-4927-af04-87daa7f28b89.png">  
-<img width="400" alt="스크린샷 2022-02-15 오후 8 07 39" src="https://user-images.githubusercontent.com/92635121/154050134-176bd5b0-a18d-43a2-8af0-668e7e02ac62.png">
+<img width="700" alt="다양한 액션 연결" src="https://user-images.githubusercontent.com/92635121/154049243-25cdd3f8-b7d0-4927-af04-87daa7f28b89.png"><img width="500" alt="스크린샷 2022-02-15 오후 8 07 39" src="https://user-images.githubusercontent.com/92635121/154050134-176bd5b0-a18d-43a2-8af0-668e7e02ac62.png">
+---
