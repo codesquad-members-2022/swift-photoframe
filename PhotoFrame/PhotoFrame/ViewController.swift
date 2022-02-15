@@ -6,34 +6,38 @@
 //
 
 import UIKit
-
-class ViewController: UIViewController {
+class CallBackMethod :UIViewController{
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print(#file, #line, #function, #column)
+    }
+    override  func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print(#file, #line, #function, #column)
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        print(#file, #line, #function, #column)
+    }
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        print(#file, #line, #function, #column)
+    }
+}
+class ViewController: CallBackMethod {
 
     @IBOutlet weak var photoLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.photoLabel.text = "dale의 사진액자"
         self.photoLabel.textColor = .blue
         self.photoLabel.backgroundColor = .yellow
         self.photoLabel.font.withSize(30)
         self.photoLabel.textAlignment = .center
-        print(#file, #line, #function, #column)
-    }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        print(#file, #line, #function, #column)
-    }
-    override  func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
-        print(#file, #line, #function, #column)
-    }
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(true)
-        print(#file, #line, #function, #column)
-    }
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(true)
         print(#file, #line, #function, #column)
     }
 
