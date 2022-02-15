@@ -27,7 +27,7 @@ class GreyViewController: UIViewController {
         print(#file, #line, #function, #column)
     }
     @IBAction func closeButtonTouched(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
     @IBAction func nextButtonTouched(_ sender: Any) {
         let newVC = self.storyboard?.instantiateViewController(identifier: "tintViewController")
