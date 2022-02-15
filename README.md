@@ -144,6 +144,16 @@ UIView를 상속받기에 이와 관련된 속성을 모두 사용할 수 있습
 - Segue에 액션에 있는 여러 항목들은 어떤 효과가 있는지 값을 바꿔보며 실행해서 학습한다.
 <img width="192" alt="스크린샷 2022-02-15 오후 2 46 35" src="https://user-images.githubusercontent.com/62687919/154000117-35447190-cf9e-4200-81ff-50bb42c3de91.png">
 
+- show : NavigationController 가 설정되어 있을 때 컨트롤러가 오른쪽에서 왼쪽으로 슬라이드 되며 나타나고, 새로운 뷰 컨트롤러는 뒤로가기 버튼이 생성됩니다.
+없을 경우 Present Modally 로 뷰를 표시합니다.
+
+- show detail : Show detail 은 스플릿 뷰에서 사용됩니다. 두 개의 화면으로 나누어진 스플릿 뷰에서 보조 뷰의 컨트롤러를 다른 컨트롤러로 대체합니다.
+스플릿 뷰가 아닐 경우 Present Modally로 뷰를 표시합니다.
+
+- Present Modally : 뷰 컨트롤러를 화면 하단에서 상단으로 끌어올리며 모달을 만들어냅니다.
+
+NavigationController, splitView를 사용하지 않기에 presentModally를 사용하는 방식이 좋을 것 같습니다.
+추후 NavigationController로 변화될 지 SplitView로 변화될 지 모르기 때문입니다.
 
 ### 궁금증 정리
 1. segue란 무엇일까?
@@ -165,3 +175,14 @@ UIView를 상속받기에 이와 관련된 속성을 모두 사용할 수 있습
 
 
 ----
+
+:pencil2: Step3 - Scene segue
+    * 작업 목록 
+> [x] 사진액자 - IBAction 요구사항을 구현한 상태로 시작한다.
+>
+> [x] 스토리보드 구성 요소에 대해 학습하고 새로운 Scene과 Segue를 추가한다.
+>
+> [x] 실행하고 새로운 화면을 캡처해서 readme.md 파일에 포함한다.
+>
+    * 학습 키워드 : Scene과 Segue
+    * 고민과 해결 : 코드에서도 스토리보드에서의 방법과 같이 화면전환을 할 수 있을까? 생각하였고 이를 공부한 후 직접 해보았습니다. 
