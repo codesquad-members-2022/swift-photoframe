@@ -63,3 +63,33 @@ iOS 포토프레임 프로젝트 저장소
 
 <img src = "https://user-images.githubusercontent.com/44107696/153891832-24ef5d8a-20e5-4525-a31b-4b969a28fe6f.png" width="800" height="700">
     * Button 또한 AutoLayout 적용
+
+
+## 04. Scene을 Segue로 연결하기
+### 프로그래밍 요구사항
+- Main 스토리보드에서 First Scene 옆에 ViewController를 드래그해서 새로운 Scene을 추가한다.
+- 팝업으로 표시되는 Action Segue에서 Show 항목을 선택한다.
+
+<img src = "https://user-images.githubusercontent.com/44107696/153982970-8aa78f98-d4e8-40d9-ba3f-6d4d39bccae9.png" width="800" height="700">
+
+- Scene과 Scene 사이에 화살표를 선택하면 Segue 속성을 변경할 수 있다.
+
+<img src = "https://user-images.githubusercontent.com/44107696/153999629-87c3d0f9-bdbc-4e03-85d6-d634f3405eb6.png" width="800" height="700">
+<img src = "https://user-images.githubusercontent.com/44107696/154000145-23076531-3fb3-4ef8-84e5-ab93290a202d.png" width="800" height="700">
+    * 버튼과 직접 Segue 연결 / ViewController와 Segue 연결 후 Identifer를 설정하여 코드에서 performSegue / Storyboard ID설정을 하고 present 메서드를 통해 코드로 연결하는 세가지 방법 전부 활용
+    * Controller 간의 데이터 전달을 좀 더 직관적으로 구현할 수 있는 Identifier 연결 방법을 개인적으로 선호
+    
+- 새로 추가한 Scene 속성에서 배경 색상(Background Color)을 원하는 색상으로 변경한다. 새로 앱을 실행해보고 [다음] 버튼을 누르면 새로운 화면이 나타나는지 확인한다.
+- 다시 스토리보드에서 위에 추가한 Scene (혹은 ViewController)에 [다음] 버튼을 추가한다. 우측 옆에 한 단계 더 표현하기 위한 ViewController를 추가하고 배경 색상을 다른 색상으로 변경한다. 위와 마찬가지로 [다음]버튼에서 새 Scene으로 Segue를 연결한다.
+    + 예를 들어 First Scene 다음에 추가한 화면이 Yellow 화면이었다면, First Scene에서 [다음] 버튼을 누르면 Yellow 화면이 표시되고, Yellow 화면에서 [다음] 버튼을 누르면 Blue 화면이 나오는 방식으로 두 단계 표시한다.
+
+<img src = "https://user-images.githubusercontent.com/44107696/154005584-5e81a023-58f4-4d73-9239-50f5456f5fb0.png" width="800" height="700">
+    * 화면전환(segue) 시, 대상 ViewController에 데이터를 전달하는 prepare 메서드 활용
+    * 다음 화면에서 나올 레이블의 디폴트 값을 전달 ("슈슈슈슈슉")
+
+<img src = "https://user-images.githubusercontent.com/44107696/154005593-179b4390-acfc-4542-816f-2431578291e1.png" width="800" height="700">
+    * viewDidLoad에 기본값 할당
+    * 아래의 버튼을 누르면 기본값과 다른 각각의 변경 요소를 보여줄 수 있도록 toggle 및 삼항 연산자 활용 (상태에 따른 뷰 변화)
+
+- 결과 값
+<img src = "https://user-images.githubusercontent.com/44107696/154007595-1977ba5f-da7f-4d0d-9a7a-2ea3c8a0f7cd.jpeg" width="960" height="540">
