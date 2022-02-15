@@ -14,7 +14,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         photoLabel.text = "Eddy의 사진 액자"
-        photoLabel.font = .systemFont(ofSize: CGFloat(40))
+        photoLabel.font = .boldSystemFont(ofSize: CGFloat(40))
+        
         photoLabel.textColor = UIColor(
             red: 46,
             green: 148,
