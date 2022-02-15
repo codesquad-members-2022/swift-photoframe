@@ -13,6 +13,7 @@
 		BC545A4B27BB74BF0053E2BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC545A4927BB74BF0053E2BD /* Main.storyboard */; };
 		BC545A4D27BB74C10053E2BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC545A4C27BB74C10053E2BD /* Assets.xcassets */; };
 		BC545A5027BB74C10053E2BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC545A4E27BB74C10053E2BD /* LaunchScreen.storyboard */; };
+		BC545A5827BB76FA0053E2BD /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = BC545A5727BB76FA0053E2BD /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		BC545A4C27BB74C10053E2BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC545A4F27BB74C10053E2BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BC545A5127BB74C10053E2BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC545A5727BB76FA0053E2BD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				BC545A4327BB74BF0053E2BD /* AppDelegate.swift */,
 				BC545A4527BB74BF0053E2BD /* SceneDelegate.swift */,
 				BC545A4727BB74BF0053E2BD /* ViewController.swift */,
+				BC545A5727BB76FA0053E2BD /* README.md */,
 				BC545A4927BB74BF0053E2BD /* Main.storyboard */,
 				BC545A4C27BB74C10053E2BD /* Assets.xcassets */,
 				BC545A4E27BB74C10053E2BD /* LaunchScreen.storyboard */,
@@ -127,6 +130,7 @@
 			files = (
 				BC545A5027BB74C10053E2BD /* LaunchScreen.storyboard in Resources */,
 				BC545A4D27BB74C10053E2BD /* Assets.xcassets in Resources */,
+				BC545A5827BB76FA0053E2BD /* README.md in Resources */,
 				BC545A4B27BB74BF0053E2BD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
