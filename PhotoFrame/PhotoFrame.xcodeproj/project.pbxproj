@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		723950B127BB8B27008C9F5A /* YellowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723950B027BB8B27008C9F5A /* YellowViewController.swift */; };
+		723950B327BB8D2D008C9F5A /* GreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723950B227BB8D2D008C9F5A /* GreenViewController.swift */; };
 		727334C227B9EB8500AE404F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727334C127B9EB8500AE404F /* AppDelegate.swift */; };
 		727334C427B9EB8500AE404F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727334C327B9EB8500AE404F /* SceneDelegate.swift */; };
 		727334C627B9EB8500AE404F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727334C527B9EB8500AE404F /* ViewController.swift */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		723950B027BB8B27008C9F5A /* YellowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowViewController.swift; sourceTree = "<group>"; };
+		723950B227BB8D2D008C9F5A /* GreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenViewController.swift; sourceTree = "<group>"; };
 		727334BE27B9EB8500AE404F /* PhotoFrame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoFrame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		727334C127B9EB8500AE404F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		727334C327B9EB8500AE404F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +69,8 @@
 			children = (
 				727334C127B9EB8500AE404F /* AppDelegate.swift */,
 				727334C327B9EB8500AE404F /* SceneDelegate.swift */,
+				723950B027BB8B27008C9F5A /* YellowViewController.swift */,
+				723950B227BB8D2D008C9F5A /* GreenViewController.swift */,
 				727334D527B9ED0400AE404F /* PhotoTabBarController.swift */,
 				727334C527B9EB8500AE404F /* ViewController.swift */,
 				727334D727B9F53E00AE404F /* ViewController2.swift */,
@@ -152,7 +158,9 @@
 				727334D627B9ED0400AE404F /* PhotoTabBarController.swift in Sources */,
 				727334C627B9EB8500AE404F /* ViewController.swift in Sources */,
 				727334C227B9EB8500AE404F /* AppDelegate.swift in Sources */,
+				723950B127BB8B27008C9F5A /* YellowViewController.swift in Sources */,
 				727334C427B9EB8500AE404F /* SceneDelegate.swift in Sources */,
+				723950B327BB8D2D008C9F5A /* GreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
