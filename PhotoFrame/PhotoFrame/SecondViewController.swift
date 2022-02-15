@@ -30,6 +30,7 @@ class SecondViewController: UIViewController, UINavigationControllerDelegate, UI
     */
 
     @IBAction func selectButtonTouched(_ sender: Any) {
-        
+        let num = Int.random(in: 0...22)
+        self.photoImageView.image = UIImage(named: String(format: "%.2d.jpg", num))
     }
 }
