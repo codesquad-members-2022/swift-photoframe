@@ -11,23 +11,28 @@ import UIKit
 class BrownViewController: UIViewController {
 
     override func viewDidLoad() {
-        print(#file, #line, #function, #column)
+        super.viewDidLoad()
+        print(#file, #function, "뷰가 로드 되었습니다!")
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        print(#file, #line, #function, #column)
+        super.viewWillAppear(animated)
+        print(#file, #function, "뷰가 보여질 것입니다!")
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        print(#file, #line, #function, #column)
+        super.viewDidAppear(animated)
+        print(#file, #function, "뷰가 보여졌습니다!")
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        print(#file, #line, #function, #column)
+        super.viewWillDisappear(animated)
+        print(#file, #function, "뷰가 닫힐것입니다!")
     }
     
     override func viewDidDisappear(_ animated: Bool) {
-        print(#file, #line, #function, #column)
+        super.viewDidDisappear(animated)
+        print(#file, #function, "뷰가 닫혔습니다!")
     }
     
     @IBAction func closeButtonTouched(_ sender: Any) {
