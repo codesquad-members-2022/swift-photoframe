@@ -16,6 +16,37 @@ class FirstSheetViewController: UIViewController {
         self.view.backgroundColor = UIColor.blue
         self.nextButton.tintColor = UIColor.purple
         self.nextButton.backgroundColor = UIColor.yellow
+        
+        print("ViewDidLoad - FSVC")
+        print(#file, #line, #function, #column)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        print("ViewWillAppear - FSVC")
+        print(#file, #line, #function, #column)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        print("ViewDidAppear - FSVC")
+        print(#file, #line, #function, #column)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        print("ViewWillDisappear - FSVC")
+        print(#file, #line, #function, #column)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        print("ViewDidDisappear - FSVC")
+        print(#file, #line, #function, #column)
     }
     
     // 뷰 컨트롤러 전환 전에 데이터 처리 가능한 메서드
@@ -30,5 +61,9 @@ class FirstSheetViewController: UIViewController {
     @IBAction func nextButton(_ sender: UIButton) {
         // sender를 통해서도 viewController의 데이터 전달이 가능
         performSegue(withIdentifier: "secondScreen", sender: nil)
+    }
+    
+    @IBAction func closeButtonTouched(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
     }
 }

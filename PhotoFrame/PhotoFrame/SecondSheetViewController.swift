@@ -19,6 +19,37 @@ class SecondSheetViewController: UIViewController {
         self.changeLabel.text = defaultText
         self.changeLabel.font = UIFont.systemFont(ofSize: 20)
         self.changeLabel.textColor = UIColor.purple
+        
+        print("ViewDidLoad - SSVC")
+        print(#file, #line, #function, #column)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        print("ViewWillAppear - SSVC")
+        print(#file, #line, #function, #column)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        print("ViewDidAppear - SSVC")
+        print(#file, #line, #function, #column)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        print("ViewWillDisappear - SSVC")
+        print(#file, #line, #function, #column)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        print("ViewDidDisappear - SSVC")
+        print(#file, #line, #function, #column)
     }
     
     @IBAction func changeButton(_ sender: UIButton) {

@@ -93,3 +93,39 @@ iOS 포토프레임 프로젝트 저장소
 
 - 결과 값
 <img src = "https://user-images.githubusercontent.com/44107696/154007595-1977ba5f-da7f-4d0d-9a7a-2ea3c8a0f7cd.jpeg" width="960" height="540">
+
+
+## 05. ViewController 연결하기
+### 프로그래밍 요구사항
+- 프로젝트에 새로운 ViewController 클래스를 추가한다. File > New... > File... 메뉴를 선택한다. 다음과 같은 화면에서 Cocoa Touch Class를 선택한다.
+- 다음과 같이 UIViewController에서 상속받도록 입력하고, 원하는 클래스명을 입력한다. (예시 YellowViewController)
+- 다음 화면에서는 프로젝트내 어떤 경로에 저장하며, 프로젝트 그룹/타깃에 저장할 것인지 선택한다.
+    + 하위 디렉토리가 있거나 원하는 하위 그룹이 있으면 변경할 수 있다.
+    + 빌드하는 타깃이 여러 개인 경우, 복수로 선택할 수도 있다.
+- 스토리보드에서 새로 추가한 Scene을 선택하고, 우측 유틸리티 영역 3번째 Identity 탭을 선택한다.
+    + Custom Class > Class 항목에 YellowViewController (자신이 생성한 클래스 이름)을 지정한다.
+    + 자동완성이 되야 클래스가 제대로 생성된 것이다. 자동완성이 안된다면 앞 단계를 다시 확인해서 UIViewController에서 상속 받도록 만들었는지 확인하고 클래스를 다시 만든다.
+
+<img src = "https://user-images.githubusercontent.com/44107696/154086263-bed3be2d-9c9d-4f1d-b57a-01240dd9e075.png" width="800" height="700">
+    * 기존에 Swift File로 생성한 ViewController를 Cocoa Touch Class를 통해서 생성하는 방법으로 시도
+    
+- 이제 스토리보드에서 YellowViewController 화면에 [닫기] 버튼을 추가한다.
+- Assistant Editor를 선택하고 [닫기] 버튼에 대한 IBAction 액션을 연결한다.
+    + 만약 방금 추가한 YellowViewController (혹은 자신이 생성한 클래스)가 우측에 자동으로 연결되지 않으면 Custom Class가 정상적으로 연결되지 않았거나
+    + 우측 Assistant 편집기 상단에 점프바(JumpBar)에 Automatic 이라고 선택되어 있는지 확인한다. 다른 상태인 경우 Automatic으로 변경한다.
+- IBAction 이름은 closeButtonTouched로 지정하고 다음과 같이 코드를 작성한다.
+- 위와 동일하게 세 번째 추가한 화면에 대해 ViewController 클래스를 지정하고, [닫기]버튼을 추가하고, 액션을 연결해서 화면을 닫는 동작이 동작하도록 구현한다.
+
+<img src = "https://user-images.githubusercontent.com/44107696/154086285-0320ad1f-197b-4d11-8dfd-73672c79ea03.png" width="800" height="700">
+    * dismiss 사용법 연습 후, 첫번째 segue를 dismiss로 구현
+    
+<img src = "https://user-images.githubusercontent.com/44107696/154086289-956c71af-74ed-4118-8eff-ea8c906e98c0.png" width="800" height="700">
+    * 두번째 segue 연결 Scene은 dismiss가 아닌, unwind를 활용하여 바로 첫번째 Scene 화면으로 돌아갈 수 있도록 구현
+
+- 뷰 컨트롤러 강의 자료에 있는 화면 관련 콜백 함수들에 모두 print(#file, #line, #function, #column) 코드를 추가한다.
+
+<img src = "https://user-images.githubusercontent.com/44107696/154093169-11378efb-a5c3-4ae6-bdf2-5e393018842b.jpeg" width="960" height="540">
+<img src = "https://user-images.githubusercontent.com/44107696/154093183-bd14c4e0-91b1-40c1-9d37-0220e6230fb6.jpeg" width="960" height="540">
+<img src = "https://user-images.githubusercontent.com/44107696/154093189-d02d6af1-f9d6-4b5e-95e0-d0496cdcabe2.jpeg" width="960" height="540">
+<img src = "https://user-images.githubusercontent.com/44107696/154093194-a7b3b9fd-b65b-4d97-8d1b-1f61707d53ca.jpeg" width="960" height="540">
+<img src = "https://user-images.githubusercontent.com/44107696/154093196-b9cec488-71a8-4206-a555-767ef8f0af18.jpeg" width="960" height="540">
