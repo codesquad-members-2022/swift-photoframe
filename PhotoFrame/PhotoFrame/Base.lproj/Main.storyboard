@@ -53,6 +53,24 @@
                                     <action selector="nextButtonTouchedUpOutside:" destination="DvB-Gi-ecE" eventType="touchUpOutside" id="Gfn-UI-h7Z"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FO6-Xr-BFB">
+                                <rect key="frame" x="59" y="536" width="58" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Test1"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6l4-D8-03R">
+                                <rect key="frame" x="177" y="536" width="60" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Test2"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mXg-VM-ole">
+                                <rect key="frame" x="297" y="536" width="60" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Test3"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kKw-VU-FyD"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
@@ -60,6 +78,10 @@
                     <tabBarItem key="tabBarItem" title="Item 1" id="mMy-L3-dIh"/>
                     <connections>
                         <outlet property="firstLabel" destination="JAf-rj-kdh" id="yBb-FN-Llg"/>
+                        <outlet property="nextButton" destination="NAv-Tj-maS" id="fnb-P9-VUc"/>
+                        <outlet property="testButton1" destination="FO6-Xr-BFB" id="RIU-L4-Wgn"/>
+                        <outlet property="testButton2" destination="6l4-D8-03R" id="B79-ot-31b"/>
+                        <outlet property="testButton3" destination="mXg-VM-ole" id="Ygs-cz-yPt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h13-He-z3B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
