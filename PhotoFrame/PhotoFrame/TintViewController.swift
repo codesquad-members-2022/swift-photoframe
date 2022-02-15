@@ -7,7 +7,7 @@
 
 import UIKit
 
-class tintViewController: UIViewController {
+class TintViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
