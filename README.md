@@ -4,8 +4,37 @@
 ## 기능 요구사항
 - [X] 사진액자 앱 시작하기 요구사항을 구현한 상태로 시작한다.
 - [X] First Scene에 만들어져 있는 레이블을 IBOutlet으로 연결한다.
+
 - [X] 연결한 아웃렛 변수에 값을 변경한다.
 - [X] 실행한 화면을 캡처해서 readme.md 파일에 포함한다.
+
+
+Figure 1 : First Scene에 만들어져 있는 레이블을 IBOutlet으로 연결한다.
+  <p align="center">
+   <img src="https://user-images.githubusercontent.com/36659877/154011812-4b23e761-0a37-4d33-8b8b-c8142cc47585.png" width="400" height="250"> 
+  </p>
+   
+Figure 2 : 연결한 아웃렛 변수에 값을 변경한다 (코드로 설정하는법)
+  <p align="center">
+   <img src="https://user-images.githubusercontent.com/36659877/154011965-1d40974b-4566-46d1-8f6a-df1b5e806d8e.png" width="350" height="250"> 
+  </p>
+  
+Figure 3 : 연결한 아웃렛 변수에 값을 변경한다 (Interface Builder 로 설정하는법)
+  <p align="center">
+      <img src="https://user-images.githubusercontent.com/36659877/154013982-08a3c2fa-d94d-4c2e-a340-a3253c8b8bb9.png" width="550" height="350">
+  </p>
+
+Figure 3 : 실행한 화면을 캡처해서 readme.md 파일에 포함한다.
+  <p align="center">
+   <img src="https://user-images.githubusercontent.com/36659877/154011654-002c62ae-db89-4c9e-9f4f-a88ba16765ae.png" width="250" height="550"> 
+  </p>
+
+
+
+
+
+
+
 
 ### IBOutlet 생성방법 및 사용법.
 - 생성된 view 안에서 Library 에 있는 요소들중 원하는 오브젝트를 골라 원하는 위치에 놓고 오른쪽 클릭 + 해당하는 클래스에 로 드래그하여 IBOutlet 키워드를 사용하여 변수 생성가능
