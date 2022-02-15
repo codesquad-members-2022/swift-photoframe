@@ -51,6 +51,9 @@
                                         <state key="normal" title="Next">
                                             <imageReference key="image" image="arrow.right" catalog="system" symbolScale="default" renderingMode="template"/>
                                         </state>
+                                        <connections>
+                                            <action selector="nextButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M38-WJ-1Bk"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
