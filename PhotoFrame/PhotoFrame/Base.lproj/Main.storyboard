@@ -64,10 +64,10 @@
             </objects>
             <point key="canvasLocation" x="839.13043478260875" y="-704.46428571428567"/>
         </scene>
-        <!--View Controller-->
+        <!--Yellow View Controller-->
         <scene sceneID="R9r-CZ-MRm">
             <objects>
-                <viewController id="fz6-B5-ZgN" sceneMemberID="viewController">
+                <viewController id="fz6-B5-ZgN" customClass="YellowViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vLR-h7-7Dk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
