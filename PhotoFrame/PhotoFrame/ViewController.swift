@@ -36,6 +36,10 @@ class ViewController: UIViewController {
             blue: 193,
             alpha: 0.5)
     }
+    
+    @IBAction func nextButtonTouched(_ sender: Any) {
+        
+    }
 }
 
 extension UIColor {
