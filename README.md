@@ -1,4 +1,4 @@
-# swift-photoframe
+bb# swift-photoframe
 
 ## 1. 프로젝트 생성하기
 
@@ -11,9 +11,11 @@
 
 ### 실행화면
 
-> <img src="https://user-images.githubusercontent.com/78553659/153794276-405277b2-8d1c-4a49-be92-91cded9a6614.png"  width="400" height="50"/>
+<img src="https://user-images.githubusercontent.com/78553659/153794276-405277b2-8d1c-4a49-be92-91cded9a6614.png"  width="400" height="50"/>
 
 ---
+
+<br></br>
 
 ## 2. IBOutlet
 
@@ -30,9 +32,11 @@ UIlabel property
 
 ### 실행화면
 
-> <img src="https://user-images.githubusercontent.com/78553659/153851665-5628b4dd-a609-4851-b999-2b7ea47f6d3f.png"  width="300" height="500"/>
+<img src="https://user-images.githubusercontent.com/78553659/153851665-5628b4dd-a609-4851-b999-2b7ea47f6d3f.png"  width="300" height="500"/>
 
 ---
+
+<br></br>
 
 ## 3. IBAction
 
@@ -44,4 +48,29 @@ UIlabel property
 
 ### 실행화면
 
-> <img src="https://user-images.githubusercontent.com/78553659/153863324-4ee040b0-b9d1-4d11-ba9f-386feeee1e4a.png"  width="300" height="500"/>
+<img src="https://user-images.githubusercontent.com/78553659/153863324-4ee040b0-b9d1-4d11-ba9f-386feeee1e4a.png"  width="300" height="500"/>
+
+---
+
+<br></br>
+
+## 4. Segue 연결하기
+
+### 과정
+
+1. View Controller1 추가 및 배경 색상 orange로 변경
+2. scene1에 button 추가 및 '다음'으로 title 변경
+3. scene1 -> View Controller 1 segue 추가
+4. View Controller2 추가 및 배경 색상 tint로 변경
+5. View Controller1 에 button 추가 및 '다음'으로 title 변경
+6. View Controller1 -> View Controller 2 segue 추가
+
+### 실행화면
+
+ViewContoller 1
+
+<img src="https://user-images.githubusercontent.com/78553659/153980850-b2a4cb08-c1f2-4bd6-be1e-57083a4c32f3.png"  width="300" height="500"/>
+<br></br>
+ViewController 2
+
+<img src="https://user-images.githubusercontent.com/78553659/153980855-affba82f-d64e-467f-ab33-f4797d577785.png"  width="300" height="500"/>
