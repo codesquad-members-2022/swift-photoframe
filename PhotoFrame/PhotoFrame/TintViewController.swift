@@ -18,15 +18,19 @@ class TintViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
         print(#file, #line, #function, #column)
     }
     override  func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
         print(#file, #line, #function, #column)
     }
     override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
         print(#file, #line, #function, #column)
     }
     override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(true)
         print(#file, #line, #function, #column)
     }
 
