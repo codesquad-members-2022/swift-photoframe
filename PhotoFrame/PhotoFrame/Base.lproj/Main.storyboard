@@ -22,7 +22,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
-                                    <segue destination="1hC-tI-ead" kind="show" id="JvL-2j-5Ad"/>
+                                    <segue destination="1hC-tI-ead" kind="presentation" id="1Sc-SA-gZb"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -98,7 +98,7 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
                                     <action selector="nextButtonTouched:" destination="6wT-tc-Cka" eventType="touchUpInside" id="beW-UW-p1t"/>
-                                    <segue destination="hbo-mB-i4C" kind="show" id="wbz-8r-Vbe"/>
+                                    <segue destination="hbo-mB-i4C" kind="presentation" id="Ar8-av-m59"/>
                                 </connections>
                             </button>
                         </subviews>
