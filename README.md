@@ -83,12 +83,13 @@ ViewController 2
 
 ### 과정
 
-1. GreyView Controller1.swift 추가
+1. GreyView Controller.swift 추가
 2. View Controller1의 배경색상을 grey로 바꾸고 다음버튼 추가
 3. View Controller1의 class 를 GreyView Controller로 변경
 4. View Controller1의 다음버튼을 GreyView Controller에 IBAction으로 추가 후 dismiss구문 작성
 5. View Controller2의 class 를 GreyView Controller로 변경
 6. View Controller2의 다음버튼을 GreyView Controller의 IBAction과 연결
+7. GreyView Controller 에 viewWillAppear, viewDidAppear,viewWillDisappear,viewDidDisappear 콜백함수 추가
 
 ### 실행화면
 
@@ -99,3 +100,7 @@ ViewContoller 1
 ViewController 2
 
 <img src="https://user-images.githubusercontent.com/78553659/153984845-cb88c314-a0ca-47a0-b59c-90dd3b084e85.png"  width="300" height="600"/>
+<br></br>
+콜백
+
+<img src="https://user-images.githubusercontent.com/78553659/154001216-204bb3b5-6c71-4956-aca1-8a3a30effe8e.png"  width="600" height="600"/>
