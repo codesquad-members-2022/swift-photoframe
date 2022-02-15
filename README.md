@@ -317,3 +317,120 @@
 	해당 코드를 추가한 후 앱을 동작시키면 아래와 같은 동작을 확인할 수 있었고, 여러 버튼을 동시에 하나의 액션에 연결할 수 있음을 확인할 수 있었습니다.
 
 	<img src="https://user-images.githubusercontent.com/92504186/153900416-96abfe15-5a67-4b1c-8eb5-dfcb458bb7ad.gif" alt="SS 2022-02-15 AM 01 04 06" width="30%;" />
+
+---
+
+---
+
+## 4. Scene을 Segue로 연결하기
+
+### 📌체크 리스트
+
+- [x] Main.storyboard에서 First Scene 옆에 ViewController를 생성
+- [x] 생성한 ViewController와 UIButton 연결
+- [x] Sugue 속성을 변경
+- [x] 생성한 ViewController에 [다음] UIButton을 추가
+- [x] 추가한 UIButton과 새로운 ViewController를 연결
+
+---
+
+### 💻진행 과정
+
+1. First Scene 옆에 ViewController를 생성하여, **다음** 이라는 버튼과 생성한 ViewController를 연결합니다. 이 때 Action Segue는 `Show` 타입을 선택합니다.
+
+	<img src="https://user-images.githubusercontent.com/92504186/153994897-fbec87e7-0911-40ea-bb0a-567d7480751b.jpg" alt="SS 2022-02-15 PM 01 52 00" width="50%;" />
+
+2. 새로 생성했던 ViewController의 background Color를 노란색으로 바꾸어주고, 동작을 확인합니다. 이 때, UIButton으로부터 직접 Segue Object를 생성했기 때문에, 별다른 코드 작성없이 UIButton의 이벤트 조건에 맞는 조작이 가해질 경우에 다음 ViewController로 넘어갑니다. 동작 결과는 다음과 같습니다.
+
+	<img src="https://user-images.githubusercontent.com/92504186/153995184-01125423-ce3d-4a60-9af8-c450c334a4de.gif" alt="SS 2022-02-15 PM 01 54 49" width="30%;" />
+
+3. 추가한 ViewController에 [다음] UIButton을 하나 더 추가하고, 해당 UIButton이 눌리면 다음 ViewController로 넘어가도록 하기 위해 새로운 ViewController를 하나 더 추가했습니다. 새로운 UIButton과 새로운 ViewController를 연결하는 Segue object를 생성하고, 이번의 Active Segue는 `present modally` 타입으로 설정했습니다. 그리고 Segue의 Transition 프로퍼티를 `Flip Horizental` 로 설정했습니다. 동작 결과는 다음과 같습니다.
+
+	<img src="https://user-images.githubusercontent.com/92504186/153996273-64c68d19-ed2e-4076-881c-5f87ed86dd19.gif" alt="SS 2022-02-15 PM 02 06 59" width="30%;" />
+
+---
+
+### :pencil:추가 학습거리
+
+* Segue의 Action에 있는 여러 항목들은 어떤 효과가 있는지 값을 바꿔보며 실행해서 학습한다.
+
+	UIButton과 ViewController를 연결시키면 Transition을 설정할 수 있도록 아래와 같은 프롬프트가 뜹니다.
+
+	<img src="https://user-images.githubusercontent.com/92504186/153997517-51459b34-bf3d-4ae0-8bff-18c2e41c4df1.jpg" alt="SS 2022-02-15 PM 02 19 26" width="20%;" />
+
+	여기서 우선, Non-Adaptive Action Segue의 경우에는 **비적응형 Segue** 라 하여, 적응형 Segue가 지원되지 않는 iOS7 이하에서만 사용하도록 권장한다고 합니다. 따라서 Action을 결정할 경우에는 위의 Action Segue에 있는 적응형 Segue 타입 항목들만 선택하도록 합니다. Action Segue에 있는 Segue 타입은 아래와 같은 동작을 가집니다.([참고 사이트](https://jeonyeohun.tistory.com/176))
+
+	| segue 타입              | 행동                                                         |
+	| ----------------------- | ------------------------------------------------------------ |
+	| **show(push)**          | 해당하는 메소드는 `show(:sender)`이다. 대부분의 경우는 present modally로 동작하지만, 일부 ViewController는 이 메소드를 오버라이드해서 다른 동작을 취하기도 한다.(ex. navigationController는 새로운 ViewController를 스택에 push한다.) UIKit은 `targetViewController(forAction:sender:)` 메소드를 이용해 다음 ViewController를 띄워줄 Viewcontroller를 찾게 된다. 해당 메소드는 ViewController 계층을 올라가면서 show(:sender)를 오버라이드한 ViewController(navigation, splitView 등등..)를 찾게 되는데, 찾을 경우 반환된 ViewController의 show(:sender)를 이용하고, 찾지 못할 경우 nil을 반환하여 `present(:animated:completion)`로 동작한다. |
+	| **showDetail(Replace)** | 해당하는 메소드는 `showDetailViewController(_:sender)`이다. UISplitViewController에서만 사용하는 것으로, SplitView의 두번째 자식 ViewController(detail Controller)를 바꿔준다. 다른 ViewController를 대상으로 하는 경우에는 `present(:animated:completion:)`으로 동작한다. |
+	| **Present Modally**     | 정해진(혹은 사용자가 설정한) presentationStyle과 transitionStyler에 따라 Modal하게 ViewController를 띄운다. presentationStyle에 따라 현재 ViewController가 적절하지 않을 경우에는 ViewController 계층을 따라가면서 적절한 ViewController를 발견했을 때 실제로 presentation이 실행된다. (ex. presentation style이 fullscreen인 경우, 화면 전체를 덮는 View를 가진 ViewController만이 present를 실행할 수 있다.) |
+	| **Present as Popover**  | 가로 길이가 regular 사이즈인 경우에는 popover로 띄우지만, 가로 길이가 compact 사이즈인 경우는 전체화면 Modal과 같아진다. |
+	| **Custom**              | Segue에 클래스를 등록해서 세밀한 컨트롤이 가능할 수 있게끔 한다.(지연시간, 넘기는 스타일, 전환 끝난 후 클로저 실행 등) |
+
+	1. **show**
+
+		목적지 ViewController를 내비게이션 스택에 쌓습니다. Navigation Controller가 설정되어 있을 때는 목적지 ViewController가 오른쪽에서 왼쪽으로 슬라이드되어 나타나고, 새로운 ViewController에는 뒤로가기 버튼이 생깁니다. 내비게이션 컨트롤러가 없을 때는 **Present Modally** 가 적용됩니다.
+
+		UIButton이 있는 ViewController에서 상단 `Editor`->`Embed In`->`Navigation Controller` 항목을 선택하여 Navigation Controller로 설정을 할 수 있었고, `show`  Segue 타입은 아래와 같이 동작했습니다.
+
+		<img src="https://user-images.githubusercontent.com/92504186/153999928-6a42e444-a031-4354-a1da-eb12bbd2bb77.gif" alt="SS 2022-02-15 PM 02 44 19" width="30%;" />
+
+	2. **showDetail**
+
+		해당 타입은 스플릿 뷰에서 사용됩니다. 두 개의 화면으로 나누어진 스플릿 뷰에서 보조 뷰의 컨트롤러를 다른 컨트롤러로 대체합니다. 만약 스플릿 뷰가 아니라면 마찬가지로 **Present Modally** 로 대체됩니다.(iPhone에서는 확인하기 어렵고, iPad에서는 아래와 같이 확인할 수 있습니다.)
+
+		<img src="https://user-images.githubusercontent.com/92504186/154004537-d5c48226-eab7-4626-97ba-b9afb405bfdf.jpg" alt="SS 2022-02-15 PM 03 24 12" width="60%;" />
+
+	3. **Present Modally**
+
+		ViewController를 하단에서 상단으로 끌어올리며 모달을 만들어냅니다. 해당 Segue 타입에서는 Transition 애니메이션을 프로퍼티로 설정할 수 있는데, Cover Vertical, Flip Horizental, Cross Dissolve, Partial Curl의 애니메이션이 있습니다. 각 Transition의 동작은 아래와 같습니다.
+
+		<img src="https://user-images.githubusercontent.com/92504186/154001755-40df315d-3c73-4e6d-a3cd-68449159d947.gif" alt="SS 2022-02-15 PM 02 59  3" width="30%;" />
+
+		또한 해당 Segue 타입에서는 다음에 나올 ViewController의 Frame을 `Presentation` 프로퍼티를 이용해 바꿀 수있는데, 해당 프로퍼티에는 Automatic, Full Screen, Current Context, Page Sheet, Form Sheet이 있습니다. 
+
+		1. Automatic : iOS가 알아서 Page Sheet 또는 Full Screen 형태로 다음 ViewController의 Frame을 결정해주는 항목입니다. 또한 Presentation 프로퍼티의 디폴트값은 Automatic입니다.([참고사이트](https://zeddios.tistory.com/828))
+		2. Full Screen: 말 그대로 화면을 꽉 채워주는 Frame을 가집니다.
+		3. Current Context: ViewController 계층을 찾아 올라가면서, `definePresentationContext` 프로퍼티가 가장 먼저 true로 되어있는 ViewController을 찾아 present Context로 지정하여, 다음 ViewController가 해당 ViewController의 Frame과 같은 Frame을 갖도록 합니다.
+		4. Page Sheet: iPhone에선 Form Sheet과 구분하기 힘들지만, Form Sheet보다 조금 더 큰 형태의 Frame을 가집니다.
+		5. Form Sheet: Page Sheet보다 조금 작은 형태의 Frame을 가집니다.
+
+		<img src="https://user-images.githubusercontent.com/92504186/154004131-98ad7775-cd03-48b9-a9c8-cdd71838c360.gif" alt="SS 2022-02-15 PM 03 20 55" width="30%;" />
+
+	4. **Present as Popover**
+
+		iPhone에서는 확인하기 어렵지만, iPad에서는 아래와 같이 popover로 ViewController를 띄워줍니다.
+
+		<img src="https://user-images.githubusercontent.com/92504186/154004917-1deffb98-31ec-4052-a4aa-a798d1682ce1.jpg" alt="SS 2022-02-15 PM 03 26 47" width="50%;" />
+
+	5. **Custom**
+
+		아래와 같은 `UIStoryboardSegue` 클래스를 상속받는 클래스를 선언해줍니다. 해당 클래스는 Segue가 오른쪽에서 왼쪽으로 등장하도록 해주는 클래스입니다.([참고사이트](https://aggapple.tistory.com/95))
+
+		```swift
+		class SegueRightToLeft: UIStoryboardSegue {
+		    override func perform() {
+		        let src = self.source
+		        let dst = self.destination
+		        
+		        src.view.superview?.insertSubview(dst.view, aboveSubview: src.view)
+		        dst.view.transform = CGAffineTransform(translationX: src.view.frame.size.width, y: 0)
+		        
+		        UIView.animate(withDuration: 0.25, delay: 0.0, options: .curveEaseInOut,
+		            animations: {
+		                dst.view.transform = CGAffineTransform(translationX: 0, y: 0)
+		            }, completion: { finished in
+		                src.present(dst, animated: false, completion: nil)
+		            })
+		    }
+		}
+		```
+
+		그리고  Segue 타입을 Custom으로 설정한 Segue Object의 Attribute Inspector에서 Class를 위에서 생성한 클래스로 설정해줍니다.
+
+		<img src="https://user-images.githubusercontent.com/92504186/154006022-f035f460-6abf-4dd9-ac73-0ca2f3461441.jpg" alt="SS 2022-02-15 PM 03 35 15" width="30%;" />
+
+		이렇게 설정한 Segue는 아래와 같이 동작합니다.
+
+		<img src="https://user-images.githubusercontent.com/92504186/154006319-9ac858db-b8a9-46a4-b611-72d6c90c772b.gif" alt="SS 2022-02-15 PM 03 36 16" width="30%;" />
