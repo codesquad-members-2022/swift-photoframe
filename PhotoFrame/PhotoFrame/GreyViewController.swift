@@ -16,6 +16,7 @@ class GreyViewController: UIViewController {
     }
     
     @IBAction func closeButtonTouched(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     /*
