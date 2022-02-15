@@ -25,7 +25,7 @@
 		6C20B2FA27B9EB9A0063F639 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6C20B2FD27B9EB9A0063F639 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6C20B2FF27B9EB9A0063F639 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6CC3AA8E27BB4926003B3236 /* GreyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GreyViewController.swift; path = PhotoFrame/GreyViewController.swift; sourceTree = "<group>"; };
+		6CC3AA8E27BB4926003B3236 /* GreyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,7 +42,6 @@
 		6C20B2E527B9EB990063F639 = {
 			isa = PBXGroup;
 			children = (
-				6CC3AA8E27BB4926003B3236 /* GreyViewController.swift */,
 				6C20B2F027B9EB990063F639 /* PhotoFrame */,
 				6C20B2EF27B9EB990063F639 /* Products */,
 			);
@@ -59,6 +58,7 @@
 		6C20B2F027B9EB990063F639 /* PhotoFrame */ = {
 			isa = PBXGroup;
 			children = (
+				6CC3AA8E27BB4926003B3236 /* GreyViewController.swift */,
 				6C20B2F127B9EB990063F639 /* AppDelegate.swift */,
 				6C20B2F327B9EB990063F639 /* SceneDelegate.swift */,
 				6C20B2F527B9EB990063F639 /* ViewController.swift */,

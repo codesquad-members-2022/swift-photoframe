@@ -27,7 +27,7 @@
         <!--Item 1-->
         <scene sceneID="Pp3-QT-hJt">
             <objects>
-                <viewController id="j1X-4s-tjy" customClass="ViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="j1X-4s-tjy" customClass="GreyViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rgv-cv-L64">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -49,9 +49,15 @@
                                     <segue destination="sWT-2h-9Zt" kind="show" id="d40-EN-pLX"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X8D-d0-Z7T">
+                                <rect key="frame" x="84" y="319" width="206" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="닫기"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="BOe-FT-Adc"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="fpa-aD-d0L"/>
                     <connections>
