@@ -16,17 +16,24 @@ class ViewController: UIViewController {
         photoLabel.text = "Eddy의 사진 액자"
         photoLabel.font = .systemFont(ofSize: CGFloat(40))
         photoLabel.textColor = UIColor(
-            red: CGFloat(46)/255,
-            green: CGFloat(148)/255,
-            blue: CGFloat(185)/255,
-            alpha: 1)
+            red: 46,
+            green: 148,
+            blue: 185)
         photoLabel.backgroundColor = UIColor(
-            red: CGFloat(255)/255,
-            green: CGFloat(253)/255,
-            blue: CGFloat(193)/255,
+            red: 255,
+            green: 253,
+            blue: 193,
             alpha: 0.5)
     }
+}
 
-
+extension UIColor {
+    convenience init(red: Int, green: Int, blue: Int, alpha: CGFloat = 1.0) {
+        let newRed = CGFloat(red) / 255
+        let newGreen = CGFloat(green) / 255
+        let newBlue = CGFloat(blue) / 255
+        
+        self.init(red: newRed, green: newGreen, blue: newBlue, alpha: alpha)
+    }
 }
 
