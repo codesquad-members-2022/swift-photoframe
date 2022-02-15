@@ -76,7 +76,6 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="다음"/>
                                 <connections>
-                                    <action selector="nextButtonTouched:" destination="sWT-2h-9Zt" eventType="touchUpInside" id="i30-cR-S8t"/>
                                     <segue destination="8S8-St-H0l" kind="show" id="R4O-48-hNP"/>
                                 </connections>
                             </button>

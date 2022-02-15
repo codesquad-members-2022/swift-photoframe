@@ -30,12 +30,6 @@ class GreyViewController: UIViewController {
     @IBAction func closeButtonTouched(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
-    @IBAction func nextButtonTouched(_ sender: Any) {
-        let newVC = self.storyboard?.instantiateViewController(identifier: "tintViewController")
-        newVC?.modalTransitionStyle = .coverVertical
-        newVC?.modalPresentationStyle = .automatic
-        self.present(newVC!,animated: true)
-    }
     
     /*
     // MARK: - Navigation

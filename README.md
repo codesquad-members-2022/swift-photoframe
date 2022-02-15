@@ -1,4 +1,4 @@
-bb# swift-photoframe
+bbbb# swift-photoframe
 
 ## 1. 프로젝트 생성하기
 
@@ -105,3 +105,48 @@ ViewController 2
 콜백
 
 <img src="https://user-images.githubusercontent.com/78553659/154001216-204bb3b5-6c71-4956-aca1-8a3a30effe8e.png"  width="600" height="600"/>
+
+---
+
+<br></br>
+
+## 6. container ViewController 활용하기
+
+### 과정
+
+1. scene1에 navigation controller 추가
+2. 닫기버튼 코드 수정
+3. 기존에 scene3 도 scene2와 동일하게 greyViewController를 상속받고있었지만, tintViewController 생성
+4. scene2 -> scene 3 이동 segue추가, 5단계에서 IBAction 으로 구현한 화면이동 삭제
+   - 닫기버튼 코드 변경후 기존처럼 닫기버튼으로 modal이 닫히지 않아 scene2 -> scene3에 segue 추가
+   - segue 추가하니 navigation bar 의 back 버튼 활성화
+   - scene2 -> scene3 이동시 scene3 (modal) 생성후 navigation 을 이동한 scene3 stack
+   - 콜백함수도 2번씩 실행
+
+<br></br>
+
+### IBAction 삭제전 실행화면
+
+Modal 뒤에 navigation stack 이 보이는 화면
+
+<img src="https://user-images.githubusercontent.com/78553659/154016362-ca94fdbd-9ab6-430a-8c1f-cd847455e9bb.png"  width="300" height="600"/>
+
+Modal 닫은 화면
+
+<img src="https://user-images.githubusercontent.com/78553659/154016381-830dfc64-6938-405e-b8c2-8f2cac526671.png"  width="300" height="600"/>
+
+scene2 -> scene3 이동시 콜백
+<img src="https://user-images.githubusercontent.com/78553659/154017026-6da68639-48f2-4cef-93a9-344d18e2f50a.png"  width="600" height="300"/>
+
+<br></br>
+
+### IBAction 삭제후 실행화면
+
+scene2
+
+<img src="https://user-images.githubusercontent.com/78553659/154017208-1ea79c81-414b-4c12-8096-12d8a42f002f.png"  width="300" height="600"/>
+<br></br>
+scene3
+
+<img src="https://user-images.githubusercontent.com/78553659/154017256-dc84363e-a202-43f4-9868-1054558b808d.png"  width="300" height="600"/>
+<br></br>
