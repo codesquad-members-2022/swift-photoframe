@@ -10,6 +10,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var photoLabel: UILabel!
+    @IBOutlet weak var photoDescription: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
