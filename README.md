@@ -2,10 +2,10 @@
 
 ## Step1 : 프로젝트 생성하기
 
-[x] TabBar Controller를 추가하고 Initial ViewController로 지정한다.
-[x] TabBarController에 Tab을 2개로 지정하고, Scene을 각각 연결한다.
-[x] 두 개 Scene 중에 첫 번째 Scene에 Custom Class를 ViewController로 지정한다.
-[x] 자동 생성된 ViewController 클래스 `viewDidLoad()` 함수에서 `print(#file, #line, #function, #column)` 코드를 추가하고 실행하면 콘솔 영역에 무엇이 출력되는지 확인한다.
+- [x] TabBar Controller를 추가하고 Initial ViewController로 지정한다.
+- [x] TabBarController에 Tab을 2개로 지정하고, Scene을 각각 연결한다.
+- [x] 두 개 Scene 중에 첫 번째 Scene에 Custom Class를 ViewController로 지정한다.
+- [x] 자동 생성된 ViewController 클래스 `viewDidLoad()` 함수에서 `print(#file, #line, #function, #column)` 코드를 추가하고 실행하면 콘솔 영역에 무엇이 출력되는지 확인한다.
 
 ### 실습 과정
 <img alt="Basic_Storyboard_Image" height="300" src="PhotoFrame/README_images/Basic_Storyboard_Image.png" width="500"/>   
@@ -61,3 +61,60 @@ GitHub `Push` 시 다음의 오류가 발생하였다.
 <img alt="Project_Forder_File_Missing" height="200" width="300" src="PhotoFrame/README_images/Project_Forder_File_Missing.png"/>
 <img alt="Correct_Files_Conflict" height="200" width="300" src="PhotoFrame/README_images/Correct_Files_Conflict.png"/>
 <img alt="After_Git_Stash" height="100" width="300" src="PhotoFrame/README_images/After_Git_Stash.png"/>
+
+---
+
+### UIKit View Management 클래스 중 UITabBarController / UITabBar
+
+UIKit에 포함된 View Controllers를 관리하는 UIKit View Management 클래스들은 하위 뷰 컨트롤러들을 이용하고 이동하는 인터페이스를 제공한다.   
+
+#### UITabBarController
+
+**Container View Controller의 일종으로, 선택 가능한 다수의 인터페이스를 관리하는 뷰 컨트롤러 클래스입니다. 여기서 '선택'이란 어떤 하위 뷰 컨트롤러를 보여줄지 결정하는 것입니다.**
+
+다른 뷰 컨트롤러 클래스와는 다르게 서브클래싱을 꼭 하지 않는 경우도 많은 클래스이다. 간단히 말해 탭에 따라 완전 다른 정보들 혹은 같은 정보의 다른 인터페이스들을 보여주는 것인데, 이것은 뷰를 보여주는 root viewcontroller를 바꾸는 것이다.
+
+위에 설명한 부분은 강조할 필요가 있겠다. 
+
+![UITabBarController_Complement_Image](PhotoFrame/README_images/UITabBarController_Complement_Image.jpg)
+
+1. Tab1을 탭한 상태로 앱이 실행되었다. Tab1에는 Tab1's root ViewController가 있으므로, ViewController가 제공하는 화면이 화면에 출력된다.   
+몇 가지 화면을 들어가면서 여러 View들이 쌓이게 되었다. 이제 Tab2를 탭 해본다.
+2. Tab2에는 Tab2's root ViewController가 있다. Tab을 바꿈으로써 root ViewController가 바뀌고, 새로운 root ViewController가 제공하는 화면이 출력된다.   
+몇 가지 화면을 더 들어가본다.
+3. Tab1으로 돌아온다. 이전의 Tab1's root ViewController로 root ViewController가 바뀐다. root ViewController에 의해 보이던 화면들이(Tab1's root ViewController에 의해 제공되던 화면, Child View Controller도 hierarchy 그대로) 보이게 된다.
+
+관련 클래스로는 Tab 자체를 표현하는 UITabBarItem 클래스가 있다.
+
+#### UITabBar
+
+**특정 탭 바 안의 모든 버튼들은 표시하고, 버튼 선택에 따라 하위작업, 뷰, 앱 모드들을 선택할 수 있도록 한다.**
+
+주로 UITabBarController의 하위 요소로서 사용되지만, 단독적으로 사용되기도 하다. UITabBar는 UITabBarItem이 선택될 경우 delegate 객체에 정보를 알리게 되고, 이 객체를 개발자 맘대로 다룰 수 있게 된다.
+
+참고로 UITollbar는 전혀 다른 클래스이다. UITabBar는 UITabBarItem이 앱의 모드를 바꾸기 위해 사용하는 뷰라면, UIToolBar는 사용자가 현재 화면(컨텐츠)에서 할 수 있는 액션들을 모아놓는 곳이다.
+
+UITabBar를 따로 생성하는 방법은 Interface Builder 를 이용하거나, Programmatically하게 만드는 방법이 있다. 구현이 완료되면 UITabBarDelegate 프로토콜을 구현한 클래스에서 UITabBar가 전달하는 report(각 탭을 탭할 경우 발생)를 받거나 부수적인 처리를 손쉽게 할 수 있도록 도와준다.   
+자세한 사항은 다음의 문서를 참고한다 ([UITabBar Apple Documentation](https://developer.apple.com/documentation/uikit/uitabbar))
+
+---
+
+## Step2 : IBOutlet 실습
+
+- [x] Xcode 프로젝트 내비게이터에서 Main.storyboard 파일을 선택하고 First Scene 에 있는 'First View' 레이블(Label)을 선택하고 Assistant Editor 모드로 변경한다.   
+- [x] 레이블을 선택하고 Control + 드래그해서 ViewController 코드에 IBOutlet으로 연결한다.   
+- [x] UILabel의 속성을 이용하여 여러 작업을 수행한다.   
+- [ ] UILabel에서 Lucas에 언급되지 않은 속성들에 대해서도 공식문서를 찾아본다.   
+
+### 결과 화면
+![Step2_Result](PhotoFrame/README_images/Step2_Result.png)
+
+### 학습한 내용에 대한 간단한 정리
+
+* Interface Builder 의 `Control`+Drag 를 통해 원하는 요소를 다른 요소와 관계시키거나, 커스텀 클래스에 참조시킬 수 있다.
+* 컨트롤 드래그 를 이용하여 요소끼리 관계를 맺을 경우 각 요소의 위치 제약조건을 설정하게 된다.
+* 커스텀 클래스에서 참조할 경우 변수명 앞에 `@IBOutlet`이 붙게 되고 `weak`도 추가 되어 있다. 
+* 특히 weak에 대한 부분은 `Reference Count와` `View Life Cycle`에 연관된 문제로 간단히 살펴볼 필요가 있음(깊이 들어가게 되면 이번 주 스텝 학습에 지장이 될 것으로 예상).
+
+---
+
