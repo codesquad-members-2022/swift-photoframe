@@ -151,7 +151,9 @@ UIView를 상속받기에 이와 관련된 속성을 모두 사용할 수 있습
     - 관련 클래스 검색 중 UISegmentedControl를 찾았다. UISegmentedControl는 무엇일까?
         - 탭바와 비슷한 UI객체입니다. 이의 아이템 터치 시 Delegate에서 오는 이벤트알림에 맞는 로직을 실행시킵니다.
 
-2. 추가학습에서의 Segue 액션들을 모두 코드에서도 사용이 가능할까?
+2. Scene이란? : "화면단위" 이며 사용자에게 컨텐츠를 출력하여 보여주고, 상호작용하는 단위입니다.
+
+3. 추가학습에서의 Segue 액션들을 모두 코드에서도 사용이 가능할까?
     
 ```swift
         self.show(ViewController(), sender: nil)
@@ -159,5 +161,7 @@ UIView를 상속받기에 이와 관련된 속성을 모두 사용할 수 있습
         self.present(<#T##viewControllerToPresent: UIViewController##UIViewController#>, animated: <#T##Bool#>, completion: <#T##(() -> Void)?##(() -> Void)?##() -> Void#>)
 ```
 - NavigationController는 push, TabBarController는 addChild를 사용하는걸로 알고 있습니다.
+
+
 
 ----
