@@ -4,7 +4,7 @@
 - [x]  스토리보드에서 TabBar Controller를 직접 추가하고 기존 ViewController는 지워서 사용한다.
 - [x]  TabBarController에 Tab을 2개로 지정하고, Scene을 추가하여 연결한다.
 - [x]  ViewController 클래스 viewDidLoad() 함수에서 print 코드를 추가하여 실행 후 콘솔영역을 확인한다.   
-<img src="https://user-images.githubusercontent.com/92699723/153865152-59030565-c364-4c3b-93fa-058dc83b31cf.png" width="800" height="400"/>
+![Screen Shot 2022-02-14 at 20 29 14 PM](https://user-images.githubusercontent.com/92699723/153865152-59030565-c364-4c3b-93fa-058dc83b31cf.png)
 
 ### 학습 키워드
 - git command
