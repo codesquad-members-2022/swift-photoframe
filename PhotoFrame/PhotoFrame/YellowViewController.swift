@@ -16,7 +16,7 @@ class YellowViewController: UIViewController{
     override func loadView() {
         super.loadView()
         print("\(self.classForKeyedArchiver!) loadView")
-        self.greenVC =  self.storyboard?.instantiateViewController(withIdentifier: "GreenVC")
+        
     }
     
     override func viewDidLoad() {
@@ -47,6 +47,11 @@ class YellowViewController: UIViewController{
     
     @IBAction func openButtonTouched(_ sender: Any) {
         guard let greenVC = self.greenVC else {
+            if let vc = self.storyboard?.instantiateViewController(withIdentifier: "GreenVC") else{
+                
+            }
+            self.greenVC = vc
+            self.present(vc, animated: true, completion: nil)
             return
         }
 
