@@ -82,10 +82,10 @@
             </objects>
             <point key="canvasLocation" x="1188.4057971014495" y="-263.16964285714283"/>
         </scene>
-        <!--View Controller-->
+        <!--Second View Controller-->
         <scene sceneID="FpT-eQ-6Nw">
             <objects>
-                <viewController id="gOQ-oH-Jf3" sceneMemberID="viewController">
+                <viewController id="gOQ-oH-Jf3" customClass="SecondViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="07S-Im-c1m">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
