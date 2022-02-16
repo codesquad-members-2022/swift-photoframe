@@ -55,7 +55,9 @@
                                     <action selector="nextButtonTouchDown:" destination="MRY-Yo-uWk" eventType="touchDown" id="u72-Ei-qwK"/>
                                     <action selector="nextButtonTouchUpOutside:" destination="MRY-Yo-uWk" eventType="touchUpOutside" id="elP-Yc-IgS"/>
                                     <action selector="nextButtonTouched:" destination="MRY-Yo-uWk" eventType="touchUpInside" id="CVo-aG-IHB"/>
-                                    <segue destination="gOQ-oH-Jf3" kind="show" id="gKL-TU-ioM"/>
+                                    <segue destination="gOQ-oH-Jf3" kind="popoverPresentation" popoverAnchorView="abd-kZ-4Nz" id="gKL-TU-ioM">
+                                        <popoverArrowDirection key="popoverArrowDirection" left="YES" right="YES"/>
+                                    </segue>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zMG-i8-vJp">
@@ -89,6 +91,17 @@
                     <view key="view" contentMode="scaleToFill" id="07S-Im-c1m">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a5v-v3-MLC">
+                                <rect key="frame" x="107" y="497" width="203" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="다음"/>
+                                <connections>
+                                    <segue destination="3BM-SX-6rg" kind="presentation" modalTransitionStyle="flipHorizontal" id="ZIQ-pP-lc9"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="PeP-10-kIU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -96,18 +109,19 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e1q-Hu-yR0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1929" y="-252"/>
+            <point key="canvasLocation" x="1928.985507246377" y="-252.45535714285714"/>
         </scene>
         <!--Third View Controller-->
         <scene sceneID="9Jt-Sw-q1o">
             <objects>
                 <viewController id="3BM-SX-6rg" customClass="ThirdViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="l1L-OS-AGE">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="KUA-T9-upX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="RIC-5p-LY8"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q4I-Tr-T57" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
