@@ -89,10 +89,10 @@
             </objects>
             <point key="canvasLocation" x="-97" y="-248"/>
         </scene>
-        <!--View Controller-->
+        <!--Yellow View Controller-->
         <scene sceneID="a2r-HW-Jnh">
             <objects>
-                <viewController id="LDJ-Xy-oFr" sceneMemberID="viewController">
+                <viewController id="LDJ-Xy-oFr" customClass="YellowViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="43b-dm-oDQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -104,6 +104,12 @@
                                 <connections>
                                     <segue destination="b4p-1P-gk9" kind="show" id="1KN-wA-FHp"/>
                                 </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aka-eA-cMc">
+                                <rect key="frame" x="297" y="63" width="67" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Pl8-u7-msj"/>
