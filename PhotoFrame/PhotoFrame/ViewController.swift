@@ -35,6 +35,19 @@ class ViewController: UIViewController {
     }
     
     
+    @IBAction func secondAction(_ sender: UIButton) {
+        print("두번째 액션입니다!")
+    }
+    
+    
+    @IBAction func thirdAction(_ sender: UIButton) {
+        print("세번째 액션입니다!")
+    }
+    
+    @IBAction func testAction(_ sender: UIButton) {
+        print("I have multiple buttons")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
