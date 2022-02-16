@@ -14,11 +14,23 @@ class GreenViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setViewSetting(color: .green,btn: self.closeButton)
-        
+        self.closeButtonText(button: closeButton)
+        self.backGround(color: .green)
     }
     
     @IBAction func closeButtonTapped(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
+}
+
+extension GreenViewController: ColorViewControllerProtocol{
+    func closeButtonText(button: UIButton) {
+        button.setTitle("close", for: .normal)
+    }
+    
+    func backGround(color: UIColor) {
+        view.backgroundColor = color
+    }
+    
+    
 }
