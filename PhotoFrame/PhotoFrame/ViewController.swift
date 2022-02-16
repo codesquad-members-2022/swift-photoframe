@@ -30,6 +30,7 @@ class FlowOfViewContoller :UIViewController{
 }
 class ViewController: FlowOfViewContoller {
 
+    @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var photoLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
