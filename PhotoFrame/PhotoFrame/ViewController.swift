@@ -6,7 +6,7 @@
 //
 
 import UIKit
-class FlowOfViewContoller :UIViewController{
+class ViewContollerFlow :UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
