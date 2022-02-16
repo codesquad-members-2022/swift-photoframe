@@ -48,5 +48,7 @@ class ViewController: FlowOfViewContoller {
         self.photoLabel.alpha = 0.5
     }
     
+    @IBAction func nextImageButtonTouched(_ sender: Any) {
+    }
 }
 
