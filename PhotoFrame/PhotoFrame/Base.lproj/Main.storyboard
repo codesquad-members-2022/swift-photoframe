@@ -51,15 +51,7 @@
                                 <connections>
                                     <action selector="nextButtonTouched2:" destination="fL3-1V-XyL" eventType="touchUpInside" id="yB1-rz-eRf"/>
                                     <action selector="nextButtonTouched:" destination="fL3-1V-XyL" eventType="touchUpInside" id="iIC-m1-y2h"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8jK-TB-kxk">
-                                <rect key="frame" x="180" y="633" width="57" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="다음2"/>
-                                <connections>
-                                    <action selector="nextButtonTouched:" destination="fL3-1V-XyL" eventType="touchUpInside" id="Q6R-UD-aGh"/>
+                                    <segue destination="58e-fP-YbN" kind="show" id="To4-8G-lDy"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -85,6 +77,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JIU-4Y-4Z4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1701" y="-224"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="kV4-75-hdC">
+            <objects>
+                <viewController id="58e-fP-YbN" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jmE-ef-GHD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="pKk-mO-GVn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="hUC-NH-8Jr"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K52-EJ-0IN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2464" y="-224"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Ipl-Zm-RKh">
