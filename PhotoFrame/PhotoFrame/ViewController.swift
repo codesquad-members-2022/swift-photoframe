@@ -30,11 +30,7 @@ class ViewController: UIViewController {
         photoDescription.text = "여기에는 설명이 들어갈 거예요"
         photoDescription.font = .italicSystemFont(ofSize: UIFont.labelFontSize)
         photoDescription.textColor = UIColor(red: 210, green: 85, blue: 101)
-        photoDescription.backgroundColor = UIColor(
-            red: 255,
-            green: 253,
-            blue: 193,
-            alpha: 0.5)
+        photoDescription.backgroundColor = UIColor(red: 255, green: 253, blue: 193, alpha: 0.5)
     }
     
     @IBAction func nextButtonTouched(_ sender: Any) {
