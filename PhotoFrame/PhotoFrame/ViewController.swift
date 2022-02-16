@@ -28,7 +28,7 @@ class ViewContollerFlow :UIViewController{
         print(#file, #line, #function, #column)
     }
 }
-class ViewController: FlowOfViewContoller {
+class ViewController: ViewContollerFlow {
 
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var photoLabel: UILabel!
@@ -50,7 +50,7 @@ class ViewController: FlowOfViewContoller {
     
     @IBAction func nextImageButtonTouched(_ sender: Any) {
         guard let randomInt = (1...22).randomElement() else {return}
-        let randomString = randomInt < 10 ? "0" + String(randomInt) : String(randomInt)
+        let randomString = String.init(format: "%02d", arguments: [randomInt])
         self.photoImageView.image = UIImage(named: "./Demo Images/\(randomString).jpg")
     }
 }
