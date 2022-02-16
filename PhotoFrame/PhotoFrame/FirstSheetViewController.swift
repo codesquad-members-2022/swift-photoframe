@@ -13,9 +13,8 @@ class FirstSheetViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = UIColor.blue
+        self.view.backgroundColor = UIColor.yellow
         self.nextButton.tintColor = UIColor.purple
-        self.nextButton.backgroundColor = UIColor.yellow
         
         print("ViewDidLoad - FSVC")
         print(#file, #line, #function, #column)
@@ -64,6 +63,17 @@ class FirstSheetViewController: UIViewController {
     }
     
     @IBAction func closeButtonTouched(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+        /*
+        // Navigation Controller 내에서 작동X
+        // dismiss는 presented/presenting VC와 연관되어 작동이 안 되는 것으로 보임
         dismiss(animated: true, completion: nil)
+         */
+    }
+    
+    @IBAction func navigationButton(_ sender: UIBarButtonItem) {
+        guard let viewController = self.storyboard?.instantiateViewController(withIdentifier: "SecondSheetViewController") else { return }
+        
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
 }

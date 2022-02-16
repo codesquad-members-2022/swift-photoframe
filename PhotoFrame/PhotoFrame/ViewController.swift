@@ -56,6 +56,12 @@ class ViewController: UIViewController {
         self.photoLabel.alpha = 0.5
     }
     
+    @IBAction func navigationPush(_ sender: UIBarButtonItem) {
+        guard let viewController = self.storyboard?.instantiateViewController(withIdentifier: "FirstSheetViewController") else { return }
+        
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
+    
     @IBAction func myUnwindAction(unwindSegue: UIStoryboardSegue){
     }
 }
