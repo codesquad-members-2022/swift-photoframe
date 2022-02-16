@@ -36,19 +36,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nJM-IP-WCw">
-                                <rect key="frame" x="179" y="244" width="75" height="44"/>
+                                <rect key="frame" x="164" y="420" width="87" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Next">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
+                                <buttonConfiguration key="configuration" style="plain" title="다음">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="36"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="onTappedButton:" destination="01J-lp-oVM" eventType="touchUpInside" id="nGK-AV-8uJ"/>
-                                    <segue destination="rt4-cO-aGs" kind="show" id="wwN-ZS-IgV"/>
+                                    <segue destination="rt4-cO-aGs" kind="show" id="GnH-3W-Rzu"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gvy-oH-jsk">
-                                <rect key="frame" x="20" y="456" width="374" height="64"/>
+                                <rect key="frame" x="20" y="280" width="374" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <nil key="textColor"/>
@@ -76,27 +76,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gCN-ES-ELo">
-                                <rect key="frame" x="170" y="182" width="75" height="44"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zrK-PO-uod">
+                                <rect key="frame" x="164" y="420" width="87" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Next">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
+                                <buttonConfiguration key="configuration" style="plain" title="다음">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="36"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="onTappedButton:" destination="01J-lp-oVM" eventType="touchUpInside" id="I6s-t5-uUN"/>
-                                    <segue destination="Ych-LA-AU3" kind="show" id="kjt-J6-s6D"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qbw-Kh-mCj">
-                                <rect key="frame" x="328" y="20" width="66" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="닫기">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="24"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="closeButtonTouched:" destination="rt4-cO-aGs" eventType="touchUpInside" id="pXA-Jh-tmy"/>
+                                    <segue destination="Ych-LA-AU3" kind="show" id="G9a-RV-0uj"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -107,7 +95,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lnd-av-CD2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2913.04347826087" y="724.55357142857144"/>
+            <point key="canvasLocation" x="2912" y="714"/>
         </scene>
         <!--Brown View Controller-->
         <scene sceneID="9l4-6d-Bem">
@@ -116,19 +104,6 @@
                     <view key="view" contentMode="scaleToFill" id="BXK-Q5-wVO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nfl-hV-5BZ">
-                                <rect key="frame" x="328" y="20" width="66" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="닫기">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="24"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="closeButtonTouched:" destination="Ych-LA-AU3" eventType="touchUpInside" id="S8v-MT-ZqG"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="BZH-zj-8y0"/>
                         <color key="backgroundColor" systemColor="systemBrownColor"/>
                     </view>
@@ -136,12 +111,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xgo-tE-L8X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3923.188405797102" y="724.55357142857144"/>
+            <point key="canvasLocation" x="3919" y="714"/>
         </scene>
         <!--second-->
         <scene sceneID="QiO-16-KdG">
             <objects>
-                <viewController id="Wgj-To-yeh" customClass="SecondViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Wgj-To-yeh" customClass="PhotoFrameViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QMW-iJ-qAH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

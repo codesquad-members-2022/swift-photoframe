@@ -17,7 +17,7 @@
 		E0DDB5FC27B9EB6F00F23B6B /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DDB5FB27B9EB6F00F23B6B /* TabBarController.swift */; };
 		E0DDB60427B9F15700F23B6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0DDB60227B9F15700F23B6B /* Main.storyboard */; };
 		E0DDB60827B9F40E00F23B6B /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DDB60727B9F40E00F23B6B /* FirstViewController.swift */; };
-		E0DDB60A27B9F41A00F23B6B /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DDB60927B9F41A00F23B6B /* SecondViewController.swift */; };
+		E0DDB60A27B9F41A00F23B6B /* PhotoFrameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DDB60927B9F41A00F23B6B /* PhotoFrameViewController.swift */; };
 		E0DDB60E27BA88D200F23B6B /* GrayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DDB60D27BA88D200F23B6B /* GrayViewController.swift */; };
 		E0DDB61027BA88E400F23B6B /* BrownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DDB60F27BA88E400F23B6B /* BrownViewController.swift */; };
 /* End PBXBuildFile section */
@@ -54,7 +54,7 @@
 		E0DDB5FB27B9EB6F00F23B6B /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		E0DDB60327B9F15700F23B6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E0DDB60727B9F40E00F23B6B /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		E0DDB60927B9F41A00F23B6B /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		E0DDB60927B9F41A00F23B6B /* PhotoFrameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoFrameViewController.swift; sourceTree = "<group>"; };
 		E0DDB60D27BA88D200F23B6B /* GrayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrayViewController.swift; sourceTree = "<group>"; };
 		E0DDB60F27BA88E400F23B6B /* BrownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrownViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -162,11 +162,12 @@
 		E0DDB5FA27B9E8EA00F23B6B /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				E0DDB61B27BC779200F23B6B /* Codable */,
 				E0DDB60C27BA88B700F23B6B /* BrownView */,
 				E0DDB60B27BA88AC00F23B6B /* GrayView */,
 				E0DDB5FD27B9EC9600F23B6B /* Home */,
 				E0DDB60527B9F3F400F23B6B /* FirstView */,
-				E0DDB60627B9F3FE00F23B6B /* SecondView */,
+				E0DDB60627B9F3FE00F23B6B /* PhotoFrameView */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -187,12 +188,12 @@
 			path = FirstView;
 			sourceTree = "<group>";
 		};
-		E0DDB60627B9F3FE00F23B6B /* SecondView */ = {
+		E0DDB60627B9F3FE00F23B6B /* PhotoFrameView */ = {
 			isa = PBXGroup;
 			children = (
-				E0DDB60927B9F41A00F23B6B /* SecondViewController.swift */,
+				E0DDB60927B9F41A00F23B6B /* PhotoFrameViewController.swift */,
 			);
-			path = SecondView;
+			path = PhotoFrameView;
 			sourceTree = "<group>";
 		};
 		E0DDB60B27BA88AC00F23B6B /* GrayView */ = {
@@ -209,6 +210,13 @@
 				E0DDB60F27BA88E400F23B6B /* BrownViewController.swift */,
 			);
 			path = BrownView;
+			sourceTree = "<group>";
+		};
+		E0DDB61B27BC779200F23B6B /* Codable */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Codable;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -346,7 +354,7 @@
 				E0DDB5FC27B9EB6F00F23B6B /* TabBarController.swift in Sources */,
 				E0DDB5C827B9E84900F23B6B /* AppDelegate.swift in Sources */,
 				E0DDB5CA27B9E84900F23B6B /* SceneDelegate.swift in Sources */,
-				E0DDB60A27B9F41A00F23B6B /* SecondViewController.swift in Sources */,
+				E0DDB60A27B9F41A00F23B6B /* PhotoFrameViewController.swift in Sources */,
 				E0DDB60E27BA88D200F23B6B /* GrayViewController.swift in Sources */,
 				E0DDB60827B9F40E00F23B6B /* FirstViewController.swift in Sources */,
 			);
