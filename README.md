@@ -36,9 +36,10 @@
 * 버튼을 예로,
     - 버튼의 디자인 요소를 변경 할 프로퍼티와, 클릭과 같은 액션을 처리할 메서드를 갖고있다.
     - 프로퍼티 값을 변경하려면 IBOutlet을, 액션이 발생했을 때 수행해야할 값은 IBAction을 사용한다.
-* 버튼 Event
-| Did End On Exit | 편집 후 포커스 없어짐 |
+
+| Event | 설명 |
 | --- | --- |
+| Did End On Exit | 편집 후 포커스 없어짐 |
 | Editing changed | 편집 |
 | Editing Did Begin | 편집을 시작할 떄 |
 | Editing Did End | 편집을 종료할 때 |
@@ -71,3 +72,26 @@
 
 <img width="700" alt="다양한 액션 연결" src="https://user-images.githubusercontent.com/92635121/154049243-25cdd3f8-b7d0-4927-af04-87daa7f28b89.png"><img width="500" alt="스크린샷 2022-02-15 오후 8 07 39" src="https://user-images.githubusercontent.com/92635121/154050134-176bd5b0-a18d-43a2-8af0-668e7e02ac62.png">
 ---
+
+<br>
+
+## Step4. Scene을 Segue로 연결하기
+
+- [x]  Scene 2개 추가 및  Segue로 연결
+- [x]  새로 추가한 Scene 속성 변경
+- [x]  새로 추가한 Scene끼리 Segue 연결
+
+
+### Segue
+* ViewController 사이의 화살표
+* Segue를 통해 뷰 전환 간 이벤트를 관리  
+
+| Segue | 설명 |
+| --- | --- |
+| Show | 새 화면으로 이동. Stack 구조로서 새 화면이 원래 화면 위를 덮는 구조 |
+| Show Detail | SplitView 구조에서 원래 화면은 Master, 새 화면은 Detail로 표시하는 구조. 아이폰에서는 똑같아 보이지만 아이패드로 보면 화면이 둘로 분할되서 보이게 된다. |
+| Present Modally | 새 화면이 모달처럼 원래 화면 위 전체를 덮는 구조. 원래 화면은 새 화면 뒤에 그대로 존재하게 된다. |
+| Present As Popover | 아이패드에서 팝업창을 띄운다. 아이폰에서는 큰 의미가 없다. |
+| Custom | 사용자 정의 Segue를 만든다. |
+
+![Simulator Screen Recording - iPhone 11 - 2022-02-16 at 14 29 36](https://user-images.githubusercontent.com/92635121/154202571-55e77c2c-3313-4100-9975-6f5f453af018.gif)
