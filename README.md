@@ -106,3 +106,14 @@ class ViewController1 : UIViewController {
 * 일단은 문제가 없이 진행은 되는데 앞으로의 작업에 있어서 더 조심스러워질거같다.
 * Human-Insight에 맞춰 다음번 오류가 나면 다시 고민해보자.
 
+## [Step3] IBAction 연결하기
+
+### 구현 모습
+
+![Simulator Screen Shot - iPhone 11 Pro Max - 2022-02-16 at 14 28 36](https://user-images.githubusercontent.com/50472122/154202675-69ed418a-868b-4ec2-9abf-59d67ab608f6.png)
+
+![Simulator Screen Shot - iPhone 11 Pro Max - 2022-02-16 at 14 28 39](https://user-images.githubusercontent.com/50472122/154202738-7ed7ac3c-06f0-4678-b338-569ee56915d9.png)
+
+### 과정 설명
+> 루카스의 "[Step3] IBAction 연결하기"를 따라하니 큰 어려움이 없어서 생략합니다.
+
