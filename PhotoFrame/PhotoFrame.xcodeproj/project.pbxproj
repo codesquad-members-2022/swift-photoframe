@@ -13,6 +13,7 @@
 		B564197827BA0BF100F13DDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B564197627BA0BF100F13DDC /* Main.storyboard */; };
 		B564197A27BA0BF300F13DDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B564197927BA0BF300F13DDC /* Assets.xcassets */; };
 		B564197D27BA0BF300F13DDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B564197B27BA0BF300F13DDC /* LaunchScreen.storyboard */; };
+		B5C1D42B27BCDAF000545918 /* GrayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C1D42A27BCDAF000545918 /* GrayViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		B564197927BA0BF300F13DDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B564197C27BA0BF300F13DDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B564197E27BA0BF300F13DDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5C1D42A27BCDAF000545918 /* GrayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrayViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				B564197027BA0BF100F13DDC /* AppDelegate.swift */,
 				B564197227BA0BF100F13DDC /* SceneDelegate.swift */,
 				B564197427BA0BF100F13DDC /* ViewController.swift */,
+				B5C1D42A27BCDAF000545918 /* GrayViewController.swift */,
 				B564197627BA0BF100F13DDC /* Main.storyboard */,
 				B564197927BA0BF300F13DDC /* Assets.xcassets */,
 				B564197B27BA0BF300F13DDC /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B564197527BA0BF100F13DDC /* ViewController.swift in Sources */,
+				B5C1D42B27BCDAF000545918 /* GrayViewController.swift in Sources */,
 				B564197127BA0BF100F13DDC /* AppDelegate.swift in Sources */,
 				B564197327BA0BF100F13DDC /* SceneDelegate.swift in Sources */,
 			);
