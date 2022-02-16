@@ -44,7 +44,6 @@
 		B564196427BA0BF100F13DDC = {
 			isa = PBXGroup;
 			children = (
-				B5C1D42C27BD462300545918 /* YellowViewController.swift */,
 				B564196F27BA0BF100F13DDC /* PhotoFrame */,
 				B564196E27BA0BF100F13DDC /* Products */,
 			);
@@ -64,6 +63,7 @@
 				B564197027BA0BF100F13DDC /* AppDelegate.swift */,
 				B564197227BA0BF100F13DDC /* SceneDelegate.swift */,
 				B564197427BA0BF100F13DDC /* ViewController.swift */,
+				B5C1D42C27BD462300545918 /* YellowViewController.swift */,
 				B5C1D42A27BCDAF000545918 /* GrayViewController.swift */,
 				B564197627BA0BF100F13DDC /* Main.storyboard */,
 				B564197927BA0BF300F13DDC /* Assets.xcassets */,

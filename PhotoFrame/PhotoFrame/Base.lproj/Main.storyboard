@@ -96,19 +96,18 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DHj-15-Ayh">
                                 <rect key="frame" x="106" y="328" width="182" height="92"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="다음"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="다음"/>
                                 <connections>
+                                    <action selector="nextButton:" destination="zla-q3-DDF" eventType="touchUpInside" id="BWW-hk-Q20"/>
                                     <segue destination="fve-yE-h0D" kind="presentation" modalPresentationStyle="fullScreen" id="npY-hR-okB"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NpX-J4-oFr">
-                                <rect key="frame" x="135" y="196" width="124" height="63"/>
+                                <rect key="frame" x="135" y="170" width="153" height="89"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="닫기">
-                                    <color key="baseBackgroundColor" systemColor="systemRedColor"/>
-                                </buttonConfiguration>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="닫기"/>
                                 <connections>
                                     <action selector="exitButtonTouched:" destination="ZPo-c5-w6j" eventType="touchUpInside" id="eEZ-df-FYd"/>
                                 </connections>
@@ -119,11 +118,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="7h6-Gf-MuT"/>
                     <connections>
-                        <outlet property="exitButton" destination="NpX-J4-oFr" id="QD5-Aw-b9R"/>
-                        <outlet property="nextButton" destination="DHj-15-Ayh" id="X0l-bW-GuY"/>
+                        <outlet property="exitButton" destination="NpX-J4-oFr" id="vdN-O3-pv7"/>
+                        <outlet property="nextButton" destination="DHj-15-Ayh" id="Tt0-Gy-lQe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fCe-Cr-bkk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="zla-q3-DDF" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-168.11594202898553" y="-1613.1696428571429"/>
         </scene>
@@ -184,9 +184,6 @@
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemTealColor">
             <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
