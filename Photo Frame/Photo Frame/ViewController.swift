@@ -11,7 +11,6 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var photoLabel: UILabel!
     @IBOutlet weak var firstDescription: UILabel!
-    let button = UIButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
