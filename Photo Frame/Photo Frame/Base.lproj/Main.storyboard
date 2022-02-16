@@ -29,59 +29,61 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Photo_Frame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="First View" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PZf-Qi-lBB">
-                                <rect key="frame" x="20" y="361" width="374" height="37"/>
+                                <rect key="frame" x="20" y="236" width="374" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="50"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="45"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="lable" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u7m-KG-SRd">
-                                <rect key="frame" x="99" y="417" width="216" height="24"/>
+                                <rect key="frame" x="98" y="286" width="216" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n7e-Ql-zZp">
-                                <rect key="frame" x="150" y="465" width="114" height="34"/>
+                                <rect key="frame" x="127" y="615" width="160" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled">
-                                    <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <backgroundConfiguration key="background" cornerRadius="30">
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </backgroundConfiguration>
                                     <attributedString key="attributedTitle">
                                         <fragment content="CLICK">
                                             <attributes>
-                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <font key="NSFont" size="11" name="Futura-Medium"/>
                                                 <font key="NSOriginalFont" size="12" name="Helvetica"/>
                                             </attributes>
                                         </fragment>
-                                        <fragment content=" ">
+                                        <fragment content="          &gt;">
                                             <attributes>
-                                                <font key="NSFont" size="12" name="Helvetica"/>
-                                            </attributes>
-                                        </fragment>
-                                        <fragment content="☑️">
-                                            <attributes>
-                                                <font key="NSFont" size="12" name="AppleColorEmoji"/>
-                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <font key="NSFont" size="11" name="Futura-Medium"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="nextButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W3O-jB-MZg"/>
+                                    <segue destination="gwV-tM-Mtp" kind="show" identifier="presentToSecond" id="IPs-6V-SXV"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hans-isaacson-yRlUZd5zUQQ-unsplash" translatesAutoresizingMaskIntoConstraints="NO" id="xZb-OV-SsC">
+                                <rect key="frame" x="0.0" y="341" width="414" height="240"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item1" image="house.fill" catalog="system" id="pfc-qg-JjZ"/>
+                    <navigationItem key="navigationItem" id="Ajh-VV-dMf"/>
                     <connections>
                         <outlet property="firstDescription" destination="u7m-KG-SRd" id="zZf-bK-yqg"/>
                         <outlet property="photoLabel" destination="PZf-Qi-lBB" id="VyV-Ky-2Zx"/>
@@ -91,12 +93,87 @@
             </objects>
             <point key="canvasLocation" x="969.56521739130437" y="-251.11607142857142"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="5hA-Va-Un0">
+            <objects>
+                <viewController id="gwV-tM-Mtp" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kE3-yj-XsA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="zeke-tucker-0EP4QyCjtgE-unsplash" translatesAutoresizingMaskIntoConstraints="NO" id="mJr-wb-biG">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vmp-6D-cQk">
+                                <rect key="frame" x="127" y="399" width="160" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="More" cornerStyle="capsule"/>
+                                <connections>
+                                    <segue destination="0SN-Qe-AEa" kind="show" id="cqA-nL-uui"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="60b-dS-Cma"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="FOI-RP-BfT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OQl-5c-DgD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1702.8985507246377" y="-251.11607142857142"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="16q-q5-yCi">
+            <objects>
+                <viewController id="0SN-Qe-AEa" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Css-wN-vOe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7pp-MX-ZXp">
+                                <rect key="frame" x="58" y="310" width="298" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="55"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Black" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nqP-vy-eyF">
+                                <rect key="frame" x="140" y="390" width="135" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="55"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OQ6-Fg-sex">
+                                <rect key="frame" x="127" y="488" width="160" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Go first scene" cornerStyle="capsule"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="r78-NQ-hqR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="CuH-ZS-imZ"/>
+                        <color key="backgroundColor" systemColor="labelColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="rBL-yc-Xca"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VuM-bj-b9Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2427.536231884058" y="-251.11607142857142"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="EGC-ya-ceA">
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="z4A-zy-4Sp" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jKZ-Ey-MBc">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -110,9 +187,18 @@
             <point key="canvasLocation" x="18.840579710144929" y="79.6875"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="IPs-6V-SXV"/>
+        <segue reference="r78-NQ-hqR"/>
+    </inferredMetricsTieBreakers>
     <resources>
+        <image name="hans-isaacson-yRlUZd5zUQQ-unsplash" width="4125" height="6188"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="photo.artframe" catalog="system" width="128" height="93"/>
+        <image name="zeke-tucker-0EP4QyCjtgE-unsplash" width="3168" height="4752"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
