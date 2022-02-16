@@ -9,10 +9,16 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var photoLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        print(#file, #line, #function, #column)
+        
+        self.photoLabel.text = "bibi의 사진액자"
+        self.photoLabel.textColor = UIColor.blue
+        
+        
     }
 
 
