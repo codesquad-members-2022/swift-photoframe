@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var firstLabel: UILabel!
     @IBOutlet weak var firstDescription: UILabel!
     //lazy var yellowVC = YellowViewController() -> 스토리보드에서 ViewController를 찾아오지 않을 시 GreenViewController에 View 생성이 안됨.
-    private var yellowVC: UIViewController?
+    private var yellowVC: UIViewController? // type Annotation : 생성과 동시에 초기화 해주지 않기 때문.
     
     override func loadView() {
         super.loadView()
@@ -47,8 +47,6 @@ class ViewController: UIViewController {
             }
             return
         }
-        
-        
         self.present(yellowVC, animated: true, completion: nil)
     }
 }

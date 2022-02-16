@@ -224,5 +224,28 @@ NavigationController, splitView를 사용하지 않기에 presentModally를 사�
         * 문제 : 만약 추가설정요소가 하나라도 추가될 경우, 함수의 인자값을 수정해줘야 할 것 같아 이부분에 대해 조금 더 고민해봐야 할 것 같습니다.
 
 
+### 코드 스타일
+
+- 변수선언과 타입 어노테이션
+    1. var a: Int
+    : Int 로 타입을 명시해주는 형태를 타입어노테이션이라 부른다.
+    스위프트는 타입추론을 지원하기에 var a = 7 만 입력하더라도 a를 Int값으로 추론합니다.
+    
+    2. 타입 어노테이션
+    - 가독성이 올라갑니다.
+    - 타입추론보다 컴파일속도가 조금 더 빠릅니다.
+    
+    명시해야 하는 상황은!?
+    - 초기화를 동시에 하지 않는 경우.
+    
+    이전에 사용했던 이유
+    1. 초기화를 동시에 하지 않았음.
+    2. 생성과 동시에 명명함으로서 가독성을 높인다 생각함.
+        -> 하지만 변수명선언을 더 명확하게 한다면, 이럴 필요가 없지 않을까?
+
+문서 : It’s rare that you need to write type annotations in practice. If you provide an initial value for a constant or variable at the point that it’s defined, Swift can almost always infer the type to be used for that constant or variable, as described in Type Safety and Type Inference. In the welcomeMessage example above, no initial value is provided, and so the type of the welcomeMessage variable is specified with a type annotation rather than being inferred from an initial value.
+    (학습목적이 아닌 이상 Type Annotation을 사용하는경우가 드물다. type safety, type inference가 보장된다면 타입추론을 사용해라)
+
 
 ----
+
