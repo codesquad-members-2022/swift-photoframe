@@ -69,6 +69,21 @@
             </objects>
             <point key="canvasLocation" x="-600" y="297.32142857142856"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="kQ7-2m-4Ma">
+            <objects>
+                <viewController id="Q8k-ll-Rse" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sFR-D4-zYH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="WuQ-h3-Fri"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXI-93-iNH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116" y="297"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="hGA-pI-N5q">
             <objects>
