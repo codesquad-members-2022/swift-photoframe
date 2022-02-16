@@ -129,3 +129,30 @@ iOS 포토프레임 프로젝트 저장소
 <img src = "https://user-images.githubusercontent.com/44107696/154093189-d02d6af1-f9d6-4b5e-95e0-d0496cdcabe2.jpeg" width="960" height="540">
 <img src = "https://user-images.githubusercontent.com/44107696/154093194-a7b3b9fd-b65b-4d97-8d1b-1f61707d53ca.jpeg" width="960" height="540">
 <img src = "https://user-images.githubusercontent.com/44107696/154093196-b9cec488-71a8-4206-a555-767ef8f0af18.jpeg" width="960" height="540">
+
+
+## 06. Container ViewController 활용하기
+### 프로그래밍 요구사항
+- 스토리보드에서 First Scene을 선택하고, Editor > Embed In > Navigation Controller 항목을 선택한다.
+- 실행해보면 화면 상단에 내비게이션바(Navigation Bar)가 추가되고 [다음]버튼을 누르면 다음 화면이 우측에서 좌측으로 애니메이션되면서 표시된다.
+
+<img src = "https://user-images.githubusercontent.com/44107696/154216824-f5bc31bf-d17f-4eb8-9659-9234448185c4.png" width="800" height="700">
+    * rootView로 연결
+    
+- [닫기]버튼에 연결된 closeButtonTouched 코드를 다음과 같이 수정한다.
+- 위와 동일하게 세 번째 추가한 화면에 [닫기]버튼도 코드를 수정한다.
+
+<img src = "https://user-images.githubusercontent.com/44107696/154216836-73ed4ce5-d993-431d-a668-514a62b40c7d.png" width="800" height="700">
+    * 기존에 Segue로 연결한 요소를 유지하고 네비게이션 바 버튼을 새로 추가 후, 해당 버튼의 액션은 pushViewController를 호출하는 방식으로 구현
+    
+<img src = "https://user-images.githubusercontent.com/44107696/154216842-7db2c8fe-9985-415f-bbf3-24eb7ac0d2f4.png" width="800" height="700">
+    * 앞과 동일하게 push 구현과 함께 아래의 버튼 클릭시 popViewController를 호출하며 이전 뷰로 돌아갈 수 있도록 구현
+    
+<img src = "https://user-images.githubusercontent.com/44107696/154216847-d1ed3286-c9cc-461f-85d8-bbe362801d70.png" width="800" height="700">
+    * 기본적으로 Back 버튼이 구현되어 있으므로 상단의 버튼 클릭 시, 이전에 dismiss로 구현했던 rootView로 돌아가는 동작을 popToRootViewController를 호출하는 방식으로 재구현
+    * push / pop과 segue를 통한 화면 전환 정상 작동 확인
+
+- 뷰 컨트롤러 콜백 함수들 동작도 동일한지 확인한다.
+<img src = "https://user-images.githubusercontent.com/44107696/154220313-1d469a4f-5a84-45d1-88d8-965fb60472a5.jpeg" width="960" height="540">
+<img src = "https://user-images.githubusercontent.com/44107696/154220331-bd38b47a-2fa0-4d08-8dba-9c7d2a9c77dd.jpeg" width="960" height="540">
+<img src = "https://user-images.githubusercontent.com/44107696/154220334-f1eedad6-d667-4843-85e3-d353d37416d0.jpeg" width="960" height="540">
