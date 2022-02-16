@@ -21,6 +21,7 @@
 		E0DDB60E27BA88D200F23B6B /* GrayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DDB60D27BA88D200F23B6B /* GrayViewController.swift */; };
 		E0DDB61027BA88E400F23B6B /* BrownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DDB60F27BA88E400F23B6B /* BrownViewController.swift */; };
 		E0DDB61D27BC7AC200F23B6B /* CodableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DDB61C27BC7AC200F23B6B /* CodableViewController.swift */; };
+		E0DDB63127BCAA8900F23B6B /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DDB63027BCAA8900F23B6B /* UIView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		E0DDB60D27BA88D200F23B6B /* GrayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrayViewController.swift; sourceTree = "<group>"; };
 		E0DDB60F27BA88E400F23B6B /* BrownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrownViewController.swift; sourceTree = "<group>"; };
 		E0DDB61C27BC7AC200F23B6B /* CodableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableViewController.swift; sourceTree = "<group>"; };
+		E0DDB63027BCAA8900F23B6B /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 		E0DDB5F727B9E88800F23B6B /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				E0DDB62F27BCAA7B00F23B6B /* Extension */,
 				E0DDB5FA27B9E8EA00F23B6B /* Presentation */,
 				E0DDB5C727B9E84900F23B6B /* AppDelegate.swift */,
 				E0DDB5C927B9E84900F23B6B /* SceneDelegate.swift */,
@@ -220,6 +223,14 @@
 				E0DDB61C27BC7AC200F23B6B /* CodableViewController.swift */,
 			);
 			path = CodableView;
+			sourceTree = "<group>";
+		};
+		E0DDB62F27BCAA7B00F23B6B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				E0DDB63027BCAA8900F23B6B /* UIView+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -356,6 +367,7 @@
 				E0DDB61027BA88E400F23B6B /* BrownViewController.swift in Sources */,
 				E0DDB61D27BC7AC200F23B6B /* CodableViewController.swift in Sources */,
 				E0DDB5FC27B9EB6F00F23B6B /* TabBarController.swift in Sources */,
+				E0DDB63127BCAA8900F23B6B /* UIView+Extension.swift in Sources */,
 				E0DDB5C827B9E84900F23B6B /* AppDelegate.swift in Sources */,
 				E0DDB5CA27B9E84900F23B6B /* SceneDelegate.swift in Sources */,
 				E0DDB60A27B9F41A00F23B6B /* PhotoFrameViewController.swift in Sources */,
