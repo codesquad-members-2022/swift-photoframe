@@ -23,27 +23,27 @@ class YellowViewController: UIViewController{
         super.viewDidLoad()
         self.backGround(color: .yellow)
         self.closeButtonText(button: closeButton)
-        print("\(self.classForKeyedArchiver!) viewDidLoad")
+        print("YellowViewController viewDidLoad")
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print("\(self.classForKeyedArchiver!) viewWillAppear")
+        print("YellowViewController viewWillAppear")
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        print("\(self.classForKeyedArchiver!) viewDidAppear")
+        print("YellowViewController viewDidAppear")
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        print("\(self.classForKeyedArchiver!) viewWillDisAppear")
+        print("YellowViewController viewWillDisAppear")
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        print("\(self.classForKeyedArchiver!) viewDidDisAppear")
+        print("YellowViewController viewDidDisAppear")
     }
     
     @IBAction func openButtonTouched(_ sender: Any) {
