@@ -73,6 +73,7 @@
                     <tabBarItem key="tabBarItem" title="Item 1" id="pwx-kp-Ni1"/>
                     <connections>
                         <outlet property="firstDescriptionLabel" destination="Lvo-q9-LW3" id="u15-Zp-Ln0"/>
+                        <outlet property="nextButton" destination="abd-kZ-4Nz" id="2Cx-1a-5oO"/>
                         <outlet property="photoLabel" destination="MdL-6E-rOa" id="Z9W-Ga-b27"/>
                     </connections>
                 </viewController>
