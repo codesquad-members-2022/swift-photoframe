@@ -1,5 +1,5 @@
 //
-//  DesignableUILabel.swift
+//  DeginableLabel.swift
 //  PhotoFrame
 //
 //  Created by 송태환 on 2022/02/16.
@@ -8,7 +8,7 @@
 import UIKit
 
 @IBDesignable
-class DesignableUILabel: UILabel {
+class DesignableLabel: UILabel {
     @IBInspectable var paddingTop: CGFloat = 0
     @IBInspectable var paddingBottom: CGFloat = 0
     @IBInspectable var paddingLeft: CGFloat = 0
