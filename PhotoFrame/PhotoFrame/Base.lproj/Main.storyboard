@@ -51,6 +51,7 @@
                                     <action selector="nextButtonTouchedDown:" destination="DvB-Gi-ecE" eventType="touchDown" id="0Uy-AX-bVu"/>
                                     <action selector="nextButtonTouchedUpInside:" destination="DvB-Gi-ecE" eventType="touchUpInside" id="jVQ-6O-TQM"/>
                                     <action selector="nextButtonTouchedUpOutside:" destination="DvB-Gi-ecE" eventType="touchUpOutside" id="Gfn-UI-h7Z"/>
+                                    <segue destination="ZPo-c5-w6j" kind="show" id="WEd-cY-oJC"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FO6-Xr-BFB">
@@ -115,16 +116,65 @@
             </objects>
             <point key="canvasLocation" x="-2136" y="-1316"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="Id6-gq-3dU">
+            <objects>
+                <viewController id="ZPo-c5-w6j" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wrS-Hg-RDc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DHj-15-Ayh">
+                                <rect key="frame" x="106" y="328" width="182" height="92"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="다음"/>
+                                <connections>
+                                    <segue destination="fve-yE-h0D" kind="presentation" id="npY-hR-okB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="tG5-8n-iIh"/>
+                        <color key="backgroundColor" systemColor="systemGray4Color"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="7h6-Gf-MuT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fCe-Cr-bkk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-168.11594202898553" y="-1613.1696428571429"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ios-kl-Wqn">
+            <objects>
+                <viewController id="fve-yE-h0D" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lb0-JQ-Bps">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="NBx-du-QN7"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ILO-nt-utM"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jpo-GJ-Ln9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="730" y="-1613"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="systemGray3Color">
             <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemTealColor">
             <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
