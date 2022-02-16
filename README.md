@@ -8,14 +8,14 @@ iOS 포토프레임 프로젝트 저장소
 - [x] 프로젝트 생성 및 TabBarController 추가
 - [x] IBOutlet 연결하기
 - [x] IBAction 연결하기
-- [ ] Scene을 Segue로 연결하기
-- [ ] ViewController 연결하기
+- [x] Scene을 Segue로 연결하기
+- [x] ViewController 연결하기
 - [ ] Container ViewController 활용하기
 - [ ] 다른 화면 연결하기
 - [ ] 사진 앨범 선택하기
 - [ ] 마무리
 
-​    
+    
 
 ## 작업 내용 정리
 
@@ -25,7 +25,7 @@ iOS 포토프레임 프로젝트 저장소
 - 이후 첫번째 Scene에 ViewController 클래스 연결(CustomClass)
 - 시뮬레이터 실행 후 콘솔 출력 결과 확인
 
-<img src="https://user-images.githubusercontent.com/68586291/153905653-4ec934d9-49f4-4548-85d7-d610341f6036.png" alt="image" style="zoom:80%"/>
+<img src="https://user-images.githubusercontent.com/68586291/153905653-4ec934d9-49f4-4548-85d7-d610341f6036.png" alt="image" style="width:50%"/>
 
 ![image](https://user-images.githubusercontent.com/68586291/153906104-97dd8f5a-1c1d-4498-949f-e149aec20e22.png)
 
@@ -52,7 +52,7 @@ firstLabel.attributedText = attributedText
 
 - 시뮬레이터로 결과 확인
 
-<img style="zoom:30%;align:center" alt="image" src="https://user-images.githubusercontent.com/68586291/153997054-75db2d6d-8ae9-4330-ab40-063a9e7a2b53.png">
+<img style="width:30%;align:center" alt="image" src="https://user-images.githubusercontent.com/68586291/153997054-75db2d6d-8ae9-4330-ab40-063a9e7a2b53.png">
 
 #### 2-1. NSMutableAttributedString과 일반 Text를 사용했을 때의 차이
 
@@ -67,7 +67,7 @@ firstLabel.font = UIFont.systemFont(ofSize: 40) //사이즈 40으로 지정
 firstLabel.text = "Jed의 사진 액자" //텍스트 내용 동일하게 지정
 ```
 
-<img src="https://user-images.githubusercontent.com/68586291/154012741-998a70c1-65b4-4bc9-a1d3-4c10f1be2cee.png" alt="image" style="zoom:50%; align:center"/><img src="https://user-images.githubusercontent.com/68586291/154013295-f2351332-73c7-4949-8e12-41dc5e2e9544.png" alt="image" style="zoom:50%; align:center"/>
+<img src="https://user-images.githubusercontent.com/68586291/154012741-998a70c1-65b4-4bc9-a1d3-4c10f1be2cee.png" alt="image" style="width:30%; align:center"/><img src="https://user-images.githubusercontent.com/68586291/154013295-f2351332-73c7-4949-8e12-41dc5e2e9544.png" alt="image" style="width:30%; align:center"/>
 
 - 같은 결과가 나올 줄 알았는데, 배경색이 적용되는 범위가 NSMutableAttributedString을 적용했을 때와 달랐다.
 - 두 가지 방식을 배경색만 달리해서 혼합한 후 다시 시뮬레이터를 확인해보니, 두 가지 방식을 적용했을 때 두 배경색이 서로 겹치며, 적용되는 범위가 각기 다름을 확인할 수 있었다.
@@ -99,7 +99,7 @@ An NSAttributedString object manages character strings and associated sets of at
 
 ### 3. IBAction 연결하기
 
-<img src="https://user-images.githubusercontent.com/68586291/154094785-70b76066-a0ee-49ac-b1c4-94022c47b0d6.gif" alt="image" style="align:center;"/>
+<img src="https://user-images.githubusercontent.com/68586291/154094785-70b76066-a0ee-49ac-b1c4-94022c47b0d6.gif" alt="image" style="align:center; width:80%;"/>
 
 - 첫번째 Scene에 UIButton을 하나 추가한 후, nextButton이라는 이름으로 IBOutlet으로 연결
 
@@ -156,7 +156,7 @@ An NSAttributedString object manages character strings and associated sets of at
 
 - 스토리보드에서 버튼을 생성한 후 segue를 통해 ViewController과 연결
 
-<img src="https://user-images.githubusercontent.com/68586291/154201308-1d05f793-001b-4bf9-973f-a2162960ed9e.gif" alt="image" style="align:center;zoom:80%;"/>
+<img src="https://user-images.githubusercontent.com/68586291/154201308-1d05f793-001b-4bf9-973f-a2162960ed9e.gif" alt="image" style="align:center;width:30%;"/>
 
 - segue는 어플리케이션 내 각 화면 인터페이스 간의 흐름을 정의하는 역할을 하며, 이번 단계에서는 스토리보드 내에 있는 두 개의 view controller 간의 전환을 결정하는 것을 확인할 수 있었음
 - segue의 개념이 처음에는 생소해서, 단순히 이전 view controller을 버튼과 연결하면 이전으로 돌아가는 줄 알았지만 실제로 확인해보니 새로운 view controller가 위에 다시 쌓이는 식으로 진행되고 있었음
@@ -166,4 +166,78 @@ An NSAttributedString object manages character strings and associated sets of at
 ​    
 
 ### 5. ViewController 연결하기
+
+> 진행하기 전에 전반적인 버튼, 라벨 디자인을 좀 더 보기좋게 변경하고 진행했음
+
+<img src="https://user-images.githubusercontent.com/68586291/154320046-0d6b0feb-25a1-4a0e-adbd-f3d465adff1d.gif" alt="image" style="width: 30%; align: center;"/>    
+
+​    
+
+#### 5-1. Segue 없이 다음 화면으로 연결하기
+
+- 각각의 스토리보드에 있는 Scene에 대해, GrayViewController와 YellowViewController 클래스를 만들어 서로 연결
+- 기존에는 InitialView에서 다음 버튼을 누르면 스토리보드에서 생성한 Segue를 통해 GrayViewController로 연결되는 구조였지만, 이번 단계에서는 Segue를 지우고 코드로 화면을 전환하도록 변경했음
+
+```swift
+guard let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "GrayViewController")else{
+  print("No NextViewController Found")
+  return
+}
+nextViewController.modalPresentationStyle = .fullScreen
+nextViewController.modalTransitionStyle = .coverVertical
+self.present(nextViewController, animated: true, completion: nil
+```
+
+- UIViewController의 storyboard라는 프로퍼티가 가진 instantiateViewController 함수가 리턴하는 UIViewController을 스토리보드에서 생성했던 GrayViewController로 지정했음
+  - 단, 스토리보드에서 해당 Scene의 스토리보드 아이디를 withIdentifier 인자로 입력한 GrayViewController로 명시해야 함
+- 리턴한 UIViewController을 nextViewController이라는 변수에 담아준 후, modalPresentationStytle과 modalTransitionStyle 값을 각각 원하는 방식으로 변경했음
+  - fullscreen : 다음 화면(모달)이 띄워질 때 전체 화면을 덮도록 함
+  - coverVerticial : 화면 전환 애니메이션이 수직방향으로 일어나도록 함
+- 이후 present를 호출하면 화면이 전환되는 액션이 발생하는 것을 확인할 수 있음
+
+​    
+
+#### 5-2. Unwind Segue를 통해 화면 닫기
+
+- 4단계에서 보류했던 Unwind Segue를 사용해보았음
+- YellowViewController에서 이전의 GrayViewController로 되돌아가는 상황을 가정했음
+- Unwind Segue의 경우 우선 되돌아갈 대상이 되는 뷰컨트롤러에 UIStoryboardSegue를 인자로 받는 IBAction 함수를 아래와 같이 작성해야 함
+
+```swift
+@IBAction func unwind(_ segue: UIStoryboardSegue){
+  print(#function)
+}
+```
+
+- 이후 스토리보드에서 닫기 버튼을 Scene의 Exit과 연결하면 Unwind Segue 방식으로 해당 화면을 닫고 연결된 이전 화면으로 돌아갈 수 있음
+
+​    
+
+#### 5-3 뷰컨트롤러의 생명주기
+
+<img src="https://t1.daumcdn.net/cfile/tistory/2613D13C58C64DE32C" alt="img" style="width:50%; align:center;"/>
+
+- 아래와 같은 함수를 각각 오버라이딩 한 후, 함수가 호출되는 순서를 확인했음
+
+```swift
+override func viewWillAppear(_ animated: Bool) {
+  print(#file, #line, #function, #column)
+}
+
+override func viewDidAppear(_ animated: Bool) {
+  print(#file, #line, #function, #column)
+}
+
+override func viewWillDisappear(_ animated: Bool) {
+  print(#file, #line, #function, #column)
+}
+
+override func viewDidDisappear(_ animated: Bool) {
+  print(#file, #line, #function, #column)
+}
+```
+
+- 그림과 마찬가지로 화면이 처음 로드되면 viewDidLoad -> viewWillAppear -> viewDidAppear 순서로 함수가 호출되고, 화면이 닫힐 때는 viewWillDisappear -> viewDidDisappear 순서로 화면이 닫히는 것을 확인할 수 있었음
+
+​    
 
