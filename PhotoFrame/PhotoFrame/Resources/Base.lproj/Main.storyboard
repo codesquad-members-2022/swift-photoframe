@@ -22,6 +22,7 @@
                         <segue destination="FWp-tf-qyD" kind="relationship" relationship="viewControllers" id="Mne-BZ-d6Q"/>
                         <segue destination="Wgj-To-yeh" kind="relationship" relationship="viewControllers" id="lj1-yk-UXw"/>
                         <segue destination="ieV-y4-Sdl" kind="relationship" relationship="viewControllers" id="bcY-hM-DUi"/>
+                        <segue destination="EaS-mU-4Lw" kind="relationship" relationship="viewControllers" id="eXF-vh-yWW"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="89T-ej-qlc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -206,6 +207,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A7M-jr-NJq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="929" y="1450"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="tvA-l8-chP">
+            <objects>
+                <viewController id="EaS-mU-4Lw" customClass="StudyViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fyG-UB-xBJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="faD-gJ-aia">
+                                <rect key="frame" x="155" y="434" width="129" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="37"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="r0J-Iw-5SH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="6jH-t7-HMX"/>
+                    <connections>
+                        <outlet property="testButton" destination="faD-gJ-aia" id="I1i-wE-ml9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wwa-5d-l1d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="929" y="2210"/>
         </scene>
     </scenes>
     <resources>
