@@ -16,6 +16,5 @@ class ViewController2: UIViewController {
         print(#file, #line, #function, #column)
     }
 
-
 }
 

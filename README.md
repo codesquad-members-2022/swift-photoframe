@@ -223,6 +223,8 @@ NavigationController, splitView를 사용하지 않기에 presentModally를 사�
     * 해결 : extension에 함수를 추가하여 중복코드를 해결하였습니다.
         * 문제 : 만약 추가설정요소가 하나라도 추가될 경우, 함수의 인자값을 수정해줘야 할 것 같아 이부분에 대해 조금 더 고민해봐야 할 것 같습니다.
 
+    * 모든 UIViewController가 해당 함수를 채택하지 않기에 다른 방법을 생각해보았습니다.
+        * extension UIViewController대신 protocol을 사용해보았습니다.
 
 ### 코드 스타일
 
@@ -245,6 +247,8 @@ NavigationController, splitView를 사용하지 않기에 presentModally를 사�
 
 문서 : It’s rare that you need to write type annotations in practice. If you provide an initial value for a constant or variable at the point that it’s defined, Swift can almost always infer the type to be used for that constant or variable, as described in Type Safety and Type Inference. In the welcomeMessage example above, no initial value is provided, and so the type of the welcomeMessage variable is specified with a type annotation rather than being inferred from an initial value.
     (학습목적이 아닌 이상 Type Annotation을 사용하는경우가 드물다. type safety, type inference가 보장된다면 타입추론을 사용해라)
+
+링크 : https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html
 
 
 ----

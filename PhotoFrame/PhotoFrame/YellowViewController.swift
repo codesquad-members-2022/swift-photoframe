@@ -21,8 +21,9 @@ class YellowViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.backGround(color: .yellow)
+        self.closeButtonText(button: closeButton)
         print("\(self.classForKeyedArchiver!) viewDidLoad")
-        setViewSetting(color: .yellow, btn: self.closeButton)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -58,9 +59,13 @@ class YellowViewController: UIViewController{
     
 }
 
-extension UIViewController{
-    func setViewSetting(color: UIColor,btn: UIButton){
-        view.backgroundColor = color
-        btn.setTitle("close", for: .normal)
+extension YellowViewController: ColorViewControllerProtocol{
+    func closeButtonText(button: UIButton) {
+        button.setTitle("close", for: .normal)
     }
+    
+    func backGround(color: UIColor) {
+        view.backgroundColor = color
+    }
+    
 }

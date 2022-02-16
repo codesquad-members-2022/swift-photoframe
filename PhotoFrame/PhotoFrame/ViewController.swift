@@ -9,7 +9,6 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    
     @IBOutlet weak var firstLabel: UILabel!
     @IBOutlet weak var firstDescription: UILabel!
     //lazy var yellowVC = YellowViewController() -> 스토리보드에서 ViewController를 찾아오지 않을 시 GreenViewController에 View 생성이 안됨.
