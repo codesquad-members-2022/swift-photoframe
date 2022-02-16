@@ -35,6 +35,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="First" id="Yti-i3-72A"/>
+                    <connections>
+                        <outlet property="photoDescription" destination="a4a-T0-9Yw" id="135-6B-YbY"/>
+                        <outlet property="photoLabel" destination="dQk-wz-7CP" id="XUi-y5-dG8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fzq-KC-FOV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
