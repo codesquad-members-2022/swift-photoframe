@@ -16,6 +16,7 @@ class FirstViewController: UIViewController {
         super.viewDidLoad()
         self.photoLabel.text = "Alex's Photo Frame"
         self.photoLabel.font = UIFont(name: "SnellRoundhand", size: 36)
+        UIFont(
         self.photoLabel.textColor = self.photoLabel.textColor.withAlphaComponent(0.8)
     }
     

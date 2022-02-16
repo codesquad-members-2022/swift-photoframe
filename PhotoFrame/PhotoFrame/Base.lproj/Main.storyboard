@@ -100,7 +100,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="qXO-WI-RAW"/>
                     <connections>
-                        <outlet property="photoDescription" destination="xaK-1S-cG1" id="ftn-wf-aiq"/>
+                        <outlet property="photoDescription" destination="xaK-1S-cG1" id="LDw-bn-xO4"/>
                         <outlet property="photoLabel" destination="Gci-I5-6FZ" id="K1v-i0-cHH"/>
                     </connections>
                 </viewController>
