@@ -205,6 +205,18 @@ NavigationController, splitView를 사용하지 않기에 presentModally를 사�
     1. 버튼 터치 시 ViewController를 스토리보드에서 가져와 연결시킨 후, 화면전환으로 이를 보여줍니다.
     * 문제 : 버튼 터치 때 마다 계속 viewcontroller 변수를 설정해주는걸 해결하려 했습니다.
     * 해결 : View 생명주기를 활용하여 loadView( 뷰가 시작되자마자 ) 한번 설정을 해준 후, 활용 시 마다 변수설정 없이 이를 재활용 하였습니다.
+    ----
+    수정 : guard let을 활용하여 yellowViewController가 nil이라면 이를 생성하여 전역변수 if let으로 YellowViewController를 가져옵니다(storyboard?).
+    실행결과 : 가장 처음 실행될 때 yellowViewController를 메모리에 올려주고 그 이후 화면전환 시 이를 재활용합니다.
+            하지만 이럴 필요 없이 변수 선언 시 lazy var yellowVC = YellowViewController()와 같은 형식으로 설정해주면 됩니다.
+    
+    * lazy : 처음 사용되기 전까지는 연산이 되지 않습니다.
+    
+    * guard let VS if let 
+    
+    - guard let : 영역 밖에서도 값을 사용할 수 있습니다.
+    - if let : if let 영역 안에서만 사용이 가능합니다.
+    
 - 중복되는 코드 줄이기.
     1. GreenVC와 YellowVC의 UI설정과 중복되는 기능이 있었습니다.
     * 문제 : 이를 함수를 통하여 코드를 간결하게 할 수 있을 것 같았습니다.

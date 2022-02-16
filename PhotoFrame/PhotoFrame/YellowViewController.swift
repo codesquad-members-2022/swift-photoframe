@@ -11,12 +11,11 @@ import UIKit
 class YellowViewController: UIViewController{
     
     @IBOutlet weak var closeBtn: UIButton!
-    private var greenVC: UIViewController?
+    private lazy var greenVC = storyboard?.instantiateViewController(withIdentifier: "GreenVC")
     
     override func loadView() {
         super.loadView()
         print("\(self.classForKeyedArchiver!) loadView")
-        
     }
     
     override func viewDidLoad() {
@@ -46,15 +45,9 @@ class YellowViewController: UIViewController{
     }
     
     @IBAction func openButtonTouched(_ sender: Any) {
-        guard let greenVC = self.greenVC else {
-            if let vc = self.storyboard?.instantiateViewController(withIdentifier: "GreenVC") else{
-                
-            }
-            self.greenVC = vc
-            self.present(vc, animated: true, completion: nil)
+        guard let greenVC = greenVC else {
             return
         }
-
         self.present(greenVC, animated: true, completion: nil)
     }
     

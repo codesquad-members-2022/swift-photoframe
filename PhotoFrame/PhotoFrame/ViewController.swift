@@ -39,9 +39,16 @@ class ViewController: UIViewController {
         self.firstLabel.textColor = UIColor.blue
         self.firstLabel.backgroundColor = UIColor.yellow
         self.firstLabel.alpha = 0.5
-        guard let yellowVC = self.yellowVC else {
+        guard let yellowVC = yellowVC else {
+            if let vc = self.storyboard?.instantiateViewController(withIdentifier: "yellowVC"){
+                self.yellowVC = vc
+                print("yellowVC was nil")
+                present(vc, animated: true, completion: nil)
+            }
             return
         }
+        
+        
         self.present(yellowVC, animated: true, completion: nil)
     }
 }
