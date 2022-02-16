@@ -6,7 +6,9 @@ class GrayViewController: UIViewController {
     @IBOutlet weak var exitButton: UIButton!
     
     @IBAction func exitButtonTouched(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true, completion: {
+            print("exit button touched")
+        })
     }
     
     override func viewDidLoad() {
