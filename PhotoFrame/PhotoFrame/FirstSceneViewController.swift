@@ -9,7 +9,6 @@ import UIKit
 
 class FirstSceneViewController: UIViewController {
 
-<<<<<<< HEAD
     @IBOutlet weak var firstLabel: UILabel!
     @IBOutlet weak var firstDescription: UILabel!
     
@@ -26,30 +25,19 @@ class FirstSceneViewController: UIViewController {
         
         label.textColor = .systemBrown
         label.backgroundColor = .systemMint
-        label.layer.opacity = 0.5
+        label.alpha = 0.5
         
         let editFontSize: UIFont = {
             label.font.withSize(label.font.pointSize + 7)
         }()
         
         label.font = editFontSize
-=======
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        print(#file, #line, #function, #column)
-        // Do any additional setup after loading the view.
->>>>>>> fc53ee0 (Convert InitialViewController as UITabBarController)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func nextButtonTouched(_ sender: Any) {
+        
+        firstLabel.textColor = UIColor.blue
+        firstLabel.backgroundColor = UIColor.yellow
+        firstLabel.alpha = 0.5
     }
-    */
-
 }
