@@ -147,17 +147,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kcM-tn-44O">
-                                <rect key="frame" x="158" y="405.5" width="98" height="31"/>
+                                <rect key="frame" x="158" y="406" width="98" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Dismiss ❌"/>
                                 <connections>
                                     <action selector="closeButtonTouched:" destination="drC-Aa-I9w" eventType="touchUpInside" id="Z4j-VU-npX"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3fg-dQ-Tfi">
-                                <rect key="frame" x="145.5" y="366.5" width="123" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Dismiss (Code)"/>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="P9N-8S-EG8"/>
@@ -165,8 +160,6 @@
                         <constraints>
                             <constraint firstItem="kcM-tn-44O" firstAttribute="centerY" secondItem="g29-VI-3d8" secondAttribute="centerY" id="3Kg-Mm-re5"/>
                             <constraint firstItem="kcM-tn-44O" firstAttribute="centerX" secondItem="g29-VI-3d8" secondAttribute="centerX" id="9tB-AX-Hj3"/>
-                            <constraint firstItem="3fg-dQ-Tfi" firstAttribute="centerX" secondItem="g29-VI-3d8" secondAttribute="centerX" id="PIx-Nn-XOo"/>
-                            <constraint firstItem="kcM-tn-44O" firstAttribute="top" secondItem="3fg-dQ-Tfi" secondAttribute="bottom" constant="8" id="mcS-zc-g75"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="M7G-u9-zqW"/>
