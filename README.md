@@ -94,3 +94,15 @@ class ViewController1 : UIViewController {
 }
 
 ```
+# Wednesday Session
+> 화요일 세션이 날라가서 수요일부분 부터 작성합니다.
+
+## Merged 된 PR이 로컬에 적용되기 전에 작업한 브랜치를 어떻게 정리할까?
+
+![브랜치병합](https://user-images.githubusercontent.com/50472122/154191810-ebf66d4f-c9cb-4719-99ed-3d5258801ba2.png)
+
+![현재_커밋_로그](https://user-images.githubusercontent.com/50472122/154200244-d74a55a0-b3b9-4b6c-9777-8dfcf711dd7b.png)
+
+* 일단은 문제가 없이 진행은 되는데 앞으로의 작업에 있어서 더 조심스러워질거같다.
+* Human-Insight에 맞춰 다음번 오류가 나면 다시 고민해보자.
+
