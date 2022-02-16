@@ -33,8 +33,4 @@ class GrayViewController: UIViewController {
         super.viewDidDisappear(animated)
         print(#file, #function, "뷰가 닫혔습니다!")
     }
-
-    @IBAction func closeButtonTouched(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
-    }
 }
