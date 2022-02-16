@@ -13,10 +13,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.photoLabel.text = "First View"
-        self.photoLabel.textColor = .systemBackground
-        self.photoLabel.backgroundColor = .systemGray
-        self.photoLabel.alpha = 0.5
-        self.photoLabel.font = .systemFont(ofSize: 70)
+        self.photoLabel.font = .systemFont(ofSize: 25)
+        
+        let fontSize = UIFont.boldSystemFont(ofSize: 35)
+        let attributedString = NSMutableAttributedString(string: photoLabel.text!)
+        attributedString.addAttribute(.font, value: fontSize, range: (photoLabel.text! as NSString).range(of: "First"))
+        attributedString.addAttribute(.foregroundColor, value: UIColor.systemBlue, range: (photoLabel.text! as NSString).range(of: "First"))
+        photoLabel.attributedText = attributedString
         print(#file, #line, #function, #column)
     }
     
