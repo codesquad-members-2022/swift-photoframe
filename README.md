@@ -27,7 +27,7 @@ UITabBarController 추가를 위해 TabBar 등을 입력한다. 개인적으로�
 <img alt="Storyboard_UITabBarController_noChildViewController" height="300" src="PhotoFrame/README_images/Storyboard_UITabBarController_noChildViewController.png" width="500"/>   
 실습을 위해 미리 주어진 두 개의 뷰컨트롤러를 모두 삭제한다. 하지만, TabBarController는 남았으므로 UIViewController를 스토리보드에 추가한 뒤 새로 연결하도록 한다.   
 <img alt="Library_Search_UIViewController" height="200" src="PhotoFrame/README_images/Library_Search_UIViewController.png" width="300"/>   
-아까 UITabBarController때처럼 Library를 열어 UIViewController를 검색한다. 같은 방법으로 두 개의 UIViewController를 추가한다.
+아까 UITabBarController때처럼 Library를 열어 UIViewController를 검색한다. 같은 방법으로 두 개의 UIViewController를 추가한다.   
 <img alt="Storyboard_Drag" height="300" src="PhotoFrame/README_images/Storyboard_Drag.png" width="500"/>   
 UITabBarController의 맨 위 검은 바 부분의 첫번째 버튼에서 `Control`+Drag 를 이용하여 두 개의 UIViewController를 연결한다. UITabBarController의 하위 관계이므로, `view controllers`를 선택해준다.   
 <img alt="New_File_Cocoa_Touch_Class_3" height="300" src="PhotoFrame/README_images/New_File_Cocoa_Touch_Class_1.png" width="500"/>
@@ -120,7 +120,7 @@ UITabBar를 따로 생성하는 방법은 Interface Builder 를 이용하거나
 
 ### GitHub Push Error Alert AGAIN!
 
-PR이 git merge가 되었다는 소식을 듣고는 main branch로 이동 후 fetch 다음 rebase 하더니 계속 Conflict가 발생하였다.
+PR이 git merge가 되었다는 소식을 듣고는 main branch로 이동 후 fetch 다음 rebase 하더니 계속 Conflict가 발생하였다.   
 <img alt="Step2_Git_Rebase_Proceeding" height="350" src="PhotoFrame/README_images/Step2_Git_Rebase_Proceeding.png" width="450"/>
 <img alt="Step2_Git_Rebase_Complete" height="200" src="PhotoFrame/README_images/Step2_Git_Rebase_Complete.png" width="300"/>   
 커밋을 되돌리는 git restore 명령어를 이용하여 충돌을 계속 해결하며 rebase를 실행시켜 나갔지만 이후에 많은 파일에서 이런 종류의 내용들이 추가되기 시작했다.
@@ -140,6 +140,29 @@ The project ‘project’ is damaged and cannot be opened due to a parse error. 
 구글링을 해보니 `xcodeproj` 파일 안에 `pbxproj` 파일을 열어보면 위의 'HEAD' 같은 중복되는 내용들이 발견되면 수정해주라는 내용이었다.   
 
 **문제가 되는 파일을 미리 복사해두고 불필요한 부분을 지우니 프로젝트 파일을 열 수 있었다.**
+
+---
+
+### UILabel Complement Study
+
+현업에 들어가게 될 경우 가장 많이 사용하게 될 UILabel에서 특이한 뷰를 만들 때 사용할 두 개의 주제에 대해 실습 없이 내용만을 업데이트 해 보도록 한다.
+
+### Attributed Strings
+
+NSAttributedString 객체를 attributedText 에 반영하는 식으로 적용하도록 한다. attributedText, text 프로퍼티 상관없이 최종적인 내용은 가장 최신 반영내용을 그대로 보여주게 된다.
+
+UILabel의 attributedText 프로퍼티는 각 문자(혹은 다수의 문자)의 형태를 결정하기 위한 프로퍼티이다. NSAttributedString API를 사용하여 적용을 하게 되며, 문자열의 font/color/alignment를 설정하게 된다.   
+attributedText에 설정값만 바꾸게 되면 라벨은 설정값을 오버라이드하여 적당한 설정으로 바꾸게 된다. 예를 들어 color를 변경하였을 때 모든 글자의 색은 바뀌지만, 굵은 글씨 형태나 이탤릭체 형태 등은 바뀌지 않는 것이다.
+
+만약 UILabel 컨텐츠의 형태가 일정하다면 NSString 객체를 text 프로퍼티에 적용하는 것도 좋다. NSString에는 font/color/alignment/lineBreakMode 프로퍼티 등이 설정되어 있다.
+
+Interface Builder에서 많이 사용하게 될 속성은 글자 크기에 관한 부분이다. adjustsFontSizeToFitWidth, minimumScaleFactor 등 각 속성에 대한 부분은 다음 기회에 추가로 설명할 수 있도록 하겠다.
+
+### textRect(forBounds:limitedToNumberOfLines:)
+
+이 메소드는 라벨의 컨텐츠가 나타날 영역을 표시할 때 사용하는 메소드이다. textRect(forBounds:limitedToNumberOfLines:)를 오버라이드하면 numberOfLines를 보고 컨텐츠가 보일 양을 조절할 수 있는 등 유용하게 사용할 수 있다.
+
+호출을 위해서는 sizeToFit()/sizeThatFits() 가 선행 호출되어야 함을 주의한다. 
 
 ---
 
