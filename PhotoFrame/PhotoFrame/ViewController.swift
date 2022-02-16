@@ -48,6 +48,28 @@ class ViewController: UIViewController {
         
     }
 
+    @IBAction func nextButtonTouched(_ sender: Any) {
+        
+        print("touchUpInside event")
+        self.photoLabel.textColor = .black
+        self.photoLabel.backgroundColor = .purple
+        self.photoLabel.alpha = 0.8
+    }
+    
+    @IBAction func nextButtonTouchUpOutside(_ sender: Any) {
+        print("touchUpOutSide event")
+        photoLabel.textColor = .blue
+        photoLabel.backgroundColor = .yellow
+        photoLabel.alpha = 0.5
+    }
+    
+    @IBAction func nextButtonTouchDown(_ sender: Any) {
+        print("touchDown event")
+    }
+    
+    
+    
+    
     /*
     // MARK: - Navigation
 
