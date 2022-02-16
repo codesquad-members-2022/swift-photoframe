@@ -52,9 +52,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="다음"/>
                                 <connections>
-                                    <action selector="NextButtonDragOut:" destination="OBV-ub-mVL" eventType="touchDragOutside" id="OVp-rM-sOm"/>
                                     <action selector="NextButtonTouched1:" destination="OBV-ub-mVL" eventType="touchUpInside" id="1Eq-da-lae"/>
-                                    <action selector="NextButtonTouched2:" destination="OBV-ub-mVL" eventType="touchUpInside" id="DR2-Ta-YtJ"/>
                                 </connections>
                             </button>
                         </subviews>
