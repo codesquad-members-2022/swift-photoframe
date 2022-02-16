@@ -14,7 +14,9 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var nextButton: UIButton!
     @IBAction func nextButtonTouched(_ sender: Any) {
-        
+        photoLabel.textColor = .systemPink
+        photoLabel.backgroundColor = .systemBlue
+        photoLabel.alpha = 0.6
     }
     
     override func viewDidLoad() {
