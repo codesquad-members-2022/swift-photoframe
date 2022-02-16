@@ -15,11 +15,18 @@ iOS 포토프레임 프로젝트 저장소
 ### 결과 정리
 - 시뮬레이터 환경: iPhone SE(2nd generation)
 
-
-
 /Users/heotaeyang/Documents/codesquad-iOS/swift-photoframe/PhotoFrame/PhotoFrame/ViewController.swift
 16
 viewDidLoad()
 15
 출력
 
+
+## Step2
+### 요구사항 요약
+- First Scene에 만들어져 있는 레이블을 IBOutlet으로 연결
+- 연결한 아웃렛 변수에 값 변경
+### 결과 정리
+- 시뮬레이터 환경: iPhobe SE(2nd generation)
+
+<img width="358" alt="스크린샷 2022-02-16 오후 3 58 53" src="https://user-images.githubusercontent.com/42532724/154214782-b8bbf6e1-a9d9-4f6c-8ae7-c17c7e885ca6.png">
