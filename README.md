@@ -121,10 +121,10 @@ self.firstLabel.text = "Mase의 사진액자"
 <br>
 
 ### 완성 화면 
+|First Scene|||
+|:-:|:-:|:-:|
+|![First Image](https://user-images.githubusercontent.com/57667738/154211151-f8e91e4f-75c2-4d9a-84a2-a95795ee6200.png)|![](https://user-images.githubusercontent.com/57667738/154211198-23ec1673-8794-471c-9e50-06541eab2597.png)|![](https://user-images.githubusercontent.com/57667738/154211179-9dff602e-477d-4ea1-8de2-230f6e42c5d1.png)
 
-<img src="https://user-images.githubusercontent.com/57667738/154211151-f8e91e4f-75c2-4d9a-84a2-a95795ee6200.png" width="30%" />
-<img src="https://user-images.githubusercontent.com/57667738/154211198-23ec1673-8794-471c-9e50-06541eab2597.png" width="30%" />
-<img src="https://user-images.githubusercontent.com/57667738/154211179-9dff602e-477d-4ea1-8de2-230f6e42c5d1.png" width="30%" />
 
 <br>
 <br>
