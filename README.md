@@ -104,7 +104,7 @@ UITabBar를 따로 생성하는 방법은 Interface Builder 를 이용하거나
 - [x] Xcode 프로젝트 내비게이터에서 Main.storyboard 파일을 선택하고 First Scene 에 있는 'First View' 레이블(Label)을 선택하고 Assistant Editor 모드로 변경한다.
 - [x] 레이블을 선택하고 Control + 드래그해서 ViewController 코드에 IBOutlet으로 연결한다.
 - [x] UILabel의 속성을 이용하여 여러 작업을 수행한다.
-- [ ] UILabel에서 Lucas에 언급되지 않은 속성들에 대해서도 공식문서를 찾아본다.
+- [x] UILabel에서 Lucas에 언급되지 않은 속성들에 대해서도 공식문서를 찾아본다.
 
 ### 결과 화면
 ![Step2_Result](PhotoFrame/README_images/Step2_Result.png)
@@ -163,6 +163,25 @@ Interface Builder에서 많이 사용하게 될 속성은 글자 크기에 관�
 이 메소드는 라벨의 컨텐츠가 나타날 영역을 표시할 때 사용하는 메소드이다. textRect(forBounds:limitedToNumberOfLines:)를 오버라이드하면 numberOfLines를 보고 컨텐츠가 보일 양을 조절할 수 있는 등 유용하게 사용할 수 있다.
 
 호출을 위해서는 sizeToFit()/sizeThatFits() 가 선행 호출되어야 함을 주의한다. 
+
+---
+
+## Step3 : IBAction 실습
+
+- [x] Main.storyboard 파일에서 UIButton을 생성하고 커스텀 클래스에 IBAction으로 연결한다.
+- [x] UIButton의 Title을 수정하고 어떤 Attribute가 있는지 확인하였다.
+- [ ] IBAction과 IBOutlet에 대한 고찰을 해본다.
+
+### 결과 화면
+<img alt="Step3_Result_Before" height="300" src="PhotoFrame/README_images/Step3_Result_Before.png" width="150"/>
+<img alt="Step3_Result_After" height="300" src="PhotoFrame/README_images/Step3_Result_After.png" width="150"/>   
+
+### 이후 학습할 내용 및 소감 등
+
+* git fetch -> git rebase 중 계속 오류가 발생하고 있다. git을 계속 사용하면서 부족하다고 생각이 되는 부분을 정리하면서 새로운 부분을 배워가고 있는 중이다.   
+branch는 commit의 포인터 역할을 한다는 것이나, fetch 후 git diff를 이용하여 실제 어떤 일이 발생하고 있으며, Git에서 설명하는 HEAD, index 등의 의미도 정확히 파악하려 노력중이다.
+* IBAction, IBOutlet에 대해 공부하면서 Annotation에 대한 정리도 가능할 것이라도 기대되고 있다.   
+또한, 왜 IBOutlet은 weak로 만들어지는지도 알아보면 예전에 정리한 ARC와 비교하여 더 많은 공부가 될 것으로 기대하고 있다.
 
 ---
 
