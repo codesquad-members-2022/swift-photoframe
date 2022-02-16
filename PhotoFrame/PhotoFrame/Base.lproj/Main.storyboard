@@ -210,7 +210,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <segue destination="Sa7-Dx-ayG" kind="popoverPresentation" popoverAnchorView="wAr-av-6Ex" id="S9A-kL-SQ6">
-                                        <popoverArrowDirection key="popoverArrowDirection" left="YES"/>
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                     </segue>
                                 </connections>
                             </button>
