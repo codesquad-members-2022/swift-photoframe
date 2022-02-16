@@ -434,3 +434,220 @@
 		이렇게 설정한 Segue는 아래와 같이 동작합니다.
 
 		<img src="https://user-images.githubusercontent.com/92504186/154006319-9ac858db-b8a9-46a4-b611-72d6c90c772b.gif" alt="SS 2022-02-15 PM 03 36 16" width="30%;" />
+
+---
+
+---
+
+## 5. ViewController 연결하기
+
+### 📌체크 리스트
+
+- [x] 프로젝트에 새로운 ViewController 클래스를 추가
+- [x] 이전 Step에서 처음 생성했던 ViewController의 Custom Class > Class 항목에 이번에 생성한 생성한 ViewController 클래스를 지정
+- [x] [닫기] 버튼을 만들고 IBAction 액션(`closedButtonTouched(:)`)을 연결
+- [x] 이전 Step에서 두번째로 생성했던 ViewContoller에 지정할 새로운 ViewController 클래스를 생성
+- [x] 해당 ViewController에도 [닫기] 버튼 만들고 액션을 연결하여 화면을 닫는 동작 구현
+- [x] 뷰 라이프사이클과 관련된 콜백함수들 내에 `print(#file, #line, #function, #column)` 코드 추가
+
+---
+
+### 💻진행 과정
+
+1. UIViewController를 상속받는 `YellowViewController` 클래스를 생성하여 이전 Step에서 처음 생성했던 ViewController의 class로 지정했습니다.
+
+2. 해당 ViewController에 [닫기] 버튼을 생성하고 YellowViewController 클래스 내에 IBAction 액션 메서드와 연결했습니다.
+
+3. 해당 ViewController의 [닫기] 버튼을 연결시킨 액션 메서드 내에 아래의 코드를 추가하여, [닫기] 버튼이 눌러졌을 때 이전 ViewController로 화면 전환이 이루어지도록 했습니다.
+
+	```swift
+	self.dismiss(animated: ture, completion: nil)
+	```
+
+4. 그리고 이전 PR에서 JK의 질문을 통해 공부했던, Segue를 이용하지 않고 화면 전환을 하도록 코드를 수정했습니다. 이를 위해 ViewController에 있는 [다음] 버튼을 YellowViewController 내의 IBAction 액션 메서드 `nextButtonTouched(:)` 와 연결했습니다. 그리고 이동하고자하는 ViewController의 Identity > Storyboard ID 항목을 `"blueModal"` 로 설정했고, 아래의 코드를 nextButtonTouched(:) 메서드 내에 작성하여 원하는 동작을 구현했습니다.
+
+	```swift
+	let blueModalVC = self.storyboard?.instantiateViewController(withIdentifier: "blueModal")
+	blueModalVC?.modalTransitionStyle = .flipHorizontal
+	blueModalVC?.modalPresentationStyle = .automatic
+	self.present(blueModalVC!, animated: true, completion: nil)
+	```
+
+5. 다음 ViewController와 연결할 새로운 ViewController 클래스 BlueViewController 파일을 생성해 연결해주었습니다.
+
+6. 해당 ViewController에도 [닫기] 버튼을 추가해, 버튼을 누르면 이전 ViewController로 화면 전환이 이루어지도록 설정했습니다. 추가한 코드는 3번 진행 과정에서의 코드와 동일합니다. 여기까지의 진행 과정은 앱이 아래와 같이 동작하도록 합니다.
+
+	<img src="https://user-images.githubusercontent.com/92504186/154183743-69846824-761b-4acb-b440-31344acfccc3.jpg" alt="SS 2022-02-16 AM 11 17 32" width="30%;" />
+
+7. ViewController들의 라이프사이클 변화를 확인하기 위해 모든 ViewController 클래스에 아래의 코드를 추가했습니다.
+
+	```swift
+	override func viewDidLoad() {
+	    print(#file, #line, #function, #column)
+	}
+	
+	override func viewWillAppear(_ animated: Bool) {
+	    print(#file, #line, #function, #column)
+	}
+	
+	override func viewDidAppear(_ animated: Bool) {
+	    print(#file, #line, #function, #column)
+	}
+	
+	override func viewWillDisappear(_ animated: Bool) {
+	    print(#file, #line, #function, #column)
+	}
+	
+	override func viewDidDisappear(_ animated: Bool) {
+	    print(#file, #line, #function, #column)
+	}
+	```
+
+	위 코드를 추가하고 앱의 화면 전환이 이루어질 때 어떤 변화가 있는지 살펴봤습니다.
+
+	> 1. 먼저 앱이 켜지고 제일 첫 화면이 나오기 전 해당 View가 로드되어  `viewDidLoad()` 메서드가 호출되어 `/Users/hansolkim/MastersCourse iOS 2022/PhotoFrame/PhotoFrame/PhotoFrame/ViewController.swift 20 viewDidLoad() 40` 문구가 커맨드라인에 출력됩니다. 
+	>
+	> 2. 그 다음 View가 화면에 나오기 직전에 `viewWillAppear(_:)` 메서드가 호출되어 `/Users/hansolkim/MastersCourse iOS 2022/PhotoFrame/PhotoFrame/PhotoFrame/ViewController.swift 24 viewWillAppear(_:) 40` 문구가 출력됩니다. 
+	>
+	> 3. View가 화면에 나오고 난 뒤에는 `viewDidAppear(_:)` 메서드가 호출됩니다. 그리고 `/Users/hansolkim/MastersCourse iOS 2022/PhotoFrame/PhotoFrame/PhotoFrame/ViewController.swift 28 viewDidAppear(_:) 40` 문구가 출력됩니다.
+	>
+	> 4. 해당 View의 [다음] 버튼을 누르면, YellowViewController 클래스의 `viewDidLoad()` 메서드가 호출되어 `/Users/hansolkim/MastersCourse iOS 2022/PhotoFrame/PhotoFrame/PhotoFrame/YellowViewController.swift 14 viewDidLoad() 40` 문구가 커맨드라인에 출력됩니다.
+	>
+	> 5. [다음] 버튼으로 인해 다음 화면이 뜨기 직전에 YellowViewController의  `viewWillAppear(_:)` 메서드가 호출되어 `/Users/hansolkim/MastersCourse iOS 2022/PhotoFrame/PhotoFrame/PhotoFrame/YellowViewController.swift 18 viewWillAppear(_:) 40` 문구가 출력됩니다. 
+	>
+	> 6. 그리고 화면이 뜨고 나면 YellowViewController의 `ViewDidAppear(_:)` 메서드가 실행되어 다음의 문구가 호출되게 됩니다.
+	>
+	> 	`/Users/hansolkim/MastersCourse iOS 2022/PhotoFrame/PhotoFrame/PhotoFrame/YellowViewController.swift 22 viewDidAppear(_:) 40`
+	>
+	> 7. 이제 두번째 화면의 [닫기] 버튼을 누르면, 해당 화면이 사라지기 직전에 YellowViewController 클래스의 `viewWillDisappear(_:)` 메서드가 호출되어 `/Users/hansolkim/MastersCourse iOS 2022/PhotoFrame/PhotoFrame/PhotoFrame/YellowViewController.swift 26 viewWillDisappear(_:) 40` 문구가 커맨드라인에 출력됩니다.
+	>
+	> 8. 두번째 화면이 사라지고 난 직후에 YellowViewController 클래스의 `viewDidDisappear(_:)` 메서드가 호출되어 다음의 문구가 커맨드라인에 출력되게 됩니다.
+	>
+	> 	`/Users/hansolkim/MastersCourse iOS 2022/PhotoFrame/PhotoFrame/PhotoFrame/YellowViewController.swift 30 viewDidDisappear(_:) 40`
+	>
+	> 9. 제일 첫 화면에 해당하는 ViewController의 `viewWillDisappear(_:)` 메서드와  `viewDidDisappear(_:)` 메서드는 어떻게 호출하나 고민하다가 앱을 종료시켰더니 해당 메서드들이 호출되었습니다. 해당 앱이 종료되면서 제일 첫 ViewController가 사라지면 해당 메서드들이 호출되는 것을 알 수 있었습니다
+
+8. 이번 Step을 진행하면서 모든 Secene에 대한 ViewController 클래스를 생성했기 때문에, 모든 Scene에 UILabel을 추가하고, 해당 UILabel text의 일부분의 색깔과 크기, 굵기를 바꿔보는 시도를 해보았습니다.
+
+	먼저, 앱 실행시 맨 처음 나오는 Scene의 UILabel은 이전에 정의했던 photoLabel을 그대로 사용했고, `viewDidLoad()` 메서드 내에 아래와 같은 코드를 작성했습니다.
+
+	```swift
+	self.photoLabel.text = "First View"
+	self.photoLabel.font = .systemFont(ofSize: 25)
+	
+	let fontSize = UIFont.boldSystemFont(ofSize: 35)
+	let attributedString = NSMutableAttributedString(string: photoLabel.text!)
+	attributedString.addAttribute(.font, value: fontSize, range: (photoLabel.text! as NSString).range(of: "First"))
+	attributedString.addAttribute(.foregroundColor, value: UIColor.systemBlue, range: (photoLabel.text! as NSString).range(of: "First"))
+	photoLabel.attributedText = attributedString
+	```
+
+	UILabel의 attributedText 프로퍼티를 이용해 해당 Label Text의 일부분을 수정해주었습니다. 위 코드를 적용시켰을 때 보이는 photoLabel의 모습은 아래와 같았습니다.
+
+	<img src="https://user-images.githubusercontent.com/92504186/154191658-ce871896-d4e9-494b-9cea-95df838b89b1.jpg" alt="SS 2022-02-16 PM 12 38 14" width="20%;" />
+
+	위와 같은 방법으로 다른 Scene에도 UILabel을 추가하여 수정해주었고 아래와 같이 나타낼 수 있었습니다.
+
+	<img src="https://user-images.githubusercontent.com/92504186/154191800-4871e411-8f29-4ff6-baca-5e3f4df40071.jpg" alt="SS 2022-02-16 PM 12 39 36" width="20%;" />
+
+	<img src="https://user-images.githubusercontent.com/92504186/154191804-ec28376c-20a8-45ef-8bab-e20d58960774.jpg" alt="SS 2022-02-16 PM 12 39 39" width="20%;" />
+
+---
+
+## :pencil:추가 학습거리
+
+1. 화면 전환이 이루어지는 사이에 뷰컨트롤러 라이프사이클이 어떻게 변하는지 학습한다.
+
+	결과적으로 뷰컨트롤러는 다음의 라이프사이클을 가집니다.
+
+	<img src="https://user-images.githubusercontent.com/92504186/154198900-2449b287-c200-4676-91bc-b96650533479.jpg" alt="SS 2022-02-16 PM 01 56 23" width="20%;" />
+
+	1. **viewDidLoad**
+
+		> Called after the controller's view is loaded into memory.
+		>
+		> 컨트롤러의 뷰가 **메모리에 로드되고 난 후**에 호출된다.
+
+		viewDidLoad 메소드는 뷰의 로딩이 완료됐을 때 시스템에 의해 자동으로 호출됩니다
+
+	2. **viewWilAppear**
+
+		> Notifies the view controller that its view is about to be added to a view hierachy.
+		>
+		> 뷰가 뷰 계층에 **추가될 것**임을 뷰컨트롤러에 알린다.
+
+		viewWillAppear 메서드는 뷰가 나타나기 직전에 호출됩니다. 문장으로만 이해하면 viewDidLoad와 다를 것 없어보이지만, viewDidLoad는 앱이 켜지고 rootView가 로딩될 때 한 번만 실행되고, viewWillAppear는 다른 뷰를 보고 다시 해당 뷰로 돌아왔을 때도 호출됩니다. 따라서 다른 뷰에 갔다가 다시 돌아오는 상황에 처리해주고 싶은 내용을 viewWillAppear 메서드에 코드로 작성하면 됩니다.
+
+	3. **viewDidAppear**
+
+		> Notifies the view controller that its view was added to a view hierarchy.
+		>
+		> 뷰가 뷰 계층에 **추가되었음**을 뷰컨트롤러에 알린다.
+
+		viewDidAppear는 뷰가 화면에 나타난 직후에 실행되므로, 화면에 적용될 애니메이션을 그려줄 수 있습니다.
+
+	4. **viewWillDisappear**
+
+		> Notifies the view controller that its view is about to be removed from a view hierarchy.
+		>
+		> 뷰가 뷰 계층에서 **제거될 것임**을 뷰컨트롤러에 알린다.
+
+		viewWillDisappear는 뷰가 사라지기 직전에 호출되는 메서드입니다.
+
+	5. **viewDidDisappear**
+
+		> Notifies the view controller that its view was removed from a view hierarchy.
+		>
+		> 뷰가 뷰 계층에서 **제거되었음**을 뷰 컨트롤러에 알린다.
+
+	
+
+	위에서 만들었던 앱은 화면 전환을 `show` 타입으로 진행했고, NavigationController가 없기 때문에 `present Modally` 타입으로 화면 전환이 이루어졌습니다. 그리고 Segue `presentation` 프로퍼티 또한 default 값인 `Automatic` 으로 설정되어 있었기 때문에 `page sheet` 형태로 뷰들이 쌓이게 되었기 때문에, 서로 다른 뷰들의 라이프사이클간 호출 순서를 알기 어려웠습니다. 그래서 다른 뷰들의 라이프사이클간 호출 순서를 확인하기 위해 Segue의 presentation 프로퍼티가 `fullScreen` 이고, 화면 전환이 한 번 일어나는 간단한 앱을 만들어 뷰컨트롤러 사이의 라이프사이클 호출 순서를 알아봤습니다.
+
+	<img src="https://user-images.githubusercontent.com/92504186/154203189-4d7fa14e-0c87-44da-891f-fb29e2ac1cb9.jpg" alt="SS 2022-02-16 PM 02 38 37" width="40%;" />
+
+	그림에 있는 빨간 선을 기준으로 화면 전환이 이루어졌습니다. 처음 뷰에서 다음 뷰로 넘어갈 때, 먼저 두 번째 뷰컨트롤러의 viewDidLoad가 호출되고, 그 다음 첫 번째 뷰컨트롤러의 viewWillDisappear가 호출됩니다. 그리고 그 다음으로 두 번째 뷰컨트롤러의 viewWillAppear, viewDidAppear가 호출되고 최종적으로 첫 번째 뷰컨트롤러의 viewDidDisappear가 호출됨을 알 수 있었습니다. 
+
+	그리고 위의 `2. viewWillAppear` 에서 말씀드린 것처럼, 이미 메모리에 로딩되어있던 rootView인 첫 번째 뷰로 화면 전환이 일어날 경우에는 viewDidLoad가 호출되지 않음을 알 수 있었습니다.
+
+
+
+2. 뷰컨트롤러 관련 용어들에 대해 학습한다.
+
+	1. 윈도우와 뷰
+
+		**윈도우**는 iOS에서 디바이스의 스크린을 꽉 채우기 위한 객체로, 항상 UI 표현 계층의 최상위에 위치합니다. 뷰의 일종이지만 직접 컨텐츠를 가지지는 않고 컨텐츠를 가진 뷰 객체를 내부에 배치하여 화면에 출력하는 역할만을 수행합니다. 따라서 화면이 전환되더라도 윈도우 객체는 전화되지 않으며, 내부에 배치된 뷰의 컨텐츠만 바뀝니다.
+
+		**뷰**는 컨텐츠를 담아 해당 컨텐츠를 스크린에 표시하고 사용자의 입력에 반응합니다. 윈도우의 일부를 자신의 영역으로 정의하고, 여기에 필요한 컨텐츠를 채워서 스크린에 나타내는 동시에, 윈도우로부터 전달된 사용자의 입력에 반응하여 그에 맞는 결과를 처리합니다.
+
+		하나 이상의 뷰들이 컨텐츠를 표현하면, 윈도우는 스크린에 이것들을 종합하여 표현합니다. 이같은 방식으로 다양한 형태의 뷰를 화면에 나타내는데, 영역이 겹쳐질 경우 중첩된 형태로 표현되곤 합니다.
+
+		<img src="https://user-images.githubusercontent.com/92504186/154204588-67a6f406-3cc3-49cb-b253-2bd8505cc451.jpg" alt="SS 2022-02-16 PM 02 52 22" width="50%;" />
+
+		위의 그림이 중첩된 인터페이스 구조를 보여줍니다.
+
+		또한, 윈도우와 뷰 사이는 **뷰컨트롤러**를 통해 연결됩니다. 뷰컨트롤러는 뷰의 계층을 관리하여 윈도우에 전달하고, 모바일 디바이스에 감지된 터치 이벤트를 윈도우로부터 전달받아 처리하는 역할을 합니다.
+
+	2. root ViewController
+
+		윈도우 객체는 하나의 뷰컨트롤러와 루트 뷰컨트롤러로 지정하여 참조합니다. 루트 뷰컨트롤러 지정되면 스토리보드에서 화살표를 이용해 해당 뷰컨트롤러가 루트 뷰컨트롤러임을 식별할 수 있습니다.
+
+		<img src="https://user-images.githubusercontent.com/92504186/154204981-5edcc448-c6f9-4705-b21b-cfd23021457f.jpg" alt="SS 2022-02-16 PM 02 54 57" width="30%;" />
+
+		루트 뷰컨트롤러만이 윈도우 객체의 직접적인 관리 대상이 됩니다.
+
+	3. 뷰컨트롤러
+
+		대부분의 뷰컨트롤러들은 각자 하나씩 화면을 담당하여 컨텐츠를 표현하고 뷰를 관리합니다. 이를 Scene이라는 용어로 부릅니다. A,B 두 개의 Scene으로 이루어진 앱이 있다면 A,B 각각의 Scene을 표현할 두 개의 뷰컨트롤러가 필요하다는 의미로 해석할 수 있습니다. Scene을 담당하고 컨텐츠를 표시하는 뷰컨트롤러를 **컨텐츠 뷰컨트롤러**라고 합니다.
+
+		하지만 일부 특별한 뷰컨트롤러는 Scene을 표현하는 역할 대신, 다른 뷰컨트롤러의 연결관계를 관리합니다. 이들은 내부에 컨텐츠를 배치하는 대신, 다른 뷰컨트롤러를 배치하고, 이들을 서로 유기적인 관계로 엮이도록 만듭니다. Navigation Contorller, 혹은 TabBar Controller, Page Controller 등이 대표적인 예입니다. 여러 역할을 수행하는 컨트롤러를 컨텐츠 뷰컨트롤러와 구분하여, **컨테이너 뷰컨트롤러**라고 부릅니다. 컨테이너 뷰컨트롤러의 일부는 다른 뷰컨트롤러의 관리를 위해 고유한 역할을 하는 특정 객체를 화면에 부분적으로 추가하는데, Navigation Bar나 Tab Bar 등이 이런 목적으로 추가된 객체들입니다.
+
+	4. 뷰 계층구조 (View Hierarchy)
+
+		뷰컨트롤러 내부는 수많은 뷰들로 이루어지는데, 이들 뷰는 자기 자신을 스크린상에 표시하기도 하지만, 동시에 뷰 객체를 포함하는 컨테이너 역할도 수행합니다. 이를 **View Hierarchy** 라고 합니다. 뷰의 계층구조 상에서 다른 뷰를 포함하는 뷰는 Super View가 되고, Super View에 포함된 뷰는 Sub View가 됩니다. 하나의 Super View는 다른 Super View의 Sub View가 될 수 있으며, Sub View 역시 하위에 포함된 Sub View를 기준으로 Super View가 될 수 있습니다.
+
+		Super View는 Sub View가 레이아웃을 구성할 수 있도록 내부적으로 원점을 잡아주는 좌표 체계를 제공합니다. 뷰의 계층구조 상에서 뷰들은 서로 상대적인 레이아웃을 이룹니다.
+
+		일반적으로 각각의 Scene은 자신만의 뷰 계층구조를 가지고 있으며, 뷰 계층구조 최상위에는 하나의 뷰가 존재합니다. 이 뷰를 Root View 또는 Contents View라고 합니다. 테이블 뷰 컨트롤러에서는 테이블 뷰가 Root View 이며, 컬렉션 뷰 컨트롤러에서는 컬렉션 뷰가 Root View 역할을 담당합니다. 일반 뷰컨트롤러에서는 View 객체가 Root View의 역할을 담당합니다. 
+
+		Root View 내부에는 각자의 크기와 영역, 표현할 컨텐츠를 가진 여러 개의 Sub View가 추가되는데, 일부 뷰는 서로 겹치기도 합니다. Root View는 이런 Sub View들을 모아 하나의 전체 뷰를 구성하고, 뷰컨트롤러를 통해 이를 윈도우에 전달합니다.
