@@ -131,17 +131,31 @@
             </objects>
             <point key="canvasLocation" x="1475" y="-524"/>
         </scene>
-        <!--View Controller-->
+        <!--Blue View Controller-->
         <scene sceneID="J6S-dM-KiR">
             <objects>
-                <viewController id="b4p-1P-gk9" sceneMemberID="viewController">
+                <viewController id="b4p-1P-gk9" customClass="BlueViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="55c-H1-G7E">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69C-D2-hYa">
+                                <rect key="frame" x="307" y="60" width="67" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="closeButtonTouched:" destination="b4p-1P-gk9" eventType="touchUpInside" id="BEZ-ey-mpx"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="aWU-ok-fUu"/>
                         <color key="backgroundColor" systemColor="systemBlueColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="Ssl-b3-k3P"/>
+                    <connections>
+                        <outlet property="closeButton" destination="69C-D2-hYa" id="5zQ-a2-iEm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lgi-Qk-Tsz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
