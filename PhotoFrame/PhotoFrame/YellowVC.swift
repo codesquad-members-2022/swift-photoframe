@@ -9,7 +9,8 @@ import Foundation
 import UIKit
 
 class YellowVC: UIViewController {
+    @IBOutlet var Scene: UIView!
     override func viewDidLoad() {
-        <#code#>
+        self.Scene.alpha = 0.5
     }
 }
