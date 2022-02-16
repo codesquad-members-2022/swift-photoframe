@@ -150,3 +150,55 @@ scene3
 
 <img src="https://user-images.githubusercontent.com/78553659/154017256-dc84363e-a202-43f4-9868-1054558b808d.png"  width="300" height="600"/>
 <br></br>
+
+
+
+## 7. 다른 화면 연결하기
+
+### 과정
+
+1. Scene2에 ImageView 및 라벨 추가
+2. CallBackMethod class 명 FlowOfViewController로 변경
+3. Scene2의 ImageView 를 ViewController 에 photoImageView outlet으로 연결
+4. 프로젝트에 Demo Images 추가
+5. ViewController의 nextImageButtonTouched IBAction에 랜덤으로 숫자를 선택하는 로직 추가
+6. scene1, scene2 label 글꼴, 위치 조정
+7. UIImageView 의 content mode를 여러가지로 바꿔보며 확인
+
+
+
+### 실행화면
+
+원본
+
+<img src="https://user-images.githubusercontent.com/78553659/154233233-5f1a753e-5e09-4836-9470-1c7c6798af31.jpg"/>
+
+
+
+
+
+Aspect Fit
+
+<img src="https://user-images.githubusercontent.com/78553659/154231372-b8c934d5-48bb-4b21-8f35-7ea467956dcf.png"  width="300" height="600"/>
+
+
+
+Scale To Fill
+
+<img src="https://user-images.githubusercontent.com/78553659/154232150-823919dc-53e5-4500-9400-2558fa877ba7.png"  width="300" height="600"/>
+
+
+
+Aspect Fill
+
+<img src="https://user-images.githubusercontent.com/78553659/154232705-9660354e-8249-4765-ada8-acd59130f01c.png"  width="300" height="600"/>
+
+Redraw 
+
+<img src="https://user-images.githubusercontent.com/78553659/154232866-add07063-4844-4774-ab01-f6ae6e88669f.png"  width="300" height="600"/>
+
+
+
+Left
+
+<img src="https://user-images.githubusercontent.com/78553659/154232502-a40f1c3e-67c0-45d4-a092-39bfdf105508.png"  width="300" height="600"/>
