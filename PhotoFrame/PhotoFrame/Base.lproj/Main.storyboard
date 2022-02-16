@@ -78,10 +78,10 @@
             </objects>
             <point key="canvasLocation" x="1701" y="-224"/>
         </scene>
-        <!--Yellow View Controller-->
+        <!--Gray View Controller-->
         <scene sceneID="kV4-75-hdC">
             <objects>
-                <viewController id="58e-fP-YbN" customClass="YellowViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="58e-fP-YbN" customClass="GrayViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jmE-ef-GHD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -104,6 +104,15 @@
                                     <segue destination="ONR-YV-MPt" kind="unwind" unwindAction="unwindToFirstViewControllerWithSegue:" id="a66-IT-Jfw"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1vd-Ga-4gc">
+                                <rect key="frame" x="183" y="476" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="닫기"/>
+                                <connections>
+                                    <action selector="closeButtonTouched:" destination="58e-fP-YbN" eventType="touchUpInside" id="VhQ-jj-8Ly"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pKk-mO-GVn"/>
                         <color key="backgroundColor" systemColor="systemGray2Color"/>
@@ -115,10 +124,10 @@
             </objects>
             <point key="canvasLocation" x="2462.3188405797105" y="-224.33035714285714"/>
         </scene>
-        <!--View Controller-->
+        <!--Yellow View Controller-->
         <scene sceneID="2u5-T5-Lfe">
             <objects>
-                <viewController id="drC-Aa-I9w" sceneMemberID="viewController">
+                <viewController id="drC-Aa-I9w" customClass="YellowViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g29-VI-3d8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
