@@ -42,6 +42,9 @@
                                     </backgroundConfiguration>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="nextButtonTouched:" destination="LHc-YT-gIS" eventType="touchUpInside" id="Y1v-a3-7yD"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="YbL-7h-bcv"/>
