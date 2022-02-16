@@ -19,6 +19,26 @@ class GrayViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        print("Gray View will appear")
+        print(#file, #line, #function, #column)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        print("Gray View did appear")
+        print(#file, #line, #function, #column)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        print("Gray View will disappear")
+        print(#file, #line, #function, #column)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        print("Gray View did disappear")
+        print(#file, #line, #function, #column)
+    }
+    
 
     /*
     // MARK: - Navigation
