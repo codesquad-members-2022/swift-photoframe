@@ -9,9 +9,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet var photoLabel: UILabel!
-    @IBOutlet var firstDescriptionLabel: UILabel!
-    @IBOutlet var nextButton: UIButton!
+    @IBOutlet weak var photoLabel: UILabel!
+    @IBOutlet weak var firstDescriptionLabel: UILabel!
+    @IBOutlet weak var nextButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
