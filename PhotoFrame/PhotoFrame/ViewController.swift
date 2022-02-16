@@ -17,15 +17,8 @@ class ViewController: UIViewController {
         photoLabel.text = "Eddy의 사진 액자"
         photoLabel.font = .boldSystemFont(ofSize: CGFloat(40))
         
-        photoLabel.textColor = UIColor(
-            red: 46,
-            green: 148,
-            blue: 185)
-        photoLabel.backgroundColor = UIColor(
-            red: 255,
-            green: 253,
-            blue: 193,
-            alpha: 0.5)
+        photoLabel.textColor = UIColor( red: 46, green: 148, blue: 185)
+        photoLabel.backgroundColor = UIColor(red: 255, green: 253, blue: 193, alpha: 0.5)
         
         photoDescription.text = "여기에는 설명이 들어갈 거예요"
         photoDescription.font = .italicSystemFont(ofSize: UIFont.labelFontSize)
@@ -46,7 +39,11 @@ class ViewController: UIViewController {
 }
 
 extension UIColor {
-    convenience init(red: Int, green: Int, blue: Int, alpha: CGFloat = 1.0) {
+    convenience init?(red: Int, green: Int, blue: Int, alpha: CGFloat = 1.0) {
+        guard (0...255).contains(red)
+                && (0...255).contains(green)
+                && (0...255).contains(blue) else { return nil }
+        
         let newRed = CGFloat(red) / 255
         let newGreen = CGFloat(green) / 255
         let newBlue = CGFloat(blue) / 255
