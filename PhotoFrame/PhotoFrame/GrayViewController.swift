@@ -47,7 +47,7 @@ class GrayViewController: UIViewController {
         nextButton.center.x = self.view.center.x*1.3
         nextButton.center.y = self.view.center.y
         nextButton.setTitle("다음", for: .normal)
-        nextButton.titleLabel?.font = UIFont.systemFont(ofSize: 40)
+        nextButton.titleLabel!.font = UIFont.systemFont(ofSize: 40)
         nextButton.setTitleColor(.blue, for: .normal)
     }
 }
