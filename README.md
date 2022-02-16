@@ -117,3 +117,22 @@ class ViewController1 : UIViewController {
 ### 과정 설명
 > 루카스의 "[Step3] IBAction 연결하기"를 따라하니 큰 어려움이 없어서 생략합니다.
 
+## [Step3 -> Step4] Merge이후에 처리 방법 정리 
+```
+git checkout gucci
+git fetch upstream
+git rebase upstream/gucci
+```
+
+여기 까지 하고 깃 커밋 로그를 보면 그래프가 두갈래로 갈리면서 머지전에 작업하던 브랜치(step4) 와 머지된 후 fetch로 생긴 브랜치(local/gucci)가 보인다.
+
+![image](https://user-images.githubusercontent.com/50472122/154216768-1021bc04-f5e9-4053-b6ff-64efc609d890.png)
+
+```
+git cherry-pick C5^..C7
+```
+
+* ^.. -> 처음 커밋을 포함한 커밋부터 마지막 커밋까지 체리픽
+* ... -> 처음 커밋 다음부터 마지막 커밋까지 체리픽
+
+![image](https://user-images.githubusercontent.com/50472122/154217566-063b1c8f-5512-42fd-b00e-79644f32b0d5.png)
