@@ -11,7 +11,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var FirstLabel: UILabel!
     @IBOutlet weak var FirstDescription: UILabel!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.FirstLabel.text = "Kai의 사진액자"
@@ -20,6 +20,11 @@ class ViewController: UIViewController {
         
         self.FirstDescription.text = "나의 사진들.."
         self.FirstDescription.font = .monospacedDigitSystemFont(ofSize: 20, weight: .heavy)
+    }
+    @IBAction func nextButtonTouched(_ sender: Any) {
+          self.FirstLabel.textColor = UIColor.blue
+          self.FirstLabel.backgroundColor = UIColor.yellow
+          self.FirstLabel.alpha = 0.5
     }
 }
 
