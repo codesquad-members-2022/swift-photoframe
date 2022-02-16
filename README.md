@@ -165,7 +165,13 @@ scene3
 6. scene1, scene2 label 글꼴, 위치 조정
 7. UIImageView 의 content mode를 여러가지로 바꿔보며 확인
 
+#### 학습내용
 
+- UIImageView 와 UIImage에 대해서 Apple 공식문서로 학습을 진행 
+
+- 문서에 크기조절 관련하여 ``contetMode`` 와 ``scaleAspectFit``, ``scaleAspectFill`` 이 많이 언급되어  xcode에서 직업 content를 바꿔보면서 학습
+- 원본과 비율이 비슷한 형식은 Aspect fit 이었고, UIImageView 의 크기에 맞게 리사이징되는 형식은 Scale To Fill 이였다.
+- 그외에 Redraw, bottom, right, left 등등 여러가지가 있지만, 원본이미지를 어떤 기준으로 리사이징을 진행하는지 머리속에 그려지지 않아 추가로 학습을 할 예정이다.
 
 ### 실행화면
 
