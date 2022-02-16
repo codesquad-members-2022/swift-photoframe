@@ -1,6 +1,8 @@
 # swift-photoframe
 iOS 포토프레임 프로젝트 저장소
 
+
+
 ## 요구사항
 
 - [x] 프로젝트 생성 및 TabBarController 추가
@@ -145,5 +147,18 @@ An NSAttributedString object manages character strings and associated sets of at
 }
 ```
 
+​    
 
+### 4. Scene을 Segue로 연결하기
 
+> 이번 단계에서는 스토리보드상에서 segue로 scene들을 연결하고 segue의 개념을 학습하는 정도로만 진행했습니다.
+> 추후 창 닫기를 위한 rewind segue와 같은 부분은 5단계에서 진행하고자 합니다.
+
+- 스토리보드에서 버튼을 생성한 후 segue를 통해 ViewController과 연결
+
+<img src="https://user-images.githubusercontent.com/68586291/154201308-1d05f793-001b-4bf9-973f-a2162960ed9e.gif" alt="image" style="align:center;zoom:80%;"/>
+
+- segue는 어플리케이션 내 각 화면 인터페이스 간의 흐름을 정의하는 역할을 하며, 이번 단계에서는 스토리보드 내에 있는 두 개의 view controller 간의 전환을 결정하는 것을 확인할 수 있었음
+- segue의 개념이 처음에는 생소해서, 단순히 이전 view controller을 버튼과 연결하면 이전으로 돌아가는 줄 알았지만 실제로 확인해보니 새로운 view controller가 위에 다시 쌓이는 식으로 진행되고 있었음
+- [공식문서](https://developer.apple.com/library/archive/featuredarticles/ViewControllerPGforiPhoneOS/UsingSegues.html#//apple_ref/doc/uid/TP40007457-CH15-SW1)를 보니 ***A segue always presents a new view controller, but you can also use an unwind segue to dismiss a view controller*** 라고 나와 있는 것으로 보아 segue는 그 자체로 새로운 화면을 생성하는 역할을 하는 것이며 만일 이전 화면으로 되돌릴 경우에는 unwind segue를 사용해야 할 듯함
+  - unwind segue에 대해서는 5단계에서 진행하기로 하였다!
