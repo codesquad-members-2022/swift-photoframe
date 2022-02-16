@@ -162,3 +162,8 @@ An NSAttributedString object manages character strings and associated sets of at
 - segue의 개념이 처음에는 생소해서, 단순히 이전 view controller을 버튼과 연결하면 이전으로 돌아가는 줄 알았지만 실제로 확인해보니 새로운 view controller가 위에 다시 쌓이는 식으로 진행되고 있었음
 - [공식문서](https://developer.apple.com/library/archive/featuredarticles/ViewControllerPGforiPhoneOS/UsingSegues.html#//apple_ref/doc/uid/TP40007457-CH15-SW1)를 보니 ***A segue always presents a new view controller, but you can also use an unwind segue to dismiss a view controller*** 라고 나와 있는 것으로 보아 segue는 그 자체로 새로운 화면을 생성하는 역할을 하는 것이며 만일 이전 화면으로 되돌릴 경우에는 unwind segue를 사용해야 할 듯함
   - unwind segue에 대해서는 5단계에서 진행하기로 하였다!
+
+​    
+
+### 5. ViewController 연결하기
+
