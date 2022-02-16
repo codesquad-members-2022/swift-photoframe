@@ -97,11 +97,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o7A-cy-Dz4">
-                                <rect key="frame" x="174" y="313" width="67" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o7A-cy-Dz4">
+                                <rect key="frame" x="183" y="405.5" width="48.5" height="31"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="다음"/>
                                 <connections>
                                     <segue destination="b4p-1P-gk9" kind="show" id="1KN-wA-FHp"/>
                                 </connections>
@@ -109,6 +108,10 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Pl8-u7-msj"/>
                         <color key="backgroundColor" systemColor="systemBrownColor"/>
+                        <constraints>
+                            <constraint firstItem="o7A-cy-Dz4" firstAttribute="centerY" secondItem="43b-dm-oDQ" secondAttribute="centerY" id="MLY-8K-kVB"/>
+                            <constraint firstItem="o7A-cy-Dz4" firstAttribute="centerX" secondItem="43b-dm-oDQ" secondAttribute="centerX" id="V9K-2Z-hea"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jQf-t0-EOG"/>
                 </viewController>
