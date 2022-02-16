@@ -12,6 +12,11 @@ class ViewController1 : UIViewController {
  
     @IBOutlet weak var photoLabel: UILabel!
     
+    @IBAction func nextButtonTouched(_ sender: UIButton) {
+        self.photoLabel.textColor = UIColor.blue
+        self.photoLabel.backgroundColor = UIColor.yellow
+        self.photoLabel.alpha = 0.5
+    }
     @IBOutlet weak var detailDescription: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
