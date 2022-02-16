@@ -42,6 +42,8 @@
 		1BBB4BBC27BB60B20002A9F7 /* After_Git_Stash.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BBB4BBB27BB60B20002A9F7 /* After_Git_Stash.png */; };
 		1BBB4BC527BBD7050002A9F7 /* Step2_Git_Rebase_Proceeding.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BBB4BC327BBD7050002A9F7 /* Step2_Git_Rebase_Proceeding.png */; };
 		1BBB4BC627BBD7050002A9F7 /* Step2_Git_Rebase_Complete.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BBB4BC427BBD7050002A9F7 /* Step2_Git_Rebase_Complete.png */; };
+		1BE818B627BCC86900950731 /* Step3_Result_After.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BE818B427BCC86900950731 /* Step3_Result_After.png */; };
+		1BE818B727BCC86900950731 /* Step3_Result_Before.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BE818B527BCC86900950731 /* Step3_Result_Before.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +103,8 @@
 		1BBB4BBB27BB60B20002A9F7 /* After_Git_Stash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = After_Git_Stash.png; sourceTree = "<group>"; };
 		1BBB4BC327BBD7050002A9F7 /* Step2_Git_Rebase_Proceeding.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Step2_Git_Rebase_Proceeding.png; sourceTree = "<group>"; };
 		1BBB4BC427BBD7050002A9F7 /* Step2_Git_Rebase_Complete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Step2_Git_Rebase_Complete.png; sourceTree = "<group>"; };
+		1BE818B427BCC86900950731 /* Step3_Result_After.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Step3_Result_After.png; sourceTree = "<group>"; };
+		1BE818B527BCC86900950731 /* Step3_Result_Before.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Step3_Result_Before.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +189,8 @@
 		1BAD84EB27BA7FB300640DF8 /* README_images */ = {
 			isa = PBXGroup;
 			children = (
+				1BE818B427BCC86900950731 /* Step3_Result_After.png */,
+				1BE818B527BCC86900950731 /* Step3_Result_Before.png */,
 				1BBB4BC427BBD7050002A9F7 /* Step2_Git_Rebase_Complete.png */,
 				1BBB4BC327BBD7050002A9F7 /* Step2_Git_Rebase_Proceeding.png */,
 				1BBB4BBB27BB60B20002A9F7 /* After_Git_Stash.png */,
@@ -334,10 +340,12 @@
 				1BBB4BC627BBD7050002A9F7 /* Step2_Git_Rebase_Complete.png in Resources */,
 				1BAD84ED27BA7FDB00640DF8 /* Basic_Storyboard_Image.png in Resources */,
 				1BAD84FF27BA816900640DF8 /* Storyboard_UITabBarController_isInitialViewController_off.png in Resources */,
+				1BE818B727BCC86900950731 /* Step3_Result_Before.png in Resources */,
 				1BAD850527BA816900640DF8 /* FirstSceneViewController_Edited.png in Resources */,
 				1BBB4BC527BBD7050002A9F7 /* Step2_Git_Rebase_Proceeding.png in Resources */,
 				1BAD850A27BA816900640DF8 /* FirstSceneViewController_CustomClass_Admit.png in Resources */,
 				1BAD84BF27B9EB7000640DF8 /* Assets.xcassets in Resources */,
+				1BE818B627BCC86900950731 /* Step3_Result_After.png in Resources */,
 				1BBB4BBC27BB60B20002A9F7 /* After_Git_Stash.png in Resources */,
 				1BAD850627BA816900640DF8 /* Library_Search_UITabBarController.png in Resources */,
 				1BAD850427BA816900640DF8 /* FirstSceneViewController.png in Resources */,
