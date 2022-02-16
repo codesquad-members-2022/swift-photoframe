@@ -83,6 +83,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="다음"/>
+                                <connections>
+                                    <segue destination="VFW-et-Q9s" kind="showDetail" id="MpB-nt-ljR"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WuQ-h3-Fri"/>
@@ -93,6 +96,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXI-93-iNH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="123" y="297"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="LPg-lL-lq6">
+            <objects>
+                <viewController id="VFW-et-Q9s" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5kR-GN-iEg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="cCb-c3-jj6"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rCI-C6-BKh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="814" y="297"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="hGA-pI-N5q">
@@ -119,6 +137,9 @@
         </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
