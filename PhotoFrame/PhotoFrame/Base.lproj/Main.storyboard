@@ -52,6 +52,35 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Next!"/>
                                 <connections>
                                     <action selector="nextButtonTouched:" destination="1xY-0E-ssV" eventType="touchUpInside" id="9ny-v5-wNw"/>
+                                    <action selector="secondAction:" destination="1xY-0E-ssV" eventType="touchUpInside" id="wEL-kg-wqH"/>
+                                    <action selector="thirdAction:" destination="1xY-0E-ssV" eventType="touchUpInside" id="ej8-u5-VD1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qfT-1P-Wzw">
+                                <rect key="frame" x="57" y="675" width="58" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Test1"/>
+                                <connections>
+                                    <action selector="testAction:" destination="1xY-0E-ssV" eventType="touchUpInside" id="Hcn-rx-dM9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AKJ-xZ-ruc">
+                                <rect key="frame" x="156" y="675" width="60" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Test2"/>
+                                <connections>
+                                    <action selector="testAction:" destination="1xY-0E-ssV" eventType="touchUpInside" id="mLd-Ta-APC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vue-dN-5Ab">
+                                <rect key="frame" x="279" y="675" width="60" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Test3"/>
+                                <connections>
+                                    <action selector="testAction:" destination="1xY-0E-ssV" eventType="touchUpInside" id="WAA-h8-ghR"/>
                                 </connections>
                             </button>
                         </subviews>
