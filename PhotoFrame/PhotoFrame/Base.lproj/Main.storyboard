@@ -53,6 +53,7 @@
                                 <buttonConfiguration key="configuration" style="plain" title="다음"/>
                                 <connections>
                                     <action selector="nextButtonTouched:" destination="Qnx-aU-bhl" eventType="touchUpInside" id="ooR-Gv-U2L"/>
+                                    <segue destination="Q8k-ll-Rse" kind="show" id="aek-ID-XAm"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -69,16 +70,17 @@
             </objects>
             <point key="canvasLocation" x="-600" y="297.32142857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Next View-->
         <scene sceneID="kQ7-2m-4Ma">
             <objects>
-                <viewController id="Q8k-ll-Rse" sceneMemberID="viewController">
+                <viewController id="Q8k-ll-Rse" customClass="NextView" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sFR-D4-zYH">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="WuQ-h3-Fri"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="8vu-Av-fu7"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXI-93-iNH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
