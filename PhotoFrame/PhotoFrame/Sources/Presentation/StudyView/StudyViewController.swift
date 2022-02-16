@@ -41,8 +41,6 @@ class StudyViewController: UIViewController {
         let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let nextVC = mainStoryboard.instantiateViewController(withIdentifier: "NextViewController")
         
-        self.seg
-        
         switch sender.segueType {
         case .show:
             self.show(nextVC, sender: nil)
