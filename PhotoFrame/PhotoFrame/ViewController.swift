@@ -11,6 +11,8 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var photoLabel: UILabel!
     
+    @IBOutlet weak var photoDiscription: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -18,7 +20,9 @@ class ViewController: UIViewController {
         self.photoLabel.text = "bibi의 사진액자"
         self.photoLabel.textColor = UIColor.blue
         
-        
+        self.photoDiscription.text =
+        "Loaded by FirstViewController"
+        self.photoDiscription.font = UIFont.boldSystemFont(ofSize: 15)
     }
 
 
