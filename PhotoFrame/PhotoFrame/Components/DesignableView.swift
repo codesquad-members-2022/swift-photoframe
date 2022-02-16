@@ -1,5 +1,5 @@
 //
-//  DesignableButton.swift
+//  DesignableView.swift
 //  PhotoFrame
 //
 //  Created by 송태환 on 2022/02/16.
@@ -8,12 +8,33 @@
 import UIKit
 
 @IBDesignable
-class DesignableButton: UIButton {
+class DesignableView: UIView {
     
     @IBInspectable
-    var disabled: Bool = false {
+    var shadowOpacity: Float = 0.0 {
         didSet {
-            self.isEnabled = !disabled
+            self.layer.shadowOpacity = shadowOpacity
+        }
+    }
+    
+    @IBInspectable
+    var shadowOffset: Int = 0 {
+        didSet {
+            self.layer.shadowOffset = CGSize(width: 0, height: shadowOffset)
+        }
+    }
+    
+    @IBInspectable
+    var shadowColor: UIColor = UIColor.clear {
+        didSet {
+            self.layer.shadowColor = shadowColor.cgColor
+        }
+    }
+    
+    @IBInspectable
+    var shadowRadius: CGFloat = 0 {
+        didSet {
+            self.layer.shadowRadius = shadowRadius
         }
     }
     
@@ -36,14 +57,6 @@ class DesignableButton: UIButton {
         didSet {
             self.layer.cornerCurve = .continuous
             self.layer.cornerRadius = cornerRadius
-            self.layer.masksToBounds = cornerRadius > 0
-        }
-    }
-    
-    @IBInspectable
-    var enableShadow: Bool = false {
-        didSet {
-            self.layer.masksToBounds = enableShadow
         }
     }
 }
