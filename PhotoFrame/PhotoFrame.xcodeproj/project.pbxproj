@@ -14,6 +14,7 @@
 		B564197A27BA0BF300F13DDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B564197927BA0BF300F13DDC /* Assets.xcassets */; };
 		B564197D27BA0BF300F13DDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B564197B27BA0BF300F13DDC /* LaunchScreen.storyboard */; };
 		B5C1D42B27BCDAF000545918 /* GrayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C1D42A27BCDAF000545918 /* GrayViewController.swift */; };
+		B5C1D42D27BD462300545918 /* YellowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C1D42C27BD462300545918 /* YellowViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		B564197C27BA0BF300F13DDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B564197E27BA0BF300F13DDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5C1D42A27BCDAF000545918 /* GrayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrayViewController.swift; sourceTree = "<group>"; };
+		B5C1D42C27BD462300545918 /* YellowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +44,7 @@
 		B564196427BA0BF100F13DDC = {
 			isa = PBXGroup;
 			children = (
+				B5C1D42C27BD462300545918 /* YellowViewController.swift */,
 				B564196F27BA0BF100F13DDC /* PhotoFrame */,
 				B564196E27BA0BF100F13DDC /* Products */,
 			);
@@ -145,6 +148,7 @@
 				B5C1D42B27BCDAF000545918 /* GrayViewController.swift in Sources */,
 				B564197127BA0BF100F13DDC /* AppDelegate.swift in Sources */,
 				B564197327BA0BF100F13DDC /* SceneDelegate.swift in Sources */,
+				B5C1D42D27BD462300545918 /* YellowViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

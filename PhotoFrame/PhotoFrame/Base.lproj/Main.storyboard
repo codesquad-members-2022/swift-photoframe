@@ -27,7 +27,7 @@
         <!--Item 1-->
         <scene sceneID="jtg-dv-1PM">
             <objects>
-                <viewController id="DvB-Gi-ecE" customClass="ViewController" customModule="PhotoFrame" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="DvB-Gi-ecE" customClass="ViewController" customModule="PhotoFrame" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lAs-iT-cEe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -51,14 +51,13 @@
                                     <action selector="nextButtonTouchedDown:" destination="DvB-Gi-ecE" eventType="touchDown" id="0Uy-AX-bVu"/>
                                     <action selector="nextButtonTouchedUpInside:" destination="DvB-Gi-ecE" eventType="touchUpInside" id="jVQ-6O-TQM"/>
                                     <action selector="nextButtonTouchedUpOutside:" destination="DvB-Gi-ecE" eventType="touchUpOutside" id="Gfn-UI-h7Z"/>
-                                    <segue destination="ZPo-c5-w6j" kind="show" id="WEd-cY-oJC"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kKw-VU-FyD"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="mMy-L3-dIh"/>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="mMy-L3-dIh" colorLabel="IBBuiltInLabel-Yellow"/>
                     <connections>
                         <outlet property="firstLabel" destination="JAf-rj-kdh" id="yBb-FN-Llg"/>
                         <outlet property="nextButton" destination="NAv-Tj-maS" id="fnb-P9-VUc"/>
@@ -89,9 +88,9 @@
         <!--Gray View Controller-->
         <scene sceneID="Id6-gq-3dU">
             <objects>
-                <viewController id="ZPo-c5-w6j" customClass="GrayViewController" customModule="PhotoFrame" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GrayViewController" id="ZPo-c5-w6j" customClass="GrayViewController" customModule="PhotoFrame" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wrS-Hg-RDc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DHj-15-Ayh">
@@ -100,8 +99,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="다음"/>
                                 <connections>
-                                    <action selector="nextButtonTouched:" destination="ZPo-c5-w6j" eventType="touchUpInside" id="iAD-n3-SYV"/>
-                                    <segue destination="fve-yE-h0D" kind="presentation" id="npY-hR-okB"/>
+                                    <segue destination="fve-yE-h0D" kind="presentation" modalPresentationStyle="fullScreen" id="npY-hR-okB"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NpX-J4-oFr">
@@ -129,21 +127,37 @@
             </objects>
             <point key="canvasLocation" x="-168.11594202898553" y="-1613.1696428571429"/>
         </scene>
-        <!--View Controller-->
+        <!--Yellow View Controller-->
         <scene sceneID="ios-kl-Wqn">
             <objects>
-                <viewController id="fve-yE-h0D" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="YellowViewController" id="fve-yE-h0D" customClass="YellowViewController" customModule="PhotoFrame" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lb0-JQ-Bps">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MZr-RC-VLz">
+                                <rect key="frame" x="100" y="406" width="179" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="닫기">
+                                    <color key="baseBackgroundColor" systemColor="systemRedColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="exitButtonTouched:" destination="fve-yE-h0D" eventType="touchUpInside" id="MUW-Bl-YEi"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="NBx-du-QN7"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="ILO-nt-utM"/>
+                    <connections>
+                        <outlet property="exitButton" destination="MZr-RC-VLz" id="qGn-OG-oqk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jpo-GJ-Ln9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="730" y="-1613"/>
+            <point key="canvasLocation" x="728.98550724637687" y="-1613.1696428571429"/>
         </scene>
     </scenes>
     <resources>

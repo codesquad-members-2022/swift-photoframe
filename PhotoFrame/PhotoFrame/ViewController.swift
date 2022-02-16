@@ -9,18 +9,25 @@ class ViewController: UIViewController {
         self.firstLabel.textColor = UIColor.blue
         self.firstLabel.backgroundColor = UIColor.yellow
         self.firstLabel.alpha = 0.5
+        print(#function)
         
-        print("touched up inside")
+        guard let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "GrayViewController")else{
+            print("No NextViewController Found")
+            return
+        }
+        nextViewController.modalPresentationStyle = .fullScreen
+        nextViewController.modalTransitionStyle = .coverVertical
+        self.present(nextViewController, animated: true, completion: nil)
     }
 
     @IBAction func nextButtonTouchedUpOutside(_ sender: Any) {
         self.firstLabel.textColor = UIColor.red
-        print("touched up outside")
+        print(#function)
     }
     
     @IBAction func nextButtonTouchedDown(_ sender: Any) {
         self.firstLabel.textColor = UIColor.white
-        print("touched down")
+        print(#function)
     }
     
     override func viewDidLoad() {
