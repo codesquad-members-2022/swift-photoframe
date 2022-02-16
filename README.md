@@ -64,10 +64,51 @@ iOS 포토프레임 프로젝트 저장소
 - [x] Outlet 이름으로 `photoLabel`을 입력한다.
 - [x] ViewController 클래스 viewDidLoad() 함수에서 위에 추가한 아웃렛 변수에 값을 변경하고 다시 실행한다.
 
-```
+```swift
 self.firstLabel.text = "Mase의 사진액자"
 ```
 
 - [x] 위와 같이 코드로 firstLabel의 속성을 변경해본다. 글자색, 배경색, 투명도, 글자 크기를 바꿔본다.
 - [x] firstLabel 아래 있는 레이블도 `firstDescription` 아웃렛으로 연결한다.
     - [x] 마찬가지 방식으로 값을 변경해서 꾸며본다.
+
+<br>
+<br>
+
+# 2. IBAction 연결하기
+### 완성 날짜
+- 02월 16일 12:20
+
+<br>
+
+### 완성 화면 
+<img src="https://user-images.githubusercontent.com/57667738/154190199-7012a2c2-5a8d-47e1-bc36-b7460271e6aa.png" width="30%">
+<img src="https://user-images.githubusercontent.com/57667738/154190215-ae63942f-64d4-413c-9546-48bf47ed05fd.png" width="30%">
+
+<br>
+<br>
+
+# **기능요구사항**
+- [x] 사진액자 - IBOutlet 요구사항을 구현한 상태로 시작한다.
+- [x] First Scene에 버튼(UIButton)을 추가하고 IBAction으로 연결한다.
+- [x] 연결한 액션에 대한 메서드를 구현한다.
+- [x] 실행하고 버튼을 터치하기 이전/이후 화면을 캡처해서 readme.md 파일에 포함한다.
+
+# **프로그래밍 요구사항**
+- [x] Main.storyboard 에서 First Scene에 UIButton을 추가한다.
+    - [x] 우측 유틸리티 영역 하단 3번째 탭 - 객체 라이브러리(Object Library)에서 Button 을 찾아서 View로 드래그한다.
+    - [x] 방금 추가한 버튼을 선택하고 우측 유틸리티 영역 상단 4번째 탭 - 속성(Attributes)에서 Title을 `다음`으로 변경한다.
+- [x] 버튼을 선택하고 `Control + 드래그`해서 ViewController 코드에 IBAction으로 연결한다.
+- [x] 다음과 팝업에서 Connection 항목에서 IBOutlet 대신 IBAction 으로 변경한다.
+- [x] 액션 이름을 `nextButtonTouched` 로 지정한다.
+- [x] ViewController 클래스에 추가된 nextButtonTouched() 메서드에 아래처럼 구현을 추가한다.
+    
+    ```swift
+    @IBAction func nextButtonTouched(_ sender: Any) {
+        self.firstLabel.textColor = UIColor.blue
+        self.firstLabel.backgroundColor = UIColor.yellow
+        self.firstLabel.alpha = 0.5
+    }
+    ```
+
+
