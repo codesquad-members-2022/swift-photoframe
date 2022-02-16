@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item1-->
+        <!--First-->
         <scene sceneID="cfg-Tj-0uu">
             <objects>
                 <viewController id="LHc-YT-gIS" customClass="ViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,7 +18,7 @@
                         <viewLayoutGuide key="safeArea" id="YbL-7h-bcv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item1" id="Yti-i3-72A"/>
+                    <tabBarItem key="tabBarItem" title="First" id="Yti-i3-72A"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fzq-KC-FOV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -30,6 +30,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="aM2-Gm-ngm" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zt0-Dh-Btn">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -42,7 +43,7 @@
             </objects>
             <point key="canvasLocation" x="866" y="123"/>
         </scene>
-        <!--Item2-->
+        <!--Second-->
         <scene sceneID="fIY-eK-HeX">
             <objects>
                 <viewController id="qUr-0Z-uz9" sceneMemberID="viewController">
@@ -52,7 +53,7 @@
                         <viewLayoutGuide key="safeArea" id="dfK-at-7ne"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item2" id="7j6-hZ-gDW"/>
+                    <tabBarItem key="tabBarItem" title="Second" id="7j6-hZ-gDW"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zK8-r6-1cI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
