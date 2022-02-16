@@ -2,13 +2,11 @@ import UIKit
 
 class GrayViewController: UIViewController {
 
-    @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var exitButton: UIButton!
+    @IBOutlet weak var nextButton: UIButton!
     
     @IBAction func exitButtonTouched(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: {
-            print("exit button touched")
-        })
+        self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func unwind(_ segue: UIStoryboardSegue){
@@ -17,7 +15,8 @@ class GrayViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setButtonPosition()
+        setExitButton()
+        setNextButton()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -36,10 +35,19 @@ class GrayViewController: UIViewController {
         print(#file, #line, #function, #column)
     }
     
-    func setButtonPosition(){
-        nextButton.center.x = self.view.center.x
+    func setExitButton(){
+        exitButton.center.x = self.view.center.x*0.7
+        exitButton.center.y = self.view.center.y
+        exitButton.setTitle("이전", for: .normal)
+        exitButton.titleLabel!.font = UIFont.systemFont(ofSize: 40)
+        exitButton.setTitleColor(.red, for: .normal)
+    }
+    
+    func setNextButton(){
+        nextButton.center.x = self.view.center.x*1.3
         nextButton.center.y = self.view.center.y
-        exitButton.center.x = self.view.center.x
-        exitButton.center.y = self.view.center.y*0.5
+        nextButton.setTitle("다음", for: .normal)
+        nextButton.titleLabel?.font = UIFont.systemFont(ofSize: 40)
+        nextButton.setTitleColor(.blue, for: .normal)
     }
 }
