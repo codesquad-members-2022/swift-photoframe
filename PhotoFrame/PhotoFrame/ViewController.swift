@@ -12,6 +12,10 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var firstDescription: UILabel!
     
+    @IBOutlet weak var nextButton: UIButton!
+    @IBAction func nextButtonTouched(_ sender: Any) {
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
