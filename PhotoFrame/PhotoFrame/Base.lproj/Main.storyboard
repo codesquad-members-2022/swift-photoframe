@@ -98,6 +98,21 @@
             </objects>
             <point key="canvasLocation" x="1929" y="-252"/>
         </scene>
+        <!--Third View Controller-->
+        <scene sceneID="9Jt-Sw-q1o">
+            <objects>
+                <viewController id="3BM-SX-6rg" customClass="ThirdViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="l1L-OS-AGE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="KUA-T9-upX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q4I-Tr-T57" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2646" y="-252"/>
+        </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="aot-60-EiD">
             <objects>
