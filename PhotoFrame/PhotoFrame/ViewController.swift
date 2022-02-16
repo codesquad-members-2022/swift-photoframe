@@ -49,6 +49,7 @@ class ViewController: UIViewController {
         firstDescription.centerYAnchor.constraint(equalTo: photoLabel.bottomAnchor, constant: 50).isActive = true
         
         
+        nextButton.setTitle("다음", for: .normal)
         nextButton.backgroundColor = .systemGray4
         nextButton.layer.cornerRadius = 10
         
