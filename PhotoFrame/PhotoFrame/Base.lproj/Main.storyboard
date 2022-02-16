@@ -110,6 +110,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="closeButtonTouched:" destination="LDJ-Xy-oFr" eventType="touchUpInside" id="TfB-QX-aQ8"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Pl8-u7-msj"/>
@@ -120,6 +123,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jQf-t0-EOG"/>
+                    <connections>
+                        <outlet property="closeButton" destination="Aka-eA-cMc" id="N4e-ga-rHq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iKS-mO-KgO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
