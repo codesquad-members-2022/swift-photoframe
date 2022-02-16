@@ -78,10 +78,10 @@
             </objects>
             <point key="canvasLocation" x="1701" y="-224"/>
         </scene>
-        <!--View Controller-->
+        <!--Yellow View Controller-->
         <scene sceneID="kV4-75-hdC">
             <objects>
-                <viewController id="58e-fP-YbN" sceneMemberID="viewController">
+                <viewController id="58e-fP-YbN" customClass="YellowViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jmE-ef-GHD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
