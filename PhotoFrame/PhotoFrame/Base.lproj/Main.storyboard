@@ -95,6 +95,15 @@
                                     <segue destination="drC-Aa-I9w" kind="show" id="N7P-qC-25P"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1hT-iQ-J4s">
+                                <rect key="frame" x="174" y="342" width="67" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="이전"/>
+                                <connections>
+                                    <segue destination="ONR-YV-MPt" kind="unwind" unwindAction="unwindToFirstViewControllerWithSegue:" id="a66-IT-Jfw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pKk-mO-GVn"/>
                         <color key="backgroundColor" systemColor="systemGray2Color"/>
@@ -102,8 +111,9 @@
                     <navigationItem key="navigationItem" id="hUC-NH-8Jr"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K52-EJ-0IN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="ONR-YV-MPt" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2463.768115942029" y="-224.33035714285714"/>
+            <point key="canvasLocation" x="2462.3188405797105" y="-224.33035714285714"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="2u5-T5-Lfe">
@@ -112,6 +122,14 @@
                     <view key="view" contentMode="scaleToFill" id="g29-VI-3d8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kcM-tn-44O">
+                                <rect key="frame" x="174" y="332" width="67" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="이전"/>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="P9N-8S-EG8"/>
                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                     </view>
