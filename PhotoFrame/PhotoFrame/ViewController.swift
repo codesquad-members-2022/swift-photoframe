@@ -6,7 +6,7 @@
 //
 
 import UIKit
-class CallBackMethod :UIViewController{
+class FlowOfViewContoller :UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +28,7 @@ class CallBackMethod :UIViewController{
         print(#file, #line, #function, #column)
     }
 }
-class ViewController: CallBackMethod {
+class ViewController: FlowOfViewContoller {
 
     @IBOutlet weak var photoLabel: UILabel!
     override func viewDidLoad() {
