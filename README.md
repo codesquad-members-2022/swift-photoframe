@@ -75,7 +75,7 @@ self.firstLabel.text = "Mase의 사진액자"
 <br>
 <br>
 
-# 2. IBAction 연결하기
+# 3. IBAction 연결하기
 ### 완성 날짜
 - 02월 16일 12:20
 
