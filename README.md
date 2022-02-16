@@ -25,7 +25,24 @@ Xcode 프로젝트 내비게이터에서 Main.storyboard 파일을 선택하고 
 Outlet 이름으로 photoLabel을 입력한다.
 
 위와 같이 코드로 firstLabel의 속성을 변경해본다. 글자색, 배경색, 투명도, 글자 크기를 바꿔본다.
-
 firstLabel 아래 있는 레이블도 firstDescription 아웃렛으로 연결한다.
-
 마찬가지 방식으로 값을 변경해서 꾸며본다.
+
+`Step3`
+- [X] Main.storyboard 에서 First Scene에 UIButton을 추가한다.
+- [X] 우측 유틸리티 영역 하단 3번째 탭 - 객체 라이브러리(Object Library)에서 Button 을 찾아서 View로 드래그한다.
+- [X] 방금 추가한 버튼을 선택하고 우측 유틸리티 영역 상단 4번째 탭 - 속성(Attributes)에서 Title을 다음으로 변경한다.
+- [X] 버튼을 선택하고 Control + 드래그해서 ViewController 코드에 IBAction으로 연결한다.
+- [X] 다음과 팝업에서 Connection 항목에서 IBOutlet 대신 IBAction 으로 변경한다.
+- [X] 액션 이름을 nextButtonTouched 로 지정한다.
+![스크린샷 2022-02-16 오후 2 32 27](https://user-images.githubusercontent.com/80263729/154202479-9a328d36-f34f-4fe7-8bf7-920d1498607e.png)
+- [X] ViewController 클래스에 추가된 nextButtonTouched() 메서드에 아래처럼 구현을 추가한다.
+~~~swift
+@IBAction func nextButtonTouched(_ sender: Any) {
+    self.firstLabel.textColor = UIColor.blue
+    self.firstLabel.backgroundColor = UIColor.yellow
+    self.firstLabel.alpha = 0.5
+}
+~~~
+![스크린샷 2022-02-16 오후 2 38 18](https://user-images.githubusercontent.com/80263729/154203100-14b0677a-684d-4677-adc7-1f021a9c4616.png)
+

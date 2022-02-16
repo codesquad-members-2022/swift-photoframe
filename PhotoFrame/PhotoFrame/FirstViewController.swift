@@ -16,6 +16,13 @@ class FirstViewController:UIViewController {
         configureLabel()
     }
     
+    
+    @IBAction func NextButtonTouched(_ sender: UIButton) {
+        self.photoLabel.textColor = .black
+        self.photoLabel.backgroundColor = .blue
+        self.photoLabel.alpha = 1.0
+    }
+    
     func configureLabel() {
         self.photoLabel.text = "피그백's 사진액자"
         self.photoLabel.textColor = .red //색깔
