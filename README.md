@@ -475,9 +475,9 @@
 
 5. 다음 ViewController와 연결할 새로운 ViewController 클래스 BlueViewController 파일을 생성해 연결해주었습니다.
 
-6. 해당 ViewController에도 [닫기] 버튼을 추가해, 버튼을 누르면 이전 ViewController로 화면 전환이 이루어지도록 설정했습니다. 추가한 코드는 3번 진행 과정에서의 코드와 동일합니다. 여기까지의 진행 과정은 앱이 아래와 같이 동작하도록 합니다.
+6. 해당 ViewController에도 [닫기] 버튼을 추가해, 버튼을 누르면 이전 ViewController로 화면 전환이 이루어지도록 설정했습니다. 추가한 코드는 3번 진행 과정에서의 코드와 동일합니다. 
 
-	<img src="https://user-images.githubusercontent.com/92504186/154183743-69846824-761b-4acb-b440-31344acfccc3.jpg" alt="SS 2022-02-16 AM 11 17 32" width="30%;" />
+	현재까지의 진행 사항으로 인해, 앱은 [다음] 버튼을 이용해 다음 화면으로 화면 전환을, [닫기] 버튼을 이용해 이전 화면으로 화면 전환을 할 수 있습니다.
 
 7. ViewController들의 라이프사이클 변화를 확인하기 위해 모든 ViewController 클래스에 아래의 코드를 추가했습니다.
 
