@@ -8,30 +8,52 @@
 import Foundation
 import UIKit
 
+enum SegueType {
+    case show, showDetail, presentModally, presentAsPopover
+}
+
 class CustomButton: UIButton {
-    var testValue: String = ""
+    var segueType: SegueType = .show
 }
 
 class StudyViewController: UIViewController {
     
-    @IBOutlet weak var testButton1: CustomButton!
-    @IBOutlet weak var testButton2: CustomButton!
-    @IBOutlet weak var testButton3: CustomButton!
+    @IBOutlet weak var show: CustomButton!
+    @IBOutlet weak var showDetail: CustomButton!
+    @IBOutlet weak var presentModally: CustomButton!
+    @IBOutlet weak var presentAsPopover: CustomButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        testButton1.addTarget(self, action: #selector(onTestButtonTapped(_:)), for: .touchUpInside)
-        testButton1.testValue = "testButton1"
-        testButton2.addTarget(self, action: #selector(onTestButtonTapped(_:)), for: .touchUpInside)
-        testButton2.testValue = "testButton2"
-        testButton3.addTarget(self, action: #selector(onTestButtonTapped(_:)), for: .touchUpInside)
-        testButton3.testValue = "testButton3"
+        show.addTarget(self, action: #selector(onTestButtonTapped(_:)), for: .touchUpInside)
+        show.segueType = .show
+        showDetail.addTarget(self, action: #selector(onTestButtonTapped(_:)), for: .touchUpInside)
+        showDetail.segueType = .showDetail
+        presentModally.addTarget(self, action: #selector(onTestButtonTapped(_:)), for: .touchUpInside)
+        presentModally.segueType = .presentModally
+        presentAsPopover.addTarget(self, action: #selector(onTestButtonTapped(_:)), for: .touchUpInside)
+        presentAsPopover.segueType = .presentAsPopover
     }
     
     @objc
     func onTestButtonTapped(_ sender: CustomButton) {
-        print("onTestButtonTapped - \(sender.testValue)")
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let nextVC = mainStoryboard.instantiateViewController(withIdentifier: "NextViewController")
+        
+        self.seg
+        
+        switch sender.segueType {
+        case .show:
+            self.show(nextVC, sender: nil)
+        case .showDetail:
+            self.showDetailViewController(nextVC, sender: nil)
+        case .presentModally:
+            self.present(nextVC, animated: true, completion: nil)
+        case .presentAsPopover:
+            self.isModalInPopover = true
+            self.present(nextVC, animated: true, completion: nil)
+        }
     }
 }
 
