@@ -16,38 +16,86 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gci-I5-6FZ">
-                                <rect key="frame" x="170" y="438" width="74.5" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xaK-1S-cG1">
-                                <rect key="frame" x="30" y="478.5" width="354" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pF5-me-NnN">
-                                <rect key="frame" x="183" y="277" width="48.5" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="다음"/>
-                                <connections>
-                                    <action selector="nextButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cfR-b9-ecj"/>
-                                    <segue destination="pD7-my-rOB" kind="show" id="WDX-3B-AKt"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="zZd-kQ-moi">
+                                <rect key="frame" x="20" y="356.5" width="374" height="183"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gci-I5-6FZ">
+                                        <rect key="frame" x="150" y="0.0" width="74.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xaK-1S-cG1" customClass="DesignableUILabel" customModule="PhotoFrame" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="45.5" width="358.5" height="81.5"/>
+                                        <string key="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" systemColor="systemGray2Color"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="paddingLeft">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="paddingRight">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="paddingTop">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="paddingBottom">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pF5-me-NnN" customClass="DesignableButton" customModule="PhotoFrame" customModuleProvider="target">
+                                        <rect key="frame" x="163" y="152" width="48.5" height="31"/>
+                                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="다음"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="disabled" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="width">
+                                                <real key="value" value="100"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="height">
+                                                <real key="value" value="50"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="nextButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cfR-b9-ecj"/>
+                                            <segue destination="pD7-my-rOB" kind="show" id="WDX-3B-AKt"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Gci-I5-6FZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Cdh-oe-zTi"/>
-                            <constraint firstItem="pF5-me-NnN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jlU-Zb-dy3"/>
-                            <constraint firstItem="xaK-1S-cG1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="nCb-Yi-9vM"/>
-                            <constraint firstItem="Gci-I5-6FZ" firstAttribute="top" secondItem="pF5-me-NnN" secondAttribute="bottom" constant="130" id="okf-vj-eGW"/>
-                            <constraint firstItem="Gci-I5-6FZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="sfY-EC-bBk"/>
-                            <constraint firstItem="xaK-1S-cG1" firstAttribute="top" secondItem="Gci-I5-6FZ" secondAttribute="bottom" constant="20" id="tTS-JY-Fp7"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xaK-1S-cG1" secondAttribute="trailing" constant="30" id="yU4-YW-dAo"/>
+                            <constraint firstItem="zZd-kQ-moi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="97E-Jd-gpg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zZd-kQ-moi" secondAttribute="trailing" constant="20" id="a66-3X-0Ba"/>
+                            <constraint firstItem="zZd-kQ-moi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="peA-tu-k7w"/>
+                            <constraint firstItem="zZd-kQ-moi" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="zom-Hs-vRJ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="qXO-WI-RAW"/>
@@ -181,7 +229,7 @@
                             <constraint firstItem="QFP-bx-Ep5" firstAttribute="top" secondItem="ASH-p5-XKv" secondAttribute="bottom" constant="50" id="xWO-dI-0as"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Photos" image="photo.on.rectangle.fill" catalog="system" id="aZq-q1-NGT"/>
+                    <tabBarItem key="tabBarItem" title="Photos" image="photo.fill.on.rectangle.fill" catalog="system" id="aZq-q1-NGT"/>
                     <connections>
                         <outlet property="photoImageView" destination="ASH-p5-XKv" id="rxx-0K-b6k"/>
                     </connections>
@@ -231,12 +279,23 @@
             <point key="canvasLocation" x="834.78260869565224" y="-152.00892857142856"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="pF5-me-NnN">
+            <size key="intrinsicContentSize" width="48.5" height="31"/>
+        </designable>
+        <designable name="xaK-1S-cG1">
+            <size key="intrinsicContentSize" width="1184" height="20.5"/>
+        </designable>
+    </designables>
     <resources>
         <image name="house.fill" catalog="system" width="128" height="106"/>
-        <image name="photo.on.rectangle.fill" catalog="system" width="128" height="97"/>
+        <image name="photo.fill.on.rectangle.fill" catalog="system" width="128" height="97"/>
         <image name="photoframe-border.png" width="720" height="720"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPurpleColor">
             <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
