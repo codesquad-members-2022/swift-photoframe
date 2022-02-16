@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import PhotosUI
 
-class SecondViewController: UIViewController {
+class PhotoFrameViewController: UIViewController {
 
     @IBOutlet weak var photoImageView: UIImageView!
         
@@ -44,7 +44,7 @@ class SecondViewController: UIViewController {
     }
 }
 
-extension SecondViewController: PHPickerViewControllerDelegate {
+extension PhotoFrameViewController: PHPickerViewControllerDelegate {
     func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
         
         picker.dismiss(animated: true)
