@@ -86,29 +86,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="muL-vb-W4b">
-                                <rect key="frame" x="174" y="400" width="67" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="muL-vb-W4b">
+                                <rect key="frame" x="170.5" y="405.5" width="73" height="31"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="다음"/>
+                                <buttonConfiguration key="configuration" style="plain" title="다음 👉"/>
                                 <connections>
                                     <segue destination="drC-Aa-I9w" kind="show" id="N7P-qC-25P"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1hT-iQ-J4s">
-                                <rect key="frame" x="174" y="342" width="67" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1hT-iQ-J4s">
+                                <rect key="frame" x="170.5" y="366.5" width="73" height="31"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="이전"/>
+                                <buttonConfiguration key="configuration" style="plain" title="이전 👈"/>
                                 <connections>
                                     <segue destination="ONR-YV-MPt" kind="unwind" unwindAction="unwindToFirstViewControllerWithSegue:" id="a66-IT-Jfw"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1vd-Ga-4gc">
-                                <rect key="frame" x="174" y="476" width="67" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1vd-Ga-4gc">
+                                <rect key="frame" x="170.5" y="444.5" width="73" height="31"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="닫기"/>
+                                <buttonConfiguration key="configuration" style="plain" title="닫기 ❌"/>
                                 <connections>
                                     <action selector="closeButtonTouched:" destination="58e-fP-YbN" eventType="touchUpInside" id="VhQ-jj-8Ly"/>
                                 </connections>
@@ -116,6 +113,14 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pKk-mO-GVn"/>
                         <color key="backgroundColor" systemColor="systemGray2Color"/>
+                        <constraints>
+                            <constraint firstItem="muL-vb-W4b" firstAttribute="top" secondItem="1hT-iQ-J4s" secondAttribute="bottom" constant="8" id="2Xz-R2-Ocn"/>
+                            <constraint firstItem="1vd-Ga-4gc" firstAttribute="centerX" secondItem="jmE-ef-GHD" secondAttribute="centerX" id="bi5-5d-Dnt"/>
+                            <constraint firstItem="muL-vb-W4b" firstAttribute="centerY" secondItem="jmE-ef-GHD" secondAttribute="centerY" id="mda-4G-Lba"/>
+                            <constraint firstItem="1vd-Ga-4gc" firstAttribute="top" secondItem="muL-vb-W4b" secondAttribute="bottom" constant="8" id="skH-LC-IRI"/>
+                            <constraint firstItem="1hT-iQ-J4s" firstAttribute="centerX" secondItem="jmE-ef-GHD" secondAttribute="centerX" id="uzk-sM-2c1"/>
+                            <constraint firstItem="muL-vb-W4b" firstAttribute="centerX" secondItem="jmE-ef-GHD" secondAttribute="centerX" id="xy1-4J-9Ik"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="hUC-NH-8Jr"/>
                 </viewController>
@@ -132,15 +137,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kcM-tn-44O">
-                                <rect key="frame" x="174" y="332" width="67" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kcM-tn-44O">
+                                <rect key="frame" x="170.5" y="405.5" width="73" height="31"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="이전"/>
+                                <buttonConfiguration key="configuration" style="plain" title="닫기 ❌"/>
+                                <connections>
+                                    <action selector="closeButtonTouched:" destination="drC-Aa-I9w" eventType="touchUpInside" id="Z4j-VU-npX"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="P9N-8S-EG8"/>
                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <constraints>
+                            <constraint firstItem="kcM-tn-44O" firstAttribute="centerY" secondItem="g29-VI-3d8" secondAttribute="centerY" id="3Kg-Mm-re5"/>
+                            <constraint firstItem="kcM-tn-44O" firstAttribute="centerX" secondItem="g29-VI-3d8" secondAttribute="centerX" id="9tB-AX-Hj3"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="M7G-u9-zqW"/>
                 </viewController>
