@@ -53,9 +53,7 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
                                     <action selector="nextButtonTouched:" destination="2sk-aB-aUq" eventType="touchUpInside" id="Eq6-70-1Nw"/>
-                                    <segue destination="LDJ-Xy-oFr" kind="popoverPresentation" popoverAnchorView="yUM-bq-z0n" id="jEU-7V-RUq">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
+                                    <segue destination="LDJ-Xy-oFr" kind="show" id="jEU-7V-RUq"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -98,6 +96,17 @@
                     <view key="view" contentMode="scaleToFill" id="43b-dm-oDQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o7A-cy-Dz4">
+                                <rect key="frame" x="174" y="313" width="67" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <segue destination="b4p-1P-gk9" kind="show" id="1KN-wA-FHp"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Pl8-u7-msj"/>
                         <color key="backgroundColor" systemColor="systemBrownColor"/>
                     </view>
@@ -112,11 +121,12 @@
             <objects>
                 <viewController id="b4p-1P-gk9" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="55c-H1-G7E">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="aWU-ok-fUu"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemBlueColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Ssl-b3-k3P"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lgi-Qk-Tsz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -126,6 +136,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBrownColor">
             <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
