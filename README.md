@@ -1,6 +1,8 @@
 # swift-photoframe
 피그백's iOS 포토프레임 프로젝트 저장소
 
+- - -
+
 ### 프로그래밍 요구사항
 `Step1`
 - [X] TabBar Controller를 추가하고 Initial ViewController로 지정한다.
@@ -19,14 +21,18 @@
 - TabBarController의 viewDidLoad에 제시된 print문을 작성해보았다.
 ![스크린샷 2022-02-14 오후 12 26 22](https://user-images.githubusercontent.com/80263729/153795199-d3fa1ce9-e6c8-4935-94c5-68dc16bb1972.png)
 
-`Step2`
-Xcode 프로젝트 내비게이터에서 Main.storyboard 파일을 선택하고 First Scene 에 있는 'First View' 레이블(Label)을 선택하고 Assistant Editor 모드로 변경한다.
-레이블을 선택하고 Control + 드래그해서 ViewController 코드에 IBOutlet으로 연결한다.
-Outlet 이름으로 photoLabel을 입력한다.
+- - -
+
+`Step2`  
+Xcode 프로젝트 내비게이터에서 Main.storyboard 파일을 선택하고 First Scene 에 있는 'First View' 레이블(Label)을 선택하고 Assistant Editor 모드로 변경한다.  
+레이블을 선택하고 Control + 드래그해서 ViewController 코드에 IBOutlet으로 연결한다.  
+Outlet 이름으로 photoLabel을 입력한다.  
 
 위와 같이 코드로 firstLabel의 속성을 변경해본다. 글자색, 배경색, 투명도, 글자 크기를 바꿔본다.
 firstLabel 아래 있는 레이블도 firstDescription 아웃렛으로 연결한다.
 마찬가지 방식으로 값을 변경해서 꾸며본다.
+
+- - -
 
 `Step3`
 - [X] Main.storyboard 에서 First Scene에 UIButton을 추가한다.
@@ -58,25 +64,28 @@ firstLabel 아래 있는 레이블도 firstDescription 아웃렛으로 연결한
     IBAction을 추가할때 밑과같이 사용가능한 이벤트를 확인 할 수 있었다.
     각각의 해석은 밑 블로그를 많이 참고했다.
     
-    [ActionEvent종류](https://roeldowney.tistory.com/65)
+    [ActionEvent종류](https://roeldowney.tistory.com/65)  
     ![스크린샷 2022-02-16 오후 2 48 10](https://user-images.githubusercontent.com/80263729/154204154-0304f4a1-8aa9-474a-bb25-4d27d6499952.png)
-    - 버튼에 액션을 여러개 추가할 수 있을까?
-    한 버튼에 여러가지 액션을 추가하는 것은 가능하다! 심지어 여러개의 이벤트도 넣는게 가능하다.
-    EX)
-    여러개의 액션: 레이블의 색을 바꾸면서 화면을 넘긴다. 
+    - 버튼에 액션을 여러개 추가할 수 있을까?  
+    한 버튼에 여러가지 액션을 추가하는 것은 가능하다! 심지어 여러개의 이벤트도 넣는게 가능하다.  
+    EX)  
+    여러개의 액션: 레이블의 색을 바꾸면서 화면을 넘긴다.   
     여러개의 이벤트: 터치시 레이블의 색을 검정으로 바꾸기, 드래그 아웃하면 색을 녹색으로 바꾸기
     
-    그렇다면 하나의 버튼에 똑같은 이벤트를 다른 액션으로 주면 무엇이 실행이 될까?
-    그림처럼 같은 버튼에 NexctButtonTouched 액션을 두개 만들었고 둘다 Touchup inside 이벤트에 TextColor를 바꾸는 액션이지만
-    하나는 글자를 까만색 하나는 하얀색으로 바꾸는 액션이다.
-    [README.md](https://github.com/P-SeoB/StudyFromFastCampus/files/8077654/README.md)
+    `그렇다면 하나의 버튼에 똑같은 이벤트를 다른 액션으로 주면 무엇이 실행이 될까?`  
+    그림처럼 같은 버튼에 NexctButtonTouched 액션을 두개 만들었고 둘다 Touchup inside 이벤트에 TextColor를 바꾸는 액션이지만  
+    하나는 글자를 까만색 하나는 하얀색으로 바꾸는 액션이다.  
+   ![스크린샷 2022-02-16 오후 4 45 29](https://user-images.githubusercontent.com/80263729/154218996-33fdad94-f91f-49f6-beac-92e5bed3c679.png)
+
     실행결과 
-    후에 추가한 Touched2의 TextColor가 적용이됬다.
-    Touched1의 TextColor를 제외한 액션들은 적용이 되었다.
-    함수의 실행 문제인것 같아 코드를 위로 올려보기도 했지만 똑같이 글자는 하얀색으로 나왔다.
+    후에 추가한 Touched2의 TextColor가 적용이됬다.  
+    Touched1의 TextColor를 제외한 액션들은 적용이 되었다.  
+    함수의 실행 문제인것 같아 코드를 위로 올려보기도 했지만 똑같이 글자는 하얀색으로 나왔다.  
+    
     결론.
     똑같은 이벤트에 대한 겹치는 액션은 후에 추가한 액션을 따르는 것처럼 보인다.
     이런 코드는 textColor를 바꾸는 첫번째 코드가 필요가 없는 코드가 되어 버리기 때문에 액션을 추가하지말고 수정하는 쪽이 나아보인다 
+    
     ![스크린샷 2022-02-16 오후 4 27 15](https://user-images.githubusercontent.com/80263729/154216363-f855b760-51a4-4511-9910-f9110742bb7a.png)
     
     - 여러 버튼을 동시에 하나의 액션에 연결할 수 있을까?
@@ -84,9 +93,9 @@ firstLabel 아래 있는 레이블도 firstDescription 아웃렛으로 연결한
     똑같이 드래그 인 하면 하나의 액션에 여러가지 버튼을 추가할 수 있었다.
 
 `Step 04`
-- [X] Main 스토리보드에서 First Scene 옆에 ViewController를 드래그해서 새로운 Scene을 추가한다.
-- [X] 앞 단계에서 추가한 [다음]버튼을 선택하고 Control + 드래그를 해서 새로 추가한 Scene에 연결한다.
-- [X] 팝업으로 표시되는 Action Segue에서 Show 항목을 선택한다.
-- [X] 새로 추가한 Scene 속성에서 배경 색상(Background Color)을 원하는 색상으로 변경한다. 새로 앱을 실행해보고 [다음] 버튼을 누르면 새로운 화면이 나타나는지 확인한다.
-- [X] 다시 스토리보드에서 위에 추가한 Scene (혹은 ViewController)에 [다음] 버튼을 추가한다. 우측 옆에 한 단계 더 표현하기 위한 ViewController를 추가하고 배경 색상을 다른 색상으로 변경한다. 위와 마찬가지로 [다음]버튼에서 새 Scene으로 Segue를 연결한다.
-- [X] 예를 들어 First Scene 다음에 추가한 화면이 Yellow 화면이었다면, First Scene에서 [다음] 버튼을 누르면 Yellow 화면이 표시되고, Yellow 화면에서 [다음] 버튼을 누르면 Blue 화면이 나오는 방식으로 두 단계 표시한다.
+- [] Main 스토리보드에서 First Scene 옆에 ViewController를 드래그해서 새로운 Scene을 추가한다.
+- [] 앞 단계에서 추가한 [다음]버튼을 선택하고 Control + 드래그를 해서 새로 추가한 Scene에 연결한다.
+- [] 팝업으로 표시되는 Action Segue에서 Show 항목을 선택한다.
+- [] 새로 추가한 Scene 속성에서 배경 색상(Background Color)을 원하는 색상으로 변경한다. 새로 앱을 실행해보고 [다음] 버튼을 누르면 새로운 화면이 나타나는지 확인한다.
+- [] 다시 스토리보드에서 위에 추가한 Scene (혹은 ViewController)에 [다음] 버튼을 추가한다. 우측 옆에 한 단계 더 표현하기 위한 ViewController를 추가하고 배경 색상을 다른 색상으로 변경한다. 위와 마찬가지로 [다음]버튼에서 새 Scene으로 Segue를 연결한다.
+- [] 예를 들어 First Scene 다음에 추가한 화면이 Yellow 화면이었다면, First Scene에서 [다음] 버튼을 누르면 Yellow 화면이 표시되고, Yellow 화면에서 [다음] 버튼을 누르면 Blue 화면이 나오는 방식으로 두 단계 표시한다.
