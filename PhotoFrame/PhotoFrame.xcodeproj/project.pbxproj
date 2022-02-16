@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B36DA8A427BCDE480010A92C /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36DA8A327BCDE480010A92C /* SecondViewController.swift */; };
+		B36DA8A627BCDEE60010A92C /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36DA8A527BCDEE60010A92C /* ThirdViewController.swift */; };
 		B3AE2C7127BB4D8A005A8B3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AE2C7027BB4D8A005A8B3D /* AppDelegate.swift */; };
 		B3AE2C7327BB4D8A005A8B3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AE2C7227BB4D8A005A8B3D /* SceneDelegate.swift */; };
 		B3AE2C7827BB4D8A005A8B3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3AE2C7627BB4D8A005A8B3D /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		B36DA8A327BCDE480010A92C /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		B36DA8A527BCDEE60010A92C /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		B3AE2C6D27BB4D8A005A8B3D /* PhotoFrame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoFrame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3AE2C7027BB4D8A005A8B3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B3AE2C7227BB4D8A005A8B3D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 				B3AE2C7027BB4D8A005A8B3D /* AppDelegate.swift */,
 				B3AE2C7227BB4D8A005A8B3D /* SceneDelegate.swift */,
 				B3AE2C7627BB4D8A005A8B3D /* Main.storyboard */,
+				B36DA8A527BCDEE60010A92C /* ThirdViewController.swift */,
 				B36DA8A327BCDE480010A92C /* SecondViewController.swift */,
 				B3AE2C8727BB5269005A8B3D /* ViewController.swift */,
 				B3AE2C8927BB52B9005A8B3D /* TabBarViewController.swift */,
@@ -150,6 +153,7 @@
 				B36DA8A427BCDE480010A92C /* SecondViewController.swift in Sources */,
 				B3AE2C7B27BB4D8A005A8B3D /* PhotoFrame.xcdatamodeld in Sources */,
 				B3AE2C7127BB4D8A005A8B3D /* AppDelegate.swift in Sources */,
+				B36DA8A627BCDEE60010A92C /* ThirdViewController.swift in Sources */,
 				B3AE2C8827BB5269005A8B3D /* ViewController.swift in Sources */,
 				B3AE2C8A27BB52B9005A8B3D /* TabBarViewController.swift in Sources */,
 				B3AE2C7327BB4D8A005A8B3D /* SceneDelegate.swift in Sources */,
