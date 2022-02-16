@@ -11,6 +11,10 @@ class GrayViewController: UIViewController {
         })
     }
     
+    @IBAction func unwind(_ segue: UIStoryboardSegue){
+        print(#function)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setButtonPosition()

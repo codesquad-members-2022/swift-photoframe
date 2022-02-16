@@ -135,15 +135,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MZr-RC-VLz">
-                                <rect key="frame" x="100" y="406" width="179" height="90"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yub-Vs-h8K">
+                                <rect key="frame" x="36" y="199" width="328" height="285"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="닫기">
-                                    <color key="baseBackgroundColor" systemColor="systemRedColor"/>
-                                </buttonConfiguration>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9S2-0L-7Pc">
+                                <rect key="frame" x="58" y="529" width="120" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Dismiss View"/>
                                 <connections>
-                                    <action selector="exitButtonTouched:" destination="fve-yE-h0D" eventType="touchUpInside" id="MUW-Bl-YEi"/>
+                                    <action selector="dismissButtonTouched:" destination="fve-yE-h0D" eventType="touchUpInside" id="KVb-oC-83e"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="659-X3-oTn">
+                                <rect key="frame" x="216" y="529" width="120" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Unwind Segue"/>
+                                <connections>
+                                    <segue destination="LNl-f0-Te2" kind="unwind" unwindAction="unwind:" id="S8G-GB-WO8"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -152,10 +164,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="ILO-nt-utM"/>
                     <connections>
-                        <outlet property="exitButton" destination="MZr-RC-VLz" id="qGn-OG-oqk"/>
+                        <outlet property="dismissButton" destination="9S2-0L-7Pc" id="aFg-CM-aZS"/>
+                        <outlet property="titleLabel" destination="yub-Vs-h8K" id="cTe-Nu-Veg"/>
+                        <outlet property="unwindSegueButton" destination="659-X3-oTn" id="HFe-sz-uPE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jpo-GJ-Ln9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="LNl-f0-Te2" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="728.98550724637687" y="-1613.1696428571429"/>
         </scene>
