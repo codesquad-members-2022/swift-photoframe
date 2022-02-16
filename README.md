@@ -68,3 +68,10 @@ Figure 3 : 실행한 화면을 캡처해서 readme.md 파일에 포함한다.
 
 
 
+- `다음` 버튼 터치전
+
+![image](https://user-images.githubusercontent.com/36659877/154191709-08e53c4d-c04b-408f-8438-131f3cb49d6e.png)
+
+- `다음` 버튼 터치후
+
+![image](https://user-images.githubusercontent.com/36659877/154191760-ac213261-a30e-4042-815e-885d5be6b646.png)
