@@ -11,12 +11,17 @@ class ViewController: UIViewController {
 
     @IBOutlet var photoLabel: UILabel!
     @IBOutlet var firstDescriptionLabel: UILabel!
+    @IBOutlet var nextButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         configureLabel()
 //        print(#file, #line, #function, #column)
+        
+        nextButton.setTitle("다음", for: .normal)
+        nextButton.setTitle("highlighted", for: .highlighted)
+        
         
 
         // Do any additional setup after loading the view.
