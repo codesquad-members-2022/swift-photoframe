@@ -34,7 +34,7 @@ class ViewController: FlowOfViewContoller {
     @IBOutlet weak var photoLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.photoLabel.text = "dale의 사진액자"
+        self.photoLabel.text = "dale's Photo Album"
         self.photoLabel.textColor = .blue
         self.photoLabel.backgroundColor = .yellow
         self.photoLabel.font.withSize(30)
