@@ -21,12 +21,22 @@ class ViewController: UIViewController {
         self.FirstDescription.text = "나의 사진들.."
         self.FirstDescription.font = .monospacedDigitSystemFont(ofSize: 20, weight: .heavy)
     }
+    
+    
+    
     @IBAction func nextButtonTouched(_ sender: Any) {
-          self.FirstLabel.textColor = UIColor.blue
-          self.FirstLabel.backgroundColor = UIColor.yellow
-          self.FirstLabel.alpha = 0.5
+        self.FirstLabel.textColor = UIColor.blue
+        self.FirstLabel.backgroundColor = UIColor.yellow
+        self.FirstLabel.alpha = 0.5
     }
- 
+    
+    
+    @IBAction func nextButtonTouchDown(_ sender: Any) {
+        self.FirstDescription.textColor = UIColor.blue
+        self.FirstDescription.backgroundColor = UIColor.yellow
+        self.FirstDescription.alpha = 0.5
+    }
+    
     
 }
 
