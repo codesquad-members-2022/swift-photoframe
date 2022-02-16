@@ -43,10 +43,8 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NAv-Tj-maS">
                                 <rect key="frame" x="128" y="191" width="127" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="다음">
-                                    <color key="baseBackgroundColor" systemColor="systemGray3Color"/>
-                                </buttonConfiguration>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="다음"/>
                                 <connections>
                                     <action selector="nextButtonTouchedDown:" destination="DvB-Gi-ecE" eventType="touchDown" id="0Uy-AX-bVu"/>
                                     <action selector="nextButtonTouchedUpInside:" destination="DvB-Gi-ecE" eventType="touchUpInside" id="jVQ-6O-TQM"/>
@@ -176,9 +174,6 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemGray3Color">
-            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemGray4Color">
             <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
