@@ -16,13 +16,23 @@ class FirstViewController:UIViewController {
         configureLabel()
     }
     
-    
-    @IBAction func NextButtonTouched(_ sender: UIButton) {
+
+    @IBAction func NextButtonTouched1(_ sender: UIButton) {
         self.photoLabel.textColor = .black
         self.photoLabel.backgroundColor = .blue
         self.photoLabel.alpha = 1.0
     }
     
+    @IBAction func NextButtonTouched2(_ sender: UIButton) {
+        self.photoLabel.textColor = .white
+    }
+    
+    
+    
+    
+    @IBAction func NextButtonDragOut(_ sender: UIButton) {
+        self.photoLabel.textColor = .green
+    }
     func configureLabel() {
         self.photoLabel.text = "피그백's 사진액자"
         self.photoLabel.textColor = .red //색깔
