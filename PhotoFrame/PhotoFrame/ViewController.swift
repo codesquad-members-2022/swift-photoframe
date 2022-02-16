@@ -14,10 +14,15 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(#file)
-        print(#line)
-        print(#function)
-        print(#column)
+        photoLabel.center = self.view.center
+        
+        self.photoLabel.text = "Ocean의 액자"
+        self.photoLabel.font = UIFont.boldSystemFont(ofSize: 30)
+
+        self.photoDescription.text = "made by OceanShape"
+        self.photoDescription.textColor = UIColor.white
+        self.photoDescription.backgroundColor = UIColor.systemBlue
+        self.photoDescription.font = UIFont.italicSystemFont(ofSize: UIFont.labelFontSize)
     }
 
 
