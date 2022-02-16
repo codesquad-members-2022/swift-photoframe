@@ -142,3 +142,122 @@ The project ‘project’ is damaged and cannot be opened due to a parse error. 
 **문제가 되는 파일을 미리 복사해두고 불필요한 부분을 지우니 프로젝트 파일을 열 수 있었다.**
 
 ---
+
+# Git for CodeSquad
+
+코드스쿼드에서 깃을 사용하면서 계속 오류가 발생하고 있다. 이대로는 안된다..... 한번 제대로 정리하지 않으면 끝나지 않는 오류의 늪으로 갈 것 같다.....
+
+## 명령어 정리
+1. clone (git clone url)
+
+기존의 레포지토리 혹은 대상으로 정한 레포지토리의 복제본을 만듭니다.   
+해당 명령어는 Git URL 이 지원하는 프로토콜을 따라야 합니다.
+* 로컬 또는 원격 레포지토리 복제
+* 최초(bare) 레포지토리 복제
+* 단순(shallow) 복제 옵션을 사용하여 레포지토리 부분을 복제
+
+<예시>
+```
+/* repo 주소(<repo>)에 있는 레포지토리를 특정 디렉토리(<directory>)로 복사 합니다. */
+git clone <repo> <directory>
+// 특정 디렉토리로 복사 레포지토리를 위치시킴
+git clone https://........ /Users/Beck/Desktop/workSpace/MyProject
+/* repo 주소(<repo>)에서 레포지토리를 복제한 뒤, 태그(<tag>)만 복제합니다. */
+git clone --branch <tag> <repo>
+// Head ref 다운로드 하지 않고 특정 브랜치만 복제.
+git clone -branch feature_new https://........
+```
+
+2. checkout (+옵션 b 알아보기)   
+Git에서 “체크아웃”이란 대상 엔터티의 다른 버전 간 전환을 의미합니다. 여기서의 엔티티는 파일, 커밋, 브랜치 세 가지입니다. 주로 브랜치 간의 전환을 할 경우 많이 사용하고, 커밋을 취소할 때도 종종 사용합니다.   
+변경이 일어날 경우 프로젝트 기록(로컬 프로젝트 파일 및 폴더)에 변경 사항이 저장되기 때문에 읽기 전용 작업은 아닙니다. 그러므로, 브랜치 체크아웃 시에 저장된 버전 일치를 위하여 새 커밋을 모두 기록(Commit) 하도록 지시합니다.   
+git checkout은 git branch와 밀접하게 작동합니다.
+
+```
+// 브랜치 중 develop 브랜치로 이동
+$> (main) git branch
+main
+develop
+$> (main)git checkout develop
+$> (develop)
+
+// 브랜치를 만드는 방법 1
+$> (develop) git branch feature_new
+$> (develop) git checkout feature_new
+$> (feature_new)
+
+// 브랜치를 만드는 방법 2
+$> (develop) git checkout -b feature_new
+$> (feature_new)
+
+---
+
+// 원격 브랜치에서 Git 체크아웃(fetch로 우선 컨텐츠를 모두 불러와야 함)
+$> (main) git fetch --all
+// 최신 Git 원격 브랜치 정보를 이용하여 체크아웃
+$> (main) git checkout https://...../User/main/feature_new
+// 이전 Git 원격 브랜치 정보를 이용하여 체크아웃
+$> (main) git checkout -b feature_new main/feature_new
+```
+
+**detached HEAD**
+
+_HEAD란 Git의 현재 스냅샷을 얘기합니다._ git checkout은 내부적으로 브랜치 혹은 커밋을 가리키도록 HEAD를 업데이트 하는 것입니다. 브랜치가 아닌 커밋을 체크아웃하면 detached HEAD 상태가 됩니다.   
+detached HEAD는 경고입니다. 앞으로 수행할 모든 작업이 프로젝트 개발의 나머지 부분과 분리되어 있음을 뜻합니다. 이 상태에서 개발을 진행해버리면 돌아갈 수 있는 브랜치가 없습니다.   
+개발은 항상 브랜치에서 이뤄져야 한다는 중요한 점을 다시 한번 강조합니다. 분리된 커밋에서 새 커밋이 발생하면 이전 커밋과의 관계가 애매해집니다.
+
+3. branch (+옵션 d 알아보기)   
+브랜치 만드는 명령어다. 간단히만 보고 넘어가자. 브랜치는 커밋의 포인터일 뿐이다.
+
+```
+// 모든 브랜치 리스트를 보여준다.
+git branch
+// 원격 브랜치까지 모두 보여준다.
+git branch -a
+// 현재 브랜치(체크아웃 된)에서 특정 브랜치를 생성한다.
+git branch feature_new
+// 특정 브랜치를 삭제한다(safe).
+git branch -d feature_new
+// 특정 브랜치를 삭제한다(unsafe, unmerged commit 무시. 커밋 날려버릴 
+때 좋음).
+git branch -D feature_new
+// 현재 브랜치(체크아웃 된)의 이름 변경
+git branch -m feature_renamed
+```
+
+4. status   
+현재 상태를 보여준다. 현재 상태라 함은 인덱스 커밋과 HEAD 커밋의 차이점을 경로 형태로 보여주는 것이다.
+5. commit
+6. rm   
+단순히 지운다는 의미보다는, 다음 커밋을 의미하는 Git Index가 추적하고 있는 파일들을 삭제하는 것이다. 이는 Staging Area에 있는 파일이라고 해도 되겠다. 물론, Staging Area/Working Directory 둘 다 삭제하는 명령어도 가능하지만, 아쉽게도 Working Directory에서 삭제하는 방법은 존재하지 않는다. 또한, 브랜치도 삭제 불가하다.   
+주의할 점은 현재 HEAD의 파일과 Staging Index의 파일 버전이 일치해야 한다는 것이다. 만약 일치하지 않으면 Git에 의해 명령어가 차단된다.   
+git repository에서 staging area/working directory 모두 파일 삭제를 하고 싶은 경우는 Shell에서 rm 명령어와 git add를 같이 쓴다.
+```
+git rm file1
+git rm file1 file2 file3
+// -f force 옵션은 Git 자체에서 수행하는 HEAD 와의 버전 검사를 무시한다.
+git rm -f file1
+// 미리 시뮬레이션 해보고 결과를 볼 수 있는 -n 혹은 --dry-run 옵션.
+git rm -n file1
+git rm --dry-run file1
+// cached 옵션을 이용해서 Staging-Index만을 지우도록 할 수 있다.
+git rm --cached file1
+// -q는 결과를 숨긴다.
+git rm -q file1
+
+// git rm을 취소하는 방법은 reset, checkout 두 개의 방법이 있다.
+git reset HEAD
+git checkout .
+```
+7. add
+8. push
+9. pull request
+10. remote add
+11. fetch ([번역 : Git fetch와 pull, pull은 이제 그만!](https://merrily-code.tistory.com/124))
+12. rebase([4. git merge와 git rebase의 차이](https://hajoung56.tistory.com/5))   
+adsf
+13. merge([4. git merge와 git rebase의 차이](https://hajoung56.tistory.com/5))   
+asdf
+14. git reset과 git revert ([Git reset과 revert 알고 사용하기](https://velog.io/@njs04210/Git-reset%EA%B3%BC-revert-%EC%95%8C%EA%B3%A0-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0))   
+HEAD 브랜치 이동. 정확히는 브랜치가 가리키는 커밋을 바꾼다. -> 바뀐 커밋 이후의 커밋은 지운다.   
+현재 HEAD에서 revert 하면 현재 커밋의 이전 커밋을 뜻하는 새로운 커밋을 만든다. -> 이전 커밋을 뜻하는 새로운 커밋에서 또 revert를 하면 이전의 이전 커밋을 뜻하는 커밋을 또 만든다.
