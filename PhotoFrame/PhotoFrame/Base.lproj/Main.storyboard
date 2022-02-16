@@ -84,7 +84,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="다음"/>
                                 <connections>
-                                    <segue destination="VFW-et-Q9s" kind="showDetail" id="MpB-nt-ljR"/>
+                                    <segue destination="VFW-et-Q9s" kind="presentation" id="MpB-nt-ljR"/>
                                 </connections>
                             </button>
                         </subviews>

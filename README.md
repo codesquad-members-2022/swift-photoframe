@@ -136,3 +136,24 @@ git cherry-pick C5^..C7
 * ... -> 처음 커밋 다음부터 마지막 커밋까지 체리픽
 
 ![image](https://user-images.githubusercontent.com/50472122/154217566-063b1c8f-5512-42fd-b00e-79644f32b0d5.png)
+
+## [Step4] Scene을 Segue로 연결하기
+
+### 구현 화면 
+
+https://user-images.githubusercontent.com/50472122/154218326-5afd552c-a481-484e-8028-b7fb31f8aa17.mov
+
+### Segue
+
+* 정의 : 인터페이스의 흐름을 정의하기 위해 segue를 사용한다. 스토리 보드에 있는 뷰 컨트롤러간에 전환을 정의하는 것이 segue이다.
+* 사용법 : 버튼이나, 테이블 행에서 전환하고자 하는 뷰 컨트롤러로 Ctrl을 누른 상태에서 드래그한다.  
+* 나타나는 방식
+  * Show (Push)
+    * 가장 일반적, stack 구조로서 새 화면이 원래 화면 위를 덮는 구조
+  * Show Detail (Replace)
+    * SplitView 구조에서 원래 화면을 Master, 새 화면을 Detail로 표시한다. 아이폰에서는 똑같아 보이지만 아이패드로 보면 화면이 둘로 분할되서 보이게 된다.
+  * Present Modally
+    * 새 화면이 모달처럼 원래 화면 위 전체를 뒤덮는다. 원래 화면은 새 화면 뒤에 그대로 존재하게 된다.
+  * Present as Popover
+    * 아이패드에서 팝업참을 띄운다. 아이폰 앱한테 Show Detail과 마찬가지로 큰 의미가 없다.
+
