@@ -10,9 +10,9 @@ import UIKit
 
 class CodableViewController: UIViewController {
     
-    let photoView = UIView()
-    let photoBoardImageView = UIImageView()
-    let photoImageView = UIImageView()
+    let photoContainer = UIView()
+    let photoBoard = UIImageView()
+    let photoImage = UIImageView()
     let nextButton = UIButton()
     
     override func viewDidLoad() {
@@ -27,16 +27,16 @@ class CodableViewController: UIViewController {
     }
     
     @objc func onNextButtonTapped(){
-        photoImageView.image = getImage()
+        photoImage.image = getImage()
     }
         
     func attributes() {
-        photoView.backgroundColor = .black
+        photoContainer.backgroundColor = .black
         
-        photoBoardImageView.image = UIImage(named: "photoframe-border")
+        photoBoard.image = UIImage(named: "photoframe-border")
 
-        photoImageView.image = getImage()
-        photoImageView.contentMode = .scaleToFill
+        photoImage.image = getImage()
+        photoImage.contentMode = .scaleToFill
 
         nextButton.setTitle("다음", for: .normal)
         nextButton.titleLabel?.font = .systemFont(ofSize: 20)
@@ -44,25 +44,28 @@ class CodableViewController: UIViewController {
     }
     
     func layout() {
-        self.view.addSubViews([photoView, nextButton])
-        photoView.addSubViews([photoImageView, photoBoardImageView])
+        photoContainer.addSubview(photoImage)
+        photoContainer.addSubview(photoBoard)
         
-        photoView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 100).isActive = true
-        photoView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-        photoView.widthAnchor.constraint(equalToConstant: 270).isActive = true
-        photoView.heightAnchor.constraint(equalToConstant: 270).isActive = true
+        self.view.addSubview(photoContainer)
+        self.view.addSubview(nextButton)
         
-        photoBoardImageView.topAnchor.constraint(equalTo: self.photoView.topAnchor).isActive = true
-        photoBoardImageView.bottomAnchor.constraint(equalTo: self.photoView.bottomAnchor).isActive = true
-        photoBoardImageView.leftAnchor.constraint(equalTo: self.photoView.leftAnchor).isActive = true
-        photoBoardImageView.rightAnchor.constraint(equalTo: self.photoView.rightAnchor).isActive = true
+        photoContainer.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 100).isActive = true
+        photoContainer.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+        photoContainer.widthAnchor.constraint(equalToConstant: 270).isActive = true
+        photoContainer.heightAnchor.constraint(equalToConstant: 270).isActive = true
         
-        photoImageView.topAnchor.constraint(equalTo: self.photoView.topAnchor).isActive = true
-        photoImageView.bottomAnchor.constraint(equalTo: self.photoView.bottomAnchor).isActive = true
-        photoImageView.leftAnchor.constraint(equalTo: self.photoView.leftAnchor).isActive = true
-        photoImageView.rightAnchor.constraint(equalTo: self.photoView.rightAnchor).isActive = true
+        photoBoard.topAnchor.constraint(equalTo: self.photoContainer.topAnchor).isActive = true
+        photoBoard.bottomAnchor.constraint(equalTo: self.photoContainer.bottomAnchor).isActive = true
+        photoBoard.leftAnchor.constraint(equalTo: self.photoContainer.leftAnchor).isActive = true
+        photoBoard.rightAnchor.constraint(equalTo: self.photoContainer.rightAnchor).isActive = true
         
-        nextButton.topAnchor.constraint(equalTo: self.photoView.bottomAnchor, constant: 30).isActive = true
+        photoImage.topAnchor.constraint(equalTo: self.photoContainer.topAnchor).isActive = true
+        photoImage.bottomAnchor.constraint(equalTo: self.photoContainer.bottomAnchor).isActive = true
+        photoImage.leftAnchor.constraint(equalTo: self.photoContainer.leftAnchor).isActive = true
+        photoImage.rightAnchor.constraint(equalTo: self.photoContainer.rightAnchor).isActive = true
+        
+        nextButton.topAnchor.constraint(equalTo: self.photoContainer.bottomAnchor, constant: 30).isActive = true
         nextButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
         nextButton.widthAnchor.constraint(equalToConstant: 100).isActive = true
         nextButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
