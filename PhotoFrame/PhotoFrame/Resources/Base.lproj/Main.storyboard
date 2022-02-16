@@ -217,26 +217,34 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="faD-gJ-aia" customClass="CustomButton" customModule="PhotoFrame" customModuleProvider="target">
-                                <rect key="frame" x="147" y="434" width="145" height="59"/>
+                                <rect key="frame" x="150" y="338" width="114" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button1">
+                                <buttonConfiguration key="configuration" style="plain" title="Show">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="37"/>
                                 </buttonConfiguration>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a83-ZN-0cr" customClass="CustomButton" customModule="PhotoFrame" customModuleProvider="target">
-                                <rect key="frame" x="144" y="501" width="151" height="59"/>
+                                <rect key="frame" x="105" y="419" width="205" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button2">
+                                <buttonConfiguration key="configuration" style="plain" title="ShowDetail">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="37"/>
                                 </buttonConfiguration>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vjJ-nN-RXz" customClass="CustomButton" customModule="PhotoFrame" customModuleProvider="target">
-                                <rect key="frame" x="144" y="568" width="152" height="59"/>
+                                <rect key="frame" x="68" y="486" width="278" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button3">
+                                <buttonConfiguration key="configuration" style="plain" title="Present Modally">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="37"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wsP-4F-a7p" customClass="CustomButton" customModule="PhotoFrame" customModuleProvider="target">
+                                <rect key="frame" x="42" y="553" width="331" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Present As Popover">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="37"/>
                                 </buttonConfiguration>
                             </button>
@@ -246,14 +254,31 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="6jH-t7-HMX"/>
                     <connections>
-                        <outlet property="testButton1" destination="faD-gJ-aia" id="vm2-gh-IaJ"/>
-                        <outlet property="testButton2" destination="a83-ZN-0cr" id="HgA-vt-Q2L"/>
-                        <outlet property="testButton3" destination="vjJ-nN-RXz" id="htO-4S-yL9"/>
+                        <outlet property="presentAsPopover" destination="wsP-4F-a7p" id="fZq-fU-zy3"/>
+                        <outlet property="presentModally" destination="vjJ-nN-RXz" id="9SR-jk-EEO"/>
+                        <outlet property="show" destination="faD-gJ-aia" id="8Vy-Rx-KBk"/>
+                        <outlet property="showDetail" destination="a83-ZN-0cr" id="GVX-zS-wv4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wwa-5d-l1d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="929" y="2210"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="FZ9-Va-nDB">
+            <objects>
+                <viewController storyboardIdentifier="NextViewController" id="KnZ-cE-fJq" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iPd-jJ-k7F">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="AX0-Sb-A1D"/>
+                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="VoK-kf-wwY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5IN-7h-FAR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1974" y="2210"/>
         </scene>
     </scenes>
     <resources>
@@ -266,6 +291,9 @@
         </systemColor>
         <systemColor name="systemBrownColor">
             <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
