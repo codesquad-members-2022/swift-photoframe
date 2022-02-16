@@ -25,6 +25,7 @@ class ViewController: UIViewController {
         
         photoLabel.translatesAutoresizingMaskIntoConstraints = false
         firstDescription.translatesAutoresizingMaskIntoConstraints = false
+        nextButton.translatesAutoresizingMaskIntoConstraints = false
         
         photoLabel.text = "Mase의 사진액자"
         photoLabel.textColor = .systemBlue
@@ -46,5 +47,13 @@ class ViewController: UIViewController {
         
         firstDescription.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         firstDescription.centerYAnchor.constraint(equalTo: photoLabel.bottomAnchor, constant: 50).isActive = true
+        
+        
+        nextButton.backgroundColor = .systemGray4
+        nextButton.layer.cornerRadius = 10
+        
+        nextButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        nextButton.centerYAnchor.constraint(equalTo: photoLabel.topAnchor, constant: -50).isActive = true
+        
     }
 }
