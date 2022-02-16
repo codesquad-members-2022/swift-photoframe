@@ -9,20 +9,20 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var photoLabel: UILabel!
+    @IBOutlet weak var firstLabel: UILabel!
     
-    @IBOutlet weak var photoDiscription: UILabel!
+    @IBOutlet weak var firstDescription: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        self.photoLabel.text = "bibi의 사진액자"
-        self.photoLabel.textColor = UIColor.blue
+        self.firstLabel.text = "bibi의 사진액자"
+        self.firstLabel.font = UIFont.boldSystemFont(ofSize: 30)
         
-        self.photoDiscription.text =
+        self.firstDescription.text =
         "Loaded by FirstViewController"
-        self.photoDiscription.font = UIFont.boldSystemFont(ofSize: 15)
+        self.firstDescription.textColor = UIColor.gray
     }
 
 
