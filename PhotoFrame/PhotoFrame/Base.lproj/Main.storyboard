@@ -77,6 +77,14 @@
                     <view key="view" contentMode="scaleToFill" id="sFR-D4-zYH" colorLabel="IBBuiltInLabel-Gray">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Heg-IL-g8u">
+                                <rect key="frame" x="183" y="406" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="다음"/>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="WuQ-h3-Fri"/>
                         <color key="backgroundColor" systemColor="systemGrayColor"/>
                     </view>
