@@ -216,11 +216,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="faD-gJ-aia">
-                                <rect key="frame" x="155" y="434" width="129" height="59"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="faD-gJ-aia" customClass="CustomButton" customModule="PhotoFrame" customModuleProvider="target">
+                                <rect key="frame" x="147" y="434" width="145" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button">
+                                <buttonConfiguration key="configuration" style="plain" title="Button1">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="37"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a83-ZN-0cr" customClass="CustomButton" customModule="PhotoFrame" customModuleProvider="target">
+                                <rect key="frame" x="144" y="501" width="151" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button2">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="37"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vjJ-nN-RXz" customClass="CustomButton" customModule="PhotoFrame" customModuleProvider="target">
+                                <rect key="frame" x="144" y="568" width="152" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button3">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="37"/>
                                 </buttonConfiguration>
                             </button>
@@ -230,7 +246,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="6jH-t7-HMX"/>
                     <connections>
-                        <outlet property="testButton" destination="faD-gJ-aia" id="I1i-wE-ml9"/>
+                        <outlet property="testButton1" destination="faD-gJ-aia" id="vm2-gh-IaJ"/>
+                        <outlet property="testButton2" destination="a83-ZN-0cr" id="HgA-vt-Q2L"/>
+                        <outlet property="testButton3" destination="vjJ-nN-RXz" id="htO-4S-yL9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wwa-5d-l1d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

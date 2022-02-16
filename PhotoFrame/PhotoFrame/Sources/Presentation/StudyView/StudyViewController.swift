@@ -8,42 +8,30 @@
 import Foundation
 import UIKit
 
+class CustomButton: UIButton {
+    var testValue: String = ""
+}
+
 class StudyViewController: UIViewController {
     
-    @IBOutlet weak var testButton: UIButton!
+    @IBOutlet weak var testButton1: CustomButton!
+    @IBOutlet weak var testButton2: CustomButton!
+    @IBOutlet weak var testButton3: CustomButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        testButton.addTarget(self, action: #selector(onTestButtonTapped_1), for: .touchUpInside)
-        testButton.addTarget(self, action: #selector(onTestButtonTapped_2), for: .touchUpInside)
-        testButton.addTarget(self, action: #selector(onTestButtonTapped_3), for: .touchUpInside)
-        testButton.addTarget(self, action: #selector(onTestButtonTapped_4), for: .touchUpInside)
-        testButton.addTarget(self, action: #selector(onTestButtonTapped_5), for: .touchUpInside)
+        testButton1.addTarget(self, action: #selector(onTestButtonTapped(_:)), for: .touchUpInside)
+        testButton1.testValue = "testButton1"
+        testButton2.addTarget(self, action: #selector(onTestButtonTapped(_:)), for: .touchUpInside)
+        testButton2.testValue = "testButton2"
+        testButton3.addTarget(self, action: #selector(onTestButtonTapped(_:)), for: .touchUpInside)
+        testButton3.testValue = "testButton3"
     }
     
     @objc
-    func onTestButtonTapped_1() {
-        print("onTestButtonTapped_1")
-    }
-    
-    @objc
-    func onTestButtonTapped_2() {
-        print("onTestButtonTapped_2")
-    }
-    
-    @objc
-    func onTestButtonTapped_3() {
-        print("onTestButtonTapped_3")
-    }
-    
-    @objc
-    func onTestButtonTapped_4() {
-        print("onTestButtonTapped_4")
-    }
-    
-    @objc
-    func onTestButtonTapped_5() {
-        print("onTestButtonTapped_5")
+    func onTestButtonTapped(_ sender: CustomButton) {
+        print("onTestButtonTapped - \(sender.testValue)")
     }
 }
+
