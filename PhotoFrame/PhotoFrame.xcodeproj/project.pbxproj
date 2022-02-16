@@ -14,6 +14,8 @@
 		BC545A4D27BB74C10053E2BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC545A4C27BB74C10053E2BD /* Assets.xcassets */; };
 		BC545A5027BB74C10053E2BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC545A4E27BB74C10053E2BD /* LaunchScreen.storyboard */; };
 		BC545A5827BB76FA0053E2BD /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = BC545A5727BB76FA0053E2BD /* README.md */; };
+		BC9AB2A927BCE643009B4E01 /* GrayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9AB2A827BCE643009B4E01 /* GrayViewController.swift */; };
+		BC9AB2AB27BD0E7E009B4E01 /* YellowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9AB2AA27BD0E7D009B4E01 /* YellowViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		BC545A4F27BB74C10053E2BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BC545A5127BB74C10053E2BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC545A5727BB76FA0053E2BD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
+		BC9AB2A827BCE643009B4E01 /* GrayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrayViewController.swift; sourceTree = "<group>"; };
+		BC9AB2AA27BD0E7D009B4E01 /* YellowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,8 @@
 				BC545A4327BB74BF0053E2BD /* AppDelegate.swift */,
 				BC545A4527BB74BF0053E2BD /* SceneDelegate.swift */,
 				BC545A4727BB74BF0053E2BD /* ViewController.swift */,
+				BC9AB2AA27BD0E7D009B4E01 /* YellowViewController.swift */,
+				BC9AB2A827BCE643009B4E01 /* GrayViewController.swift */,
 				BC545A5727BB76FA0053E2BD /* README.md */,
 				BC545A4927BB74BF0053E2BD /* Main.storyboard */,
 				BC545A4C27BB74C10053E2BD /* Assets.xcassets */,
@@ -142,9 +148,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC9AB2A927BCE643009B4E01 /* GrayViewController.swift in Sources */,
 				BC545A4827BB74BF0053E2BD /* ViewController.swift in Sources */,
 				BC545A4427BB74BF0053E2BD /* AppDelegate.swift in Sources */,
 				BC545A4627BB74BF0053E2BD /* SceneDelegate.swift in Sources */,
+				BC9AB2AB27BD0E7E009B4E01 /* YellowViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

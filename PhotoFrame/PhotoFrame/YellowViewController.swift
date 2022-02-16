@@ -7,10 +7,8 @@
 
 import UIKit
 
-class GrayViewController: UIViewController {
+class YellowViewController: UIViewController {
 
-    @IBAction func closeButtonTouched(_ sender: UIButton) {
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
