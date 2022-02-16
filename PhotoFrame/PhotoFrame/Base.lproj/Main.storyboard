@@ -31,7 +31,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
-                                    <action selector="closeButtonTouched:" destination="hbo-mB-i4C" eventType="touchUpInside" id="yWy-8O-2Zq"/>
+                                    <action selector="closeButtonTapped:" destination="hbo-mB-i4C" eventType="touchUpInside" id="2Li-nJ-cP2"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -40,7 +40,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="bzt-jQ-sTZ"/>
                     <connections>
-                        <outlet property="closeBtn" destination="cNK-Jz-zkT" id="ueO-c7-g93"/>
+                        <outlet property="closeButton" destination="cNK-Jz-zkT" id="C0u-Pd-gWC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GUS-RS-sZh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -70,7 +70,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="wAc-xC-bKf"/>
                     <connections>
-                        <outlet property="closeBtn" destination="4ZU-qK-ab9" id="XFJ-pI-UE9"/>
+                        <outlet property="closeButton" destination="4ZU-qK-ab9" id="zrT-SI-zCV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ut3-bN-lec" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

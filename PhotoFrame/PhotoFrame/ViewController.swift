@@ -17,7 +17,6 @@ class ViewController: UIViewController {
     
     override func loadView() {
         super.loadView()
-        self.yellowVC = self.storyboard?.instantiateViewController(withIdentifier: "YellowVC")
     }
     
     override func viewDidLoad() {
@@ -40,7 +39,8 @@ class ViewController: UIViewController {
         self.firstLabel.backgroundColor = UIColor.yellow
         self.firstLabel.alpha = 0.5
         guard let yellowVC = yellowVC else {
-            if let vc = self.storyboard?.instantiateViewController(withIdentifier: "yellowVC"){
+            print("yellowVC tapped")
+            if let vc = self.storyboard?.instantiateViewController(withIdentifier: "YellowVC"){
                 self.yellowVC = vc
                 print("yellowVC was nil")
                 present(vc, animated: true, completion: nil)

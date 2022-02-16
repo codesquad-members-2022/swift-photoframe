@@ -10,7 +10,8 @@ import UIKit
 
 class YellowViewController: UIViewController{
     
-    @IBOutlet weak var closeBtn: UIButton!
+    @IBOutlet weak var closeButton: UIButton!
+    
     private lazy var greenVC = storyboard?.instantiateViewController(withIdentifier: "GreenVC")
     
     override func loadView() {
@@ -21,7 +22,7 @@ class YellowViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         print("\(self.classForKeyedArchiver!) viewDidLoad")
-        setViewSetting(color: .yellow,btn: self.closeBtn)
+        setViewSetting(color: .yellow, btn: self.closeButton)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -51,7 +52,7 @@ class YellowViewController: UIViewController{
         self.present(greenVC, animated: true, completion: nil)
     }
     
-    @IBAction func closeButtonTouched(_ sender: Any) {
+    @IBAction func closeButtonTapped(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
     

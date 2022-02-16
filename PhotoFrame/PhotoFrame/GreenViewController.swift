@@ -10,10 +10,11 @@ import UIKit
 
 class GreenViewController: UIViewController{
     
-    @IBOutlet weak var closeBtn: UIButton!
+    @IBOutlet weak var closeButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        setViewSetting(color: .green,btn: self.closeBtn)
+        setViewSetting(color: .green,btn: self.closeButton)
         
     }
     
