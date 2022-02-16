@@ -53,7 +53,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
                                     <action selector="nextButtonTouched:" destination="2sk-aB-aUq" eventType="touchUpInside" id="Eq6-70-1Nw"/>
-                                    <segue destination="LDJ-Xy-oFr" kind="show" id="jEU-7V-RUq"/>
+                                    <segue destination="LDJ-Xy-oFr" kind="popoverPresentation" popoverAnchorView="yUM-bq-z0n" id="jEU-7V-RUq">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
                                 </connections>
                             </button>
                         </subviews>
@@ -97,7 +99,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="Pl8-u7-msj"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemBrownColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="jQf-t0-EOG"/>
                 </viewController>
@@ -105,10 +107,28 @@
             </objects>
             <point key="canvasLocation" x="1475" y="-524"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="J6S-dM-KiR">
+            <objects>
+                <viewController id="b4p-1P-gk9" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="55c-H1-G7E">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="aWU-ok-fUu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lgi-Qk-Tsz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2199" y="-524"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
