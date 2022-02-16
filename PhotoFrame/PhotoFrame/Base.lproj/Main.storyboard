@@ -86,10 +86,10 @@
             </objects>
             <point key="canvasLocation" x="-2136" y="-1316"/>
         </scene>
-        <!--View Controller-->
+        <!--Gray View Controller-->
         <scene sceneID="Id6-gq-3dU">
             <objects>
-                <viewController id="ZPo-c5-w6j" sceneMemberID="viewController">
+                <viewController id="ZPo-c5-w6j" customClass="GrayViewController" customModule="PhotoFrame" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wrS-Hg-RDc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -100,7 +100,19 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="다음"/>
                                 <connections>
+                                    <action selector="nextButtonTouched:" destination="ZPo-c5-w6j" eventType="touchUpInside" id="iAD-n3-SYV"/>
                                     <segue destination="fve-yE-h0D" kind="presentation" id="npY-hR-okB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NpX-J4-oFr">
+                                <rect key="frame" x="135" y="196" width="124" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="닫기">
+                                    <color key="baseBackgroundColor" systemColor="systemRedColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="exitButtonTouched:" destination="ZPo-c5-w6j" eventType="touchUpInside" id="eEZ-df-FYd"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -108,6 +120,10 @@
                         <color key="backgroundColor" systemColor="systemGray4Color"/>
                     </view>
                     <navigationItem key="navigationItem" id="7h6-Gf-MuT"/>
+                    <connections>
+                        <outlet property="exitButton" destination="NpX-J4-oFr" id="QD5-Aw-b9R"/>
+                        <outlet property="nextButton" destination="DHj-15-Ayh" id="X0l-bW-GuY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fCe-Cr-bkk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -139,6 +155,9 @@
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemTealColor">
             <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
