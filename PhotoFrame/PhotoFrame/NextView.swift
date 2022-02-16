@@ -10,6 +10,5 @@ import UIKit
 
 class NextView: UIViewController {
     override func viewDidLoad() {
-        <#code#>
     }
 }
