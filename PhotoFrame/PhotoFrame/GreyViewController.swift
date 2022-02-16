@@ -7,7 +7,7 @@
 
 import UIKit
 
-class GreyViewController: CallBackMethod {
+class GreyViewController: FlowOfViewContoller {
     @IBAction func closeButtonTouched(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
