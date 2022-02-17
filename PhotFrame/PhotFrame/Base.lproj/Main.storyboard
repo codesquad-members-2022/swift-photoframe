@@ -126,10 +126,10 @@
             </objects>
             <point key="canvasLocation" x="1573.5999999999999" y="-346.55172413793105"/>
         </scene>
-        <!--Yellow View Controller-->
+        <!--View Controller-->
         <scene sceneID="Kih-vq-BOQ">
             <objects>
-                <viewController id="oMo-eu-6h0" customClass="YellowViewController" customModule="PhotFrame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="oMo-eu-6h0" customClass="ViewController" customModule="PhotFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Z0I-KT-a6L">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
