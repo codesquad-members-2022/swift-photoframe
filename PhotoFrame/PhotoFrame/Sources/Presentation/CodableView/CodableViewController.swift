@@ -50,21 +50,25 @@ class CodableViewController: UIViewController {
         self.view.addSubview(photoContainer)
         self.view.addSubview(nextButton)
         
+        photoContainer.translatesAutoresizingMaskIntoConstraints = false
         photoContainer.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 100).isActive = true
         photoContainer.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
         photoContainer.widthAnchor.constraint(equalToConstant: 270).isActive = true
         photoContainer.heightAnchor.constraint(equalToConstant: 270).isActive = true
         
+        photoBoard.translatesAutoresizingMaskIntoConstraints = false
         photoBoard.topAnchor.constraint(equalTo: self.photoContainer.topAnchor).isActive = true
         photoBoard.bottomAnchor.constraint(equalTo: self.photoContainer.bottomAnchor).isActive = true
         photoBoard.leftAnchor.constraint(equalTo: self.photoContainer.leftAnchor).isActive = true
         photoBoard.rightAnchor.constraint(equalTo: self.photoContainer.rightAnchor).isActive = true
         
+        photoImage.translatesAutoresizingMaskIntoConstraints = false
         photoImage.topAnchor.constraint(equalTo: self.photoContainer.topAnchor).isActive = true
         photoImage.bottomAnchor.constraint(equalTo: self.photoContainer.bottomAnchor).isActive = true
         photoImage.leftAnchor.constraint(equalTo: self.photoContainer.leftAnchor).isActive = true
         photoImage.rightAnchor.constraint(equalTo: self.photoContainer.rightAnchor).isActive = true
         
+        nextButton.translatesAutoresizingMaskIntoConstraints = false
         nextButton.topAnchor.constraint(equalTo: self.photoContainer.bottomAnchor, constant: 30).isActive = true
         nextButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
         nextButton.widthAnchor.constraint(equalToConstant: 100).isActive = true
