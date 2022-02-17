@@ -91,11 +91,25 @@
                                     <segue destination="obM-Ks-hqv" kind="show" id="mbK-aY-17Q"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YgL-bv-mT7">
+                                <rect key="frame" x="20" y="20" width="60" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="1Qf-vi-Si0"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="닫기"/>
+                                <connections>
+                                    <action selector="closeButtonTouched:" destination="fWP-MA-5AE" eventType="touchUpInside" id="Cu6-fk-pi5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Zo3-M5-yy8"/>
                         <color key="backgroundColor" red="1" green="0.76244297058229082" blue="0.85208236719575248" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="YgL-bv-mT7" firstAttribute="top" secondItem="Zo3-M5-yy8" secondAttribute="top" constant="20" id="LWA-I9-wgB"/>
                             <constraint firstItem="1J2-Ip-E46" firstAttribute="centerX" secondItem="1zk-pe-4jp" secondAttribute="centerX" id="Or7-Sh-Gi0"/>
+                            <constraint firstItem="YgL-bv-mT7" firstAttribute="leading" secondItem="Zo3-M5-yy8" secondAttribute="leading" constant="20" id="Z1W-FH-pyV"/>
                             <constraint firstItem="1J2-Ip-E46" firstAttribute="centerY" secondItem="1zk-pe-4jp" secondAttribute="centerY" id="eeP-fp-5aa"/>
                         </constraints>
                     </view>
