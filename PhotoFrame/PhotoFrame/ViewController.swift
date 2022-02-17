@@ -10,14 +10,12 @@ class ViewController: UIViewController {
         self.firstLabel.backgroundColor = UIColor.yellow
         self.firstLabel.alpha = 0.5
         print(#function)
-        
-        guard let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "GrayViewController")else{
-            print("No NextViewController Found")
-            return
+
+        if let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "GrayViewController"){
+            nextViewController.modalPresentationStyle = .fullScreen
+            nextViewController.modalTransitionStyle = .coverVertical
+            self.present(nextViewController, animated: true, completion: nil)
         }
-        nextViewController.modalPresentationStyle = .fullScreen
-        nextViewController.modalTransitionStyle = .coverVertical
-        self.present(nextViewController, animated: true, completion: nil)
     }
 
     @IBAction func nextButtonTouchedUpOutside(_ sender: Any) {
@@ -36,7 +34,6 @@ class ViewController: UIViewController {
         
         setFirstLabel()
         setNextButton()
-        
     }
     
     func setNextButton(){
