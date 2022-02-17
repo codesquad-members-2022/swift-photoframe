@@ -10,7 +10,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var firstLabel: UILabel!
-    @IBOutlet var firstDescription: UILabel!
+    @IBOutlet weak var firstDescription: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,8 +20,8 @@ class ViewController: UIViewController {
     
     @IBAction func nextButtonTouched(_ sender: Any) {
         self.firstLabel.textColor = UIColor.blue
-            self.firstLabel.backgroundColor = UIColor.yellow
-            self.firstLabel.alpha = 0.5
+        self.firstLabel.backgroundColor = UIColor.yellow
+        self.firstLabel.alpha = 0.5
     }
     
 }
