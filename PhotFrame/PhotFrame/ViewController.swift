@@ -17,11 +17,15 @@ class ViewController: UIViewController {
         self.firstLabel.text = "joobang의 사진액자"
         print(#file, #line, #function, #column)
     }
-    
+
     @IBAction func nextButtonTouched(_ sender: Any) {
         self.firstLabel.textColor = UIColor.blue
         self.firstLabel.backgroundColor = UIColor.yellow
         self.firstLabel.alpha = 0.5
+    }
+    
+    @IBAction func closeButtonTouched(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
     
 }
