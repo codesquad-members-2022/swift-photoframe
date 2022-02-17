@@ -22,9 +22,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="faI-rv-oPQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="535" y="234"/>
+            <point key="canvasLocation" x="1444.9275362318842" y="233.70535714285714"/>
         </scene>
-        <!--Item 1-->
+        <!--First View Controller-->
         <scene sceneID="IRM-SS-bbD">
             <objects>
                 <viewController id="OBV-ub-mVL" customClass="FirstViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
@@ -47,7 +47,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sMc-gT-fyR">
-                                <rect key="frame" x="0.0" y="200" width="414" height="31"/>
+                                <rect key="frame" x="0.0" y="181" width="414" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="다음"/>
@@ -64,14 +64,13 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="closeButtonTouched:" destination="OBV-ub-mVL" eventType="touchUpInside" id="Gog-AK-yBi"/>
-                                    <action selector="closeButtonTouched:" destination="HyD-pF-l2U" eventType="touchUpInside" id="IFE-TJ-nvO"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gjd-8v-gSC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="FOM-Wm-7AK"/>
+                    <navigationItem key="navigationItem" id="9je-DD-bSb"/>
                     <connections>
                         <outlet property="descriptionLabel" destination="DqW-FV-fgy" id="O1n-7a-jhw"/>
                         <outlet property="photoLabel" destination="LOW-IK-26V" id="n9g-QF-Sq4"/>
@@ -79,7 +78,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V0w-GB-wlZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="534.78260869565224" y="-372.32142857142856"/>
+            <point key="canvasLocation" x="1444.9275362318842" y="-372.32142857142856"/>
         </scene>
         <!--Puple View Controller-->
         <scene sceneID="LDe-IX-jJY">
@@ -126,7 +125,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sma-8u-fAS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1478" y="-366"/>
+            <point key="canvasLocation" x="2386.9565217391305" y="-366.29464285714283"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="6dU-iA-r7e">
@@ -138,7 +137,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="OBV-ub-mVL" kind="relationship" relationship="viewControllers" id="lB8-E8-npV"/>
+                        <segue destination="8cS-tc-VRr" kind="relationship" relationship="viewControllers" id="lB8-E8-npV"/>
                         <segue destination="NlW-Ep-aiC" kind="relationship" relationship="viewControllers" id="29E-jk-ATG"/>
                     </connections>
                 </tabBarController>
@@ -181,7 +180,6 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="closeButtonTouched:" destination="3py-mJ-7YT" eventType="touchUpInside" id="DDg-lx-BpA"/>
-                                    <action selector="closeButtonTouched:" destination="HyD-pF-l2U" eventType="touchUpInside" id="SLa-ua-nAB"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -192,7 +190,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tNA-sh-X6c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2295.6521739130435" y="-366.29464285714283"/>
+            <point key="canvasLocation" x="3205.7971014492755" y="-366.29464285714283"/>
         </scene>
         <!--Green View Controller-->
         <scene sceneID="RTS-r7-ZVa">
@@ -229,7 +227,6 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="closeButtonTouched:" destination="Sa7-Dx-ayG" eventType="touchUpInside" id="LM1-Ov-XRd"/>
-                                    <action selector="closeButtonTouched:" destination="HyD-pF-l2U" eventType="touchUpInside" id="mQc-St-sBw"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -240,7 +237,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ao4-TZ-9GW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3911.594202898551" y="-354.24107142857139"/>
+            <point key="canvasLocation" x="4821.739130434783" y="-354.24107142857139"/>
         </scene>
         <!--Yellow View Controller-->
         <scene sceneID="hH7-QN-XGI">
@@ -276,7 +273,6 @@
                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="closeButtonTouched:" destination="HyD-pF-l2U" eventType="touchUpInside" id="0Hf-V2-cQI"/>
                                     <action selector="closeButtonTouched:" destination="v5l-oL-LYM" eventType="touchUpInside" id="c0q-ph-5oi"/>
                                 </connections>
                             </button>
@@ -288,7 +284,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vLX-Kb-Onp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3126" y="-366"/>
+            <point key="canvasLocation" x="4034.7826086956525" y="-366.29464285714283"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="9kp-EL-MzF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8cS-tc-VRr" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item 1" id="FOM-Wm-7AK"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8Qh-VV-id7">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="OBV-ub-mVL" kind="relationship" relationship="rootViewController" id="Zrp-xS-6EL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rFW-Gg-sJw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="534.78260869565224" y="-372.32142857142856"/>
         </scene>
     </scenes>
     <resources>
