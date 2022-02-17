@@ -273,6 +273,10 @@ override func viewDidDisappear(_ animated: Bool) {
 
 #### 6-1. Navigation Controller
 
-- 공식문서에서는 UINavigationController에 대해 스택 기반의 계층화된 콘텐츠가 모여있는 view controller 컨테이너로 정의하고 있음
+- [공식문서](https://developer.apple.com/documentation/uikit/uinavigationcontroller)에서는 UINavigationController에 대해 스택 기반의 계층화된 콘텐츠가 모여있는 view controller 컨테이너로 정의하고 있음
+
+  *A container view controller that defines a stack-based scheme for navigating hierarchical content.*
+
 - 이러한 구조에서는 한 시점에 하나의 view controller만이 보이도록 하고 있으며, 하나의 view controller이 보이도록 선택하면 이를 스크린에 push하고(기존의 화면은 화면에서 사라짐),  back button과 같은 닫기 버튼을 누르면 top에 위치한 view controller을 화면에서 pop하여 사라지게 한 후 바로 밑에 있는 view controller이 화면에 위치하도록 함
+
   - 이런 식으로 여러 view가 스택과 같이 push, pop의 과정을 거치며 사용자에게 보이는 화면은 스택의 top에 해당하는 부분이라는 점에서, 화면을 전환하고 닫는 관련 함수의 이름도 popViewController, pushViewController와 같은 형식으로 표현
