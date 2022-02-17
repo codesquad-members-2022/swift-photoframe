@@ -51,7 +51,7 @@ class ViewController: ViewContollerFlow {
     @IBAction func nextImageButtonTouched(_ sender: Any) {
         guard let randomInt = (1...22).randomElement() else {return}
         let randomString = String.init(format: "%02d", arguments: [randomInt])
-        self.photoImageView.image = UIImage(named: "./Demo Images/\(randomString).jpg")
+        self.photoImageView.image = UIImage(named: "\(randomString).jpg")
     }
 }
 
