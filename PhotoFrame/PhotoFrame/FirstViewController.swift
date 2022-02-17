@@ -24,10 +24,10 @@ class FirstViewController:UIViewController {
     }
     //다음 버튼 클릭시
     @IBAction func NextButtonTouched(_ sender: UIButton) {
-        guard let NextViewController = self.storyboard?.instantiateViewController(withIdentifier: "PurpleViewController") else { return } //guard let구문을 이용해서 옵셔널을 없애준다.
-        NextViewController.modalPresentationStyle = .fullScreen //modal을 어떤방식으로 보여줄것인지 정한다.
-        NextViewController.modalTransitionStyle = .coverVertical //trabsition 즉 화면 전환시 어떻게 보여줄지 정한다.
-        self.present(NextViewController, animated: true, completion: nil) //present해준다.
+//        guard let NextViewController = self.storyboard?.instantiateViewController(withIdentifier: "PurpleViewController") else { return } //guard let구문을 이용해서 옵셔널을 없애준다.
+//        NextViewController.modalPresentationStyle = .fullScreen //modal을 어떤방식으로 보여줄것인지 정한다.
+//        NextViewController.modalTransitionStyle = .coverVertical //trabsition 즉 화면 전환시 어떻게 보여줄지 정한다.
+//        self.present(NextViewController, animated: true, completion: nil) //present해준다.
     }
     
     func configureLabel() {
