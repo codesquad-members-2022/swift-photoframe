@@ -30,18 +30,18 @@ class ViewController1 : UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print("1st view \(#function)")
+        print("1st \(#function)")
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        print("1st view \(#function)")
+        print("1st \(#function)")
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        print("1st view \(#function)")
+        print("1st \(#function)")
     }
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        print("1st view \(#function)")
+        print("1st \(#function)")
     }
 }
