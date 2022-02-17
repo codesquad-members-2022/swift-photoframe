@@ -95,10 +95,10 @@
             </objects>
             <point key="canvasLocation" x="-871" y="-439"/>
         </scene>
-        <!--View Controller-->
+        <!--Scene1 View Controller-->
         <scene sceneID="gM8-F2-DlK">
             <objects>
-                <viewController id="6wT-tc-Cka" customClass="ViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="6wT-tc-Cka" customClass="Scene1ViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CEv-S4-si5" customClass="View">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -143,7 +143,7 @@
         <!--Item-->
         <scene sceneID="a6B-aO-NAh">
             <objects>
-                <viewController id="2yP-B6-OLJ" customClass="ViewController2" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="2yP-B6-OLJ" customClass="Scene2ViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Bt9-ac-COl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -12,12 +12,12 @@
 		724E68D927BCE608005E4718 /* ViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724E68D827BCE608005E4718 /* ViewControllerProtocol.swift */; };
 		727334C227B9EB8500AE404F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727334C127B9EB8500AE404F /* AppDelegate.swift */; };
 		727334C427B9EB8500AE404F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727334C327B9EB8500AE404F /* SceneDelegate.swift */; };
-		727334C627B9EB8500AE404F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727334C527B9EB8500AE404F /* ViewController.swift */; };
+		727334C627B9EB8500AE404F /* Scene1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727334C527B9EB8500AE404F /* Scene1ViewController.swift */; };
 		727334C927B9EB8500AE404F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 727334C727B9EB8500AE404F /* Main.storyboard */; };
 		727334CB27B9EB8700AE404F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 727334CA27B9EB8700AE404F /* Assets.xcassets */; };
 		727334CE27B9EB8700AE404F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 727334CC27B9EB8700AE404F /* LaunchScreen.storyboard */; };
 		727334D627B9ED0400AE404F /* PhotoTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727334D527B9ED0400AE404F /* PhotoTabBarController.swift */; };
-		727334D827B9F53E00AE404F /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727334D727B9F53E00AE404F /* ViewController2.swift */; };
+		727334D827B9F53E00AE404F /* Scene2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727334D727B9F53E00AE404F /* Scene2ViewController.swift */; };
 		72B53C0727BA6DF2002C014B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 72B53C0627BA6DF2002C014B /* README.md */; };
 /* End PBXBuildFile section */
 
@@ -28,13 +28,13 @@
 		727334BE27B9EB8500AE404F /* PhotoFrame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoFrame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		727334C127B9EB8500AE404F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		727334C327B9EB8500AE404F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		727334C527B9EB8500AE404F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		727334C527B9EB8500AE404F /* Scene1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene1ViewController.swift; sourceTree = "<group>"; };
 		727334C827B9EB8500AE404F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		727334CA27B9EB8700AE404F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		727334CD27B9EB8700AE404F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		727334CF27B9EB8700AE404F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		727334D527B9ED0400AE404F /* PhotoTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTabBarController.swift; sourceTree = "<group>"; };
-		727334D727B9F53E00AE404F /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
+		727334D727B9F53E00AE404F /* Scene2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene2ViewController.swift; sourceTree = "<group>"; };
 		72B53C0627BA6DF2002C014B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,8 +74,8 @@
 				723950B027BB8B27008C9F5A /* YellowViewController.swift */,
 				723950B227BB8D2D008C9F5A /* GreenViewController.swift */,
 				727334D527B9ED0400AE404F /* PhotoTabBarController.swift */,
-				727334C527B9EB8500AE404F /* ViewController.swift */,
-				727334D727B9F53E00AE404F /* ViewController2.swift */,
+				727334C527B9EB8500AE404F /* Scene1ViewController.swift */,
+				727334D727B9F53E00AE404F /* Scene2ViewController.swift */,
 				724E68D827BCE608005E4718 /* ViewControllerProtocol.swift */,
 				727334C727B9EB8500AE404F /* Main.storyboard */,
 				727334CA27B9EB8700AE404F /* Assets.xcassets */,
@@ -158,9 +158,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				724E68D927BCE608005E4718 /* ViewControllerProtocol.swift in Sources */,
-				727334D827B9F53E00AE404F /* ViewController2.swift in Sources */,
+				727334D827B9F53E00AE404F /* Scene2ViewController.swift in Sources */,
 				727334D627B9ED0400AE404F /* PhotoTabBarController.swift in Sources */,
-				727334C627B9EB8500AE404F /* ViewController.swift in Sources */,
+				727334C627B9EB8500AE404F /* Scene1ViewController.swift in Sources */,
 				727334C227B9EB8500AE404F /* AppDelegate.swift in Sources */,
 				723950B127BB8B27008C9F5A /* YellowViewController.swift in Sources */,
 				727334C427B9EB8500AE404F /* SceneDelegate.swift in Sources */,
