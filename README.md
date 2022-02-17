@@ -10,8 +10,8 @@ iOS 포토프레임 프로젝트 저장소
 - [x] IBAction 연결하기
 - [x] Scene을 Segue로 연결하기
 - [x] ViewController 연결하기
-- [ ] Container ViewController 활용하기
-- [ ] 다른 화면 연결하기
+- [x] Container ViewController 활용하기
+- [x] 다른 화면 연결하기
 - [ ] 사진 앨범 선택하기
 - [ ] 마무리
 
@@ -280,3 +280,39 @@ override func viewDidDisappear(_ animated: Bool) {
 - 이러한 구조에서는 한 시점에 하나의 view controller만이 보이도록 하고 있으며, 하나의 view controller이 보이도록 선택하면 이를 스크린에 push하고(기존의 화면은 화면에서 사라짐),  back button과 같은 닫기 버튼을 누르면 top에 위치한 view controller을 화면에서 pop하여 사라지게 한 후 바로 밑에 있는 view controller이 화면에 위치하도록 함
 
   - 이런 식으로 여러 view가 스택과 같이 push, pop의 과정을 거치며 사용자에게 보이는 화면은 스택의 top에 해당하는 부분이라는 점에서, 화면을 전환하고 닫는 관련 함수의 이름도 popViewController, pushViewController와 같은 형식으로 표현
+
+​    
+
+### 7. 다른 화면 연결하기
+
+<img src="https://user-images.githubusercontent.com/68586291/154537526-12e2654d-ce8f-4897-9827-472b93cf22c3.gif" alt="image" style="width:30%; align:center;"/>
+
+- UIImageView, UIImage를 활용
+- 스토리보드에서 ImageView 아이템을 추가한 후, 생성해둔 WhiteViewController 클래스에 IBOutlet으로 이전과 동일하게 연결
+  - imageView IBOutlet 변수 생성
+
+```swift
+@IBOutlet weak var imageView: UIImageView!
+```
+
+- 이후 다음 버튼을 눌렀을 때 실행할 nextButtonTouched 함수 내부에서 1~22 사이의 랜덤 숫자를 도출해서 이에 해당하는 이미지 파일명을 만듦
+  - 이후 이에 해당하는 파일정보로 UIImage를 생성해서, imageView.image 속성에 값을 할당
+
+```swift
+@IBAction func nextButtonTouched(_ sender: UIButton) {
+  imageView.image = getRandomImage(number: Int.random(in: 1...22))
+}
+
+func getRandomImage(number: Int)-> UIImage?{
+  let fileName: String = number<10 ? "0\(number)" : String(number)
+  return UIImage(named: "Demo Images/\(fileName).jpg")
+}
+```
+
+- 이미지를 이미지뷰 사이즈에 맞추기 위해서는 Content Mode 를 아래와 같이 Scale To Fill로 변경해줌
+
+```swift
+imageView.contentMode = .scaleToFill
+```
+
+​    
