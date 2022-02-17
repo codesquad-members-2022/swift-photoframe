@@ -49,6 +49,6 @@ class YellowViewController: UIViewController {
         self.show(blueViewController!, sender: sender)
     }
     @IBAction func closeButtonTouched(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
 }
