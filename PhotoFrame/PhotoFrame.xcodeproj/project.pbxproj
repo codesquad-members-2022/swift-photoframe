@@ -13,8 +13,7 @@
 		8D2C393D27B9FA6800A64987 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D2C393C27B9FA6800A64987 /* Assets.xcassets */; };
 		8D2C394027B9FA6800A64987 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D2C393E27B9FA6800A64987 /* LaunchScreen.storyboard */; };
 		8D2C394927B9FEBB00A64987 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2C394827B9FEBB00A64987 /* FirstViewController.swift */; };
-		8D2CB77227BE763A009E20F3 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2CB77127BE763A009E20F3 /* NavigationViewController.swift */; };
-		8DD2165627BE1BF1009B8DCE /* PupleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD2165527BE1BF1009B8DCE /* PupleViewController.swift */; };
+		8DD2165627BE1BF1009B8DCE /* PurpleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD2165527BE1BF1009B8DCE /* PurpleViewController.swift */; };
 		8DD2165827BE1C01009B8DCE /* RedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD2165727BE1C01009B8DCE /* RedViewController.swift */; };
 		8DD2165A27BE1C4A009B8DCE /* YellowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD2165927BE1C4A009B8DCE /* YellowViewController.swift */; };
 		8DD2165C27BE1C5E009B8DCE /* GreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD2165B27BE1C5E009B8DCE /* GreenViewController.swift */; };
@@ -29,8 +28,7 @@
 		8D2C393F27B9FA6800A64987 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D2C394127B9FA6800A64987 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D2C394827B9FEBB00A64987 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		8D2CB77127BE763A009E20F3 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
-		8DD2165527BE1BF1009B8DCE /* PupleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PupleViewController.swift; sourceTree = "<group>"; };
+		8DD2165527BE1BF1009B8DCE /* PurpleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurpleViewController.swift; sourceTree = "<group>"; };
 		8DD2165727BE1C01009B8DCE /* RedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedViewController.swift; sourceTree = "<group>"; };
 		8DD2165927BE1C4A009B8DCE /* YellowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowViewController.swift; sourceTree = "<group>"; };
 		8DD2165B27BE1C5E009B8DCE /* GreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenViewController.swift; sourceTree = "<group>"; };
@@ -66,9 +64,8 @@
 		8D2C393227B9FA6600A64987 /* PhotoFrame */ = {
 			isa = PBXGroup;
 			children = (
-				8D2CB77127BE763A009E20F3 /* NavigationViewController.swift */,
 				8D2C394827B9FEBB00A64987 /* FirstViewController.swift */,
-				8DD2165527BE1BF1009B8DCE /* PupleViewController.swift */,
+				8DD2165527BE1BF1009B8DCE /* PurpleViewController.swift */,
 				8DD2165727BE1C01009B8DCE /* RedViewController.swift */,
 				8DD2165927BE1C4A009B8DCE /* YellowViewController.swift */,
 				8DD2165B27BE1C5E009B8DCE /* GreenViewController.swift */,
@@ -163,10 +160,9 @@
 			files = (
 				8D2C393427B9FA6600A64987 /* AppDelegate.swift in Sources */,
 				8D2C393627B9FA6600A64987 /* SceneDelegate.swift in Sources */,
-				8D2CB77227BE763A009E20F3 /* NavigationViewController.swift in Sources */,
 				8DD2165A27BE1C4A009B8DCE /* YellowViewController.swift in Sources */,
 				8DD2165C27BE1C5E009B8DCE /* GreenViewController.swift in Sources */,
-				8DD2165627BE1BF1009B8DCE /* PupleViewController.swift in Sources */,
+				8DD2165627BE1BF1009B8DCE /* PurpleViewController.swift in Sources */,
 				8DD2165827BE1C01009B8DCE /* RedViewController.swift in Sources */,
 				8D2C394927B9FEBB00A64987 /* FirstViewController.swift in Sources */,
 			);

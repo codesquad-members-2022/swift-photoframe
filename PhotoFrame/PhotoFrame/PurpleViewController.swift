@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PupleViewController: UIViewController {
+class PurpleViewController: UIViewController {
     
     //다음 버튼 클릭시
     @IBAction func nextButtonTouched(_ sender: UIButton) {
