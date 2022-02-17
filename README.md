@@ -170,7 +170,7 @@ Interface Builder에서 많이 사용하게 될 속성은 글자 크기에 관�
 
 - [x] Main.storyboard 파일에서 UIButton을 생성하고 커스텀 클래스에 IBAction으로 연결한다.
 - [x] UIButton의 Title을 수정하고 어떤 Attribute가 있는지 확인하였다.
-- [ ] IBAction과 IBOutlet에 대한 고찰을 해본다.
+- [x] IBAction과 IBOutlet에 대한 고찰을 해본다.
 
 ### 결과 화면
 <img alt="Step3_Result_Before" height="300" src="PhotoFrame/README_images/Step3_Result_Before.png" width="150"/>
@@ -323,12 +323,12 @@ segue를 이용하면 앱 인터페이스의 흐름을 정의할 수 있다. 두
 
 적당한 세그웨이 타입을 선택하는 것은 중요하지만, OS 버전 등에 따라 달라질 가능성이 있기 때문에 항상 조심해야 한다.
 
-|      Segue type       | Behavior                                                                                                                                                                |
-|:---------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|      Show (Push)      | 새로운 컨텐츠를 show(\_:sender:) 메소드로 보여주는 방법이다. 대부분의 상황에서 원본 뷰 컨트롤러에서 모달 방식으로 실행된다. 주로 해당 메소드는 오버라이드 되는 형태로 사용된다. 예를 들어 UINavigationViewController 는 자체 스택에 뷰 컨트롤러들을 저장하게 된다. |
-| Show Detail (Replace) | 새로운 컨텐츠를 showDetailViewController(\_:sender:) 메소드로 보여주는 방법이다. UISplitViewController 객체의 Detail ViewController 내용만을 바꾼다. 다른 뷰 컨트롤러에서 실행되면 Show(Push)와 같다.                |
-|    Present Modally    | 모달로 뷰 컨트롤러를 전환할 때 여러 타입을 지정할 수 있다.                                                                                                                                      |
-| Present as Popover    | 수평 상태에서 popover하게 세그웨이 한다.                                                                                                                                              |
+|      Segue type       | Behavior                                                                                                                                                                                              |
+|:---------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|      Show (Push)      | 새로운 컨텐츠를 show(\_:sender:) 메소드로 보여주는 방법이다. 대부분의 상황에서 원본 뷰 컨트롤러에서 모달 방식으로 실행된다. 주로 해당 메소드는 오버라이드 되는 형태로 사용된다. 예를 들어 UINavigationViewController 는 자체 스택에 뷰 컨트롤러들을 저장하게 된다.                               |
+| Show Detail (Replace) | 새로운 컨텐츠를 showDetailViewController(\_:sender:) 메소드로 보여주는 방법이다. UISplitViewController 객체의 Detail ViewController 내용만을 바꾼다. 다른 뷰 컨트롤러에서 실행되면 Show(Push)와 같다.   UISplitViewController에서 작동하지 않으면 오류가 발생한다. |
+|    Present Modally    | 모달로 뷰 컨트롤러를 전환할 때 여러 타입을 지정할 수 있다.                                                                                                                                                                    |
+| Present as Popover    | 수평 상태에서 popover하게 세그웨이 한다.                                                                                                                                                                            |
 
 <img src="PhotoFrame/README_images/ViewController_Using_Segue.jpg" width="700">
 
@@ -345,10 +345,10 @@ segue를 이용하면 앱 인터페이스의 흐름을 정의할 수 있다. 두
 
 ## IBOutlet 과 IBAction
 
-[@IBOutlet, @IBAction](https://velog.io/@myeongs07/iOS-IBOutlet-IBAction)   
+[@IBOutlet, @IBAction에 대한 참고 블로그](https://velog.io/@myeongs07/iOS-IBOutlet-IBAction)   
 Interface Builder (storyboard) 에서 UIButton, UILabel 등의 요소를 생성한 뒤 커스텀 클래스 내의 프로퍼티로 정의하고 싶을 경우 `Control`+Drag를 이용하여 프로퍼티를 생성하는데 그렇게 생성된 변수는 다음과 같은 형태로 클래스 내에 자동 선언된다.
 
-```swift
+```
 @IBOutlet weak var titleLabel: UILabel!
 @IBAction func buttonTouchUpInside(_ sender: UIButton) { }
 ```
@@ -364,3 +364,23 @@ strong 혹은 weak로 선언되는 해당 변수는 코드가 아닌 인터페�
 ### IBAction
 
 @IBAction도 @IBOutlet과 마찬가지로 인터페이스 빌더에서 정의된 것이다. 버튼 누르기, 피커 선택 등 특정 이벤트가 발생하면 그 응답을 받기 위해 사용한다.
+
+---
+
+## Step4 : Segue 실습
+
+- [x] Scene을 추가하고 ViewController를 드래그해서 연결한다.
+- [x] Segue의 여러 종류에 대해 확인해본다.
+
+### 결과 화면
+<img alt="Step4_Result_1" height="300" src="PhotoFrame/README_images/Step4_Result_1.png" width="150"/>
+<img alt="Step4_Result_2" height="300" src="PhotoFrame/README_images/Step4_Result_2.png" width="150"/>
+<img alt="Step4_Result_3" height="300" src="PhotoFrame/README_images/Step4_Result_3.png" width="150"/>
+
+### Step4 이후 소감 한마디
+
+Git에 대한 학습이 계속 이루어져야 할 것이다.   
+rebase 시 무언가 문제가 생겨서 변경사항을 버리거나 할 때 다시 살펴보고 진행할 수 있도록 ```git base --abort```를 Sourcetree 의 오류 로그를 통해 알 수 있게 뙤었다.   
+GUI툴을 조금 더 사용해보면서 CLI 환경과 얼마나 속도 차이가 있는지, 효율적인지 체험해 볼 예정이다.
+
+요즘 코딩 테스트 문제풀이에 좀 소홀했는데 풀어보는 루틴을 생각해봐야겠다.
