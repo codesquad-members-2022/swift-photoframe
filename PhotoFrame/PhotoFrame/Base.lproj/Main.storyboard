@@ -42,10 +42,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HX9-6i-9mA">
-                                <rect key="frame" x="163" y="637" width="49" height="31"/>
+                                <rect key="frame" x="87" y="637" width="200" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="선택"/>
+                                <connections>
+                                    <action selector="selectButtonTouched:" destination="5bF-jy-SR8" eventType="touchUpInside" id="ofo-Sf-lX5"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ZCs-50-U7W"/>
@@ -59,7 +62,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BG7-4E-BtE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-126" y="242"/>
+            <point key="canvasLocation" x="-127.2" y="241.62561576354682"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Pp3-QT-hJt">
