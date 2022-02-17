@@ -49,7 +49,6 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="다음"/>
                                 <connections>
-                                    <action selector="nextButtonTouched2:" destination="fL3-1V-XyL" eventType="touchUpInside" id="yB1-rz-eRf"/>
                                     <action selector="nextButtonTouched:" destination="fL3-1V-XyL" eventType="touchUpInside" id="iIC-m1-y2h"/>
                                     <segue destination="58e-fP-YbN" kind="show" id="To4-8G-lDy"/>
                                 </connections>
@@ -118,7 +117,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Dismiss ❌"/>
                                         <connections>
-                                            <action selector="closeButtonTouched:" destination="58e-fP-YbN" eventType="touchUpInside" id="VhQ-jj-8Ly"/>
+                                            <action selector="closeButtonTouched:" destination="58e-fP-YbN" eventType="touchUpInside" id="n64-A6-6sr"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -151,7 +150,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Dismiss ❌"/>
                                 <connections>
-                                    <action selector="closeButtonTouched:" destination="drC-Aa-I9w" eventType="touchUpInside" id="Z4j-VU-npX"/>
+                                    <action selector="closeButtonTouched:" destination="drC-Aa-I9w" eventType="touchUpInside" id="wzc-gI-chK"/>
                                 </connections>
                             </button>
                         </subviews>

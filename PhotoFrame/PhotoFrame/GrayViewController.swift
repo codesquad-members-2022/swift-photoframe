@@ -14,6 +14,10 @@ class GrayViewController: UIViewController {
         show(yellowViewController, sender: self)
     }
     
+    @IBAction func closeButtonTouched(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         print("Gray View will appear")
         print(#file, #line, #function, #column)
