@@ -241,7 +241,38 @@ override func viewDidDisappear(_ animated: Bool) {
 
 ​    
 
-### 1-6. Container View Controller 활용하기
+### 6. Container View Controller 활용하기
 
+<img src="https://user-images.githubusercontent.com/68586291/154426264-1886c131-be91-426d-b684-6616e664a222.gif" alt="image" style="align:center; width: 30%;"/>
 
+- Navigation Bar을 추가
 
+- 처음에는 연결된 GrayViewController, YelloViewController Scene에 Back 네비게이션 버튼이 자동으로 생기지 않는 문제가 발생했음
+
+- 또한 화면 넘김 역시 기존과 그대로 아래에서 위로 모달이 올라오는 방식으로 이루어졌음
+
+- 우선 화면을 연결하는 Segue를 다시 생성하고, 화면을 넘기는 방식(kind)을 모달이 아닌 show로 바꿈으로써 연결된 화면들에 자동으로 네비게이션 버튼이 생기고 왼쪽에서 오른쪽으로 화면이 넘기는 애니메이션 확인
+
+- 이후 기존에 아래와 같이 작성한 화면을 닫는 코드는 동작하지 않았음
+
+  ```swift
+  @IBAction func dismissButtonTouched(_ sender: Any) {
+    self.dismiss(animated: true, completion: nil)
+  }
+  ```
+
+- 위의 코드는 아래와 같이 navigationController 프로퍼티의 함수를 호출하는 식으로 변경하여 이전 화면으로 돌아가는 것을 확인
+
+  ```swift
+  @IBAction func exitButtonTouched(_ sender: UIButton) {
+    self.navigationController?.popViewController(animated: true)
+  }
+  ```
+
+​    
+
+#### 6-1. Navigation Controller
+
+- 공식문서에서는 UINavigationController에 대해 스택 기반의 계층화된 콘텐츠가 모여있는 view controller 컨테이너로 정의하고 있음
+- 이러한 구조에서는 한 시점에 하나의 view controller만이 보이도록 하고 있으며, 하나의 view controller이 보이도록 선택하면 이를 스크린에 push하고(기존의 화면은 화면에서 사라짐),  back button과 같은 닫기 버튼을 누르면 top에 위치한 view controller을 화면에서 pop하여 사라지게 한 후 바로 밑에 있는 view controller이 화면에 위치하도록 함
+  - 이런 식으로 여러 view가 스택과 같이 push, pop의 과정을 거치며 사용자에게 보이는 화면은 스택의 top에 해당하는 부분이라는 점에서, 화면을 전환하고 닫는 관련 함수의 이름도 popViewController, pushViewController와 같은 형식으로 표현
