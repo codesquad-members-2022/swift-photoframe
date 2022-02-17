@@ -56,9 +56,7 @@
                         <viewLayoutGuide key="safeArea" id="kKw-VU-FyD"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Apo-eR-kNd">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="TA1-JZ-XoO"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="Apo-eR-kNd"/>
                     <connections>
                         <outlet property="firstLabel" destination="JAf-rj-kdh" id="yBb-FN-Llg"/>
                         <outlet property="nextButton" destination="NAv-Tj-maS" id="fnb-P9-VUc"/>
