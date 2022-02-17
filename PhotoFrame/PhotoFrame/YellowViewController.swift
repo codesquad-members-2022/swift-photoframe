@@ -19,26 +19,18 @@ class YellowViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        print(#function)
-        print(#file, #line, #function, #column)
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        print(#function)
-        print(#file, #line, #function, #column)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print(#function)
-        print(#file, #line, #function, #column)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        print(#function)
-        print(#file, #line, #function, #column)
     }
     
     // MARK: - Methods
@@ -50,13 +42,13 @@ class YellowViewController: UIViewController {
     
     func navigateToNextUsingNavigationController() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "PurpleViewController") as! PurpleViewController
+        let vc = storyboard.instantiateViewController(withIdentifier: "PurpleViewController")
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func showViewControllerModally() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "PurpleViewController") as! PurpleViewController
+        let vc = storyboard.instantiateViewController(withIdentifier: "PurpleViewController")
         vc.modalTransitionStyle = .coverVertical
         vc.modalPresentationStyle = .pageSheet
         self.present(vc, animated: true, completion: nil)
@@ -69,7 +61,9 @@ class YellowViewController: UIViewController {
     // MARK: - Selectors
     @objc func buttonTouched(sender: UIButton, forEvent event: UIEvent) {
         sender.setTitle("Moving...", for: .normal)
-        self.showViewControllerModally()
+//        self.showViewControllerModally()
+//        self.navigateToNextUsingExistSegue()
+        self.navigateToNextUsingNavigationController()
     }
     
     @objc func buttonTouchedDown(sender: UIButton, forEvent event: UIEvent) {
