@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		1B856B1127BE31E7000D28D2 /* ViewController_Using_Segue.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1B856B1027BE31E7000D28D2 /* ViewController_Using_Segue.jpg */; };
 		1B856B1327BE3492000D28D2 /* Connect_Exit_Object.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B856B1227BE3492000D28D2 /* Connect_Exit_Object.png */; };
+		1B856B1727BE6D2E000D28D2 /* Step4_Result_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B856B1427BE6D2E000D28D2 /* Step4_Result_1.png */; };
+		1B856B1827BE6D2E000D28D2 /* Step4_Result_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B856B1527BE6D2E000D28D2 /* Step4_Result_2.png */; };
+		1B856B1927BE6D2E000D28D2 /* Step4_Result_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B856B1627BE6D2E000D28D2 /* Step4_Result_3.png */; };
 		1BAD84B627B9EB6E00640DF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BAD84B527B9EB6E00640DF8 /* AppDelegate.swift */; };
 		1BAD84B827B9EB6E00640DF8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BAD84B727B9EB6E00640DF8 /* SceneDelegate.swift */; };
 		1BAD84BA27B9EB6E00640DF8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BAD84B927B9EB6E00640DF8 /* ViewController.swift */; };
@@ -68,6 +71,9 @@
 /* Begin PBXFileReference section */
 		1B856B1027BE31E7000D28D2 /* ViewController_Using_Segue.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ViewController_Using_Segue.jpg; sourceTree = "<group>"; };
 		1B856B1227BE3492000D28D2 /* Connect_Exit_Object.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Connect_Exit_Object.png; sourceTree = "<group>"; };
+		1B856B1427BE6D2E000D28D2 /* Step4_Result_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Step4_Result_1.png; sourceTree = "<group>"; };
+		1B856B1527BE6D2E000D28D2 /* Step4_Result_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Step4_Result_2.png; sourceTree = "<group>"; };
+		1B856B1627BE6D2E000D28D2 /* Step4_Result_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Step4_Result_3.png; sourceTree = "<group>"; };
 		1BAD84B227B9EB6E00640DF8 /* PhotoFrame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoFrame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BAD84B527B9EB6E00640DF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1BAD84B727B9EB6E00640DF8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -193,6 +199,9 @@
 		1BAD84EB27BA7FB300640DF8 /* README_images */ = {
 			isa = PBXGroup;
 			children = (
+				1B856B1427BE6D2E000D28D2 /* Step4_Result_1.png */,
+				1B856B1527BE6D2E000D28D2 /* Step4_Result_2.png */,
+				1B856B1627BE6D2E000D28D2 /* Step4_Result_3.png */,
 				1B856B1227BE3492000D28D2 /* Connect_Exit_Object.png */,
 				1B856B1027BE31E7000D28D2 /* ViewController_Using_Segue.jpg */,
 				1BE818B427BCC86900950731 /* Step3_Result_After.png */,
@@ -333,6 +342,7 @@
 				1BAD850D27BA816900640DF8 /* New_File_Cocoa_Touch_Class_3.png in Resources */,
 				1BBB4BB827BB60590002A9F7 /* Project_Forder_File_Missing.png in Resources */,
 				1B856B1327BE3492000D28D2 /* Connect_Exit_Object.png in Resources */,
+				1B856B1827BE6D2E000D28D2 /* Step4_Result_2.png in Resources */,
 				1BAD851327BB529B00640DF8 /* Git_Push_Error_First.jpg in Resources */,
 				1BAD850227BA816900640DF8 /* New_File_Cocoa_Touch_Class_1.png in Resources */,
 				1BAD850127BA816900640DF8 /* Empty_Storyboard.png in Resources */,
@@ -343,8 +353,10 @@
 				1BAD850727BA816900640DF8 /* Storyboard_UITabBarController_isInitialViewController_on.png in Resources */,
 				1BAD84EF27BA801900640DF8 /* Basic_Storyboard_Image_isInitialViewController_off.png in Resources */,
 				1BAD850027BA816900640DF8 /* Empty_Storyboard_Library.png in Resources */,
+				1B856B1927BE6D2E000D28D2 /* Step4_Result_3.png in Resources */,
 				1BAD850F27BA82C200640DF8 /* initialViewController_Error.png in Resources */,
 				1BBB4BC627BBD7050002A9F7 /* Step2_Git_Rebase_Complete.png in Resources */,
+				1B856B1727BE6D2E000D28D2 /* Step4_Result_1.png in Resources */,
 				1BAD84ED27BA7FDB00640DF8 /* Basic_Storyboard_Image.png in Resources */,
 				1BAD84FF27BA816900640DF8 /* Storyboard_UITabBarController_isInitialViewController_off.png in Resources */,
 				1B856B1127BE31E7000D28D2 /* ViewController_Using_Segue.jpg in Resources */,
