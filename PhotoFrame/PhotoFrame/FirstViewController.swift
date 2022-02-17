@@ -14,9 +14,13 @@ class FirstViewController:UIViewController {
     
     override func viewDidLoad() {
         configureLabel()
+        print("ViewDidLoad - FirstViewController")
     }
-    
-
+    //닫기 버튼 클릭시
+    @IBAction func closeButtonTouched(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    //다음 버튼 클릭시
     @IBAction func NextButtonTouched1(_ sender: UIButton) {
         self.photoLabel.textColor = .black
         self.photoLabel.backgroundColor = .blue
@@ -34,5 +38,27 @@ class FirstViewController:UIViewController {
         self.descriptionLabel.textAlignment = .center //정렬
         self.descriptionLabel.font = .systemFont(ofSize: 20.0, weight: .light) //사이즈,폰트
     }
+    
+    //MARK: -- 라이프 사이클 체크
+        override func viewWillAppear(_ animated: Bool) {
+            super.viewWillAppear(animated)
+            print("ViewWillAppear - FirstViewController")
+        }
+        
+        override func viewDidAppear(_ animated: Bool) {
+            super.viewDidAppear(animated)
+            print("ViewDidAppear - FirstViewController")
+        }
+        
+        override func viewWillDisappear(_ animated: Bool) {
+            super.viewWillDisappear(animated)
+            print("ViwWillDisppaear - FirstViewController")
+        }
+        
+        override func viewDidDisappear(_ animated: Bool) {
+            super.viewDidDisappear(animated)
+            print("ViewDidDisappear - FirstViewController")
+        }
+    
     
 }

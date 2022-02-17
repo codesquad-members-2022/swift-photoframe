@@ -140,16 +140,11 @@ firstLabel 아래 있는 레이블도 firstDescription 아웃렛으로 연결한
 `Step05`
 - [X] 프로젝트에 새로운 ViewController 클래스를 추가한다. File > New... > File... 메뉴를 선택한다. 다음과 같은 화면에서 Cocoa Touch Class를 선택한다.
 - [X] 다음과 같이 UIViewController에서 상속받도록 입력하고, 원하는 클래스명을 입력한다. (예시 YellowViewController)
-- [X] 다음 화면에서는 프로젝트내 어떤 경로에 저장하며, 프로젝트 그룹/타깃에 저장할 것인지 선택한다.
-- [X] 하위 디렉토리가 있거나 원하는 하위 그룹이 있으면 변경할 수 있다.
-- [X] 빌드하는 타깃이 여러 개인 경우, 복수로 선택할 수도 있다.
+- [X] 원하는 디렉토리에 추가한다.
 - [X] 스토리보드에서 새로 추가한 Scene을 선택하고, 우측 유틸리티 영역 3번째 Identity 탭을 선택한다.
 - [X] Custom Class > Class 항목에 YellowViewController (자신이 생성한 클래스 이름)을 지정한다.
-- [X] 자동완성이 되야 클래스가 제대로 생성된 것이다. 자동완성이 안된다면 앞 단계를 다시 확인해서 UIViewController에서 상속 받도록 만들었는지 확인하고 클래스를 다시 만든다.
 - [X] 이제 스토리보드에서 YellowViewController 화면에 [닫기] 버튼을 추가한다.
 - [X] Assistant Editor를 선택하고 [닫기] 버튼에 대한 IBAction 액션을 연결한다.
-- [X] 만약 방금 추가한 YellowViewController (혹은 자신이 생성한 클래스)가 우측에 자동으로 연결되지 않으면 Custom Class가 정상적으로 연결되지 않았거나
-- [X] 우측 Assistant 편집기 상단에 점프바(JumpBar)에 Automatic 이라고 선택되어 있는지 확인한다. 다른 상태인 경우 Automatic으로 변경한다.
 - [X] IBAction 이름은 closeButtonTouched로 지정하고 다음과 같이 코드를 작성한다.
 
 ~~~swift
@@ -166,4 +161,3 @@ viewDidAppear()
 viewWillDisappear()
 viewDidDisappear()
 ```
-

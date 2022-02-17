@@ -56,6 +56,18 @@
                                     <segue destination="HyD-pF-l2U" kind="show" id="dCd-np-B9w"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JFg-i3-RcJ">
+                                <rect key="frame" x="0.0" y="262" width="414" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="닫기">
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="closeButtonTouched:" destination="OBV-ub-mVL" eventType="touchUpInside" id="Gog-AK-yBi"/>
+                                    <action selector="closeButtonTouched:" destination="HyD-pF-l2U" eventType="touchUpInside" id="IFE-TJ-nvO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gjd-8v-gSC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -70,10 +82,10 @@
             </objects>
             <point key="canvasLocation" x="534.78260869565224" y="-372.32142857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Puple View Controller-->
         <scene sceneID="LDe-IX-jJY">
             <objects>
-                <viewController id="HyD-pF-l2U" sceneMemberID="viewController">
+                <viewController id="HyD-pF-l2U" customClass="PupleViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VSU-gb-FYN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -83,7 +95,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="다음">
-                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <segue destination="3py-mJ-7YT" kind="showDetail" id="xcZ-Tv-2Aq"/>
@@ -96,6 +108,17 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nen-uv-yb9">
+                                <rect key="frame" x="0.0" y="457" width="414" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="닫기">
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="closeButtonTouched:" destination="HyD-pF-l2U" eventType="touchUpInside" id="3XJ-12-V6o"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lan-uD-d1y"/>
                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
@@ -124,10 +147,10 @@
             </objects>
             <point key="canvasLocation" x="-356" y="-69"/>
         </scene>
-        <!--View Controller-->
+        <!--Red View Controller-->
         <scene sceneID="igQ-vD-6aq">
             <objects>
-                <viewController id="3py-mJ-7YT" sceneMemberID="viewController">
+                <viewController id="3py-mJ-7YT" customClass="RedViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="squ-WI-Uwr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -137,7 +160,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="다음">
-                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <segue destination="v5l-oL-LYM" kind="presentation" id="Cdn-f0-nLf"/>
@@ -150,6 +173,18 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xqj-9m-zN8">
+                                <rect key="frame" x="0.0" y="452" width="414" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="닫기">
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="closeButtonTouched:" destination="3py-mJ-7YT" eventType="touchUpInside" id="DDg-lx-BpA"/>
+                                    <action selector="closeButtonTouched:" destination="HyD-pF-l2U" eventType="touchUpInside" id="SLa-ua-nAB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fg5-Dz-mFC"/>
                         <color key="backgroundColor" systemColor="systemRedColor"/>
@@ -158,22 +193,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tNA-sh-X6c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2296" y="-366"/>
+            <point key="canvasLocation" x="2295.6521739130435" y="-366.29464285714283"/>
         </scene>
-        <!--View Controller-->
+        <!--Green View Controller-->
         <scene sceneID="RTS-r7-ZVa">
             <objects>
-                <viewController id="Sa7-Dx-ayG" sceneMemberID="viewController">
+                <viewController id="Sa7-Dx-ayG" customClass="GreenViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iim-kQ-S6K">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gac-ds-6bz">
-                                <rect key="frame" x="0.0" y="385" width="414" height="59"/>
+                                <rect key="frame" x="0.0" y="361" width="414" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="다음">
-                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
                                 </buttonConfiguration>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="초록 present as popover" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NNy-lv-8sr">
@@ -183,6 +218,18 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="enx-7L-PQ1">
+                                <rect key="frame" x="0.0" y="447" width="414" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="닫기">
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="closeButtonTouched:" destination="Sa7-Dx-ayG" eventType="touchUpInside" id="LM1-Ov-XRd"/>
+                                    <action selector="closeButtonTouched:" destination="HyD-pF-l2U" eventType="touchUpInside" id="mQc-St-sBw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="czP-EK-ua7"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
@@ -193,10 +240,10 @@
             </objects>
             <point key="canvasLocation" x="3911.594202898551" y="-354.24107142857139"/>
         </scene>
-        <!--View Controller-->
+        <!--Yellow View Controller-->
         <scene sceneID="hH7-QN-XGI">
             <objects>
-                <viewController id="v5l-oL-LYM" sceneMemberID="viewController">
+                <viewController id="v5l-oL-LYM" customClass="YellowViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZxL-6n-pcU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -206,7 +253,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="다음">
-                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <segue destination="Sa7-Dx-ayG" kind="popoverPresentation" popoverAnchorView="wAr-av-6Ex" id="S9A-kL-SQ6">
@@ -221,6 +268,18 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yaM-Ce-3VY">
+                                <rect key="frame" x="0.0" y="470" width="414" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="닫기">
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="closeButtonTouched:" destination="HyD-pF-l2U" eventType="touchUpInside" id="0Hf-V2-cQI"/>
+                                    <action selector="closeButtonTouched:" destination="v5l-oL-LYM" eventType="touchUpInside" id="c0q-ph-5oi"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zge-Fb-X2q"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
@@ -233,6 +292,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
