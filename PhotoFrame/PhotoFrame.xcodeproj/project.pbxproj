@@ -15,6 +15,8 @@
 		B564197D27BA0BF300F13DDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B564197B27BA0BF300F13DDC /* LaunchScreen.storyboard */; };
 		B5C1D42B27BCDAF000545918 /* GrayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C1D42A27BCDAF000545918 /* GrayViewController.swift */; };
 		B5C1D42D27BD462300545918 /* YellowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C1D42C27BD462300545918 /* YellowViewController.swift */; };
+		B5C1D43527BEAB9500545918 /* Demo Images in Resources */ = {isa = PBXBuildFile; fileRef = B5C1D43427BEAB9500545918 /* Demo Images */; };
+		B5C1D43727BEAD4F00545918 /* WhiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C1D43627BEAD4F00545918 /* WhiteViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		B564197E27BA0BF300F13DDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5C1D42A27BCDAF000545918 /* GrayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrayViewController.swift; sourceTree = "<group>"; };
 		B5C1D42C27BD462300545918 /* YellowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowViewController.swift; sourceTree = "<group>"; };
+		B5C1D43427BEAB9500545918 /* Demo Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Demo Images"; sourceTree = "<group>"; };
+		B5C1D43627BEAD4F00545918 /* WhiteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,10 +64,12 @@
 		B564196F27BA0BF100F13DDC /* PhotoFrame */ = {
 			isa = PBXGroup;
 			children = (
+				B5C1D43427BEAB9500545918 /* Demo Images */,
 				B564197027BA0BF100F13DDC /* AppDelegate.swift */,
 				B564197227BA0BF100F13DDC /* SceneDelegate.swift */,
 				B564197427BA0BF100F13DDC /* ViewController.swift */,
 				B5C1D42C27BD462300545918 /* YellowViewController.swift */,
+				B5C1D43627BEAD4F00545918 /* WhiteViewController.swift */,
 				B5C1D42A27BCDAF000545918 /* GrayViewController.swift */,
 				B564197627BA0BF100F13DDC /* Main.storyboard */,
 				B564197927BA0BF300F13DDC /* Assets.xcassets */,
@@ -133,6 +139,7 @@
 			files = (
 				B564197D27BA0BF300F13DDC /* LaunchScreen.storyboard in Resources */,
 				B564197A27BA0BF300F13DDC /* Assets.xcassets in Resources */,
+				B5C1D43527BEAB9500545918 /* Demo Images in Resources */,
 				B564197827BA0BF100F13DDC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -148,6 +155,7 @@
 				B5C1D42B27BCDAF000545918 /* GrayViewController.swift in Sources */,
 				B564197127BA0BF100F13DDC /* AppDelegate.swift in Sources */,
 				B564197327BA0BF100F13DDC /* SceneDelegate.swift in Sources */,
+				B5C1D43727BEAD4F00545918 /* WhiteViewController.swift in Sources */,
 				B5C1D42D27BD462300545918 /* YellowViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
