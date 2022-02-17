@@ -13,6 +13,7 @@ class GrayViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("***************************")
         print("Gray \(#function)")
     }
     override func viewWillAppear(_ animated: Bool) {
