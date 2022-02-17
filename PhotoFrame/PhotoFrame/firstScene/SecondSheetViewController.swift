@@ -64,14 +64,5 @@ class SecondSheetViewController: UIViewController {
     
     @IBAction func testBack(_ sender: Any) {
         self.navigationController?.popToRootViewController(animated: true)
-        
-        /*
-        // rootView에서의 dismiss를 통해 앞서 presenting되던 VC 닫고 rootView로 돌아옴
-        if let vc = self.presentingViewController{
-           if let root = vc.presentingViewController{
-               root.dismiss(animated: true)
-           }
-        }
-         */
     }
 }
