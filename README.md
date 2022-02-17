@@ -192,5 +192,13 @@ iOS 포토프레임 프로젝트 저장소
     * randomImageNumber가 리턴한 값과 현재의 이미지명이 동일한지 아닌지 비교하고 동일 값일 경우 다시 랜덤 값을 받아온 뒤, 동일하지 않은 값을 현재의 이미지명에 할당하는 makeImageNumber 함수 작성
     * 기본 이미지 화면 없이 버튼을 눌렀을 때부터 이미지가 나오도록 설정. ImageView의 contentMode를 .scaleAspectFit으로 설정하여 각 이미지의 비율 그대로 나오도록 설정
     
-- 추가 구현사항
+### 추가 구현사항
+- ImageView 그림자 추가
+    + 그림자용 UIView를 추가하는 형태로 구현
+    
+<img src = "https://user-images.githubusercontent.com/44107696/154502431-1e81ae60-6c3f-4888-9329-0e7a2aba7fdb.png" width="800" height="700">
 
+- 차례대로 Image를 순회할 수 있는 버튼 두 개 구현
+    + 다음 이미지로 순회하는 [다음], 이전 이미지로 순회하는 [이전]
+    
+<img src = "https://user-images.githubusercontent.com/44107696/154502448-d29b117b-a1e4-41d4-b08f-f5e2de0b5a47.png" width="800" height="700">
