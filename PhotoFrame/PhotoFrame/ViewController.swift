@@ -32,10 +32,6 @@ class ViewController: UIViewController {
         photoLabel.alpha = 0.7
     }
     
-    @IBAction func nextButtonTouched2(_ sender: Any) {
-        photoLabel.textColor = UIColor(red: 216, green: 210, blue: 203)
-    }
-    
     @IBAction func unwindToFirstViewController(segue: UIStoryboardSegue) {
         // 이 뷰 컨트롤러가 unwind segue의 목적지가 될 수 있다는 것을 표시
         print("Unwind to First View Controller")
