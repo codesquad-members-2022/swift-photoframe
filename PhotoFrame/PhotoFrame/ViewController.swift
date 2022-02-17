@@ -28,12 +28,15 @@ class ViewContollerFlow :UIViewController{
         print(#file, #line, #function, #column)
     }
 }
-class ViewController: ViewContollerFlow {
-
+class ViewController: ViewContollerFlow, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var photoLabel: UILabel!
+    
+    let imagePickerController = UIImagePickerController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        imagePickerController.delegate = self
         self.photoLabel.text = "dale's Photo Album"
         self.photoLabel.textColor = .blue
         self.photoLabel.backgroundColor = .yellow
@@ -54,8 +57,12 @@ class ViewController: ViewContollerFlow {
         self.photoImageView.image = UIImage(named: "\(randomString).jpg")
     }
     @IBAction func selectButtonTouched(_ sender: Any) {
-        let imagePickerController = UIImagePickerController()
-        self.present(imagePickerController, animated: true)
+        let pickerAlert = UIAlertController(title: "사진 가져오기", message: "", preferredStyle: .actionSheet )
+        let libraryOption = UIAlertAction(title: "앨범", style: .default){ _ in self.present(self.imagePickerController, animated: true)}
+        let cancelOption = UIAlertAction(title: "취소", style: .cancel)
+        pickerAlert.addAction(libraryOption)
+        pickerAlert.addAction(cancelOption)
+        present(pickerAlert, animated: true)
     }
 }
 
