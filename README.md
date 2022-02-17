@@ -651,3 +651,176 @@
 		일반적으로 각각의 Scene은 자신만의 뷰 계층구조를 가지고 있으며, 뷰 계층구조 최상위에는 하나의 뷰가 존재합니다. 이 뷰를 Root View 또는 Contents View라고 합니다. 테이블 뷰 컨트롤러에서는 테이블 뷰가 Root View 이며, 컬렉션 뷰 컨트롤러에서는 컬렉션 뷰가 Root View 역할을 담당합니다. 일반 뷰컨트롤러에서는 View 객체가 Root View의 역할을 담당합니다. 
 
 		Root View 내부에는 각자의 크기와 영역, 표현할 컨텐츠를 가진 여러 개의 Sub View가 추가되는데, 일부 뷰는 서로 겹치기도 합니다. Root View는 이런 Sub View들을 모아 하나의 전체 뷰를 구성하고, 뷰컨트롤러를 통해 이를 윈도우에 전달합니다.
+		
+		---
+		
+		---
+		
+		## 6. Container ViewController  활용하기
+		
+		### 📌체크 포인트
+		
+		- [x] First Scene을 Navigation Controller로 Embed in
+		- [x] [닫기] 버튼 코드 수정
+		- [x] 뷰 컨트롤러 콜백 함수들 동작이 이전과 동일한지 확인
+		
+		---
+		
+		### 💻진행과정
+		
+		1. 아래의 사진과 같이, First Scene을 클릭하고 상단의 `Editor` > `Embed In` > `Navigation Controller` 를 선택해 First Scene을 Navigation Controller로 Embed in 시켰습니다.
+		
+			<img src="https://user-images.githubusercontent.com/92504186/154415895-59ae7ad6-ef77-4c06-a2c5-f6dfa317f6e1.jpg" alt="SS 2022-02-17 PM 03 08 23" width="40%;" />
+		
+		2. Second Scene과 같이 Third Scene도 상단에 Navigation Bar가 있는 상태로 나타내기 위해, YellowViewController 클래스에서 [다음] 버튼과 연결돼있는 액션 메서드에 호출된 `present(_:animated:completion:)` 메소드 대신 `show(_:sender:)` 메소드를 사용해 화면 전환이 이루어지도록 했습니다. 수정한 [다음] 버튼과 연결된 액션 메서드 `nextButtonTouched(_:)` 는 다음과 같습니다.
+		
+			```swift
+			@IBAction func nextButtonTouched(_ sender: UIButton) {
+			    let blueViewController = self.storyboard?.instantiateViewController(withIdentifier: "blueViewController")
+			    self.show(blueViewContoller!, sender: sender)
+			}
+			```
+		
+		3. Navigation Controller에 맞게 동작하도록, YellowViewController와 BlueViewController 클래스의 [닫기] 버튼과 연결된 액션 메서드내의 `dismiss(animated:completion:)` 메서드를 `popViewController(animated:)` 메서드로 수정했습니다.
+		
+			```swift
+			@IBAction func closeButtonTouched(_ sender: UIButton) {
+			    self.navigationController?.popViewController(animated: true)
+			}
+			```
+		
+		4. 콜백 함수들 동작을 확인했을 때 아래와 같이 출력을 관찰할 수 있었습니다.
+		
+			<img src="https://user-images.githubusercontent.com/92504186/154422726-4aeb2e70-43b4-4394-b024-1401861b4956.jpg" alt="SS 2022-02-17 PM 03 53 41" width="70%;" />
+		
+			그리고, Step5에서 확인했던 뷰컨트롤러 뷰의 라이프사이클 출력은 아래와 같습니다.
+		
+			<img src="https://user-images.githubusercontent.com/92504186/154423370-68f56a93-fbe7-44a2-904c-e482d84d1fa0.jpg" alt="SS 2022-02-17 PM 04 06 09" width="70%;" />
+		
+			차이점은, 내비게이션 컨트롤러가 있는 경우에는 Second Scene이 나타났을 때 First Scene의 뷰컨트롤러의 뷰가 Disppear된다는 것입니다.
+		
+			이는, Step5에서 구현했던 화면 전환은 Present Modally, 즉 모달을 통한 화면 전환이었기 때문에 Second Scene이 나타나더라도 First Scene이 사라지지 않았기 때문에 발생한 차이점입니다. 
+		
+			이번 Step에서는 Navigation Controller로 인해 Segue가 show 타입으로 화면전환을 했고, 이로 인해 Second Scene이 나타날 때 First Scene 뷰컨트롤러의 뷰는 Disppear되게 됩니다.
+		
+		---
+		
+		### 📝추가 학습거리
+		
+		1. ViewController Container에는 또 어떤 클래스가 있는지 찾아보고 학습한다.
+		
+			Container ViewController에는 Navigation ViewController 이외에 TabBar ViewController, Split ViewController 그리고 Page ViewController가 있습니다.
+		
+			1. **TabBar ViewController**
+		
+				TabBar ViewController에 대해서는 `Step1` 에서 학습했으므로 Apple 공식 문서의 내용만 기록하겠습니다.
+		
+				>  *A container view controllers that manages a multiselection interface, where the selection determines which child view controller to display.*
+				>
+				> 다중 선택 인터페이스를 관리하는 컨테이너 view controller로, selection에 따라 표시될 하위 view controller가 결정된다.
+		
+			2. **Split ViewController**
+		
+				```swift
+				class UISplitViewController: UIViewController
+				```
+		
+				> *A container view controller that implements a master-detail interface.*
+				>
+				> master - detail 인터페이스를 구현하는 컨테이너 뷰컨트롤러
+		
+				여기서 master - detail 은 환 화면에서 뷰컨트롤러 2개를 관리할 때 각각의 뷰컨트롤러에 붙여지는 이름입니다.
+		
+				> #### UISplitViewController의 DisplayMode
+				>
+				> 해당 프로퍼티는 master ViewController를 숨기고 표시하는 방법을 표현하는, read-only 프로퍼티입니다.
+				>
+				> ```swift
+				> preferredDisplayMode: UISplitViewController.DisplayMode
+				> ```
+				>
+				> 위의 `preferredDisplayMode` 를 사용하여 displayMode를 변경할 수 있고, 변경할 수 있는 모드는 `automatic`, `primaryHidden`, `allVisible`, `primaryOverlay` 이렇게 4가지 모드가 있습니다.
+				>
+				> 1. **automatic**
+				>
+				> 	세로로 앱이 동작할 경우에는 primaryOverlay로, 가로로 앱이 동작할 때는 allVisible, primaryHidden 모드로 동작하는 모드입니다.
+				>
+				> 2. **primaryHidden**
+				>
+				> 	Master View를 숨기는 형태의 모드입니다. 
+				>
+				> 3. **primaryOverlay**
+				>
+				> 	Master View가 Detail View 위로 덮어쓰기 되어 올라오는 형태입니다. Detail View의 크기가 변하지 않고 위로 올라오게 됩니다.
+				>
+				> 4. **allVisible**
+				>
+				> 	Master View가 항상 보이는 형태입니다. primaryOverlay와 다른 점은, Detail View가 옆으로 밀려난다는 점입니다.
+		
+				그리고 Split ViewController에서 사용하는 segue 타입에는 `show` 와 `show detail` 이 있습니다. 
+		
+				**show**의 경우에는 Master ViewController에서 Detail ViewController가 나타날 때 Detail ViewContrller가 Master ViewController를 밀고 들어옵니다.
+		
+				<img src="https://user-images.githubusercontent.com/92504186/154436446-263c835e-7892-4aae-8d2d-b8a1293d5647.gif" alt="xPQju" width="50%;" />
+		
+				**show detail** 의 경우에는 보통 상대적으로 더 큰 공간인 오른쪽에 detail ViewController를 보여줍니다.
+		
+				<img src="https://user-images.githubusercontent.com/92504186/154437082-16c99712-13c3-481d-b127-21f1235424bd.gif" alt="glwNy" width="50%;" />
+		
+				([이미지 출처: stackoverflow(What's the difference between all the Selection Segues?)](https://stackoverflow.com/questions/25966215/whats-the-difference-between-all-the-selection-segues))
+		
+			3. **Page ViewController**
+		
+				```swift
+				class UIPageViewController: UIViewController
+				```
+		
+				> *A container view controller that manages navigation between pages of content, where each page is managed by a child view controller*
+				>
+				> 컨텐츠 페이지 간 탐색을 관리하는 컨테이너 뷰컨트롤러로, 각 페이지는 Child 뷰컨트롤러에서 관리한다.
+		
+				UIPageViewController를 init하기 위해서는 3개의 파라미터값이 필요합니다.
+		
+				```swift
+				init(transitionStyle style: UIPageViewController.TransitionStyle,
+					 naviegationOrientation: UIPageViewContoller.NavigationOrientation,
+					 options: [UIPageViewController.OptionKey : Any]? = nil)
+				```
+		
+				* **style** : 페이지뷰 전환 스타일로 `scroll` 과 `pageCurl` 모드가 있습니다.
+				* **navigationOrientation** : 페이지뷰 탐색 방향으로, `horizental`, `vertical` 두 모드가 있습니다.
+				* **options** : 추가적인 옵션으로, 페이지 사이 간격이나 spineLocation 값을 설정할 수 있습니다.(spineLocation은 pageCurl 전환 스타일일 때만 설정 가능합니다.)
+		
+				그리고 Page ViewController에서 보여줄 ViewController들을 설정하기 위해서는 아래의 메소드를 사용해야 합니다.
+		
+				```swift
+				func setViewControllers(_ viewControllers: [UIViewController]?,
+				                       direction: UIPageViewController.NavigationDirection,
+				                       animated: Bool,
+				                       completion: ((Bool) -> Void)? = nil)
+				```
+		
+				* **viewControllers** : 표시할 뷰컨트롤러 배열
+				* **direction** : 탐색 방향 설정
+		
+				그리고 페이지를 좌우로 넘겼을 때 작동하는 `dataSource` 도 추가를 해주어야 Page ViewController가 동작하게 됩니다.
+		
+				* **DataSource** : Page ViewController의 제스처 기반 탐색을 사용하려면 `setViewControllers()` 메서드와 함께 DataSource를 사용해야 합니다. DataSource를 사용하려면 필수로 작성해야하는 내용이 있습니다.
+		
+					```swift
+					func pageViewController(UIPageViewController, viewControllerBefore: UIViewController) -> UIViewController?
+					
+					func pageViewController(UIPageViewController, viewControllerAfter: UIViewController) -> UIViewController?
+					```
+		
+					첫번째 메소드는 이전 뷰를 설정해주는 메서드이고, 두번째 메서드는 다음 뷰를 설정해주는 메서드입니다. 
+		
+		2. 내비게이션 컨트롤러가 있을 경우와 없을 경우 화면 전환 동작이 어떻게 다른지, 화면들 포함관계가 있는지 학습한다.
+		
+			내비게이션 컨트롤러가 없을 경우 Segue의 타입을 `show` 로 해주면, `present Modally` 로 동작합니다.  반면 내비게이션 컨트롤러가 있을 경우 Segue의 타입은 show로 동작합니다.
+		
+			내비게이션 컨트롤러는 뷰를 보여주는 Content ViewController가 아닌, 다른 뷰 컨트롤러들의 계층적 구조를 관리하는 Container ViewController입니다. 따라서 직접 콘텐츠를 담고 화면을 구성하지 않고 다른 뷰컨트롤러들을 포함하고 있습니다. 내비게이션 컨트롤러가 없을 경우에는, 뷰컨트롤러들이 다른 컨테이너 뷰컨트롤러에 포함되어 있지 않다면, 그저 Segue를 통해 화면 전환이 연결된 관계일 뿐 서로 포함되어있지 않습니다.
+		
+		3. 내비게이션 컨트롤러 관련 메서드가 왜 push / pop 인지 학습한다.
+		
+			Navigation Controller는 화면을 나타내주는 뷰컨트롤러들을 **Navigation Stack에 쌓는 형식** 으로 관리합니다. **Stack** 을 사용하기 때문에, 다음 Scene이 나타나면 해당 Scene의 뷰컨트롤러를 **push** 하여 위에 쌓아서 디바이스의 화면에 보여주고, 이전 Scene으로 돌아가는 경우에는 맨 위에 있는 Scene의 뷰컨트롤러를 **pop** 하여 디바이스의 화면에서 제거해줍니다. 
