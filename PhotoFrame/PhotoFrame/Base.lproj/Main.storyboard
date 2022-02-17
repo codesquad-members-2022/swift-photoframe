@@ -101,6 +101,23 @@
                                     <segue destination="3BM-SX-6rg" kind="presentation" modalTransitionStyle="flipHorizontal" id="ZIQ-pP-lc9"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="close" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yjf-VD-fGZ">
+                                <rect key="frame" x="161" y="575" width="94" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="닫기">
+                                            <attributes>
+                                                <font key="NSFont" size="22" name="AppleSDGothicNeo-Regular"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" red="0.79826477750000002" green="0.2268337674" blue="0.17186751510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="closeButtonTouched:" destination="gOQ-oH-Jf3" eventType="touchUpInside" id="pZL-H8-kLo"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PeP-10-kIU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
