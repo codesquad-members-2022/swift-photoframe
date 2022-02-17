@@ -28,6 +28,21 @@ class ViewController1 : UIViewController {
         self.photoLabel.textColor = UIColor.black
         self.photoLabel.backgroundColor = UIColor.darkGray.withAlphaComponent(0.5)
         self.detailDescription.text = "Loaded by First View Controller"
-        
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print(#file, #line, #function, #column)
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print(#file, #line, #function, #column)
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        print(#file, #line, #function, #column)
+    }
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        print(#file, #line, #function, #column)
     }
 }
