@@ -45,8 +45,8 @@ class YellowViewController: UIViewController {
     }
     
     @IBAction func nextButtonTouched(_ sender: UIButton) {
-        let blueViewController = self.storyboard?.instantiateViewController(withIdentifier: "blueViewController")
-        self.show(blueViewController!, sender: sender)
+        guard let blueViewController = self.storyboard?.instantiateViewController(withIdentifier: "blueViewController") else {return}
+        self.show(blueViewController, sender: sender)
     }
     @IBAction func closeButtonTouched(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
