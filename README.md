@@ -294,6 +294,11 @@ git checkout .
 7. add
 8. push
 9. pull request
+
+특정 저장소에 대해 Contributor 로 등록된 유저가 보내는 Merge 요청이다. 저장소를 Fork를 받아 자신의 계정에 저장소가 만들어지게 되면 Contributor로 선정되는데, 이 상태에서 로컬 저장소로 소스를 가져와서 소스를 수정한 뒤 Push하면 Pull Request(PR)을 Fork 받아온 저장소로 요청할 수 있다. 해당 저장소의 Maintainer는 PR을 검토한 후 Reject 혹은 Merge할 수 있다.
+
+Merge는 커밋들만을 합치는 것이기 때문에, 작업 브랜치 등은 사라진다. 브랜치 자체는 커밋이 아니고 커밋을 바라보는 포인터이기 때문이다. 계속 작업을 하고 싶다면, Merge한 이후 다시 main 브랜치로 돌아간 후 `git fetch -all upstream`을 이용해 최신의 변경사항을 로컬 저장소에 업데이트한 후 `git rebase upstream/[target branch]`를 이용하여 원본 저장소의 커밋 사항을 로컬 저장소로 가져온다. 이후에 `git push`해주면 최신 상태로 작업을 추가할 수 있다.  
+
 10. remote add
 11. fetch ([번역 : Git fetch와 pull, pull은 이제 그만!](https://merrily-code.tistory.com/124))
 12. rebase([4. git merge와 git rebase의 차이](https://hajoung56.tistory.com/5))   
@@ -303,3 +308,35 @@ asdf
 14. git reset과 git revert ([Git reset과 revert 알고 사용하기](https://velog.io/@njs04210/Git-reset%EA%B3%BC-revert-%EC%95%8C%EA%B3%A0-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0))   
 HEAD 브랜치 이동. 정확히는 브랜치가 가리키는 커밋을 바꾼다. -> 바뀐 커밋 이후의 커밋은 지운다.   
 현재 HEAD에서 revert 하면 현재 커밋의 이전 커밋을 뜻하는 새로운 커밋을 만든다. -> 이전 커밋을 뜻하는 새로운 커밋에서 또 revert를 하면 이전의 이전 커밋을 뜻하는 커밋을 또 만든다.
+
+---
+
+## Segue 에 대하여 
+
+( [View Controller Programming Guide for iOS. Using Segues](https://developer.apple.com/library/archive/featuredarticles/ViewControllerPGforiPhoneOS/UsingSegues.html) )
+
+segue를 이용하면 앱 인터페이스의 흐름을 정의할 수 있다. 두 개의 뷰 컨트롤러를 전환하는 것을 정의하는 것이다. 세그웨이의 시작점은 버튼, 테이블 한 줄, 제스쳐 등이 있다. 세그웨이의 도착점은 의도한 뷰 컨트롤러이다. 세그웨이는 언제나 새로운 뷰 컨트롤러를 보여줘야 하지만, 그 뷰 컨트롤러를 뒤로 돌릴 수 있는 unwind segue를 사용할 수 있다.
+
+런타임 내에서 세그웨이를 불러오고 세그웨이에 의해 뷰컨트롤러들을 연결하는 것은 UIKit이다. 세그웨이 전에는 애플리케이션에 UIKit에 의해 알림이 전달된 뒤 실행되기 때문에 이를 이용해서 데이터를 주고받거나, 세그웨이를 차단할 수도 있다.
+
+세그웨이는 굳이 프로그래밍으로 구현하지 않아도 된다. 같은 스토리보드 파일에서 `Control`+`Drag`를 이용해 적당한 요소를 시작 뷰 컨트롤러에서 목표 뷰 컨트롤러로 드래그하기만 하면 된다. 한 개의 요소가 세그웨이를 일으키더라도, 요소 내 다른 요소가 별개의 세그웨이 기능을 구현하는 것 또한 가능하다.
+
+적당한 세그웨이 타입을 선택하는 것은 중요하지만, OS 버전 등에 따라 달라질 가능성이 있기 때문에 항상 조심해야 한다.
+
+|      Segue type       | Behavior                                                                                                                                                                |
+|:---------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|      Show (Push)      | 새로운 컨텐츠를 show(\_:sender:) 메소드로 보여주는 방법이다. 대부분의 상황에서 원본 뷰 컨트롤러에서 모달 방식으로 실행된다. 주로 해당 메소드는 오버라이드 되는 형태로 사용된다. 예를 들어 UINavigationViewController 는 자체 스택에 뷰 컨트롤러들을 저장하게 된다. |
+| Show Detail (Replace) | 새로운 컨텐츠를 showDetailViewController(\_:sender:) 메소드로 보여주는 방법이다. UISplitViewController 객체의 Detail ViewController 내용만을 바꾼다. 다른 뷰 컨트롤러에서 실행되면 Show(Push)와 같다.                |
+|    Present Modally    | 모달로 뷰 컨트롤러를 전환할 때 여러 타입을 지정할 수 있다.                                                                                                                                      |
+| Present as Popover    | 수평 상태에서 popover하게 세그웨이 한다.                                                                                                                                              |
+
+<img src="PhotoFrame/README_images/ViewController_Using_Segue.jpg" width="700">
+
+**unwind segue를 만드는 법**   
+1. 아래와 같이 프로그래밍을 통한 방법이 있다.
+```
+@IBAction func myUnwindAction(unwindSegue: UIStoryboardSegue) // Swift
+- (IBAction)myUnwindAction:(UIStoryboardSegue*)unwindSegue // Objective-C
+```
+2. `Control`+Drag를 통해 특정 요소와 `Exit object` 를 연결한다.   
+   <img src="PhotoFrame/README_images/Connect_Exit_Object.png" width="300">
