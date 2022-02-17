@@ -14,6 +14,7 @@
 		3774AA0A27BA763700C839E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3774AA0927BA763700C839E3 /* Assets.xcassets */; };
 		3774AA0D27BA763700C839E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3774AA0B27BA763700C839E3 /* LaunchScreen.storyboard */; };
 		3774AA1527BB949000C839E3 /* OrangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3774AA1427BB949000C839E3 /* OrangeViewController.swift */; };
+		37D6499127BE424E00A4C8C0 /* RedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D6499027BE424E00A4C8C0 /* RedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		3774AA0C27BA763700C839E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3774AA0E27BA763700C839E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3774AA1427BB949000C839E3 /* OrangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangeViewController.swift; sourceTree = "<group>"; };
+		37D6499027BE424E00A4C8C0 /* RedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				3774AA0027BA763600C839E3 /* AppDelegate.swift */,
 				3774AA0227BA763600C839E3 /* SceneDelegate.swift */,
 				3774AA0427BA763600C839E3 /* ViewController.swift */,
+				37D6499027BE424E00A4C8C0 /* RedViewController.swift */,
 				3774AA1427BB949000C839E3 /* OrangeViewController.swift */,
 				3774AA0627BA763600C839E3 /* Main.storyboard */,
 				3774AA0927BA763700C839E3 /* Assets.xcassets */,
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37D6499127BE424E00A4C8C0 /* RedViewController.swift in Sources */,
 				3774AA1527BB949000C839E3 /* OrangeViewController.swift in Sources */,
 				3774AA0527BA763600C839E3 /* ViewController.swift in Sources */,
 				3774AA0127BA763600C839E3 /* AppDelegate.swift in Sources */,

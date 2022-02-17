@@ -126,10 +126,10 @@
             </objects>
             <point key="canvasLocation" x="1573.5999999999999" y="-346.55172413793105"/>
         </scene>
-        <!--View Controller-->
+        <!--Red View Controller-->
         <scene sceneID="Kih-vq-BOQ">
             <objects>
-                <viewController id="oMo-eu-6h0" customClass="ViewController" customModule="PhotFrame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="oMo-eu-6h0" customClass="RedViewController" customModule="PhotFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Z0I-KT-a6L">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -140,6 +140,9 @@
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="닫기"/>
+                                <connections>
+                                    <action selector="closeButtonTouched:" destination="oMo-eu-6h0" eventType="touchUpInside" id="NPs-QF-OVo"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="y30-ph-0wl"/>
