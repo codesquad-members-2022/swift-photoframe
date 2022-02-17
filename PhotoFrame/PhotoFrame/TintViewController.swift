@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TintViewController: ViewContollerFlow {
+class TintViewController: PrintViewContollerState {
     @IBAction func closeButtonTouched(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
