@@ -21,8 +21,7 @@ class ViewController1 : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        print(#file, #line, #function, #column)
-        print("Hello World cont1")
+        print("1st view \(#function)")
         self.photoLabel.text = "Damagucci-Juice의 포토 프레임"
         self.photoLabel.font = UIFont.systemFont(ofSize: CGFloat(15))
         self.photoLabel.textColor = UIColor.black
@@ -31,18 +30,18 @@ class ViewController1 : UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print(#file, #line, #function, #column)
+        print("1st view \(#function)")
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        print(#file, #line, #function, #column)
+        print("1st view \(#function)")
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        print(#file, #line, #function, #column)
+        print("1st view \(#function)")
     }
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        print(#file, #line, #function, #column)
+        print("1st view \(#function)")
     }
 }

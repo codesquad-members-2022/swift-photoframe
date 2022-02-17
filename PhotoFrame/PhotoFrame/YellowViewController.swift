@@ -14,22 +14,22 @@ class YellowViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(#file, #line, #function, #column)
+        print("3rd view \(#function)")
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print(#file, #line, #function, #column)
+        print("3rd view \(#function)")
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        print(#file, #line, #function, #column)
+        print("3rd view \(#function)")
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        print(#file, #line, #function, #column)
+        print("3rd view \(#function)")
     }
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        print(#file, #line, #function, #column)
+        print("3rd view \(#function)")
     }
 }
