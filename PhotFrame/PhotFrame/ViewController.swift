@@ -49,9 +49,5 @@ class ViewController: UIViewController {
         self.firstLabel.alpha = 0.5
     }
     
-    @IBAction func closeButtonTouched(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
-    
 }
 
