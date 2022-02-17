@@ -219,3 +219,7 @@ A1. @IBOutlet, @IBAction의 연결 후에 코드 수정을 하면, 스토리 보
 ![image](https://user-images.githubusercontent.com/50472122/154488191-045b81cd-43c5-4414-8c41-fa2e2f4f3d47.png)
 
 ## Step6 - Container ViewController 활용하기
+
+![Screen Shot 2022-02-17 at 11 17 33 PM](https://user-images.githubusercontent.com/50472122/154504523-37e348c3-2811-4986-95bd-a68c66851835.png)
+
+위에 위에 그림과 차이가 있다.

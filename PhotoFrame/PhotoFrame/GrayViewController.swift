@@ -26,6 +26,7 @@ class GrayViewController: UIViewController {
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        print("***************************")
         print("Gray \(#function)")
     }
     override func viewDidDisappear(_ animated: Bool) {
