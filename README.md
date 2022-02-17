@@ -95,3 +95,74 @@
 | Custom | 사용자 정의 Segue를 만든다. |
 
 ![Simulator Screen Recording - iPhone 11 - 2022-02-16 at 14 29 36](https://user-images.githubusercontent.com/92635121/154202571-55e77c2c-3313-4100-9975-6f5f453af018.gif)
+
+
+<br>
+
+## Step5. ViewController 연결하기  
+- [x]  View Controller 추가
+- [x]  추가된 View Controller를 Scene과 연결
+- [x]  `닫기` 버튼 추가
+- [x]  콜백함수에 코드 추가
+- [x]  Segue 대신 Modal을 이용해 화면전환
+
+<br>
+
+### UIViewController
+
+<br>
+
+**역할**
+* View 계층을 관리
+* View를 관리하면서, View와 Data 사이의 매개체
+* View의 리소스를 메모리에 로딩할지, 언로딩할지 결정
+* 화면 사이즈, 회전에 대한 대응
+
+<br>
+
+**의미**
+* MVC 패턴에서 C (Model / View / Controller)
+* 화면 전체 콘텐츠
+
+<br>
+
+### iOS의 MVC
+* View Controller가 중심이 되어, View를 만들고 View에서 필요한 데이터를 갖고있는 Model을 처리한다.
+* View Controller는 내부 프로퍼티로 Model 객체를 포함하기도 한다.
+
+<br>
+
+### UIViewController 주요 콜백 메서드
+
+<br>
+
+**✅ 화면 관련**  
+
+| 메서드 | 설명 |
+| --- | --- |
+| viewDidLoad() | View가 로딩이 된 다음에 |
+| viewWillAppear(Bool) | View가 보여지기 직전에 |
+| viewDidAppear(Bool) | View가 보여지고 난 후에 |
+| viewWillDisappear(Bool) | View가 사라지기 직전에 |
+| viewDidDisappear(Bool) | View가 사라지고 난 후에 |
+
+<br>
+
+**✅ 회전 관련**  
+화면이 회전할때, 화면이 회전이 됐는지, 가로모드인지 세로모드인지 등등  
+
+| 메서드 |
+| --- |
+| var shouldAutorotate: Bool |
+| var supportedInterfaceOrientation: UIInterfaceOrientationMask |
+| var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation |
+
+<br>
+
+**Did / Will / Should가 콜백함수에 자주 붙는데,**
+
+☑️ `Did` : 어떤 이벤트가 발생한 이후에  
+☑️ `Will` : 어떤 이벤트가 발생하기 직전에  
+☑️ `should` : return타입이 있어서, 꼭 Yes or No 즉 Bool으로 return한다.
+
+![Step5](https://user-images.githubusercontent.com/92635121/154445711-f58b0277-5519-4c4e-b45f-855381114304.gif)
