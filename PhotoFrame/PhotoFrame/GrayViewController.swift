@@ -6,7 +6,7 @@ class GrayViewController: UIViewController {
     @IBOutlet weak var nextButton: UIButton!
     
     @IBAction func exitButtonTouched(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func unwind(_ segue: UIStoryboardSegue){
