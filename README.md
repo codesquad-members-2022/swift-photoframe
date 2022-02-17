@@ -51,8 +51,8 @@ iOS 포토프레임 프로젝트 저장소
 
 ###### ViewController 연결하기
 
-- [ ] 스토리보드 구성 요소와 클래스 코드와 연결해서 동작을 확장한다.
-- [ ] 실행하고 새로운 화면을 캡처해서 readme.md 파일에 포함한다.
+- [x] 스토리보드 구성 요소와 클래스 코드와 연결해서 동작을 확장한다.
+- [x] 실행하고 새로운 화면을 캡처해서 readme.md 파일에 포함한다.
 
 ### 출력 확인
 
@@ -80,9 +80,22 @@ iOS 포토프레임 프로젝트 저장소
 
 
 
+###### 5. ViewController 연결하기
+
+|                        1단계(첫화면)                         |                        2단계(주황색)                         |                        3단계(빨간색)                         |
+| :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+| ![Simulator Screen Shot - iPhone 13 mini - 2022-02-17 at 16 10 32](https://user-images.githubusercontent.com/84652513/154427482-ca6a5e82-993e-48c2-9194-40f9280c97f4.png) | ![Simulator Screen Shot - iPhone 13 mini - 2022-02-17 at 16.10.36](/Users/joobanglee/Desktop/01_LeeJoobang/002_0 코드스쿼드/002_2코드스쿼드 마스터즈/0002 iOS 클래스/스크린샷/1. 사진액자앱/20220217_5_ViewController연결하기/Simulator Screen Shot - iPhone 13 mini - 2022-02-17 at 16.10.36.png) | ![Simulator Screen Shot - iPhone 13 mini - 2022-02-17 at 16.10.42](/Users/joobanglee/Desktop/01_LeeJoobang/002_0 코드스쿼드/002_2코드스쿼드 마스터즈/0002 iOS 클래스/스크린샷/1. 사진액자앱/20220217_5_ViewController연결하기/Simulator Screen Shot - iPhone 13 mini - 2022-02-17 at 16.10.42.png) |
+
+|                   상태메세지(터미널 표시)                    |
+| :----------------------------------------------------------: |
+| <img width="500" alt="스크린샷 2022-02-17 오후 4 29 55" src="https://user-images.githubusercontent.com/84652513/154427773-6f3152ac-4739-4c8e-87aa-cd5678f39825.png"> |
+
+
+
 ### 참조링크
 
 - 깃학습(https://learngitbranching.js.org/?locale=ko)
+- 뷰 상태변화(https://etst.tistory.com/90)
 
 ### 프로젝트 설명
 
