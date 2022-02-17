@@ -70,10 +70,10 @@
             </objects>
             <point key="canvasLocation" x="-600" y="297.32142857142856"/>
         </scene>
-        <!--Next View-->
+        <!--Gray View Controller-->
         <scene sceneID="kQ7-2m-4Ma">
             <objects>
-                <viewController id="Q8k-ll-Rse" customClass="NextView" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Q8k-ll-Rse" customClass="GrayViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sFR-D4-zYH" colorLabel="IBBuiltInLabel-Gray">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -92,6 +92,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="닫기"/>
+                                <connections>
+                                    <action selector="closeButtonTouced:" destination="Q8k-ll-Rse" eventType="touchUpInside" id="AnC-ae-WSL"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WuQ-h3-Fri"/>
