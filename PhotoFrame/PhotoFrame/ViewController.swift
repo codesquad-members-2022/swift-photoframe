@@ -11,8 +11,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var firstLabel: UILabel!
     @IBOutlet weak var firstDescription: UILabel!
-    //lazy var yellowVC = YellowViewController() -> 스토리보드에서 ViewController를 찾아오지 않을 시 GreenViewController에 View 생성이 안됨.
-    private var yellowVC: UIViewController? // type Annotation : 생성과 동시에 초기화 해주지 않기 때문.
+    private lazy var yellowViewController = self.storyboard?.instantiateViewController(withIdentifier: "YellowVC")
     
     override func loadView() {
         super.loadView()
@@ -37,16 +36,10 @@ class ViewController: UIViewController {
         self.firstLabel.textColor = UIColor.blue
         self.firstLabel.backgroundColor = UIColor.yellow
         self.firstLabel.alpha = 0.5
-        guard let yellowVC = yellowVC else {
-            print("yellowVC tapped")
-            if let vc = self.storyboard?.instantiateViewController(withIdentifier: "YellowVC"){
-                self.yellowVC = vc
-                print("yellowVC was nil")
-                present(vc, animated: true, completion: nil)
-            }
+        guard let yellowViewController = self.yellowViewController else {
             return
         }
-        self.present(yellowVC, animated: true, completion: nil)
+        self.navigationController?.pushViewController(yellowViewController, animated: true)
     }
 }
 
