@@ -45,12 +45,20 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9L-jH-aPA">
-                                <rect key="frame" x="183" y="594" width="48.5" height="31"/>
+                                <rect key="frame" x="152.5" y="594" width="109" height="31"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="다음"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Next (Segue)"/>
                                 <connections>
                                     <action selector="nextButtonTouched:" destination="fL3-1V-XyL" eventType="touchUpInside" id="iIC-m1-y2h"/>
                                     <segue destination="58e-fP-YbN" kind="show" id="To4-8G-lDy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sF3-TJ-F1Q">
+                                <rect key="frame" x="137.5" y="633" width="139" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Push (Navigation)"/>
+                                <connections>
+                                    <action selector="pushButtonTouched:" destination="fL3-1V-XyL" eventType="touchUpInside" id="jWb-ky-Soy"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -63,7 +71,9 @@
                             <constraint firstItem="Qtq-aH-YCa" firstAttribute="centerY" secondItem="r7f-XS-ZdA" secondAttribute="centerY" id="HIE-Yy-acN"/>
                             <constraint firstItem="qfO-l0-00U" firstAttribute="top" secondItem="Qtq-aH-YCa" secondAttribute="bottom" constant="8" id="O0Y-Qy-Ed5"/>
                             <constraint firstItem="b9L-jH-aPA" firstAttribute="centerX" secondItem="r7f-XS-ZdA" secondAttribute="centerX" id="QR4-5J-MYk"/>
+                            <constraint firstItem="sF3-TJ-F1Q" firstAttribute="centerX" secondItem="r7f-XS-ZdA" secondAttribute="centerX" id="YVW-fx-OzL"/>
                             <constraint firstItem="Lhz-k6-Zqu" firstAttribute="trailing" secondItem="qfO-l0-00U" secondAttribute="trailing" constant="16" id="nQq-zF-w4J"/>
+                            <constraint firstItem="sF3-TJ-F1Q" firstAttribute="top" secondItem="b9L-jH-aPA" secondAttribute="bottom" constant="8" id="pf3-s6-PTF"/>
                             <constraint firstItem="b9L-jH-aPA" firstAttribute="top" secondItem="qfO-l0-00U" secondAttribute="bottom" constant="98.5" id="r1V-px-al8"/>
                         </constraints>
                     </view>
@@ -80,32 +90,32 @@
         <!--Gray View Controller-->
         <scene sceneID="kV4-75-hdC">
             <objects>
-                <viewController id="58e-fP-YbN" customClass="GrayViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GrayViewController" id="58e-fP-YbN" customClass="GrayViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jmE-ef-GHD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="RX7-7V-562">
-                                <rect key="frame" x="138" y="374" width="138.5" height="148"/>
+                                <rect key="frame" x="134" y="374" width="146.5" height="148"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1hT-iQ-J4s">
-                                        <rect key="frame" x="0.0" y="0.0" width="138.5" height="31"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Unwind 👈"/>
-                                        <connections>
-                                            <segue destination="ONR-YV-MPt" kind="unwind" unwindAction="unwindToFirstViewControllerWithSegue:" id="a66-IT-Jfw"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="muL-vb-W4b">
-                                        <rect key="frame" x="0.0" y="39" width="138.5" height="31"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="146.5" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Show (Segue) 👉"/>
                                         <connections>
                                             <segue destination="drC-Aa-I9w" kind="show" id="N7P-qC-25P"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1hT-iQ-J4s">
+                                        <rect key="frame" x="0.0" y="39" width="146.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Unwind Segue 👈"/>
+                                        <connections>
+                                            <segue destination="ONR-YV-MPt" kind="unwind" unwindAction="unwindToFirstViewControllerWithSegue:" id="a66-IT-Jfw"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="glX-85-Hjs">
-                                        <rect key="frame" x="0.0" y="78" width="138.5" height="31"/>
+                                        <rect key="frame" x="0.0" y="78" width="146.5" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Show (Code) 👉"/>
                                         <connections>
@@ -113,9 +123,9 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1vd-Ga-4gc">
-                                        <rect key="frame" x="0.0" y="117" width="138.5" height="31"/>
+                                        <rect key="frame" x="0.0" y="117" width="146.5" height="31"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Dismiss ❌"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Dismiss (Code) ❌"/>
                                         <connections>
                                             <action selector="closeButtonTouched:" destination="58e-fP-YbN" eventType="touchUpInside" id="n64-A6-6sr"/>
                                         </connections>
