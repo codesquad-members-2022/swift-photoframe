@@ -11,18 +11,30 @@
         <!--Item 2-->
         <scene sceneID="xkN-ue-vTZ">
             <objects>
-                <viewController id="M8l-AO-Y7I" sceneMemberID="viewController">
+                <viewController id="M8l-AO-Y7I" customClass="ViewController2" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KP2-A2-2YS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Photo Album" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="43P-el-2s8">
+                                <rect key="frame" x="66" y="380" width="242" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="44"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="ucu-UC-ncg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="Hu0-dS-z6K"/>
+                    <connections>
+                        <outlet property="photoLabel" destination="43P-el-2s8" id="Zdd-q1-KCg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cL8-pT-cUp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="341.60000000000002" y="-341.37931034482762"/>
+            <point key="canvasLocation" x="342" y="1014"/>
         </scene>
         <!--View Controller1-->
         <scene sceneID="MQ4-Ek-9rp">
@@ -141,7 +153,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ehi-0O-g2Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1661" y="-86"/>
+            <point key="canvasLocation" x="-1529" y="768"/>
         </scene>
         <!--Item 1-->
         <scene sceneID="tlZ-L1-uZS">

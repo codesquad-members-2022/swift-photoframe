@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 class ViewController2: UIViewController {
+    @IBOutlet weak var photoLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
