@@ -53,7 +53,6 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
                                     <action selector="nextButtonTouched:" destination="2sk-aB-aUq" eventType="touchUpInside" id="Eq6-70-1Nw"/>
-                                    <segue destination="LDJ-Xy-oFr" kind="show" id="jEU-7V-RUq"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -92,13 +91,13 @@
         <!--Yellow View Controller-->
         <scene sceneID="a2r-HW-Jnh">
             <objects>
-                <viewController id="LDJ-Xy-oFr" customClass="YellowViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="YellowViewController" id="LDJ-Xy-oFr" customClass="YellowViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="43b-dm-oDQ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o7A-cy-Dz4">
-                                <rect key="frame" x="183" y="405.5" width="48.5" height="31"/>
+                                <rect key="frame" x="183" y="432.5" width="48.5" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="다음">
                                     <backgroundConfiguration key="background" cornerRadius="10">
@@ -106,7 +105,7 @@
                                     </backgroundConfiguration>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="b4p-1P-gk9" kind="show" id="1KN-wA-FHp"/>
+                                    <action selector="nextButtonTouched:" destination="LDJ-Xy-oFr" eventType="touchUpInside" id="JAk-w4-wSt"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aka-eA-cMc">
@@ -138,9 +137,9 @@
         <!--Blue View Controller-->
         <scene sceneID="J6S-dM-KiR">
             <objects>
-                <viewController id="b4p-1P-gk9" customClass="BlueViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BlueViewController" id="b4p-1P-gk9" customClass="BlueViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="55c-H1-G7E">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69C-D2-hYa">
