@@ -52,6 +52,7 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Next!"/>
                                 <connections>
                                     <action selector="nextButtonTouched:" destination="1xY-0E-ssV" eventType="touchUpInside" id="9ny-v5-wNw"/>
+                                    <segue destination="fWP-MA-5AE" kind="show" id="Tco-Y1-Vzu"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -73,6 +74,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vKv-cq-WsG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1142" y="-441"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="mMR-Nx-J31">
+            <objects>
+                <viewController id="fWP-MA-5AE" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1zk-pe-4jp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Zo3-M5-yy8"/>
+                        <color key="backgroundColor" red="1" green="0.76244297058229082" blue="0.85208236719575248" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="wMT-y3-VLh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="una-S9-X15" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2035" y="-441"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="O1h-if-eKl">
