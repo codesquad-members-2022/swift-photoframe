@@ -53,7 +53,6 @@
                                 <buttonConfiguration key="configuration" style="plain" title="다음"/>
                                 <connections>
                                     <action selector="NextButtonTouched1:" destination="OBV-ub-mVL" eventType="touchUpInside" id="1Eq-da-lae"/>
-                                    <segue destination="HyD-pF-l2U" kind="show" id="dCd-np-B9w"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JFg-i3-RcJ">
@@ -85,9 +84,9 @@
         <!--Puple View Controller-->
         <scene sceneID="LDe-IX-jJY">
             <objects>
-                <viewController id="HyD-pF-l2U" customClass="PupleViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PupleViewController" id="HyD-pF-l2U" customClass="PupleViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VSU-gb-FYN">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GN1-c3-1vw">
@@ -98,7 +97,7 @@
                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="3py-mJ-7YT" kind="showDetail" id="xcZ-Tv-2Aq"/>
+                                    <action selector="nextButtonTouched:" destination="HyD-pF-l2U" eventType="touchUpInside" id="8W6-ot-DuS"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="보라색 Show" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c7f-eq-C4C">
@@ -150,9 +149,9 @@
         <!--Red View Controller-->
         <scene sceneID="igQ-vD-6aq">
             <objects>
-                <viewController id="3py-mJ-7YT" customClass="RedViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RedViewController" id="3py-mJ-7YT" customClass="RedViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="squ-WI-Uwr">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eSi-fo-ccb">
@@ -163,7 +162,7 @@
                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="v5l-oL-LYM" kind="presentation" id="Cdn-f0-nLf"/>
+                                    <action selector="nextButtonTouched:" destination="3py-mJ-7YT" eventType="touchUpInside" id="w0n-Pf-13i"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="빨강 Show Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L6J-k7-9GN">
@@ -198,9 +197,9 @@
         <!--Green View Controller-->
         <scene sceneID="RTS-r7-ZVa">
             <objects>
-                <viewController id="Sa7-Dx-ayG" customClass="GreenViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GreenViewController" id="Sa7-Dx-ayG" customClass="GreenViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iim-kQ-S6K">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gac-ds-6bz">
@@ -210,6 +209,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="다음">
                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="nextButtonTouched:" destination="Sa7-Dx-ayG" eventType="touchUpInside" id="Ddu-cw-Co7"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="초록 present as popover" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NNy-lv-8sr">
                                 <rect key="frame" x="0.0" y="86" width="414" height="60"/>
@@ -243,9 +245,9 @@
         <!--Yellow View Controller-->
         <scene sceneID="hH7-QN-XGI">
             <objects>
-                <viewController id="v5l-oL-LYM" customClass="YellowViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="YellowViewController" id="v5l-oL-LYM" customClass="YellowViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZxL-6n-pcU">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wAr-av-6Ex">
@@ -256,9 +258,7 @@
                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="Sa7-Dx-ayG" kind="popoverPresentation" popoverAnchorView="wAr-av-6Ex" id="S9A-kL-SQ6">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
+                                    <action selector="nextButtonTouched:" destination="v5l-oL-LYM" eventType="touchUpInside" id="dPB-c4-bl2"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="노랑 present Modally" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9j9-Qs-1if">
