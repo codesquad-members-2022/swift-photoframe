@@ -6,6 +6,10 @@ class WhiteViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nextButton: UIButton!
     
+    @IBAction func nextButtonTouched(_ sender: UIButton) {
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setAlbumLabel()
