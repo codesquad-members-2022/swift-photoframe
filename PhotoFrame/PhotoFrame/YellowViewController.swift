@@ -45,7 +45,7 @@ class YellowViewController: UIViewController {
     }
     
     @IBAction func nextButtonTouched(_ sender: UIButton) {
-        let blueViewController = self.storyboard?.instantiateViewController(withIdentifier: "blueModal")
+        let blueViewController = self.storyboard?.instantiateViewController(withIdentifier: "blueViewController")
         self.show(blueViewController!, sender: sender)
     }
     @IBAction func closeButtonTouched(_ sender: UIButton) {
