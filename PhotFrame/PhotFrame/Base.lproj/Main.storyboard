@@ -88,10 +88,10 @@
             </objects>
             <point key="canvasLocation" x="-701" y="-11"/>
         </scene>
-        <!--Yellow View Controller-->
+        <!--Orange View Controller-->
         <scene sceneID="0FF-EB-hJm">
             <objects>
-                <viewController id="hoh-fR-jae" customClass="YellowViewController" customModule="PhotFrame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="hoh-fR-jae" customClass="OrangeViewController" customModule="PhotFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LAB-5f-Wz2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
