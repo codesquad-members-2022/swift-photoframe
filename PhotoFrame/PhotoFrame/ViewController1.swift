@@ -17,7 +17,6 @@ class ViewController1 : UIViewController {
         self.photoLabel.backgroundColor = UIColor.yellow
         self.photoLabel.alpha = 0.5
     }
-    @IBOutlet weak var detailDescription: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -27,7 +26,6 @@ class ViewController1 : UIViewController {
         self.photoLabel.font = UIFont.systemFont(ofSize: CGFloat(15))
         self.photoLabel.textColor = UIColor.black
         self.photoLabel.backgroundColor = UIColor.darkGray.withAlphaComponent(0.5)
-        self.detailDescription.text = "Loaded by First View Controller"
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
