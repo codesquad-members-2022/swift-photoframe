@@ -16,14 +16,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         configureLabel()
-//        print(#file, #line, #function, #column)
         
         nextButton.setTitle("다음", for: .normal)
         nextButton.setTitle("highlighted", for: .highlighted)
-
-        // Do any additional setup after loading the view.
     }
     
     
@@ -69,19 +65,5 @@ class ViewController: UIViewController {
         
     }
     
-    
-    
-    
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
