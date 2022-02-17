@@ -24,7 +24,7 @@ class FirstViewController:UIViewController {
     }
     //다음 버튼 클릭시
     @IBAction func NextButtonTouched(_ sender: UIButton) {
-        guard let NextViewController = self.storyboard?.instantiateViewController(withIdentifier: "PurpleViewController") else { return } 
+        guard let NextViewController = self.storyboard?.instantiateViewController(withIdentifier: "PurpleViewController") else { return }
         self.navigationController?.pushViewController(NextViewController, animated: true)
     }
     
