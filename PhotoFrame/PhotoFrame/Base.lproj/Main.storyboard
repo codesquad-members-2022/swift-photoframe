@@ -93,7 +93,7 @@
                                             <color key="baseBackgroundColor" systemColor="systemIndigoColor"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="nextButtonTouched:" destination="fz6-B5-ZgN" eventType="touchUpInside" id="8u8-pr-Eaz"/>
+                                            <action selector="nextButtonTouched:" destination="fz6-B5-ZgN" eventType="touchUpInside" id="JUz-P3-U9s"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SecondViewIndicator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="qFW-oa-AIZ">
@@ -135,7 +135,7 @@
         <!--Blue View Controller-->
         <scene sceneID="BSf-3w-Qlh">
             <objects>
-                <viewController storyboardIdentifier="blueModal" id="TT9-Mj-S2w" customClass="BlueViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="blueViewController" id="TT9-Mj-S2w" customClass="BlueViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="d6e-e0-GeN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

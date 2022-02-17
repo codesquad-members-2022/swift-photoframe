@@ -45,10 +45,8 @@ class YellowViewController: UIViewController {
     }
     
     @IBAction func nextButtonTouched(_ sender: UIButton) {
-        let blueModalVC = self.storyboard?.instantiateViewController(withIdentifier: "blueModal")
-        blueModalVC?.modalTransitionStyle = .flipHorizontal
-        blueModalVC?.modalPresentationStyle = .automatic
-        self.present(blueModalVC!, animated: true, completion: nil)
+        let blueViewController = self.storyboard?.instantiateViewController(withIdentifier: "blueModal")
+        self.show(blueViewController!, sender: sender)
     }
     @IBAction func closeButtonTouched(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
