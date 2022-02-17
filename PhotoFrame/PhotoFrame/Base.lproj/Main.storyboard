@@ -119,10 +119,10 @@
             </objects>
             <point key="canvasLocation" x="2035" y="-441"/>
         </scene>
-        <!--View Controller-->
+        <!--Mint View Controller-->
         <scene sceneID="4bZ-99-P3c">
             <objects>
-                <viewController id="obM-Ks-hqv" sceneMemberID="viewController">
+                <viewController id="obM-Ks-hqv" customClass="MintViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XnS-BX-rwm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
