@@ -16,6 +16,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print(#file, #line, #function, #column)
+        
         configureLabel()
 //        print(#file, #line, #function, #column)
         
@@ -25,6 +27,26 @@ class ViewController: UIViewController {
         
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print(#file, #line, #function, #column)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print(#file, #line, #function, #column)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        print(#file, #line, #function, #column)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        print(#file, #line, #function, #column)
     }
     
     
@@ -54,22 +76,20 @@ class ViewController: UIViewController {
     }
 
     @IBAction func nextButtonTouched(_ sender: Any) {
-        
-        print("touchUpInside event")
+    
         self.photoLabel.textColor = .black
         self.photoLabel.backgroundColor = .purple
         self.photoLabel.alpha = 0.8
     }
     
     @IBAction func nextButtonTouchUpOutside(_ sender: Any) {
-        print("touchUpOutSide event")
         photoLabel.textColor = .blue
         photoLabel.backgroundColor = .yellow
         photoLabel.alpha = 0.5
     }
     
     @IBAction func nextButtonTouchDown(_ sender: Any) {
-        print("touchDown event")
+        
     }
     
     
