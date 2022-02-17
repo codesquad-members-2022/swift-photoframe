@@ -168,7 +168,6 @@
 		E0DDB5F727B9E88800F23B6B /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				E0DDB62F27BCAA7B00F23B6B /* Extension */,
 				E0DDB5FA27B9E8EA00F23B6B /* Presentation */,
 				E0DDB5C727B9E84900F23B6B /* AppDelegate.swift */,
 				E0DDB5C927B9E84900F23B6B /* SceneDelegate.swift */,
@@ -245,13 +244,6 @@
 				E0DDB61C27BC7AC200F23B6B /* CodableViewController.swift */,
 			);
 			path = CodableView;
-			sourceTree = "<group>";
-		};
-		E0DDB62F27BCAA7B00F23B6B /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extension;
 			sourceTree = "<group>";
 		};
 		E0DDB63D27BD13BD00F23B6B /* StudyView */ = {
