@@ -42,6 +42,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="Hu0-dS-z6K"/>
                     <connections>
+                        <outlet property="nextButton" destination="Lvl-uh-Iiy" id="jO2-Ch-etu"/>
                         <outlet property="photoImageView" destination="XaE-LL-oij" id="qwh-Qo-oyo"/>
                         <outlet property="photoLabel" destination="43P-el-2s8" id="Zdd-q1-KCg"/>
                     </connections>
