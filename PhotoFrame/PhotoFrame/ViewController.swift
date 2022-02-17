@@ -20,6 +20,9 @@ class ViewController: UIViewController {
     }
     
     override func viewDidLoad() {
+        print("\nViewController가 로드되었다.")
+        print(#file, #line, #function, #column)
+        
         super.viewDidLoad()
         view.backgroundColor = .systemTeal
         
@@ -57,4 +60,25 @@ class ViewController: UIViewController {
         nextButton.centerYAnchor.constraint(equalTo: photoLabel.topAnchor, constant: -50).isActive = true
         
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        print("ViewController가 나타날 것이다.")
+        print(#file, #line, #function, #column)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        print("ViewController가 나타났다.")
+        print(#file, #line, #function, #column)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        print("\nViewController가 사라질 것이다.")
+        print(#file, #line, #function, #column)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        print("ViewController가 사라졌다.")
+        print(#file, #line, #function, #column)
+    }
+    
 }
