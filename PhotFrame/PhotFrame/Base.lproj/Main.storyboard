@@ -63,7 +63,7 @@
                     <tabBarItem key="tabBarItem" title="Item 1" id="hgC-OP-dcl"/>
                     <connections>
                         <outlet property="firstDescription" destination="egK-T1-Twg" id="iOa-Ej-F5r"/>
-                        <outlet property="firstLabel" destination="l1c-ew-tg7" id="h2E-A0-LFF"/>
+                        <outlet property="firstLabel" destination="l1c-ew-tg7" id="z3q-OD-8E4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NL1-Fy-e78" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -140,12 +140,25 @@
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="닫기"/>
+                                <connections>
+                                    <action selector="closeButtonTouched:" destination="oMo-eu-6h0" eventType="touchUpInside" id="C3c-6J-s7x"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="firstLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qZA-LI-YQH">
+                                <rect key="frame" x="113" y="344" width="148" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="y30-ph-0wl"/>
                         <color key="backgroundColor" red="1" green="0.28936024805282878" blue="0.098140365105622962" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <navigationItem key="navigationItem" id="STm-6I-04u"/>
+                    <connections>
+                        <outlet property="firstLabel" destination="qZA-LI-YQH" id="lWf-gt-Zc2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U37-KX-1Oh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
