@@ -88,10 +88,10 @@
             </objects>
             <point key="canvasLocation" x="-701" y="-11"/>
         </scene>
-        <!--View Controller-->
+        <!--Yellow View Controller-->
         <scene sceneID="0FF-EB-hJm">
             <objects>
-                <viewController id="hoh-fR-jae" sceneMemberID="viewController">
+                <viewController id="hoh-fR-jae" customClass="YellowViewController" customModule="PhotFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LAB-5f-Wz2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -104,6 +104,16 @@
                                 <buttonConfiguration key="configuration" style="plain" title="다음"/>
                                 <connections>
                                     <segue destination="oMo-eu-6h0" kind="show" id="NIv-Ln-p4e"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gp3-Pa-Fty">
+                                <rect key="frame" x="123" y="521" width="129" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="닫기"/>
+                                <connections>
+                                    <action selector="closeButtonTouched:" destination="hoh-fR-jae" eventType="touchUpInside" id="nXu-RG-oab"/>
                                 </connections>
                             </button>
                         </subviews>
