@@ -1,5 +1,7 @@
 # swift-photoframe <iOS 포토프레임 프로젝트 저장소> 
 
+## Git new commite test
+
 ## Step 2 - IBOutlet 연결하기
 ## 기능 요구사항
 - [X] 사진액자 앱 시작하기 요구사항을 구현한 상태로 시작한다.
