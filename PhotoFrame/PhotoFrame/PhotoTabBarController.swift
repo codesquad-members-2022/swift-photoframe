@@ -9,12 +9,4 @@ import Foundation
 import UIKit
 
 class PhotoTabBarController: UITabBarController{
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        
-    }
-    
-    
 }
