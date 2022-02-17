@@ -341,3 +341,87 @@ testAction 메소드에 3개의 버튼을 동시에 연결해보았습니다. �
 - IBOutlet vs IBAction
 - obj-c
 
+
+# Step4. Scene을 Segue로 연결하기
+
+## 💻 작업 목록
+- [x] Main 스토리보드에서 First Scene 옆에 ViewController를 드래그해서 새로운 Scene을 추가한다.
+- [x] 앞 단계에서 추가한 [다음]버튼을 선택하고 `Control + 드래그`를 해서 새로 추가한 Scene에 연결한다.
+- [x] 팝업으로 표시되는 Action Segue에서 `Show` 항목을 선택한다.
+- [x] Scene과 Scene 사이에 화살표를 선택하면 Segue 속성을 변경할 수 있다.
+- [x] 새로 추가한 Scene 속성에서 배경 색상(Background Color)을 원하는 색상으로 변경한다. 새로 앱을 실행해보고 [다음] 버튼을 누르면 새로운 화면이 나타나는지 확인한다.
+- [x] 다시 스토리보드에서 위에 추가한 Scene (혹은 ViewController)에 [다음] 버튼을 추가한다. 우측 옆에 한 단계 더 표현하기 위한 ViewController를 추가하고 배경 색상을 다른 색상으로 변경한다. 위와 마찬가지로 [다음]버튼에서 새 Scene으로 Segue를 연결한다.
+  - [x] 예를 들어 First Scene 다음에 추가한 화면이 Yellow 화면이었다면, First Scene에서 [다음] 버튼을 누르면 Yellow 화면이 표시되고, Yellow 화면에서 [다음] 버튼을 누르면 Blue 화면이 나오는 방식으로 두 단계 표시한다.
+
+## 📱 실행 화면
+
+![ezgif com-gif-maker (3)](https://user-images.githubusercontent.com/95578975/154428641-3af1b989-99d7-4e87-a03a-d2316c14c2de.gif)
+
+## ✏️ 추가 학습 거리
+
+### Action Segue 종류
+
+Show, Show Detail은 동일하다. 다만 Show Detail은 UISplitViewController에서 다르게 적용된다.
+
+#### Show
+
+이 segue는 타겟 뷰 컨트롤러의 [showViewController:sender:](https://developer.apple.com/documentation/uikit/uiviewcontroller/1621377-showviewcontroller) 메소드를 이용하여 새 콘텐츠를 표시한다. 대부분의 뷰 컨트롤러의 경우, 이 segue가 소스 뷰 컨트롤러를 통해 새 콘텐츠를 modally하게 보여준다. 일부 뷰 컨트롤러는 메소드를 오버라이드하여 다른 동작을 구현하는 데 상요한다. 예를 들어, 네비게이션 컨트롤러는 새로운 뷰 컨트롤러를 navigation stack에 push 한다.
+
+UIKit은 [targetViewControllerForAction:sender:](https://developer.apple.com/documentation/uikit/uiviewcontroller/1621415-targetviewcontroller) 메소드를 사용하여 소스 뷰 컨트롤러를 위치시킨다.
+
+#### Show Detail
+
+이 segue는 타겟 뷰 컨트롤러의 [showViewController:sender:](https://developer.apple.com/documentation/uikit/uiviewcontroller/1621377-showviewcontroller) 메소드를 이용하여 새 콘텐츠를 표시한다. 이 segue는 UISplitViewController 객체에 내장된 뷰 컨트롤러에만 적용된다. 이 segue를 사용하면 분할 뷰 컨트롤러가 두번째 하위 뷰 컨트롤러 (디테일 뷰 컨트롤러)를 새 콘텐츠로 교체한다. 대부분의 다른 뷰 컨트롤러는 새 컨텐츠를 modally하게 표시한다.
+
+[Example 1](https://stackoverflow.com/questions/26287247/what-are-the-differences-between-segues-show-show-detail-present-modally): In Mail on iPad in landscape, tapping an email in the sidebar replaces the view controller on the right to show the new email.
+
+[Example 2](https://stackoverflow.com/questions/25966215/whats-the-difference-between-all-the-selection-segues): In Messages, tapping a conversation will show the conversation details - replacing the view controller on the right when in a two column layout, or push the conversation when in a single column layout
+
+#### Present Modally
+
+이 segue는 지정된 표시 및 변환 스타일을 사용하여 뷰 컨트롤러를 modally하게 표시한다. 적절한 presentation context를 정의하는 뷰 컨트롤러가 실제 presentation을 처리한다.
+
+#### Present As Popover
+
+수평으로 규칙적인 환경에서 뷰 컨트롤러는 popover로 나타난다. 수평으로 compact한 환경에서 뷰 컨트롤러는 full-screen modal presentation을 사용하여 표시한다.
+
+#### Custom
+
+Interface Builder는 뷰 컨트롤러를 표시하는 것부터 popover로 화면을 컨트롤러에 표시하는 것까지 하나의 뷰 컨트롤러에서 다른 뷰 컨트롤러로 전환하는 모든 표준 방법에 대한 segue를 제공한다. 그러나 내가 원하는 segue가 없을 경우, custom segue를 만들 수 있다.
+
+##### Implementing a Custom Segue
+
+Custom segue를 구현하려면, `UIStoryboardSegue` 를 subclass하고, 아래 메소드들을 구현하면 된다.
+
+- `initWithIdentifier:source:destination:` 메소드를 오버라이드해서 custom segue 객체를 초기화하는데 사용한다. 항상 super를 먼저 호출한다.
+
+- `perform` 메소드를 구현하여 전환 애니메이션을 구성하는데 사용한다.
+
+![image](https://user-images.githubusercontent.com/95578975/154425681-c3d9a646-62b6-4716-938a-d9a74394bb1e.png)
+
+
+
+실행화면은 모두 같았습니다. 
+
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/95578975/154419697-58b6459b-2da6-4e79-b713-84ff619b9f83.gif)
+
+
+
+그래서 이번엔 아이패드로 변경하여 실행해보았습니다.
+
+그 결과, Show, Show Detail, Present Modally는 모두 아래와 같은 화면이 실행되었습니다.
+
+![ezgif com-gif-maker (4)](https://user-images.githubusercontent.com/95578975/154429795-e269ca6e-0691-4aed-bc54-07d9fb63fe2d.gif)
+
+
+
+Present As Popover은 아래와 같은 화면이 나왔습니다.
+
+![ezgif com-gif-maker (5)](https://user-images.githubusercontent.com/95578975/154429800-6a19a0e2-8bcc-49d6-a42f-36ec45a85f45.gif)
+
+## 💡 학습 키워드
+
+- [Using Segues](https://developer.apple.com/library/archive/featuredarticles/ViewControllerPGforiPhoneOS/UsingSegues.html)
+
+- [Modality](https://developer.apple.com/design/human-interface-guidelines/ios/app-architecture/modality/)
+- [Popover](https://developer.apple.com/design/human-interface-guidelines/ios/views/popovers/)
