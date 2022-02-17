@@ -11,6 +11,8 @@ import UIKit
 class ViewController2: UIViewController {
     @IBOutlet weak var photoLabel: UILabel!
     @IBAction func nextButtonTouched(_ sender: Any) {
+        let random_number: Int = Int.random(in: 1...22)
+        self.photoImageView.image = UIImage(named: "\(random_number).jpg")
     }
     @IBOutlet weak var photoImageView: UIImageView!
     override func viewDidLoad() {
