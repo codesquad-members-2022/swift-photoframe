@@ -25,7 +25,7 @@ class ViewController1 : UIViewController {
         print("Hello World cont1")
         self.photoLabel.text = "Damagucci-Juice의 포토 프레임"
         self.photoLabel.font = UIFont.systemFont(ofSize: CGFloat(15))
-        self.photoLabel.textColor = UIColor.blue
+        self.photoLabel.textColor = UIColor.black
         self.photoLabel.backgroundColor = UIColor.darkGray.withAlphaComponent(0.5)
         self.detailDescription.text = "Loaded by First View Controller"
         
