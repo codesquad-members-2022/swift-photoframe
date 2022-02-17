@@ -10,6 +10,9 @@ import UIKit
 
 class ViewController2: UIViewController {
     @IBOutlet weak var photoLabel: UILabel!
+    @IBAction func nextButtonTouched(_ sender: Any) {
+    }
+    @IBOutlet weak var photoImageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
