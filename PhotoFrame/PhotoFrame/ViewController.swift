@@ -15,7 +15,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         
         self.firstLabel.text = "bibi의 사진액자"
         self.firstLabel.font = UIFont.boldSystemFont(ofSize: 30)
@@ -25,6 +24,11 @@ class ViewController: UIViewController {
         self.firstDescription.textColor = UIColor.gray
     }
 
-
+    @IBAction func nextButtonTouched(_ sender: Any) {
+        self.firstLabel.textColor = UIColor.blue
+        self.firstLabel.backgroundColor = UIColor.yellow
+        self.firstLabel.alpha = 0.5
+    }
+    
 }
 
