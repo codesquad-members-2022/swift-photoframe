@@ -56,6 +56,7 @@ class ViewController: ViewContollerFlow, UIImagePickerControllerDelegate, UINavi
         let randomString = String.init(format: "%02d", arguments: [randomInt])
         self.photoImageView.image = UIImage(named: "\(randomString).jpg")
     }
+    
     @IBAction func selectButtonTouched(_ sender: Any) {
         let pickerAlert = UIAlertController(title: "사진 가져오기", message: "", preferredStyle: .actionSheet )
         let libraryOption = UIAlertAction(title: "앨범", style: .default){ _ in self.present(self.imagePickerController, animated: true)}
@@ -63,6 +64,13 @@ class ViewController: ViewContollerFlow, UIImagePickerControllerDelegate, UINavi
         pickerAlert.addAction(libraryOption)
         pickerAlert.addAction(cancelOption)
         present(pickerAlert, animated: true)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            self.photoImageView.image = image
+        }
+        dismiss(animated: true)
     }
 }
 
