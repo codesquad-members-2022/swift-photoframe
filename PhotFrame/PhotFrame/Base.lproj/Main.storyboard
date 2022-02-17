@@ -133,6 +133,15 @@
                     <view key="view" contentMode="scaleToFill" id="Z0I-KT-a6L">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xbH-Td-rvi">
+                                <rect key="frame" x="125" y="542" width="125" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="닫기"/>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="y30-ph-0wl"/>
                         <color key="backgroundColor" red="1" green="0.28936024805282878" blue="0.098140365105622962" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
@@ -140,7 +149,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U37-KX-1Oh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2596" y="-346"/>
+            <point key="canvasLocation" x="2596" y="-346.55172413793105"/>
         </scene>
     </scenes>
     <resources>
