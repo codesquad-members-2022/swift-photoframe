@@ -87,6 +87,12 @@
                                     <segue destination="VFW-et-Q9s" kind="show" id="MpB-nt-ljR"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gR3-hC-iX9">
+                                <rect key="frame" x="183" y="519" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="닫기"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WuQ-h3-Fri"/>
                         <color key="backgroundColor" systemColor="systemGrayColor"/>
@@ -97,13 +103,24 @@
             </objects>
             <point key="canvasLocation" x="123" y="297"/>
         </scene>
-        <!--YellowVC-->
+        <!--Yello View Controller-->
         <scene sceneID="LPg-lL-lq6">
             <objects>
-                <viewController id="VFW-et-Q9s" customClass="YellowVC" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="VFW-et-Q9s" customClass="YelloViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5kR-GN-iEg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7am-Mj-3d1">
+                                <rect key="frame" x="183" y="474" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="닫기"/>
+                                <connections>
+                                    <action selector="closeButtonTouched:" destination="VFW-et-Q9s" eventType="touchUpInside" id="E1Y-WL-jzA"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="cCb-c3-jj6"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                     </view>
