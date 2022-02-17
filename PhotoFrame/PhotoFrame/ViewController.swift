@@ -19,8 +19,8 @@ class ViewController: UIViewController {
         photoLabel.alpha = 0.6
         
         guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "YellowViewController") as? YellowViewController else { return }
-        nextVC.modalTransitionStyle = .flipHorizontal
-        nextVC.modalPresentationStyle = .automatic
+        nextVC.modalTransitionStyle = .partialCurl
+        nextVC.modalPresentationStyle = .fullScreen
         self.present(nextVC, animated: true, completion: nil)
     }
     
