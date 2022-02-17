@@ -54,7 +54,8 @@ class ViewController: ViewContollerFlow {
         self.photoImageView.image = UIImage(named: "\(randomString).jpg")
     }
     @IBAction func selectButtonTouched(_ sender: Any) {
-        
+        let imagePickerController = UIImagePickerController()
+        self.present(imagePickerController, animated: true)
     }
 }
 
