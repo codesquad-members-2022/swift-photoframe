@@ -8,10 +8,10 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var FirstLabel: UILabel!
     @IBOutlet weak var FirstDescription: UILabel!
-
+    
     @IBOutlet weak var back_Yellow: UIButton!
     @IBOutlet weak var back_White: UIButton!
     @IBOutlet weak var back_Red: UIButton!
@@ -26,29 +26,26 @@ class ViewController: UIViewController {
         self.FirstDescription.font = .monospacedDigitSystemFont(ofSize: 20, weight: .heavy)
         
         self.back_Yellow.addTarget(self, action: #selector(changeBackgorund), for: .touchUpInside)
-        self.back_Yellow.tag = 0
         self.back_Yellow.addTarget(self, action: #selector(nextButtonTouched), for: .touchUpInside)
-        //objc 와 IBAction 을 혼합사용가능. 
+        //objc 와 IBAction 을 혼합사용가능.
         self.back_White.addTarget(self, action: #selector(changeBackgorund), for: .touchUpInside)
-        self.back_White.tag = 1
         self.back_Red.addTarget(self, action: #selector(changeBackgorund), for: .touchUpInside)
-        self.back_Red.tag = 2
+        
         
     }
     
     
     @objc func changeBackgorund(_ sender : UIButton) {
-        print(sender.tag)
-        switch sender.tag {
-        case 0 :
+        switch sender{
+        case back_Yellow :
             self.view.backgroundColor = UIColor(red: 0.2, green: 0.7, blue: 0.4, alpha: 0.3)
-        case 1:
+        case back_White:
             self.view.backgroundColor = UIColor(red: 0.3, green: 0.5, blue: 1.2, alpha: 0.3)
-        case 2:
+        case back_Red:
             self.view.backgroundColor = UIColor(red: 0.5, green: 1, blue: 2, alpha: 0.3)
         default :
             print("Not a valid Button")
-
+            
         }
         
     }

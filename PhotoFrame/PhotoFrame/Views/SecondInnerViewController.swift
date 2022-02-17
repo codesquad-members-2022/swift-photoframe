@@ -13,8 +13,4 @@ class SecondInnerViewController: UIViewController {
         super.viewDidLoad()
 
     }
-    
-
- 
-
 }

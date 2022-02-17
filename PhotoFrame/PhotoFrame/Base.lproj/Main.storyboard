@@ -137,7 +137,9 @@
                                     <fontDescription key="titleFontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="19"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="jmx-ho-bg3" kind="show" id="GVQ-fB-lGo"/>
+                                    <segue destination="jmx-ho-bg3" kind="popoverPresentation" popoverAnchorView="cYG-2A-NfV" id="GVQ-fB-lGo">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" left="YES"/>
+                                    </segue>
                                 </connections>
                             </button>
                         </subviews>
@@ -148,7 +150,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E3x-87-5Ko" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2128" y="-717"/>
+            <point key="canvasLocation" x="1868" y="-717"/>
         </scene>
         <!--Second Inner View Controller-->
         <scene sceneID="eFX-bA-4y5">
@@ -174,7 +176,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G1O-if-a9J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3055" y="-717"/>
+            <point key="canvasLocation" x="2639" y="-717"/>
         </scene>
     </scenes>
     <resources>
