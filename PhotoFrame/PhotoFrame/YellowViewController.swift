@@ -8,11 +8,13 @@
 import UIKit
 
 class YellowViewController: UIViewController {
-
+    
+    // MARK: - View LifeCycle
+    @IBOutlet weak var nextButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(#function)
-        print(#file, #line, #function, #column)
+        self.configureButton()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -39,19 +41,42 @@ class YellowViewController: UIViewController {
         print(#file, #line, #function, #column)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // MARK: - Methods
+    func configureButton() {
+        self.nextButton.setTitle("Click To Next", for: .normal)
+        self.nextButton.addTarget(self, action: #selector(self.buttonTouched), for: .touchUpInside)
+        self.nextButton.addTarget(self, action: #selector(self.buttonTouchedDown), for: .touchDown)
     }
-    */
-
+    
+    func navigateToNextUsingNavigationController() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "PurpleViewController") as! PurpleViewController
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func showViewControllerModally() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "PurpleViewController") as! PurpleViewController
+        vc.modalTransitionStyle = .coverVertical
+        vc.modalPresentationStyle = .pageSheet
+        self.present(vc, animated: true, completion: nil)
+    }
+    
+    func navigateToNextUsingExistSegue() {
+        self.performSegue(withIdentifier: "goToPurpleViewController", sender: nil)
+    }
+    
+    // MARK: - Selectors
+    @objc func buttonTouched(sender: UIButton, forEvent event: UIEvent) {
+        sender.setTitle("Moving...", for: .normal)
+        self.showViewControllerModally()
+    }
+    
+    @objc func buttonTouchedDown(sender: UIButton, forEvent event: UIEvent) {
+        sender.setTitle("Start!", for: .normal)
+    }
+    
     @IBAction func closeButtonTouched(_ sender: Any) {
-        // only works with Navigation ViewController
         self.navigationController?.popViewController(animated: true)
     }
 }
