@@ -21,6 +21,7 @@ class ViewController1 : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        print("***************************")
         print("1st view \(#function)")
         self.photoLabel.text = "Damagucci-Juice의 포토 프레임"
         self.photoLabel.font = UIFont.systemFont(ofSize: CGFloat(15))

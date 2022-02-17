@@ -14,6 +14,7 @@ class YellowViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("***************************")
         print("Yellow \(#function)")
     }
     override func viewWillAppear(_ animated: Bool) {
