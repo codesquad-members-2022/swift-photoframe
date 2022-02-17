@@ -8,8 +8,10 @@
 import UIKit
 
 class GrayViewController: UIViewController {
-    
-    @IBAction func closeButtonTouced(_ sender: Any) {
+    @IBAction func closeButtonTouched(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
+    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
     }
 }
