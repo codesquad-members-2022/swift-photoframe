@@ -9,6 +9,13 @@ import UIKit
 
 class YellowViewController: UIViewController {
 
+    @IBAction func nextButtonTouched(_ sender: Any) {
+        guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "BlueViewController") as? BlueViewController else { return }
+        nextVC.modalTransitionStyle = .crossDissolve
+        nextVC.modalPresentationStyle = .automatic
+        self.present(nextVC, animated: true, completion: nil)
+    }
+    
     @IBOutlet weak var closeButton: UIButton!
     @IBAction func closeButtonTouched(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)

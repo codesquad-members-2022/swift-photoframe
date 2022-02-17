@@ -17,6 +17,11 @@ class ViewController: UIViewController {
         photoLabel.textColor = .systemPink
         photoLabel.backgroundColor = .systemBlue
         photoLabel.alpha = 0.6
+        
+        guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "YellowViewController") as? YellowViewController else { return }
+        nextVC.modalTransitionStyle = .flipHorizontal
+        nextVC.modalPresentationStyle = .automatic
+        self.present(nextVC, animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
