@@ -172,3 +172,6 @@ viewDidDisappear()
 
 - 추가학습거리
 - [X] Segue를 제거하고 다음화면을 보여주는 코드를 작성해서 시도해보기.
+
+1. 각 StoryBoard에 연결된 Segue를 제거한다
+2. StoryBoar들을 구별할 수 있게 StoryBoard에 ID값을 준다.(구분하기 편하게 ViewController와 같은 값을 줌.)
