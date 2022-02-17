@@ -174,4 +174,17 @@ viewDidDisappear()
 - [X] Segue를 제거하고 다음화면을 보여주는 코드를 작성해서 시도해보기.
 
 1. 각 StoryBoard에 연결된 Segue를 제거한다
-2. StoryBoar들을 구별할 수 있게 StoryBoard에 ID값을 준다.(구분하기 편하게 ViewController와 같은 값을 줌.)
+2. StoryBoard들을 구별할 수 있게 StoryBoard에 ID값을 준다.(구분하기 편하게 ViewController와 같은 값을 줌.)
+
+3. 밑과 같은 코드를 함수에 
+<img width="1107" alt="스크린샷 2022-02-17 오후 5 54 57" src="https://user-images.githubusercontent.com/80263729/154440188-3ac001bd-6399-44f9-8668-a65e97ac91e2.png">
+ 
+
+
+- 어려웠던점
+    - segue와 View가 많아지니까 button들과 View들을 1대1매칭시키다가 오류가 자주 발생했다.
+    - 위와같은 오류로 버튼이 Exit Object라고 자꾸 떳는데 이유를 찾는데 시간이 많이 소요됬다.
+    - 일부러 잘못된 StoryBoardID를 사용해서 Error를 내보았는데 앱이 바로죽는 모습을 확인할수 있었고 이를 해결하기 위해 Action함수에 error를 처리하려 했으나 실패..(IBAction함수는 리턴값이 없어야한다.)
+
+<img width="361" alt="스크린샷 2022-02-17 오후 5 51 19" src="https://user-images.githubusercontent.com/80263729/154439545-f42cbe1b-4eb1-4787-b292-0c624a93f79c.png">
+    - 모달들이 겹쳐있길래 한번에 없애는 메소드를 만들고 싶었다. 한번에 n을 없애는 메소드까지는 만들었지만 현재 올라와있는 모달만큼의 dismiss를 구현하는데 실패했다 더 공부를 해봐야겠다.
