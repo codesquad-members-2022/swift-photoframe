@@ -15,6 +15,8 @@ class BlueViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     override func viewDidLoad() {
+        print("\nBlueViewController가 로드되었다.")
+        print(#file, #line, #function, #column)
         super.viewDidLoad()
         
         closeButton.translatesAutoresizingMaskIntoConstraints = false
@@ -25,5 +27,25 @@ class BlueViewController: UIViewController {
         
         closeButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30).isActive = true
         closeButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 30).isActive = true
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        print("BlueViewController가 나타날 것이다.")
+        print(#file, #line, #function, #column)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        print("BlueViewController가 나타났다.")
+        print(#file, #line, #function, #column)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        print("\nBlueViewController가 사라질 것이다.")
+        print(#file, #line, #function, #column)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        print("BlueViewController가 사라졌다.")
+        print(#file, #line, #function, #column)
     }
 }

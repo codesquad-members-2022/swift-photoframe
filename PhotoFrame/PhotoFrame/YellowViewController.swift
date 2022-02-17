@@ -15,6 +15,8 @@ class YellowViewController: UIViewController {
     }
     
     override func viewDidLoad() {
+        print("\nYellowViewController가 로드되었다.")
+        print(#file, #line, #function, #column)
         super.viewDidLoad()
         closeButton.setTitle("닫기", for: .normal)
         closeButton.backgroundColor = .lightGray
@@ -24,5 +26,25 @@ class YellowViewController: UIViewController {
         
         closeButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30).isActive = true
         closeButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 30).isActive = true
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        print("YellowViewController가 나타날 것이다.")
+        print(#file, #line, #function, #column)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        print("YellowViewController가 나타났다.")
+        print(#file, #line, #function, #column)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        print("\nYellowViewController가 사라질 것이다.")
+        print(#file, #line, #function, #column)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        print("YellowViewController가 사라졌다.")
+        print(#file, #line, #function, #column)
     }
 }
