@@ -21,16 +21,8 @@
 		E0DDB60E27BA88D200F23B6B /* GrayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DDB60D27BA88D200F23B6B /* GrayViewController.swift */; };
 		E0DDB61027BA88E400F23B6B /* BrownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DDB60F27BA88E400F23B6B /* BrownViewController.swift */; };
 		E0DDB61D27BC7AC200F23B6B /* CodableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DDB61C27BC7AC200F23B6B /* CodableViewController.swift */; };
-		E0DDB63F27BD13E700F23B6B /* StudyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DDB63E27BD13E700F23B6B /* StudyViewController.swift */; };
 		E0DDB64927BDB6B200F23B6B /* StudyViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DDB64027BDB6B200F23B6B /* StudyViewController1.swift */; };
-		E0DDB64A27BDB6B200F23B6B /* StudyViewController8.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DDB64127BDB6B200F23B6B /* StudyViewController8.swift */; };
 		E0DDB64B27BDB6B200F23B6B /* StudyViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DDB64227BDB6B200F23B6B /* StudyViewController2.swift */; };
-		E0DDB64C27BDB6B200F23B6B /* StudyViewController4.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DDB64327BDB6B200F23B6B /* StudyViewController4.swift */; };
-		E0DDB64D27BDB6B200F23B6B /* StudyViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DDB64427BDB6B200F23B6B /* StudyViewController3.swift */; };
-		E0DDB64E27BDB6B200F23B6B /* StudyViewController7.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DDB64527BDB6B200F23B6B /* StudyViewController7.swift */; };
-		E0DDB64F27BDB6B200F23B6B /* StudyViewController9.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DDB64627BDB6B200F23B6B /* StudyViewController9.swift */; };
-		E0DDB65027BDB6B200F23B6B /* StudyViewController5.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DDB64727BDB6B200F23B6B /* StudyViewController5.swift */; };
-		E0DDB65127BDB6B200F23B6B /* StudyViewController6.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DDB64827BDB6B200F23B6B /* StudyViewController6.swift */; };
 		E0DDB65727BDC6A500F23B6B /* StudyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DDB65627BDC6A500F23B6B /* StudyTableViewController.swift */; };
 		E0DDB65927BDC86000F23B6B /* StudyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DDB65827BDC86000F23B6B /* StudyTableViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -71,16 +63,8 @@
 		E0DDB60D27BA88D200F23B6B /* GrayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrayViewController.swift; sourceTree = "<group>"; };
 		E0DDB60F27BA88E400F23B6B /* BrownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrownViewController.swift; sourceTree = "<group>"; };
 		E0DDB61C27BC7AC200F23B6B /* CodableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableViewController.swift; sourceTree = "<group>"; };
-		E0DDB63E27BD13E700F23B6B /* StudyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyViewController.swift; sourceTree = "<group>"; };
 		E0DDB64027BDB6B200F23B6B /* StudyViewController1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudyViewController1.swift; sourceTree = "<group>"; };
-		E0DDB64127BDB6B200F23B6B /* StudyViewController8.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudyViewController8.swift; sourceTree = "<group>"; };
 		E0DDB64227BDB6B200F23B6B /* StudyViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudyViewController2.swift; sourceTree = "<group>"; };
-		E0DDB64327BDB6B200F23B6B /* StudyViewController4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudyViewController4.swift; sourceTree = "<group>"; };
-		E0DDB64427BDB6B200F23B6B /* StudyViewController3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudyViewController3.swift; sourceTree = "<group>"; };
-		E0DDB64527BDB6B200F23B6B /* StudyViewController7.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudyViewController7.swift; sourceTree = "<group>"; };
-		E0DDB64627BDB6B200F23B6B /* StudyViewController9.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudyViewController9.swift; sourceTree = "<group>"; };
-		E0DDB64727BDB6B200F23B6B /* StudyViewController5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudyViewController5.swift; sourceTree = "<group>"; };
-		E0DDB64827BDB6B200F23B6B /* StudyViewController6.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudyViewController6.swift; sourceTree = "<group>"; };
 		E0DDB65627BDC6A500F23B6B /* StudyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyTableViewController.swift; sourceTree = "<group>"; };
 		E0DDB65827BDC86000F23B6B /* StudyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -116,14 +100,6 @@
 				E0DDB65827BDC86000F23B6B /* StudyTableViewCell.swift */,
 				E0DDB64027BDB6B200F23B6B /* StudyViewController1.swift */,
 				E0DDB64227BDB6B200F23B6B /* StudyViewController2.swift */,
-				E0DDB64427BDB6B200F23B6B /* StudyViewController3.swift */,
-				E0DDB64327BDB6B200F23B6B /* StudyViewController4.swift */,
-				E0DDB64727BDB6B200F23B6B /* StudyViewController5.swift */,
-				E0DDB64827BDB6B200F23B6B /* StudyViewController6.swift */,
-				E0DDB64527BDB6B200F23B6B /* StudyViewController7.swift */,
-				E0DDB64127BDB6B200F23B6B /* StudyViewController8.swift */,
-				E0DDB64627BDB6B200F23B6B /* StudyViewController9.swift */,
-				E0DDB63E27BD13E700F23B6B /* StudyViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -413,25 +389,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E0DDB64C27BDB6B200F23B6B /* StudyViewController4.swift in Sources */,
 				E0DDB61027BA88E400F23B6B /* BrownViewController.swift in Sources */,
 				E0DDB65927BDC86000F23B6B /* StudyTableViewCell.swift in Sources */,
 				E0DDB61D27BC7AC200F23B6B /* CodableViewController.swift in Sources */,
 				E0DDB5C827B9E84900F23B6B /* AppDelegate.swift in Sources */,
 				E0B5B8B527BDCD530032F38B /* StudyModel.swift in Sources */,
-				E0DDB65127BDB6B200F23B6B /* StudyViewController6.swift in Sources */,
-				E0DDB64A27BDB6B200F23B6B /* StudyViewController8.swift in Sources */,
-				E0DDB64F27BDB6B200F23B6B /* StudyViewController9.swift in Sources */,
 				E0DDB65727BDC6A500F23B6B /* StudyTableViewController.swift in Sources */,
-				E0DDB63F27BD13E700F23B6B /* StudyViewController.swift in Sources */,
 				E0DDB5CA27B9E84900F23B6B /* SceneDelegate.swift in Sources */,
-				E0DDB65027BDB6B200F23B6B /* StudyViewController5.swift in Sources */,
 				E0DDB64B27BDB6B200F23B6B /* StudyViewController2.swift in Sources */,
 				E0DDB60A27B9F41A00F23B6B /* PhotoFrameViewController.swift in Sources */,
-				E0DDB64E27BDB6B200F23B6B /* StudyViewController7.swift in Sources */,
 				E0DDB60E27BA88D200F23B6B /* GrayViewController.swift in Sources */,
 				E0DDB64927BDB6B200F23B6B /* StudyViewController1.swift in Sources */,
-				E0DDB64D27BDB6B200F23B6B /* StudyViewController3.swift in Sources */,
 				E0DDB60827B9F40E00F23B6B /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
