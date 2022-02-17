@@ -53,7 +53,6 @@
                                 <buttonConfiguration key="configuration" style="plain" title="다음"/>
                                 <connections>
                                     <action selector="NextButtonTouched:" destination="OBV-ub-mVL" eventType="touchUpInside" id="fMS-XP-zID"/>
-                                    <segue destination="HyD-pF-l2U" kind="show" id="brS-YS-gZf"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JFg-i3-RcJ">
@@ -98,7 +97,6 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="nextButtonTouched:" destination="HyD-pF-l2U" eventType="touchUpInside" id="8W6-ot-DuS"/>
-                                    <segue destination="3py-mJ-7YT" kind="showDetail" id="BOT-pN-aJs"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="보라 Show" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c7f-eq-C4C">
@@ -152,7 +150,7 @@
             <objects>
                 <viewController storyboardIdentifier="RedViewController" id="3py-mJ-7YT" customClass="RedViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="squ-WI-Uwr">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eSi-fo-ccb">
@@ -164,7 +162,6 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="nextButtonTouched:" destination="3py-mJ-7YT" eventType="touchUpInside" id="w0n-Pf-13i"/>
-                                    <segue destination="v5l-oL-LYM" kind="presentation" id="fKi-vy-bH1"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="빨강 Show Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L6J-k7-9GN">
@@ -200,7 +197,7 @@
             <objects>
                 <viewController storyboardIdentifier="GreenViewController" id="Sa7-Dx-ayG" customClass="GreenViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iim-kQ-S6K">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gac-ds-6bz">
@@ -247,7 +244,7 @@
             <objects>
                 <viewController storyboardIdentifier="YellowViewController" id="v5l-oL-LYM" customClass="YellowViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZxL-6n-pcU">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wAr-av-6Ex">
@@ -259,9 +256,6 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="nextButtonTouched:" destination="v5l-oL-LYM" eventType="touchUpInside" id="dPB-c4-bl2"/>
-                                    <segue destination="Sa7-Dx-ayG" kind="popoverPresentation" popoverAnchorView="wAr-av-6Ex" id="k8F-Mr-5qi">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="노랑 Present Modally " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9j9-Qs-1if">
