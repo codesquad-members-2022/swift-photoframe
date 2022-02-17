@@ -53,6 +53,11 @@ class ViewController: UIViewController {
         self.photoLabel.textColor = .black
         self.photoLabel.backgroundColor = .purple
         self.photoLabel.alpha = 0.8
+        
+        guard let secondVC = self.storyboard?.instantiateViewController(identifier: "secondVC") as? SecondViewController else {return}
+        self.present(secondVC, animated: true, completion: nil)
+    
+
     }
     
     @IBAction func nextButtonTouchUpOutside(_ sender: Any) {
