@@ -24,7 +24,7 @@ class ViewController: UIViewController {
     
     
     @IBAction func nextButtonTouched(_ sender: UIButton) {
-        self.photoLabel.text = "Go Gray"
+        self.photoLabel.text = "Go Dark"
         self.photoLabel.font = UIFont(name: "Futura Bold", size: 45)
     }
     
