@@ -9,8 +9,8 @@ import UIKit
 
 class YellowViewController: UIViewController {
 
-    @IBAction func closeButtonTouched(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+    @IBAction func closeButtonTouched(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
     }
     
     override func viewDidLoad() {
