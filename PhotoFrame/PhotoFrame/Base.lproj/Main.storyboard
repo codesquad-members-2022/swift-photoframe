@@ -55,9 +55,6 @@
                                     <action selector="nextButtonTouchDown:" destination="MRY-Yo-uWk" eventType="touchDown" id="u72-Ei-qwK"/>
                                     <action selector="nextButtonTouchUpOutside:" destination="MRY-Yo-uWk" eventType="touchUpOutside" id="elP-Yc-IgS"/>
                                     <action selector="nextButtonTouched:" destination="MRY-Yo-uWk" eventType="touchUpInside" id="CVo-aG-IHB"/>
-                                    <segue destination="gOQ-oH-Jf3" kind="popoverPresentation" popoverAnchorView="abd-kZ-4Nz" id="gKL-TU-ioM">
-                                        <popoverArrowDirection key="popoverArrowDirection" left="YES" right="YES"/>
-                                    </segue>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zMG-i8-vJp">
@@ -87,9 +84,9 @@
         <!--Second View Controller-->
         <scene sceneID="FpT-eQ-6Nw">
             <objects>
-                <viewController id="gOQ-oH-Jf3" customClass="SecondViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="secondVC" id="gOQ-oH-Jf3" customClass="SecondViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="07S-Im-c1m">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a5v-v3-MLC">
