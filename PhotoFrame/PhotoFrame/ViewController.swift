@@ -53,5 +53,8 @@ class ViewController: ViewContollerFlow {
         let randomString = String.init(format: "%02d", arguments: [randomInt])
         self.photoImageView.image = UIImage(named: "\(randomString).jpg")
     }
+    @IBAction func selectButtonTouched(_ sender: Any) {
+        
+    }
 }
 
