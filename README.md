@@ -253,3 +253,39 @@ NavigationController, splitView를 사용하지 않기에 presentModally를 사�
 
 ----
 
+## Container
+
+### 기능 요구 사항
+> [x] 내비게이션 컨트롤러(Navigation Controller)를 Embed 시켜서 동작하도록 개선한다.
+>
+
+### 구현 과정
+1. 스토리보드에 NavigationController추가
+2. 화면전환 코드를 present -> push로 변환
+3. close는 dismiss -> pop으로 변환
+
+### 실행결과
+<img width="328" alt="스크린샷 2022-02-17 오후 3 19 15" src="https://user-images.githubusercontent.com/62687919/154417116-4b3c587a-08a9-47e6-a7ec-a983c49f7fb8.png">
+
+<img width="321" alt="스크린샷 2022-02-17 오후 3 19 44" src="https://user-images.githubusercontent.com/62687919/154417175-e046c617-0641-435b-ae6a-24bd50adaf54.png">
+
+### 추가학습
+- 뷰컨트롤러 컨테이너는 또 어떤 클래스가 있는지 찾아보고 학습한다.
+    1. UINavigationController, UITabBarController, UISplitViewController
+- 내비게이션 컨트롤러가 있을 경우와 없을 경우 화면 전환 동작이 어떻게 다른지, 화면들 포함관계가 있는지 학습한다.
+    1. push애니메이션은 right to left, pop은 left to right로 화면전환 됩니다.
+    2. Container controller로 push 되는거기에 부모, 자식관계를 갖는것으로 알고 있습니다. 
+- 내비게이션 컨트롤러 관련 메서드가 왜 push / pop 인지 학습한다.
+    1. viewcontroller를 stack구조로 쌓기에 push와 pop을 사용한다 생각합니다. 
+
+### 궁금증 정리
+
+Container
+- 화면에 표시해주는 책임을 다른 객체로 분리해 낸 것이 컨테이너 뷰 컨트롤러
+- ViewController의 역할을 분리하기 위해 ( 단일 책임 원칙 ) 사용됩니다.
+- ViewController 간에 부모-자식 관계를 형성하여 자신만의 방식으로 자식을 관리하는 역할을 합니다.
+
+
+----
+
+
