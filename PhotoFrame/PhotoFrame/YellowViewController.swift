@@ -17,6 +17,8 @@ class YellowViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         closeButton.setTitle("닫기", for: .normal)
+        closeButton.backgroundColor = .lightGray
+        closeButton.layer.cornerRadius = 10
         
         closeButton.translatesAutoresizingMaskIntoConstraints = false
         
