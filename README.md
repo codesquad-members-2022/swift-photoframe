@@ -155,9 +155,20 @@ firstLabel 아래 있는 레이블도 firstDescription 아웃렛으로 연결한
 
 - [X] 위와 동일하게 세 번째 추가한 화면에 대해 ViewController 클래스를 지정하고, [닫기]버튼을 추가하고, 액션을 연결해서 화면을 닫는 동작이 동작하도록 구현한다.
 - [X] 뷰 컨트롤러 강의 자료에 있는 화면 관련 콜백 함수들에 모두 print(#file, #line, #function, #column) 코드를 추가한다.
+- [X] 각 뷰컨트롤러마다 라이프 사이클함수를 추가하고 콘솔에 시행된 라이프 사이클과 뷰컨트롤러를 print하는 구문을 추가했다.
 ```
 viewWillAppear()
 viewDidAppear()
 viewWillDisappear()
 viewDidDisappear()
 ```
+스크린샷.
+
+- 배운점
+    - 콘솔창 확인 결과 ViewDidLoad -> ViewWillAppear -> ViewDidAppear 순으로 시행이되었고 창을 닫을 때에는 ViewWillDisappear -> ViewDidDDisAppear 순으로 시행됬다.
+    - 주목할만한 점은 현재 제일 상단에서 보이는 뷰까지 Stack형식으로 쌓이기 때문에 다음화면으로 넘어간다고 해서 뒤에있는 ViewController가 DisAppear가 되지 않는다는 것이다.
+    - TabBarViewController와 같이 ContainerViewController는 가장 처음에 시작되는 RootViewController와 라이프 사이클을 함꼐한다.
+    - RootViewController에 Dismiss를 하는 버튼을 추가해도 Dissmiss되지 않는다.
+
+- 추가학습거리
+- [X] Segue를 제거하고 다음화면을 보여주는 코드를 작성해서 시도해보기.

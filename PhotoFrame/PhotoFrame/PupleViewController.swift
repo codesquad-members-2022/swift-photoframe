@@ -32,12 +32,12 @@ class PupleViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        print("ViwWillDisppaear - PupleViewController")
+        print("ViwWillDisAppear - PupleViewController")
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        print("ViewDidDisappear - PupleViewController")
+        print("ViewDidDisAppear - PupleViewController")
     }
     
 
