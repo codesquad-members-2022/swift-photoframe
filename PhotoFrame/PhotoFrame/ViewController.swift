@@ -38,7 +38,7 @@ class ViewController: UIViewController {
         self.firstLabel.textColor = #colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1)
         self.firstLabel.backgroundColor = UIColor(red: 250 / 255.0, green: 197 / 255.0, blue: 210 / 255.0, alpha: 1)
         self.firstLabel.backgroundColor = UIColor(cgColor: CGColor(red: 250 / 255.0, green: 197 / 255.0, blue: 210 / 255.0, alpha: 1))
-        self.firstLabel.font = UIFont.boldSystemFont(ofSize: 40)
+        self.firstLabel.font = UIFont.boldSystemFont(ofSize: 35)
         
         // 세로 위치 중 가운데로 배치
         self.firstLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true

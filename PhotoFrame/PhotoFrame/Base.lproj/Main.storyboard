@@ -75,10 +75,10 @@
             </objects>
             <point key="canvasLocation" x="1142" y="-441"/>
         </scene>
-        <!--View Controller-->
+        <!--Pink View Controller-->
         <scene sceneID="mMR-Nx-J31">
             <objects>
-                <viewController id="fWP-MA-5AE" sceneMemberID="viewController">
+                <viewController id="fWP-MA-5AE" customClass="PinkViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1zk-pe-4jp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
