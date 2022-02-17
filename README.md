@@ -172,3 +172,44 @@ Interface Builder를 통해 받아온 정보로 Action을 수행하겠다는 의
 ## ❗️ 
 디폴트로 Weak을 사용하는게 좋다. 
 뷰를 씬에 삭제했다가 다시 추가해야 하는 상황이라면 Strong 으로 작성하고, 그 외에는 Weak로 작성한다.
+
+---
+
+<br>
+
+# step3
+## 요구사항 
+- [x]  Scene추가와 Segue 연결
+- [x]  IBOutlet weak 로 변경
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/59790540/154417282-3f7301d5-9c68-49e4-a235-daac97292c79.gif" width="200" height="420">
+</p>
+
+## 📓Segue 학습 
+### **show**
+
+가장 일반적인 세그웨이 이다. 새 화면으로 이동한다. Stack 구조로서 새 화면이 원래 화면 위를 덮는 구조이다.
+
+### **Show Detail**
+
+SplitView 구조에서 원래 화면을 Master, 새 화면을 Detail로 표시한다. 아이폰에서는 똑같아 보이지만 아이패드로 보면 화면이 둘로 분할되서 보이게 된다.
+
+### **Present Modally**
+
+새 화면이 모달처럼 원래 화면 위 전체를 뒤덮는다. 월래 화면은 새 화면 뒤에 그대로 존재하게 된다.
+
+### **Popover Presentation**
+
+아이패드에서 팝업창을 띄운다. 아이폰 앱한테는 Show Detail과 마찬가지로 큰 의미가 없다.
+
+### **Custom**
+
+사용자 정의 세그웨이를 만든다.
+
+## 📓 화면 전환방식
+    화면을 전환하는 방식에는 크게 3가지가 있다.
+    1. present
+    2. segue
+    3. nevigation controller 
+
