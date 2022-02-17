@@ -7,7 +7,7 @@
 
 import UIKit
 
-class YellowViewController: UIViewController {
+class OrangeViewController: UIViewController {
 
     @IBAction func closeButtonTouched(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
