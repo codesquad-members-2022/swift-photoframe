@@ -179,8 +179,6 @@ viewDidDisappear()
 3. 밑과 같은 코드를 함수에 
 <img width="1107" alt="스크린샷 2022-02-17 오후 5 54 57" src="https://user-images.githubusercontent.com/80263729/154440188-3ac001bd-6399-44f9-8668-a65e97ac91e2.png">
  
-
-
 - 어려웠던점
     - segue와 View가 많아지니까 button들과 View들을 1대1매칭시키다가 오류가 자주 발생했다.
     - 위와같은 오류로 버튼이 Exit Object라고 자꾸 떳는데 이유를 찾는데 시간이 많이 소요됬다.
@@ -188,3 +186,44 @@ viewDidDisappear()
 
 <img width="361" alt="스크린샷 2022-02-17 오후 5 51 19" src="https://user-images.githubusercontent.com/80263729/154439545-f42cbe1b-4eb1-4787-b292-0c624a93f79c.png">
     - 모달들이 겹쳐있길래 한번에 없애는 메소드를 만들고 싶었다. 한번에 n을 없애는 메소드까지는 만들었지만 현재 올라와있는 모달만큼의 dismiss를 구현하는데 실패했다 더 공부를 해봐야겠다.
+
+`Step06`
+- [X] 스토리보드에서 First Scene을 선택하고, Editor > Embed In > Navigation Controller 항목을 선택한다.
+- [X] 실행해보면 화면 상단에 내비게이션바(Navigation Bar)가 추가되고 [다음]버튼을 누르면 다음 화면이 우측에서 좌측으로 애니메이션되면서 표시된다.
+- [X] [닫기]버튼에 연결된 closeButtonTouched 코드를 다음과 같이 수정한다.
+~~~swift
+    @IBAction func closeButtonTouched(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+~~~
+- [X] 위와 동일하게 세 번째 추가한 화면에 [닫기]버튼도 코드를 수정한다.
+- [X] 뷰 컨트롤러 콜백 함수들 동작도 동일한지 확인한다.
+
+- 다양한 Segue실험
+    - 각 Segue의 종류마다 Navigation이 적용이 되는지 안되는지 확인을 해봤다.
+    - Show빼고는 모두다 modal형식으로 적용이 되었으며 네비게이션이 적용이 되지않았다(back버튼이 생기지 않았다)
+    - dismiss하는 코드는 전 Step그대로인데 modal형식으로 보여진 view만 dismiss되고 네비게이션이 적용된 뷰는 dismiss가 되지 않았다.
+![Simulator Screen Recording - iPhone 13 - 2022-02-17 at 22 35 13](https://user-images.githubusercontent.com/80263729/154492552-93a49ab1-3d2b-43fa-84af-4a9e1c7262d1.gif)
+
+- show vs push
+    - View를 Navigation Stack에 push하는 와중에 중간에 show를 비밀스럽게 끼워봤다.
+    - 동작이 완전 일치한다?
+    - show 와 push의 공식문서 설명을 살펴보자.
+    - show: 메서드를 재정의하는 뷰 컨트롤러 계층에서 개체를 찾기 위해 defualt값으로 targetViewController(forAction:sender:) 메서드를 호출하고 override하는 뷰컨트롤러 계층은 spilt과   navigation이다. 적절한 뷰 컨트롤러 계층을 찾으면 재정의 되서 호출되기 떄문에 이번에는 navigation의 push처럼 작동된것.
+   
+
+- 헤맸던점
+    - NavigationViewController는 ContainerViewController라 UIViewController보다 상위의 개념인줄 알고 있었지만 NavigationViewController가 조금 더 큰 개념이었다.
+    - 위의 개념이 헷갈리는 바람에 UIViewController class에서 self.navigationController? 로 가는 흐름을 찾는데 시간이 많이 걸림.
+
+- 추가학습거리
+- 뷰컨트롤러 컨테이너는 또 어떤 클래스가 있는지 찾아보고 학습한다.
+    - UISplitViewController , UIPageViewController, UINavigationController, UITabBarController 
+
+- 내비게이션 컨트롤러가 있을 경우와 없을 경우 화면 전환 동작이 어떻게 다른지, 화면들 포함관계가 있는지 학습한다.
+    - 있을경우에는 순서대로 뒤로갈수 있는 버튼이 생긴다.
+    - 화면들은 Stack처럼 쌓여있기 때문에 3번쨰에서 1번쨰 1번째에서 3번쨰로 가지못한다.
+ 
+- 내비게이션 컨트롤러 관련 메서드가 왜 push / pop 인지 학습한다.
+    - 내비게이션 컨트롤러은 childViewController들을 Stack으로 관리하기 떄문
+
