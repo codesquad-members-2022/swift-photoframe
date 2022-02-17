@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class ViewController2: UIViewController {
+class Scene2ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
