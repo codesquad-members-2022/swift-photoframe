@@ -31,6 +31,11 @@ class ViewController: UIViewController {
         photoLabel.backgroundColor = UIColor(red: 82, green: 74, blue: 78)
         photoLabel.alpha = 0.7
     }
+    @IBAction func pushButtonTouched(_ sender: UIButton) {
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let grayViewController = storyBoard.instantiateViewController(withIdentifier: "GrayViewController")
+        navigationController?.pushViewController(grayViewController, animated: true)
+    }
     
     @IBAction func unwindToFirstViewController(segue: UIStoryboardSegue) {
         // 이 뷰 컨트롤러가 unwind segue의 목적지가 될 수 있다는 것을 표시
