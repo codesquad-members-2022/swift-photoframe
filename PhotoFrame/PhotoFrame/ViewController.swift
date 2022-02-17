@@ -6,7 +6,7 @@
 //
 
 import UIKit
-class ViewContollerFlow :UIViewController{
+class PrintViewContollerState :UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +28,7 @@ class ViewContollerFlow :UIViewController{
         print(#file, #line, #function, #column)
     }
 }
-class ViewController: ViewContollerFlow, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class ViewController: PrintViewContollerState, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var photoLabel: UILabel!
     
@@ -42,7 +42,6 @@ class ViewController: ViewContollerFlow, UIImagePickerControllerDelegate, UINavi
         self.photoLabel.backgroundColor = .yellow
         self.photoLabel.font.withSize(30)
         self.photoLabel.textAlignment = .center
-        print(#file, #line, #function, #column)
     }
 
     @IBAction func nextButtonTouched(_ sender: Any) {

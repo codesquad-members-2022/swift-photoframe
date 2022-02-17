@@ -7,7 +7,7 @@
 
 import UIKit
 
-class GreyViewController: ViewContollerFlow {
+class GreyViewController: PrintViewContollerState {
     @IBAction func closeButtonTouched(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
