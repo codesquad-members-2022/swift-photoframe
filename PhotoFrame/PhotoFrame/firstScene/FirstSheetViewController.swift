@@ -64,11 +64,6 @@ class FirstSheetViewController: UIViewController {
     
     @IBAction func closeButtonTouched(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
-        /*
-        // Navigation Controller 내에서 작동X
-        // dismiss는 presented/presenting VC와 연관되어 작동이 안 되는 것으로 보임
-        dismiss(animated: true, completion: nil)
-         */
     }
     
     @IBAction func navigationButton(_ sender: UIBarButtonItem) {

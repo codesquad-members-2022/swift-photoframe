@@ -147,12 +147,50 @@ iOS 포토프레임 프로젝트 저장소
     
 <img src = "https://user-images.githubusercontent.com/44107696/154216842-7db2c8fe-9985-415f-bbf3-24eb7ac0d2f4.png" width="800" height="700">
     * 앞과 동일하게 push 구현과 함께 아래의 버튼 클릭시 popViewController를 호출하며 이전 뷰로 돌아갈 수 있도록 구현
+    * dismiss는 present 전환 방식에서 사용되므로 기존에 dismiss로 작성한 되돌아가기 코드는 pop으로 대체 (기존 코드 : dismiss(animated: true, completion: nil))
     
 <img src = "https://user-images.githubusercontent.com/44107696/154216847-d1ed3286-c9cc-461f-85d8-bbe362801d70.png" width="800" height="700">
-    * 기본적으로 Back 버튼이 구현되어 있으므로 상단의 버튼 클릭 시, 이전에 dismiss로 구현했던 rootView로 돌아가는 동작을 popToRootViewController를 호출하는 방식으로 재구현
+    * 기본적으로 Back 버튼이 구현되어 있으므로 상단의 버튼 클릭 시, 이전에 dismiss로 구현했던 rootView로 돌아가는 동작을 popToRootViewController를 호출하는 방식으로 재구현 (기존 방식 : if let vc = self.presentingViewController{
+           if let root = vc.presentingViewController{
+               root.dismiss(animated: true)
+           }
+        })
     * push / pop과 segue를 통한 화면 전환 정상 작동 확인
 
 - 뷰 컨트롤러 콜백 함수들 동작도 동일한지 확인한다.
 <img src = "https://user-images.githubusercontent.com/44107696/154220313-1d469a4f-5a84-45d1-88d8-965fb60472a5.jpeg" width="960" height="540">
 <img src = "https://user-images.githubusercontent.com/44107696/154220331-bd38b47a-2fa0-4d08-8dba-9c7d2a9c77dd.jpeg" width="960" height="540">
 <img src = "https://user-images.githubusercontent.com/44107696/154220334-f1eedad6-d667-4843-85e3-d353d37416d0.jpeg" width="960" height="540">
+
+
+## 07. 다른 화면 연결하기
+### 프로그래밍 요구사항
+- 스토리보드에서 Second Scene을 선택하고, 다음과 같이 보이도록 화면을 디자인한다
+    + 기존에 있던 두 번째 레이블은 삭제한다.
+    + UIImageView를 화면 상단 중앙에 240 x 240 크기로 배치하고, photoImageView 아웃렛으로 연결한다.
+    + 화면 하단에 [다음] 버튼을 추가하고 nextImageButtonTouched 액션으로 연결한다.
+
+<img src = "https://user-images.githubusercontent.com/44107696/154475075-a08a3fde-c342-4c06-a677-6ba7252244fc.png" width="800" height="700">
+    * 2번째 Tab의 Scene에 ViewController 생성하고 연결
+    
+<img src = "https://user-images.githubusercontent.com/44107696/154475083-93432182-85da-49e4-b9a5-61d617ca8708.png" width="800" height="700">
+    * IBOutlet으로 ImageView 연결 및 Inspector에서 프레임 크기 240x240으로 설정
+    
+<img src = "https://user-images.githubusercontent.com/44107696/154475089-093ddb18-0011-48ec-b034-3b007512991e.png" width="800" height="700">
+    * UIButton 추가 및 IBAction 연결
+
+- 앱에 포함할 사진 리소스를 이미지 다운로드 링크에서 다운로드한다. 압축을 풀고 이미지 파일들을 Xcode 프로젝트로 드래그해서 추가한다.
+
+<img src = "https://user-images.githubusercontent.com/44107696/154475091-a2c71bb6-2846-4189-99c7-324b66c5ce47.png" width="800" height="700">
+    * 번들 리소스 이미지(단순 리소스 추가) / Asset에 추가 모두 시도했으며, Asset에 추가하는 방식으로 최종 진행(현재는 밀도에 따른 해상도 처리를 고려할 필요가 없으나, 차후에는 해당 부분을 고려하여 Asset에 이미지 리소스를 추가하는 방식이 잦을 듯 하여 적응 겸 해당 방식으로 진행. Asset은 자동으로 리소스 복사)
+
+- [다음]버튼에 연결된 nextImageButtonTouched에서는 01부터 22까지 랜덤으로 숫자를 선택해서 해당하는 이미지 파일을 photoImageView에 표시한다. 이미지뷰에 표시하는 방법은 다음과 같다.
+- 이미지뷰의 속성을 조정해서 이미지가 비율에 맞춰서 표시되도록 조정한다.
+
+<img src = "https://user-images.githubusercontent.com/44107696/154475093-dea12f4e-cc2e-4f6b-86b6-6f967f654465.png" width="800" height="700">
+    * 1~22까지 랜덤으로 숫자를 고르고 적절한 String 형태로 반환하는 randomImageNumber 함수 작성
+    * randomImageNumber가 리턴한 값과 현재의 이미지명이 동일한지 아닌지 비교하고 동일 값일 경우 다시 랜덤 값을 받아온 뒤, 동일하지 않은 값을 현재의 이미지명에 할당하는 makeImageNumber 함수 작성
+    * 기본 이미지 화면 없이 버튼을 눌렀을 때부터 이미지가 나오도록 설정. ImageView의 contentMode를 .scaleAspectFit으로 설정하여 각 이미지의 비율 그대로 나오도록 설정
+    
+- 추가 구현사항
+
