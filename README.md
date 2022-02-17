@@ -157,3 +157,65 @@ https://user-images.githubusercontent.com/50472122/154218326-5afd552c-a481-484e-
   * Present as Popover
     * 아이패드에서 팝업참을 띄운다. 아이폰 앱한테 Show Detail과 마찬가지로 큰 의미가 없다.
 
+# Thursday Session
+
+## Step5
+
+### 구현 화면
+
+![Simulator Screen Recording - iPhone 13 mini - 2022-02-17 at 22 13 24](https://user-images.githubusercontent.com/50472122/154489060-44e20200-a246-4277-b4a7-045c986300c4.gif)
+
+### 작업 목록
+
+- [x] Cocoa Touch class 를 이용해서 class 생성
+- [x] Asssistant 를 통해 main.stroyboard에서 인스턴스와 class 를 연결 
+- [x] 닫기 버튼을 추가
+- [x] View Controller와 관련된 콜백함수를 호출해보면서 테스트  
+
+### 학습 키워드
+
+* ViewController
+* View LifeCycle
+* Second View Controller without segue
+
+### 고민과 해결
+
+![image](https://user-images.githubusercontent.com/50472122/154478795-75bbce5d-5cb2-4848-97a6-8095a3ee941e.png)
+
+#### Q1. Custom Class에 값을 넣어줬는데도 Storyboard의 인스턴스가 자신의 class를 찾지 못하는 경우
+Error: `"[«UIViewController 0x1575057c0> setValue: forUndefinedkey:]: this class is not key value coding-compliant for the key Scene"`
+
+A1. @IBOutlet, @IBAction의 연결 후에 코드 수정을 하면, 스토리 보드의 인스턴스는 여전히 전에 것을 가르키고 있기 때문에 Storyboard에서 해당 인스턴스를 우클릭하고 assign/ref의 연결을 유심히 봐야합니다. 그치만, [StackOverFlow](https://stackoverflow.com/questions/3088059/xcode-how-to-fix-nsunknownkeyexception-reason-this-class-is-not-key-valu)에서 두번째로 추천을 많이 받은 답변은 
+`Your view controller may have the wrong class in your xib.`인데, 
+이 개념은 sub class 인 custom class를 xib라는 곳에서 찾지 못해 UIViewController라는 super class를 본다는 내용인데, 잘 이해가 가지 않습니다..
+
+#### 질문거리
+
+## 화면 전환이 이루어지는 사이에 뷰컨트롤러 라이프 사이클이 어떻게 변화하는지 학습
+
+1. viewDidLoad() : 해당 뷰 컨트롤러가 메모리에 올라감
+2. viewWillAppear() : 뷰가 앞으로 나타날것을 알림
+3. viewDidAppear() : 뷰가 나타났음
+4. viewWillDisappear() : 뷰가 앞으로 사라질 것임
+5. viewDidDisappear() : 뷰가 사라졌음
+
+일반적으로는 1~5의 순서를 따를거라고 하는데 이는 오해라고 주장하는 블로그가 있어서 첨부합니다. 
+[life cycle 블로그글](https://zeddios.tistory.com/43) 
+예를 들어 다음과 같은 순서로 scene을 띄우고
+
+[TabBarController] -> [Item1] -> [GrayViewController] -> [YellowViewController]
+
+닫기 버튼을 눌러 되돌아 가는 경우를 생각해 보겠습니다.
+
+[TabBarController] -- [Item1] ~~<- [GrayViewController] <- [YellowViewController]~~
+
+####  View Controller Life Cycle from blog
+![image](https://user-images.githubusercontent.com/50472122/154485051-0c3e594a-be69-458b-bd92-8d5131fc184a.png)
+
+순서가 역동적인데, 제 프로젝트에서는 상당히 평탄하게 나와서 왜 그런지 궁금합니다. 
+
+#### View Controller Life Cycle from Step5
+
+![image](https://user-images.githubusercontent.com/50472122/154488191-045b81cd-43c5-4414-8c41-fa2e2f4f3d47.png)
+
+## Step6 - Container ViewController 활용하기
