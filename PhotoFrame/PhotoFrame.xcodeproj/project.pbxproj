@@ -13,8 +13,10 @@
 		B7174EF827BA50F300684E94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7174EF627BA50F300684E94 /* Main.storyboard */; };
 		B7174EFA27BA50F300684E94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7174EF927BA50F300684E94 /* Assets.xcassets */; };
 		B7174EFD27BA50F300684E94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7174EFB27BA50F300684E94 /* LaunchScreen.storyboard */; };
+		B73B9FB527BE7B59001F119F /* SecondInnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73B9FB427BE7B59001F119F /* SecondInnerViewController.swift */; };
 		B77BB99127BABC3A00620D5C /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77BB99027BABC3A00620D5C /* SecondViewController.swift */; };
 		B77BB99327BABD9300620D5C /* myTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77BB99227BABD9300620D5C /* myTabBarViewController.swift */; };
+		B79D460E27BE78C100D85011 /* InnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79D460D27BE78C100D85011 /* InnerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,8 +28,10 @@
 		B7174EF927BA50F300684E94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B7174EFC27BA50F300684E94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B7174EFE27BA50F300684E94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B73B9FB427BE7B59001F119F /* SecondInnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondInnerViewController.swift; sourceTree = "<group>"; };
 		B77BB99027BABC3A00620D5C /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		B77BB99227BABD9300620D5C /* myTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myTabBarViewController.swift; sourceTree = "<group>"; };
+		B79D460D27BE78C100D85011 /* InnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InnerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,15 +66,25 @@
 			children = (
 				B7174EF027BA50F300684E94 /* AppDelegate.swift */,
 				B7174EF227BA50F300684E94 /* SceneDelegate.swift */,
-				B7174EF427BA50F300684E94 /* ViewController.swift */,
-				B77BB99027BABC3A00620D5C /* SecondViewController.swift */,
-				B77BB99227BABD9300620D5C /* myTabBarViewController.swift */,
+				B79D460C27BE774B00D85011 /* Views */,
 				B7174EF627BA50F300684E94 /* Main.storyboard */,
 				B7174EF927BA50F300684E94 /* Assets.xcassets */,
 				B7174EFB27BA50F300684E94 /* LaunchScreen.storyboard */,
 				B7174EFE27BA50F300684E94 /* Info.plist */,
 			);
 			path = PhotoFrame;
+			sourceTree = "<group>";
+		};
+		B79D460C27BE774B00D85011 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B77BB99227BABD9300620D5C /* myTabBarViewController.swift */,
+				B7174EF427BA50F300684E94 /* ViewController.swift */,
+				B79D460D27BE78C100D85011 /* InnerViewController.swift */,
+				B73B9FB427BE7B59001F119F /* SecondInnerViewController.swift */,
+				B77BB99027BABC3A00620D5C /* SecondViewController.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,7 +161,9 @@
 				B77BB99127BABC3A00620D5C /* SecondViewController.swift in Sources */,
 				B77BB99327BABD9300620D5C /* myTabBarViewController.swift in Sources */,
 				B7174EF527BA50F300684E94 /* ViewController.swift in Sources */,
+				B79D460E27BE78C100D85011 /* InnerViewController.swift in Sources */,
 				B7174EF127BA50F300684E94 /* AppDelegate.swift in Sources */,
+				B73B9FB527BE7B59001F119F /* SecondInnerViewController.swift in Sources */,
 				B7174EF327BA50F300684E94 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
