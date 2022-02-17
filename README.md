@@ -340,3 +340,27 @@ segue를 이용하면 앱 인터페이스의 흐름을 정의할 수 있다. 두
 ```
 2. `Control`+Drag를 통해 특정 요소와 `Exit object` 를 연결한다.   
    <img src="PhotoFrame/README_images/Connect_Exit_Object.png" width="300">
+
+---
+
+## IBOutlet 과 IBAction
+
+[@IBOutlet, @IBAction](https://velog.io/@myeongs07/iOS-IBOutlet-IBAction)   
+Interface Builder (storyboard) 에서 UIButton, UILabel 등의 요소를 생성한 뒤 커스텀 클래스 내의 프로퍼티로 정의하고 싶을 경우 `Control`+Drag를 이용하여 프로퍼티를 생성하는데 그렇게 생성된 변수는 다음과 같은 형태로 클래스 내에 자동 선언된다.
+
+```swift
+@IBOutlet weak var titleLabel: UILabel!
+@IBAction func buttonTouchUpInside(_ sender: UIButton) { }
+```
+
+IBOutlet, IBAction 의 정확한 작동 방식과 @의 의미등을 알아보고 싶었지만, Objective-C 시절의 자료밖에 없고 이 자료도 그렇게 신뢰가 가지는 않아서 간단히만 정리하고 넘어가도록 한다.
+
+### IBOutlet
+
+@IBOutlet 의 뜻은 Interface Builder에서 생성된 객체를 커스텀 클래스에서 참조하기 위해 사용하는 키워드이다. 이 때 Strong 혹은 Weak 를 선택하게 되는데, 일반적으로는 Strong이 기본값이 된다.
+
+strong 혹은 weak로 선언되는 해당 변수는 코드가 아닌 인터페이스 빌더에 의해 선언되고 값이 반영되는 함수이므로, 스토리보드의 각 뷰 컨트롤러에는 하나의 뷰 컨트롤러 객체만을 커스텀 클래스로 선언해야 할 것이다. 
+
+### IBAction
+
+@IBAction도 @IBOutlet과 마찬가지로 인터페이스 빌더에서 정의된 것이다. 버튼 누르기, 피커 선택 등 특정 이벤트가 발생하면 그 응답을 받기 위해 사용한다.
