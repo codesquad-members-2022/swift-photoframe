@@ -42,8 +42,6 @@ class YellowViewController: UIViewController {
     @IBAction func nextButtonTouched(_ sender: UIButton) {
         let newImage = chooseRandomImage()
         self.photoImageView.image = newImage
-//        self.present(self.imagePicker, animated: true)
-        
     }
     
     func chooseRandomImage() -> UIImage {
