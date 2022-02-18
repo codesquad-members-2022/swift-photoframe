@@ -9,6 +9,7 @@ import UIKit
 
 class FirstViewController: UIViewController {
     @IBOutlet weak var firstLabel: UILabel!
+    @IBOutlet weak var firstDescription: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +20,12 @@ class FirstViewController: UIViewController {
         self.firstLabel.backgroundColor = UIColor.black
         self.firstLabel.textColor = self.firstLabel.textColor.withAlphaComponent(0.5)
         self.firstLabel.font = self.firstLabel.font.withSize(30.0)
+        
+        self.firstDescription.text = "firstDescription 내용"
+        self.firstDescription.textColor = UIColor(displayP3Red: 2.0, green: 2.0, blue: 1.0, alpha: 1.0)
+        self.firstDescription.backgroundColor = UIColor.red
+        self.firstDescription.textColor = self.firstLabel.textColor.withAlphaComponent(3.0)
+        self.firstDescription.font = self.firstLabel.font.withSize(15.0)
         
     }
 }
