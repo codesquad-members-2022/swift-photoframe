@@ -38,7 +38,7 @@ class Scene2ViewController: UIViewController {
     
     private func randomImageName() -> String{
         let randomNum = Int.random(in: 1 ... 22)
-        return randomNum < 10 ?  "0\(randomNum).jpg" : "\(randomNum).jpg"
+        return randomNum < 10 ?  String.init(format: "0%d.jpg", randomNum) : String.init(format: "%d.jpg", randomNum)
     }
     
 }
