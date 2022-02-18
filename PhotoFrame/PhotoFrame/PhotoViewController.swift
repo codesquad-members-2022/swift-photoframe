@@ -67,6 +67,7 @@ class PhotoViewController: UIViewController {
         }
     }
     
+    
     //actionSheet에서 앨범 선택시, ImagePickeController를 만들어서 보여준다
     func makeImagePickerController() {
         let imagePickerController = UIImagePickerController() //ImagePicker생성
@@ -84,6 +85,13 @@ class PhotoViewController: UIViewController {
     
 }
 
+//ImagePicker를 다루기 위한 Delegate
 extension PhotoViewController: UIImagePickerControllerDelegate , UINavigationControllerDelegate  {
-    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        print(info)
+        let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage //가져온 이미지
+        self.photoImageView.contentMode = .scaleAspectFill //비율을 유지하면 꽉차게 만든다.
+        self.photoImageView.image = pickedImage //image를 넣는다
+        dismiss(animated: true, completion: nil) //화면이 내려가지 않기 때문에 추가해준다.
+    }
 }
