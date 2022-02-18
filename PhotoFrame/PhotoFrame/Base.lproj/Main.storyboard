@@ -47,6 +47,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2lO-JW-K7W">
+                                <rect key="frame" x="138.5" y="612" width="137" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="text color change"/>
+                                <connections>
+                                    <action selector="textColorChangeAction:" destination="5zo-w2-5xV" eventType="touchUpInside" id="4FC-TI-Coh"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RUe-MF-fSn">
                                 <rect key="frame" x="140" y="306" width="135" height="56"/>
                                 <state key="normal" title="Button"/>
@@ -64,7 +72,9 @@
                             <constraint firstItem="RUe-MF-fSn" firstAttribute="centerX" secondItem="8HV-tI-Tik" secondAttribute="centerX" id="4J4-l4-7LU"/>
                             <constraint firstItem="qeC-WM-Po3" firstAttribute="centerY" secondItem="8HV-tI-Tik" secondAttribute="centerY" id="IqK-IW-DwS"/>
                             <constraint firstItem="rW9-lg-vfx" firstAttribute="top" secondItem="qeC-WM-Po3" secondAttribute="bottom" constant="20" id="MTh-qG-0Oh"/>
+                            <constraint firstItem="2lO-JW-K7W" firstAttribute="centerX" secondItem="8HV-tI-Tik" secondAttribute="centerX" id="Mi1-BH-EiX"/>
                             <constraint firstItem="rW9-lg-vfx" firstAttribute="centerX" secondItem="8HV-tI-Tik" secondAttribute="centerX" id="d9S-B0-sLG"/>
+                            <constraint firstItem="2lO-JW-K7W" firstAttribute="top" secondItem="rW9-lg-vfx" secondAttribute="bottom" constant="102" id="vgQ-aU-zWx"/>
                             <constraint firstItem="qeC-WM-Po3" firstAttribute="top" secondItem="RUe-MF-fSn" secondAttribute="bottom" constant="89" id="xBZ-eu-vJZ"/>
                         </constraints>
                     </view>

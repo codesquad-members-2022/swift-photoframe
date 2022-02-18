@@ -18,6 +18,10 @@ class ViewController: UIViewController {
         self.firstDesciption.textColor = .darkGray
     }
 
+    @IBAction func textColorChangeAction(_ sender: Any) {
+        self.firstLabel.textColor = self.firstLabel.textColor == .red ? .blue : .red
+    }
+    
     @IBAction func nextButtonTouched(_ sender: Any) {
         self.firstLabel.textColor = .blue
         self.firstLabel.backgroundColor = UIColor.yellow
