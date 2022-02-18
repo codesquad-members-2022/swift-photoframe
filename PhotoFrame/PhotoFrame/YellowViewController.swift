@@ -9,6 +9,7 @@ import UIKit
 
 class YellowViewController: UIViewController {
 
+    @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var secondViewIndicatorLabel: UILabel!
     
     override func viewDidLoad() {
