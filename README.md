@@ -170,3 +170,9 @@ config = config.applying(UIImage.SymbolConfiguration(font: .systemFont(ofSize: 4
 // Apply the configuration to an image view.
 imageView.preferredSymbolConfiguration = config
 ```
+
+## 8. Image Picker Controller
+
+![](https://user-images.githubusercontent.com/17468015/154639440-53f30a18-2da4-4074-aa15-7a57968e5ac8.png)
+
+
