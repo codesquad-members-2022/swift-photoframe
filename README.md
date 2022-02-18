@@ -71,7 +71,7 @@
 </details>
 
 
-## Step 5 ViewController 연결하기 - 2월 18일 
+## Step 5 ViewController 연결하기 - 2월 18일 오후 4시30분
 
 ### 작업 목록
 - [x] green view에 닫기 버튼 추가하고 action 연결
