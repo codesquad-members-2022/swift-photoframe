@@ -25,20 +25,23 @@ class PhotoViewController: UIViewController {
         //현재 이미지. 값이 없으면 nil값을 배출함. nil값을 검사해야하기 때문에 옵셔널 바인딩을 해주지 않음.
         let currentImage = self.photoImageView.image
         
+        self.photoImageView.image = UIImage(named: "01.\(imageExtension)") //이미지를 바꾼다.
+        
         //버튼을 탭했는데도 이미지가 바뀌지 않고 nil이라면 사용가능한 Photo가 없는 것.
         if currentImage == nil {
             print("사용가능한 Photo가 없습니다.")
         }
         
         //바뀔 이미지
-        guard let nextImage = UIImage(named: "\(randomPhotoID).\(imageExtension)") else { return  } //UIImage옵셔널 값을 리턴하기 때문에 바인딩 해준다.
+        guard let nextImage = UIImage(named: "01.\(imageExtension)") else { return  } //UIImage옵셔널 값을 리턴하기 때문에 바인딩 해준다.
         
         //버튼을 탭했는데 이미지가 바뀌지 않을때
         if currentImage != nil && currentImage!.isEqual(nextImage) { //캐시된 동일한 데이터를 이용해 이미지를 만들어도 다를 수 있기때문에 이렇게 사용한다. Ex) currentImage == nextImage (X)
             print("이전 사진과 똑같은 이미지입니다.")
         }
         
-        self.photoImageView.image = UIImage(named: "\(randomPhotoID).\(imageExtension)")
+        
+        
     }
     
 }
