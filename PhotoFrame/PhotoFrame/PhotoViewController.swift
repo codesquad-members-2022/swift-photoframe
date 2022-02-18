@@ -18,9 +18,9 @@ class PhotoViewController: UIViewController {
     }
     
     @IBAction func showImageButtonTouched(_ sender: UIButton) {
-        let randomInt = Int.random(in: 1...22)
-        let randomFileName = randomInt >= 10 ? "\(randomInt).jpg" : "0\(randomInt).jpg"
-        photoImageView.image = UIImage(named: randomFileName)
+        let randomFileNum = String.init(format: "%02d", Int.random(in: 1...22))
+        photoImageView.image = UIImage(named: randomFileNum + ".jpg")
+        photoImageView.contentMode = .scaleAspectFill
     }
     
 }
