@@ -127,8 +127,23 @@
                     <view key="view" contentMode="scaleToFill" id="0vD-aW-iVX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wmR-Ru-7du">
+                                <rect key="frame" x="182.5" y="432.5" width="49" height="31"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="닫기"/>
+                                <connections>
+                                    <action selector="closedButtonTouched:" destination="iEz-rB-q0f" eventType="touchUpInside" id="Pcb-LZ-Tl4"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="E3t-Qk-wb1"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <constraints>
+                            <constraint firstItem="wmR-Ru-7du" firstAttribute="centerX" secondItem="0vD-aW-iVX" secondAttribute="centerX" id="gke-74-82e"/>
+                            <constraint firstItem="wmR-Ru-7du" firstAttribute="centerY" secondItem="0vD-aW-iVX" secondAttribute="centerY" id="nSf-rE-235"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="LAc-WN-Zd7"/>
                 </viewController>
