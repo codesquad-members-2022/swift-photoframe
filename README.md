@@ -223,9 +223,12 @@ viewDidDisappear()
 - 내비게이션 컨트롤러가 있을 경우와 없을 경우 화면 전환 동작이 어떻게 다른지, 화면들 포함관계가 있는지 학습한다.
     - 있을경우에는 순서대로 뒤로갈수 있는 버튼이 생긴다.
     - 화면들은 Stack처럼 쌓여있기 때문에 3번쨰에서 1번쨰 1번째에서 3번쨰로 가지못한다.
- 
+     
 - 내비게이션 컨트롤러 관련 메서드가 왜 push / pop 인지 학습한다.
     - 내비게이션 컨트롤러은 childViewController들을 Stack으로 관리하기 떄문
+
+- 그렇다면 push를 써야하나 show를 써야하나?
+    - 그냥 둘다 쓰면된다. 사실 show는 다른 의미로 만들어 진 것이었으나 navigationViewController가 없을때 에러를 내면서 죽어버리는 현상을 막기위해 추가적인 조치를 하여 push와 같은 효과를 보여준다,
 
 - - -
 
@@ -234,15 +237,115 @@ viewDidDisappear()
 - [X] 기존에 있던 두 번째 레이블은 삭제한다.
 - [X] UIImageView를 화면 상단 중앙에 240 x 240 크기로 배치하고, photoImageView 아웃렛으로 연결한다.
 - [X] 화면 하단에 [다음] 버튼을 추가하고 nextImageButtonTouched 액션으로 연결한다.
+
+![스크린샷 2022-02-18 오전 11 11 13](https://user-images.githubusercontent.com/80263729/154604401-2b5e102a-8da7-413f-9e1e-23efbe7efc31.png)
+
 - [X] 앱에 포함할 사진 리소스를 이미지 다운로드 링크에서 다운로드한다. 압축을 풀고 이미지 파일들을 Xcode 프로젝트로 드래그해서 추가한다.
 - [X] 리소스 파일을 추가할 때는 Copy 옵션을 꼭 지정하고 Target을 체크되어 있는지 확인한다.
 - [X] [다음]버튼에 연결된 nextImageButtonTouched에서는 01부터 22까지 랜덤으로 숫자를 선택해서 해당하는 이미지 파일을 photoImageView에 표시한다. 이미지뷰에 표시하는 방법은 다음과 같다.
+    - 랜덤으로 이미지를 보여주는 과정에서 처음에는 Int.random메서드를 사용하려 했으나 일의자리 숫자의 경우 앞에 0이 붙어있음을 발견.
+    - 다음 방법으로 배열에 모든 photoID를 넣고 random으로 뽑아보려 했지만 만약 사진이 엄청나게 많아진다면 필요없는 메모리 낭비가 심할 것으로 예상됬음(고해상도 이미지는 많은 메모리를 쓰는것으로 앎)
+    - enum을 통해서 각 케이스를 정의 하고 CaseIterable 프로토콜을 채택해 random함수를 구현햿음
+    - 옵셔널 바인딩 해주는 과정이 조금 늘었지만 직접 String값을 넣지 않아도 되서 안전하고 배열에 소모되는 메모리 소모를 줄일수 있을것으로 생각이 된다.
 
 ~~~swift
         self.photoImageView.image = UIImage(named: "01.jpg")
 이미지뷰의 속성을 조정해서 이미지가 비율에 맞춰서 표시되도록 조정한다.
 ~~~
 
+실행 모습
+![Simulator Screen Recording - iPhone 13 - 2022-02-18 at 11 58 23](https://user-images.githubusercontent.com/80263729/154609187-deebad66-0b41-483b-951a-34ef303cdec8.gif)
+
+
 - 추가학습거리
     - UIImageView 와 UIImage 클래스는 각각 어떤 역할을 담당하는지 학습한다.
-    - 이미지 뷰의 속성은 어떤 것들이 있는지 애플 개발자 문서를 참고한다.
+    정의
+    ~~~swift
+    class UIImage: NSObject
+    ~~~
+    
+    UIImage는 이미지 개체를 사용하여 모든 종류의 이미지 데이터를 나타내고 기본 플랫폼에서 지원하는 모든 이미지 형식에 대한 데이터를 관리 할 수 있다.
+    여러가지 방법으로 이미지 개체를 활용할 수 있다.
+    image 객체는 한번 생성된 뒤에 변경이 불가능하다(immutable)
+    따라서, 처음 생성시에 이미지의 속성들을 명시해야한다.
+    대부분의 이미지속성은 함께 제공되는 이미지 파일 또는 이미지 데이터의 메타데이터를 사용하여 자동으로 설정된다.
+    이로인해 어떤 스레드에서든 생성하고 사용하는 것이 안전해 진다는 것을 의미한다.
+    그리고 image 개체는 변경할 수 없으므로 항상 디스크의 이미지 파일과 같은 기존 imgae 데이터로 생성한다.
+    
+    1. 이미지를 개체에 할당해서 인터페이스에 이미지를 표시한다 (UIImageView를 활용하는 방법)
+    2. 이미지를 사용하여 버튼, 슬라이더 및 분할된 컨트롤과 같은 시스템 컨트롤을 custom 할 수있다.
+    3. 뷰또는 다른 그래픽 context에 직접 이미지를 그린다
+    4. 이미지 데이터가 필요할 수 있는 다른 API에 이미지를 전달한다.
+    
+    image 개체는 모든 플랫폼 기본 이미지 형식을 지원하지만 PNG JPEG 파일을 사용하는 것이 좋다.
+    특히 PNG 형식은 무손실 이므로 앱 인터페이스에서 사용하는 이미지에 특히 권장된다!(JPG는 압축하는 과정에서 손실이 발생할 수 있다.)
+    
+    이 클래스의 메서드를 사용하여 이미지 개체를 만들떄는 파일 또는 데이터 구조에 있는 기존 이미지 데이터가 있어야한다.
+    즉, 빈 이미지를 만들고 그 안에 내용을 그릴 수 없다.
+    
+    생성 메서드
+    `init(named:in:compatibleWith:)init(named:)`
+    앱의 기본 번들(또는 다른 알려진 번들)에 있는 imgae데이터를 가지고 와서 imgae를 만든다.
+    이 방법은 imgae데이터를 자동 캐싷하므로 자주 사용하는 imgae에 권장됨.
+    
+    `.imageWithContentsOfFile:init(contentsOfFile:)`
+    초기 데이터가 번들에 없는 이미지 객체를 생성함
+    이 방법은 매번 디스크에서 image 데이터를 로드하므로 동일한 이미지를 반복적으로 로드하는데 사용해서는 안된다.
+    
+    `animatedImage(with:duration:)animatedImageNamed(_:duration:)UIImageUIImageView`
+    여러개의 순차적인 이미지로 구성된 단일 개체를 생성함.
+    이를 이용해서 인터페이스에서 애니메이션을 만들 수 있음.
+    
+    UIImage 클래스의 다른방법을 사용하면 코어 그래픽 이미지 또는 사용자가 직접 생성한 이미지 같은 특정 유형의 데이터로 애니메이션을 생성할수 있다. 
+    또한,UIKit은 사용자가 직접 그린 콘텐츠에서 이미지를 만들수 있는      `UIGraphicsGetImageFromCurrentImageContext()`  기능을 제공함.
+   
+    생성한 이미지 객체는 캐시된 동일한 이미지 데이터로 초기화 하더라도 서로 다들 수 있다.
+    두 이미지를 비교할 유일한 옳은 방법은 애플 문서에서 찾았다.
+    ~~~swift
+    let image1 = UIImage(named: "MyImage")
+    let image2 = UIImage(named: "MyImage") 
+    if image1 != nil && image1!.isEqual(image2) {
+       // Correct. This technique compares the image data correctly.
+    } 
+    if image1 == image2 {
+    // Incorrect! Direct object comparisons may not work.
+    }
+    ~~~
+   
+   imageView정의
+   ~~~swift
+   @MainActor class UIImageView : UIView
+   ~~~
+   imageView를 사용하면 image 객체를 이용해 이미지를 효율적으로 보여줄 수 있다.
+   런타임 시간에 이미지를 바꾸거나 스토리보드 파일에서 이미지를 형성 할 수도 있다.
+   단, 이미지를 효과적으로 보여주는게 imageView지만 이는 UIImage의 속성을 기반으로 보여주게 된다.
+   
+    - 이미지 뷰의 속성은 어떤 것들이 있는지 애플 개발자 문서를 참고한다채
+
+    size 조절
+    imageView는 이미지의 사이즈에 맞게 변경할 수 있다.
+    
+    1. scaleAspectFit: 원본 이미지의 비율을 유지한채로 이미지를 보여줌(imageView가 화면에 꽉 안차는 경우발생)
+    2. ScaleToFit: 원본 이미지의 비율을 무시하고 일단 가득차게 넣음(이미지가 잘릴일은 없으나 이상한 비율이 생성될 가능성 있음)
+    3. AspectFill: 비율을 맞추고 ImageView에 가득차게함 (비율을 맞추다 보니 화면이 잘릴 수 있음)
+        - default로 myView.layer.masksToBounds = true값이 설정되어 있어 이미지가 잘리게 되는데
+        - 만약 이값을 false로 두면 UIImageView보다 커져서 밖으로 삐져나올 가능성 있음.
+    
+    성능 향상을 위한 팁
+    이미지 scaling과 alpha blending작업(이미지위에 또다른 이미지를 덧씌울때 마치 투명하게 비치는 효과를 내기위해 컴퓨터의 색상값에 A라는 새로운 값을 할당하여 RGB와 혼합하여 표시하는 방법)
+    은 상대적으로 비용이 많이 드는 작업이다. 이를 해결하기 위한 몇가지 팁이 있다.
+    
+    1.자주 사용하는 이미지 크기 조정 버전을 캐시하자. 특정 대형이미지가 축소되서 자주 표시될거 같으면 축소된 이미지를 미리 만들어 이미지 캐시에 저장하는게 좋다.
+    2.크기가 imageView의 크기에 가까운 이미지를 사용하자. imageView에 큰 이미지를 지정하는 대신 imageView에 현재 크기에 맞는 크기 조정버전을 만들자.
+    3.가능하면 imageView를 불투명하게 만들자. 투명도가 필요한 이미지작업이 아니라면 isOpaque속성을 true로 두자.
+
+- iamgeView의 Attribute
+    Image: 표시할 이미지
+    Highlighted: imageView가 강조 표시될때 표시할 이미지
+    State:이미지의 상태 isHighlighted속성을 사용해서 강조가 됬는지 안됬는지 확인가능.
+
+- 궁금한점
+    - instantiateViewController(withIdentifirer:)메소드가 StoryBoard의 ID를 가지고 ViewController를 만들어낸다는 것은 알겠는데.. 앞의 self는 왜 붙이는 걸까?
+
+![스크린샷 2022-02-18 오전 11 05 34](https://user-images.githubusercontent.com/80263729/154603848-ef0bb071-9c14-4270-9b42-2d61dccdac04.png)
+
