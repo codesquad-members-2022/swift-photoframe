@@ -143,7 +143,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l9h-lN-LaP">
-                                <rect key="frame" x="28" y="22" width="54" height="35"/>
+                                <rect key="frame" x="20" y="20" width="54" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" titleAlignment="automatic">
@@ -172,10 +172,10 @@
             </objects>
             <point key="canvasLocation" x="1868" y="-717"/>
         </scene>
-        <!--Second Inner View Controller-->
+        <!--Green View Controller-->
         <scene sceneID="eFX-bA-4y5">
             <objects>
-                <viewController id="jmx-ho-bg3" customClass="SecondInnerViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="jmx-ho-bg3" customClass="GreenViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Yre-x2-CUP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -187,6 +187,27 @@
                                 <buttonConfiguration key="configuration" style="plain" title="다음">
                                     <fontDescription key="titleFontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="19"/>
                                 </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0jy-Cf-LXD">
+                                <rect key="frame" x="20" y="20" width="54" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" titleAlignment="automatic">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="닫기">
+                                            <attributes>
+                                                <color key="NSColor" red="0.046502478420734406" green="0.42481884360313416" blue="0.9102051854133606" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="17" name="AppleSDGothicNeo-Regular"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" red="0.072025455530000004" green="0.77935737370000002" blue="0.83081644769999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="closeButtonTouched:" destination="jmx-ho-bg3" eventType="touchUpInside" id="Ocq-Df-SE3"/>
+                                    <action selector="closeButtonTouched:" destination="sCE-6D-qet" eventType="touchUpInside" id="WMo-UN-n1D"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="yTr-Zq-U7v"/>

@@ -6,6 +6,8 @@
 - [X] 새로운 ViewController 를 YellowViewController 라는 이름으로 생성한다.
 - [X] YellowViewController 화면에 [닫기] 버튼을 추가한다.
 - [X] [닫기] 버튼에 IBAction 을 추가한다.
+- [X] 같은 작업을 GreenViewController 에도 해준다. 
+-
 
 
 ### [추가학습거리]
