@@ -40,6 +40,15 @@
                                 <rect key="frame" x="85" y="170" width="250" height="250"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LPQ-F0-dw7" userLabel="Select Button">
+                                <rect key="frame" x="174" y="576" width="67" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="selectButtonTouched:" destination="03h-xc-dDA" eventType="touchUpInside" id="kLv-V4-3As"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eO5-9G-REV"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
@@ -50,6 +59,7 @@
                         <outlet property="frameView" destination="keJ-8b-nLb" id="5c5-GI-WnJ"/>
                         <outlet property="imageView" destination="gWR-Rz-bDX" id="xCp-L5-aVF"/>
                         <outlet property="nextButton" destination="iGd-Gt-izg" id="Zum-8i-tJT"/>
+                        <outlet property="selectButton" destination="LPQ-F0-dw7" id="k0d-XB-Ycm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kv8-VM-p02" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
