@@ -14,23 +14,28 @@ class YellowViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("Second View", #function)
         self.configureButton()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        print("Second View", #function)
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
+        print("Second View", #function)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        print("Second View", #function)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        print("Second View", #function)
     }
     
     // MARK: - Methods
@@ -61,8 +66,8 @@ class YellowViewController: UIViewController {
     // MARK: - Selectors
     @objc func buttonTouched(sender: UIButton, forEvent event: UIEvent) {
         sender.setTitle("Moving...", for: .normal)
-//        self.showViewControllerModally()
-//        self.navigateToNextUsingExistSegue()
+        //        self.showViewControllerModally()
+        //        self.navigateToNextUsingExistSegue()
         self.navigateToNextUsingNavigationController()
     }
     
