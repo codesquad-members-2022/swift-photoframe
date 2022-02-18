@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Home-->
         <scene sceneID="MK3-tW-MkS">
             <objects>
                 <viewController id="2Vd-Ma-r6m" customClass="ViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
@@ -74,6 +74,7 @@
                         <color key="backgroundColor" red="0.8569757342338562" green="0.83014768362045288" blue="0.95496219396591187" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="HfM-9v-ZF3"/>
+                    <navigationItem key="navigationItem" title="Home" id="GVQ-fD-k1T"/>
                     <connections>
                         <outlet property="FirstDescription" destination="4Ay-Kc-JHE" id="cSG-8b-aPC"/>
                         <outlet property="FirstLabel" destination="C51-gv-UzL" id="ooP-WJ-bDe"/>
@@ -84,7 +85,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nfb-P5-qSR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1107" y="-717"/>
+            <point key="canvasLocation" x="263.768115942029" y="-717.1875"/>
         </scene>
         <!--Item-->
         <scene sceneID="Wgw-vm-DSd">
@@ -100,7 +101,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GyJ-yN-paG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1106" y="214"/>
+            <point key="canvasLocation" x="-142" y="178"/>
         </scene>
         <!--My Tab Bar View Controller-->
         <scene sceneID="8xt-EX-VJc">
@@ -113,8 +114,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="2Vd-Ma-r6m" kind="relationship" relationship="viewControllers" id="wEN-A8-IEp"/>
-                        <segue destination="vDp-iO-OLg" kind="relationship" relationship="viewControllers" id="Odp-qB-bP6"/>
+                        <segue destination="2Vd-Ma-r6m" kind="relationship" relationship="viewControllers" id="6Qq-hC-oup"/>
+                        <segue destination="vDp-iO-OLg" kind="relationship" relationship="viewControllers" id="y5c-Ui-eFN"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8z7-7B-Vfd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -137,9 +138,7 @@
                                     <fontDescription key="titleFontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="19"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="jmx-ho-bg3" kind="popoverPresentation" popoverAnchorView="cYG-2A-NfV" id="GVQ-fB-lGo">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" left="YES"/>
-                                    </segue>
+                                    <action selector="showGreenView:" destination="sCE-6D-qet" eventType="touchUpInside" id="nMn-zm-UhP"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l9h-lN-LaP">
@@ -170,14 +169,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E3x-87-5Ko" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1868" y="-717"/>
+            <point key="canvasLocation" x="1106" y="-717"/>
         </scene>
         <!--Green View Controller-->
         <scene sceneID="eFX-bA-4y5">
             <objects>
-                <viewController id="jmx-ho-bg3" customClass="GreenViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GreenViewController" id="jmx-ho-bg3" customClass="GreenViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Yre-x2-CUP">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qr6-kJ-ifN">
@@ -217,7 +216,21 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G1O-if-a9J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2639" y="-717"/>
+            <point key="canvasLocation" x="1962" y="-717"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="6ix-ei-LVI">
+            <objects>
+                <navigationController id="he1-1v-iGd" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="j6F-8d-p1X"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xuw-2r-XVp">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sqh-hW-Cwx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-729" y="-1223"/>
         </scene>
     </scenes>
     <resources>
