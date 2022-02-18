@@ -15,6 +15,7 @@ class PhotoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        photoPickerController.delegate = self
     }
     
     @IBAction func showImageButtonTouched(_ sender: UIButton) {
@@ -28,6 +29,10 @@ class PhotoViewController: UIViewController {
     }
 }
 
-extension PhotoViewController: UIImagePickerControllerDelegate {
+extension PhotoViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        guard let image = info[.originalImage] as? UIImage else { return }
+        picker.dismiss(animated: true, completion: nil)
+    }
     
 }
