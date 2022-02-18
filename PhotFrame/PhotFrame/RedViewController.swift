@@ -10,7 +10,7 @@ import UIKit
 class RedViewController: UIViewController {
 
     @IBAction func closeButtonTouched(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
 
     override func viewDidLoad() {
