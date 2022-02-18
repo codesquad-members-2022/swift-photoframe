@@ -19,10 +19,12 @@ class ViewController: UIViewController {
         photoLabel.alpha = 0.6
         
         guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "YellowViewController") as? YellowViewController else { return }
-        nextVC.modalTransitionStyle = .partialCurl
-        nextVC.modalPresentationStyle = .fullScreen
+        nextVC.modalTransitionStyle = .coverVertical
+        nextVC.modalPresentationStyle = .automatic
         self.present(nextVC, animated: true, completion: nil)
     }
+    
+    @IBAction func unwindVC(segue: UIStoryboardSegue) {}
     
     override func viewDidLoad() {
         print("\nViewController가 로드되었다.")
