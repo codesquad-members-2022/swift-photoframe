@@ -177,7 +177,7 @@ Interface Builder를 통해 받아온 정보로 Action을 수행하겠다는 의
 
 <br>
 
-# step3
+# step4
 ## 요구사항 
 - [x]  Scene추가와 Segue 연결
 - [x]  IBOutlet weak 로 변경
@@ -212,4 +212,112 @@ SplitView 구조에서 원래 화면을 Master, 새 화면을 Detail로 표시�
     1. present
     2. segue
     3. nevigation controller 
+
+
+---
+
+<br>
+
+# step5
+## 요구사항 
+- [x]  프로젝트에 새로운 ViewController 클래스를 추가한다. Custom Class > Class 항목에 `YellowViewController` (자신이 생성한 클래스 이름)을 지정한다.
+- [x]  닫기 버튼을 추가하고, YellowViewController 와 연결.
+- [x]  IBAction 이름은 `closeButtonTouched`로 지정하고 다음과 같이 코드를 작성한다.
+- [x]  위와 동일하게 세 번째 추가한 화면에 대해 ViewController 클래스를 지정하고, [닫기]버튼을 추가하고, 액션을 연결해서 화면을 닫는 동작이 동작하도록 구현한다.
+- [x]  뷰 컨트롤러 강의 자료에 있는 화면 관련 콜백 함수들에 모두 `print(#file, #line, #function, #column)`
+ 코드를 추가한다.
+
+<br>
+<br>
+
+## 진행과정
+
+- SecondView에 닫기 버튼을 추가하고 뷰 콜백 함수들을 호출했을때 결과
+
+- SecondVC → ThirdVC를 show방식으로 전환했을때
+![스크린샷 2022-02-17 오후 4 50 29](https://user-images.githubusercontent.com/59790540/154623988-4d53a724-b065-4d4f-8409-c4f68f7e7dcc.png)
+
+- SecondVC → ThirdVC를 fullScreen방식으로 전환했을때
+
+![스크린샷 2022-02-17 오후 4 52 58](https://user-images.githubusercontent.com/59790540/154623994-4a5da829-b4af-43b4-883c-b83d1536610f.png)
+
+
+- segue 방식이 아닌 present 방식을 통한 화면 전환
+    - 전환할 Scene에 Storyboard ID를 설정해주어야 한다.
+    - completion을 통해 present가 된후 해야할 작업들을 처리해줄 수 있다(메모리 작업 등)
+
+```swift
+    guard let secondVC = self.storyboard?.instantiateViewController(identifier: "secondVC") as? SecondViewController else {return}
+    self.present(secondVC, animated: true, completion: nil)
+```
+
+<br>
+<br>
+
+## 학습내용
+
+### ViewController
+
+- 역할
+    - 뷰 계층을 관리.
+    - 뷰를 업데이트하고 화면에 해당하는 뷰에서 이벤트가 일어났을 때 어떻게 처리할것인지 중간 매개체 역할
+    - 화면 사이즈, 회전을 감지하고 대응
+
+    <img width="238" alt="스크린샷 2022-02-17 오후 3 57 16" src="https://user-images.githubusercontent.com/59790540/154624206-57fa7a08-6e44-4083-a369-d25f0819d862.png">
+
+
+→ ViewController 가 View를 포함하는 관계인것을 확인 할 수 있다. 
+
+- 의미
+    - MVC에서 C.
+    - 뷰컨트롤러에서 하위뷰들을 만들고 그 뷰에서 필요한 데이터들을 가지는 모델들을 처리해주는 역할을 함.
+    - 모델과 뷰 중간역할을 함.
+
+- 장점
+    - 재사용
+    - 화면을 담당하는 뷰와 비즈니스 로직을 표현하는 모델을 분리
+
+
+## View Life Cycle
+
+뷰가 화면에 보여지는 상태의 변화나 뷰의 레이아웃에 변화가 생기면 뷰 컨트롤러는 여러가지 메서드를 호출해 서브클래스가 적절한 대응을 할 수 있게 한다.
+
+
+<img width="500" alt="스크린샷 2022-02-17 오후 3 57 16" src="https://user-images.githubusercontent.com/59790540/154624444-e96549b9-eb25-4685-b54b-056a9481cbe1.png">
+
+
+
+### 뷰의 상태변화 메소드
+
+**viewDidLoad()**
+
+- **뷰 계층이 메모리에 로드된 직후 호출되는 메서드**
+- 뷰의 추가적인 초기화 작업을 하기 좋은 시점
+- 메모리에 처음 로딩 될때 1회 호출되는 메서드로, 메모리 경고로 뷰가 사라지지 않는 이상 다시 호출되지 않음
+
+**viewWillAppear(_ animated: Bool)**
+
+- **뷰가 뷰 계층에 추가되고 화면이 표시되기 직전에 호출되는 메서드**
+- 뷰의 추가적인 초기화 작업을 하기 좋은 시점
+- 다른 뷰로 이동했다가 되돌아오면 재호출되는 메서드로, 화면이 나타날때마다 수행해야하는 작업을 하기 좋은 시점
+
+**viewDidAppear(_ animated: Bool)**
+
+- **뷰가 뷰 계층에 추가되어 화면이 표시되면 호출되는 메서드**
+- 뷰를 나타내는 것과 관련된 추가적인 작업을 하기 좋은 시점
+
+**viewWillDisappear(_ animated: Bool)**
+
+- **뷰가 뷰 계층에서 사라지기 직전에 호출되는 메서드**
+- 뷰가 생성된 뒤 발생한 변화를 이전상태로 되돌리기 좋은 시점
+
+**viewDidDisappear(_ animated: Bool)**
+
+- **뷰가 뷰 계층에서 사라진 후 호출되는 메서드**
+- 뷰를 숨기는 것과 관련된 추가적인 작업을 하기 좋은 시점
+- 시간이 오래 걸리는 작업은 하지 않는 것이 좋음
+
+
+
+---
 
