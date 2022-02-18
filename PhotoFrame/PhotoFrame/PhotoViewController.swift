@@ -10,16 +10,28 @@ import UIKit
 class PhotoViewController: UIViewController {
 
     @IBOutlet weak var photoImageView: UIImageView!
+    @IBOutlet weak var photoFrameView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.photoFrameView.layer.zPosition = 1.0 //z의 기본값은 0
     }
     
-    //선택 버튼 클릯.
+    //선택 버튼 클릭.
     @IBAction func selectButtonTouched(_ sender: UIButton) {
-    
+        let imagePickerController = UIImagePickerController() //ImagePicker생성
+        
+        //delgate를 선언해준다.
+        //이를 하기 위해서 UIImagePickerControllerDelegate , UINavigationControllerDelegate를 프로토콜로 채택해야한다. - extenstion으로 빼줌.
+        imagePickerController.delegate = self
+        guard UIImagePickerController.isSourceTypeAvailable(.photoLibrary) else { return } // 기기호환성을 체크한다.
+        imagePickerController.sourceType = .photoLibrary //카메라와 앨범타입이 있다.
+
+        imagePickerController.allowsEditing = true
+        present(imagePickerController,animated: true)
     }
+    
+    
     //다음 버튼 클릭시.
     @IBAction func nextImgaeButtonTouched(_ sender: UIButton) {
         let randomPhotoID = PhotoID.randomID //Static으로 PhotoID타입 자체에 randomID라는 associated Value를 추가함으로써 코드의 가독성을 높여보았다.
@@ -43,9 +55,11 @@ class PhotoViewController: UIViewController {
         if currentImage != nil && currentImage!.isEqual(nextImage) { //캐시된 동일한 데이터를 이용해 이미지를 만들어도 다를 수 있기때문에 이렇게 사용한다. Ex) currentImage == nextImage (X)
             print("이전 사진과 똑같은 이미지입니다.")
         }
-        
     }
+    
     
 }
 
-
+extension PhotoViewController: UIImagePickerControllerDelegate , UINavigationControllerDelegate  {
+    
+}
