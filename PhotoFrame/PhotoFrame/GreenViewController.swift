@@ -10,7 +10,7 @@ import UIKit
 class GreenViewController: UIViewController {
 
     // MARK: - Properties
-    @IBOutlet var homeButton: UIButton!
+    @IBOutlet weak var homeButton: UIButton!
     @IBOutlet weak var closeButton: UIButton!
     
     // MARK: - LifeCycle
