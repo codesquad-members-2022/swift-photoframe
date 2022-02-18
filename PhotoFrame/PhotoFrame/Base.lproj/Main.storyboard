@@ -62,6 +62,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="FNW-YA-pmh"/>
+                    <connections>
+                        <outlet property="firstLabel" destination="Sg8-Dx-R8M" id="CYH-9D-KwP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ss7-3P-7Wk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
