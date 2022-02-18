@@ -9,6 +9,11 @@ class WhiteViewController: UIViewController {
     @IBOutlet weak var selectButton: UIButton!
     
     @IBAction func selectButtonTouched(_ sender: UIButton) {
+        let imagePicker = UIImagePickerController()
+        imagePicker.sourceType = .photoLibrary
+        imagePicker.allowsEditing = true
+        imagePicker.delegate = self
+        self.present(imagePicker, animated: true, completion: nil)
     }
     
     @IBAction func nextButtonTouched(_ sender: UIButton) {
@@ -61,5 +66,13 @@ class WhiteViewController: UIViewController {
     func getRandomImage(number: Int)-> UIImage?{
         let fileName: String = number<10 ? "0\(number)" : String(number)
         return UIImage(named: "Demo Images/\(fileName).jpg")
+    }
+}
+
+extension WhiteViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let selectedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
+        self.imageView.image = selectedImage
+        picker.dismiss(animated: true, completion: nil)
     }
 }
