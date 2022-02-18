@@ -12,20 +12,35 @@
         <!--yellow-->
         <scene sceneID="aiH-1N-dT6">
             <objects>
-                <viewController id="Q4E-0C-ch4" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="zmO-bH-WCv">
+                <viewController id="Q4E-0C-ch4" customClass="YellowViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zmO-bH-WCv" customClass="yell">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MhY-FG-LNW">
+                                <rect key="frame" x="87" y="136" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="7DS-Yg-oPC"/>
+                                    <constraint firstAttribute="width" constant="240" id="KMK-Af-6ml"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="TAC-R9-lm8"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <constraints>
+                            <constraint firstItem="MhY-FG-LNW" firstAttribute="centerX" secondItem="zmO-bH-WCv" secondAttribute="centerX" id="KvP-Vx-rsR"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="yellow" id="UDE-pm-n8p">
                         <imageReference key="image" image="sun.max" catalog="system" symbolScale="default"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="photoImageView" destination="MhY-FG-LNW" id="TeJ-XZ-uuW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SRB-zw-MnQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1923.1884057971015" y="219.64285714285714"/>
+            <point key="canvasLocation" x="1923" y="282"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="8Ee-9W-sD2">

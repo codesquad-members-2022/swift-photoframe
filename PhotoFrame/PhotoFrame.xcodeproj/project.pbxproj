@@ -15,6 +15,7 @@
 		6F771FC127BA14E700757EA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F771FBF27BA14E700757EA0 /* LaunchScreen.storyboard */; };
 		6F771FCB27BF41DD00757EA0 /* GreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F771FCA27BF41DD00757EA0 /* GreenViewController.swift */; };
 		6F771FCD27BF43A800757EA0 /* BlackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F771FCC27BF43A800757EA0 /* BlackViewController.swift */; };
+		6F771FCF27BF91E300757EA0 /* YellowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F771FCE27BF91E300757EA0 /* YellowViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		6F771FC227BA14E700757EA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6F771FCA27BF41DD00757EA0 /* GreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenViewController.swift; sourceTree = "<group>"; };
 		6F771FCC27BF43A800757EA0 /* BlackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackViewController.swift; sourceTree = "<group>"; };
+		6F771FCE27BF91E300757EA0 /* YellowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				6F771FB627BA14E600757EA0 /* SceneDelegate.swift */,
 				6F771FB827BA14E600757EA0 /* ViewController.swift */,
 				6F771FBA27BA14E600757EA0 /* Main.storyboard */,
+				6F771FCE27BF91E300757EA0 /* YellowViewController.swift */,
 				6F771FCC27BF43A800757EA0 /* BlackViewController.swift */,
 				6F771FCA27BF41DD00757EA0 /* GreenViewController.swift */,
 				6F771FBD27BA14E700757EA0 /* Assets.xcassets */,
@@ -148,6 +151,7 @@
 				6F771FB927BA14E600757EA0 /* ViewController.swift in Sources */,
 				6F771FB527BA14E600757EA0 /* AppDelegate.swift in Sources */,
 				6F771FCD27BF43A800757EA0 /* BlackViewController.swift in Sources */,
+				6F771FCF27BF91E300757EA0 /* YellowViewController.swift in Sources */,
 				6F771FB727BA14E600757EA0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
