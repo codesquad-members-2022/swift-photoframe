@@ -40,7 +40,7 @@ class FirstViewController: UIViewController {
         print("Root View", #function)
     }
 
-    // MARK: - Handlers
+    // MARK: - Methods
     @IBAction func editingChanged(_ sender: Any) {
         print("Editing Change - 키보드 입력 시 트리거")
     }

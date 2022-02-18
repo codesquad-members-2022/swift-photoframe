@@ -17,9 +17,8 @@ class SecondViewController: UIViewController, UINavigationControllerDelegate, UI
     override func viewDidLoad() {
         super.viewDidLoad()
         self.photoImageView.image = UIImage(named: "01.jpg")
-        print("Secnd Tab View")
-        
         self.nextButton.addTarget(self, action: #selector(self.presentScene), for: .touchUpInside)
+        print("Secnd Tab View")
     }
     
     override func viewWillDisappear(_ animated: Bool) {

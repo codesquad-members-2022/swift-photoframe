@@ -47,7 +47,6 @@ class YellowViewController: UIViewController {
     }
     
     func navigateToNextUsingNavigationController() {
-        
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "PurpleViewController") else { return }
         self.navigationController?.pushViewController(vc, animated: true)
     }
@@ -63,7 +62,7 @@ class YellowViewController: UIViewController {
         self.performSegue(withIdentifier: "goToPurpleViewController", sender: nil)
     }
     
-    // MARK: - Selectors
+    // MARK: - Methods
     @objc func buttonTouched(sender: UIButton, forEvent event: UIEvent) {
         sender.setTitle("Moving...", for: .normal)
         //        self.showViewControllerModally()
