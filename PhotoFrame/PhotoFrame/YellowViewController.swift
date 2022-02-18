@@ -15,7 +15,7 @@ class YellowViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         secondViewIndicatorLabel.text = "Sol Album"
-        self.photoImageView.image = UIImage(named: "01.jpg")
+        self.photoImageView.image = #imageLiteral(resourceName: "01")
         
         setLabelFont()
     }
@@ -35,7 +35,7 @@ class YellowViewController: UIViewController {
     }
     
     func chooseRandomImageName() -> String {
-        let randomImageName = String((1...22).randomElement() ?? 1) + ".jpg"
-        return randomImageName.count < 6 ? "0"+randomImageName : randomImageName
+        let randomImageName = String((1...22).randomElement() ?? 1)
+        return randomImageName.count < 2 ? "0"+randomImageName : randomImageName
     }
 }
