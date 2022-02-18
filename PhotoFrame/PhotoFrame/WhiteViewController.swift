@@ -6,6 +6,10 @@ class WhiteViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var frameView: UIImageView!
+    @IBOutlet weak var selectButton: UIButton!
+    
+    @IBAction func selectButtonTouched(_ sender: UIButton) {
+    }
     
     @IBAction func nextButtonTouched(_ sender: UIButton) {
         imageView.image = getRandomImage(number: Int.random(in: 1...22))
@@ -17,6 +21,13 @@ class WhiteViewController: UIViewController {
         setImageView()
         setNextButton()
         setFrameView()
+        setSelectButton()
+    }
+    
+    func setSelectButton(){
+        selectButton.center.x = self.view.center.x
+        selectButton.center.y = self.view.center.y*1.4
+        selectButton.setTitle("선택", for: .normal)
     }
     
     func setFrameView(){
