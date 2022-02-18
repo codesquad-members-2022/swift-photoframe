@@ -10,7 +10,8 @@ class YellowViewController: UIViewController {
     }
     
     @IBAction func nextButtonTouched(_ sender: Any) {
-        self.photoImageView.image = UIImage(named: "02.jpg")
+        let num = Int.random(in: 1..<22)
+        self.photoImageView.image = UIImage(named: "\(num > 10 ? "" : "0")\(num).jpg")
     }
     
 }
