@@ -39,6 +39,7 @@
 		BCC4478827BF7B260064D33C /* 18.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BCC4477127BF7B260064D33C /* 18.jpg */; };
 		BCC4478927BF7B260064D33C /* 19.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BCC4477227BF7B260064D33C /* 19.jpg */; };
 		BCC4478A27BF7B260064D33C /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC4477327BF7B260064D33C /* PhotoViewController.swift */; };
+		BCC4478C27BF7B750064D33C /* photoframe-border.png in Resources */ = {isa = PBXBuildFile; fileRef = BCC4478B27BF7B750064D33C /* photoframe-border.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +77,7 @@
 		BCC4477127BF7B260064D33C /* 18.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 18.jpg; sourceTree = "<group>"; };
 		BCC4477227BF7B260064D33C /* 19.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 19.jpg; sourceTree = "<group>"; };
 		BCC4477327BF7B260064D33C /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		BCC4478B27BF7B750064D33C /* photoframe-border.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photoframe-border.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 		BCC4475C27BF7B260064D33C /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				BCC4478B27BF7B750064D33C /* photoframe-border.png */,
 				BCC4475D27BF7B260064D33C /* 14.jpg */,
 				BCC4475E27BF7B260064D33C /* 15.jpg */,
 				BCC4475F27BF7B260064D33C /* 01.jpg */,
@@ -224,6 +227,7 @@
 				BC545A5827BB76FA0053E2BD /* README.md in Resources */,
 				BC545A4B27BB74BF0053E2BD /* Main.storyboard in Resources */,
 				BCC4477927BF7B260064D33C /* 02.jpg in Resources */,
+				BCC4478C27BF7B750064D33C /* photoframe-border.png in Resources */,
 				BCC4478927BF7B260064D33C /* 19.jpg in Resources */,
 				BCC4477727BF7B260064D33C /* 17.jpg in Resources */,
 				BCC4478227BF7B260064D33C /* 04.jpg in Resources */,
