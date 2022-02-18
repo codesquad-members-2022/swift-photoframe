@@ -26,27 +26,27 @@ class YellowViewController: UIViewController {
 //MARK: -- 라이프 사이클 체크
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("ViewDidLoad - YellowViewController")
+        print("ViewDidLoad - YellowViewController \n")
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print("ViewWillAppear - YellowViewController")
+        print("ViewWillAppear - YellowViewController \n")
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        print("ViewDidAppear - YellowViewController")
+        print("ViewDidAppear - YellowViewController \n")
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        print("ViwWillDisppaear - YellowViewController")
+        print("ViwWillDisppaear - YellowViewController \n")
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        print("ViewDidDisappear - YellowViewController")
+        print("ViewDidDisappear - YellowViewController \n")
     }
 
 }

@@ -43,22 +43,22 @@ class FirstViewController:UIViewController {
     //MARK: -- 라이프 사이클 체크
         override func viewWillAppear(_ animated: Bool) {
             super.viewWillAppear(animated)
-            print("ViewWillAppear - FirstViewController")
+            print("ViewWillAppear - FirstViewController \n")
         }
         
         override func viewDidAppear(_ animated: Bool) {
             super.viewDidAppear(animated)
-            print("ViewDidAppear - FirstViewController")
+            print("ViewDidAppear - FirstViewController \n")
         }
         
         override func viewWillDisappear(_ animated: Bool) {
             super.viewWillDisappear(animated)
-            print("ViwWillDisppaear - FirstViewController")
+            print("ViwWillDisppaear - FirstViewController \n")
         }
         
         override func viewDidDisappear(_ animated: Bool) {
             super.viewDidDisappear(animated)
-            print("ViewDidDisappear - FirstViewController")
+            print("ViewDidDisappear - FirstViewController \n")
         }
     
     
