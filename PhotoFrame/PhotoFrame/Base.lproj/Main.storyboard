@@ -57,6 +57,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="g6s-qw-Z8l"/>
                     <connections>
+                        <outlet property="photoFrameView" destination="TLl-Bg-Hdw" id="4fI-nm-Lpq"/>
                         <outlet property="photoImageView" destination="eh5-uV-bbG" id="ehx-Cj-UGE"/>
                     </connections>
                 </viewController>

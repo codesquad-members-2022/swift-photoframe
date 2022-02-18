@@ -14,7 +14,7 @@ class FirstViewController:UIViewController {
     
     override func viewDidLoad() {
         configureLabel()
-        print("ViewDidLoad - FirstViewController")
+        print("ViewDidLoad - FirstViewController \n")
     }
     
     //닫기 버튼 클릭시
