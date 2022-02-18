@@ -28,7 +28,7 @@ class PrintViewContollerState :UIViewController{
         print(#file, #line, #function, #column)
     }
 }
-class ViewController: PrintViewContollerState, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class ViewController: PrintViewContollerState {
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var photoLabel: UILabel!
     
@@ -66,7 +66,9 @@ class ViewController: PrintViewContollerState, UIImagePickerControllerDelegate, 
         pickerAlert.addAction(cancelOption)
         present(pickerAlert, animated: true)
     }
-    
+}
+
+extension ViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             self.photoImageView.image = image
