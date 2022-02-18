@@ -53,6 +53,7 @@
                                 <buttonConfiguration key="configuration" style="plain" title="다음"/>
                                 <connections>
                                     <action selector="nextButtonTouched:" destination="ICY-k4-8QA" eventType="touchUpInside" id="04C-Za-yoi"/>
+                                    <segue destination="HCE-mx-C1q" kind="show" id="cJ1-dd-x4X"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -67,7 +68,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZGg-Y2-OsZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="739.13043478260875" y="-260.49107142857144"/>
+            <point key="canvasLocation" x="741" y="-305"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tjh-2d-SUn">
+            <objects>
+                <viewController id="HCE-mx-C1q" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2bb-iR-P7Q">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="tH3-XV-sbs"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="qfV-CN-Acd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="chn-H4-cwp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1458" y="-305"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="H51-fx-ogP">
