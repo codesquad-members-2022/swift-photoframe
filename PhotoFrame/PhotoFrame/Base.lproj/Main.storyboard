@@ -25,9 +25,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SRB-zw-MnQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1014" y="220"/>
+            <point key="canvasLocation" x="1923.1884057971015" y="219.64285714285714"/>
         </scene>
-        <!--blue-->
+        <!--View Controller-->
         <scene sceneID="8Ee-9W-sD2">
             <objects>
                 <viewController id="5zo-w2-5xV" customClass="ViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
@@ -79,7 +79,7 @@
                             <constraint firstItem="qeC-WM-Po3" firstAttribute="top" secondItem="RUe-MF-fSn" secondAttribute="bottom" constant="89" id="xBZ-eu-vJZ"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="blue" image="cloud" catalog="system" id="9yc-jF-uJi"/>
+                    <navigationItem key="navigationItem" id="Ljv-Jd-Dzt"/>
                     <connections>
                         <outlet property="firstDesciption" destination="rW9-lg-vfx" id="yQf-ZS-95Q"/>
                         <outlet property="firstLabel" destination="qeC-WM-Po3" id="xfU-BS-UbN"/>
@@ -87,18 +87,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qCD-Fm-gwn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1013.0434782608696" y="-386.38392857142856"/>
+            <point key="canvasLocation" x="1923.1884057971015" y="-386.38392857142856"/>
         </scene>
         <!--Black View Controller-->
         <scene sceneID="fkF-ts-Fzf">
             <objects>
                 <viewController id="Rjd-17-Bly" customClass="BlackViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9mC-RK-lD3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d8R-wS-oAY">
-                                <rect key="frame" x="176" y="405.5" width="62" height="31"/>
+                                <rect key="frame" x="176" y="432.5" width="62" height="31"/>
                                 <color key="tintColor" systemColor="systemGreenColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="green"/>
@@ -107,7 +107,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CdP-Vc-BCG">
-                                <rect key="frame" x="182.5" y="470" width="49" height="31"/>
+                                <rect key="frame" x="182.5" y="497" width="49" height="31"/>
                                 <color key="tintColor" systemColor="systemGreenColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="닫기"/>
@@ -129,7 +129,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1TB-EB-std" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1848" y="-386"/>
+            <point key="canvasLocation" x="2757.971014492754" y="-386.38392857142856"/>
         </scene>
         <!--Green View Controller-->
         <scene sceneID="kxd-rX-mpa">
@@ -160,7 +160,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CSq-66-LAT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2614" y="-386"/>
+            <point key="canvasLocation" x="3523.1884057971015" y="-386.38392857142856"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="z2t-jV-vW8">
@@ -173,13 +173,32 @@
                         <color key="selectedImageTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="5zo-w2-5xV" kind="relationship" relationship="viewControllers" id="2nG-4z-nvP"/>
+                        <segue destination="aOI-Bh-Lh0" kind="relationship" relationship="viewControllers" id="2nG-4z-nvP"/>
                         <segue destination="Q4E-0C-ch4" kind="relationship" relationship="viewControllers" id="iuT-bQ-OLG"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tfh-ar-gFM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="125" y="-83"/>
+        </scene>
+        <!--blue-->
+        <scene sceneID="MAd-zG-3yP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aOI-Bh-Lh0" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="blue" image="cloud" catalog="system" id="9yc-jF-uJi"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Jqv-yA-EVL">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="5zo-w2-5xV" kind="relationship" relationship="rootViewController" id="3oR-ew-943"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kAG-Ks-Hfv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1013.0434782608696" y="-386.38392857142856"/>
         </scene>
     </scenes>
     <resources>
