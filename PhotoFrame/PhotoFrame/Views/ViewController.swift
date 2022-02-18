@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         self.FirstLabel.textAlignment = .center
         self.FirstLabel.font = .monospacedDigitSystemFont(ofSize: 25, weight: .heavy)
         
-        self.FirstDescription.text = "순간의 기록으로.."
+        self.FirstDescription.text = "순간의 기억속으로.."
         self.FirstDescription.font = .monospacedDigitSystemFont(ofSize: 20, weight: .heavy)
         
         self.yellowBackground.addTarget(self, action: #selector(changeBackgorund), for: .touchUpInside)
