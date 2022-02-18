@@ -404,6 +404,70 @@ ___
 
 ---
 
+## UIViewController
+
+* UIViewController는 뷰 계층(UIViewController.view에서 시작)을 관리하는 역할을 한다. 뷰, 뷰의 데이터, 뷰의 리소스, 화면 사이즈/회전 등에 대응한다. 공식문서에서 정의하는 뷰 컨트롤러의 역할은 다음과 같다.
+  * 뷰들의 컨텐츠를 업데이트한다.
+  * 뷰들의 상호작용에 반응한다.
+  * 뷰의 크기를 바꾸고 전체적인 인터페이스의 레이아웃을 관리한다.
+  * 다른 객체들(다른 뷰 컨트롤러도 포함)과의 협업을 관리한다.
+* 흔히 UIViewController에서 MVC 패턴의 C 역할을 한다. 뷰 컨트롤러는 화면의 특정 혹은 전체 영역을 담당하면서 모델도 내부 프로퍼티로 가질 수 있다. 대부분 앱은 ViewController 사이의 흐름으로 구성한다.
+* 좋은 앱을 만드는 방법 중 하나는 ViewController를 도메인의 단위로 삼아 앱을 만드는 것이다. UIViewController는 가볍다. 복잡한 화면을 구조화 하는데 용이하다.
+
+주요 콜백 메소드는 다음과 같다.
+
+화면 관련 (순서 : viewDidLoad -> viewWillAppear -> viewDidAppear -> dismiss -> viewWillDisappear -> viewDidDisappear)
+1. viewDidLoad()   
+뷰 컨트롤러가 뷰 계층을 메모리에 불러들일 때 호출된다. 이 메소드를 오버라이드 하여 데이터 초기화를 하거나, nib file을 통해 뷰 객체화를 하기에 용이하다. 
+2. viewWillAppear(Bool)   
+뷰 계층에 뷰 컨트롤러의 뷰들이 들어오기 전에 호출된다. 뷰의 상태를 변화하려면 여기서 진행하면 된다. 상태 바의 스타일, 정렬을 적당하게 변경하는 등이다. 
+3. viewDidAppear(Bool)   
+뷰 계층에 뷰들이 모두 들어가면 호출된다. popover안에서 호출된 뷰 컨트롤러에서는 호출되지 않는 특징이 있다.
+4. viewWillDisappear(Bool)   
+뷰 계층에서 뷰들이 삭제되기 전 호출된다. first responder 상태를 해제하거나, 수정사항을 적용하는 등의 작업을 수행할 때 유용하다.
+5. viewDidDisappear(Bool)   
+뷰 계층에서 뷰들이 삭제된 후 호출된다.
+
+콜백 메소드를 사용할 때 주의할 점은 ```superClass인 UIViewController의 원본 메소드를 따로 실행``` 해야 한다는 것이다. 앞에서 언급한 메소드가 실행되고 난 후 어떤 작업을 수행하고 싶은 것이기 떄문에, 오버라이드는 하고 super 메소드를 실행하지 않으면 오류가 발생할 수 있다.
+
+회전 관련(present 메소드를 이용하여 presentedViewController가 될 경우)
+1. var shouldAutorotate: Bool   
+뷰 컨트롤러의 내용들의 자동회전이 적용되어 있는지 여부를 알려준다. true일 때만 supportedInterfaceOrientations 호출이 가능하다.
+2. var supportedInterfaceOrientations: UIInterfaceOrientationMask   
+기기가 회전할 때 시스템이 호출하여 뷰 컨트롤러가 보여주는 뷰와 회전된 상태와 다르면 뷰 컨트롤러와 뷰들을 회전시킨다. 이 변수를 정의할 수 있는 곳은 Info.plist 혹은 AppDelegate 안에서 이다.
+3. var prefferedInterfaceOrientationForPresentation; UIInterfaceOrientation   
+뷰 컨트롤러를 시스템이 표시하려고 할 때 호출하는 변수이다. 이 변수를 오버라이드 해서 임의의 방향을 정의하면 회전을 컨트롤 할 수 있다.
+
+회전 관련(실습)
+```swift
+// preferredInterfaceOrientationForPresentation 사용
+class ViewController: UIViewController {
+    override var shouldAutorotate: Bool {
+        false
+    }
+    override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation {
+        .landscapeLeft
+    }
+}
+// supportedInterfaceOrientation 사용
+class ViewController: UIViewController {
+    override var supportedInterfaceOrientation: UIInterfaceOrientationMask {
+        .landscapeLeft
+    }
+}
+```
+
+root view controller는 어떤 화면을 가득채우는 것이다(window.rootViewController).
+
+windowScene 위에 window 이 올라가고(프로세스 하나에서 여러 윈도우씬이 있으면 화면 크기를 다르게 하거나 여러 개의 앱을 띄울 수 있음) 그 위에 rootViewController.view가 채워짐.
+
+Scene이란 하나의 화면, UIScene은 Scene을 직접 만들고 싶을 때 사용, UIWindowScene은 UIWindow를 올리는 밑바탕.
+
+주로 우리가 만나게 되는 가장 흔한 뷰 컨트롤러는 UIViewController 를 서브클래스 하는 방식. 필요한 API 메소드 오버라이드, 비즈니스 로직 추가, 라이프 사이클에 맞춰가면서 필요한 기능 만들어야 함.   
+뷰 컨트롤러를 서브클래싱하여 사용해야 하는 이유 중 하나는 메모리 이슈이다. 내장된 기능을 사용하는 것이 메모리 관리를 가장 용이하게 하는 방법이고, 메모리 이슈가 발생할 경우 실행되는 didReceiveMemoryWarning() 메소드도 제공된다.
+
+---
+
 ## Segue란?
 
 출처: [PresentingaViewController](https://developer.apple.com/library/archive/featuredarticles/ViewControllerPGforiPhoneOS/PresentingaViewController.html#//apple_ref/doc/uid/TP40007457-CH14-SW1)
@@ -445,42 +509,6 @@ UIKit에 내장된 뷰 컨트롤러 표시와 커스텀 애니메이션을 사�
 
 ## 강의 내용 정리
 
-UIViewController는 뷰 계층(UIViewController.view에서 시작)을 관리하는 역할을 한다. 뷰, 뷰의 데이터, 뷰의 리소스, 화면 사이즈/회전 등에 대응한다.
-
-흔히 UIViewController에서 MVC 패턴의 C 역할을 한다. 뷰 컨트롤러는 화면의 특정 혹은 전체 영역을 담당하면서 모델도 내부 프로퍼티로 가질 수 있다. 대부분 앱은 ViewController 사이의 흐름으로 구성한다.
-
-품질 좋은 앱을 위해 ViewController를 단위로 삼아 앱을 만든다. ViewController는 가볍다. 복잡한 화면을 구조화 하는데 용이하다.
-
-주요 콜백 메소드는 다음과 같다.
-
-화면 관련
-1. viewDidLoad()
-2. viewWillAppear(Bool)
-3. viewDidAppear(Bool)
-4. viewWillDisappear(Bool)
-5. viewDidDisappear(Bool)
-
-회전 관련
-1. var shouldAutorotate: Bool
-2. var supportedInterfaceOrientations: UIInterfaceOrientationMask
-3. var prefferedInterfaceOrientationForPresentation; UIInterfaceOrientation
-
-뷰 관련 상태변화(View LifeCycle) 포인트
-* 뷰는 언제 생성되고 보이나
-* 상태가 언제 변화하나
-* 상태가 바뀌면서 일어나는 현상
-* 상태가 바뀌기 위한 조건
-* 상태 변화는 반복되는가
-* 오버라이드를 해야하는 이유
-
-root view controller는 어떤 화면을 가득채우는 것이다(window.rootViewController).
-
-windowScene 위에 window 이 올라가고(프로세스 하나에서 여러 윈도우씬이 있으면 화면 크기를 다르게 하거나 여러 개의 앱을 띄울 수 있음) 그 위에 rootViewController.view가 채워짐.
-
-Scene이란 하나의 화면, UIScene은 Scene을 직접 만들고 싶을 때 사용, UIWindowScene은 UIWindow를 올리는 밑바탕.
-
-주로 우리가 만나게 되는 가장 흔한 뷰 컨트롤러는 UIViewController 를 서브클래스 하는 방식. 필요한 API 메소드 오버라이드, 비즈니스 로직 추가, 라이프 사이클에 맞춰가면서 필요한 기능 만들어야 함.
-
 present는 기존 뷰를 가리면서 나타난다. presented(띄워진 뷰)는 나타난 뷰, presenting(화면 띄운 뷰)는 present한 뷰이다.
 
 Modal Presentation Style (어느 영역을 덮을 것인가, 한번 해보세요!)
@@ -503,3 +531,5 @@ Transition Style (어떻게 새 화면을 표시할 것인가)
 * flipHorizontal = 뒤집으면서
 * crossDissolve = 투명하게 사라지면서
 * partialCurl = 종이처럼 넘기면서
+
+UIResponder Chain in UIViewController?
