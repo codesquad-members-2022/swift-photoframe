@@ -10,6 +10,7 @@ import UIKit
 
 class Scene2ViewController: UIViewController {
 
+<<<<<<< HEAD
     @IBOutlet weak var albumLabel: UILabel!
     @IBOutlet weak var setImageButton: UIButton!
     @IBOutlet weak var imageView: UIImageView!
@@ -41,5 +42,11 @@ class Scene2ViewController: UIViewController {
         return randomNum < 10 ?  "0\(randomNum).jpg" : "\(randomNum).jpg"
     }
     
+=======
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+
+>>>>>>> 62f8519 (rename viewcontrollers)
 }
 
