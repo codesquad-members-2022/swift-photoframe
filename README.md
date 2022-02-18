@@ -36,7 +36,8 @@
 </details>
 
 
-## Step 3 IBAction 연결하기 - 2월 18일 오전 11시
+<details>
+	<summary>Step 3 IBAction 연결하기 - 2월 18일 오전 11시</summary>
 
 ### 작업 목록
 - [x] next button 만들고 IBAction 연결하기
@@ -54,3 +55,15 @@
 	- 먼저 생성된 순서로 지정되나 싶어서 하나를 지우고 순서를 바꿔서 작성해보기도 해봤지만 이상하게 순서가 바뀌지 않았습니다..!
 	- 혹시 스토리보드만 사용해서는 불가능한 것일까요? 
 	- 따로 코드로 액션을 연결해주고 순서를 지정해주는? 방법을 알아보는게 좋을까요?
+
+</details>
+
+
+## Step 4 Scene을 Segue로 연결하기 - 2월 18일 오전 
+
+### 작업 목록
+- [x] view 추가하고 버튼 연결
+- [x] 연속하는 view 하나 더 추가
+
+<img height="400" src="https://user-images.githubusercontent.com/45891045/154606078-f6283b3d-b91e-4411-aed7-7e71623ab969.gif">
+
