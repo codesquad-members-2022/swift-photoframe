@@ -40,6 +40,7 @@
 		BCC4478927BF7B260064D33C /* 19.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BCC4477227BF7B260064D33C /* 19.jpg */; };
 		BCC4478A27BF7B260064D33C /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC4477327BF7B260064D33C /* PhotoViewController.swift */; };
 		BCC4478C27BF7B750064D33C /* photoframe-border.png in Resources */ = {isa = PBXBuildFile; fileRef = BCC4478B27BF7B750064D33C /* photoframe-border.png */; };
+		BCC4478E27BF817D0064D33C /* PhotoPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC4478D27BF817D0064D33C /* PhotoPickerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +79,7 @@
 		BCC4477227BF7B260064D33C /* 19.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 19.jpg; sourceTree = "<group>"; };
 		BCC4477327BF7B260064D33C /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		BCC4478B27BF7B750064D33C /* photoframe-border.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photoframe-border.png"; sourceTree = "<group>"; };
+		BCC4478D27BF817D0064D33C /* PhotoPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				BC9AB2AA27BD0E7D009B4E01 /* YellowViewController.swift */,
 				BC9AB2A827BCE643009B4E01 /* GrayViewController.swift */,
 				BCC4477327BF7B260064D33C /* PhotoViewController.swift */,
+				BCC4478D27BF817D0064D33C /* PhotoPickerViewController.swift */,
 				BCC4475C27BF7B260064D33C /* Images */,
 				BC545A5727BB76FA0053E2BD /* README.md */,
 				BC545A4927BB74BF0053E2BD /* Main.storyboard */,
@@ -251,6 +254,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCC4478E27BF817D0064D33C /* PhotoPickerViewController.swift in Sources */,
 				BC9AB2A927BCE643009B4E01 /* GrayViewController.swift in Sources */,
 				BC545A4827BB74BF0053E2BD /* ViewController.swift in Sources */,
 				BC545A4427BB74BF0053E2BD /* AppDelegate.swift in Sources */,

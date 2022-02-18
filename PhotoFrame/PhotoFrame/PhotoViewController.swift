@@ -8,6 +8,8 @@
 import UIKit
 
 class PhotoViewController: UIViewController {
+    
+    let photoPickerController = PhotoPickerViewController()
 
     @IBOutlet weak var photoImageView: UIImageView!
     
@@ -22,6 +24,10 @@ class PhotoViewController: UIViewController {
     }
     
     @IBAction func selectButtonTouched(_ sender: UIButton) {
-        
+        present(photoPickerController, animated: true, completion: nil)
     }
+}
+
+extension PhotoViewController: UIImagePickerControllerDelegate {
+    
 }
