@@ -148,19 +148,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wqW-l5-EgL">
-                                <rect key="frame" x="87" y="104" width="240" height="240"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4xN-LA-8c3">
-                                <rect key="frame" x="87" y="361" width="240" height="39"/>
+                                <rect key="frame" x="87" y="457" width="240" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RwJ-XQ-nQl">
-                                <rect key="frame" x="142" y="423" width="131" height="50"/>
+                                <rect key="frame" x="142" y="504" width="131" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" button="YES" adjustable="YES"/>
@@ -181,6 +177,23 @@
                                     <action selector="setImageButtonTapped:" destination="2yP-B6-OLJ" eventType="touchUpInside" id="eez-wX-jl1"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wqW-l5-EgL">
+                                <rect key="frame" x="87" y="104" width="240" height="240"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dAw-2j-e1s">
+                                <rect key="frame" x="174" y="596" width="67" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="selectButtonTouched:" destination="2yP-B6-OLJ" eventType="touchUpInside" id="iQc-yJ-xNS"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uNu-Bg-VAk">
+                                <rect key="frame" x="32" y="49" width="350" height="350"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="uLT-oS-aH2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -189,6 +202,8 @@
                     <connections>
                         <outlet property="albumLabel" destination="4xN-LA-8c3" id="tNw-5L-1XB"/>
                         <outlet property="imageView" destination="wqW-l5-EgL" id="a0D-Bj-oVr"/>
+                        <outlet property="photoFrameImageView" destination="uNu-Bg-VAk" id="edv-Ev-SbZ"/>
+                        <outlet property="selectPhotoButton" destination="dAw-2j-e1s" id="NkR-ON-H4t"/>
                         <outlet property="setImageButton" destination="RwJ-XQ-nQl" id="fWz-dV-CHy"/>
                     </connections>
                 </viewController>
