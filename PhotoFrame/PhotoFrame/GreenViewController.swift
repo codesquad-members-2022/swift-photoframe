@@ -24,27 +24,27 @@ class GreenViewController: UIViewController {
 //MARK: -- 라이프 사이클 체크
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("ViewDidLoad - GreenViewController")
+        print("ViewDidLoad - GreenViewController \n")
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print("ViewWillAppear - GreenViewController")
+        print("ViewWillAppear - GreenViewController \n")
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        print("ViewDidAppear - GreenViewController")
+        print("ViewDidAppear - GreenViewController \n")
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        print("ViwWillDisppaear - GreenViewController")
+        print("ViwWillDisppaear - GreenViewController \n")
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        print("ViewDidDisappear - GreenViewController")
+        print("ViewDidDisappear - GreenViewController \n")
     }
     
     

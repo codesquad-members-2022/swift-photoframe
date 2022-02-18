@@ -24,27 +24,27 @@ class RedViewController: UIViewController {
 //MARK: -- 라이프 사이클 체크
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("ViewDidLoad - RedViewController")
+        print("ViewDidLoad - RedViewController \n")
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print("ViewWillAppear - RedViewController")
+        print("ViewWillAppear - RedViewController \n")
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        print("ViewDidAppear - RedViewController")
+        print("ViewDidAppear - RedViewController \n")
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        print("ViwWillDisppaear - RedViewController")
+        print("ViwWillDisppaear - RedViewController \n")
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        print("ViewDidDisappear - RedViewController")
+        print("ViewDidDisappear - RedViewController \n")
     }
     
     
