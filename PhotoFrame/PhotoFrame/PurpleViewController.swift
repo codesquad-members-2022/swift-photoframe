@@ -11,7 +11,7 @@ class PurpleViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Third View", #function)
+        print("\nThird View", #function)
     }
     
     override func viewWillDisappear(_ animated: Bool) {

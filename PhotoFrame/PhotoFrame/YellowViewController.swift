@@ -14,7 +14,7 @@ class YellowViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Second View", #function)
+        print("\nSecond View", #function)
         self.configureButton()
     }
     

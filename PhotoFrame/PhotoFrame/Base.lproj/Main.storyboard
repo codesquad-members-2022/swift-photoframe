@@ -108,7 +108,6 @@
                                                                 <fontDescription key="titleFontDescription" name="Chalkduster" family="Chalkduster" pointSize="14"/>
                                                             </buttonConfiguration>
                                                             <connections>
-                                                                <action selector="touchedUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XLz-Pi-V5W"/>
                                                                 <segue destination="pD7-my-rOB" kind="show" id="dWG-Sd-g06"/>
                                                             </connections>
                                                         </button>
