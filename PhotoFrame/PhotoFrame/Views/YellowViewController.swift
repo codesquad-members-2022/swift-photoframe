@@ -39,11 +39,11 @@ class YellowViewController: UIViewController {
 
     }
     //segue 없이 화면전환
-    @IBAction func showGreenView(_ sender: Any) {
-        if let greenView = self.storyboard?.instantiateViewController(withIdentifier: "GreenViewController") {
-            present(greenView, animated: true, completion: nil)
-            
-        }
-    }
+//    @IBAction func showGreenView(_ sender: Any) {
+//        if let greenView = self.storyboard?.instantiateViewController(withIdentifier: "GreenViewController") {
+//            present(greenView, animated: true, completion: nil)
+//
+//        }
+//    }
     
 }
