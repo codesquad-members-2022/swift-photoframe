@@ -402,7 +402,9 @@ viewDidDisappear()
 - 실행은 됬지만 선택한 이미지를 imageView로 가지고오기를 실패했다.
 ![Simulator Screen Recording - iPhone 13 - 2022-02-18 at 16 48 01](https://user-images.githubusercontent.com/80263729/154640214-2851c917-4609-409f-b2cf-da1c079b7d9a.gif)
 
+
 - [X] 권한 설정이 필요하면 Info.plist에 추가한다.
+- [X] 선택한 사진을 받기 위해서 구현해야 하는 메서드는 어떤게 있는지 찾아 구현한다.
 ![스크린샷 2022-02-18 오후 4 02 48](https://user-images.githubusercontent.com/80263729/154634032-4d97a069-0398-4e1c-ba0c-bc721388ba94.png)
 
 - [X] 카메라롤에서 사진을 가져오기 위해 해줘야 하는 동작들을 찾아서 구현한다.
@@ -415,6 +417,7 @@ viewDidDisappear()
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {   
     }
 ~~~
+
 
 Dictionary 형태로 값이 출력됨을 알수 있고 이를 통해 image데이터를 가져 올 수 있었다.
 
@@ -438,11 +441,16 @@ extension PhotoViewController: UIImagePickerControllerDelegate , UINavigationCon
 
 
 
+- 추가학습거리
+UIImagePickerController처럼 이미 만들어놓은 시스템 컨트롤러들에 대해 학습하기.
+- 시스템 컨트롤러들은 이름에서부터 UIImagePickerController처럼 어떤 일을 하는지 대충 알 수 있게 지어졌다.
+- 이미 만들어놓은 시스템 컨트롤러들은 너무나 많다 UIImagePickerController처럼 처럼 FontPicker,ColorPicker 심지어는 iCouldSharingController도 있었다
+- 모든 시스템 컨트롤러를 다 사용해보면 좋겠지만 이번 미션에서는 AlertViewController를 사용하여 더 자연스러운 느낌을 낼 수 있었다.
 
-- [X] 선택한 사진을 받기 위해서 구현해야 하는 메서드는 어떤게 있는지 찾아 구현한다.
-
-추가학습거리
-UIImagePickerController처럼 이미 만들어놓은 시스템 컨트롤러들에 대해 학습하기
 
 델리게이트(Delegate)와 프로토콜(Protocol) 상관 관계에 대해 학습한다.
+-  델리게이트란 객체지향 프로그래밍에서 객체가 처리해야 할 일중 일부를 다른 객체에 넘기는 것을 의미한다.
+-  델리게이트를 저정해서 이벤트가 발생했을 때의 처리를 넘기고 실제로 이벤트가 발생하면 대리자가 미리 선언된 메서드등을 이용해 처리한다.
+-  델리게이트를 이용하면 massive ViewController가 됨을 막을 수 있겠다고 생각했다.
+
 
