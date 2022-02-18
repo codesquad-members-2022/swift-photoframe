@@ -13,6 +13,7 @@ class BlackViewController: UIViewController {
     }
     
     @IBAction func closedButtonTouched(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
+    
 }
