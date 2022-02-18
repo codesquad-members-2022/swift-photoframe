@@ -23,7 +23,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print(#file, #line, #function, #column)
+        
         // subView 추가
         self.view.addSubview(firstLabel)
         self.view.addSubview(firstDescription)
@@ -51,5 +52,29 @@ class ViewController: UIViewController {
         self.firstDescription.font = UIFont.systemFont(ofSize: 15)
         self.firstDescription.topAnchor.constraint(equalTo: firstLabel.topAnchor, constant: 60).isActive = true
         self.firstDescription.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+    }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print(#file, #line, #function, #column)
+    }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print(#file, #line, #function, #column)
+    }
+    
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        print(#file, #line, #function, #column)
+    }
+    
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        print(#file, #line, #function, #column)
     }
 }
