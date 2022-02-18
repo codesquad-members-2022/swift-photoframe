@@ -37,7 +37,7 @@ extension PhotoViewController: UIImagePickerControllerDelegate, UINavigationCont
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         guard let image = info[.originalImage] as? UIImage else { return }
         self.didPhotoSelected(image)
+        
         picker.dismiss(animated: true, completion: nil)
     }
-    
 }
