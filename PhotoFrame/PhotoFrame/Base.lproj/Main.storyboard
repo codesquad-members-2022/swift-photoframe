@@ -96,14 +96,45 @@
                     <view key="view" contentMode="scaleToFill" id="9mC-RK-lD3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d8R-wS-oAY">
+                                <rect key="frame" x="176" y="405.5" width="62" height="31"/>
+                                <color key="tintColor" systemColor="systemGreenColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="green"/>
+                                <connections>
+                                    <segue destination="iEz-rB-q0f" kind="show" id="tzR-sC-c8V"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="xGv-z5-UYc"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="d8R-wS-oAY" firstAttribute="centerX" secondItem="9mC-RK-lD3" secondAttribute="centerX" id="Rje-Am-dGj"/>
+                            <constraint firstItem="d8R-wS-oAY" firstAttribute="centerY" secondItem="9mC-RK-lD3" secondAttribute="centerY" id="zxZ-93-rEh"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="REC-Kf-SGl"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1TB-EB-std" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1848" y="-386"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="kxd-rX-mpa">
+            <objects>
+                <viewController id="iEz-rB-q0f" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0vD-aW-iVX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="E3t-Qk-wb1"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="LAc-WN-Zd7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CSq-66-LAT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2614" y="-386"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="z2t-jV-vW8">
@@ -128,6 +159,9 @@
     <resources>
         <image name="cloud" catalog="system" width="128" height="88"/>
         <image name="sun.max" catalog="system" width="128" height="124"/>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemTealColor">
             <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
