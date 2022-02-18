@@ -42,7 +42,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="g6s-qw-Z8l"/>
                     <connections>
-                        <outlet property="photoImgaeView" destination="eh5-uV-bbG" id="ehx-Cj-UGE"/>
+                        <outlet property="photoImageView" destination="eh5-uV-bbG" id="ehx-Cj-UGE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="faI-rv-oPQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
