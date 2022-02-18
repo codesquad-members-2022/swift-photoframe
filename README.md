@@ -22,7 +22,7 @@
 
 
 <details>
-	<summary>## Step 2 IBOutlet 연결하기 - 2월 14일 오후 3시30분</summary>
+	<summary>Step 2 IBOutlet 연결하기 - 2월 14일 오후 3시30분</summary>
 
 ### 작업 목록
 - [x] First Scene에 레이블 만들기
