@@ -97,6 +97,9 @@
 
 ## 7. [Image View](https://developer.apple.com/documentation/uikit/uiimageview)
 
+![](https://user-images.githubusercontent.com/17468015/154629194-7353cd10-4d39-4da1-9369-2332083b1c91.png)
+
+
 - `UIImage` 객체를 담아 보여주는 뷰.
 
 
