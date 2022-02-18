@@ -92,10 +92,10 @@
             </objects>
             <point key="canvasLocation" x="969.56521739130437" y="-251.11607142857142"/>
         </scene>
-        <!--View Controller2-->
+        <!--Gray View Controller-->
         <scene sceneID="5hA-Va-Un0">
             <objects>
-                <viewController storyboardIdentifier="SecondViewController" id="gwV-tM-Mtp" customClass="ViewController2" customModule="Photo_Frame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SecondViewController" id="gwV-tM-Mtp" customClass="GrayViewController" customModule="Photo_Frame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kE3-yj-XsA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -141,10 +141,10 @@
             </objects>
             <point key="canvasLocation" x="1702.8985507246377" y="-251.11607142857142"/>
         </scene>
-        <!--View Controller3-->
+        <!--Black View Controller-->
         <scene sceneID="16q-q5-yCi">
             <objects>
-                <viewController id="0SN-Qe-AEa" customClass="ViewController3" customModule="Photo_Frame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="0SN-Qe-AEa" customClass="BlackViewController" customModule="Photo_Frame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Css-wN-vOe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
