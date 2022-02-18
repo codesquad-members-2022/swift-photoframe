@@ -71,7 +71,8 @@
 </details>
 
 
-## Step 5 ViewController 연결하기 - 2월 18일 오후 4시30분
+<details>
+	<summary>Step 5 ViewController 연결하기 - 2월 18일 오후 4시 30분</summary>
 
 ### 작업 목록
 - [x] green view에 닫기 버튼 추가하고 action 연결
@@ -81,5 +82,16 @@
 	- present로 view를 연결해줌
 
 <img height="400" src="https://user-images.githubusercontent.com/45891045/154609762-6af959e0-1c4d-4425-8029-dd08500396ca.gif">
+
+</details>
+
+
+## Step 6 Container ViewController 활용하기 - 2월 18일 오후 5시
+
+### 작업 목록
+- [x] navigation controller embed 시키기
+- [x] green view를 연결해주는 방식을 present에서 navigation에 push 하는 것으로 변경
+
+
 
 
