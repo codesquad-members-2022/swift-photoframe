@@ -230,11 +230,11 @@
             </objects>
             <point key="canvasLocation" x="813" y="80"/>
         </scene>
-        <!--Item 1-->
+        <!--Screen-->
         <scene sceneID="Tfc-ZA-GJC">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="49U-rX-vQX" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 1" id="D8U-M4-Ods"/>
+                    <tabBarItem key="tabBarItem" title="Screen" image="iphone.homebutton" catalog="system" id="D8U-M4-Ods"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9am-lF-HYl">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -252,6 +252,7 @@
     </scenes>
     <resources>
         <image name="camera.fill" catalog="system" width="128" height="94"/>
+        <image name="iphone.homebutton" catalog="system" width="108" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
