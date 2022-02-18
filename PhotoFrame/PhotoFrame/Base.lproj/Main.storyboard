@@ -29,12 +29,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AK3-A0-zvS">
+                                <rect key="frame" x="155.5" y="584" width="103" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Show Image"/>
+                                <connections>
+                                    <action selector="showImageButtonTouched:" destination="KjG-ON-RQN" eventType="touchUpInside" id="51W-wh-Lht"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vhA-T8-0yB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="nwG-ik-vqV" firstAttribute="centerX" secondItem="63e-bA-nMR" secondAttribute="centerX" id="7QP-vg-tZh"/>
+                            <constraint firstItem="AK3-A0-zvS" firstAttribute="top" secondItem="nwG-ik-vqV" secondAttribute="bottom" constant="16" id="Siy-IV-WQA"/>
                             <constraint firstItem="nwG-ik-vqV" firstAttribute="centerY" secondItem="63e-bA-nMR" secondAttribute="centerY" id="V1n-15-FsQ"/>
+                            <constraint firstItem="AK3-A0-zvS" firstAttribute="centerX" secondItem="63e-bA-nMR" secondAttribute="centerX" id="aQa-4H-ewC"/>
                             <constraint firstItem="vcP-Oj-AOh" firstAttribute="centerX" secondItem="63e-bA-nMR" secondAttribute="centerX" id="muQ-uf-IDB"/>
                             <constraint firstItem="nwG-ik-vqV" firstAttribute="top" secondItem="vcP-Oj-AOh" secondAttribute="bottom" constant="16" id="uLM-pC-4l0"/>
                         </constraints>
