@@ -77,28 +77,41 @@
             </objects>
             <point key="canvasLocation" x="32" y="-283"/>
         </scene>
-        <!--View Controller-->
+        <!--Yellow View Controller-->
         <scene sceneID="fUB-r7-1pk">
             <objects>
-                <viewController id="3Oi-vJ-mC2" sceneMemberID="viewController">
+                <viewController id="3Oi-vJ-mC2" customClass="YellowViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2dE-JE-uZ5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hp0-LU-3fF">
-                                <rect key="frame" x="177" y="405.5" width="60.5" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="다다음"/>
-                                <connections>
-                                    <segue destination="ZXw-hd-eSi" kind="show" id="wen-tq-veK"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="pdr-Ok-suJ">
+                                <rect key="frame" x="177" y="378" width="60.5" height="86"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZPW-2m-J2b">
+                                        <rect key="frame" x="0.0" y="0.0" width="60.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="닫기"/>
+                                        <connections>
+                                            <action selector="closeButtonTouched:" destination="3Oi-vJ-mC2" eventType="touchUpInside" id="39t-8b-2Hx"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hp0-LU-3fF">
+                                        <rect key="frame" x="0.0" y="55" width="60.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="다다음"/>
+                                        <connections>
+                                            <segue destination="ZXw-hd-eSi" kind="show" id="wen-tq-veK"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5T6-5C-OQ7"/>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
                         <constraints>
-                            <constraint firstItem="hp0-LU-3fF" firstAttribute="centerY" secondItem="2dE-JE-uZ5" secondAttribute="centerY" id="7GM-4E-fHF"/>
-                            <constraint firstItem="hp0-LU-3fF" firstAttribute="centerX" secondItem="2dE-JE-uZ5" secondAttribute="centerX" id="7Yi-8j-FVl"/>
+                            <constraint firstItem="pdr-Ok-suJ" firstAttribute="centerY" secondItem="2dE-JE-uZ5" secondAttribute="centerY" id="BBu-lt-puJ"/>
+                            <constraint firstItem="pdr-Ok-suJ" firstAttribute="centerX" secondItem="2dE-JE-uZ5" secondAttribute="centerX" id="Ty6-7k-40J"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="5ur-Gm-Dhg"/>
@@ -107,15 +120,29 @@
             </objects>
             <point key="canvasLocation" x="851" y="-283"/>
         </scene>
-        <!--View Controller-->
+        <!--Brown View Controller-->
         <scene sceneID="SVR-ea-qOz">
             <objects>
-                <viewController id="ZXw-hd-eSi" sceneMemberID="viewController">
+                <viewController id="ZXw-hd-eSi" customClass="BrownViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wcQ-pz-fYW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Waj-EM-2eN">
+                                <rect key="frame" x="182.5" y="405.5" width="49" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="닫기"/>
+                                <connections>
+                                    <action selector="closeButtonTouched:" destination="ZXw-hd-eSi" eventType="touchUpInside" id="9L3-rK-Eal"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="qai-na-iJF"/>
                         <color key="backgroundColor" systemColor="systemBrownColor"/>
+                        <constraints>
+                            <constraint firstItem="Waj-EM-2eN" firstAttribute="centerY" secondItem="wcQ-pz-fYW" secondAttribute="centerY" id="uK9-UQ-Dn5"/>
+                            <constraint firstItem="Waj-EM-2eN" firstAttribute="centerX" secondItem="wcQ-pz-fYW" secondAttribute="centerX" id="vys-Ns-MJi"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="tPj-IY-oMR"/>
                 </viewController>
@@ -146,6 +173,9 @@
         </systemColor>
         <systemColor name="systemBrownColor">
             <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
