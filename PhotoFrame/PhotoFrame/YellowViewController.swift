@@ -10,7 +10,8 @@ import UIKit
 class YellowViewController: UIViewController {
 
     @IBOutlet weak var photoImageView: UIImageView!
-    @IBOutlet weak var shadowView: UIView!
+    @IBOutlet weak var photoView: UIView!
+    @IBOutlet weak var photoFrameImageView: UIImageView!
     @IBOutlet weak var secondViewIndicatorLabel: UILabel!
     
     override func viewDidLoad() {
@@ -32,10 +33,10 @@ class YellowViewController: UIViewController {
     }
     
     func setShadowView() {
-        self.shadowView.layer.shadowOpacity = 1
-        self.shadowView.layer.shadowOffset = .zero
-        self.shadowView.layer.shadowColor = UIColor.gray.cgColor
-        self.shadowView.layer.shadowRadius = 5
+        self.photoView.layer.shadowOpacity = 1
+        self.photoView.layer.shadowOffset = .zero
+        self.photoView.layer.shadowColor = UIColor.gray.cgColor
+        self.photoView.layer.shadowRadius = 5
     }
     
     @IBAction func nextButtonTouched(_ sender: UIButton) {
