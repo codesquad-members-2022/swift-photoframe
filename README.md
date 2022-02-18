@@ -12,7 +12,7 @@ iOS 포토프레임 프로젝트 저장소
 - [x] ViewController 연결하기
 - [x] Container ViewController 활용하기
 - [x] 다른 화면 연결하기
-- [ ] 사진 앨범 선택하기
+- [x] 사진 앨범 선택하기
 - [ ] 마무리
 
     
@@ -316,3 +316,70 @@ imageView.contentMode = .scaleToFill
 ```
 
 ​    
+
+### 8. 사진 앨범 선택하기
+
+<img src="https://user-images.githubusercontent.com/68586291/154623719-999c412d-e4fb-4a6e-8d8b-cc83277b00b3.gif" alt="image" style="width:26%;align:center;"/>
+
+- 사진액자 이미지를 넣을 새로운 ImageView 추가 후 frameView라는 변수에 @IBOutlet으로 연결
+
+  - 미리 다운받은 photoframe-border.png 파일로 UIImage를 만들어서 이미지 속성으로 추가함
+
+  ```swift
+  @IBOutlet weak var frameView: UIImageView!
+  
+  func setFrameView(){
+    frameView.image = UIImage(named: "Demo Images/photoframe-border.png")
+    frameView.center.x = self.view.center.x
+    frameView.center.y = self.view.center.y*0.7
+  }
+  ```
+
+- 앨범에서 사진 선택을 위해 선택 버튼 추가 후 selectButton이라는 변수에 @IBOutlet으로 연결한 후, selectButtonTouched라는 @IBAction 함수 생성
+
+  ```swift
+  @IBOutlet weak var selectButton: UIButton!
+  @IBAction func selectButtonTouched(_ sender: UIButton) {
+    //...
+  }
+  ```
+
+- UIImagePickerController을 사용하여 앨범에 있는 사진을 가져와 UIImage를 생성해서 사용하도록 설정
+
+  ```swift
+  @IBAction func selectButtonTouched(_ sender: UIButton) {
+    let imagePicker = UIImagePickerController()
+    imagePicker.sourceType = .photoLibrary
+    imagePicker.allowsEditing = true
+    imagePicker.delegate = self
+    self.present(imagePicker, animated: true, completion: nil)
+  }
+  ```
+
+- [공식문서](https://developer.apple.com/documentation/uikit/uiimagepickercontroller) 를 보니, UIImagePickerController을 사용하기 위해서는 UIImagePickerControllerDelegate 프로토콜에 delegate를 전달해야 된다고 명시되있음
+
+  - 유저가 앨범에 있는 사진을 선택하는 등의 액션을 취하면 delegate object에 이를 알리는 것
+  - 이럴 경우 delegate object는 UIImagePickerController의 동작을 위임받아 사용자에게 응답하게 됨
+
+  ```swift
+  imagePicker.delegate = self
+  ```
+
+  - 결국 위의 코드가 의미하는 것은, 생성한 UIImagePickerController의 delegate object로 self, 즉 WhiteViewController을 지정하게되는 것을 의미함
+
+- 이후 delegate object의 응답을 위해 아래와 같이 UIImagePickerControllerDelegate 프로토콜을 구현하여 위임받아 응답할 동작을 정의함
+
+  ```swift
+  extension WhiteViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+      let selectedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
+      self.imageView.image = selectedImage
+      picker.dismiss(animated: true, completion: nil)
+    }
+  }
+  ```
+
+  
+
+
+
