@@ -40,8 +40,6 @@ class PhotoViewController: UIViewController {
             print("이전 사진과 똑같은 이미지입니다.")
         }
         
-        
-        
     }
     
 }

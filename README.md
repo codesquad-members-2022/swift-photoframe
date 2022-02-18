@@ -257,6 +257,40 @@ viewDidDisappear()
 ![Simulator Screen Recording - iPhone 13 - 2022-02-18 at 11 58 23](https://user-images.githubusercontent.com/80263729/154609187-deebad66-0b41-483b-951a-34ef303cdec8.gif)
 
 
+- 예외처리하기
+    - 만약 사진변경이 정상적으로 되지 않았을 경우를 예외처리해보자.
+    1. 분명 버튼을 눌렀는데 사진이 안바뀌고 아무것도 없는 상태 그대로일때
+    2. 사진이 바뀌어야하는데 이전사진과 똑같을때(물론 랜덤함수라 똑같을 확률이 있긴 있다.)
+    ~~~swift
+        //다음 버튼 클릭시.
+    @IBAction func nextImgaeButtonTouched(_ sender: UIButton) {
+        let randomPhotoID = PhotoID.randomID //Static으로 PhotoID타입 자체에 randomID라는 associated Value를 추가함으로써 코드의 가독성을 높여보았다.
+        let imageExtension = "jpg"
+        self.photoImageView.contentMode = .scaleAspectFill //비율을 유지하면서 꽉채우게.
+        
+        //현재 이미지. 값이 없으면 nil값을 배출함. nil값을 검사해야하기 때문에 옵셔널 바인딩을 해주지 않음.
+        let currentImage = self.photoImageView.image
+        
+        self.photoImageView.image = UIImage(named: "\(randomPhotoID).\(imageExtension)") //이미지를 바꾼다.
+        
+        //버튼을 탭했는데도 이미지가 바뀌지 않고 nil이라면 사용가능한 Photo가 없는 것.
+        if currentImage == nil {
+            print("사용가능한 Photo가 없습니다.")
+        }
+        
+        //바뀔 이미지
+        guard let nextImage = UIImage(named: "\(randomPhotoID).\(imageExtension)") else { return  } //UIImage옵셔널 값을 리턴하기 때문에 바인딩 해준다.
+        
+        //버튼을 탭했는데 이미지가 바뀌지 않을때
+        if currentImage != nil && currentImage!.isEqual(nextImage) { //캐시된 동일한 데이터를 이용해 이미지를 만들어도 다를 수 있기때문에 이렇게 사용한다. Ex) currentImage == nextImage (X)
+            print("이전 사진과 똑같은 이미지입니다.")
+        }
+        
+    }
+    ~~~
+   
+
+
 - 추가학습거리
     - UIImageView 와 UIImage 클래스는 각각 어떤 역할을 담당하는지 학습한다.
     정의
@@ -346,6 +380,7 @@ viewDidDisappear()
 
 - 궁금한점
     - instantiateViewController(withIdentifirer:)메소드가 StoryBoard의 ID를 가지고 ViewController를 만들어낸다는 것은 알겠는데.. 앞의 self는 왜 붙이는 걸까?
-
+    - self를 붙이면 현재 클래스가 참조하고 있는 StoryBoard를 가지고온다.
+    - 결국 여기서는 self.storyboard나 storyboard나 같다. 
 ![스크린샷 2022-02-18 오전 11 05 34](https://user-images.githubusercontent.com/80263729/154603848-ef0bb071-9c14-4270-9b42-2d61dccdac04.png)
 
