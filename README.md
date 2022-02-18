@@ -20,7 +20,9 @@
 
 </details>
 
-## Step 2 IBOutlet 연결하기 - 2월 14일 오후 3시30분
+
+<details>
+	<summary>## Step 2 IBOutlet 연결하기 - 2월 14일 오후 3시30분</summary>
 
 ### 작업 목록
 - [x] First Scene에 레이블 만들기
@@ -30,3 +32,25 @@
 
 ### 학습 키워드
 - UILabel 클래스 속성(Property)
+
+</details>
+
+
+## Step 3 IBAction 연결하기 - 2월 18일 오전 11시
+
+### 작업 목록
+- [x] next button 만들고 IBAction 연결하기
+- [x] next button의 액션으로 텍스트 속성 변경해보기
+- [x] color change button과 새로운 color change 액션 만들기
+
+### 추가 학습거리 
+- [x] next button과 color change button 모두에 color change action을 연결해보기 
+	- next button 하나에 두 개의 액션 연결
+	- color change action 하나에 두 개의 버튼 연결
+<img height="400" src="https://user-images.githubusercontent.com/45891045/154604509-ba2025ce-d527-4fc2-b07a-5f0c94350da0.gif">
+
+### 질문거리
+- next button에 두 개의 액션을 달고 두 액션의 순서를 지정해주고 싶었는데 실패했습니다. 
+	- 먼저 생성된 순서로 지정되나 싶어서 하나를 지우고 순서를 바꿔서 작성해보기도 해봤지만 이상하게 순서가 바뀌지 않았습니다..!
+	- 혹시 스토리보드만 사용해서는 불가능한 것일까요? 
+	- 따로 코드로 액션을 연결해주고 순서를 지정해주는? 방법을 알아보는게 좋을까요?
