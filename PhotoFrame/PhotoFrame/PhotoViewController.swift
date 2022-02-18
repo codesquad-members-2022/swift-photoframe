@@ -27,11 +27,16 @@ class PhotoViewController: UIViewController {
     @IBAction func selectButtonTouched(_ sender: UIButton) {
         present(photoPickerController, animated: true, completion: nil)
     }
+    
+    func didPhotoSelected(_ image: UIImage) {
+        photoImageView.image = image
+    }
 }
 
 extension PhotoViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         guard let image = info[.originalImage] as? UIImage else { return }
+        self.didPhotoSelected(image)
         picker.dismiss(animated: true, completion: nil)
     }
     
