@@ -86,12 +86,23 @@
 </details>
 
 
-## Step 6 Container ViewController 활용하기 - 2월 18일 오후 5시
+<details>
+	<summary>Step 6 Container ViewController 활용하기 - 2월 18일 오후 5시</summary>
 
 ### 작업 목록
 - [x] navigation controller embed 시키기
 - [x] green view를 연결해주는 방식을 present에서 navigation에 push 하는 것으로 변경
 
+</details>
 
+
+## Step 7 다른 화면 연결하기 - 2월 18일 오후 6시
+
+### 작업 목록
+- [x] tab bar의 두번째 scene에 image view와 버튼 추가
+- [x] 프로젝트에 demo image 파일 추가
+- [x] 버튼 클릭 시 랜덤한 이미지로 바뀌게 하기
+
+<img height="400" src="https://user-images.githubusercontent.com/45891045/154652882-e84b97a0-c14a-46ac-88d4-80448f9f4dbe.gif">
 
 
