@@ -20,32 +20,7 @@ class ViewController: UIViewController {
         attributedString.addAttribute(.font, value: fontSize, range: (photoLabel.text! as NSString).range(of: "First"))
         attributedString.addAttribute(.foregroundColor, value: UIColor.systemBlue, range: (photoLabel.text! as NSString).range(of: "First"))
         photoLabel.attributedText = attributedString
-        print(#file, #line, #function, #column)
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        print(#file, #line, #function, #column)
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        print(#file, #line, #function, #column)
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        print(#file, #line, #function, #column)
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        print(#file, #line, #function, #column)
-    }
-    
-    @IBAction func nextButtonTouched(_ sender: UIButton) {
-    }
-    
     
 }
 

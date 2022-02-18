@@ -42,7 +42,6 @@
                                             <color key="baseBackgroundColor" systemColor="systemYellowColor"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="nextButtonTouched:" destination="axr-Qa-V1D" eventType="touchUpInside" id="OVT-4u-JZg"/>
                                             <segue destination="fz6-B5-ZgN" kind="show" id="UKT-K8-QAt"/>
                                         </connections>
                                     </button>
@@ -84,35 +83,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="76" translatesAutoresizingMaskIntoConstraints="NO" id="vqx-hq-JJS">
-                                <rect key="frame" x="92.5" y="325.5" width="229" height="245"/>
+                                <rect key="frame" x="92.5" y="433" width="229" height="30"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AaS-7F-Hmj">
-                                        <rect key="frame" x="90.5" y="0.0" width="48.5" height="31"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="다음">
-                                            <color key="baseBackgroundColor" systemColor="systemIndigoColor"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="nextButtonTouched:" destination="fz6-B5-ZgN" eventType="touchUpInside" id="JUz-P3-U9s"/>
-                                        </connections>
-                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SecondViewIndicator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="qFW-oa-AIZ">
-                                        <rect key="frame" x="0.0" y="107" width="229" height="31"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="229" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0FR-cp-hq1">
-                                        <rect key="frame" x="90.5" y="214" width="48.5" height="31"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="닫기">
-                                            <color key="baseForegroundColor" name="AccentColor"/>
-                                            <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="closeButtonTouched:" destination="fz6-B5-ZgN" eventType="touchUpInside" id="KvJ-x1-qLd"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -131,57 +109,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fpx-BN-j4b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2479.7101449275365" y="-704.46428571428567"/>
-        </scene>
-        <!--Blue View Controller-->
-        <scene sceneID="BSf-3w-Qlh">
-            <objects>
-                <viewController storyboardIdentifier="blueViewController" id="TT9-Mj-S2w" customClass="BlueViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="d6e-e0-GeN">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="76" translatesAutoresizingMaskIntoConstraints="NO" id="w9z-S8-hcX">
-                                <rect key="frame" x="87" y="297" width="240" height="302"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oRS-yh-PbN">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="50"/>
-                                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
-                                    </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ThirdViewIndicator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="IF2-Kf-hNs">
-                                        <rect key="frame" x="19" y="126" width="202.5" height="50"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nbY-Wo-Xlx">
-                                        <rect key="frame" x="96" y="252" width="48.5" height="50"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="닫기">
-                                            <color key="baseForegroundColor" name="AccentColor"/>
-                                            <color key="baseBackgroundColor" systemColor="systemYellowColor"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="closeButtonTouched:" destination="TT9-Mj-S2w" eventType="touchUpInside" id="ZN0-55-BFX"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="er1-zO-3f4"/>
-                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
-                        <constraints>
-                            <constraint firstItem="w9z-S8-hcX" firstAttribute="centerX" secondItem="d6e-e0-GeN" secondAttribute="centerX" id="B9u-OW-mPV"/>
-                            <constraint firstItem="w9z-S8-hcX" firstAttribute="centerY" secondItem="d6e-e0-GeN" secondAttribute="centerY" id="Cga-hb-GNa"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="rzM-b5-pOJ"/>
-                    <connections>
-                        <outlet property="thirdViewIndicatorLabel" destination="IF2-Kf-hNs" id="EcC-o5-fOR"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="r29-QY-DJ4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3217.3913043478265" y="-704.46428571428567"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="PuS-vG-WsY">
@@ -222,14 +149,8 @@
         </scene>
     </scenes>
     <resources>
-        <namedColor name="AccentColor">
-            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemIndigoColor">
-            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
