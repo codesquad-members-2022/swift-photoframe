@@ -16,6 +16,10 @@ class PhotoViewController: UIViewController {
 
     }
     
+    //선택 버튼 클릯.
+    @IBAction func selectButtonTouched(_ sender: UIButton) {
+    
+    }
     //다음 버튼 클릭시.
     @IBAction func nextImgaeButtonTouched(_ sender: UIButton) {
         let randomPhotoID = PhotoID.randomID //Static으로 PhotoID타입 자체에 randomID라는 associated Value를 추가함으로써 코드의 가독성을 높여보았다.

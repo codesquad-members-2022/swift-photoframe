@@ -16,6 +16,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="photoframe-border" translatesAutoresizingMaskIntoConstraints="NO" id="TLl-Bg-Hdw" userLabel="Photo Frame">
+                                <rect key="frame" x="87" y="156" width="240" height="240"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eh5-uV-bbG">
                                 <rect key="frame" x="87" y="156" width="240" height="240"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -34,6 +38,17 @@
                                 <buttonConfiguration key="configuration" style="plain" title="다음"/>
                                 <connections>
                                     <action selector="nextImgaeButtonTouched:" destination="NlW-Ep-aiC" eventType="touchUpInside" id="TSh-JE-qmd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Pa-Ww-uRW">
+                                <rect key="frame" x="0.0" y="594" width="414" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="선택">
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="selectButtonTouched:" destination="NlW-Ep-aiC" eventType="touchUpInside" id="axw-tL-bCD"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -332,6 +347,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="photoframe-border" width="720" height="720"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
