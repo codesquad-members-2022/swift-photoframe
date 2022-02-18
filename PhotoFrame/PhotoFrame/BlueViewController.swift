@@ -12,12 +12,12 @@ class BlueViewController: UIViewController {
     @IBOutlet weak var closeButton: UIButton!
     
     @IBAction func closeButtonTouched(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        navigationController?.popViewController(animated: true)
     }
     
     @IBOutlet weak var unwindButton: UIButton!
     @IBAction func unwindButtonTouched(_ sender: Any) {
-        performSegue(withIdentifier: "unwindVC", sender: self)
+        navigationController?.popToRootViewController(animated: true)
     }
     
     override func viewDidLoad() {
@@ -27,23 +27,21 @@ class BlueViewController: UIViewController {
         
         closeButton.translatesAutoresizingMaskIntoConstraints = false
         unwindButton.translatesAutoresizingMaskIntoConstraints = false
-        
-        
+    
         closeButton.setTitle("닫기", for: .normal)
         closeButton.backgroundColor = .lightGray
         closeButton.layer.cornerRadius = 10
-        
-        closeButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30).isActive = true
-        closeButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 30).isActive = true
-        
     
+        closeButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -30).isActive = true
+        closeButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 30).isActive = true
+        
+
         unwindButton.setTitle("초기화면으로 돌아가기", for: .normal)
         unwindButton.backgroundColor = .lightGray
         unwindButton.layer.cornerRadius = 10
         
-        unwindButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30).isActive = true
-        unwindButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -30).isActive = true
-        
+        unwindButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 30).isActive = true
+        unwindButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -30).isActive = true
     }
     
     
