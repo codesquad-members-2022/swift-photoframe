@@ -202,3 +202,74 @@ iOS 포토프레임 프로젝트 저장소
     + 다음 이미지로 순회하는 [다음], 이전 이미지로 순회하는 [이전]
     
 <img src = "https://user-images.githubusercontent.com/44107696/154502448-d29b117b-a1e4-41d4-b08f-f5e2de0b5a47.png" width="800" height="700">
+
+
+## 08. 사진 앨범 선택하기
+### 프로그래밍 요구사항
+- 스토리보드에서 Second Scene을 선택하고, 다음과 같이 화면을 개선한다.
+    + 새로운 UIImageView를 추가하고, 기존 photoImageView보다 아래에 배치한다.
+- 다음 액자 사진을 액자 이미지 다운로드한다. Xcode 프로젝트로 드래그해서 추가한다.
+- PhotoFrame 이미지 뷰의 Identity 항목중에 Document > Label 값을 PhotoFrame 처럼 입력하면 좌측 화면 항목에서 구분하기 쉽다.
+- PhotoFrame 이미지 뷰의 Attributes 항목중에 Image View > Image 값을 다운로드 받은 photoframe-border.png로 선택한다.
+
+<img src = "https://user-images.githubusercontent.com/44107696/154620810-f904b502-7ee7-45a7-86dc-e726fe8c60d4.png" width="800" height="700">
+    * UIImageView 신규 추가 및 Label 값 Inspector에서 변경
+    
+<img src = "https://user-images.githubusercontent.com/44107696/154620819-1938376c-c0d9-480d-9210-a097848e2859.png" width="800" height="700">
+    * Frame 값을 조정해서 기존 ImageView 및 그림자랑 어울리도록 설정
+    
+- 스토리보드에서 Second Scene을 선택하고, [다음]버튼 아래 [선택] 버튼을 추가하고 IBAction을 selectButtonTouched로 연결한다.
+- selectButtonTouched에서는 UIImagePickerController로 사진 앱 - 카메라롤에서 사진을 가져오도록 구현한다.
+    + 카메라롤에서 사진을 가져오기 위해 해줘야 하는 동작들을 찾아서 구현한다.
+    + 권한 설정이 필요하면 Info.plist에 추가한다.
+    + 선택한 사진을 받기 위해서 구현해야 하는 메서드는 어떤게 있는지 찾아 구현한다.
+
+<img src = "https://user-images.githubusercontent.com/44107696/154620823-a751ebc7-9f08-40fe-91b8-bf153beb5988.png" width="800" height="700">
+    * Info에서 앨범 접근 권한 허용 (해당 작업X 접근 가능함)
+    
+<img src = "https://user-images.githubusercontent.com/44107696/154620829-6d7b61ff-ab97-408b-9584-f462a2329624.png" width="800" height="700">
+    * Button 클릭 시, UIImagePickerController 인스턴스가 생성되면서 해당 접근 화면이 modal view로 present되도록 작성
+
+### 추가 구현 사항
+- delegate를 통해 앨범 내 이미지 선택 시, 해당 이미지 imageView에 출력되도록 구현
+
+<img src = "https://user-images.githubusercontent.com/44107696/154620835-76bb5448-d276-475a-8e04-27c752d7d811.png" width="800" height="700">
+    + [선택] button 클릭 시, UIImagePickerController의 인스턴스의 위임자를 현재 ViewController로 설정
+    + extension을 통해 관련 delegate 프로토콜 채택 및 필요 함수 구현
+    + imagePickerController 함수를 통해 미디어를 picking 했을 때의 액션을 구현. Editing Dictionary에서 사용자가 선택한 미디어에 대한 정보를 검색하는데 사용하는 키인 UIImagePickerController.InfoKey에서 수정 없는 원본 이미지를 구해오는 originalImage를 let 바인딩으로 할당. 해당 값을 현재 ImageView의 이미지 값으로 전달.
+    + imagePickerControllerDidCancel를 통해 취소 기능 구현
+
+```swift
+private let imagePicker = UIImagePickerController()
+
+@IBAction func selectButtonTouched(_ sender: UIButton) {
+    imagePicker.delegate = self
+    self.present(imagePicker, animated: true)
+}
+
+extension SecondSceneViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let pickedImg = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
+            self.photoImageView.image = pickedImg
+        }
+        
+        dismiss(animated: true)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true)
+    }
+}
+```
+
+- PHPicker 활용 방법
+
+<img src = "https://user-images.githubusercontent.com/44107696/154625123-22cf72da-6f7a-44df-9fe1-8b7fcead1bd4.png" width="800" height="700">
+    + PhotosUI import 필요
+    + PHPickerConfiguration 인스턴스를 통해 여러 attribute 설정 가능
+    + attribute 설정을 마친 PHPickerConfiguration 인스턴스는 PHPickerViewController의 인자 값으로 활용.
+    + 이후에는 UIImagePicker와 동일하게 delegate 설정하고 present하는 방식.
+    
+- 실행 결과
+
+<img src = "https://user-images.githubusercontent.com/44107696/154625151-b50cb8c9-764b-4945-8aa8-ce5211b62373.jpeg" width="960" height="540">
