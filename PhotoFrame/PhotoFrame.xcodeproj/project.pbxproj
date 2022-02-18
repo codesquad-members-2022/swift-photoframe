@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E41A0A1727BF373B00B0BF58 /* GreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41A0A1627BF373B00B0BF58 /* GreenViewController.swift */; };
+		E41A0A1927BF375100B0BF58 /* BlueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41A0A1827BF375100B0BF58 /* BlueViewController.swift */; };
 		E457FC3927BCE042000FBFBB /* DesignableBlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E457FC3827BCE042000FBFBB /* DesignableBlurView.swift */; };
 		E457FC3B27BCEC51000FBFBB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E457FC3A27BCEC51000FBFBB /* README.md */; };
 		E48F669227BC8CAE00AFCB03 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48F669127BC8CAE00AFCB03 /* DesignableView.swift */; };
@@ -24,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E41A0A1627BF373B00B0BF58 /* GreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenViewController.swift; sourceTree = "<group>"; };
+		E41A0A1827BF375100B0BF58 /* BlueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueViewController.swift; sourceTree = "<group>"; };
 		E457FC3827BCE042000FBFBB /* DesignableBlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableBlurView.swift; sourceTree = "<group>"; };
 		E457FC3A27BCEC51000FBFBB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
 		E48F669127BC8CAE00AFCB03 /* DesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
@@ -90,6 +94,8 @@
 				E496DA8327BA5B48004D486A /* YellowViewController.swift */,
 				E496DAB327BA62D1004D486A /* SecondViewController.swift */,
 				E496DA8527BA5E79004D486A /* PurpleViewController.swift */,
+				E41A0A1627BF373B00B0BF58 /* GreenViewController.swift */,
+				E41A0A1827BF375100B0BF58 /* BlueViewController.swift */,
 				E496DA7327B9EF18004D486A /* Main.storyboard */,
 				E496DA7627B9EF19004D486A /* Assets.xcassets */,
 				E496DA7827B9EF19004D486A /* LaunchScreen.storyboard */,
@@ -173,6 +179,7 @@
 			files = (
 				E496DAB427BA62D1004D486A /* SecondViewController.swift in Sources */,
 				E457FC3927BCE042000FBFBB /* DesignableBlurView.swift in Sources */,
+				E41A0A1727BF373B00B0BF58 /* GreenViewController.swift in Sources */,
 				E48F669227BC8CAE00AFCB03 /* DesignableView.swift in Sources */,
 				E496DA8427BA5B48004D486A /* YellowViewController.swift in Sources */,
 				E496DA7227B9EF18004D486A /* FirstViewController.swift in Sources */,
@@ -180,6 +187,7 @@
 				E496DA8627BA5E79004D486A /* PurpleViewController.swift in Sources */,
 				E497B34D27BC79FD00A62F89 /* DesignableButton.swift in Sources */,
 				E496DA6E27B9EF18004D486A /* AppDelegate.swift in Sources */,
+				E41A0A1927BF375100B0BF58 /* BlueViewController.swift in Sources */,
 				E496DA7027B9EF18004D486A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
