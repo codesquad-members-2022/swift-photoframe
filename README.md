@@ -59,11 +59,27 @@
 </details>
 
 
-## Step 4 Scene을 Segue로 연결하기 - 2월 18일 오전 
+<details>
+	<summary>Step 4 Scene을 Segue로 연결하기 - 2월 18일 오전 11시 30분</summary>
 
 ### 작업 목록
 - [x] view 추가하고 버튼 연결
 - [x] 연속하는 view 하나 더 추가
 
 <img height="400" src="https://user-images.githubusercontent.com/45891045/154606078-f6283b3d-b91e-4411-aed7-7e71623ab969.gif">
+
+</details>
+
+
+## Step 5 ViewController 연결하기 - 2월 18일 
+
+### 작업 목록
+- [x] green view에 닫기 버튼 추가하고 action 연결
+- [x] black view에 닫기 버튼 추가하고 action 연결
+- [x] segue 제거하고 코드로 scene 연결하기
+	- green view에 storyboard ID를 부여해주고, black view controller에서 아이디로 해당 뷰를 찾음
+	- present로 view를 연결해줌
+
+<img height="400" src="https://user-images.githubusercontent.com/45891045/154609762-6af959e0-1c4d-4425-8029-dd08500396ca.gif">
+
 
