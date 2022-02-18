@@ -55,7 +55,6 @@ class Scene2ViewController: UIViewController {
     }
     
     @IBAction func selectButtonTouched(_ sender: Any) {
-        print("hello")
         if photoPickerController.delegate == nil{
             setPhotoPickerState()
             present(photoPickerController, animated: true, completion: nil)
