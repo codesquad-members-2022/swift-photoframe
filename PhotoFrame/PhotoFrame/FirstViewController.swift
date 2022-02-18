@@ -26,7 +26,7 @@ class FirstViewController: UIViewController {
         self.firstDescription.backgroundColor = UIColor.red
         self.firstDescription.textColor = self.firstLabel.textColor.withAlphaComponent(3.0)
         self.firstDescription.font = self.firstLabel.font.withSize(15.0)
-        
+
     }
 }
 
