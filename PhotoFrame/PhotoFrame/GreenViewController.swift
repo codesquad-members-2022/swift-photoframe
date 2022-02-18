@@ -6,4 +6,8 @@ class GreenViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    @IBAction func closedButtonTouched(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 }
