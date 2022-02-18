@@ -198,3 +198,83 @@ self.firstLabel.text = "Mase의 사진액자"
     - viewDidAppear()
     - viewWillDisappear()
     - viewDidDisappear()
+
+<br>
+<br>
+
+# 6. Container ViewController 활용하기
+### 완성 날짜
+- 02월 18일 15:25
+
+<br>
+
+### 완성 화면 
+<img src="https://user-images.githubusercontent.com/57667738/154629797-a644a300-2b10-46ae-aa3f-e4ee496ebe9f.gif" width="30%" />
+
+- [닫기]버튼 또는 [< Back]버튼을 누르면 이전 View로 돌아간다
+- 세 번째 View에서 [초기화면으로 돌아가기]버튼을 누르면 이전 View가 아닌 RootView로 돌아간다
+
+<br>
+<br>
+
+## **기능요구사항**
+
+- [x]  사진액자 - ViewController 요구사항을 구현한 상태로 시작한다.
+- [x]  내비게이션 컨트롤러(Navigation Controller)를 Embed 시켜서 동작하도록 개선한다.
+- [x]  실행하고 새로운 화면을 캡처해서 readme.md 파일에 포함한다.
+
+<br>
+
+## **프로그래밍 요구사항**
+
+- [x]  스토리보드에서 First Scene을 선택하고, Editor > Embed In > Navigation Controller 항목을 선택한다.
+- [x]  실행해보면 화면 상단에 내비게이션바(Navigation Bar)가 추가되고 [다음]버튼을 누르면 다음 화면이 우측에서 좌측으로 애니메이션되면서 표시된다.
+- [x]  [닫기]버튼에 연결된 `closeButtonTouched` 코드를 다음과 같이 수정한다.
+
+        @IBAction func closeButtonTouched(_ sender: Any) {
+            self.navigationController?.popViewController(animated: true)
+        }
+        
+- [x]  위와 동일하게 세 번째 추가한 화면에 [닫기]버튼도 코드를 수정한다.
+- [x]  뷰 컨트롤러 콜백 함수들 동작도 동일한지 확인한다.
+
+<br>
+
+## **추가학습거리**
+
+### 뷰컨트롤러 컨테이너는 또 어떤 클래스가 있는지 찾아보고 학습한다.
+- NavigationController
+    - Stack 기반의 container view controller이다.
+    - 제공하는 navigation 인터페이스로 1개 이상의 view controller를 관리할 수 있다.
+    - Stack 기반이므로 최상단에 있는 하나의 view controller만이 보여지게 되고<br>view controller를 push 혹은 pop을 통해 보여질 view controller를 결정한다.
+
+- TabBarController
+    - Selection에 따라 어떤 child view controller가 화면에 보여질 지 관리하는 Container view controller이다.
+
+- SplitViewController
+    - 화면을 분할해서 2개의 view controller를 함께 표현.
+    - 화면 왼쪽에 MasterViewController, 오른쪽에 DetailViewController가 있다.
+    - 다른 뷰컨트롤러 컨테이너들과 달리 Child의 수가 2개로 고정되어있다.
+
+- PageViewController
+    - 각 페이지가 Child View Controller에 의해 관리되는,<br>컨텐츠 페이지 간의 탐색을 관리하는 컨테이너 뷰 컨트롤러이다.
+    - 좌우로 Swipe하며 여러 view를 표시한다.
+
+<br>
+
+### 내비게이션 컨트롤러가 있을 경우와 없을 경우 화면 전환 동작이 어떻게 다른지, 화면들 포함관계가 있는지 학습한다.
+- NavigationController가 있을 경우
+    - 오른쪽에서 왼쪽으로 전환되는 방식(`Show`)으로 동작한다.
+    - NavigationController가 다른 View를 호출한다.
+    - 호출된 View는 Stack에 Push-Pop되며 Scene에 나타났다가 사라진다.
+    - pushViewController, popViewController메소드를 사용한다.
+
+- NavigationController가 없을 경우
+    - 아이폰에서는 항상 `Present Modally` 방식으로 전환된다.
+
+<br>
+
+### 내비게이션 컨트롤러 관련 메서드가 왜 push / pop 인지 학습한다.
+- View가 Stack형태로 쌓이는 구조이기 떄문이다.
+- 맨 마지막에 Scene에 올라온 View가 사용자에게 보이고, 해당 View를 Pop하면 직전에 쌓였던 View가 나타난다.
+- Navigation VC를 Embed한 View가 항상 Stack의 맨 첫 번째로 들어간다.
