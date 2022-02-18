@@ -29,7 +29,7 @@
         <!--Item-->
         <scene sceneID="6qk-IU-5Bc">
             <objects>
-                <viewController id="MWc-6L-N5u" sceneMemberID="viewController">
+                <viewController id="MWc-6L-N5u" customClass="FirstViewController" customModule="PhotoFrame" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JCM-4G-RGy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -45,10 +45,19 @@
         <!--Item-->
         <scene sceneID="mQw-XE-njG">
             <objects>
-                <viewController id="D9y-0x-Zly" sceneMemberID="viewController">
+                <viewController id="D9y-0x-Zly" customClass="FirstViewController" customModule="PhotoFrame" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jCb-Ba-8Y6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sg8-Dx-R8M">
+                                <rect key="frame" x="97" y="420" width="221" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="bBG-uo-hkc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -56,7 +65,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ss7-3P-7Wk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-301" y="-256"/>
+            <point key="canvasLocation" x="-301.44927536231887" y="-256.47321428571428"/>
         </scene>
     </scenes>
     <resources>
