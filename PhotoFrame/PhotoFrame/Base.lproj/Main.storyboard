@@ -82,6 +82,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="nextButtonTouched:" destination="LHc-YT-gIS" eventType="touchUpInside" id="vhY-g0-YFW"/>
+                                    <segue destination="eJc-EO-y5e" kind="show" id="hSg-pc-mXB"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -93,6 +94,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1z3-qG-6EJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2628" y="-189"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="0UH-Xj-Jf5">
+            <objects>
+                <viewController id="eJc-EO-y5e" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Uxr-d9-4tZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Wx1-FN-ZN5"/>
+                        <color key="backgroundColor" red="0.48222996778797617" green="0.65447937087405739" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Uug-Gi-hhV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JQR-dn-nuf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3431" y="-189"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="aNM-3u-4kc">
