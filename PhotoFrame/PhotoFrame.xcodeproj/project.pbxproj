@@ -74,8 +74,8 @@
 				8DD2165927BE1C4A009B8DCE /* YellowViewController.swift */,
 				8DD2165B27BE1C5E009B8DCE /* GreenViewController.swift */,
 				8DAB2A3C27BF352D0062095B /* PhotoViewController.swift */,
-				8DAB2A3E27BF3C340062095B /* PhotoID.swift */,
 				8D2C393927B9FA6600A64987 /* Main.storyboard */,
+				8DAB2A3E27BF3C340062095B /* PhotoID.swift */,
 				8D2C394127B9FA6800A64987 /* Info.plist */,
 				8D2C394727B9FC8100A64987 /* Supporting Files */,
 			);
