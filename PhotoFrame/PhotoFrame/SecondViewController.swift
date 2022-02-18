@@ -12,6 +12,7 @@ class SecondViewController: UIViewController, UINavigationControllerDelegate, UI
     // MARK: - Properties
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var nextButton: UIButton!
+    var nickName = "Cat"
     
     // MARK: - LifeCycle
     override func viewDidLoad() {
@@ -47,7 +48,10 @@ class SecondViewController: UIViewController, UINavigationControllerDelegate, UI
         self.photoImageView.image = UIImage(named: String(format: "%.2d.jpg", num))
     }
     
-    @IBAction func unwind(segue : UIStoryboardSegue) {}
+    @IBAction func unwind(segue : UIStoryboardSegue) {
+        print("Unwind Action")
+        self.view.backgroundColor = (segue.source as! GreenViewController).backgroundColor
+    }
     
     @objc func presentScene() {
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "BlueViewController") else { return }

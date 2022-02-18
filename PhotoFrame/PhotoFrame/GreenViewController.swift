@@ -13,6 +13,8 @@ class GreenViewController: UIViewController {
     @IBOutlet weak var homeButton: UIButton!
     @IBOutlet weak var closeButton: UIButton!
     
+    var backgroundColor = UIColor.green
+    
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,15 +44,20 @@ class GreenViewController: UIViewController {
     
     // MARK: - Methods
     func configureButtons() {
-        self.homeButton.addTarget(self, action: #selector(self.backToHome), for: .touchUpInside)
         self.closeButton.addTarget(self, action: #selector(self.closeScene), for: .touchUpInside)
     }
     
     @objc func backToHome() {
-        self.performSegue(withIdentifier: "goHome", sender: self)   
+        print("Button")
     }
     
     @objc func closeScene() {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("Prepare to peform Segue")
+        let destinationVC = segue.destination as! SecondViewController
+        destinationVC.nickName = "Dog"
     }
 }
