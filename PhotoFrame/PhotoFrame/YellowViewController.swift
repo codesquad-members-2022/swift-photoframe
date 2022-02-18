@@ -9,9 +9,10 @@ import UIKit
 
 class YellowViewController: UIViewController {
     
-    // MARK: - View LifeCycle
+    // MARK: - Properties
     @IBOutlet weak var nextButton: UIButton!
-    
+
+    // MARK: - View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         print("\nSecond View", #function)
@@ -46,14 +47,13 @@ class YellowViewController: UIViewController {
     }
     
     func navigateToNextUsingNavigationController() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "PurpleViewController")
+        
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "PurpleViewController") else { return }
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func showViewControllerModally() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "PurpleViewController")
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "PurpleViewController") else { return }
         vc.modalTransitionStyle = .coverVertical
         vc.modalPresentationStyle = .pageSheet
         self.present(vc, animated: true, completion: nil)

@@ -208,38 +208,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ih-hI-B7S">
-                                <rect key="frame" x="183" y="432.5" width="48.5" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="다음"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lvp-I6-G9T">
-                                <rect key="frame" x="251.5" y="432.5" width="49" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="닫기"/>
-                                <connections>
-                                    <action selector="closeButtonTouched:" destination="pD7-my-rOB" eventType="touchUpInside" id="zpv-bk-L4t"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HR5-lb-Y7s">
-                                <rect key="frame" x="180" y="361" width="54" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Next"/>
-                                <connections>
-                                    <segue destination="Z29-XM-XrQ" kind="show" identifier="goToPurpleViewController" id="enf-ob-UXf"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="yQc-8v-kLJ">
+                                <rect key="frame" x="2" y="432.5" width="410.5" height="31"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HR5-lb-Y7s">
+                                        <rect key="frame" x="0.0" y="0.0" width="127.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="다음(Segue)"/>
+                                        <connections>
+                                            <segue destination="Z29-XM-XrQ" kind="show" identifier="goToPurpleViewController" id="enf-ob-UXf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ih-hI-B7S">
+                                        <rect key="frame" x="141.5" y="0.0" width="127.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="다음(Navigation)"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lvp-I6-G9T">
+                                        <rect key="frame" x="283" y="0.0" width="127.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="이전으로"/>
+                                        <connections>
+                                            <action selector="closeButtonTouched:" destination="pD7-my-rOB" eventType="touchUpInside" id="zpv-bk-L4t"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5vz-Q9-o40"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                         <constraints>
-                            <constraint firstItem="2Ih-hI-B7S" firstAttribute="centerY" secondItem="79Y-x5-l1X" secondAttribute="centerY" id="0sv-cJ-teB"/>
-                            <constraint firstItem="HR5-lb-Y7s" firstAttribute="centerX" secondItem="79Y-x5-l1X" secondAttribute="centerX" id="3Jv-3D-p1u"/>
-                            <constraint firstItem="2Ih-hI-B7S" firstAttribute="top" secondItem="HR5-lb-Y7s" secondAttribute="bottom" constant="40.5" id="D3n-EM-R8m"/>
-                            <constraint firstItem="5vz-Q9-o40" firstAttribute="trailing" secondItem="lvp-I6-G9T" secondAttribute="trailing" constant="113.5" id="gPy-Ws-30d"/>
-                            <constraint firstItem="2Ih-hI-B7S" firstAttribute="centerX" secondItem="79Y-x5-l1X" secondAttribute="centerX" id="oYr-D8-aIX"/>
-                            <constraint firstItem="lvp-I6-G9T" firstAttribute="centerY" secondItem="79Y-x5-l1X" secondAttribute="centerY" id="teE-w4-tdx"/>
-                            <constraint firstItem="lvp-I6-G9T" firstAttribute="leading" secondItem="2Ih-hI-B7S" secondAttribute="trailing" constant="20" id="vWt-D2-Mh2"/>
+                            <constraint firstItem="yQc-8v-kLJ" firstAttribute="centerX" secondItem="79Y-x5-l1X" secondAttribute="centerX" id="1BI-rw-Q16"/>
+                            <constraint firstItem="yQc-8v-kLJ" firstAttribute="centerY" secondItem="79Y-x5-l1X" secondAttribute="centerY" id="Wks-6W-u3b"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="UvI-gH-ha6"/>
@@ -259,23 +259,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8MN-VA-hEd">
-                                <rect key="frame" x="183" y="432.5" width="48.5" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="닫기"/>
-                                <connections>
-                                    <action selector="closeButtonTouched:" destination="Z29-XM-XrQ" eventType="touchUpInside" id="hGg-ME-gIh"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="xe2-9p-svk">
+                                <rect key="frame" x="125" y="432.5" width="164" height="31"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="18a-Ac-S6b">
+                                        <rect key="frame" x="0.0" y="0.0" width="72.5" height="31"/>
+                                        <color key="tintColor" red="1" green="1" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="처음으로"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lfq-l0-b11">
+                                        <rect key="frame" x="91.5" y="0.0" width="72.5" height="31"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="이전으로"/>
+                                        <connections>
+                                            <action selector="closeButtonTouched:" destination="Z29-XM-XrQ" eventType="touchUpInside" id="Qe3-vx-mzd"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="OaE-0O-NPR"/>
                         <color key="backgroundColor" systemColor="systemPurpleColor"/>
                         <constraints>
-                            <constraint firstItem="8MN-VA-hEd" firstAttribute="centerX" secondItem="kPi-mU-tgV" secondAttribute="centerX" id="Cb4-EN-0Wz"/>
-                            <constraint firstItem="8MN-VA-hEd" firstAttribute="centerY" secondItem="kPi-mU-tgV" secondAttribute="centerY" id="cFD-lw-ldj"/>
+                            <constraint firstItem="xe2-9p-svk" firstAttribute="centerY" secondItem="kPi-mU-tgV" secondAttribute="centerY" id="BlM-aG-pmz"/>
+                            <constraint firstItem="xe2-9p-svk" firstAttribute="centerX" secondItem="kPi-mU-tgV" secondAttribute="centerX" id="NuU-dH-Et0"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Lky-BC-sxa"/>
+                    <connections>
+                        <outlet property="homeButton" destination="18a-Ac-S6b" id="hev-Hb-Jf0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="agv-Xu-7JR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -284,66 +299,76 @@
         <!--Photos-->
         <scene sceneID="cTa-YB-6jF">
             <objects>
-                <viewController id="OeU-15-MY6" customClass="SecondViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SecondViewController" id="OeU-15-MY6" customClass="SecondViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nWM-qV-tNX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ASH-p5-XKv">
-                                <rect key="frame" x="87" y="94" width="240" height="240"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="240" id="2Hd-Qu-ep5"/>
-                                    <constraint firstAttribute="width" constant="240" id="kM8-DG-Jcq"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photo Album" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QFP-bx-Ep5">
-                                <rect key="frame" x="108" y="384" width="198.5" height="43"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9fg-XM-Geu">
-                                <rect key="frame" x="183" y="477" width="48.5" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="다음"/>
-                                <connections>
-                                    <action selector="selectButtonTouched:" destination="OeU-15-MY6" eventType="touchUpInside" id="aF1-Ux-NtA"/>
-                                </connections>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photoframe-border" translatesAutoresizingMaskIntoConstraints="NO" id="afk-pC-5qW" userLabel="PhotoFrame">
-                                <rect key="frame" x="50" y="57" width="314" height="314"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="314" id="Bng-IJ-q8d"/>
-                                    <constraint firstAttribute="height" constant="314" id="fci-MJ-JCr"/>
-                                </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ux3-SV-BY3">
-                                <rect key="frame" x="173.5" y="544" width="67" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                <connections>
-                                    <segue destination="zDK-49-2dH" kind="show" id="pxE-8r-QNu"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="49" translatesAutoresizingMaskIntoConstraints="NO" id="Azo-Pf-xgP">
+                                <rect key="frame" x="50" y="205" width="314" height="486"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JDF-ZG-0iW">
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="314"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="01" translatesAutoresizingMaskIntoConstraints="NO" id="ASH-p5-XKv">
+                                                <rect key="frame" x="36" y="36" width="242" height="242"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photoframe-border" translatesAutoresizingMaskIntoConstraints="NO" id="afk-pC-5qW" userLabel="PhotoFrame">
+                                                <rect key="frame" x="0.0" y="0.0" width="314" height="314"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="314" id="1dR-WT-VB9"/>
+                                            <constraint firstAttribute="bottom" secondItem="afk-pC-5qW" secondAttribute="bottom" id="52O-w6-2RX"/>
+                                            <constraint firstItem="afk-pC-5qW" firstAttribute="top" secondItem="JDF-ZG-0iW" secondAttribute="top" id="6lV-8F-V3a"/>
+                                            <constraint firstAttribute="bottom" secondItem="ASH-p5-XKv" secondAttribute="bottom" constant="36" id="OAZ-fX-HBx"/>
+                                            <constraint firstAttribute="height" constant="314" id="XLD-qK-K2t"/>
+                                            <constraint firstItem="ASH-p5-XKv" firstAttribute="leading" secondItem="JDF-ZG-0iW" secondAttribute="leading" constant="36" id="ZGk-AO-Fv6"/>
+                                            <constraint firstAttribute="trailing" secondItem="ASH-p5-XKv" secondAttribute="trailing" constant="36" id="dp4-aD-TAE"/>
+                                            <constraint firstItem="ASH-p5-XKv" firstAttribute="top" secondItem="JDF-ZG-0iW" secondAttribute="top" constant="36" id="f26-1e-ysG"/>
+                                            <constraint firstAttribute="trailing" secondItem="afk-pC-5qW" secondAttribute="trailing" id="fXp-qq-t2S"/>
+                                            <constraint firstItem="afk-pC-5qW" firstAttribute="leading" secondItem="JDF-ZG-0iW" secondAttribute="leading" id="v4l-8D-o8A"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photo Album" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QFP-bx-Ep5">
+                                        <rect key="frame" x="58" y="363" width="198.5" height="43"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O4G-nz-GQn">
+                                        <rect key="frame" x="52.5" y="455" width="209" height="31"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9fg-XM-Geu">
+                                                <rect key="frame" x="0.0" y="0.0" width="104.5" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="다른 사진 보기"/>
+                                                <connections>
+                                                    <action selector="selectButtonTouched:" destination="OeU-15-MY6" eventType="touchUpInside" id="aF1-Ux-NtA"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ux3-SV-BY3">
+                                                <rect key="frame" x="104.5" y="0.0" width="104.5" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="다음"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="av8-0K-Bc8"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="ASH-p5-XKv" firstAttribute="top" secondItem="av8-0K-Bc8" secondAttribute="top" constant="50" id="8cz-Xc-xyq"/>
-                            <constraint firstItem="afk-pC-5qW" firstAttribute="top" secondItem="av8-0K-Bc8" secondAttribute="top" constant="13" id="OfL-5o-gTh"/>
-                            <constraint firstItem="ASH-p5-XKv" firstAttribute="centerX" secondItem="nWM-qV-tNX" secondAttribute="centerX" id="Qlz-lz-69O"/>
-                            <constraint firstItem="Ux3-SV-BY3" firstAttribute="top" secondItem="9fg-XM-Geu" secondAttribute="bottom" constant="36" id="Sc6-x7-pCN"/>
-                            <constraint firstItem="9fg-XM-Geu" firstAttribute="top" secondItem="QFP-bx-Ep5" secondAttribute="bottom" constant="50" id="Tt6-1i-qdS"/>
-                            <constraint firstItem="QFP-bx-Ep5" firstAttribute="centerX" secondItem="nWM-qV-tNX" secondAttribute="centerX" id="WpS-4f-hRW"/>
-                            <constraint firstItem="Ux3-SV-BY3" firstAttribute="centerX" secondItem="nWM-qV-tNX" secondAttribute="centerX" id="Zmg-fo-Brn"/>
-                            <constraint firstItem="9fg-XM-Geu" firstAttribute="centerX" secondItem="nWM-qV-tNX" secondAttribute="centerX" id="fEk-BN-dmy"/>
-                            <constraint firstItem="afk-pC-5qW" firstAttribute="centerX" secondItem="nWM-qV-tNX" secondAttribute="centerX" id="jNc-mB-PjO"/>
-                            <constraint firstItem="QFP-bx-Ep5" firstAttribute="top" secondItem="ASH-p5-XKv" secondAttribute="bottom" constant="50" id="xWO-dI-0as"/>
+                            <constraint firstItem="Azo-Pf-xgP" firstAttribute="centerY" secondItem="nWM-qV-tNX" secondAttribute="centerY" id="NE7-SB-Bkc"/>
+                            <constraint firstItem="Azo-Pf-xgP" firstAttribute="centerX" secondItem="nWM-qV-tNX" secondAttribute="centerX" id="p6A-vs-7pX"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Photos" image="photo.fill.on.rectangle.fill" catalog="system" id="aZq-q1-NGT"/>
                     <navigationItem key="navigationItem" id="CN4-Uz-0ko"/>
                     <connections>
+                        <outlet property="nextButton" destination="Ux3-SV-BY3" id="cJG-TK-o7t"/>
                         <outlet property="photoImageView" destination="ASH-p5-XKv" id="rxx-0K-b6k"/>
                     </connections>
                 </viewController>
@@ -354,28 +379,39 @@
         <!--Blue View Controller-->
         <scene sceneID="RGk-lV-izM">
             <objects>
-                <viewController id="zDK-49-2dH" customClass="BlueViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BlueViewController" id="zDK-49-2dH" customClass="BlueViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xmu-dj-d6f">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VQs-Xn-jP7">
-                                <rect key="frame" x="173.5" y="405.5" width="67" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                <connections>
-                                    <segue destination="uUC-Jt-yJe" kind="show" id="5IC-St-ZHb"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="vMh-I6-IK5">
+                                <rect key="frame" x="153.5" y="432.5" width="107" height="31"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pan-dN-qKd">
+                                        <rect key="frame" x="0.0" y="0.0" width="48.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="다음"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e5K-NF-eKf">
+                                        <rect key="frame" x="58.5" y="0.0" width="48.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="닫기"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="U0q-uT-aEt"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
                         <constraints>
-                            <constraint firstItem="VQs-Xn-jP7" firstAttribute="centerX" secondItem="xmu-dj-d6f" secondAttribute="centerX" id="G6y-cV-C6h"/>
-                            <constraint firstItem="VQs-Xn-jP7" firstAttribute="centerY" secondItem="xmu-dj-d6f" secondAttribute="centerY" id="eJf-ni-cuf"/>
+                            <constraint firstItem="vMh-I6-IK5" firstAttribute="centerX" secondItem="xmu-dj-d6f" secondAttribute="centerX" id="Jwb-47-Dq0"/>
+                            <constraint firstItem="vMh-I6-IK5" firstAttribute="centerY" secondItem="xmu-dj-d6f" secondAttribute="centerY" id="LLQ-ZV-x0D"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="kNd-6K-qBA"/>
+                    <connections>
+                        <outlet property="closeButton" destination="e5K-NF-eKf" id="UjM-lg-9Rt"/>
+                        <outlet property="nextButton" destination="Pan-dN-qKd" id="Tre-nX-3t3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Npe-mE-RIu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -384,30 +420,43 @@
         <!--Green View Controller-->
         <scene sceneID="0Ex-mY-WYf">
             <objects>
-                <viewController id="uUC-Jt-yJe" customClass="GreenViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GreenViewController" id="uUC-Jt-yJe" customClass="GreenViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Nld-nI-1AR">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5B4-a7-4kM">
-                                <rect key="frame" x="173.5" y="405.5" width="67" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
-                                <connections>
-                                    <segue destination="OeU-15-MY6" kind="show" id="TdC-Es-V7l"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="LPf-N9-NYM">
+                                <rect key="frame" x="129.5" y="432.5" width="155" height="31"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oyy-t2-GdP">
+                                        <rect key="frame" x="0.0" y="0.0" width="72.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="처음으로"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PTy-wP-HSA">
+                                        <rect key="frame" x="82.5" y="0.0" width="72.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="닫기"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dny-pn-XkA"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                         <constraints>
-                            <constraint firstItem="5B4-a7-4kM" firstAttribute="centerY" secondItem="Nld-nI-1AR" secondAttribute="centerY" id="41x-Fx-6ha"/>
-                            <constraint firstItem="5B4-a7-4kM" firstAttribute="centerX" secondItem="Nld-nI-1AR" secondAttribute="centerX" id="H3O-ax-loE"/>
+                            <constraint firstItem="LPf-N9-NYM" firstAttribute="centerY" secondItem="Nld-nI-1AR" secondAttribute="centerY" id="CaI-W2-eUQ"/>
+                            <constraint firstItem="LPf-N9-NYM" firstAttribute="centerX" secondItem="Nld-nI-1AR" secondAttribute="centerX" id="iiQ-7L-eHl"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Zq7-SS-K0e"/>
+                    <connections>
+                        <outlet property="closeButton" destination="PTy-wP-HSA" id="0um-d3-RR8"/>
+                        <outlet property="homeButton" destination="Oyy-t2-GdP" id="Y3W-a4-xAo"/>
+                        <segue destination="Eld-hU-1hq" kind="unwind" identifier="goHome" unwindAction="unwindWithSegue:" id="pfa-go-H4T"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ntp-uG-tZA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Eld-hU-1hq" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2402" y="580"/>
         </scene>
@@ -457,10 +506,8 @@
             <size key="intrinsicContentSize" width="221" height="41.5"/>
         </designable>
     </designables>
-    <inferredMetricsTieBreakers>
-        <segue reference="UiR-eK-FWh"/>
-    </inferredMetricsTieBreakers>
     <resources>
+        <image name="01" width="341" height="256"/>
         <image name="21" width="341" height="256"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="photo.fill.on.rectangle.fill" catalog="system" width="128" height="97"/>

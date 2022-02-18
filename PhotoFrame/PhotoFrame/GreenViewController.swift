@@ -8,9 +8,15 @@
 import UIKit
 
 class GreenViewController: UIViewController {
+
+    // MARK: - Properties
+    @IBOutlet var homeButton: UIButton!
+    @IBOutlet weak var closeButton: UIButton!
     
+    // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.configureButtons()
         print("\nFirst View", #function)
     }
     
@@ -32,5 +38,19 @@ class GreenViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         print("First View", #function)
+    }
+    
+    // MARK: - Methods
+    func configureButtons() {
+        self.homeButton.addTarget(self, action: #selector(self.backToHome), for: .touchUpInside)
+        self.closeButton.addTarget(self, action: #selector(self.closeScene), for: .touchUpInside)
+    }
+    
+    @objc func backToHome() {
+        self.performSegue(withIdentifier: "goHome", sender: self)   
+    }
+    
+    @objc func closeScene() {
+        self.dismiss(animated: true, completion: nil)
     }
 }
