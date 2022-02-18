@@ -130,15 +130,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="StudyTableViewCell" rowHeight="55" id="kJh-fU-pM8" customClass="StudyTableViewCell" customModule="PhotoFrame" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="55"/>
-                                <autoresizingMask key="autoresizingMask"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="StudyTableViewCell" rowHeight="200" id="kJh-fU-pM8" customClass="StudyTableViewCell" customModule="PhotoFrame" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kJh-fU-pM8" id="ALa-D9-K0d">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="55"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lH2-zr-Ax6">
-                                            <rect key="frame" x="20" y="6" width="374" height="49"/>
+                                            <rect key="frame" x="20" y="6" width="374" height="194"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <state key="normal" title="Button"/>
                                             <buttonConfiguration key="configuration" style="plain">
@@ -148,8 +148,8 @@
                                                 <action selector="onCellTapped:" destination="kJh-fU-pM8" eventType="touchUpInside" id="gtm-O3-otk"/>
                                             </connections>
                                         </button>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="버튼에 액션을 여러개 추가할 수 있을까?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2VV-ZB-lSk">
-                                            <rect key="frame" x="20" y="6" width="374" height="49"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="버튼에 액션을  여러개 추가할 수 있을까?" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2VV-ZB-lSk">
+                                            <rect key="frame" x="20" y="6" width="374" height="194"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -171,7 +171,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aN2-dq-Pk0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1329" y="1189"/>
+            <point key="canvasLocation" x="1328.985507246377" y="1188.6160714285713"/>
         </scene>
         <!--First View Controller-->
         <scene sceneID="EHf-IW-A2E">
@@ -200,6 +200,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="화면 전환이 이루어지는 사이에 뷰컨트롤러 라이프사이클이 어떻게 변화하는지 학습한다." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="coS-hx-f4E">
+                                <rect key="frame" x="30" y="86" width="364" height="92"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -212,7 +219,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1329" y="1859"/>
+            <point key="canvasLocation" x="1328.985507246377" y="1858.9285714285713"/>
         </scene>
         <!--Gray View Controller-->
         <scene sceneID="k7V-Y2-pa6">
@@ -268,7 +275,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="버튼에 액션 을여러개 추가할 수 있을까?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ug2-rp-yTM">
-                                <rect key="frame" x="20" y="93" width="184" height="41"/>
+                                <rect key="frame" x="20" y="93" width="374" height="80"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -281,6 +288,11 @@
                                 <buttonConfiguration key="configuration" style="plain" title="테스트버튼">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="36"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="onTestButtonTapped_6:" destination="xVW-ac-OXi" eventType="touchUpInside" id="UmB-Sl-vY2"/>
+                                    <action selector="onTestButtonTapped_7:" destination="xVW-ac-OXi" eventType="touchUpInside" id="p89-6p-Yjf"/>
+                                    <action selector="onTestButtonTapped_8:" destination="xVW-ac-OXi" eventType="touchUpInside" id="OJx-PH-CbE"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5Ln-Za-5Gv"/>
@@ -292,7 +304,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DKm-gs-B3H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2100" y="1859"/>
+            <point key="canvasLocation" x="2100" y="1858.9285714285713"/>
         </scene>
         <!--Study View Controller2-->
         <scene sceneID="W5Z-JT-rWE">
@@ -356,14 +368,6 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UeU-9V-yKg" customClass="CustomButton" customModule="PhotoFrame" customModuleProvider="target">
-                                <rect key="frame" x="117" y="355" width="180" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="테스트버튼">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="36"/>
-                                </buttonConfiguration>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="djO-8O-8V1" customClass="CustomButton" customModule="PhotoFrame" customModuleProvider="target">
                                 <rect key="frame" x="117" y="420" width="180" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
@@ -371,16 +375,8 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="36"/>
                                 </buttonConfiguration>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yXZ-FL-d3b" customClass="CustomButton" customModule="PhotoFrame" customModuleProvider="target">
-                                <rect key="frame" x="117" y="485" width="180" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="테스트버튼">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="36"/>
-                                </buttonConfiguration>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="여러 버튼에 하나의 이벤트 연결" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I3B-eM-nDi">
-                                <rect key="frame" x="40" y="88" width="374" height="81"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="버튼에 IBAction을 추가할 때 이벤트(Event) 종류에는 어떤 것들이 있는지 학습한다." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I3B-eM-nDi">
+                                <rect key="frame" x="20" y="86" width="374" height="81"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -391,9 +387,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <outlet property="testButton1" destination="UeU-9V-yKg" id="x4o-lg-IgN"/>
-                        <outlet property="testButton2" destination="djO-8O-8V1" id="VgT-tx-Lv2"/>
-                        <outlet property="testButton3" destination="yXZ-FL-d3b" id="DlI-oT-XIu"/>
+                        <outlet property="testButton" destination="UeU-9V-yKg" id="1c1-N2-R6z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QVc-WV-7tt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
