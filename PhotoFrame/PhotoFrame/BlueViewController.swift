@@ -44,9 +44,6 @@ class BlueViewController: UIViewController {
         unwindButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -30).isActive = true
     }
     
-    
-    
-    
     override func viewWillAppear(_ animated: Bool) {
         print("BlueViewController가 나타날 것이다.")
         print(#file, #line, #function, #column)
