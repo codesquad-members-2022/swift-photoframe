@@ -24,10 +24,10 @@ class ViewController: UIViewController {
     }
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         print("\nViewController가 로드되었다.")
         print(#file, #line, #function, #column)
         
-        super.viewDidLoad()
         view.backgroundColor = .systemTeal
         
         photoLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -65,21 +65,25 @@ class ViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         print("ViewController가 나타날 것이다.")
         print(#file, #line, #function, #column)
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         print("ViewController가 나타났다.")
         print(#file, #line, #function, #column)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
         print("\nViewController가 사라질 것이다.")
         print(#file, #line, #function, #column)
     }
     
     override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
         print("ViewController가 사라졌다.")
         print(#file, #line, #function, #column)
     }
