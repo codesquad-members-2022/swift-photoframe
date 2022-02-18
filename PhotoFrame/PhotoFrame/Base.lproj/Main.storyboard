@@ -260,21 +260,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="xe2-9p-svk">
-                                <rect key="frame" x="125" y="432.5" width="164" height="31"/>
+                                <rect key="frame" x="6.5" y="432.5" width="401" height="31"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="18a-Ac-S6b">
-                                        <rect key="frame" x="0.0" y="0.0" width="72.5" height="31"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="121" height="31"/>
                                         <color key="tintColor" red="1" green="1" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="처음으로"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lfq-l0-b11">
-                                        <rect key="frame" x="91.5" y="0.0" width="72.5" height="31"/>
+                                        <rect key="frame" x="140" y="0.0" width="121" height="31"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="이전으로"/>
                                         <connections>
                                             <action selector="closeButtonTouched:" destination="Z29-XM-XrQ" eventType="touchUpInside" id="Qe3-vx-mzd"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bwx-Oa-rrj">
+                                        <rect key="frame" x="280" y="0.0" width="121" height="31"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Go somewhere"/>
+                                        <connections>
+                                            <segue destination="0HV-rF-61C" kind="unwind" unwindAction="unwindWithSegue:" id="grM-hw-L6e"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -289,10 +298,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="Lky-BC-sxa"/>
                     <connections>
-                        <outlet property="homeButton" destination="18a-Ac-S6b" id="hev-Hb-Jf0"/>
+                        <outlet property="homeButton" destination="18a-Ac-S6b" id="mzD-iN-vaX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="agv-Xu-7JR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="0HV-rF-61C" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3357.971014492754" y="-152.00892857142856"/>
         </scene>
@@ -417,10 +427,10 @@
             </objects>
             <point key="canvasLocation" x="1630" y="580"/>
         </scene>
-        <!--Green View Controller-->
+        <!--Green-->
         <scene sceneID="0Ex-mY-WYf">
             <objects>
-                <viewController storyboardIdentifier="GreenViewController" id="uUC-Jt-yJe" customClass="GreenViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GreenViewController" id="uUC-Jt-yJe" userLabel="Green" customClass="GreenViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Nld-nI-1AR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -432,6 +442,9 @@
                                         <rect key="frame" x="0.0" y="0.0" width="72.5" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="처음으로"/>
+                                        <connections>
+                                            <segue destination="Eld-hU-1hq" kind="unwind" identifier="test" unwindAction="unwindWithSegue:" id="4aX-ye-kyQ"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PTy-wP-HSA">
                                         <rect key="frame" x="82.5" y="0.0" width="72.5" height="31"/>
@@ -452,7 +465,6 @@
                     <connections>
                         <outlet property="closeButton" destination="PTy-wP-HSA" id="0um-d3-RR8"/>
                         <outlet property="homeButton" destination="Oyy-t2-GdP" id="Y3W-a4-xAo"/>
-                        <segue destination="Eld-hU-1hq" kind="unwind" identifier="goHome" unwindAction="unwindWithSegue:" id="pfa-go-H4T"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ntp-uG-tZA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
