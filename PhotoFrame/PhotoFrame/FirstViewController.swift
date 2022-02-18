@@ -15,7 +15,11 @@ class FirstViewController: UIViewController {
         
         self.firstLabel.text = "Jason의 사진액자"
         //글자색, 배경색, 투명도, 글자 크기
-        self.firstLabel.tex
+        self.firstLabel.textColor = UIColor(displayP3Red: 1.0, green: 0.0, blue: 1.0, alpha: 1.0)
+        self.firstLabel.backgroundColor = UIColor.black
+        self.firstLabel.textColor = self.firstLabel.textColor.withAlphaComponent(0.5)
+        self.firstLabel.font = self.firstLabel.font.withSize(30.0)
+        
     }
 }
 
