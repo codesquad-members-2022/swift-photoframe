@@ -17,18 +17,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MhY-FG-LNW">
-                                <rect key="frame" x="87" y="136" width="240" height="240"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MhY-FG-LNW">
+                                <rect key="frame" x="87" y="328" width="240" height="240"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="240" id="7DS-Yg-oPC"/>
                                     <constraint firstAttribute="width" constant="240" id="KMK-Af-6ml"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vwv-dT-fgO">
+                                <rect key="frame" x="161" y="608" width="92.5" height="47"/>
+                                <color key="tintColor" systemColor="systemBrownColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="다른 사진" buttonSize="large"/>
+                                <connections>
+                                    <action selector="nextButtonTouched:" destination="Q4E-0C-ch4" eventType="touchUpInside" id="hbJ-JA-8xv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="TAC-R9-lm8"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                         <constraints>
                             <constraint firstItem="MhY-FG-LNW" firstAttribute="centerX" secondItem="zmO-bH-WCv" secondAttribute="centerX" id="KvP-Vx-rsR"/>
+                            <constraint firstItem="Vwv-dT-fgO" firstAttribute="top" secondItem="MhY-FG-LNW" secondAttribute="bottom" constant="40" id="NlS-Zg-Dcl"/>
+                            <constraint firstItem="Vwv-dT-fgO" firstAttribute="centerX" secondItem="zmO-bH-WCv" secondAttribute="centerX" id="ZCa-ca-LkX"/>
+                            <constraint firstItem="MhY-FG-LNW" firstAttribute="centerY" secondItem="zmO-bH-WCv" secondAttribute="centerY" id="h4Q-xu-qDu"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="yellow" id="UDE-pm-n8p">
@@ -219,6 +231,9 @@
     <resources>
         <image name="cloud" catalog="system" width="128" height="88"/>
         <image name="sun.max" catalog="system" width="128" height="124"/>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
