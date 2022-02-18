@@ -17,7 +17,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nwG-ik-vqV">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <rect key="frame" x="87" y="76" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="W0A-Gp-Mza"/>
+                                    <constraint firstAttribute="height" constant="240" id="YNV-wD-ztz"/>
+                                </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AK3-A0-zvS">
                                 <rect key="frame" x="155.5" y="432.5" width="103" height="31"/>
@@ -27,16 +31,24 @@
                                     <action selector="showImageButtonTouched:" destination="KjG-ON-RQN" eventType="touchUpInside" id="51W-wh-Lht"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="Photoframe" image="photoframe-border.png" translatesAutoresizingMaskIntoConstraints="NO" id="dzH-Ik-GRE" userLabel="Photoframe">
+                                <rect key="frame" x="67" y="56" width="280" height="280"/>
+                                <accessibility key="accessibilityConfiguration" identifier="Photoframe" label="Photoframe"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="280" id="7nR-B4-Pov"/>
+                                    <constraint firstAttribute="width" constant="280" id="VfE-ga-usv"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vhA-T8-0yB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="vhA-T8-0yB" firstAttribute="bottom" secondItem="nwG-ik-vqV" secondAttribute="bottom" id="6g9-QX-Hvf"/>
+                            <constraint firstItem="nwG-ik-vqV" firstAttribute="top" secondItem="vhA-T8-0yB" secondAttribute="top" constant="32" id="8h2-fD-2L6"/>
+                            <constraint firstItem="dzH-Ik-GRE" firstAttribute="centerX" secondItem="nwG-ik-vqV" secondAttribute="centerX" id="IER-S3-X7a"/>
                             <constraint firstItem="AK3-A0-zvS" firstAttribute="centerY" secondItem="63e-bA-nMR" secondAttribute="centerY" id="MDM-ld-o0x"/>
                             <constraint firstItem="AK3-A0-zvS" firstAttribute="centerX" secondItem="63e-bA-nMR" secondAttribute="centerX" id="SdS-4i-Pux"/>
-                            <constraint firstItem="nwG-ik-vqV" firstAttribute="trailing" secondItem="vhA-T8-0yB" secondAttribute="trailing" id="eKF-a7-Ou4"/>
-                            <constraint firstItem="nwG-ik-vqV" firstAttribute="leading" secondItem="vhA-T8-0yB" secondAttribute="leading" id="mY3-OL-a0p"/>
-                            <constraint firstItem="nwG-ik-vqV" firstAttribute="top" secondItem="vhA-T8-0yB" secondAttribute="top" id="xeM-eM-yrt"/>
+                            <constraint firstItem="dzH-Ik-GRE" firstAttribute="centerY" secondItem="nwG-ik-vqV" secondAttribute="centerY" id="brt-9V-g5T"/>
+                            <constraint firstItem="nwG-ik-vqV" firstAttribute="centerX" secondItem="63e-bA-nMR" secondAttribute="centerX" id="zc3-yP-AGd"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Photo" image="camera.fill" catalog="system" id="asd-QA-isw"/>
@@ -253,6 +265,7 @@
     <resources>
         <image name="camera.fill" catalog="system" width="128" height="94"/>
         <image name="iphone.homebutton" catalog="system" width="108" height="128"/>
+        <image name="photoframe-border.png" width="720" height="720"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
