@@ -11,7 +11,7 @@
         <!--Item 2-->
         <scene sceneID="uZh-l9-Mrb">
             <objects>
-                <viewController id="NlW-Ep-aiC" customClass="SecondViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="NlW-Ep-aiC" customClass="PhotoViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="X1b-nF-Zzx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
