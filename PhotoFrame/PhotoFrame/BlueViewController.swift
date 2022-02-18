@@ -10,26 +10,26 @@ import UIKit
 class BlueViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(#fileID, #function)
+        print("\nSecond View", #function)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        print(#fileID, #function)
+        print("Second View", #function)
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        print(#fileID, #function)
+        print("Second View", #function)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print(#fileID, #function)
+        print("Second View", #function)
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        print(#fileID, #function)
+        print("Second View", #function)
     }
 }

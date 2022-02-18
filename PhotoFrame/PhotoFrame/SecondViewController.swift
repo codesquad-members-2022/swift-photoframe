@@ -14,6 +14,27 @@ class SecondViewController: UIViewController, UINavigationControllerDelegate, UI
     override func viewDidLoad() {
         super.viewDidLoad()
         self.photoImageView.image = UIImage(named: "01.jpg")
+        print("Secnd Tab View")
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        print("Secnd Tab View", #function)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        print("Secnd Tab View", #function)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("Secnd Tab View", #function)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print("Secnd Tab View", #function)
     }
     
     @IBAction func selectButtonTouched(_ sender: Any) {
