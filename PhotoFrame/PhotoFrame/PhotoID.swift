@@ -38,8 +38,8 @@
 //}
 
 enum PhotoID0:String,CaseIterable {
-    case one = "011"
-    case two = "021"
+    case one = "01"
+    case two = "02"
     case three = "031"
     case four = "041"
     case five = "051"
