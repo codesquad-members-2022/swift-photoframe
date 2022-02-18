@@ -13,8 +13,6 @@ class PhotoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func showImageButtonTouched(_ sender: UIButton) {
@@ -23,4 +21,7 @@ class PhotoViewController: UIViewController {
         photoImageView.contentMode = .scaleAspectFill
     }
     
+    @IBAction func selectButtonTouched(_ sender: UIButton) {
+        
+    }
 }
