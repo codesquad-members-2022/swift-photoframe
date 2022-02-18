@@ -95,7 +95,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="다음"/>
                                 <connections>
-                                    <segue destination="3BM-SX-6rg" kind="presentation" modalTransitionStyle="flipHorizontal" id="ZIQ-pP-lc9"/>
+                                    <segue destination="3BM-SX-6rg" kind="push" id="5zb-My-H4K"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="close" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yjf-VD-fGZ">
