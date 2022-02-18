@@ -36,6 +36,10 @@
                                     <action selector="nextButtonTouched:" destination="03h-xc-dDA" eventType="touchUpInside" id="6Tp-Pj-5Bv"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="keJ-8b-nLb" userLabel="PhotoFrame">
+                                <rect key="frame" x="85" y="170" width="250" height="250"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eO5-9G-REV"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
@@ -43,6 +47,7 @@
                     <tabBarItem key="tabBarItem" title="Item 2" id="33t-Eb-cI4"/>
                     <connections>
                         <outlet property="albumLabel" destination="93r-up-0Cc" id="caI-dD-8Q0"/>
+                        <outlet property="frameView" destination="keJ-8b-nLb" id="5c5-GI-WnJ"/>
                         <outlet property="imageView" destination="gWR-Rz-bDX" id="xCp-L5-aVF"/>
                         <outlet property="nextButton" destination="iGd-Gt-izg" id="Zum-8i-tJT"/>
                     </connections>
