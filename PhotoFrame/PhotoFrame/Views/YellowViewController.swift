@@ -34,9 +34,7 @@ class YellowViewController: UIViewController {
     }
     
     @IBAction func closeButtonTouched(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-        print("YellowView calls -> viewDidAppear")
-
+        self.navigationController?.popViewController(animated: true)
     }
     //segue 없이 화면전환
 //    @IBAction func showGreenView(_ sender: Any) {
