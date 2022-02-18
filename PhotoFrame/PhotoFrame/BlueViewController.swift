@@ -21,9 +21,10 @@ class BlueViewController: UIViewController {
     }
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         print("\nBlueViewController가 로드되었다.")
         print(#file, #line, #function, #column)
-        super.viewDidLoad()
+         
         
         closeButton.translatesAutoresizingMaskIntoConstraints = false
         unwindButton.translatesAutoresizingMaskIntoConstraints = false
@@ -45,21 +46,25 @@ class BlueViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         print("BlueViewController가 나타날 것이다.")
         print(#file, #line, #function, #column)
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         print("BlueViewController가 나타났다.")
         print(#file, #line, #function, #column)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
         print("\nBlueViewController가 사라질 것이다.")
         print(#file, #line, #function, #column)
     }
     
     override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
         print("BlueViewController가 사라졌다.")
         print(#file, #line, #function, #column)
     }

@@ -20,9 +20,10 @@ class YellowViewController: UIViewController {
     }
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         print("\nYellowViewController가 로드되었다.")
         print(#file, #line, #function, #column)
-        super.viewDidLoad()
+    
     
         closeButton.translatesAutoresizingMaskIntoConstraints = false
         
@@ -35,21 +36,25 @@ class YellowViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         print("YellowViewController가 나타날 것이다.")
         print(#file, #line, #function, #column)
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         print("YellowViewController가 나타났다.")
         print(#file, #line, #function, #column)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
         print("\nYellowViewController가 사라질 것이다.")
         print(#file, #line, #function, #column)
     }
     
     override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
         print("YellowViewController가 사라졌다.")
         print(#file, #line, #function, #column)
     }
