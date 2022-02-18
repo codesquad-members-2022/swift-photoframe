@@ -425,3 +425,93 @@ Present As Popover은 아래와 같은 화면이 나왔습니다.
 
 - [Modality](https://developer.apple.com/design/human-interface-guidelines/ios/app-architecture/modality/)
 - [Popover](https://developer.apple.com/design/human-interface-guidelines/ios/views/popovers/)
+
+
+# Step5. ViewController 연결하기
+
+## 💻 작업 목록
+
+- [x] 새로운 뷰 컨트롤러 2개 추가
+- [x] 위에서 만든 뷰 컨트롤러에 닫기 버튼 추가 후 닫기 기능 구현
+- [x] ViewController의 라이프 사이클 학습 및 실습
+- [x] 두번째 뷰컨트롤러에서 Segue를 제거하고 다음 화면을 보여줄 때 코드로 보여주는 방법 적용하고 학습
+- [x] Step5 README 작성하기
+
+
+## 📱 실행 화면
+
+![ezgif com-gif-maker (6)](https://user-images.githubusercontent.com/95578975/154621684-9a04544e-9281-4036-905d-da65eb817411.gif)
+
+- FirstViewController -> PinkViewController, PinkViewController -> MintViewController로 넘어갈 때 viewWillDisppear, viewDidDisappear 메소드가 호출되지 않는다. 
+- 새로운 뷰가 나타날 때, 기존의 뷰가 사라지는 것이 아니라 그 위에 새로운 뷰가 올라가는 것이기 때문에 viewWillDisappear, viewDidDisappear 메소드는 호출되지 않는다. 자세히 보면 위에 기존의 뷰가 보이는 것을 확인할 수 있다.
+
+
+
+## 🤔 고민과 해결
+
+### 1️⃣ Segue & Transition Style 
+
+Presentation은 모두 Automatic으로 바꾸고, Segue와 Transition Style을 테스트해보았습니다. 
+
+- Segue - Popover의 경우, 아이패드에서만 차이점을 알 수 있었습니다. 
+- Transition Style은 모두 Segue를 Present Modally로 연결하였습니다. FullScreen일 경우, Transition Style에는 변화가 없었습니다.
+  - Transition Style - Partial Curl의 경우, Segue를 Present Modally로 설정하면 "Thread 1: "Application tried to present UIModalTransitionStylePartialCurl to or from non-fullscreen view controller <PhotoFrame.TestTableViewController: 0x144d143a0>."와 같은 오류 메시지를 확인할 수 있었습니다.
+  - [애플 공식 문서](https://developer.apple.com/documentation/uikit/uimodaltransitionstyle/uimodaltransitionstylepartialcurl?language=objc)에서 Partial Curl 스타일은 상위 뷰컨트롤러가 FullScreen 뷰를 표시하고 [UIModalPresentationFullScreen](https://developer.apple.com/documentation/uikit/uimodalpresentationstyle/uimodalpresentationfullscreen?language=objc) 모달 프레젠테이션 스타일을 사용하는 경우에만 지원한다고 합니다. 그 외의 form factor를 사용하려고 하면 예외가 트리거됩니다.
+- Transition Style - Partial Curl의 경우, Segue를 Present Modally로 하면 오류가 발생하기 때문에 Show로 해야합니다.
+
+![ezgif com-gif-maker (7)](https://user-images.githubusercontent.com/95578975/154633705-d317c933-06f5-45e4-ba11-bcae17f66054.gif)
+
+
+
+### 2️⃣ viewWillDisappear, viewDidDisappear 출력해보기
+
+viewWillDisappear, viewDidDisappear 출력을 확인하기 위해 TableViewController와 Navigation Controller를 추가하여 테스트해보았습니다.
+
+Show Detail, Present Modally과 Present As Popover 방식은 앞과 똑같이 두 함수가 호출되지 않았고, Show 방식은 앞의 Modal 방식과 달리 화면 전체가 새로운 뷰로 꽉 찬 것을 확인할 수 있었습니다. 그리고 viewWillDisappear, viewDidDisappear 함수의 호출도 확인할 수 있었습니다.
+
+![ezgif com-gif-maker (9)](https://user-images.githubusercontent.com/95578975/154637764-0be225fe-4a86-4b19-9e65-2eb0e8bc1464.gif)
+
+## ✏️ 추가 학습 거리
+
+### ViewController의 라이프 사이클
+
+- **func viewDidLoad()** : 뷰 계층이 **메모리에 로드된 직후** 호출. 
+
+- **func viewWillAppear(_ animated: Bool)** : 뷰가 뷰 계층에 추가되고 **화면에 표시되기 직전에** 호출.
+
+- **func viewDidAppear(_ animated: Bool)** : 뷰가 뷰 계층에 추가되어 **화면이 표시되면** 호출.
+
+- **func viewWillDisappear(_ animated: Bool) **: 뷰가 뷰 계층에서 사라지기 직전에 호출.
+
+- **func viewDidDisappear(_ animated: Bool)** : 뷰가 뷰 계층에서 **사라진 후** 호출.
+
+
+
+### YellowViewController에서 Segue를 제거하고 다음 화면을 보여줄 때 코드로 보여주는 방법
+
+- 버튼을 IBAction으로 연결하고, IBAction 메소드 내에 다음과 같이 코드를 구현합니다.
+
+```Swift
+@IBAction func nextButtonTouched(_ sender: UIButton) {
+    let vc = self.storyboard?.instantiateViewController(withIdentifier: "MintViewController") as! MintViewController
+    present(vc, animated: true, completion: nil)
+}
+```
+
+##### instantiateViewController(withIdentifier:)
+
+- 지정된 identifier로 뷰컨트롤러를 만들고 스토리보드의 데이터로 초기화합니다.
+
+- `identifier`
+
+  스토리보드 파일에서 뷰컨트롤러를 고유하게 식별하는 identifier 문자열. 디자인 타임에서 인터페이스 빌더에서 뷰컨트롤러의 Storyboard ID 속성에 동일한 문자열을 넣습니다. 이 identifier는 뷰컨트롤러 객체 자체의 속성이 아닙니다. 스토리보드는 이 identifier를 사용하여 뷰컨트롤러에 적합한 데이터를 찾습니다. 지정된 식별자가 스토리보드 파일에 없는 경우, 이 메소드는 예외를 발생시킵니다.
+
+- [참고 문서](https://developer.apple.com/documentation/uikit/uistoryboard/1616214-instantiateviewcontroller)
+
+## 💡 학습 키워드
+
+- ViewController
+- LifeCycle
+- [ViewController LifeCycle](https://medium.com/good-morning-swift/ios-view-controller-life-cycle-2a0f02e74ff5)
+- [UIModalTransitionStyle](https://developer.apple.com/documentation/uikit/uimodaltransitionstyle?language=objc)
+- Storyboard Identifier
