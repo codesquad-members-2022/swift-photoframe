@@ -384,3 +384,122 @@ rebase 시 무언가 문제가 생겨서 변경사항을 버리거나 할 때 �
 GUI툴을 조금 더 사용해보면서 CLI 환경과 얼마나 속도 차이가 있는지, 효율적인지 체험해 볼 예정이다.
 
 요즘 코딩 테스트 문제풀이에 좀 소홀했는데 풀어보는 루틴을 생각해봐야겠다.
+
+___
+
+## Step5 ViewController Connect
+
+- [x] 새로운 ViewController 클래스를 추가한 뒤 스토리보드(인터페이스 빌더)의 ViewController 커스텀 클래스로 등록해본다.
+- [x] 닫기 버튼을 추가하고 ```self.dismiss(animated: Bool?, completion: (()->Void)?)```을 이용하여 이전 화면으로 돌아가는 기능을 구현.
+- [x] 화면 관련 콜백 함수 사용
+- [x] View Controller LifeCycle에 대해 공부해본다.
+- [x] Modal Presentation Style에 대해 공부해본다.
+- [x] Transition Style에 대해 공부해본다. 
+
+### 이번 스텝의 목표
+
+<p style="text-align: center">
+   이 이미지를 최대한 이해해보는 것이다!<br/><img style="margin-top: 5px" src="PhotoFrame/README_images/Valid_State_Transition.png" alt="Valid_State_Transition" width="700px" />
+</p>
+
+---
+
+## Segue란?
+
+출처: [PresentingaViewController](https://developer.apple.com/library/archive/featuredarticles/ViewControllerPGforiPhoneOS/PresentingaViewController.html#//apple_ref/doc/uid/TP40007457-CH14-SW1)
+
+### 이론
+
+UIViewController에 내장되어 있는 뷰 컨트롤러 presenting 기능은 UIKit에 의해 서로 다른 뷰 컨트롤러로 옮겨갈 수 있게 한다(물론 UIKit에 의한 강제 라우팅도 발생할 수 있다).
+
+뷰 컨트롤러를
+
+### Segue의 종류
+
+---
+
+## Transition Style
+
+출처: [PresentingaViewController](https://developer.apple.com/library/archive/featuredarticles/ViewControllerPGforiPhoneOS/PresentingaViewController.html#//apple_ref/doc/uid/TP40007457-CH14-SW1)
+
+### 이론
+
+UIKit에 내장된 뷰 컨트롤러 표시와 커스텀 애니메이션을 사용해본다.
+
+### Transition Style의 종류
+
+* Full-Screen Presentation Style   
+모든 화면을 덮으면서 이전의 컨텐츠들과의 상호작용은 차단한다.
+
+||설명|
+|---|---|
+|UIModalPresentationFullscreen|전체 화면을 덮음|
+|UIModalPresentationPageSheet|수평은 좁게, 수직은 전체를 덮음|
+|UIModalPresentationFormSheet|수평 수직 모두 좁게 덮음|
+|UIModalPresentationOverFullScreen|전체 화면을 덮지만, UIModalPresentationFullscreen이 화면 전환을 완료한 후 이전 화면의 뷰를 삭제하는 것을 하지 않는다. 투명한 배경 위에 모달을 띄울 경우 많이 사용.|
+
+* The Popover Style   
+화면 상의 추가적인 정보나 리스트를 보여줄 때 유용하다.
+
+---
+
+## 강의 내용 정리
+
+UIViewController는 뷰 계층(UIViewController.view에서 시작)을 관리하는 역할을 한다. 뷰, 뷰의 데이터, 뷰의 리소스, 화면 사이즈/회전 등에 대응한다.
+
+흔히 UIViewController에서 MVC 패턴의 C 역할을 한다. 뷰 컨트롤러는 화면의 특정 혹은 전체 영역을 담당하면서 모델도 내부 프로퍼티로 가질 수 있다. 대부분 앱은 ViewController 사이의 흐름으로 구성한다.
+
+품질 좋은 앱을 위해 ViewController를 단위로 삼아 앱을 만든다. ViewController는 가볍다. 복잡한 화면을 구조화 하는데 용이하다.
+
+주요 콜백 메소드는 다음과 같다.
+
+화면 관련
+1. viewDidLoad()
+2. viewWillAppear(Bool)
+3. viewDidAppear(Bool)
+4. viewWillDisappear(Bool)
+5. viewDidDisappear(Bool)
+
+회전 관련
+1. var shouldAutorotate: Bool
+2. var supportedInterfaceOrientations: UIInterfaceOrientationMask
+3. var prefferedInterfaceOrientationForPresentation; UIInterfaceOrientation
+
+뷰 관련 상태변화(View LifeCycle) 포인트
+* 뷰는 언제 생성되고 보이나
+* 상태가 언제 변화하나
+* 상태가 바뀌면서 일어나는 현상
+* 상태가 바뀌기 위한 조건
+* 상태 변화는 반복되는가
+* 오버라이드를 해야하는 이유
+
+root view controller는 어떤 화면을 가득채우는 것이다(window.rootViewController).
+
+windowScene 위에 window 이 올라가고(프로세스 하나에서 여러 윈도우씬이 있으면 화면 크기를 다르게 하거나 여러 개의 앱을 띄울 수 있음) 그 위에 rootViewController.view가 채워짐.
+
+Scene이란 하나의 화면, UIScene은 Scene을 직접 만들고 싶을 때 사용, UIWindowScene은 UIWindow를 올리는 밑바탕.
+
+주로 우리가 만나게 되는 가장 흔한 뷰 컨트롤러는 UIViewController 를 서브클래스 하는 방식. 필요한 API 메소드 오버라이드, 비즈니스 로직 추가, 라이프 사이클에 맞춰가면서 필요한 기능 만들어야 함.
+
+present는 기존 뷰를 가리면서 나타난다. presented(띄워진 뷰)는 나타난 뷰, presenting(화면 띄운 뷰)는 present한 뷰이다.
+
+Modal Presentation Style (어느 영역을 덮을 것인가, 한번 해보세요!)
+
+* automatic = 기본 표시 방식
+* none = 지정 안함
+* fullScreen = 스크린 전체 덮음.
+* pageSheet = 컨텐츠 특정 부분만 덮음.
+* formSheet = 컨텐츠 가운데만 덮음.
+* currentConext = 다른 뷰 컨트롤러 콘텐츠 위에 표시
+* custom = 애니메이터 객체로 표시
+* overFullScreen = 스크린 화면 위에 표시
+* overCurrentContext = 다른 VC 콘텐츠 위에 표시
+* popover = 팝오버로 일부만 표시
+* blurOverFullScreen = 콘텐츠 화면을 블러로 표시
+
+Transition Style (어떻게 새 화면을 표시할 것인가)
+
+* coverVertical = 아래에서 위로 올리면서
+* flipHorizontal = 뒤집으면서
+* crossDissolve = 투명하게 사라지면서
+* partialCurl = 종이처럼 넘기면서
