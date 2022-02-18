@@ -158,6 +158,7 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
                                     <action selector="unwindButtonTouched:" destination="b4p-1P-gk9" eventType="touchUpInside" id="mu7-VJ-sUq"/>
+                                    <segue destination="22j-NF-bwm" kind="unwind" unwindAction="unwindToFirstSceneWithSegue:" id="t7g-Zb-Uss"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -168,7 +169,6 @@
                     <connections>
                         <outlet property="closeButton" destination="69C-D2-hYa" id="5zQ-a2-iEm"/>
                         <outlet property="unwindButton" destination="vtb-eD-2Wu" id="EHH-Xp-iuw"/>
-                        <segue destination="22j-NF-bwm" kind="unwind" identifier="unwindVC" unwindAction="unwindVCWithSegue:" id="TBr-Ro-dhm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lgi-Qk-Tsz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -185,6 +185,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ETs-SK-vTh">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
