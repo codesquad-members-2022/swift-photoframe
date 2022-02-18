@@ -211,3 +211,50 @@ Redraw
 Left
 
 <img src="https://user-images.githubusercontent.com/78553659/154232502-a40f1c3e-67c0-45d4-a092-39bfdf105508.png"  width="300" height="600"/>
+
+## 8. 사진앨범 선택하기
+
+### 과정
+
+1. scene2에 UIImageView를 추가하고 photoImageView 아래 배치
+
+2. 추가한 UIImageView의 label을 photoFrame으로 변경후 이미지를 photoframe-border.png 로 변경
+
+   1. 프로젝트에 폴더형태로 이미지를 추가하니 사진이 변경이 안되는 현상
+   2. 기존 폴더형태의 이미지들을 Asset으로 옮기고 이미지폴더 삭제
+   3. asset이후 photoFrame 정상
+
+3. constraint 를 이용해 photoFrame 과 photoImageView 사이의 마진값을 변경하고 싶었으나 실패
+
+4. scene2에 선택 버튼 추가하고 ViewController에 selectButtonTouched - IBAction으로 연결
+
+5. 선택버튼 터치시 UIAlertController가 present 되게 selectButtonTouched에 아래와 같은 로직을 추가
+
+   ``` swift
+   let pickerAlert = UIAlertController(title: "사진 가져오기", message: "", preferredStyle: .actionSheet )
+   let libraryOption = UIAlertAction(title: "앨범", style: .default){
+      _ in self.present(self.imagePickerController, animated: true)
+   }
+   let cancelOption = UIAlertAction(title: "취소", style: .cancel)
+      pickerAlert.addAction(libraryOption)
+      pickerAlert.addAction(cancelOption)
+      present(pickerAlert, animated: true)
+   ```
+
+6. imagePickerController에서 이미지 선택시 photoImageView의 이미지를 바꾸어 주기 위해 extension으로 UIImagePickerControllerDelegate, UINavigationControllerDelegate 채택
+
+7. UIImagePickerControllerDelegate 내의 imagePickerController 메서드를 가져와 photoImageView의 이미지를 바꾸어줌
+
+#### 학습내용
+
+[UIImagePickerController](https://github.com/sungju-kim/TIL/issues/6)
+
+[UIAlertController](https://github.com/sungju-kim/TIL/issues/1)
+
+[protocol - delegate](https://github.com/sungju-kim/TIL/issues/5)
+
+
+
+### 실행화면
+
+<img src="https://user-images.githubusercontent.com/78553659/154628708-8b17bab4-8cfa-4dab-a537-161e8472c425.gif"  width="300" height="600"/>
