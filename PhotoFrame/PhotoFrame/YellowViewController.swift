@@ -24,4 +24,6 @@ class YellowViewController: UIViewController {
         secondViewIndicatorLabel.attributedText = attributedString
         
     }
+    @IBAction func nextButtonTouched(_ sender: UIButton) {
+    }
 }
