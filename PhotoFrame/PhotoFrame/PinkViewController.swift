@@ -14,6 +14,12 @@ class PinkViewController: UIViewController {
     }
     
     
+    @IBAction func nextButtonTouched(_ sender: UIButton) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "MintViewController") as! MintViewController
+        present(vc, animated: true, completion: nil)
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print("PinkViewController", #function)
