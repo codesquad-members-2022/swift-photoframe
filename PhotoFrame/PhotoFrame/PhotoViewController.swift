@@ -19,16 +19,26 @@ class PhotoViewController: UIViewController {
     
     //선택 버튼 클릭.
     @IBAction func selectButtonTouched(_ sender: UIButton) {
-        let imagePickerController = UIImagePickerController() //ImagePicker생성
+        let alertViewController = UIAlertController(
+            title: "원하는 방법을 골라주세요",
+            message: "골라골라",
+            preferredStyle: .actionSheet
+        )
+        //앨범 선택시
+        let photoLibary = UIAlertAction(title: "앨범", style: .default) { _ in
+            self.makeImagePickerController()
+        }
         
-        //delgate를 선언해준다.
-        //이를 하기 위해서 UIImagePickerControllerDelegate , UINavigationControllerDelegate를 프로토콜로 채택해야한다. - extenstion으로 빼줌.
-        imagePickerController.delegate = self
-        guard UIImagePickerController.isSourceTypeAvailable(.photoLibrary) else { return } // 기기호환성을 체크한다.
-        imagePickerController.sourceType = .photoLibrary //카메라와 앨범타입이 있다.
-
-        imagePickerController.allowsEditing = true
-        present(imagePickerController,animated: true)
+        //카메라 선택시
+        let camera = UIAlertAction(title: "카메라", style: .default) { _ in
+            print("카메라는 아직..")
+        }
+        
+        //alertViewController에 Action들 Add
+        alertViewController.addAction(photoLibary)
+        alertViewController.addAction(camera)
+        
+        present(alertViewController,animated: true)
     }
     
     
@@ -55,6 +65,20 @@ class PhotoViewController: UIViewController {
         if currentImage != nil && currentImage!.isEqual(nextImage) { //캐시된 동일한 데이터를 이용해 이미지를 만들어도 다를 수 있기때문에 이렇게 사용한다. Ex) currentImage == nextImage (X)
             print("이전 사진과 똑같은 이미지입니다.")
         }
+    }
+    
+    //actionSheet에서 앨범 선택시, ImagePickeController를 만들어서 보여준다
+    func makeImagePickerController() {
+        let imagePickerController = UIImagePickerController() //ImagePicker생성
+        
+        //delgate를 선언해준다.
+        //이를 하기 위해서 UIImagePickerControllerDelegate , UINavigationControllerDelegate를 프로토콜로 채택해야한다. - extenstion으로 빼줌.
+        imagePickerController.delegate = self
+        guard UIImagePickerController.isSourceTypeAvailable(.photoLibrary) else { return } // 기기호환성을 체크한다.
+        imagePickerController.sourceType = .photoLibrary //카메라와 앨범타입이 있다.
+
+        imagePickerController.allowsEditing = true //선택한 사진 편집 가능여부
+        self.present(imagePickerController, animated: true, completion: nil)
     }
     
     
