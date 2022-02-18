@@ -58,8 +58,8 @@ iOS 포토프레임 프로젝트 저장소
 
 ###### Container ViewController 활용하기
 
-- [ ] 내비게이션 컨트롤러(Navigation Controller)를 Embed 시켜서 동작하도록 개선한다.
-- [ ] 실행하고 새로운 화면을 캡처해서 readme.md 파일에 포함한다.
+- [x] 내비게이션 컨트롤러(Navigation Controller)를 Embed 시켜서 동작하도록 개선한다.
+- [x] 실행하고 새로운 화면을 캡처해서 readme.md 파일에 포함한다.
 - [x] 용어별 학습 - TIL 정리
 
 ### 출력 확인
@@ -98,9 +98,11 @@ iOS 포토프레임 프로젝트 저장소
 | :----------------------------------------------------------: |
 | <img width="500" alt="스크린샷 2022-02-17 오후 4 29 55" src="https://user-images.githubusercontent.com/84652513/154427773-6f3152ac-4739-4c8e-87aa-cd5678f39825.png"> |
 
+###### 6. Container ViewController 활용하기(2022.02.18.)
 
-
-
+|                        1단계(첫화면)                         |                        2단계(주황색)                         |                        3단계(빨간색)                         |
+| :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+| ![Simulator Screen Shot - iPhone 13 mini - 2022-02-17 at 16 10 32](https://user-images.githubusercontent.com/84652513/154427482-ca6a5e82-993e-48c2-9194-40f9280c97f4.png) | ![Simulator Screen Shot - iPhone 13 mini - 2022-02-18 at 16 50 28](https://user-images.githubusercontent.com/84652513/154656195-433ce95f-a9c1-49cc-b350-743bd76182c2.png) | ![Simulator Screen Shot - iPhone 13 mini - 2022-02-18 at 16 50 32](https://user-images.githubusercontent.com/84652513/154656252-1bad39f0-f23e-480d-aac2-6eea0cb28512.png) |
 
 ### 참조링크
 
