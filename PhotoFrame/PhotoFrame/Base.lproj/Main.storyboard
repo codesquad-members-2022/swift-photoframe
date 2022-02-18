@@ -62,6 +62,7 @@
                                 <connections>
                                     <action selector="nextButtonTouched:" destination="5zo-w2-5xV" eventType="touchUpInside" id="9iW-xf-GCd"/>
                                     <action selector="textColorChangeAction:" destination="5zo-w2-5xV" eventType="touchUpInside" id="5Ef-u6-QGW"/>
+                                    <segue destination="Rjd-17-Bly" kind="show" id="B2l-XI-tAw"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -87,6 +88,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qCD-Fm-gwn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1013.0434782608696" y="-386.38392857142856"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="fkF-ts-Fzf">
+            <objects>
+                <viewController id="Rjd-17-Bly" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9mC-RK-lD3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="xGv-z5-UYc"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="REC-Kf-SGl"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1TB-EB-std" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1848" y="-386"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="z2t-jV-vW8">
