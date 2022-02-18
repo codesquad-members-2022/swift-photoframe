@@ -24,7 +24,7 @@
             </objects>
             <point key="canvasLocation" x="548" y="417"/>
         </scene>
-        <!--Item 1-->
+        <!--View Controller-->
         <scene sceneID="oaH-tL-a7J">
             <objects>
                 <viewController id="ubP-Vm-hNo" customClass="ViewController" customModule="PhotFrame" customModuleProvider="target" sceneMemberID="viewController">
@@ -60,7 +60,7 @@
                         <viewLayoutGuide key="safeArea" id="rVb-G5-5ww"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="hgC-OP-dcl"/>
+                    <navigationItem key="navigationItem" id="cOu-wh-qnH"/>
                     <connections>
                         <outlet property="firstDescription" destination="egK-T1-Twg" id="iOa-Ej-F5r"/>
                         <outlet property="firstLabel" destination="l1c-ew-tg7" id="z3q-OD-8E4"/>
@@ -68,7 +68,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NL1-Fy-e78" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="546.39999999999998" y="-345.81280788177344"/>
+            <point key="canvasLocation" x="1488.8" y="-345.81280788177344"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="w4v-0h-5Nq">
@@ -80,7 +80,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="ubP-Vm-hNo" kind="relationship" relationship="viewControllers" id="bu6-gi-BJo"/>
+                        <segue destination="kbR-QO-6RE" kind="relationship" relationship="viewControllers" id="bu6-gi-BJo"/>
                         <segue destination="SlS-af-hyk" kind="relationship" relationship="viewControllers" id="dg8-FL-z4C"/>
                     </connections>
                 </tabBarController>
@@ -93,7 +93,7 @@
             <objects>
                 <viewController id="hoh-fR-jae" customClass="OrangeViewController" customModule="PhotFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LAB-5f-Wz2">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Sk-D5-pRe">
@@ -124,14 +124,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kYL-x7-14m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1573.5999999999999" y="-346.55172413793105"/>
+            <point key="canvasLocation" x="2516" y="-346.55172413793105"/>
         </scene>
         <!--Red View Controller-->
         <scene sceneID="Kih-vq-BOQ">
             <objects>
                 <viewController id="oMo-eu-6h0" customClass="RedViewController" customModule="PhotFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Z0I-KT-a6L">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xbH-Td-rvi">
@@ -152,7 +152,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U37-KX-1Oh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2596" y="-346.55172413793105"/>
+            <point key="canvasLocation" x="3538.4000000000001" y="-346.55172413793105"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="kgr-p3-Uqg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kbR-QO-6RE" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item 1" id="hgC-OP-dcl"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="LKD-b6-Uk0">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ubP-Vm-hNo" kind="relationship" relationship="rootViewController" id="xC3-Ci-ffp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nN9-y5-nG3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="546.39999999999998" y="-345.81280788177344"/>
         </scene>
     </scenes>
     <resources>
