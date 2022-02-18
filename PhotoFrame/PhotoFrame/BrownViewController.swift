@@ -11,6 +11,7 @@ class BrownViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(#file, #line, #function, #column)
     }
     
     override func viewWillAppear(_ animated: Bool) {

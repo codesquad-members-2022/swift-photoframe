@@ -166,6 +166,74 @@
             </objects>
             <point key="canvasLocation" x="32" y="323"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="vne-Jv-zj6">
+            <objects>
+                <viewController id="Pgj-vf-nuv" customClass="ViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ckg-2Q-tc5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is The Test For Orientation!!!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="mfv-OQ-nuC">
+                                <rect key="frame" x="20" y="418" width="374" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cU7-SH-vHF">
+                                <rect key="frame" x="182.5" y="486" width="49" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="다음"/>
+                                <connections>
+                                    <action selector="nextButtonTouchUpInside:" destination="Pgj-vf-nuv" eventType="touchUpInside" id="sfb-xu-Mpl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5f2-Tj-aBT"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mfv-OQ-nuC" firstAttribute="leading" secondItem="ckg-2Q-tc5" secondAttribute="leading" constant="20" symbolic="YES" id="9UJ-7Q-Fez"/>
+                            <constraint firstItem="cU7-SH-vHF" firstAttribute="centerX" secondItem="ckg-2Q-tc5" secondAttribute="centerX" id="S2g-A0-yT4"/>
+                            <constraint firstItem="mfv-OQ-nuC" firstAttribute="centerY" secondItem="ckg-2Q-tc5" secondAttribute="centerY" id="jYE-VS-zl4"/>
+                            <constraint firstItem="cU7-SH-vHF" firstAttribute="top" secondItem="mfv-OQ-nuC" secondAttribute="bottom" constant="8" symbolic="YES" id="je3-th-4HX"/>
+                            <constraint firstAttribute="trailing" secondItem="mfv-OQ-nuC" secondAttribute="trailing" constant="20" symbolic="YES" id="njn-KZ-I2d"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9j2-0m-7U7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-942" y="1128"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="gi0-ir-7Fh">
+            <objects>
+                <viewController storyboardIdentifier="SecondViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2em-Zo-REE" customClass="SecondViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="N3t-W7-9fK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iRz-uQ-wGo">
+                                <rect key="frame" x="182.5" y="432.5" width="49" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="닫기"/>
+                                <connections>
+                                    <action selector="dismissButtonTouchUpInside:" destination="2em-Zo-REE" eventType="touchUpInside" id="bOa-9x-kW9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="64O-Jy-mgv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="iRz-uQ-wGo" firstAttribute="centerY" secondItem="N3t-W7-9fK" secondAttribute="centerY" id="7LU-Wv-Ln5"/>
+                            <constraint firstItem="iRz-uQ-wGo" firstAttribute="centerX" secondItem="N3t-W7-9fK" secondAttribute="centerX" id="xZE-UW-9Vh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ndf-Ty-Zlu"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YMt-6q-V4J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-99" y="1125"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
