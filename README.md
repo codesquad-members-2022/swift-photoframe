@@ -52,3 +52,18 @@ viewDidLoad()
 </div>
 </details>
 
+</div>
+</details>
+<details>
+<summary>Step4</summary>
+<div markdown="1">       
+
+## Step4
+### 요구사항 요약
+- 새로운 Scene과 Segue 추가
+### 결과 정리
+- 시뮬레이터 환경: iPhone SE(2nd generation)
+
+<img width="20%" alt="1" src="https://user-images.githubusercontent.com/42532724/154607253-6401ab34-c83a-451f-91ef-19473ae6fa0d.png"> <img width="20%" alt="1" src="https://user-images.githubusercontent.com/42532724/154607272-0886ac46-1083-4c92-a801-0c985701c8cc.png">
+</div>
+</details>
