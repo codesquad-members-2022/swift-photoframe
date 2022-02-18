@@ -332,4 +332,33 @@ ASSET의 1x, 2x, 3x
 
 ----
 
+## 다른 화면 연결하기.
+
+### 기능 요구 사항
+> [x] 이미지 테두리 액자 화면을 추가한다.
+>
+> [x] 사진 앨범에서 사진을 가져와서 보여줄 수 있도록 개선한다.
+>
+
+### 구현 과정
+1. 스토리보드에 액자 이미지뷰 추가.
+2. 스토리보드에 사진선택 버튼 추가.
+3. 코드에서 액자와 이미지 xposition설정.
+4. UIImagePickerController로 이미지 받아오는 기능 구현.
+5. 받아온 이미지 imageview로 설정.
+
+### 실행결과
+![Simulator Screen Recording - iPhone 11 - 2022-02-18 at 15 52 03](https://user-images.githubusercontent.com/62687919/154633235-1507b42b-7ee9-4f6f-9475-cfef669e99e6.gif)
+
+
+### 추가학습
+- UIImagePickerController처럼 이미 만들어놓은 시스템 컨트롤러들에 대해 학습한다.
+    - 얼마전 사용하였던 TabBarController, NavigationController와 TableViewController, CollectionViewController등이 있습니다. 이는 모두    UIViewController를 상속받고 있으며 View생명주기 관련 메소드들(viewDidLoad 등)도 사용 가능합니다.
+    
+- 델리게이트(Delegate)와 프로토콜(Protocol) 상관 관계에 대해 학습한다
+    - PhotoDelegate라 하면 photoPicker에서의 이벤트를 비동기로 전달해주는 프로토콜로 알고 있습니다. 이를 위임자(delegate)라 하는걸로 공부하였습니다.
+    - 역할을 더 분리해보고 싶어 Delegate클래스를 직접 구현해보았습니다.
+    
+
+----
 
