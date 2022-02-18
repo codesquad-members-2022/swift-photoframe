@@ -836,9 +836,9 @@
 
 ### 📌체크 포인트
 
-- [ ] 두번째 Scene에 UIImageView를 추가하고, 해당 뷰컨트롤러에 `photoImageView` 아웃렛 변수와 연결
-- [ ] 두번째 Scene 하단에 [다음] 버튼을 추가하고, 누르면 다음 이미지로 ImageView를 변화시키는 `nextImageButtonTouched(_:)` 액션 메서드와 연결
-- [ ] UIImageView에 관해 한가지 변주를 줘보기 - ImageView 바깥쪽에 shadow를 주는 변주를 선택
+- [x] 두번째 Scene에 UIImageView를 추가하고, 해당 뷰컨트롤러에 `photoImageView` 아웃렛 변수와 연결
+- [x] 두번째 Scene 하단에 [다음] 버튼을 추가하고, 누르면 다음 이미지로 ImageView를 변화시키는 `nextImageButtonTouched(_:)` 액션 메서드와 연결
+- [x] UIImageView에 관해 한가지 변주를 줘보기 - ImageView 바깥쪽에 shadow를 주는 변주를 선택
 
 ---
 
@@ -891,7 +891,7 @@
 
 6. UIImageView에 대해 조금 변주를 주기 위해, UIImageView에 그림자를 주도록 했습니다. 
 
-	처음에는 UIImageView layer에 직접 shadow와 관련된 프로퍼티를 수정해줬으나 그림자가 적용되지 않았습니다. 원인을 찾으려고 하면서 UIImageView에 대해 공부를 하다가, UIImageView의 ContentMode 프로퍼티를 `Aspect Fill` 로 설정해놓았던 것 때문에 Image가 UIImageView의 크기에 맞게 잘리는데, 그로인해 설정해놓은 layer의 shadow부분까지 모두 잘려나갔기 때문임을 발견했습니다. 
+	처음에는 UIImageView layer에 직접 shadow와 관련된 프로퍼티를 수정해줬으나 그림자가 적용되지 않았습니다. 원인을 찾으려고 하면서 UIImageView에 대해 공부를 하다가, UIImageView의 ContentMode 프로퍼티를 `Aspect Fill` 로 설정해놓았고 clipsToBounds 속성도 true로 설정해놨기 때문에 Image의 특정부분이 UIImageView의 크기에 맞게 잘리는데, 그로인해 설정해놓은 layer의 shadow부분까지 모두 잘려나갔기 때문임을 발견했습니다. 
 
 	이를 해결하고자 UIImageView를 새로 선언한 UIView 내에 위치하도록 설정하고, UIView의 layer에 shadow 프로퍼티 수정을 가해줬더니 원하는 모양대로 이미지가 출력됨을 확인할 수 있었습니다. 출력 화면은 다음과 같습니다.
 
