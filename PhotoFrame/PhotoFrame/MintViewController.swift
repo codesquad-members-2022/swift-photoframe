@@ -18,7 +18,7 @@ class MintViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(#file, #line, #function, #column)
+        print("MintViewController", #function)
         
 //        self.view.addSubview(closeButton)
 //        // 이렇게 하는 방법은 addSubview의 위치가 상관없고, translatesAutoresizingMaskIntoConstraints는 true여야한다. false이면 위치가 지정이 안돼. 그냥
@@ -45,24 +45,24 @@ class MintViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print(#file, #line, #function, #column)
+        print("MintViewController", #function)
     }
     
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        print(#file, #line, #function, #column)
+        print("MintViewController", #function)
     }
     
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        print(#file, #line, #function, #column)
+        print("MintViewController", #function)
     }
     
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        print(#file, #line, #function, #column)
+        print("MintViewController", #function)
     }
 }
