@@ -42,10 +42,38 @@ class YellowViewController: UIViewController {
     @IBAction func nextButtonTouched(_ sender: UIButton) {
         let newImage = chooseRandomImage()
         self.photoImageView.image = newImage
+//        self.present(self.imagePicker, animated: true)
+        
     }
     
     func chooseRandomImage() -> UIImage {
         let randomImageName = String((1...22).randomElement() ?? 1)
         return UIImage(named: randomImageName.count < 2 ? "0" + randomImageName : randomImageName) ?? UIImage(named: "01")!
     }
+    
+    @IBAction func selectButtonTouched(_ sender: UIButton) {
+        let imagePicker = UIImagePickerController()
+        imagePicker.sourceType = .photoLibrary
+        imagePicker.allowsEditing = true
+        imagePicker.delegate = self
+        present(imagePicker, animated: true)
+    }
+}
+
+extension YellowViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        var newImage: UIImage? = nil
+        
+        if let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
+            newImage = image
+        } else if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            newImage = image
+        }
+        
+        self.photoImageView.image = newImage
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
 }
