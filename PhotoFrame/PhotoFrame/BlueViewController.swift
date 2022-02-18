@@ -8,8 +8,15 @@
 import UIKit
 
 class BlueViewController: UIViewController {
+    
+    // MARK: - Properties
+    @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var closeButton: UIButton!
+    
+    // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.configureButtons()
         print("\nSecond View", #function)
     }
     
@@ -32,4 +39,21 @@ class BlueViewController: UIViewController {
         super.viewDidAppear(animated)
         print("Second View", #function)
     }
+    
+    // MARK: - Methods
+    func configureButtons() {
+        self.nextButton.addTarget(self, action: #selector(self.presentScene), for: .touchUpInside)
+        self.closeButton.addTarget(self, action: #selector(self.closeScene), for: .touchUpInside)
+    }
+    
+    @objc func presentScene() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "GreenViewController")
+        self.present(vc, animated: true, completion: nil)
+    }
+    
+    @objc func closeScene() {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 }
