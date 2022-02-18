@@ -83,35 +83,42 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="vqx-hq-JJS">
-                                <rect key="frame" x="87" y="247.5" width="240" height="401"/>
+                                <rect key="frame" x="62" y="222.5" width="290" height="451"/>
                                 <subviews>
                                     <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="CRF-73-1bj">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="290" height="290"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="B4h-wO-8hl">
-                                                <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
+                                                <rect key="frame" x="25" y="25" width="240" height="240"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="240" id="2Zr-Am-qRo"/>
                                                     <constraint firstAttribute="width" constant="240" id="gfy-iJ-kdU"/>
                                                 </constraints>
                                             </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photoframe-border" translatesAutoresizingMaskIntoConstraints="NO" id="79B-Fs-I7C">
+                                                <rect key="frame" x="0.0" y="0.0" width="290" height="290"/>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="240" id="1z2-Qw-mIw"/>
+                                            <constraint firstAttribute="height" constant="290" id="1z2-Qw-mIw"/>
                                             <constraint firstItem="B4h-wO-8hl" firstAttribute="centerX" secondItem="CRF-73-1bj" secondAttribute="centerX" id="5da-cC-CTB"/>
-                                            <constraint firstAttribute="width" constant="240" id="6Mb-Mj-dKM"/>
+                                            <constraint firstAttribute="width" constant="290" id="6Mb-Mj-dKM"/>
+                                            <constraint firstItem="79B-Fs-I7C" firstAttribute="leading" secondItem="CRF-73-1bj" secondAttribute="leading" id="9uV-cN-rJ6"/>
+                                            <constraint firstItem="79B-Fs-I7C" firstAttribute="top" secondItem="CRF-73-1bj" secondAttribute="top" id="9vi-vQ-Hpb"/>
                                             <constraint firstItem="B4h-wO-8hl" firstAttribute="centerY" secondItem="CRF-73-1bj" secondAttribute="centerY" id="BNf-kE-Rae"/>
+                                            <constraint firstAttribute="trailing" secondItem="79B-Fs-I7C" secondAttribute="trailing" id="b3F-1V-yM2"/>
+                                            <constraint firstAttribute="bottom" secondItem="79B-Fs-I7C" secondAttribute="bottom" id="cSa-CI-c0q"/>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SecondViewIndicator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="qFW-oa-AIZ">
-                                        <rect key="frame" x="5.5" y="290" width="229" height="30"/>
+                                        <rect key="frame" x="30.5" y="340" width="229" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TUT-Q5-4cN">
-                                        <rect key="frame" x="96" y="370" width="48.5" height="31"/>
+                                        <rect key="frame" x="121" y="420" width="48.5" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="다음">
                                             <backgroundConfiguration key="background">
@@ -135,9 +142,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="58H-e2-C6P"/>
                     <connections>
+                        <outlet property="photoFrameImageView" destination="79B-Fs-I7C" id="LYY-Ku-Uec"/>
                         <outlet property="photoImageView" destination="B4h-wO-8hl" id="vjn-do-KEX"/>
+                        <outlet property="photoView" destination="CRF-73-1bj" id="Ilv-90-AgQ"/>
                         <outlet property="secondViewIndicatorLabel" destination="qFW-oa-AIZ" id="FbZ-ZB-tgX"/>
-                        <outlet property="shadowView" destination="CRF-73-1bj" id="Ilv-90-AgQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fpx-BN-j4b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -183,6 +191,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="photoframe-border" width="240" height="240"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
