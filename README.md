@@ -825,3 +825,141 @@
 3. 내비게이션 컨트롤러 관련 메서드가 왜 push / pop 인지 학습한다.
 
 	Navigation Controller는 화면을 나타내주는 뷰컨트롤러들을 **Navigation Stack에 쌓는 형식** 으로 관리합니다. **Stack** 을 사용하기 때문에, 다음 Scene이 나타나면 해당 Scene의 뷰컨트롤러를 **push** 하여 위에 쌓아서 디바이스의 화면에 보여주고, 이전 Scene으로 돌아가는 경우에는 맨 위에 있는 Scene의 뷰컨트롤러를 **pop** 하여 디바이스의 화면에서 제거해줍니다. 
+
+
+
+---
+
+---
+
+## 7. 다른 화면 연결하기
+
+### 📌체크 포인트
+
+- [ ] 두번째 Scene에 UIImageView를 추가하고, 해당 뷰컨트롤러에 `photoImageView` 아웃렛 변수와 연결
+- [ ] 두번째 Scene 하단에 [다음] 버튼을 추가하고, 누르면 다음 이미지로 ImageView를 변화시키는 `nextImageButtonTouched(_:)` 액션 메서드와 연결
+- [ ] UIImageView에 관해 한가지 변주를 줘보기 - ImageView 바깥쪽에 shadow를 주는 변주를 선택
+
+---
+
+### 💻진행 과정
+
+1. 이전 Step에서 만들었던 이전 화면으로 가는 [닫기]버튼, 세번째 Scene, 그와 관련된 ViewController, LifeCycle 관련 콜백함수들을 삭제했습니다.
+
+2. UIImageView를 두번째 Scene에 추가하고, YellowViewController에 `photoImageView` 아웃렛 변수로 연결했습니다. 
+
+3. [다음] 버튼 또한 두번째 Scene에 생성하여, YellowViewController의 `nextButtonTouched(_:)` 액션 메서드와 연결했습니다. 해당 버튼을 누르면 ImageView에 랜덤한 이미지를 보여줘야 하기 때문에, 먼저 주어진 이미지들을 프로젝트에 등록했고, 아래의 메서드를 완성했습니다.
+
+	```swift
+	@IBAction func nextButtonTouched(_ sender: UIButton) {
+	    let imageName = chooseRandomImageName()
+	    self.photoImageView.image = UIImage(named: imageName)
+	}
+	
+	func chooseRandomImageName() -> String {
+	    let randomImageName = String((1...22).randomElement() ?? 1) + ".jpg"
+	    return randomImageName < 6 ? "0" + randomImageName : randomImageName
+	}
+	```
+
+4. 이전 PR에서 JK께서 말씀해주셨던, 뷰 속성을 다루는 부분이 길어지면 별도 메서드로 분리해보는 것도 좋다는 내용이 떠올라 UILabel의 Text 속성을 지정해주던 코드를 분리해 `setLabelFont()` 메서드로 만들었습니다. 해당 메서드는 아래와 같이 선언했습니다.
+
+	```swift
+	func setLabelFont() {
+	    secondViewIndicatorLabel.font = .systemFont(ofSize: 25)
+	    let fontSize = UIFont.boldSystemFont(ofSize: 35)
+	    let attributedString = NSMutableAttributedString(string: secondViewIndicatorLabel.text!)
+	    attributedString.addAttribute(.font, value: fontSize, range: (secondViewIndicatorLabel.text! as NSString).range(of:"Sol"))
+	    attributedString.addAttribute(.foregroundColor, value: UIColor.systemRed, range: (secondViewIndicatorLabel.text! as NSString).range(of:"Sol"))
+	    secondViewIndicatorLabel.attributedText = attributedString
+	}
+	```
+
+5. Step 1에서 잠시 공부해봤던 Literal 구문을 이번 ImageView에서 사용해보고 싶어서, 이미지들을 모두 Assets 폴더에 추가한뒤 UIImageView에서 Assets에 있는 이미지들을 image Literal 구문을 이용해 불러오도록 수정해보았습니다. 수정한 코드는 아래와 같습니다.
+
+	```swift
+	@IBAction func nextButtonTouched(_ sender: UIButton) {
+	    let imageName = chooseRandomImageName()
+	    self.photoImageView.image = UIImage(named: imageName)
+	}
+	
+	func chooseRandomImageName() -> String {
+	    let randomImageName = String((1...22).randomElement() ?? 1) + ".jpg"
+	    return randomImageName < 6 ? "0" + randomImageName : randomImageName
+	}
+	```
+
+6. UIImageView에 대해 조금 변주를 주기 위해, UIImageView에 그림자를 주도록 했습니다. 
+
+	처음에는 UIImageView layer에 직접 shadow와 관련된 프로퍼티를 수정해줬으나 그림자가 적용되지 않았습니다. 원인을 찾으려고 하면서 UIImageView에 대해 공부를 하다가, UIImageView의 ContentMode 프로퍼티를 `Aspect Fill` 로 설정해놓았던 것 때문에 Image가 UIImageView의 크기에 맞게 잘리는데, 그로인해 설정해놓은 layer의 shadow부분까지 모두 잘려나갔기 때문임을 발견했습니다. 
+
+	이를 해결하고자 UIImageView를 새로 선언한 UIView 내에 위치하도록 설정하고, UIView의 layer에 shadow 프로퍼티 수정을 가해줬더니 원하는 모양대로 이미지가 출력됨을 확인할 수 있었습니다. 출력 화면은 다음과 같습니다.
+
+	<img src="https://user-images.githubusercontent.com/92504186/154618593-42df0876-99a4-44e4-b7f9-ee6d1b4ad71c.gif" alt="SS 2022-02-18 PM 01 38 21" width="20%;" />
+
+---
+
+### 📝추가 학습거리
+
+1. UIImageView와 UIImage 클래스는 각각 어떤 역할을 담당하는지 학습한다.
+
+	1. **UIImageView**
+
+		> An object that displays a single image or a sequence of animated images in your interface.
+		>
+		> 단일 이미지 또는 일련의 애니메이션 이미지를 인터페이스에 표시하는 객체 ([애플 개발자 문서(UIImageView)](https://developer.apple.com/documentation/uikit/uiimageview))
+
+		UIImageView는 UIImage 객체를 사용하여 이미지를 나타내주는 역할을 합니다. 
+
+		UIImageView는 ContentMode 프로퍼티를 이용해 이미지를 표시하는 방법을 결정합니다.
+
+		> 1. UIImageView.ContentMode.AspectFit
+		>
+		> 	이미지의 비율을 유지하면서, 이미지의 높이든 넓이든 더 큰 값을 현재 ImageView의 사이즈에 맞추고, 더 작은 값은 비율에 맞추어주어 이미지를 나타냅니다.
+		>
+		> 	<img src="https://user-images.githubusercontent.com/92504186/154619487-99b9d647-6221-4799-a67c-40b36589aab5.jpg" alt="SS 2022-02-18 PM 01 48 43" width="20%;" />
+		>
+		> 2. UIImageView.ContentMode.AspectFill
+		>
+		> 	마찬가지로 이미지의 비율을 유지하면서, 이미지의 높이든 넓이든 더 작은 값을 현재 ImageView의 사이즈에 맞추고, 더 큰 값은 비율에 맞추어주어 이미지를 나타냅니다.
+		>
+		> 	만약 clipsToBounds 속성이 True라면 더 큰 값(넘치는 부분)을 잘라내고, False라면 잘라내지 않고 이미지의 모든 부분을 나타내줍니다.
+		>
+		> 	1. clipsToBounds == true
+		>
+		> 		<img src="https://user-images.githubusercontent.com/92504186/154619816-f4530f82-aebc-4ba9-9eb2-6546c948c208.jpg" width="20%;" />
+		>
+		> 	2. clipsToBounds == false
+		>
+		> 		<img src="https://user-images.githubusercontent.com/92504186/154619914-d2476b02-2684-41af-b46a-505012635f8b.jpg" alt="SS 2022-02-18 PM 01 53 31" width="20%;" />
+		>
+		> 3. UIImageView.ContentMode.ScaleToFill
+		>
+		> 	비율에 상관없이 UIImageView의 사이즈에 이미지를 맞추어 보여줍니다.
+		>
+		> 	<img src="https://user-images.githubusercontent.com/92504186/154620036-eb74ec56-321c-4a95-b3b0-76b971c8630b.jpg" alt="SS 2022-02-18 PM 01 54 46" width="20%;" />
+
+	2. **UIImage**
+
+		> An object that manages image data in your app.
+		>
+		> 앱에서 이미지 데이터를 관리하는 객체 [애플 개발자 문서(ImageView)](https://developer.apple.com/documentation/uikit/uiimage)
+
+		Image 객체를 사용해 모든 종류의 이미지 데이터를 나타낼 수 있는 클래스입니다. 
+
+2. 이미지 뷰의 속성은 어떤 것들이 있는지 [애플 개발자 문서](https://developer.apple.com/documentation/uikit/uiimageview/)를 참고한다.
+
+	1. 표시된 이미지에 엑세스할 수 있는 프로퍼티
+		- **image**: UIImage? 타입으로, Image View 안에 나타나는 이미지
+		- **highlightedImage**: UIImage? 타입으로, Image View 안에 나타나는 강조 표시된 이미지 (해당 UIImageView에 제스처가 발동됐을 때 나타나는 이미지)
+	2. 이미지 시퀀스 애니메이션
+		* **animationImages**: [UIImage]? 타입으로, 애니메이션에 사용될 UIImage 객체의 배열
+		* **hilightedAnimationImages**: [UIImage]? 타입으로, View가 강조 표시될 때 애니메이션에 사용할 UIImage 객체의 배열
+		* **animationDuration**: TimeInterval 타입으로, 이미지 애니메이션 한 주기의 시간
+		* **animationRepeatCount**: Int 타입으로, 애니메이션을 반복할 횟수를 지정
+		* **isAnimating**: Bool 타입으로, 해당 UIImageView에 애니메이션이 동작중인지를 나타내는 Bool 값
+	3. Image View 구성
+		- **isUserInteractionEnabled**: Bool 타입으로, User Interaction이 무시되고 이벤트 큐에서 제거되는지 여부를 결정하는 Bool 값
+		- **isHighlighted**:  Bool 타입으로, 이미지가 강조되는지 여부를 결정하는 Bool 값
+		- **tintColor**: UIColor! 타입으로, 뷰 계층에서 템플릿 이미지의 색을 지정하는데 사용되는 색상
+
