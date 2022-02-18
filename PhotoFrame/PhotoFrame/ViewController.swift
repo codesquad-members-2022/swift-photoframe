@@ -62,7 +62,6 @@ class ViewController: UIViewController {
         
         nextButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         nextButton.centerYAnchor.constraint(equalTo: photoLabel.topAnchor, constant: -50).isActive = true
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -84,5 +83,4 @@ class ViewController: UIViewController {
         print("ViewController가 사라졌다.")
         print(#file, #line, #function, #column)
     }
-    
 }
