@@ -21,34 +21,6 @@ class YellowViewController: UIViewController {
         attributedString.addAttribute(.font, value: fontSize, range: (secondViewIndicatorLabel.text! as NSString).range(of: "Second"))
         attributedString.addAttribute(.foregroundColor, value: UIColor.systemRed, range: (secondViewIndicatorLabel.text! as NSString).range(of: "Second"))
         secondViewIndicatorLabel.attributedText = attributedString
-        print(#file, #line, #function, #column)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        print(#file, #line, #function, #column)
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        print(#file, #line, #function, #column)
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        print(#file, #line, #function, #column)
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        print(#file, #line, #function, #column)
-    }
-    
-    @IBAction func nextButtonTouched(_ sender: UIButton) {
-        guard let blueViewController = self.storyboard?.instantiateViewController(withIdentifier: "blueViewController") else {return}
-        self.show(blueViewController, sender: sender)
-    }
-    @IBAction func closeButtonTouched(_ sender: UIButton) {
-        self.navigationController?.popViewController(animated: true)
+        
     }
 }
