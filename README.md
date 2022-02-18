@@ -384,3 +384,65 @@ viewDidDisappear()
     - 결국 여기서는 self.storyboard나 storyboard나 같다. 
 ![스크린샷 2022-02-18 오전 11 05 34](https://user-images.githubusercontent.com/80263729/154603848-ef0bb071-9c14-4270-9b42-2d61dccdac04.png)
 
+- - -
+
+`Step08`
+
+- [X] 화면 요소들을 겹쳐서 디자인 하는 경우 z축으로 위-아래를 구분해서 표시한다.
+
+![스크린샷 2022-02-18 오후 3 53 10](https://user-images.githubusercontent.com/80263729/154632857-440f276c-7da2-476b-a7d4-1e21c9f1a658.png)
+
+- [X] 이미지 테두리 액자 화면을 추가한다.
+
+![스크린샷 2022-02-18 오후 3 46 24](https://user-images.githubusercontent.com/80263729/154632003-39defcd1-b2c5-444e-9179-f313f57f0199.png)
+
+- [X] 사진 앨범에서 사진을 가져와서 보여줄 수 있도록 개선한다.
+- [X] selectButtonTouched에서는 UIImagePickerController로 사진 앱 - 카메라롤에서 사진을 가져오도록 구현한다.
+
+- 실행은 됬지만 선택한 이미지를 imageView로 가지고오기를 실패했다.
+![Simulator Screen Recording - iPhone 13 - 2022-02-18 at 16 48 01](https://user-images.githubusercontent.com/80263729/154640214-2851c917-4609-409f-b2cf-da1c079b7d9a.gif)
+
+- [X] 권한 설정이 필요하면 Info.plist에 추가한다.
+![스크린샷 2022-02-18 오후 4 02 48](https://user-images.githubusercontent.com/80263729/154634032-4d97a069-0398-4e1c-ba0c-bc721388ba94.png)
+
+- [X] 카메라롤에서 사진을 가져오기 위해 해줘야 하는 동작들을 찾아서 구현한다.
+미리 선언한 delegate함수중 밑의 함수를 이용한다
+이름 그대로 이미지 선택하기가 끝나면 정보를 가지고온다.
+선택한 이미지의 info를 print해본다.
+
+
+~~~swift 
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {   
+    }
+~~~
+
+Dictionary 형태로 값이 출력됨을 알수 있고 이를 통해 image데이터를 가져 올 수 있었다.
+
+![스크린샷 2022-02-18 오후 4 52 39](https://user-images.githubusercontent.com/80263729/154640904-098759f7-63ae-49c6-a123-dfe7d231d422.png)
+
+~~~swift
+//ImagePicker를 다루기 위한 Delegate
+extension PhotoViewController: UIImagePickerControllerDelegate , UINavigationControllerDelegate  {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        print(info)
+        let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage //가져온 이미지
+        self.photoImageView.contentMode = .scaleAspectFill //비율을 유지하면 꽉차게 만든다.
+        self.photoImageView.image = pickedImage //image를 넣는다
+        dismiss(animated: true, completion: nil) //화면이 내려가지 않기 때문에 추가해준다.
+    }
+}
+~~~
+
+성공!
+![Simulator Screen Recording - iPhone 13 - 2022-02-18 at 16 59 20](https://user-images.githubusercontent.com/80263729/154641911-ca3171f8-7e7c-4269-a0ea-b12344b489b3.gif)
+
+
+
+
+- [X] 선택한 사진을 받기 위해서 구현해야 하는 메서드는 어떤게 있는지 찾아 구현한다.
+
+추가학습거리
+UIImagePickerController처럼 이미 만들어놓은 시스템 컨트롤러들에 대해 학습하기
+
+델리게이트(Delegate)와 프로토콜(Protocol) 상관 관계에 대해 학습한다.
+
