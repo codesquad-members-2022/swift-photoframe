@@ -8,7 +8,7 @@ class BlackViewController: UIViewController {
     
     @IBAction func greenButtonTouched(_ sender: Any) {
         if let greenView = storyboard?.instantiateViewController(withIdentifier: "greenView") {
-            self.present(greenView, animated: true, completion: nil)
+            self.navigationController?.pushViewController(greenView, animated: true)
         }
     }
     
