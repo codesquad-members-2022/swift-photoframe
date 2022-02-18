@@ -19,6 +19,8 @@ class ViewController: UIViewController {
         self.firstDescription.text = "Jihee's Photo Frame"
         self.firstDescription.textColor = .darkGray
      
+        self.tabBarController?.tabBar.tintColor = .black
+        
         print(#file, #line, #function, #column)
     }
     
@@ -26,12 +28,7 @@ class ViewController: UIViewController {
     @IBAction func nextButtonTouched(_ sender: UIButton) {
         self.photoLabel.text = "Go Dark"
         self.photoLabel.font = UIFont(name: "Futura Bold", size: 45)
-        
-//        // storyBoard를 통해 화면의 storyBoard ID 참조해 뷰 컨드롤러 가져오기 == Modal을 이용하여 Present
-//        guard let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "SecondViewController") else { return }
-//        
-//        secondViewController.modalTransitionStyle = UIModalTransitionStyle.coverVertical
-//        self.present(secondViewController, animated: true)
+
     }
     
     

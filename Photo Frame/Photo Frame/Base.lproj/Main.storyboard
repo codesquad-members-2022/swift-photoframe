@@ -165,6 +165,9 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Close" cornerStyle="capsule">
                                     <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="closeButtonTouchedInBlack:" destination="0SN-Qe-AEa" eventType="touchUpInside" id="KgI-ex-oVz"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Close" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nLl-Az-uFt">
                                 <rect key="frame" x="188" y="518" width="39" height="18"/>

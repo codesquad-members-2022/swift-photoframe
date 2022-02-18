@@ -12,7 +12,9 @@ class GrayViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.barTintColor = .white
+        
+        self.tabBarController?.tabBar.tintColor = .white
+        self.navigationController?.navigationBar.tintColor = UIColor.white
         
         print(#file, #line, #function, #column)
     }
@@ -35,6 +37,7 @@ class GrayViewController: UIViewController {
     
     @IBAction func closeButtonTouchedInGray(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
+        self.tabBarController?.tabBar.tintColor = .black
     }
     
 
