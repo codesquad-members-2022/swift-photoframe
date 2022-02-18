@@ -103,7 +103,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="green"/>
                                 <connections>
-                                    <segue destination="iEz-rB-q0f" kind="show" id="tzR-sC-c8V"/>
+                                    <segue destination="iEz-rB-q0f" kind="presentation" modalPresentationStyle="fullScreen" id="tzR-sC-c8V"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -125,7 +125,7 @@
             <objects>
                 <viewController id="iEz-rB-q0f" customClass="GreenViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0vD-aW-iVX">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="E3t-Qk-wb1"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
