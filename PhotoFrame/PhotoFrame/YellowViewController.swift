@@ -11,28 +11,27 @@ class YellowViewController: UIViewController {
 
     @IBAction func nextButtonTouched(_ sender: Any) {
         guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "BlueViewController") as? BlueViewController else { return }
-        nextVC.modalTransitionStyle = .crossDissolve
-        nextVC.modalPresentationStyle = .automatic
-        self.present(nextVC, animated: true, completion: nil)
+        navigationController?.pushViewController(nextVC, animated: true)
     }
     
     @IBOutlet weak var closeButton: UIButton!
     @IBAction func closeButtonTouched(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        navigationController?.popViewController(animated: true)
     }
     
     override func viewDidLoad() {
         print("\nYellowViewController가 로드되었다.")
         print(#file, #line, #function, #column)
         super.viewDidLoad()
+    
+        closeButton.translatesAutoresizingMaskIntoConstraints = false
+        
         closeButton.setTitle("닫기", for: .normal)
         closeButton.backgroundColor = .lightGray
         closeButton.layer.cornerRadius = 10
         
-        closeButton.translatesAutoresizingMaskIntoConstraints = false
-        
-        closeButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30).isActive = true
-        closeButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 30).isActive = true
+        closeButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -30).isActive = true
+        closeButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 30).isActive = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
