@@ -25,6 +25,5 @@ class GrayViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         print("Gray View did disappear")
-        print(#file, #line, #function, #column)
     }
 }
