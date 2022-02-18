@@ -166,3 +166,86 @@
 ☑️ `should` : return타입이 있어서, 꼭 Yes or No 즉 Bool으로 return한다.
 
 ![Step5](https://user-images.githubusercontent.com/92635121/154445711-f58b0277-5519-4c4e-b45f-855381114304.gif)
+
+
+<br>
+
+## Step6. Container ViewController 활용하기
+- [x]  ViewController Container 역할 학습
+- [x]  ViewController Container 종류 학습
+- [x]  기존 `닫기` 버튼 코드 수정
+- [x]  ViewController Class 학습
+- [x]  NavigationController 존재 여부에 따른 화면 동작 차이 및 포함관계 학습
+- [x]  NavigationController 관련 메서드가 왜 push와 pop인지 학습
+
+<br>
+
+### ViewController Container
+
+<br>
+
+ViewController는 크게 두 가지 역할이 있다.
+
+- **Contents View Controller**  
+    →  앱의 데이터를 화면에 보여주는 등 기본적인 View Controller의 역할
+    
+- **Container View Controller**  
+    →  보통 직접 보여주는 역할은 아니며, View Controller 간의 부모-자식 관계를 형성, 자신만의 방식으로 자식을 관리
+    
+<br>
+
+    Container View Controller가 필요한 이유?
+    
+- 위와 같이 Container View Controller를 사용하면 하위 뷰가 생기고, 각자 자체 ViewController를 갖게 됨으로써 유지보수를 용이하게 한다. (뷰 자체의 구역 분리)
+- 분리하지 않으면, 하나의 뷰 컨트롤러가 너무 많은 역할을 하게되고 유지보수와 테스트가 힘들어짐 (구역별로 특성에 맞게 각각의 뷰 컨트롤러를 두고 따로 관리)
+- 구역별로 특성에 맞게 각각의 뷰 컨트롤러를 두고 따로 관리
+****
+
+<br>
+
+    Container View Controller 종류
+    
+- Navigation Bar : 이 화면이 어떤 화면인지 보여주는 영역 (최 상단에 위치)
+- TabBar
+- rootViewController 의 Master/Detail ViewController
+- spiltViewController
+- pageViewController
+
+<br>
+
+### Navigation Controller
+
+<aside>
+💡 계층적인 콘텐츠를 관리하는 컨트롤러로, 앱의 내비를 표시할 내비게이션 바가 내장되어있음.
+
+</aside>
+
+- VC들의 전환을 직접 컨트롤하고, 앱의 내비게이션 정보를 표시 함
+- 화면 전환이 발생하는 VC들의 포인터를 Stack으로 관리 → 화면 접근이 용이하게 함
+- 계층 구조를 관리하는 역할이라, 직접 컨텐츠를 담고 구성하지 않음
+- 대신, 다른 VC를 포함 → 제어하는 모든 VC에 내비게이션 바를 생성함
+- 가장 아래에 있는 첫 번째 VC : rootViewController
+- 가장 위에 있는 마지막 VC : 현재 화면에 표시되고 있는 view
+
+| 설명 | 메서드 |
+| --- | --- |
+| Stack의 최상위 VC 추가 | pushViewController(_: animated) |
+| Stack의 최상위 제거 | popViewController(animated: ) |
+
+<br>
+
+### **Container 제작시 고려해야 할 사항**
+    - 어떤 View Controller가 부모(Container)이 될건지, 어떤 VC가 Child 역할을 할건지
+    - 꽉 채우는 VC가 Parent, 작은 영역을 차지하는 VC가 Child
+    - TabBar를 사용하는 경우 → 형제 계층(동등한 레벨)이 있는지 등 VC간의 관계
+    - Child VC를 어떻게 추가하고 삭제하나?
+    - Child VC가 변할 수 있나? 있다면, 변화의 조건은 무엇인가?
+    - Child VC가 변화(회전, 화면크기 등)하면, 그 변화는 누가 담당할 것인가?
+    - 내비게이션을 위해 제공하는 뷰가 있나? 아님 컨테이너가 직접 꾸미는 뷰가 있나?
+    - Parent-Child 사이의 어떤 통신이 필요한가?
+    
+    
+![Step6](https://user-images.githubusercontent.com/92635121/154720866-88173a65-cc10-446d-bd12-4e9bbd77b856.gif)
+
+    
+    
