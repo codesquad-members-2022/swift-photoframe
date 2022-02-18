@@ -18,6 +18,8 @@ class YellowViewController: UIViewController {
         super.viewDidLoad()
         secondViewIndicatorLabel.text = "Sol Album"
         self.photoImageView.image = UIImage(named: "01")
+        self.photoImageView.layer.zPosition = 2.0
+        self.photoFrameImageView.layer.zPosition = 1.0
         
         setLabelFont()
         setShadowView()
