@@ -13,6 +13,7 @@
 		003ACC1427BB40EC0021AEF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 003ACC1227BB40EC0021AEF2 /* Main.storyboard */; };
 		003ACC1627BB40ED0021AEF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 003ACC1527BB40ED0021AEF2 /* Assets.xcassets */; };
 		003ACC1927BB40ED0021AEF2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 003ACC1727BB40ED0021AEF2 /* LaunchScreen.storyboard */; };
+		00863DF127BF6D7500D6AB89 /* LightGrayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00863DF027BF6D7500D6AB89 /* LightGrayViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		003ACC1527BB40ED0021AEF2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		003ACC1827BB40ED0021AEF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		003ACC1A27BB40ED0021AEF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00863DF027BF6D7500D6AB89 /* LightGrayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightGrayViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				003ACC0C27BB40EC0021AEF2 /* AppDelegate.swift */,
 				003ACC0E27BB40EC0021AEF2 /* SceneDelegate.swift */,
 				003ACC1027BB40EC0021AEF2 /* FirstViewController.swift */,
+				00863DF027BF6D7500D6AB89 /* LightGrayViewController.swift */,
 				003ACC1227BB40EC0021AEF2 /* Main.storyboard */,
 				003ACC1527BB40ED0021AEF2 /* Assets.xcassets */,
 				003ACC1727BB40ED0021AEF2 /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 			files = (
 				003ACC1127BB40EC0021AEF2 /* FirstViewController.swift in Sources */,
 				003ACC0D27BB40EC0021AEF2 /* AppDelegate.swift in Sources */,
+				00863DF127BF6D7500D6AB89 /* LightGrayViewController.swift in Sources */,
 				003ACC0F27BB40EC0021AEF2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
