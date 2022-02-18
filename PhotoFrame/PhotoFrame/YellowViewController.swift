@@ -14,8 +14,9 @@ class YellowViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        secondViewIndicatorLabel.text = "Second View"
+        secondViewIndicatorLabel.text = "Sol Album"
         secondViewIndicatorLabel.font = .systemFont(ofSize: 25)
+        self.photoImageView.image = UIImage(named: "01.jpg")
         
         let fontSize = UIFont.boldSystemFont(ofSize: 35)
         let attributedString = NSMutableAttributedString(string: secondViewIndicatorLabel.text!)
@@ -24,6 +25,14 @@ class YellowViewController: UIViewController {
         secondViewIndicatorLabel.attributedText = attributedString
         
     }
+    
     @IBAction func nextButtonTouched(_ sender: UIButton) {
+        let imageName = chooseRandomImageName()
+        self.photoImageView.image = UIImage(named: imageName)
+    }
+    
+    func chooseRandomImageName() -> String {
+        let randomImageName = String((1...22).randomElement() ?? 1) + ".jpg"
+        return randomImageName.count < 6 ? "0"+randomImageName : randomImageName
     }
 }
