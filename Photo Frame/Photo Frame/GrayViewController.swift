@@ -9,8 +9,11 @@ import UIKit
 
 class GrayViewController: UIViewController {
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.barTintColor = .white
+        
         print(#file, #line, #function, #column)
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -30,8 +33,8 @@ class GrayViewController: UIViewController {
         print(#file, #line, #function, #column)
     }
     
-    @IBAction func closeButtonTouched(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
+    @IBAction func closeButtonTouchedInGray(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
     }
     
 

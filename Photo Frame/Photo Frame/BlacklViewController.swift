@@ -30,8 +30,9 @@ class BlackViewController: UIViewController {
         print(#file, #line, #function, #column)
     }
     
-    @IBAction func closeButtonTouched2(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
+
+    @IBAction func closeButtonTouchedInBlack(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
     }
     
 }
