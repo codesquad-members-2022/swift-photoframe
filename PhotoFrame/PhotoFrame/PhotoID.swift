@@ -29,4 +29,10 @@ enum PhotoID:String,CaseIterable {
     case twenty = "20"
     case twenty_one = "21"
     case twenty_two = "22"
+    
+    static var randomID:String {
+        guard let randomID = PhotoID.allCases.randomElement()?.rawValue else { return "사용가능한 Photo가 없습니다."}
+        return randomID
+    }
+    
 }
