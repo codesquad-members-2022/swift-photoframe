@@ -11,7 +11,7 @@
         <!--Test-->
         <scene sceneID="uyG-HV-U2a">
             <objects>
-                <tableViewController id="pb9-bq-Xnt" sceneMemberID="viewController">
+                <tableViewController id="pb9-bq-Xnt" customClass="TestTableViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="nuk-dg-xAf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -178,7 +178,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="AXM-Ke-pEy" kind="show" id="viF-eB-hXG"/>
+                                            <segue destination="AXM-Ke-pEy" kind="presentation" id="viF-eB-hXG"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -278,10 +278,10 @@
             </objects>
             <point key="canvasLocation" x="3005.7971014492755" y="2284.8214285714284"/>
         </scene>
-        <!--View Controller-->
+        <!--Segue Popover View Controller-->
         <scene sceneID="63v-gj-4eq">
             <objects>
-                <viewController id="ANF-Ow-3Ja" sceneMemberID="viewController">
+                <viewController id="ANF-Ow-3Ja" customClass="SeguePopoverViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5d2-bD-dua">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -305,10 +305,10 @@
             </objects>
             <point key="canvasLocation" x="3104" y="1547"/>
         </scene>
-        <!--View Controller-->
+        <!--Segue Modally View Controller-->
         <scene sceneID="3Wc-io-r5B">
             <objects>
-                <viewController id="Ydl-NW-a1z" sceneMemberID="viewController">
+                <viewController id="Ydl-NW-a1z" customClass="SegueModallyViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="y2H-51-Vxz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -333,10 +333,10 @@
             </objects>
             <point key="canvasLocation" x="2287" y="1301"/>
         </scene>
-        <!--View Controller-->
+        <!--Segue Show View Controller-->
         <scene sceneID="aFh-fl-KiD">
             <objects>
-                <viewController id="LNo-ec-s45" sceneMemberID="viewController">
+                <viewController id="LNo-ec-s45" customClass="SegueShowViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="axw-dM-p5g">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -361,10 +361,10 @@
             </objects>
             <point key="canvasLocation" x="370" y="896"/>
         </scene>
-        <!--View Controller-->
+        <!--Segue Show Detail View Controller-->
         <scene sceneID="Nau-H3-XxS">
             <objects>
-                <viewController id="zP7-hJ-ZFK" sceneMemberID="viewController">
+                <viewController id="zP7-hJ-ZFK" customClass="SegueShowDetailViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5eZ-Qw-hfC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -554,11 +554,11 @@
             <objects>
                 <viewController modalTransitionStyle="partialCurl" id="AXM-Ke-pEy" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DA6-fm-iDk">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Partial Curl" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EuK-De-DGf">
-                                <rect key="frame" x="136.5" y="430" width="141" height="36"/>
+                                <rect key="frame" x="136.5" y="403" width="141" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
