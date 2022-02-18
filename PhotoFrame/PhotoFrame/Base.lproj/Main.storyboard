@@ -85,13 +85,25 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="vqx-hq-JJS">
                                 <rect key="frame" x="87" y="247.5" width="240" height="401"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="B4h-wO-8hl">
+                                    <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="CRF-73-1bj">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="B4h-wO-8hl">
+                                                <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="240" id="2Zr-Am-qRo"/>
+                                                    <constraint firstAttribute="width" constant="240" id="gfy-iJ-kdU"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="240" id="2Zr-Am-qRo"/>
-                                            <constraint firstAttribute="width" constant="240" id="gfy-iJ-kdU"/>
+                                            <constraint firstAttribute="height" constant="240" id="1z2-Qw-mIw"/>
+                                            <constraint firstItem="B4h-wO-8hl" firstAttribute="centerX" secondItem="CRF-73-1bj" secondAttribute="centerX" id="5da-cC-CTB"/>
+                                            <constraint firstAttribute="width" constant="240" id="6Mb-Mj-dKM"/>
+                                            <constraint firstItem="B4h-wO-8hl" firstAttribute="centerY" secondItem="CRF-73-1bj" secondAttribute="centerY" id="BNf-kE-Rae"/>
                                         </constraints>
-                                    </imageView>
+                                    </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SecondViewIndicator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="qFW-oa-AIZ">
                                         <rect key="frame" x="5.5" y="290" width="229" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -125,6 +137,7 @@
                     <connections>
                         <outlet property="photoImageView" destination="B4h-wO-8hl" id="vjn-do-KEX"/>
                         <outlet property="secondViewIndicatorLabel" destination="qFW-oa-AIZ" id="FbZ-ZB-tgX"/>
+                        <outlet property="shadowView" destination="CRF-73-1bj" id="Ilv-90-AgQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fpx-BN-j4b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
