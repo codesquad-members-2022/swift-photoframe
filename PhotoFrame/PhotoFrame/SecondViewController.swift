@@ -9,10 +9,21 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var photoImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        photoImageView.translatesAutoresizingMaskIntoConstraints = false
+        
+        photoImageView.contentMode = .scaleAspectFit
+        
+        photoImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        photoImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 100).isActive = true
+
+        photoImageView.heightAnchor.constraint(equalToConstant: CGFloat(240.0)).isActive = true
+        photoImageView.widthAnchor.constraint(equalToConstant: CGFloat(240.0)).isActive = true
+        
+        
     }
 }
