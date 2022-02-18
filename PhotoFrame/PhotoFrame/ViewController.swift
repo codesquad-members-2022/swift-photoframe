@@ -55,7 +55,7 @@ class ViewController: UIViewController {
         self.photoLabel.alpha = 0.8
         
         guard let secondVC = self.storyboard?.instantiateViewController(identifier: "secondVC") as? SecondViewController else {return}
-        self.present(secondVC, animated: true, completion: nil)
+        self.navigationController?.pushViewController(secondVC, animated: true)
     
 
     }
