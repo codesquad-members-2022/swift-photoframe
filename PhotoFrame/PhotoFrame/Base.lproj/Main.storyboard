@@ -77,9 +77,9 @@
                     <connections>
                         <outlet property="FirstDescription" destination="4Ay-Kc-JHE" id="cSG-8b-aPC"/>
                         <outlet property="FirstLabel" destination="C51-gv-UzL" id="ooP-WJ-bDe"/>
-                        <outlet property="back_Red" destination="Eyh-jj-5nx" id="Uou-2I-aG2"/>
-                        <outlet property="back_White" destination="cgN-fp-90R" id="87e-ZF-kTw"/>
-                        <outlet property="back_Yellow" destination="vJY-hb-Xc1" id="dzX-vj-KqN"/>
+                        <outlet property="redBackground" destination="Eyh-jj-5nx" id="Uou-2I-aG2"/>
+                        <outlet property="whiteBackground" destination="cgN-fp-90R" id="87e-ZF-kTw"/>
+                        <outlet property="yellowBackground" destination="vJY-hb-Xc1" id="dzX-vj-KqN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nfb-P5-qSR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -121,10 +121,10 @@
             </objects>
             <point key="canvasLocation" x="-1696" y="-308"/>
         </scene>
-        <!--Inner View Controller-->
+        <!--Yellow View Controller-->
         <scene sceneID="jxR-Ku-36s">
             <objects>
-                <viewController id="sCE-6D-qet" customClass="InnerViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="sCE-6D-qet" customClass="YellowViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lVx-48-VLF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -140,6 +140,26 @@
                                     <segue destination="jmx-ho-bg3" kind="popoverPresentation" popoverAnchorView="cYG-2A-NfV" id="GVQ-fB-lGo">
                                         <popoverArrowDirection key="popoverArrowDirection" up="YES" left="YES"/>
                                     </segue>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l9h-lN-LaP">
+                                <rect key="frame" x="28" y="22" width="54" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" titleAlignment="automatic">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="닫기">
+                                            <attributes>
+                                                <color key="NSColor" red="0.046502478420734406" green="0.42481884360313416" blue="0.9102051854133606" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="17" name="AppleSDGothicNeo-Regular"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" red="0.07202545553445816" green="0.77935737371444702" blue="0.83081644773483276" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="closeButtonTouched:" destination="sCE-6D-qet" eventType="touchUpInside" id="m0i-mL-osp"/>
                                 </connections>
                             </button>
                         </subviews>

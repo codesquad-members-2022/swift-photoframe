@@ -12,9 +12,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var FirstLabel: UILabel!
     @IBOutlet weak var FirstDescription: UILabel!
     
-    @IBOutlet weak var back_Yellow: UIButton!
-    @IBOutlet weak var back_White: UIButton!
-    @IBOutlet weak var back_Red: UIButton!
+    @IBOutlet weak var yellowBackground: UIButton!
+    @IBOutlet weak var whiteBackground: UIButton!
+    @IBOutlet weak var redBackground: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,11 +25,11 @@ class ViewController: UIViewController {
         self.FirstDescription.text = "순간의 기록으로.."
         self.FirstDescription.font = .monospacedDigitSystemFont(ofSize: 20, weight: .heavy)
         
-        self.back_Yellow.addTarget(self, action: #selector(changeBackgorund), for: .touchUpInside)
-        self.back_Yellow.addTarget(self, action: #selector(nextButtonTouched), for: .touchUpInside)
+        self.yellowBackground.addTarget(self, action: #selector(changeBackgorund), for: .touchUpInside)
+        self.yellowBackground.addTarget(self, action: #selector(nextButtonTouched), for: .touchUpInside)
         //objc 와 IBAction 을 혼합사용가능.
-        self.back_White.addTarget(self, action: #selector(changeBackgorund), for: .touchUpInside)
-        self.back_Red.addTarget(self, action: #selector(changeBackgorund), for: .touchUpInside)
+        self.whiteBackground.addTarget(self, action: #selector(changeBackgorund), for: .touchUpInside)
+        self.redBackground.addTarget(self, action: #selector(changeBackgorund), for: .touchUpInside)
         
         
     }
@@ -37,11 +37,11 @@ class ViewController: UIViewController {
     
     @objc func changeBackgorund(_ sender : UIButton) {
         switch sender{
-        case back_Yellow :
+        case yellowBackground :
             self.view.backgroundColor = UIColor(red: 0.2, green: 0.7, blue: 0.4, alpha: 0.3)
-        case back_White:
+        case whiteBackground:
             self.view.backgroundColor = UIColor(red: 0.3, green: 0.5, blue: 1.2, alpha: 0.3)
-        case back_Red:
+        case redBackground:
             self.view.backgroundColor = UIColor(red: 0.5, green: 1, blue: 2, alpha: 0.3)
         default :
             print("Not a valid Button")
