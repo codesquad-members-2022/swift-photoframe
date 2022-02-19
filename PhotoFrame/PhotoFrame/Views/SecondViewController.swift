@@ -14,12 +14,13 @@ class SecondViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.photoImageView.image = UIImage(named: "\(String(format: "%02d", imageNum)).jpg")
     }
     
     @IBAction func nextImageButtonTouched(_ sender: Any) {
-        self.photoImageView.image = UIImage(named: "\(String(format: "%02d", imageNum)).jpg")
+        if imageNum == 22 { imageNum = 0}
+        self.photoImageView.image = UIImage(named: "\(String(format: "%02d", imageNum+1)).jpg")
         self.photoImageView.contentMode = .scaleAspectFill
         imageNum += 1
-        if imageNum == 22 { imageNum = 1}
     }
 }
