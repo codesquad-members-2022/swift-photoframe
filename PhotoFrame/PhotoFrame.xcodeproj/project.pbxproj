@@ -9,11 +9,6 @@
 /* Begin PBXBuildFile section */
 		D05133F427BED97E006EED49 /* PinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05133F327BED97E006EED49 /* PinkViewController.swift */; };
 		D05133F627BEDEB3006EED49 /* MintViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05133F527BEDEB3006EED49 /* MintViewController.swift */; };
-		D06634F627BF791C005FB83E /* TestTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06634F527BF791C005FB83E /* TestTableViewController.swift */; };
-		D06634F827BF7959005FB83E /* SegueShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06634F727BF7959005FB83E /* SegueShowViewController.swift */; };
-		D06634FA27BF7994005FB83E /* SegueModallyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06634F927BF7994005FB83E /* SegueModallyViewController.swift */; };
-		D06634FC27BF79E4005FB83E /* SeguePopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06634FB27BF79E4005FB83E /* SeguePopoverViewController.swift */; };
-		D066350027BF8122005FB83E /* SegueShowDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06634FF27BF8122005FB83E /* SegueShowDetailViewController.swift */; };
 		D0DFEEA727BA678B009448A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DFEEA627BA678B009448A6 /* AppDelegate.swift */; };
 		D0DFEEA927BA678B009448A6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DFEEA827BA678B009448A6 /* SceneDelegate.swift */; };
 		D0DFEEAB27BA678B009448A6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DFEEAA27BA678B009448A6 /* ViewController.swift */; };
@@ -25,11 +20,6 @@
 /* Begin PBXFileReference section */
 		D05133F327BED97E006EED49 /* PinkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinkViewController.swift; sourceTree = "<group>"; };
 		D05133F527BEDEB3006EED49 /* MintViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MintViewController.swift; sourceTree = "<group>"; };
-		D06634F527BF791C005FB83E /* TestTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTableViewController.swift; sourceTree = "<group>"; };
-		D06634F727BF7959005FB83E /* SegueShowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueShowViewController.swift; sourceTree = "<group>"; };
-		D06634F927BF7994005FB83E /* SegueModallyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueModallyViewController.swift; sourceTree = "<group>"; };
-		D06634FB27BF79E4005FB83E /* SeguePopoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeguePopoverViewController.swift; sourceTree = "<group>"; };
-		D06634FF27BF8122005FB83E /* SegueShowDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueShowDetailViewController.swift; sourceTree = "<group>"; };
 		D0DFEEA327BA678B009448A6 /* PhotoFrame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoFrame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0DFEEA627BA678B009448A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0DFEEA827BA678B009448A6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,11 +69,6 @@
 				D0DFEEB427BA678C009448A6 /* Info.plist */,
 				D05133F327BED97E006EED49 /* PinkViewController.swift */,
 				D05133F527BEDEB3006EED49 /* MintViewController.swift */,
-				D06634F527BF791C005FB83E /* TestTableViewController.swift */,
-				D06634F727BF7959005FB83E /* SegueShowViewController.swift */,
-				D06634F927BF7994005FB83E /* SegueModallyViewController.swift */,
-				D06634FB27BF79E4005FB83E /* SeguePopoverViewController.swift */,
-				D06634FF27BF8122005FB83E /* SegueShowDetailViewController.swift */,
 			);
 			path = PhotoFrame;
 			sourceTree = "<group>";
@@ -159,16 +144,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D06634FC27BF79E4005FB83E /* SeguePopoverViewController.swift in Sources */,
 				D05133F427BED97E006EED49 /* PinkViewController.swift in Sources */,
 				D0DFEEAB27BA678B009448A6 /* ViewController.swift in Sources */,
-				D06634FA27BF7994005FB83E /* SegueModallyViewController.swift in Sources */,
-				D06634F827BF7959005FB83E /* SegueShowViewController.swift in Sources */,
 				D0DFEEA727BA678B009448A6 /* AppDelegate.swift in Sources */,
-				D066350027BF8122005FB83E /* SegueShowDetailViewController.swift in Sources */,
 				D05133F627BEDEB3006EED49 /* MintViewController.swift in Sources */,
 				D0DFEEA927BA678B009448A6 /* SceneDelegate.swift in Sources */,
-				D06634F627BF791C005FB83E /* TestTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
