@@ -20,12 +20,22 @@
                                 <rect key="frame" x="87" y="121" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Erl-Hn-n3K">
+                                <rect key="frame" x="174" y="349" width="67" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="nextImageButtonTouched:" destination="F3k-Ml-ly3" eventType="touchUpInside" id="vmq-34-DYl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4JP-SX-VRc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="wxk-mT-Aqc"/>
                     <connections>
+                        <outlet property="nextImageButton" destination="Erl-Hn-n3K" id="zZp-gn-L0m"/>
                         <outlet property="photoImageView" destination="XJ6-Hv-8BM" id="yHc-aC-vNq"/>
                     </connections>
                 </viewController>
