@@ -20,6 +20,7 @@ class SecondViewController: UIViewController {
         super.viewDidLoad()
 
         photoImageView.translatesAutoresizingMaskIntoConstraints = false
+        nextImageButton.translatesAutoresizingMaskIntoConstraints = false
         
         photoImageView.contentMode = .scaleAspectFit
         
@@ -28,6 +29,14 @@ class SecondViewController: UIViewController {
 
         photoImageView.heightAnchor.constraint(equalToConstant: CGFloat(240.0)).isActive = true
         photoImageView.widthAnchor.constraint(equalToConstant: CGFloat(240.0)).isActive = true
+        
+        
+        nextImageButton.setTitle("다음 이미지", for: .normal)
+        nextImageButton.backgroundColor = .systemGray6
+        nextImageButton.layer.cornerRadius = 10
+        
+        nextImageButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        nextImageButton.topAnchor.constraint(equalTo: photoImageView.bottomAnchor, constant: 50).isActive = true
         
         
     }
