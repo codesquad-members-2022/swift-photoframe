@@ -19,11 +19,7 @@ class SecondViewController: UIViewController {
     @IBAction func nextImageButtonTouched(_ sender: Any) {
         self.photoImageView.image = UIImage(named: "\(String(format: "%02d", imageNum)).jpg")
         self.photoImageView.contentMode = .scaleAspectFill
-        
-        
         imageNum += 1
         if imageNum == 22 { imageNum = 1}
     }
-    
-
 }
