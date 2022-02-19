@@ -8,7 +8,16 @@
 
 - [ ] 
 
+
+### UIImageView 
+1. 위치 설정 
+
+2. 사진 Fit modes
+
+
 ### [추가학습거리]
+
+
 
 <p align="center">
    <img src="https://user-images.githubusercontent.com/36659877/154732681-94b6040b-e0ef-4e1f-84e6-566edbc562e5.png" width="350" height="250"> 
