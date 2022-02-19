@@ -46,9 +46,9 @@
                                     <color key="baseForegroundColor" red="0.38541674613952637" green="0.0035588329192250967" blue="0.999858558177948" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="nextButtonTouchDown:" destination="2Vd-Ma-r6m" eventType="touchDown" id="kDI-a8-Rbs"/>
-                                    <action selector="nextButtonTouched:" destination="2Vd-Ma-r6m" eventType="touchUpInside" id="kkn-OM-319"/>
-                                    <segue destination="sCE-6D-qet" kind="show" id="02u-Hm-XoB"/>
+                                    <action selector="nextButtonTouchDown:" destination="2Vd-Ma-r6m" eventType="touchUpInside" id="1wd-lq-ws2"/>
+                                    <action selector="nextButtonTouched:" destination="2Vd-Ma-r6m" eventType="touchDown" id="nOQ-ar-RcZ"/>
+                                    <segue destination="sCE-6D-qet" kind="show" id="gGg-3O-lJV"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vJY-hb-Xc1">
@@ -84,7 +84,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nfb-P5-qSR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1173.913043478261" y="-717.1875"/>
+            <point key="canvasLocation" x="887" y="-717"/>
         </scene>
         <!--Item-->
         <scene sceneID="Wgw-vm-DSd">
@@ -128,7 +128,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GyJ-yN-paG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="228.98550724637684" y="171.42857142857142"/>
+            <point key="canvasLocation" x="16" y="173"/>
         </scene>
         <!--My Tab Bar View Controller-->
         <scene sceneID="8xt-EX-VJc">
@@ -193,13 +193,10 @@
                         <color key="backgroundColor" red="0.93120485544204712" green="0.93367248773574829" blue="0.72977042198181152" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="cgh-Pr-YDr"/>
-                    <connections>
-                        <outlet property="navigationBar" destination="cgh-Pr-YDr" id="8Ar-L0-Frw"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E3x-87-5Ko" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2015.9420289855075" y="-717.1875"/>
+            <point key="canvasLocation" x="1729" y="-717"/>
         </scene>
         <!--Green View Controller-->
         <scene sceneID="eFX-bA-4y5">
@@ -246,7 +243,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G1O-if-a9J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2871.0144927536235" y="-717.1875"/>
+            <point key="canvasLocation" x="2584" y="-717"/>
         </scene>
         <!--Item-->
         <scene sceneID="NKk-fU-x0V">
@@ -265,7 +262,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iFH-nv-QUP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="263.768115942029" y="-717.1875"/>
+            <point key="canvasLocation" x="16" y="-717"/>
         </scene>
     </scenes>
     <resources>
