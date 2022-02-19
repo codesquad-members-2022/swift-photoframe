@@ -36,6 +36,7 @@
 		B74AE08E27C0F25C008D5214 /* 04.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B74AE07827C0F25C008D5214 /* 04.jpg */; };
 		B74AE08F27C0F25C008D5214 /* 19.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B74AE07927C0F25C008D5214 /* 19.jpg */; };
 		B74AE09027C0F25C008D5214 /* 17.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B74AE07A27C0F25C008D5214 /* 17.jpg */; };
+		B74AE09427C13495008D5214 /* photoframe-border.png in Resources */ = {isa = PBXBuildFile; fileRef = B74AE09327C13495008D5214 /* photoframe-border.png */; };
 		B77BB99127BABC3A00620D5C /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77BB99027BABC3A00620D5C /* SecondViewController.swift */; };
 		B77BB99327BABD9300620D5C /* myTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77BB99227BABD9300620D5C /* myTabBarViewController.swift */; };
 		B79D460E27BE78C100D85011 /* YellowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79D460D27BE78C100D85011 /* YellowViewController.swift */; };
@@ -73,6 +74,7 @@
 		B74AE07827C0F25C008D5214 /* 04.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 04.jpg; path = "../../../../../../Downloads/Demo Images/04.jpg"; sourceTree = "<group>"; };
 		B74AE07927C0F25C008D5214 /* 19.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 19.jpg; path = "../../../../../../Downloads/Demo Images/19.jpg"; sourceTree = "<group>"; };
 		B74AE07A27C0F25C008D5214 /* 17.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 17.jpg; path = "../../../../../../Downloads/Demo Images/17.jpg"; sourceTree = "<group>"; };
+		B74AE09327C13495008D5214 /* photoframe-border.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photoframe-border.png"; sourceTree = "<group>"; };
 		B77BB99027BABC3A00620D5C /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		B77BB99227BABD9300620D5C /* myTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myTabBarViewController.swift; sourceTree = "<group>"; };
 		B79D460D27BE78C100D85011 /* YellowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowViewController.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 		B74AE06427C0F23B008D5214 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B74AE09327C13495008D5214 /* photoframe-border.png */,
 				B74AE07527C0F25C008D5214 /* 01.jpg */,
 				B74AE07727C0F25C008D5214 /* 02.jpg */,
 				B74AE06A27C0F25C008D5214 /* 03.jpg */,
@@ -239,6 +242,7 @@
 				B74AE08C27C0F25C008D5214 /* 13.jpg in Resources */,
 				B74AE08527C0F25C008D5214 /* 10.jpg in Resources */,
 				B74AE07E27C0F25C008D5214 /* 21.jpg in Resources */,
+				B74AE09427C13495008D5214 /* photoframe-border.png in Resources */,
 				B74AE08227C0F25C008D5214 /* 22.jpg in Resources */,
 				B74AE08027C0F25C008D5214 /* 03.jpg in Resources */,
 				B74AE08A27C0F25C008D5214 /* 16.jpg in Resources */,
