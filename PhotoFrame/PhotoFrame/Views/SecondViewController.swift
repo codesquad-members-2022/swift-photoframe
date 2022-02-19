@@ -10,15 +10,19 @@ import UIKit
 class SecondViewController: UIViewController {
 
     @IBOutlet weak var photoImageView: UIImageView!
+    var imageNum = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
     }
     
     @IBAction func nextImageButtonTouched(_ sender: Any) {
-        self.photoImageView.image = UIImage(named: "01.jpg")
+        self.photoImageView.image = UIImage(named: "\(String(format: "%02d", imageNum)).jpg")
+        self.photoImageView.contentMode = .scaleAspectFill
+        
+        
+        imageNum += 1
+        if imageNum == 22 { imageNum = 1}
     }
     
 
