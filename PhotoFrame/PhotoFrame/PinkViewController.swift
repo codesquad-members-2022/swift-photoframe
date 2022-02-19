@@ -29,6 +29,7 @@ class PinkViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         print("PinkViewController", #function)
+        print("***** Current Navigation Stack *****", navigationController?.children)
     }
     
     

@@ -58,6 +58,7 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         print("FirstViewController", #function)
+        print("***** Current Navigation Stack *****", navigationController?.children)
     }
     
     
