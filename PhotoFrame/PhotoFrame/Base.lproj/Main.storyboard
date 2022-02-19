@@ -93,14 +93,48 @@
                     <view key="view" contentMode="scaleToFill" id="ik7-Qc-EeA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Photo Album" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6cl-MX-mgo">
+                                <rect key="frame" x="124" y="440" width="166.5" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9GK-J4-u5J">
+                                <rect key="frame" x="183" y="511" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="다음"/>
+                                <connections>
+                                    <action selector="nextImageButtonTouched:" destination="vDp-iO-OLg" eventType="touchUpInside" id="GX7-wi-xag"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ovb-Ps-vPr">
+                                <rect key="frame" x="87" y="177" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="6Ez-lP-xca"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="240" id="Ck7-jc-95i"/>
+                                    <constraint firstAttribute="width" constant="240" id="fwB-zF-6ha"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="GlA-ID-gh3"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <constraints>
+                            <constraint firstItem="6cl-MX-mgo" firstAttribute="centerY" secondItem="ik7-Qc-EeA" secondAttribute="centerY" id="OHq-hl-Pco"/>
+                            <constraint firstItem="ovb-Ps-vPr" firstAttribute="centerX" secondItem="ik7-Qc-EeA" secondAttribute="centerX" id="neR-za-WSg"/>
+                            <constraint firstItem="ovb-Ps-vPr" firstAttribute="centerY" secondItem="ik7-Qc-EeA" secondAttribute="centerY" id="vNk-9m-Qaz"/>
+                            <constraint firstItem="6cl-MX-mgo" firstAttribute="centerX" secondItem="ik7-Qc-EeA" secondAttribute="centerX" id="vVd-bw-2Q9"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="BCi-cF-2ZI"/>
+                    <connections>
+                        <outlet property="photoImageView" destination="ovb-Ps-vPr" id="ouh-AI-bOh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GyJ-yN-paG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-142" y="178"/>
+            <point key="canvasLocation" x="229" y="172"/>
         </scene>
         <!--My Tab Bar View Controller-->
         <scene sceneID="8xt-EX-VJc">
