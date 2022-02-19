@@ -963,3 +963,173 @@
 		- **isHighlighted**:  Bool 타입으로, 이미지가 강조되는지 여부를 결정하는 Bool 값
 		- **tintColor**: UIColor! 타입으로, 뷰 계층에서 템플릿 이미지의 색을 지정하는데 사용되는 색상
 
+---
+
+---
+
+
+
+## 8. 사진 앨범 선택하기
+
+### 📌체크 포인트
+
+- [x] 사진 액자에 해당하는 photoFrameImageView 생성하기
+- [x] photoFrameImageView와 photoImageView의 z축 관계 설정하기
+- [x] [선택] 버튼 생성하여 UIImagePickerController 사용하기
+
+---
+
+### 💻진행 과정
+
+1. 코드 리뷰에서 지적받았던 `#imageLiteral()` 하드 코딩부분을 아래와 같이 수정했습니다.
+
+	```swift
+	self.photoImageView.image = UIImage(named: "01")
+	```
+
+2. photoFrameImageView 라는, 사진 액자에 해당하는 UIImageView를 생성하여, 기존의 photoImageView 아래에 위치시켰습니다. 
+
+	- [추가] - photoFrameImageView와 photoImageView의 z축 관계를 설정하기 위해 아래의 코드를 추가했습니다.
+
+		```swift
+		self.photoImageView.layer.zPosition = 2.0
+		self.photoFrameImageView.layer.zPosition = 1.0
+		```
+
+		여기서 zPosition에 해당하는 값이 클수록 더 앞으로 나와 view 최상단에 위치해 디바이스의 화면에 보이게 됩니다. 위와 같이 설정했을 때의 화면은 아래와 같습니다.
+
+		<img src="https://user-images.githubusercontent.com/92504186/154636081-e27a99b3-60bf-4fa8-9e5d-867bc0d85d3c.jpg" alt="SS 2022-02-18 PM 04 18 39" width="30%;" />
+
+		만약 위의 zPosition 값을 서로 바꾼다면 아래와 같이, photoFrame 이미지의 모든 부분이 출력되어 photoImage를 조금 가리는 화면을 확인할 수 있습니다.
+
+		<img src="https://user-images.githubusercontent.com/92504186/154636248-d26bf6b4-e416-42eb-9bfd-f8b9409b7c60.jpg" alt="SS 2022-02-18 PM 04 20 01" width="30%;" />
+
+3. 두번째 Scene의 [다음] 버튼 아래에 [선택] 버튼을 추가하여 해당 뷰컨트롤러 클래스의 `selectButtonTouched(_:)` 액션 메서드와 연결했습니다. 해당 버튼은 카메라롤의 앨범을 불러와 앨범 내의 사진을 photoImageView.image에 넣어주는 버튼입니다.
+
+4. 카메라롤의 앨범에 접근하기 위해서 **info.plist** 에 아래의 내용을 추가했습니다.
+
+	<img src="https://user-images.githubusercontent.com/92504186/154636756-9b1dc0c3-1cb6-4266-b72a-7ea3e65008d8.jpg" alt="SS 2022-02-18 PM 04 23 29" width="80%;" />
+
+	해당 내용을 추가함으로써 앱에서 처음 앨범에 접근할 때 오른쪽의 내용이 뜨면서 사진 앨범 접근에 대한 접근을 요구하게 됩니다.
+
+5. 먼저 카메라롤 앨범에 접근하기 위해서는 `UIImagePickerController` 호출해주어야 합니다. selectButtonTouched(_:) 메서드에서 해당 컨트롤러를 호출하여 프로퍼티들을 아래와 같이 설정해주었습니다.
+
+	```swift
+	@IBAction func selectButtonTouched(_ sender: UIButton) {
+	    let imagePicker = UIImagePickerController()
+	    imagePicker.sourceType = .photoLibrary
+	    imagePicker.allowsEditing = true
+	    imagePicker.delegate = self
+	    present(imagePicker, animated: true)
+	}
+	```
+
+	> 위 메소드의 3번쨰 줄의 내용은 UIImagePickerController의 소스 타입을 설정해주는 프로퍼티를 설정해주는 코드입니다. sourceType에는 camera, photoLibrary가 있습니다.
+	>
+	> 4번째 줄은 앨범에서 가져온 사진을 수정한 이미지를 사용할 수 있도록 설정해주는 코드입니다.
+	>
+	> 5번째 줄은 사용자와의 상호 작용을 관리하고, 해당 상호 작용의 결과를 관리해주는 역할을 해당 클래스가 위임받게하여, 앨범에 저장된 이미지 데이터를 해당 클래스에서 사용할 수 있도록 하는 코드입니다.
+	>
+	> 6번째 줄은 해당 버튼을 클릭했을때 photoLibrary가 나타나도록 해주는 설정을 한 코드입니다.
+
+6. 그리고 이제 위의 5번째 줄에서 위임받은 Delegate 권한을 `UIImagePickerControllerDelegate` 프로토콜과 `UINavigationControllerDelegate` 프로토콜을 채택하여 이미지 사용에 대한 메서드를 선언해줍니다.
+
+	```swift
+	extension YellowViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+	    
+	    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+	        
+	        var newImage: UIImage? = nil
+	        
+	        if let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
+	            newImage = image
+	        } else if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+	            newImage = image
+	        }
+	        
+	        self.photoImageView.image = newImage
+	        picker.dismiss(animated: true, completion: nil)
+	    }
+	    
+	}
+	```
+
+	> 5번 과정에서 allowsEditing 프로퍼티를 true로 설정해주었기 때문에 사용자는 앨범에서 선택한 사진을 수정할 수 있게 되는데, 이를 7~10번째 줄에서 관리해줍니다.
+	>
+	> 만약 사용자가 수정된 이미지를 불러오고자 한다면 첫 if-let 구문에 들어가 수정된 이미지가 photoImageView.image에 들어가고,
+	>
+	> 그냥 원본을 가져온다면 다음 if-let 구문에 들어가 해당 원본 이미지가 photoImageView.image에 들어가게 됩니다.
+	>
+	> 그리고 14번째 줄에서, 해당 작업들이 끝나면 UIImagePickerController가 종료되어 화면에서 사라지게 됩니다.
+
+	위의 과정을 마친 후의 앱 동작 화면은 아래와 같습니다.
+
+	<img src="https://user-images.githubusercontent.com/92504186/154639989-a02ef2dc-b0df-45ee-bd83-c3709b08777b.gif" alt="SS 2022-02-18 PM 04 45 18" style="width:20%;" />
+
+---
+
+### :memo:추가 학습거리
+
+1. UIImagePickerController처럼 이미 만들어놓은 시스템 컨트롤러들에 대해 공부 [(애플 개발자 문서(View Controller))](https://developer.apple.com/documentation/uikit/view_controllers)
+
+	시스템 컨트롤러 중 하나인 UISearchController에 대한 학습 내용을 정리하도록 하겠습니다.
+
+	- **UISearchController**
+
+		> A view controller that manages the display of search results based on interactions with a search bar.
+		>
+		> search bar와의 상호 작용을 기반으로 검색 결과 표시를 관리하는 뷰컨트롤러
+
+		사용자가 UISerachBar와 상호작용할 때 해당 컨트롤러는 검색 결과 컨트롤러와 협력하여 검색 결과를 표시합니다.
+
+		iOS에서는 검색 컨트롤러의 searchBar를 자신의 뷰 컨트롤러의 인터페이스에 통합하여 앱에 적합한 방식으로 뷰컨트롤러를 표시합니다.
+
+		UISearchBarController를 초기화할 때 매개변수로 `searchResultsController:` 로 검색 결과를 표시하기 위한 두 번째 뷰컨트롤러를 지정할 수 있습니다.
+
+		사용자가 search bar와 상호작용할 때 컨트롤러는 지정한 결과와 함께 결과 컨트롤러를 자동으로 표시해줍니다.
+
+		<img src="https://user-images.githubusercontent.com/92504186/154653557-0fa04601-bf1c-477d-9a05-b7ebd816fdbd.gif" alt="SS 2022-02-18 PM 06 16 09" width="20%;" />
+
+		SearchBarController를 간단히 구현해본 출력 결과입니다.
+
+2. 델리게이트와 프로토콜 상관 관계에 대해 학습한다.
+
+	델리게이트(delegate)는 책임을 위임한다는 의미로, (iOS에서) 어떤 UI가 해야하는 특정 동작을 delegate받은 객체에서 수행해주는 것을 의미합니다.
+
+	예를 들어, 아래의 문구를 가지고 있는 클래스가 있다고 가정을 해보면, 
+
+	```swift
+	// override func viewDidLoad() 
+	textField.delegate = self
+	```
+
+	`textField` 의 어떤 동작에 대해서는 해당 클래스가 그 책임을 맡는다는 뜻입니다.
+
+	그리고 책임을 맡기 위해서는 특정 프로토콜을 채택해야 합니다. 위의 textField에 대한 delegate를 받기 위해서는 `UITextFieldDelegate` 프로토콜을 채택해야 합니다.
+
+	```swift
+	class ViewController: UITextFieldDelegate {
+	    @IBOutlet weak var enteredLabel: UILabel!
+	    @IBOutlet weak var textField: UITextField!
+	    override func viewDidLoad() {
+	        super.viewDidLoad()
+	        textField.delegate = self
+	    }
+	    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+	        enteredLabel.text = textField.text
+	        return true
+	    }
+	}
+	```
+
+	그리고 delegate와 관련된 프로토콜을 채택하면, 그 프로토콜 내에 정의되어있는 메서드를 사용할 수 있게 됩니다.
+
+	위의 `textFieldShouldReturn(_:)` 메서드는 `UITextFieldDelegate` 프로토콜 내에 정의되어 있는 메서드로, textField에 무언가를 입력하고 Return 버튼이 눌러지면 자동으로 해당 메서드가 호출되어 메서드 내의 코드를 실행시키게 됩니다.
+
+	즉, Delegate 프로토콜을 채택한 객체에서 어떤 객체의 delegate를 받는다고 선언해놓으면, 대상 객체에 어떤 이벤트가 발생하면 해당 프로토콜에 따라 delegate 프로토콜을 채택한 객체에서 무언가를 **대신 해주게** 됩니다.
+
+	위의 예제 코드를 실행한 앱을 아래와 같이 동작하게 됩니다.
+
+	<img src="https://user-images.githubusercontent.com/92504186/154789420-52cf82b8-be3a-4383-8a4d-61c35bb8a550.gif" alt="SS 2022-02-19 PM 03 27 17" width="20%;" />
+
+	
