@@ -12,7 +12,7 @@ class MintViewController: UIViewController {
     let closeButton = UIButton(type: UIButton.ButtonType.roundedRect) as UIButton
     
     @objc func closeButtonTouched(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
     
     
