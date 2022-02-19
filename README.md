@@ -75,6 +75,7 @@
  
 ### [Interface Builder Atrributes]
 - 아래 테이블 내용은 Interface Builder 로 Image View 의 속성을 관리할수 있는 리스트이다. 
+
 |**Attribute**|**Discussion**|
 |--|--|
 |Image|The image to display. You can specify any image in your Xcode project, including standalone images and those in image assets. To set this attribute programmatically, use the image or animationImages property.|
