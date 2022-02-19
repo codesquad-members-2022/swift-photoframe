@@ -16,7 +16,7 @@ class PinkViewController: UIViewController {
     
     @IBAction func nextButtonTouched(_ sender: UIButton) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "MintViewController") as! MintViewController
-        present(vc, animated: true, completion: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     
