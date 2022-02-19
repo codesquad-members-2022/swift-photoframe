@@ -13,7 +13,9 @@ class SecondViewController: UIViewController {
     
     @IBOutlet weak var nextImageButton: UIButton!
     @IBAction func nextImageButtonTouched(_ sender: Any) {
-        
+        guard let randomNumber = (1...22).randomElement() else { return }
+        let randomImage = String(format: "%02d.jpg", randomNumber)
+        photoImageView.image = UIImage(named: randomImage)
     }
     
     override func viewDidLoad() {
