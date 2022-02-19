@@ -515,3 +515,159 @@ Show Detail, Present Modally과 Present As Popover 방식은 앞과 똑같이 �
 - [ViewController LifeCycle](https://medium.com/good-morning-swift/ios-view-controller-life-cycle-2a0f02e74ff5)
 - [UIModalTransitionStyle](https://developer.apple.com/documentation/uikit/uimodaltransitionstyle?language=objc)
 - Storyboard Identifier
+
+
+# Step6. Container ViewController 활용하기
+
+## 💻 작업 목록
+
+- [x] 내비게이션 컨트롤러(Navigation Controller)를 Embed 시켜서 동작하도록 개선하기
+- [x] ViewController Container 종류 학습하기
+- [x] 내비게이션 컨트롤러가 있을 경우와 없을 경우의 화면 전환 동작과 화면들 간에 포함관계가 있는지 학습하기
+- [x] 내비게이션 컨트롤러 관련 메소드는 왜 push/pop인지 찾아보기
+- [x] 보여주는 방식과 사라지는 방식 같이 학습하고 정리하기
+
+## 📱 실행 화면
+
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/95578975/154799560-1297e8fb-de19-450c-be0a-fabb63dbd302.gif)
+
+- Step5 (1)에서 테스트해보았던 것처럼 화면 전체가 새로운 뷰로 꽉 찼고, viewWillDisppear, viewDidDisappear이 호출되는 것을 확인할 수 있었습니다.
+
+## 🤔 고민과 해결
+
+### NavigationController을 Embed한 후 마주한 오류
+
+#### 1️⃣ PinkViewController의 닫기 버튼이 동작하지 않음
+
+- 해결 코드
+
+```swift
+@IBAction func closeButtonTouched(_ sender: UIButton) {
+    self.navigationController?.popViewController(animated: true)
+}
+```
+
+##### [popViewController(animated:)](https://developer.apple.com/documentation/uikit/uinavigationcontroller/1621886-popviewcontroller)
+
+- navigation stack에서 제일 상위의 뷰컨트롤러를 pop하고 화면을 업데이트
+
+#### 2️⃣ MintViewController의 닫기 버튼이 동작하지 않음
+
+- 1️⃣에서의 방법과 동일하게 해결
+
+#### 3️⃣ PinkViewController의 Segue Programmatically 버튼이 동작하지 않음
+
+```swift
+@IBAction func nextButtonTouched(_ sender: UIButton) {
+    let vc = self.storyboard?.instantiateViewController(withIdentifier: "MintViewController") as! MintViewController
+    self.navigationController?.pushViewController(vc, animated: true)
+}
+```
+
+##### [pushViewController(_:animated:)](https://developer.apple.com/documentation/uikit/uinavigationcontroller/1621887-pushviewcontroller)
+
+```swift
+func pushViewController(_ viewController: UIViewController, 
+               animated: Bool)
+```
+
+- 뷰컨트롤러를 receiver의 스택에 push하고 화면을 업데이트
+
+### 
+
+## ✏️ 추가 학습 거리
+
+### 1️⃣ ViewController Container 종류
+
+#### [`UISplitViewController`](https://developer.apple.com/documentation/uikit/uisplitviewcontroller)
+
+- 계층 인터페이스를 구현하는 컨테이너 뷰컨트롤러.
+
+#### [`UINavigationController`](https://developer.apple.com/documentation/uikit/uinavigationcontroller)
+
+- 계층적 내용을 navigate 하기 위한 스택 기반 스키마를 정의하는 컨테이너 뷰컨트롤러.
+
+#### [`UINavigationBar`](https://developer.apple.com/documentation/uikit/uinavigationbar)
+
+- 일반적으로 navigation controller와 함께 화면 상단의 바에 표시되는 내비케이션 컨트롤.
+
+#### [`UINavigationItem`](https://developer.apple.com/documentation/uikit/uinavigationitem)
+
+- 연결된 뷰컨트롤러가 보여질 때 내비게이션 바가 표시하는 항목.
+
+#### [`UITabBarController`](https://developer.apple.com/documentation/uikit/uitabbarcontroller)
+
+- 다중 선택 인터페이스를 관리하는 컨테이너 뷰컨트롤러로, 여기서 선택으로 표시할 하위 뷰컨트롤러가 결정된다.
+
+#### [`UITabBar`](https://developer.apple.com/documentation/uikit/uitabbar)
+
+- 앱에서 서로 다른 하위 작업, 뷰 또는 모드를 선택할 수 있도록 탭 바에 하나 이상의 버튼을 표시하는 컨트롤.
+
+#### [`UITabBarItem`](https://developer.apple.com/documentation/uikit/uitabbaritem)
+
+- 탭 바에 있는 아이템을 나타내는 객체.
+
+#### [`UIPageViewController`](https://developer.apple.com/documentation/uikit/uipageviewcontroller)
+
+- 하위 뷰컨트롤러가 각 페이지를 관리하는 컨텐츠 페이지 간의 navigation을 관리하는 컨테이너 뷰 컨트롤러.
+
+### 2️⃣ 내비게이션 컨트롤러가 있을 경우와 없을 경우의 화면 전환 동작과 화면들 간에 포함관계가 있는지 학습
+
+#### 내비게이션 컨트롤러가 있을 경우
+
+- 화면이 새로운 뷰로 전환될 때, 새로운 뷰가 화면을 꽉 채웠습니다.
+- 모든 뷰컨트롤러의 viewWillAppear 함수 내에 `navigationController?.children`을 출력하는 코드를 추가하여 현재 내비게이션 컨트롤러의 children을 확인해보았습니다.
+
+```swift
+override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    print("FirstViewController", #function)
+    print("***** Current Navigation Stack *****", navigationController?.children)
+}
+```
+
+- [children](https://developer.apple.com/documentation/uikit/uiviewcontroller/1621452-children)
+
+  - Child 뷰컨트롤러를 모아놓는 children 배열
+
+- 실행 화면
+
+  - 첫번째 VC에서는 children 배열이 1개의 뷰컨트롤러를 갖고, PinkVC에서는 2개를, MintVC에서는 3개를 가지는 것을 확인할 수 있었습니다. 
+  - 새롭게 뷰컨트롤러가 push되면 그에 따라 children 배열에도 push된 뷰컨트롤러가 추가되고, 뷰컨트롤러가 pop 되면 그에 따라 children 배열에서도 pop된 뷰컨트롤러가 제거된 것을 확인할 수 있었습니다.
+
+  ![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/95578975/154816642-dc93b1f0-95e6-46b6-9c80-acd9215810bf.gif)
+
+#### 내비게이션 컨트롤러가 없을 경우
+
+- 화면이 새로운 뷰로 전환될 때, 새로운 뷰가 화면을 꽉 채우지 않았고, viewWillDisappear, viewDidDisappear이 호출되지 않았습니다.
+
+### 3️⃣ 내비게이션 컨트롤러 관련 메소드는 왜 push/pop일까?
+
+내비게이션 컨트롤러는 계층적 내용을 navigate 하기 위한 스택 기반 스키마를 정의하는 컨테이너 뷰컨트롤러입니다. 이 타입의 인터페이스는 한 번에 하나의 하위 뷰 컨트롤러만 표시할 수 있습니다. 그렇기 때문에 뷰컨트롤러에서 새로운 뷰컨트롤러를 push하면 화면에 표시되고 이전 뷰컨트롤러는 숨겨집니다. 인터페이스 상단에 있는 뒤로 가기 버튼을 누르면 내비게이션 바에서 제일 top에 있는 뷰컨트롤러가 제거되어 그 밑에 있던 뷰컨트롤러가 나타납니다.
+
+### ➕ Step5에서 보여주는 방식과 사라지는 방식 같이 학습하고 정리하기 (NavigationController 없는 상태)
+
+- 따로 브랜치 생성하여 작업을 진행
+
+- [dismiss(animated:completion:)](https://developer.apple.com/documentation/uikit/uiviewcontroller/1621505-dismiss)
+
+- 한번에 모든 뷰를 dismiss하는 코드
+
+  ```swift
+  self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+  ```
+
+- 실행 화면
+
+  ![ezgif com-gif-maker (2)](https://user-images.githubusercontent.com/95578975/154817927-4432874d-507d-4b3f-b233-bfa138deebe5.gif)
+
+## 💡 학습 키워드
+
+- UIViewController
+- ViewController Container
+- [Container View Controllers](https://developer.apple.com/documentation/uikit/view_controllers/creating_a_custom_container_view_controller/)
+- [UISplitViewController](https://developer.apple.com/documentation/uikit/uisplitviewcontroller)
+- [UINavigationController](https://developer.apple.com/documentation/uikit/uinavigationcontroller)
+- [UITabBarController](https://developer.apple.com/documentation/uikit/uitabbarcontroller)
+- [UIPageViewController](https://developer.apple.com/documentation/uikit/uipageviewcontroller)
+
