@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B3554B4727C290EC00EE0508 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3554B4627C290EC00EE0508 /* PhotoViewController.swift */; };
+		B3554B4927C2955A00EE0508 /* Demo Images in Resources */ = {isa = PBXBuildFile; fileRef = B3554B4827C2955A00EE0508 /* Demo Images */; };
 		B36DA8A427BCDE480010A92C /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36DA8A327BCDE480010A92C /* SecondViewController.swift */; };
 		B36DA8A627BCDEE60010A92C /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36DA8A527BCDEE60010A92C /* ThirdViewController.swift */; };
 		B3AE2C7127BB4D8A005A8B3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AE2C7027BB4D8A005A8B3D /* AppDelegate.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		B3554B4627C290EC00EE0508 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		B3554B4827C2955A00EE0508 /* Demo Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Demo Images"; sourceTree = "<group>"; };
 		B36DA8A327BCDE480010A92C /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		B36DA8A527BCDEE60010A92C /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		B3AE2C6D27BB4D8A005A8B3D /* PhotoFrame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoFrame.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,6 +80,7 @@
 				B3AE2C7E27BB4D90005A8B3D /* LaunchScreen.storyboard */,
 				B3AE2C8127BB4D90005A8B3D /* Info.plist */,
 				B3AE2C7927BB4D8A005A8B3D /* PhotoFrame.xcdatamodeld */,
+				B3554B4827C2955A00EE0508 /* Demo Images */,
 			);
 			path = PhotoFrame;
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 			files = (
 				B3AE2C8027BB4D90005A8B3D /* LaunchScreen.storyboard in Resources */,
 				B3AE2C7D27BB4D90005A8B3D /* Assets.xcassets in Resources */,
+				B3554B4927C2955A00EE0508 /* Demo Images in Resources */,
 				B3AE2C7827BB4D8A005A8B3D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

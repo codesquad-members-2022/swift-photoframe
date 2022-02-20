@@ -11,8 +11,8 @@
         <!--Item 2-->
         <scene sceneID="Ylr-yN-Mjm">
             <objects>
-                <viewController id="TCf-uU-WlE" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="OYS-YC-3WS">
+                <viewController id="TCf-uU-WlE" customClass="PhotoViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OYS-YC-3WS" customClass="PhotoView">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -32,12 +32,18 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="다음"/>
+                                <connections>
+                                    <action selector="nextImageButtonTouched:" destination="TCf-uU-WlE" eventType="touchUpInside" id="m70-7A-fOc"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jf1-pg-YvA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="yyP-AG-HOQ"/>
+                    <connections>
+                        <outlet property="photoImageView" destination="2y2-79-dyU" id="R0g-9G-C1i"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KJ8-T0-gsJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
