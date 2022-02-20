@@ -16,6 +16,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="evn-SE-Vvm">
+                                <rect key="frame" x="62" y="91" width="291" height="182"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XJ6-Hv-8BM">
                                 <rect key="frame" x="87" y="121" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -36,12 +40,13 @@
                     <tabBarItem key="tabBarItem" title="Item 2" id="wxk-mT-Aqc"/>
                     <connections>
                         <outlet property="nextImageButton" destination="Erl-Hn-n3K" id="zZp-gn-L0m"/>
+                        <outlet property="photoFrameImageView" destination="evn-SE-Vvm" id="4YY-eF-yIH"/>
                         <outlet property="photoImageView" destination="XJ6-Hv-8BM" id="yHc-aC-vNq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ckR-La-zIr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="767" y="151"/>
+            <point key="canvasLocation" x="766.66666666666674" y="150.66964285714286"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="QvG-fU-dV5">
