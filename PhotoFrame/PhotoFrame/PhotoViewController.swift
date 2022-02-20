@@ -12,7 +12,8 @@ class PhotoViewController: UIViewController {
     @IBOutlet var photoImageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        photoImageView.contentMode = .scaleAspectFill
         // Do any additional setup after loading the view.
     }
     
