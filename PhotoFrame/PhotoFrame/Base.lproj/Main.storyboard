@@ -171,6 +171,9 @@
                                 <state key="normal" title="Close">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="closeButtonTouched:" destination="mKJ-c0-ltO" eventType="touchUpInside" id="8VD-Nu-Jk8"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2sH-Id-33h"/>
