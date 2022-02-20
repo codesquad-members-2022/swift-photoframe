@@ -22,6 +22,8 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="240" id="7DS-Yg-oPC"/>
                                     <constraint firstAttribute="width" constant="240" id="KMK-Af-6ml"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="VYv-6x-ehF"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="240" id="mSo-QN-4UH"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vwv-dT-fgO">
@@ -33,6 +35,13 @@
                                     <action selector="nextButtonTouched:" destination="Q4E-0C-ch4" eventType="touchUpInside" id="hbJ-JA-8xv"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photoframe-border.png" translatesAutoresizingMaskIntoConstraints="NO" id="rr4-pv-Osj" userLabel="PhotoFrame">
+                                <rect key="frame" x="77" y="318" width="260" height="260"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="260" id="9Pf-l3-Bzk"/>
+                                    <constraint firstAttribute="height" constant="260" id="G8H-xQ-wTK"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="TAC-R9-lm8"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
@@ -40,7 +49,9 @@
                             <constraint firstItem="MhY-FG-LNW" firstAttribute="centerX" secondItem="zmO-bH-WCv" secondAttribute="centerX" id="KvP-Vx-rsR"/>
                             <constraint firstItem="Vwv-dT-fgO" firstAttribute="top" secondItem="MhY-FG-LNW" secondAttribute="bottom" constant="40" id="NlS-Zg-Dcl"/>
                             <constraint firstItem="Vwv-dT-fgO" firstAttribute="centerX" secondItem="zmO-bH-WCv" secondAttribute="centerX" id="ZCa-ca-LkX"/>
+                            <constraint firstItem="rr4-pv-Osj" firstAttribute="centerX" secondItem="zmO-bH-WCv" secondAttribute="centerX" id="cZI-z9-URP"/>
                             <constraint firstItem="MhY-FG-LNW" firstAttribute="centerY" secondItem="zmO-bH-WCv" secondAttribute="centerY" id="h4Q-xu-qDu"/>
+                            <constraint firstItem="rr4-pv-Osj" firstAttribute="centerY" secondItem="zmO-bH-WCv" secondAttribute="centerY" id="lAY-Db-Xzc"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="yellow" id="UDE-pm-n8p">
@@ -230,6 +241,7 @@
     </scenes>
     <resources>
         <image name="cloud" catalog="system" width="128" height="88"/>
+        <image name="photoframe-border.png" width="720" height="720"/>
         <image name="sun.max" catalog="system" width="128" height="124"/>
         <systemColor name="systemBrownColor">
             <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
