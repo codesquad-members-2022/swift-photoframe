@@ -18,7 +18,7 @@
                         <viewLayoutGuide key="safeArea" id="ItR-GF-OlT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" image="photo.on.rectangle" catalog="system" selectedImage="photo.fill.on.rectangle.fill" id="GIc-Hg-7ST"/>
+                    <tabBarItem key="tabBarItem" id="GIc-Hg-7ST"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4mG-JT-oQh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -157,7 +157,7 @@
         <scene sceneID="2fl-76-jv3">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sUK-pQ-E2m" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" image="photo.fill" catalog="system" selectedImage="photo.artframe" id="t3u-HT-w4F"/>
+                    <tabBarItem key="tabBarItem" id="t3u-HT-w4F"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="GwK-8t-geP">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -174,10 +174,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="photo.artframe" catalog="system" width="128" height="93"/>
-        <image name="photo.fill" catalog="system" width="128" height="93"/>
-        <image name="photo.fill.on.rectangle.fill" catalog="system" width="128" height="97"/>
-        <image name="photo.on.rectangle" catalog="system" width="128" height="97"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -24,6 +24,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         print("FirstViewController", #function)
         
+        self.tabBarController?.tabBar.items?[0].image = UIImage(systemName: "photo.artframe")
+        self.tabBarController?.tabBar.items?[0].selectedImage = UIImage(systemName: "photo.fill")
+        
         // subView 추가
         self.view.addSubview(firstLabel)
         self.view.addSubview(firstDescription)
