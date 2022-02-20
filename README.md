@@ -347,3 +347,73 @@ self.navigationController?.pushViewController(secondVC, animated: true)
 - 닫기 버튼을 눌렀을때 이전 화면으로 돌아가도록 한다.
 
 
+
+---
+step7 
+## ✅**요구사항**
+
+- [x]  이미지 파일 추가
+- [x]  탭바의 두 번째 화면 구현
+    - [x]  UIImageView 추가
+    - [x]  다음버튼을 누를때마다 랜덤 이미지 보여주기
+
+## 📔진행과정
+
+- 두번째 뷰에 UIComponent 추가하기
+<p align="center">
+<img src="https://user-images.githubusercontent.com/59790540/154853624-2eb5b1e1-ffa8-4c82-865d-b8915a243740.png" width="220" height="420">
+</p>
+- 이미지 리소스 프로젝트 파일에 추가하기
+    - 이미지가 들어있는 폴더를 드래그해서 추가하였다.
+
+- 다음버튼을 터치시 랜덤 이미지 선택해서 보여주기
+    - 랜덤이미지가 없다면 시스템 이미지를 보여주도록 했다.
+
+```swift
+let randomImageNumber: String = {
+            let random = String(Int.random(in: 1...22))
+            if random.count == 1 { return "0"+random }
+            return random
+        }()
+        
+        if let image = UIImage(named: "Demo Images/\(randomImageNumber).jpg"){
+            self.photoImageView.image = image
+        }else{
+            photoImageView.image = UIImage(systemName: "questionmark.square")
+        }
+
+```
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/59790540/154854164-498f0421-a68f-404f-918b-bd54eecb7b43.gif" width="200" height="420">
+</p>
+
+
+- 이미지 크기 조정하기
+    - Content모드를 학습 후 이미지를 비율에 맞게 꽉차게 보여줄 수 있도록 Aspect fill 메소드를 사용.
+    
+    ```swift
+    photoImageView.contentMode = .scaleAspectFill
+    ```
+    
+
+## ContentMode
+
+[http://monibu1548.github.io/2018/05/21/scalemode/](http://monibu1548.github.io/2018/05/21/scalemode/)
+
+### Scale To Fill (기본값)
+
+- UIImageView 크기에 맞게 이미지를 임의대로 늘려서 넣는다.
+
+### AspectFit
+
+- 원본의 비율을 유지
+- UIImageView 내부에서 밖으로 나가지 않도록 이미지 비율을 유지한채 크기 조정
+- 여백이 생길 수 있다.
+
+### AspectFill
+
+- 원본의 비율을 유지
+- UIImageView 영역밖으로 나갈 수 있다. Clip to bounds 를 true로 설정한다면 짤리지 않음
+- UIImageView 내부에 여백이 생기지 않음
+- 이미지 일부가 짤려보일 수 있어 인물, 동물 사진에는 적합하지 않음
