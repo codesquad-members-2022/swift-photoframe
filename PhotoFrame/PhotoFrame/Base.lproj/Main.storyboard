@@ -23,8 +23,8 @@
                                     <constraint firstAttribute="height" constant="240" id="rju-ah-Agy"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XqI-KU-dNw">
-                                <rect key="frame" x="194" y="374" width="26" height="48"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photo Album" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XqI-KU-dNw">
+                                <rect key="frame" x="97" y="374" width="220" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -37,33 +37,16 @@
                                     <action selector="nextImageButtonTouched:" destination="DAT-BH-HV3" eventType="touchUpInside" id="h1N-W5-tRu"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Original Image" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UmM-RZ-Kni">
-                                <rect key="frame" x="152" y="763" width="110" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="taewhy" translatesAutoresizingMaskIntoConstraints="NO" id="DAw-xp-78M">
-                                <rect key="frame" x="87" y="503" width="240" height="240"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="Uya-5s-WeS"/>
-                                    <constraint firstAttribute="height" constant="240" id="ish-zV-gb5"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ItR-GF-OlT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="UmM-RZ-Kni" firstAttribute="top" secondItem="DAw-xp-78M" secondAttribute="bottom" constant="20" id="832-LL-xjx"/>
                             <constraint firstItem="XqI-KU-dNw" firstAttribute="top" secondItem="Zlc-B1-ZJN" secondAttribute="bottom" constant="30" id="NtQ-Wz-sLt"/>
                             <constraint firstItem="3Ug-uc-9KJ" firstAttribute="top" secondItem="XqI-KU-dNw" secondAttribute="bottom" constant="30" id="RfE-Er-pgx"/>
                             <constraint firstItem="3Ug-uc-9KJ" firstAttribute="centerX" secondItem="Mup-4u-be9" secondAttribute="centerX" id="T4Z-Ok-wEu"/>
-                            <constraint firstItem="DAw-xp-78M" firstAttribute="centerX" secondItem="Mup-4u-be9" secondAttribute="centerX" id="bHC-ko-Jn8"/>
                             <constraint firstItem="Zlc-B1-ZJN" firstAttribute="top" secondItem="ItR-GF-OlT" secondAttribute="top" constant="60" id="kO2-kt-LqQ"/>
                             <constraint firstItem="XqI-KU-dNw" firstAttribute="centerX" secondItem="Mup-4u-be9" secondAttribute="centerX" id="mhK-Un-ATF"/>
-                            <constraint firstItem="DAw-xp-78M" firstAttribute="top" secondItem="3Ug-uc-9KJ" secondAttribute="bottom" constant="20" id="q9r-Dc-4gw"/>
                             <constraint firstItem="Zlc-B1-ZJN" firstAttribute="centerX" secondItem="Mup-4u-be9" secondAttribute="centerX" id="uxW-z8-hWA"/>
-                            <constraint firstItem="UmM-RZ-Kni" firstAttribute="centerX" secondItem="Mup-4u-be9" secondAttribute="centerX" id="xCd-GT-bqi"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" id="GIc-Hg-7ST"/>
@@ -226,7 +209,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="taewhy" width="987" height="1377"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
