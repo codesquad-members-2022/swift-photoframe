@@ -16,7 +16,6 @@ class SecondViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         self.photoImageView.image = UIImage(named: "\(String(format: "%02d", imageNum)).jpg")
-        imagePickerController.delegate = self
     }
     
     @IBAction func nextImageButtonTouched(_ sender: Any) {
@@ -32,10 +31,10 @@ class SecondViewController: UIViewController{
         let closeAlert = UIAlertAction(title: "허용", style: .default){
             (action) in self.openAlbum()
         }
-
         alert.addAction(openAlbum)
         alert.addAction(closeAlert)
         present(alert, animated: true, completion: nil)
+        imagePickerController.delegate = self
     }
     
     func openAlbum() {
@@ -50,7 +49,6 @@ extension SecondViewController: UIImagePickerControllerDelegate,UINavigationCont
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
             photoImageView.image = image
-            print(info)
         }
         dismiss(animated: true, completion: nil)
     }
