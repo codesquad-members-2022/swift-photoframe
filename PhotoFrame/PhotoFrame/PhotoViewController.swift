@@ -18,6 +18,13 @@ class PhotoViewController: UIViewController {
     
 
     @IBAction func nextImageButtonTouched(_ sender: Any) {
+        let randomImageNumber: String = {
+            let random = String(Int.random(in: 1...22))
+            if random.count == 1 { return "0"+random }
+            return random
+        }()
+        
+        self.photoImageView.image = UIImage(named: "Demo Images/\(randomImageNumber).jpg")
     }
     
 
