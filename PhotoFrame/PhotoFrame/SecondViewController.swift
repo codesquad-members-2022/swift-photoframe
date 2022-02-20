@@ -24,8 +24,8 @@ class SecondViewController: UIViewController {
 
         let photoImageViewHeight: CGFloat = 240.0
         let photoImageViewWidth: CGFloat = 240.0
-        let phothoFrameImageViewHeight: CGFloat = 300.0
-        let phothoFrameImageViewWidth: CGFloat = 300.0
+        let photoFrameImageViewHeight: CGFloat = 300.0
+        let photoFrameImageViewWidth: CGFloat = 300.0
         
         photoImageView.translatesAutoresizingMaskIntoConstraints = false
         nextImageButton.translatesAutoresizingMaskIntoConstraints = false
@@ -45,17 +45,17 @@ class SecondViewController: UIViewController {
         nextImageButton.layer.cornerRadius = 10
         
         nextImageButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        nextImageButton.topAnchor.constraint(equalTo: photoImageView.bottomAnchor, constant: 50).isActive = true
+        nextImageButton.topAnchor.constraint(equalTo: photoFrameImageView.bottomAnchor, constant: 50).isActive = true
         
         
         photoFrameImageView.image = UIImage(named: "photoframe-border.png")
         photoFrameImageView.contentMode = .scaleAspectFill
         
         photoFrameImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        photoFrameImageView.topAnchor.constraint(equalTo: photoImageView.topAnchor, constant: (photoImageViewHeight - phothoFrameImageViewHeight) / 2).isActive = true
+        photoFrameImageView.topAnchor.constraint(equalTo: photoImageView.topAnchor, constant: (photoImageViewHeight - photoFrameImageViewHeight) / 2).isActive = true
         
-        photoFrameImageView.heightAnchor.constraint(equalToConstant: phothoFrameImageViewHeight).isActive = true
-        photoFrameImageView.widthAnchor.constraint(equalToConstant: phothoFrameImageViewWidth).isActive = true
+        photoFrameImageView.heightAnchor.constraint(equalToConstant: photoFrameImageViewHeight).isActive = true
+        photoFrameImageView.widthAnchor.constraint(equalToConstant: photoFrameImageViewWidth).isActive = true
         
     }
 }
