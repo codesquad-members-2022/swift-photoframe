@@ -33,6 +33,15 @@
                                     <action selector="nextImageButtonTouched:" destination="F3k-Ml-ly3" eventType="touchUpInside" id="vmq-34-DYl"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yRl-wq-Hnj">
+                                <rect key="frame" x="174" y="424" width="67" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="selectButtonTouched:" destination="F3k-Ml-ly3" eventType="touchUpInside" id="fWj-dX-HQu"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4JP-SX-VRc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -42,6 +51,7 @@
                         <outlet property="nextImageButton" destination="Erl-Hn-n3K" id="zZp-gn-L0m"/>
                         <outlet property="photoFrameImageView" destination="evn-SE-Vvm" id="4YY-eF-yIH"/>
                         <outlet property="photoImageView" destination="XJ6-Hv-8BM" id="yHc-aC-vNq"/>
+                        <outlet property="selectButton" destination="yRl-wq-Hnj" id="b5h-A2-cFY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ckR-La-zIr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
