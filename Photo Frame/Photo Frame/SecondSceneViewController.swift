@@ -15,6 +15,7 @@ class SecondSceneViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.secondDescription.textColor = .darkGray
+        self.secondDescription.text = "Jihee's Album"
     }
 
     @IBAction func nextImageButtonTouched(_ sender: UIButton) {
