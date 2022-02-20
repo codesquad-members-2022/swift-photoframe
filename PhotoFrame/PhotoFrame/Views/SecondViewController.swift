@@ -27,27 +27,21 @@ class SecondViewController: UIViewController{
     }
     
     @IBAction func selectButtonTouched(_ sender: Any) {
-//카메라 사용가능한지 체크
-//        guard UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum) else { return }
-//
-//        imagePickerController.sourceType = .savedPhotosAlbum
-//
-//        //imagePickerController.allowsEditing = true // 촬영 후 편집할 수 있는 부분이 나온다.
-//
-//        present(imagePickerController, animated: true, completion: nil)
-
-        let alert =  UIAlertController(title: "사진선택", message: "원하는 사진을 선택해주세요", preferredStyle: .actionSheet)
-        let openAlbum = UIAlertAction(title: "사진앨범", style: .default) {
+        let alert =  UIAlertController(title: "PhotoFrame 이 사진앨범 에 접근하려합니다", message: nil, preferredStyle: .alert)
+        let openAlbum = UIAlertAction(title: "거부", style: .cancel)
+        let closeAlert = UIAlertAction(title: "허용", style: .default){
             (action) in self.openAlbum()
         }
+
         alert.addAction(openAlbum)
+        alert.addAction(closeAlert)
         present(alert, animated: true, completion: nil)
     }
     
     func openAlbum() {
         imagePickerController.sourceType = .photoLibrary
         present(imagePickerController, animated: false, completion: nil)
-    }
+   }
     
     
 }
