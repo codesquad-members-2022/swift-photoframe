@@ -294,13 +294,13 @@ self.firstLabel.text = "Mase의 사진액자"
 <br>
 <br>
 
-# **기능요구사항**
+## **기능요구사항**
 
 - [x] 사진액자 - Container ViewController 요구사항을 구현한 상태로 시작한다.
 - [x] 탭바의 두 번째 화면 (Second Scene) 디자인을 변경하고 액자 앱을 동작을 구현한다.
 - [x] 실행하고 새로운 화면을 캡처해서 readme.md 파일에 포함한다.
 
-# **프로그래밍 요구사항**
+## **프로그래밍 요구사항**
 
 - [x] 스토리보드에서 Second Scene을 선택하고, 다음과 같이 보이도록 화면을 디자인한다.
     - [x] 기존에 있던 두 번째 레이블은 삭제한다.
@@ -315,3 +315,43 @@ self.firstLabel.text = "Mase의 사진액자"
     ```
 
 - [x] 이미지뷰의 속성을 조정해서 이미지가 비율에 맞춰서 표시되도록 조정한다.
+
+<br>
+<br>
+
+# 8. 사진 앨범 선택하기
+### 완성 날짜
+- 02월 20일 20:00
+
+<br>
+
+### 완성 화면 
+<img src="https://user-images.githubusercontent.com/57667738/154839437-96e5a3fa-f4de-4f51-a2a4-b5bf4a94ff43.gif" width="30%" />
+
+<br>
+<br>
+
+## **기능요구사항**
+
+- [x] 화면 요소들을 겹쳐서 디자인 하는 경우 z축으로 위-아래를 구분해서 표시한다.
+- [x] 이미지 테두리 액자 화면을 추가한다.
+- [x] 사진 앨범에서 사진을 가져와서 보여줄 수 있도록 개선한다.
+
+## **프로그래밍 요구사항**
+
+### **액자 꾸미기**
+
+- [x] 스토리보드에서 Second Scene을 선택하고, 다음과 같이 화면을 개선한다.
+    - [x] 새로운 UIImageView를 추가하고, 기존 photoImageView보다 아래에 배치한다.
+- [x] 다음 액자 사진을 [액자 이미지](http://public.codesquad.kr/jk/photoframe-border.png) 다운로드한다. Xcode 프로젝트로 드래그해서 추가한다.
+    - 참고) 리소스 파일을 추가할 때는 Copy 옵션을 꼭 지정하고 Target을 체크되어 있는지 확인한다.
+- [x] PhotoFrame 이미지 뷰의 Identity 항목중에 Document > Label 값을 `PhotoFrame` 처럼 입력하면 좌측 화면 항목에서 구분하기 쉽다.
+- [x] PhotoFrame 이미지 뷰의 Attributes 항목중에 Image View > Image 값을 다운로드 받은 `photoframe-border.png`로 선택한다.
+
+### **앨범에서 선택하기**
+
+- [x] 스토리보드에서 Second Scene을 선택하고, [다음]버튼 아래 [선택] 버튼을 추가하고 IBAction을 `selectButtonTouched`로 연결한다.
+- [x] `selectButtonTouched`에서는 UIImagePickerController로 사진 앱 - 카메라롤에서 사진을 가져오도록 구현한다.
+    - [x] 카메라롤에서 사진을 가져오기 위해 해줘야 하는 동작들을 찾아서 구현한다.
+    - [x] 권한 설정이 필요하면 Info.plist에 추가한다.
+    - [x] 선택한 사진을 받기 위해서 구현해야 하는 메서드는 어떤게 있는지 찾아 구현한다.
