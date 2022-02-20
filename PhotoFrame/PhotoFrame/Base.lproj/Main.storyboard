@@ -27,13 +27,6 @@
                                         <color key="textColor" systemColor="systemYellowColor"/>
                                         <nil key="highlightedColor"/>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="MyColor">
-                                                <color key="value" systemColor="systemPurpleColor"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="CustomColor">
-                                                <color key="value" systemColor="quaternaryLabelColor"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="bold" value="Rosa"/>
                                             <userDefinedRuntimeAttribute type="string" keyPath="italicRange" value="Rosa"/>
                                         </userDefinedRuntimeAttributes>
                                     </label>
@@ -60,7 +53,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="9JN-AM-nW6">
                                 <rect key="frame" x="10" y="763" width="394" height="30"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t2V-nO-3Iz">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t2V-nO-3Iz">
                                         <rect key="frame" x="0.0" y="0.0" width="131.5" height="30"/>
                                         <color key="backgroundColor" systemColor="systemBlueColor"/>
                                         <state key="normal" title="Blue">
@@ -70,7 +63,7 @@
                                             <action selector="colorButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mPW-Gg-0s0"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vW8-UG-P7E">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vW8-UG-P7E">
                                         <rect key="frame" x="131.5" y="0.0" width="131" height="30"/>
                                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                         <state key="normal" title="Orange">
@@ -80,7 +73,7 @@
                                             <action selector="colorButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oJ0-Yz-pn4"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NPB-wg-gNV">
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NPB-wg-gNV">
                                         <rect key="frame" x="262.5" y="0.0" width="131.5" height="30"/>
                                         <color key="backgroundColor" systemColor="systemPurpleColor"/>
                                         <state key="normal" title="Purple">
@@ -106,7 +99,7 @@
                     <tabBarItem key="tabBarItem" title="Item" id="cMd-Aj-omU"/>
                     <connections>
                         <outlet property="firstDescription" destination="B6e-45-qLm" id="uJJ-60-gLj"/>
-                        <outlet property="firstLabel" destination="jlr-oM-uC5" id="kjr-NU-D2P"/>
+                        <outlet property="firstLabel" destination="jlr-oM-uC5" id="b8r-9Z-ib2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -231,9 +224,6 @@
     </designables>
     <resources>
         <image name="arrow.right" catalog="system" width="128" height="98"/>
-        <systemColor name="quaternaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.17999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

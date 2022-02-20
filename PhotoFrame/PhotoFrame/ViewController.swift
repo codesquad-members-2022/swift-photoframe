@@ -10,7 +10,7 @@ import UIKit
 class ViewController: UIViewController {
 
     // MARK:- IBOutlet
-    @IBOutlet weak var firstLabel: UILabel!
+    @IBOutlet weak var firstLabel: CustomLabel!
     @IBOutlet weak var firstDescription: UILabel!
 
     
@@ -38,11 +38,11 @@ class ViewController: UIViewController {
     @IBAction func colorButtonTouched(_ sender: UIButton) {
         var buttonTitle: String = "Touched"
         switch sender.tag {
-        case 0:
-            buttonTitle += "Blue"
         case 1:
-            buttonTitle += "Orange"
+            buttonTitle += "Blue"
         case 2:
+            buttonTitle += "Orange"
+        case 3:
             buttonTitle += "Purple"
         default:
             break
