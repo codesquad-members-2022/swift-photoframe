@@ -17,6 +17,7 @@
 		73469C7327B9F162008936F2 /* Photo_FrameUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73469C7227B9F162008936F2 /* Photo_FrameUITestsLaunchTests.swift */; };
 		73469C8227BA173D008936F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73469C8127BA173D008936F2 /* ViewController.swift */; };
 		73980CF027BE2F8F00150EEC /* GrayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73980CEF27BE2F8F00150EEC /* GrayViewController.swift */; };
+		73DD86CB27C1F8E700D554C1 /* SecondSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DD86CA27C1F8E700D554C1 /* SecondSceneViewController.swift */; };
 		73F3455E27BE35EC0065FAD6 /* BlacklViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F3455D27BE35EC0065FAD6 /* BlacklViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,7 @@
 		73469C7227B9F162008936F2 /* Photo_FrameUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo_FrameUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		73469C8127BA173D008936F2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		73980CEF27BE2F8F00150EEC /* GrayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrayViewController.swift; sourceTree = "<group>"; };
+		73DD86CA27C1F8E700D554C1 /* SecondSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSceneViewController.swift; sourceTree = "<group>"; };
 		73F3455D27BE35EC0065FAD6 /* BlacklViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlacklViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,6 +108,7 @@
 				73469C4F27B9F161008936F2 /* AppDelegate.swift */,
 				73469C5127B9F161008936F2 /* SceneDelegate.swift */,
 				73469C5527B9F161008936F2 /* Main.storyboard */,
+				73DD86CA27C1F8E700D554C1 /* SecondSceneViewController.swift */,
 				73469C8127BA173D008936F2 /* ViewController.swift */,
 				73980CEF27BE2F8F00150EEC /* GrayViewController.swift */,
 				73F3455D27BE35EC0065FAD6 /* BlacklViewController.swift */,
@@ -265,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				73F3455E27BE35EC0065FAD6 /* BlacklViewController.swift in Sources */,
+				73DD86CB27C1F8E700D554C1 /* SecondSceneViewController.swift in Sources */,
 				73469C8227BA173D008936F2 /* ViewController.swift in Sources */,
 				73980CF027BE2F8F00150EEC /* GrayViewController.swift in Sources */,
 				73469C5027B9F161008936F2 /* AppDelegate.swift in Sources */,
