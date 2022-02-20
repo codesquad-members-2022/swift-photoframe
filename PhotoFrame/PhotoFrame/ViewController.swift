@@ -31,6 +31,12 @@ class ViewController: UIViewController {
             tabBarItem.title = "Photo Frame"
         }
         
+        if let tabBarItem = self.tabBarController?.tabBar.items?[1] {
+            tabBarItem.image = UIImage(systemName: "photo.on.rectangle")
+            tabBarItem.selectedImage = UIImage(systemName: "photo.fill.on.rectangle.fill")
+            tabBarItem.title = "Show Photos"
+        }
+        
         // subView 추가
         self.view.addSubview(firstLabel)
         self.view.addSubview(firstDescription)
