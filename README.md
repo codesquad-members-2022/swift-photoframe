@@ -321,3 +321,29 @@ SplitView 구조에서 원래 화면을 Master, 새 화면을 Detail로 표시�
 
 ---
 
+# step6
+
+## ✅**요구사항**
+
+- [x]  Navigation Controller Embed
+- [x]  이동버튼 터치시 push
+- [x]  닫기버튼 터치시 pop
+
+## 📔진행과정
+
+- Navigation Controller 를 추가한다.
+
+<img width="200" alt="스크린샷 2022-02-17 오후 3 57 16" src="https://user-images.githubusercontent.com/59790540/154853182-789ca891-5b3a-4c07-98f9-39f836185749.png">
+
+- 다음 버튼을 눌렀을때 다음 화면으로 넘어가도록 한다.
+    - 다음 뷰 컨트롤러를 스토리보드 ID로 얻어온 후
+    - 네비게이션컨트롤러로 push 동작을 수행하도록 한다.
+
+```swift
+guard let secondVC = self.storyboard?.instantiateViewController(identifier: "secondVC") as? SecondViewController else {return}
+self.navigationController?.pushViewController(secondVC, animated: true)
+```
+
+- 닫기 버튼을 눌렀을때 이전 화면으로 돌아가도록 한다.
+
+
