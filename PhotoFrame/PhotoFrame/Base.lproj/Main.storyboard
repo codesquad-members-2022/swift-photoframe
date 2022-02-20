@@ -157,10 +157,10 @@
             </objects>
             <point key="canvasLocation" x="1771" y="-129"/>
         </scene>
-        <!--View Controller-->
+        <!--Purple View Controller-->
         <scene sceneID="XcS-dO-N0r">
             <objects>
-                <viewController id="mKJ-c0-ltO" sceneMemberID="viewController">
+                <viewController id="mKJ-c0-ltO" customClass="PurpleViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Uqf-hY-p6A">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
