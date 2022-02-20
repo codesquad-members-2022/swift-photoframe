@@ -1,0 +1,66 @@
+
+/* Class = "UITabBarItem"; title = "Item2"; ObjectID = "1O7-VK-j6a"; */
+"1O7-VK-j6a.title" = "Item2";
+
+/* Class = "UILabel"; text = "Welcome to"; ObjectID = "7pp-MX-ZXp"; */
+"7pp-MX-ZXp.text" = "Welcome to";
+
+/* Class = "UIButton"; configuration.title = "Select             >"; ObjectID = "GI8-DX-jkZ"; */
+"GI8-DX-jkZ.configuration.title" = "Select             >";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "GI8-DX-jkZ"; */
+"GI8-DX-jkZ.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Close"; ObjectID = "GvM-A2-eN3"; */
+"GvM-A2-eN3.text" = "Close";
+
+/* Class = "UIButton"; configuration.title = "Close"; ObjectID = "HMY-Mi-J9p"; */
+"HMY-Mi-J9p.configuration.title" = "Close";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "HMY-Mi-J9p"; */
+"HMY-Mi-J9p.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Select             >"; ObjectID = "IeO-KM-bUZ"; */
+"IeO-KM-bUZ.text" = "Select             >";
+
+/* Class = "UILabel"; text = "View"; ObjectID = "OZU-Be-MHN"; */
+"OZU-Be-MHN.text" = "View";
+
+/* Class = "UILabel"; text = "View"; ObjectID = "PZf-Qi-lBB"; */
+"PZf-Qi-lBB.text" = "View";
+
+/* Class = "UIButton"; configuration.title = "More"; ObjectID = "Vmp-6D-cQk"; */
+"Vmp-6D-cQk.configuration.title" = "More";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Vmp-6D-cQk"; */
+"Vmp-6D-cQk.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Close"; ObjectID = "ezH-Ax-PZj"; */
+"ezH-Ax-PZj.configuration.title" = "Close";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "ezH-Ax-PZj"; */
+"ezH-Ax-PZj.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Next               >"; ObjectID = "gvE-CO-1YZ"; */
+"gvE-CO-1YZ.configuration.title" = "Next               >";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "gvE-CO-1YZ"; */
+"gvE-CO-1YZ.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "CLICK          >"; ObjectID = "n7e-Ql-zZp"; */
+"n7e-Ql-zZp.configuration.title" = "CLICK          >";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "n7e-Ql-zZp"; */
+"n7e-Ql-zZp.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Close"; ObjectID = "nLl-Az-uFt"; */
+"nLl-Az-uFt.text" = "Close";
+
+/* Class = "UILabel"; text = "Black"; ObjectID = "nqP-vy-eyF"; */
+"nqP-vy-eyF.text" = "Black";
+
+/* Class = "UITabBarItem"; title = "Item1"; ObjectID = "pfc-qg-JjZ"; */
+"pfc-qg-JjZ.title" = "Item1";
+
+/* Class = "UILabel"; text = "lable"; ObjectID = "u7m-KG-SRd"; */
+"u7m-KG-SRd.text" = "lable";
