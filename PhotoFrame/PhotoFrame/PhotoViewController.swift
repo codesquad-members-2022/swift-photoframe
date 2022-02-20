@@ -14,7 +14,13 @@ class PhotoViewController: UIViewController {
         super.viewDidLoad()
         
         photoImageView.contentMode = .scaleAspectFill
-        // Do any additional setup after loading the view.
+        if let image = UIImage(named: "Demo Images/01.jpg") {
+            photoImageView.image = image
+        }else{
+            photoImageView.image = UIImage(systemName: "questionmark.square")
+        }
+        
+        
     }
     
 
@@ -25,7 +31,12 @@ class PhotoViewController: UIViewController {
             return random
         }()
         
-        self.photoImageView.image = UIImage(named: "Demo Images/\(randomImageNumber).jpg")
+        if let image = UIImage(named: "Demo Images/\(randomImageNumber).jpg"){
+            self.photoImageView.image = image
+        }else{
+            photoImageView.image = UIImage(systemName: "questionmark.square")
+        }
+        
     }
     
 
