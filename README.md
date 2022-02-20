@@ -278,3 +278,40 @@ self.firstLabel.text = "Mase의 사진액자"
 - View가 Stack형태로 쌓이는 구조이기 떄문이다.
 - 맨 마지막에 Scene에 올라온 View가 사용자에게 보이고, 해당 View를 Pop하면 직전에 쌓였던 View가 나타난다.
 - Navigation VC를 Embed한 View가 항상 Stack의 맨 첫 번째로 들어간다.
+
+<br>
+<br>
+
+# 7. 다른 화면 연결하기
+### 완성 날짜
+- 02월 19일 20:10
+
+<br>
+
+### 완성 화면
+<img src="https://user-images.githubusercontent.com/57667738/154802033-d55e5575-9282-4628-92a1-585be0138b69.gif" width="30%" />
+
+<br>
+<br>
+
+# **기능요구사항**
+
+- [x] 사진액자 - Container ViewController 요구사항을 구현한 상태로 시작한다.
+- [x] 탭바의 두 번째 화면 (Second Scene) 디자인을 변경하고 액자 앱을 동작을 구현한다.
+- [x] 실행하고 새로운 화면을 캡처해서 readme.md 파일에 포함한다.
+
+# **프로그래밍 요구사항**
+
+- [x] 스토리보드에서 Second Scene을 선택하고, 다음과 같이 보이도록 화면을 디자인한다.
+    - [x] 기존에 있던 두 번째 레이블은 삭제한다.
+    - [x] UIImageView를 화면 상단 중앙에 240 x 240 크기로 배치하고, `photoImageView` 아웃렛으로 연결한다.
+    - [x] 화면 하단에 [다음] 버튼을 추가하고 `nextImageButtonTouched` 액션으로 연결한다.
+
+    
+- [x] 앱에 포함할 사진 리소스를 다운로드한다. 압축을 풀고 이미지 파일들을 Xcode 프로젝트로 드래그해서 추가한다.
+- [x] [다음]버튼에 연결된 `nextImageButtonTouched`에서는 01부터 22까지 랜덤으로 숫자를 선택해서 해당하는 이미지 파일을 photoImageView에 표시한다. 이미지뷰에 표시하는 방법은 다음과 같다.
+    ```swift
+    self.photoImageView.image = UIImage(named: "01.jpg")
+    ```
+
+- [x] 이미지뷰의 속성을 조정해서 이미지가 비율에 맞춰서 표시되도록 조정한다.
