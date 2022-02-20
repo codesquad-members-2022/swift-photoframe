@@ -128,6 +128,9 @@
                                 <state key="normal" title="Next">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="mKJ-c0-ltO" kind="show" id="TUW-iS-BYh"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Z2a-nN-gR1"/>
@@ -142,6 +145,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="57K-Tt-uzS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1771" y="-129"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="XcS-dO-N0r">
+            <objects>
+                <viewController id="mKJ-c0-ltO" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Uqf-hY-p6A">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="2sH-Id-33h"/>
+                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="wWI-bR-SxF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qoz-ON-BOd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2574" y="-129"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Pyh-FF-YdS">
