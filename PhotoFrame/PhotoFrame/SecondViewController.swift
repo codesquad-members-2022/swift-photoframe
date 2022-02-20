@@ -22,16 +22,22 @@ class SecondViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let photoImageViewHeight: CGFloat = 240.0
+        let photoImageViewWidth: CGFloat = 240.0
+        let phothoFrameImageViewHeight: CGFloat = 300.0
+        let phothoFrameImageViewWidth: CGFloat = 300.0
+        
         photoImageView.translatesAutoresizingMaskIntoConstraints = false
         nextImageButton.translatesAutoresizingMaskIntoConstraints = false
+        photoFrameImageView.translatesAutoresizingMaskIntoConstraints = false
         
-        photoImageView.contentMode = .scaleAspectFit
+        photoImageView.contentMode = .scaleAspectFill
         
         photoImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         photoImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 100).isActive = true
 
-        photoImageView.heightAnchor.constraint(equalToConstant: CGFloat(240.0)).isActive = true
-        photoImageView.widthAnchor.constraint(equalToConstant: CGFloat(240.0)).isActive = true
+        photoImageView.heightAnchor.constraint(equalToConstant: photoImageViewHeight).isActive = true
+        photoImageView.widthAnchor.constraint(equalToConstant: photoImageViewWidth).isActive = true
         
         
         nextImageButton.setTitle("다음 이미지", for: .normal)
@@ -41,6 +47,15 @@ class SecondViewController: UIViewController {
         nextImageButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         nextImageButton.topAnchor.constraint(equalTo: photoImageView.bottomAnchor, constant: 50).isActive = true
         
+        
+        photoFrameImageView.image = UIImage(named: "photoframe-border.png")
+        photoFrameImageView.contentMode = .scaleAspectFill
+        
+        photoFrameImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        photoFrameImageView.topAnchor.constraint(equalTo: photoImageView.topAnchor, constant: (photoImageViewHeight - phothoFrameImageViewHeight) / 2).isActive = true
+        
+        photoFrameImageView.heightAnchor.constraint(equalToConstant: phothoFrameImageViewHeight).isActive = true
+        photoFrameImageView.widthAnchor.constraint(equalToConstant: phothoFrameImageViewWidth).isActive = true
         
     }
 }
