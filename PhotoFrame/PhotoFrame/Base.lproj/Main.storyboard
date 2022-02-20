@@ -53,6 +53,7 @@
                                         </state>
                                         <connections>
                                             <action selector="nextButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M38-WJ-1Bk"/>
+                                            <segue destination="iOR-SW-WUL" kind="show" id="Y2F-Nw-gA5"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -113,6 +114,22 @@
             </objects>
             <point key="canvasLocation" x="975" y="-128"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="cVc-0s-q2n">
+            <objects>
+                <viewController id="iOR-SW-WUL" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bHo-pR-qW5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Z2a-nN-gR1"/>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="5ab-tS-6lg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="57K-Tt-uzS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1771" y="-129"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Pyh-FF-YdS">
             <objects>
@@ -170,6 +187,9 @@
         </systemColor>
         <systemColor name="systemPurpleColor">
             <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
