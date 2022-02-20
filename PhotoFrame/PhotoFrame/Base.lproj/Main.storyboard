@@ -129,7 +129,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="closeButtonTouched:" destination="iOR-SW-WUL" eventType="touchUpInside" id="jwv-gM-T9y"/>
                                     <segue destination="mKJ-c0-ltO" kind="show" id="TUW-iS-BYh"/>
                                 </connections>
                             </button>
@@ -138,6 +137,9 @@
                                 <state key="normal" title="Close">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="closeButtonTouched:" destination="iOR-SW-WUL" eventType="touchUpInside" id="6lg-CS-TDp"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Z2a-nN-gR1"/>
