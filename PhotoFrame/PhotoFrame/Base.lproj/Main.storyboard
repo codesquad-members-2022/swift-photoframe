@@ -52,6 +52,7 @@
                     <tabBarItem key="tabBarItem" id="GIc-Hg-7ST"/>
                     <connections>
                         <outlet property="photoImageView" destination="Zlc-B1-ZJN" id="vRj-ce-P60"/>
+                        <outlet property="testLabel" destination="XqI-KU-dNw" id="pe9-ms-ctb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4mG-JT-oQh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
