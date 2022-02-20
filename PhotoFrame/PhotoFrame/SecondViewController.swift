@@ -35,6 +35,7 @@ class SecondViewController: UIViewController {
         photoImageView.translatesAutoresizingMaskIntoConstraints = false
         nextImageButton.translatesAutoresizingMaskIntoConstraints = false
         photoFrameImageView.translatesAutoresizingMaskIntoConstraints = false
+        selectButton.translatesAutoresizingMaskIntoConstraints = false
         
         photoImageView.contentMode = .scaleAspectFill
         
@@ -62,5 +63,12 @@ class SecondViewController: UIViewController {
         photoFrameImageView.heightAnchor.constraint(equalToConstant: photoFrameImageViewHeight).isActive = true
         photoFrameImageView.widthAnchor.constraint(equalToConstant: photoFrameImageViewWidth).isActive = true
         
+        
+        selectButton.setTitle("선택", for: .normal)
+        selectButton.backgroundColor = .systemGray6
+        selectButton.layer.cornerRadius = 10
+        
+        selectButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        selectButton.centerYAnchor.constraint(equalTo: nextImageButton.bottomAnchor, constant: 50).isActive = true
     }
 }
