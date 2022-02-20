@@ -18,6 +18,9 @@ class SecondSceneViewController: UIViewController {
         self.secondDescription.text = "Jihee's Album"
     }
 
+    @IBAction func selectButtonTouched(_ sender: UIButton) {
+    }
+    
     @IBAction func nextImageButtonTouched(_ sender: UIButton) {
         self.photoImageView.image = UIImage(named: "20.jpg")
     }
