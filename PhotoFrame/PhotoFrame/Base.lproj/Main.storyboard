@@ -23,11 +23,26 @@
                                     <constraint firstAttribute="height" constant="240" id="rju-ah-Agy"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photo Album" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XqI-KU-dNw">
+                                <rect key="frame" x="97" y="374" width="220" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ug-uc-9KJ">
+                                <rect key="frame" x="182.5" y="452" width="49" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="다음"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ItR-GF-OlT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="XqI-KU-dNw" firstAttribute="top" secondItem="Zlc-B1-ZJN" secondAttribute="bottom" constant="30" id="NtQ-Wz-sLt"/>
+                            <constraint firstItem="3Ug-uc-9KJ" firstAttribute="top" secondItem="XqI-KU-dNw" secondAttribute="bottom" constant="30" id="RfE-Er-pgx"/>
+                            <constraint firstItem="3Ug-uc-9KJ" firstAttribute="centerX" secondItem="Mup-4u-be9" secondAttribute="centerX" id="T4Z-Ok-wEu"/>
                             <constraint firstItem="Zlc-B1-ZJN" firstAttribute="top" secondItem="ItR-GF-OlT" secondAttribute="top" constant="60" id="kO2-kt-LqQ"/>
+                            <constraint firstItem="XqI-KU-dNw" firstAttribute="centerX" secondItem="Mup-4u-be9" secondAttribute="centerX" id="mhK-Un-ATF"/>
                             <constraint firstItem="Zlc-B1-ZJN" firstAttribute="centerX" secondItem="Mup-4u-be9" secondAttribute="centerX" id="uxW-z8-hWA"/>
                         </constraints>
                     </view>
