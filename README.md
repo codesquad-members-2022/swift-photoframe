@@ -292,3 +292,70 @@ ViewController는 크게 두 가지 역할이 있다.
 * 또한 이미지 개체의 불변성은 어떤 스레드에서도 안전하게 생성하고 사용할 수 있다는 것을 의미한다.
     
 ![Step7](https://user-images.githubusercontent.com/92635121/154830180-8bab3c63-816c-498c-b044-d0111519ab87.gif)
+
+<br>
+
+## Step8. 사진 앨범 선택하기
+- [x]  `photoImageView` 아래에 `Photo Frame` 배치
+- [x]  Image View의 Document Label 변경
+- [x]  `선택` 버튼 추가 및 UIImagePickerController로 사진 앱/카메라에서 사진을 가져오도록 구현
+- [x]  `Info.plist` 에 권한 설정 추가
+- [x]  델리게이트(Delegate)와 프로토콜(Protocol) 상관 관계 학습
+
+<br>
+
+### UIImagePickerController
+
+    사용자의 미디어 라이브러리에서 사진을 찍고, 동영상을 녹화하고, 항목을 선택하기 위해 시스템 interface를 관리하는 ViewController
+    
+* 사용하기 위해서는 두 가지를 상속받아야한다.
+| Class | 설명 |
+| --- | --- |
+| UIImagePickerControllerDelegate | 이미지를 선택하고 카메라를 찍었을 때 다양한 동작을 도와줌 |
+| UINavigationControllerDelegate | 앨범 사진을 선택했을 때, 화면 전환을 네비게이션으로 이동 |
+
+<br>
+
+✔️ Alert
+사용자에게 선택지를 줄 수있다.
+
+| PreferredStyle | 설명 |
+| --- | --- |
+| actionSheet | 화면 하단에 나타나는 슬라이드 형식 (default) |
+| alert | 팝업 |
+
+* UIAlertController를 사용해 Alert 객체를 만들 수 있다.
+( Title, message는 String? 타입으로 넣고 싶지않다면 nil을 입력해주면 된다.)
+
+```swift
+let alert = UIAlertController(title: "사진선택", message: "두가지 방법으로 선택해요", preferredStyle: .actionSheet)
+```
+* `UIAlertAction` 메서드를 이용해 활성화한다.
+    - `title` 에 이름, `style` 에 스타일을 넣으면 되고 스타일은 총 3개
+
+        | default | 컬러 Blue |
+        | --- | --- |
+        | cancel  | 컬러는 Blue, Bold, 최하단에 위치 |
+        | destructive | 컬러 Red |
+        
+        
+<br>
+
+✔️ Delegate
+책임을 위임한다는 의미로, 어떤 UI가 해야하는 특정 동작을 delegate 받은 객체에서 수행해주는 것을 의미한다.
+
+* `UINavigationControllerDelegate` 를 같이 선언하는 이유는, UIImagePickerControllerDelegate 의 delegate 속성이 두가지 프로토콜을 모두 구현하는 객체로 정의가 되어있기 때문이다.
+* Swift에서 Delegate 채택 작업은 extension으로 빼는것이 좋다.
+* 예를 들어, picker.delegate = self 라는 코드를 가진 class가 있다면, 그 class가 책임을 맡는다는것 → 책임을 맡으려면 특정 프로토콜을 채택해야한다.
+* 그래서, UIImagePickerController 를 사용하기 위해서는, UINavigationControllerDelegate 프로토콜을 채택해야 하는 것이다.
+* 그리고 delegate와 관련된 프로토콜을 채택하면, 그 프로토콜 내에 정의되어있는 메서드를 사용할 수 있게 된다.
+
+        즉, delegate 프로토콜을 채택한 객체에서 어떤 객체의 delegate를 받는다고 선언해놓으면, 대상 객체에 어떤 이벤트가 발생하면 해당 프로토콜에 따라 delegate 프로토콜을 채택한 객체에서 무언가를 대신 해주게 된다.
+        
+* extention 할 때, dismiss으로 메모리에서 해제시켜야 함 (dismiss를 구현하지 않으면 imagePickerController가 사라지지 않음)
+```swift
+dismiss(animated: true, completion: nil)
+```
+
+![Step8](https://user-images.githubusercontent.com/92635121/154839397-d4294bb7-655e-41d6-9568-95894984c22f.gif)
+
