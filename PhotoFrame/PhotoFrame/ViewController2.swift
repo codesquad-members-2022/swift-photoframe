@@ -30,11 +30,6 @@ class ViewController2: UIViewController {
         }
     }
     
-    func openLibrary(){
-      picker.sourceType = .photoLibrary
-      present(picker, animated: false, completion: nil)
-    }
-  
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             self.photoImageView.image = image
@@ -44,15 +39,11 @@ class ViewController2: UIViewController {
     }
     
     @IBAction func selectButtonTouched(_ sender: Any) {
-        let alert =  UIAlertController(title: "사진", message: "액자에 올릴 사진을 선택하세요.", preferredStyle: .actionSheet)
-        let library =  UIAlertAction(title: "사진앨범", style: .default) { (action) in self.openLibrary()
-        }
-        let cancel = UIAlertAction(title: "취소", style: .cancel, handler: nil)
-
-        alert.addAction(library)
-        alert.addAction(cancel)
-        present(alert, animated: true, completion: nil)
-
+        let type = UIImagePickerController.SourceType.photoLibrary
+        guard UIImagePickerController.isSourceTypeAvailable(type) else { return } // 현재 기기에서 가능한지 확인하는 부분
+        
+        picker.sourceType = type
+        present(picker, animated: true, completion: nil)
     }
 }
 
