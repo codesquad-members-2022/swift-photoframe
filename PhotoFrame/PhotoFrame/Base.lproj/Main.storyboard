@@ -133,12 +133,20 @@
                                     <segue destination="mKJ-c0-ltO" kind="show" id="TUW-iS-BYh"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qXn-3T-CKv">
+                                <rect key="frame" x="30" y="30" width="46" height="34"/>
+                                <state key="normal" title="Close">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Z2a-nN-gR1"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
                         <constraints>
+                            <constraint firstItem="qXn-3T-CKv" firstAttribute="leading" secondItem="Z2a-nN-gR1" secondAttribute="leading" constant="30" id="Vzb-Mm-P11"/>
                             <constraint firstItem="CUX-gQ-lso" firstAttribute="centerY" secondItem="bHo-pR-qW5" secondAttribute="centerY" id="bsl-ox-S7a"/>
                             <constraint firstItem="CUX-gQ-lso" firstAttribute="centerX" secondItem="bHo-pR-qW5" secondAttribute="centerX" id="gGq-gA-Cq7"/>
+                            <constraint firstItem="qXn-3T-CKv" firstAttribute="top" secondItem="Z2a-nN-gR1" secondAttribute="top" constant="30" id="rbK-qp-pQH"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="5ab-tS-6lg"/>
