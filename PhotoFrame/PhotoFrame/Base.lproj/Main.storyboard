@@ -164,8 +164,21 @@
                     <view key="view" contentMode="scaleToFill" id="Uqf-hY-p6A">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QRa-dn-ShA">
+                                <rect key="frame" x="30" y="30" width="50" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Close">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="2sH-Id-33h"/>
                         <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                        <constraints>
+                            <constraint firstItem="QRa-dn-ShA" firstAttribute="top" secondItem="2sH-Id-33h" secondAttribute="top" constant="30" id="Anu-av-GE0"/>
+                            <constraint firstItem="QRa-dn-ShA" firstAttribute="leading" secondItem="2sH-Id-33h" secondAttribute="leading" constant="30" id="G7g-t9-q1l"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="wWI-bR-SxF"/>
                 </viewController>
