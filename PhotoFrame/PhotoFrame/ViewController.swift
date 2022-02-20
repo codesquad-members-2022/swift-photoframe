@@ -14,7 +14,6 @@ class ViewController: UIViewController {
     
     
     @IBAction func nextButtonTouched(_ sender: UIButton) {
-        print("Second Button Tapped")
         self.firstLabel.textColor = UIColor.blue
         self.firstLabel.backgroundColor = UIColor.yellow
         self.firstLabel.alpha = 0.5
@@ -32,7 +31,6 @@ class ViewController: UIViewController {
         // Constraints를 코드로 작성하기 위함.
         self.firstLabel.translatesAutoresizingMaskIntoConstraints = false
         self.firstDescription.translatesAutoresizingMaskIntoConstraints = false
-        
         
         // firstLabel 속성
         self.firstLabel.text = "Selina의 사진액자"
@@ -58,7 +56,6 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         print("FirstViewController", #function)
-        print("***** Current Navigation Stack *****", navigationController?.children)
     }
     
     
