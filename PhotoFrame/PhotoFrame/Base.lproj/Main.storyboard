@@ -118,6 +118,15 @@
                                 <rect key="frame" x="15" y="159" width="385" height="306"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zCO-Ju-T4m">
+                                <rect key="frame" x="163" y="568" width="89" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="선택"/>
+                                <connections>
+                                    <action selector="selectButtonTouched:" destination="vDp-iO-OLg" eventType="touchUpInside" id="9MZ-9L-fqw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="GlA-ID-gh3"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
