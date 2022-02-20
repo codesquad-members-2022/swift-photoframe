@@ -671,3 +671,135 @@ override func viewWillAppear(_ animated: Bool) {
 - [UITabBarController](https://developer.apple.com/documentation/uikit/uitabbarcontroller)
 - [UIPageViewController](https://developer.apple.com/documentation/uikit/uipageviewcontroller)
 
+# Step7. 다른 화면 연결하기
+
+## 💻 작업 목록
+
+- [x] 탭바의 두 번째 화면 (Second Scene) 디자인을 변경하고 액자 앱을 동작을 구현한다.
+- [x] UIImageView 와 UIImage 클래스는 각각 어떤 역할을 담당하는지 학습한다.
+- [x] 이미지 뷰의 속성은 어떤 것들이 있는지 애플 개발자 문서를 참고한다.
+- [x] Step7 README 작성하기
+
+
+## 📱 실행 화면
+
+![ezgif com-gif-maker (5)](https://user-images.githubusercontent.com/95578975/154859519-2c8e4a48-be60-4f57-96bd-c04d0031c11c.gif)
+
+## 🤔 고민과 해결
+
+### 1️⃣ TabBarItem 이미지 변경 (with Storyboard)
+
+시도 1 - TabBarItem의 Attributes Inspector에서 Tab Bar Item의 System Item 설정 -> 이미지 표시되지만,  selected/unselected 구분 X
+
+시도 2 - TabBarItem의 Attributes Inspector에서 Tab Bar Item의 Selected Image 설정 -> 이미지 표시 X
+
+시도 3 - TabBarItem의 Attributes Inspector에서 Bar Item의 Image만 설정 -> 이미지 표시 X
+
+시도 4 - TabBarItem의 Attributes Inspector에서 Tab Bar Item의 System Item, Bar Item의 Image 모두 설정 -> 이미지 표시 O, selected/unselected 구분 O
+
+### 2️⃣ TabBarItem 이미지 변경 (with Code)
+
+#### 시도 1 - 이미지 표시 X
+
+```swift
+print(tabBarItem.image, tabBarItem.selectedImage) // nil nil
+self.tabBarItem.image = UIImage(systemName: "photo.artframe")
+self.tabBarItem.selectedImage = UIImage(systemName: "photo.fill")
+print(tabBarItem.image, tabBarItem.selectedImage) // not nil. 값 있음.
+```
+
+#### 시도 2 - 이미지 표시 X
+
+```swift
+print(tabBarItem.image, tabBarItem.selectedImage) // nil nil
+self.tabBarItem.image = UIImage(systemName: "photo.artframe")?.withRenderingMode(.alwaysOriginal)
+self.tabBarItem.selectedImage = UIImage(systemName: "photo.fill")?.withRenderingMode(.alwaysOriginal)
+print(tabBarItem.image, tabBarItem.selectedImage) // not nil. 값 있음.
+```
+
+#### 시도 3 - 이미지 표시 X
+
+```swift
+print(tabBarController?.tabBarItem.image, tabBarController?.tabBarItem.selectedImage) // nil nil
+self.tabBarController?.tabBarItem.image = UIImage(systemName: "photo.artframe")
+self.tabBarController?.tabBarItem.selectedImage = UIImage(systemName: "photo.fill")
+print(tabBarController?.tabBarItem.image, tabBarController?.tabBarItem.selectedImage) // not nil. 값 있음.
+```
+
+
+
+시도 1, 2, 3 모두 값이 들어가지만 화면에는 나타나지 않았습니다.
+
+![스크린샷 2022-02-21 오전 1 15 11](https://user-images.githubusercontent.com/95578975/154852428-ff711a6e-56c9-45f6-8ed1-6059c15791fa.png)
+
+
+
+#### 해결 방법
+
+```swift
+self.tabBarController?.tabBar.items?[0].image = UIImage(systemName: "photo.artframe")
+self.tabBarController?.tabBar.items?[0].selectedImage = UIImage(systemName: "photo.fill")
+```
+
+#### 개선 코드
+
+```swift
+if let tabBarItem = self.tabBarController?.tabBar.items?[0] {
+    tabBarItem.image = UIImage(systemName: "photo.artframe")
+    tabBarItem.selectedImage = UIImage(systemName: "photo.fill")
+}
+```
+
+
+
+### 3️⃣ Asset에 Image 추가하기
+
+이미지를 추가하니 모두 자동으로 1x에 추가가 되었습니다. 1x, 2x, 3x의 차이점이 뭔지 궁금해져서 찾아보았습니다. [Image Size and Resolution](https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/image-size-and-resolution/)
+
+iOS가 콘텐츠를 화면에 배치하는데 사용하는 좌표계는 디스플레이의 픽셀에 맵핑되는 포인트 단위 측정을 기반으로 합니다. 표준 해상도 디스플레이는 1:1 픽셀 밀도 (또는 @1x)이며, 여기서 1 픽셀은 1 포인트와 같습니다. 고해상도 디스플레이는 2.0 또는 3.0의 스케일 팩터 (@2x, @3x라고 합니다)를 제공하여 픽셀 밀도가 높습니다. 따라서 고해상도 디스플레이는 이미지에 더 많은 픽셀을 요구합니다. 사용자가 어떤 기기를 사용할 지 알 수 없기 때문에 모든 사용자에게 적절한 이미지를 제공하기 위해 1x, 2x, 3x 이미지를 준비하여 image set으로 사용하는 것입니다.
+
+1x, 2x, 3x 이미지는 동일한 이미지이지만 단순히 크기가 다를 뿐입니다. 이미지의 기본 크기가 100x100 픽셀이면 2x에서 200x200 픽셀, 3x에서 300x300 픽셀이어야 합니다. 
+
+## ✏️ 추가 학습 거리
+
+### 1️⃣ UIImageView 와 UIImage 클래스는 각각 어떤 역할을 담당하는지 학습
+
+#### UIImageView
+
+인터페이스에 하나의 이미지 또는 일련의 애니메이션 이미지를 표시하는 객체. ImageView는 UIImage 객체를 사용하여 지정할 수 있는 모든 이미지를 효율적으로 그릴 수 있도록 해줍니다. UIImageView 클래스를 사용하여 JPEG 및 PNG 파일과 같은 표준 이미지 파일의 내용을 표시할 수 있습니다. 코드 또는 스토리보드에서 이미지뷰를 구성하고 런타임에 표시되는 이미지를 변경할 수 있습니다. 애니메이션 이미지의 경우, 이 클래스의 메소드를 사용하여 애니메이션을 시작/중지하고 다른 애니메이션 매개변수를 지정할 수도 있습니다.
+
+#### UIImage
+
+앱에서 이미지 데이터를 관리하는 객체. 이미지 객체를 사용하여 모든 종류의 이미지 데이터를 나타낼 수 있으며 UIImage 클래스는 기본 플랫폼에서 지원하는 모든 이미지 형식에 대한 데이터를 관리할 수 있습니다. 이미지 객체는 변경할 수 없으므로 항상 디스크의 이미지 파일이나 코드로 생성된 이미지 데이터와 같은 기존 이미지 데이터로 생성합니다. 이미지 객체에는 하나의 이미지 또는 애니메이션에 사용하는 일련의 이미지가 포함될 수 있습니다.
+
+### 2️⃣ 이미지 뷰의 속성 학습
+
+#### ScaleToFill
+
+이미지 비율 유지 X, 프레임 전체 채움
+
+#### Aspect Fit
+
+이미지 비율 유지 O, 프레임 전체 채우지 않음. 이미지 크기대로 유지 (남는 영역은 투명하게 된다)
+
+#### Aspect Fill
+
+이미지 비율 유지 O, 프레임 전체 채움. 이미지가 일부 짤릴 수 있음.
+
+#### Redraw
+
+캐시를 사용하지 않고 항상 컨텐츠를 다시 그리는 것. 이 때 setNeedsDisplay()가 사용된다.
+
+
+이후 옵션들 (Center, Top, Bottom, Left, Right, Top Left, Top Right, Bottom Left, Bottom Right)은 컨텐츠의 크기를 조절하지 않고, 컨텐츠가 배치되는 역할에만 영향을 미칩니다.
+
+### 📱 View.ContentMode Test
+![contentMode](https://user-images.githubusercontent.com/95578975/154857604-f469cf74-a2af-43ab-bcd1-45043cb13583.gif)![탱](https://user-images.githubusercontent.com/95578975/154858377-160677e1-ff1f-43ef-b577-773683409bd2.gif)
+
+
+## 💡 학습 키워드
+
+- [UIImageView](https://developer.apple.com/documentation/uikit/uiimageview)
+- [UIImage](https://developer.apple.com/documentation/uikit/uiimage)
+- [Bundle Resource](https://developer.apple.com/documentation/bundleresources)
+- [View ContentMode](https://developer.apple.com/documentation/uikit/uiview/contentmode)
