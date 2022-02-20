@@ -19,7 +19,7 @@ class SecondViewController: UIViewController {
 //        } else {
 //            self.photoImageView.image = UIImage(named: "\(randomNumber).jpg")
 //        }
-        self.photoImageView.image = UIImage(named: "20.jpg")
+        self.photoImageView.image = UIImage(named: "taewhy.jpg")
         
         switch contentModeRawValue {
         case 0:
@@ -50,7 +50,7 @@ class SecondViewController: UIViewController {
             photoImageView.contentMode = .bottomRight
         }
         
-        testLabel.text = "\(contentMode[contentModeRawValue])"
+        testLabel.text = "\(contentMode[contentModeRawValue]) / \(contentModeRawValue)"
         
         print("ContentMode: \(contentMode[contentModeRawValue]) /", "RawValue: \(contentModeRawValue)")
         contentModeRawValue += 1
