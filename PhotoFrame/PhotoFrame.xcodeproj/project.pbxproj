@@ -14,6 +14,7 @@
 		6F07150327BA7E9600AFB2D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F07150227BA7E9600AFB2D2 /* Assets.xcassets */; };
 		6F07150627BA7E9600AFB2D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F07150427BA7E9600AFB2D2 /* LaunchScreen.storyboard */; };
 		6F07150E27BADD7B00AFB2D2 /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F07150D27BADD7B00AFB2D2 /* CustomLabel.swift */; };
+		6F5F3D7127C260C300ABF032 /* BlueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5F3D7027C260C300ABF032 /* BlueViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		6F07150527BA7E9600AFB2D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6F07150727BA7E9600AFB2D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6F07150D27BADD7B00AFB2D2 /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
+		6F5F3D7027C260C300ABF032 /* BlueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				6F07150427BA7E9600AFB2D2 /* LaunchScreen.storyboard */,
 				6F07150727BA7E9600AFB2D2 /* Info.plist */,
 				6F07150D27BADD7B00AFB2D2 /* CustomLabel.swift */,
+				6F5F3D7027C260C300ABF032 /* BlueViewController.swift */,
 			);
 			path = PhotoFrame;
 			sourceTree = "<group>";
@@ -143,6 +146,7 @@
 				6F0714FE27BA7E9100AFB2D2 /* ViewController.swift in Sources */,
 				6F0714FA27BA7E9100AFB2D2 /* AppDelegate.swift in Sources */,
 				6F0714FC27BA7E9100AFB2D2 /* SceneDelegate.swift in Sources */,
+				6F5F3D7127C260C300ABF032 /* BlueViewController.swift in Sources */,
 				6F07150E27BADD7B00AFB2D2 /* CustomLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
