@@ -326,7 +326,9 @@ self.firstLabel.text = "Mase의 사진액자"
 <br>
 
 ### 완성 화면 
-<img src="https://user-images.githubusercontent.com/57667738/154839437-96e5a3fa-f4de-4f51-a2a4-b5bf4a94ff43.gif" width="30%" />
+<img src="https://user-images.githubusercontent.com/57667738/154842650-c32f51ce-2449-4daa-b990-0b8712b84919.gif" width="30%" />
+
+*(카메라는 아직 시뮬레이터를 아이폰과 연동하지 않아서 불가)*
 
 <br>
 <br>
