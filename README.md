@@ -1,113 +1,88 @@
-# STEP03. IBAction 연결하기
+# STEP04. Scene을 Segue로 연결하기
 
-> 2022.02.16
+> 2022.02.20
 
 ### 요구사항
 
-- [x] 사진액자 - IBOutlet 요구사항을 구현한 상태로 시작한다.
-- [x] First Scene에 버튼(UIButton)을 추가하고 IBAction으로 연결한다.
-- [x] 연결한 액션에 대한 메서드를 구현한다.
-- [x] 실행하고 버튼을 터치하기 이전/이후 화면을 캡처해서 readme.md 파일에 포함한다.
+- [x] 사진액자 - IBAction 요구사항을 구현한 상태로 시작한다.
+- [x] 스토리보드 구성 요소에 대해 학습하고 새로운 Scene과 Segue를 추가한다.
+- [x] 실행하고 새로운 화면을 캡처해서 readme.md 파일에 포함한다.
 
 <br/>
 <br/>
 
 ### 과정
 
-1. 스토리보드 UI 구성
-   1. UIButton 생성
-2. UIButton 의 이벤트와 ViewController 파일 연결
-3. UIButton 이벤트 구현
-4. 여러 버튼을 하나의 액션에 연결
-   1. UIButton 생성, 레이아웃 구성
-   2. 파일에 Action 연결
-   3. Action 메서드 구현
+1. 스토리보드에서 First Scene 과 연결되는 ViewController 추가
+   1. UIButton 추가하고, 화면 정중앙 배치
+2. 두번째 ViewController 와 연결할 세번째 ViewController 를 스토리보드에서 추가
+3. 두번째 ViewController 의 버튼을 컨트롤+클릭한 상태에서 드래그하여 세번째 ViewController 와 Segue-show 연결
+4. 실행하여 정상동작 확인
 
 ### 실행화면
 
-![step3-result](https://user-images.githubusercontent.com/12508578/154120928-a0cb7e3a-57d7-46e3-b789-43421817d690.png)
+![step4-result](https://user-images.githubusercontent.com/12508578/154839984-200d7b62-2175-4561-a8ca-4910a1ea7177.png)
 
 <br/>
 
 ## 배경 지식 학습
 
-### UIButton
+### Segue 사용하기
 
-[apple documentation-uibutton](https://developer.apple.com/documentation/uikit/uibutton/)
+> 스토리보드 파일에서 두 ViewController 간의 전환을 정의
 
-button 은 **Target-Action 디자인 패턴**을 사용해 사용자가 버튼을 누를 때 앱에 알린다.
+👉  [apple developer document-Using Segues](https://developer.apple.com/library/archive/featuredarticles/ViewControllerPGforiPhoneOS/UsingSegues.html)
 
-버튼을 tap 했을때 발생하는 이벤트를 직접 처리하지 않고 button에 action method 를 할당하고, 메서드가 언제 실행될지 트리거(trigger)하는 event 를 지정한다.
+- segue 의 시작점: button, table row, gesture recognizer
+- segue 의 끝점: 표시할 ViewController
+- segue 은 항상 새로운 ViewController 을 표시(present)하지만, unwind segue 를 사용해 view controller 를 dismiss 할 수도 있다.
+- runtime 에 UIKit 은 view controller 와 연관된 segue 를 load 하고 해당 요소에 연결한다. (programmatically 하게 segue 를 trigger 할 필요없다) 사용자가 요소와 상호작용하면 UIKit 은 적절한 view controller 를 load 하고 앱에 segue 가 발생한다고 알린다음 전환을 실행한다.
+- UIKit 에서 보낸 알림을 사용해 데이터를 새로운 view controller 에 전달하거나 segue 가 완전히 발생하지 않도록 할 수 있다.
 
-- runtime 에 button은 발생하는 모든 터치 이벤트를 처리하고 method를 호출한다.
-- `addTarget(\_:action:for:)` 메서드나 Interface Builder 에서 버튼의 액션을 처리할 메서드를 연결한다
-- button 상태 5가지(사용자와의 상호작용을 위함)
-  - default, highlighted, focused, selected, disabled.
-  - default 가 기본상태이며, 사용자가 버튼을 누르면 highlighted 상태가 된다.
-- UIControl class 상속받음
-  - UIControl: 컨트롤 객체에서 특정 이벤트 발생시, 미리 정해둔 target action 을 실행(Target-Action 패턴)
-  - UIButton, UISwitch, UIStepper....
-- button의 내용은 `imageView`(UIImageView), `titleLabel`(UILabel) 으로 구성
-
-### Target-Action 디자인 패턴
-
-> 객체는 이벤트가 발생할 때, 정보가 담긴 메시지를 다른 객체에게 보낸다.
-
-👉  [apple developer document](https://developer.apple.com/library/archive/documentation/General/Conceptual/Devpedia-CocoaApp/TargetAction.html#//apple_ref/doc/uid/TP40009071-CH3)
-
-이벤트 발생시 상황에 때라 원하는 대상(target)을 선택해 액션을 실행할 수 있다. (유연한 설계)
+스토리보드가 아닌 코드로 segue 실행:
 
 ```swift
-객체A ---(Action Message)---> 객체B
+override func performSegue(withIdentifier identifier: String, sender: Any?) {
+    // identifier 에 해당하는 segue 객체를 스토리보드에서 찾아 segue 실행
+}
 ```
-
-- Action Message: 이벤트 발생시 전송하는 메시지
-- target: 액션이 호출될 객체(ex. ViewController)
-- iOS 에서 많이 사용하는 패턴
-
-```swift
-func addTarget(_ target: Any?,
-        action: Selector,
-           for controlEvents: UIControl.Event)
-```
-
-- target:
-  - action method 가 호출하는 객체
-  - nil 지정시 UIKit 은 responder chain 에 지정된 action message 를 응답하고 message 를 해당 객체에 배달하는 객체를 검색한다.
-- action:
-  - 호출할 action method 를 식별하는 selector
-- controlEvents:
-  - action method 가 호출되는 컨트롤별 이벤트
 
 <br/>
 
 ## 🧁 추가 학습거리
 
-- IBAction, IBOutlet 연결 구조에 대해 정리
-- 버튼에 IBAction 을 추가할 때 이벤트 종류
-  - 👉  [apple document](https://developer.apple.com/documentation/uikit/uicontrol)-UIControl
-  - touchUpInside: 버튼의 기본 이벤트. 컨트롤 영역 안쪽에서 터치 하고 난 후
-  - touchUpOutside: 컨트롤 영역 안쪽에서 터치하고 난 후 컨트롤 밖에서 손을 뗏을때
-  - touchDown: 터치했을떄
-  - touchCancel: 터치를 취소
-  - valueChanged: 값이 변경되었을때
-- 버튼에 액션을 여러개 추가할 수 있나
-  - `button.addTarget()` 을 사용해 여러 액션을 추가할 수 있다
-- 여러버튼을 동시에 하나의 액션에 연결할 수 있나
-  - 하나의 액션에 연결 가능하며, tag property 를 사용해 각각의 버튼을 구분할 수 있다.
-  ```swift
-  @IBAction func colorButtonTouched(_ sender: UIButton) {
-      var buttonTitle: String = "Touched"
-      switch sender.tag {
-      case 0:
-          buttonTitle += "Blue"
-      case 1:
-          buttonTitle += "Orange"
-      case 2:
-          buttonTitle += "Purple"
-      default:
-          break
-      }
-      sender.setTitle(buttonTitle, for: .normal)
-  }
-  ```
+### Segue Action
+
+![segue actions](https://user-images.githubusercontent.com/12508578/154840166-0546d981-7d82-49b0-b9e8-5cd372a15a7d.png)
+
+**Adaptive segue**(이미지에서 Action Segue) 는 현재 환경을 기준으로 동작을 자동으로 조정한다. (예.Show segue 의 동작은 현재 view controller 따라 변경된다.)
+
+**Non-Adaptive segue**는 Adaptive segue 를 지원하지 않는 iOS7 이하 에서의 앱을 위해 제공된다.
+
+| action            | segue icon                                                                                                                 |
+| ----------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| show, show detail | ![show](https://user-images.githubusercontent.com/12508578/154840061-a9ece8cc-626d-418e-802d-a9aca5b13756.png)             |
+| present modally   | ![presentModally](https://user-images.githubusercontent.com/12508578/154840081-adf110ea-0602-4ac7-9ad5-5e0f763887eb.png)   |
+| present popover   | ![presentAsPopover](https://user-images.githubusercontent.com/12508578/154840100-b96ebbd0-7d6d-4dc2-be5a-8841cbd3daa9.png) |
+
+- **Show:**
+  - `showViewController` 메서드를 통해 새 컨텐츠를 표시
+  - 대부분의 view controller 는 modally over 로 동작
+  - 일부 view controller 는 이 메서드를 override 하여 다른 동작을 구현하는데 사용
+    - 예를들어, navigation controller 는 새로운 view controller 를 navigation stack 에 push 한다
+  - UIKit 은 \***\*targetViewControllerForAction\*\*** 메서드를 사용해 source view controller(다음 뷰컨트롤러를 띄워줄 뷰컨트롤러) 를 찾는다
+    - 이 메서드는 view controller 계층을 올라가며 `show(:sender:)`를 override 한 view controller 를 찾는다.
+    - 찾았다면, 반환된 view controller 의 `show(:sender)`를 사용
+    - 못찾았다면 nil 을 반환해 `present(:animated:completion)`을 사용
+- **Show Detail:**
+  - `showDetailViewController(_:sender:)` 메서드를 통해 target view controller 를 표시
+  - UISplitViewController 객체에 내장된(embed) view controller 들에만 이 segue 가 적용됨
+  - 사용시 UISplitViewController가 두번째 child view controller(detail controller) 를 새로운 content 로 교체
+  - 대부분의 view controller 는 새로운 content 를 modally 로 표시
+  - UIKit 은 targetViewControllerForAction:sender 메서드를 사용해 source view controller 를 찾는다
+- **Present Modally:**
+  - 지정된 presentation, transition style 을 사용해 view controller 를 modally 로 화면에 나타낸다
+- **Present As Popover:**
+  - horizontally regular 환경에서는 view controller 가 popover 로 나타난다
+  - horizontally compact 환경에서는 view controller 가 full-screen modal 로 표시된다
+  - 👉 [apple view controller programming guide-The Adaptive Model](https://developer.apple.com/library/archive/featuredarticles/ViewControllerPGforiPhoneOS/TheAdaptiveModel.html)
