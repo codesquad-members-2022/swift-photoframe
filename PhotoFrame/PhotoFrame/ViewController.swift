@@ -28,6 +28,11 @@ class ViewController: UIViewController {
         self.firstLabel.textColor = .blue
         self.firstLabel.backgroundColor = .yellow
         self.firstLabel.alpha = 0.5
+        
+        guard let blueViewController = self.storyboard?.instantiateViewController(withIdentifier: "blueViewController") as? BlueViewController else {
+            return
+        }
+        self.present(blueViewController, animated: true, completion: nil)
     }
     
     @IBAction func colorButtonTouched(_ sender: UIButton) {

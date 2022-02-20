@@ -53,7 +53,6 @@
                                         </state>
                                         <connections>
                                             <action selector="nextButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M38-WJ-1Bk"/>
-                                            <segue destination="iOR-SW-WUL" kind="show" id="Y2F-Nw-gA5"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -117,13 +116,13 @@
         <!--Blue View Controller-->
         <scene sceneID="cVc-0s-q2n">
             <objects>
-                <viewController id="iOR-SW-WUL" customClass="BlueViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="blueViewController" id="iOR-SW-WUL" customClass="BlueViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bHo-pR-qW5">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CUX-gQ-lso">
-                                <rect key="frame" x="184.5" y="403" width="45" height="36"/>
+                                <rect key="frame" x="184.5" y="430" width="45" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="Next">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -133,7 +132,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qXn-3T-CKv">
-                                <rect key="frame" x="30" y="30" width="46" height="34"/>
+                                <rect key="frame" x="30" y="74" width="46" height="34"/>
                                 <state key="normal" title="Close">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
