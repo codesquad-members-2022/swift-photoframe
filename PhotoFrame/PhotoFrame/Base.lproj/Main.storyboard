@@ -27,6 +27,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ysa-R4-RrK">
+                                <rect key="frame" x="183" y="598" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="다음"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jf1-pg-YvA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
