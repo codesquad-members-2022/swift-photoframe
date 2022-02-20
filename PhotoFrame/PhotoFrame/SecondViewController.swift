@@ -19,6 +19,11 @@ class SecondViewController: UIViewController {
         photoImageView.image = UIImage(named: randomImage)
     }
     
+    @IBOutlet weak var selectButton: UIButton!
+    @IBAction func selectButtonTouched(_ sender: Any) {
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
