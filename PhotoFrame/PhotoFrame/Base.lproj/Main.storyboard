@@ -121,8 +121,21 @@
                     <view key="view" contentMode="scaleToFill" id="bHo-pR-qW5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CUX-gQ-lso">
+                                <rect key="frame" x="184.5" y="403" width="45" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Z2a-nN-gR1"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <constraints>
+                            <constraint firstItem="CUX-gQ-lso" firstAttribute="centerY" secondItem="bHo-pR-qW5" secondAttribute="centerY" id="bsl-ox-S7a"/>
+                            <constraint firstItem="CUX-gQ-lso" firstAttribute="centerX" secondItem="bHo-pR-qW5" secondAttribute="centerX" id="gGq-gA-Cq7"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="5ab-tS-6lg"/>
                 </viewController>
