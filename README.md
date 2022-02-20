@@ -199,7 +199,7 @@ ViewController는 크게 두 가지 역할이 있다.
 - 위와 같이 Container View Controller를 사용하면 하위 뷰가 생기고, 각자 자체 ViewController를 갖게 됨으로써 유지보수를 용이하게 한다. (뷰 자체의 구역 분리)
 - 분리하지 않으면, 하나의 뷰 컨트롤러가 너무 많은 역할을 하게되고 유지보수와 테스트가 힘들어짐 (구역별로 특성에 맞게 각각의 뷰 컨트롤러를 두고 따로 관리)
 - 구역별로 특성에 맞게 각각의 뷰 컨트롤러를 두고 따로 관리
-****
+
 
 <br>
 
@@ -247,5 +247,48 @@ ViewController는 크게 두 가지 역할이 있다.
     
 ![Step6](https://user-images.githubusercontent.com/92635121/154720866-88173a65-cc10-446d-bd12-4e9bbd77b856.gif)
 
+<br>
+
+## Step7. 다른 화면 연결하기
+- [x]  `Second Scene`에 ImageView 추가 및 Outlet 연결
+- [x]  다음 버튼 생성 및 Action 연결
+- [x]  이미지 파일 추가
+- [x]  UIImageView 와 UIImage 학습
+- [x]  UIImageView 속성 학습
+
+<br>
+
+### UIImageView
     
+* UIImage를 보여주기 위한 custom view
+* Interface에 단일 이미지 또는 일련의 애니메이션 이미지를 표시하는 객체, 애니메이션 이미지의 경우 이 클래스의 메소드를 사용해서 애니메이션을 시작 및 중지할 수 있다.
+* UIImage를 사용해 이미지를 나타냄
+* 이미지를 보여주는 건 UIImageView지만, UIImage의 속성을 기반으로 나타 냄
+
+✔️ Content Mode
+| 속성 | 설명 |
+| --- | --- |
+| Aspect Fit | 이미지 비율을 유지한체로, Image View 영역 밖으로 나가지 않는 선에서 최대치로 키움 |
+| Aspect Fill | 비율을 유지한체로, Image View 영역 밖까지 이미지를 확장 (영역에 여백이 생기지 않게 함) |
+| Scale To Fill | 비율을 무시한체, Image view 영역에 맞게 늘림 |
+| Redraw | 결과만 보면 Scale To Fill 과 동일하지만, 내부적으로 drawRect() 을 반복 호출해 성능저하 (진짜 필요하지 않다면 사용하지 말 것) |
+
+✔️ UIImageView 속성
+| 속성 | 설명 |
+| --- | --- |
+| Image | 표시할 이미지. 독립 실행형 이미지 및 asstes 이미지를 포함하여 Xcode Project에 원하는 이미지를 지정할 수 있다. 이 속성을 프로그래밍 방식으로 설정하려면 Image나 animationImages 속성을 사용하면 된다. |
+| Highlighted | 이미지 보기가 강조 표시될 때 표시할 이미지. 이 특성을 프로그래밍 방식으로 설정하려면 hilightedImage나 highlightedAnimationImages 속성을 사용하면 된다. |
+| State | 이미지의 초기 상태. 이 특성을 사용하여 이미지를 강조 표시한다. 이 속성을 프로그래밍 방식으로 설정하려면 isHighlighted 속성을 사용하면 된다. |
+
+
+<br>
+
+### UIImage
+
+* 앱의 이미지 데이터를 관리하는 클래스
+* 다양한 이미지 포맷을 지원하지만, 일반적으로 PNG 혹은 JPGE파일을 권장 및 최적화 되어있다.
+* Image객체는 Immutable 하여 한번 생성된 이후에는 수정할 수 없다. 처음 생성시 이미지의 속성들을 명시해야한다.
+* 대부분의 이미지 속성은 함께 제공되는 이미지 파일 또는 이미지 데이터의 메타 데이터를 사용하여 자동으로 설정된다.
+* 또한 이미지 개체의 불변성은 어떤 스레드에서도 안전하게 생성하고 사용할 수 있다는 것을 의미한다.
     
+![Step7](https://user-images.githubusercontent.com/92635121/154830180-8bab3c63-816c-498c-b044-d0111519ab87.gif)
