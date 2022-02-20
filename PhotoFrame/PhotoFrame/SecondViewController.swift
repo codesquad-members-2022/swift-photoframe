@@ -21,8 +21,12 @@ class SecondViewController: UIViewController {
     
     @IBOutlet weak var selectButton: UIButton!
     @IBAction func selectButtonTouched(_ sender: Any) {
+        let picker = UIImagePickerController()
+        picker.sourceType = .photoLibrary
+        picker.allowsEditing = true
+        picker.delegate = self
+        self.present(picker, animated: true, completion: nil)
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +41,8 @@ class SecondViewController: UIViewController {
         photoFrameImageView.translatesAutoresizingMaskIntoConstraints = false
         selectButton.translatesAutoresizingMaskIntoConstraints = false
         
-        photoImageView.contentMode = .scaleAspectFill
+        
+        photoImageView.contentMode = .scaleToFill
         
         photoImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         photoImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 100).isActive = true
@@ -55,7 +60,7 @@ class SecondViewController: UIViewController {
         
         
         photoFrameImageView.image = UIImage(named: "photoframe-border.png")
-        photoFrameImageView.contentMode = .scaleAspectFill
+        photoFrameImageView.contentMode = .scaleToFill
         
         photoFrameImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         photoFrameImageView.topAnchor.constraint(equalTo: photoImageView.topAnchor, constant: (photoImageViewHeight - photoFrameImageViewHeight) / 2).isActive = true
@@ -70,5 +75,13 @@ class SecondViewController: UIViewController {
         
         selectButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         selectButton.centerYAnchor.constraint(equalTo: nextImageButton.bottomAnchor, constant: 50).isActive = true
+    }
+}
+
+extension SecondViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let selectedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
+        self.photoImageView.image = selectedImage
+        picker.dismiss(animated: true, completion: nil)
     }
 }
