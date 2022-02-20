@@ -10,6 +10,7 @@ import UIKit
 class SecondViewController: UIViewController {
 
     @IBOutlet weak var photoImageView: UIImageView!
+    @IBOutlet weak var photoFrameImageView: UIImageView!
     
     @IBOutlet weak var nextImageButton: UIButton!
     @IBAction func nextImageButtonTouched(_ sender: Any) {
