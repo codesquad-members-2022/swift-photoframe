@@ -36,8 +36,15 @@ class YellowViewController: UIViewController {
     }
     
     func openCamera() {
-        imagePicker.sourceType = .camera
-        self.present(imagePicker, animated: true, completion: nil)
+        if(UIImagePickerController.isSourceTypeAvailable(.camera)) {
+            imagePicker.sourceType = .camera
+            self.present(imagePicker, animated: true, completion: nil)
+        }
+        else {
+            let alert = UIAlertController(title: "Error!", message: "해당 기기에 카메라가 감지되지 않아요!", preferredStyle: .actionSheet)
+            self.present(alert, animated: true, completion: nil)
+            dismiss(animated: true)
+        }
     }
 
 
