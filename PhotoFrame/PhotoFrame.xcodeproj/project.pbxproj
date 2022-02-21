@@ -340,6 +340,7 @@
 				DEVELOPMENT_TEAM = FCQD35AW5P;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PhotoFrame/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "사진 촬영을 위해 카메라 접근 권한이 필요합니다.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -368,6 +369,7 @@
 				DEVELOPMENT_TEAM = FCQD35AW5P;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PhotoFrame/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "사진 촬영을 위해 카메라 접근 권한이 필요합니다.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

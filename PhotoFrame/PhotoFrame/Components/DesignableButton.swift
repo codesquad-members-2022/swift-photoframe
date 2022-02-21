@@ -40,10 +40,4 @@ class DesignableButton: UIButton {
         }
     }
     
-    @IBInspectable
-    var enableShadow: Bool = false {
-        didSet {
-            self.layer.masksToBounds = enableShadow
-        }
-    }
 }
