@@ -80,11 +80,21 @@ PhotoFrame/ViewController.swift:18: Fatal error: Unexpectedly found nil while im
     - [x]  Main StoryBoard에서 First Scene옆에 ViewController를 드래그해서 새로운 Scene추가
     - [x]  Action Segue에서 show 항목선택
     - [x]  Segue 속성변경
-- [ ]  실행하고 새로운 화면을 캡처해서 readme.md 파일에 포함한다.
+- [x]  실행하고 새로운 화면을 캡처해서 readme.md 파일에 포함한다.
 - Main 스토리보드에 ViewController를 드래그하여 새로운 Scene을 추가하였다.
 - '다음' 버튼을 선택하고 연결하였다.
 - Action Segue도 Show 항목으로 선택하였다.
 - 새로 추가한 Scene 속성에 배경색상을 바꾸고 새로운 화면이 나타나는지 확인하였다.
   <img src="https://user-images.githubusercontent.com/92699723/154891103-2dd6bf80-e3a8-41c0-b4e2-88aa86230d8e.gif" width="300" height="600">
 - Scene 하나를 더 추가하여 두 번째 Scene의 화면이 나오는 방식으로 기능 구현을 완료하였다.
-  <img src="https://user-images.githubusercontent.com/92699723/154891867-56c86838-1f66-4dfe-a713-0bc031d173eb.gif" width="300" height="600">
+  <img src="https://user-images.githubusercontent.com/92699723/154891867-56c86838-1f66-4dfe-a713-0bc031d173eb.gif" width="300" height="600">   
+
+## 세그웨이(Segue)를 이용한 화면 전환   
+- 세그웨이(Segue)역할: 스토리보드에서 뷰 컨트롤러 사이의 연결 관계 및 화면 전환을 관리   
+  - 화면과 화면을 연결하기 위해 아무런 소스 코드도 필요로 하지 않는다는 것이 특징이다.   
+  - **스토리보드상에서 Segue는 뷰 컨트롤러 사이에 연결된 화살표로 표시된다.**
+  - 화살표는 한쪽 방향으로 향하는 모습을 하고있는데, 이는 출발점과 도착점이 있다는 뜻이다.
+  - Segue는 한쪽으로만 통행할 수 있으니 One-Way Bridge라고한다. 즉, 한 쪽 방향으로만 흐르는 화면전환이다.   
+  - 세그웨이(Segue) 종류
+    - 메뉴얼 세그웨이(Manual Segue): 츨발점이 뷰 컨트롤러 자체인 경우
+    - 액션 세그웨이(Action Segue) 또는 트리거 세그웨이(Trigger Segue): 버튼 등이 출발점인 경우
