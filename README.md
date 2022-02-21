@@ -533,3 +533,45 @@ Transition Style (어떻게 새 화면을 표시할 것인가)
 * partialCurl = 종이처럼 넘기면서
 
 UIResponder Chain in UIViewController?
+
+---
+
+## GitHub Error Solved!
+
+### 문제 상황
+
+<img alt="Github_Error_Solved_Reason" width="500" src="PhotoFrame/README_images/Github_Error_Solved_Reason.jpg"/>
+
+현재 이상하게도 예전에 마스터분의 revert 기록이 내 메인 브랜치에 들어오면서 Rebase가 되지 않는 오류가 발생하고 있었다.   
+우선 과제 진행을 위해 (이 상황을 인지하지 못한 상태에서) 브랜치를 하나 만들고 과제를 진행하였지만, 이는 나중에 PR 때 Conflict 문제로 발전하였다.      
+불필요한 이력을 제외하고 필요한 커밋만을 남긴 브랜치를 Checkout 하고 PR을 전송해야 한다.
+
+### 해결 방법
+
+<img alt="Github_Error_Solved_Solving1" width="600" src="PhotoFrame/README_images/Github_Error_Solved_Solving1.jpg"/>
+
+가장 중요한 것은 **원본 레포지토리의 내 이력은 온전한가**였다.   
+만약 그렇다면 지금의 작업을(눈물을 머금고서라도) 다른 곳에 잠시 옮겨 두었다가 반영하는 식으로 하거나 완전히 버리면 되기 때문이다. 원본 레포지토리에 문제가 있는 상황이라면 이건 또 다른 문제다.
+
+Github 웹을 통해 확인해보니 별다른 문제는 없어 보였다. 필자는 언제나 전용 브랜치에만 Git merge를 하였고, 해당 커밋 이력에 다른 작업자의 이력은 없었다. 작업 내용도 필자의 의도와 다르지 않다.
+
+그렇다면 로컬 저장소만 어떻게든 맞춰주면 된다. 방법은 간단하다.
+
+1. 에러 핸들링 전용 브랜치를 생성한다.
+2. 전용 브랜치에 Git reset 기능을 이용하여 커밋 이력을 초기화한다.
+3. Git cherry-pick 기능을 이용해 기존 작업하던 커밋 이력을 한땀한땀 옮긴다.
+4. Remoe Branch에 Git push 한다.
+
+### 완료
+
+*Git log 혹은 Sourcetree를 이용해 커밋 ID를 알아내고 체리픽에 사용한다.*
+
+```
+git checkout tempBranch
+git push --set-upstream origin tempBranch
+git reset --hard upstream/myBranch
+git cherry-pick [commit IDs(separator = " ")]
+git push
+```
+
+<img alt="Github_Error_Solved_Complete" width="900" src="PhotoFrame/README_images/Github_Error_Solved_Complete.jpg"/>
