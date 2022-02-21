@@ -79,8 +79,7 @@
                                     </attributedString>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="nextButtonTouched:" destination="D9y-0x-Zly" eventType="touchUpInside" id="IDG-rz-NEG"/>
-                                    <segue destination="zGs-sa-xF7" kind="show" id="SGh-2K-Wgt"/>
+                                    <segue destination="zQl-2b-HFv" kind="show" id="yfc-Sn-VtF"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -95,50 +94,125 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ss7-3P-7Wk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-302" y="-257"/>
+            <point key="canvasLocation" x="-303.07692307692309" y="-257.34597156398104"/>
         </scene>
         <!--Yellow View Controller-->
-        <scene sceneID="VEk-AD-P2y">
+        <scene sceneID="Go6-tp-Kjf">
             <objects>
-                <viewController id="zGs-sa-xF7" customClass="YellowViewController" customModule="PhotoFrame" sceneMemberID="viewController">
-                    <button key="view" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="FVw-4S-bqZ">
+                <viewController id="zQl-2b-HFv" customClass="YellowViewController" customModule="PhotoFrame" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bbC-b5-mUF">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="plain" title="닫기"/>
-                        <connections>
-                            <action selector="closeButtonTouched:" destination="zGs-sa-xF7" eventType="touchUpInside" id="BWW-fG-Ecp"/>
-                        </connections>
-                    </button>
-                    <navigationItem key="navigationItem" id="Agj-Ox-Y13"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Nfv-O4-gbP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="524.61538461538464" y="-257.34597156398104"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="HQT-tv-gPY">
-            <objects>
-                <viewController id="lrv-A7-Q47" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="GP0-Z8-bS4">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="UU7-1j-Agt"/>
-                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ucP-nS-XiR">
+                                <rect key="frame" x="166" y="268" width="59" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="다음">
+                                            <attributes>
+                                                <font key="NSFont" size="20" name="AppleSDGothicNeo-Regular"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="z7J-fM-FnV" kind="show" id="xgZ-5Y-Hna"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p5A-pL-78M">
+                                <rect key="frame" x="166" y="425" width="64" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="닫기">
+                                            <attributes>
+                                                <font key="NSFont" size="23" name="AppleSDGothicNeo-Regular"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="closeButtonTouched:" destination="zQl-2b-HFv" eventType="touchUpInside" id="Sai-BV-zHh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="VH6-bg-eCt"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <navigationItem key="navigationItem" id="b7I-yW-dqn"/>
+                    <navigationItem key="navigationItem" id="Z6N-bj-kcd"/>
+                    <connections>
+                        <outlet property="closeButton" destination="p5A-pL-78M" id="Rqe-ar-bUO"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KTh-zd-59v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eFY-aa-YR1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1383" y="-257"/>
+            <point key="canvasLocation" x="506" y="-257"/>
+        </scene>
+        <!--Blue View Controller-->
+        <scene sceneID="myj-7a-yDv">
+            <objects>
+                <viewController id="z7J-fM-FnV" customClass="BlueViewController" customModule="PhotoFrame" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hck-Fk-qB1">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oJ4-kj-Ytk">
+                                <rect key="frame" x="168" y="380" width="57" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="닫기">
+                                            <attributes>
+                                                <font key="NSFont" size="19" name="AppleSDGothicNeo-Regular"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="closeButtonTouchedNumTwo:" destination="z7J-fM-FnV" eventType="touchUpInside" id="JQa-5a-ntp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Fbp-dH-BbT"/>
+                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="5zw-92-1nK"/>
+                    <connections>
+                        <outlet property="closeButtonNumTwo" destination="oJ4-kj-Ytk" id="QCJ-Hb-yP3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="evG-Nq-PNX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1280" y="-257"/>
         </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
