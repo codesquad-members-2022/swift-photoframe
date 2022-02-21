@@ -28,9 +28,10 @@ class SecondViewController: UIViewController {
         let vc = UIImagePickerController()
         vc.sourceType = .photoLibrary
         vc.delegate = self
-        vc.allowsEditing = true
+//        vc.allowsEditing = true
         present(vc, animated: true, completion: nil)
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,4 +45,11 @@ class SecondViewController: UIViewController {
 
 
 extension SecondViewController: UIImagePickerControllerDelegate & UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let selectedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            self.photoImageView.image = selectedImage
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
 }
+
