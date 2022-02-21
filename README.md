@@ -98,3 +98,14 @@ PhotoFrame/ViewController.swift:18: Fatal error: Unexpectedly found nil while im
   - 세그웨이(Segue) 종류
     - 메뉴얼 세그웨이(Manual Segue): 츨발점이 뷰 컨트롤러 자체인 경우
     - 액션 세그웨이(Action Segue) 또는 트리거 세그웨이(Trigger Segue): 버튼 등이 출발점인 경우
+
+# STEP5
+## ViewController 연결하기
+- [x]  ViewController 역할에 대해 학습
+- [ ]  ViewController 서브클래스를 생성
+  - [ ] Cocoa Touch Class를 서브클래스로 생성하여 UIViewController에 상속받도록 입력
+  - [ ] 새로 추가한 Scene 클래스 지정
+- [ ]  ViewController 콜백 함수들 역할과 실행 순서를 이해한다
+  - [ ]  강의 자료에 있는 화면 관련된 콜백 함수들에 모두 print코드를 추가
+- [ ]  ViewController 와 Scene을 연결
+  - [ ] IBAction 연결하여 메서드 코드작성
