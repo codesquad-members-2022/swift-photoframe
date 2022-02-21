@@ -13,7 +13,10 @@ class SecondViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
-
+    
+    @IBAction func nextButtonTouched(_ sender: Any) {
+        
+    }
+    
 }
