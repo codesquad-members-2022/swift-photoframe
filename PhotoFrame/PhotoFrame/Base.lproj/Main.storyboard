@@ -42,14 +42,25 @@
                                     <constraint firstAttribute="height" constant="260" id="G8H-xQ-wTK"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qsy-ys-f4a">
+                                <rect key="frame" x="174.5" y="241" width="65" height="47"/>
+                                <color key="tintColor" systemColor="systemBrownColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="선택" buttonSize="large"/>
+                                <connections>
+                                    <action selector="selectButtonTouched:" destination="Q4E-0C-ch4" eventType="touchUpInside" id="FF6-3J-E0q"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="TAC-R9-lm8"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                         <constraints>
                             <constraint firstItem="MhY-FG-LNW" firstAttribute="centerX" secondItem="zmO-bH-WCv" secondAttribute="centerX" id="KvP-Vx-rsR"/>
                             <constraint firstItem="Vwv-dT-fgO" firstAttribute="top" secondItem="MhY-FG-LNW" secondAttribute="bottom" constant="40" id="NlS-Zg-Dcl"/>
+                            <constraint firstItem="qsy-ys-f4a" firstAttribute="centerX" secondItem="zmO-bH-WCv" secondAttribute="centerX" id="XsV-ne-djU"/>
                             <constraint firstItem="Vwv-dT-fgO" firstAttribute="centerX" secondItem="zmO-bH-WCv" secondAttribute="centerX" id="ZCa-ca-LkX"/>
                             <constraint firstItem="rr4-pv-Osj" firstAttribute="centerX" secondItem="zmO-bH-WCv" secondAttribute="centerX" id="cZI-z9-URP"/>
+                            <constraint firstItem="rr4-pv-Osj" firstAttribute="top" secondItem="qsy-ys-f4a" secondAttribute="bottom" constant="30" id="eno-pu-rMF"/>
                             <constraint firstItem="MhY-FG-LNW" firstAttribute="centerY" secondItem="zmO-bH-WCv" secondAttribute="centerY" id="h4Q-xu-qDu"/>
                             <constraint firstItem="rr4-pv-Osj" firstAttribute="centerY" secondItem="zmO-bH-WCv" secondAttribute="centerY" id="lAY-Db-Xzc"/>
                         </constraints>
@@ -63,7 +74,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SRB-zw-MnQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1923" y="282"/>
+            <point key="canvasLocation" x="1921.7391304347827" y="281.91964285714283"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="8Ee-9W-sD2">
