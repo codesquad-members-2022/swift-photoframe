@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B4C4A2C27C3CF94008AF841 /* YellowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4C4A2B27C3CF94008AF841 /* YellowViewController.swift */; };
 		5B7FD76927BA713E00A6C714 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7FD76827BA713E00A6C714 /* AppDelegate.swift */; };
 		5B7FD76B27BA713E00A6C714 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7FD76A27BA713E00A6C714 /* SceneDelegate.swift */; };
 		5B7FD76D27BA713E00A6C714 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7FD76C27BA713E00A6C714 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B4C4A2B27C3CF94008AF841 /* YellowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowViewController.swift; sourceTree = "<group>"; };
 		5B7FD76527BA713E00A6C714 /* PhotoFrame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoFrame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B7FD76827BA713E00A6C714 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B7FD76A27BA713E00A6C714 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				5B7FD76A27BA713E00A6C714 /* SceneDelegate.swift */,
 				5B7FD76C27BA713E00A6C714 /* ViewController.swift */,
 				5BFD6D4B27BF6F5800BB77DB /* FirstViewController.swift */,
+				5B4C4A2B27C3CF94008AF841 /* YellowViewController.swift */,
 				5B7FD76E27BA713E00A6C714 /* Main.storyboard */,
 				5B7FD77127BA713F00A6C714 /* Assets.xcassets */,
 				5B7FD77327BA713F00A6C714 /* LaunchScreen.storyboard */,
@@ -145,6 +148,7 @@
 				5B7FD76927BA713E00A6C714 /* AppDelegate.swift in Sources */,
 				5B7FD76B27BA713E00A6C714 /* SceneDelegate.swift in Sources */,
 				5BFD6D4C27BF6F5900BB77DB /* FirstViewController.swift in Sources */,
+				5B4C4A2C27C3CF94008AF841 /* YellowViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
