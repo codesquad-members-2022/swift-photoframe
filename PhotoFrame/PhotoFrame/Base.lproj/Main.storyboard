@@ -40,6 +40,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L70-kv-fA8">
+                                <rect key="frame" x="178" y="587" width="58" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="선택"/>
+                                <connections>
+                                    <action selector="selectButtonTouched:" destination="eJw-0z-TMz" eventType="touchUpInside" id="aCR-4d-XQZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="29l-4z-UHu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
