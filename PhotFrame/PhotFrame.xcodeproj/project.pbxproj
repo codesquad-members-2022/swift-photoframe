@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3716F98A27C32A8200FB32CA /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3716F98927C32A8200FB32CA /* SecondViewController.swift */; };
 		3774AA0127BA763600C839E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3774AA0027BA763600C839E3 /* AppDelegate.swift */; };
 		3774AA0327BA763600C839E3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3774AA0227BA763600C839E3 /* SceneDelegate.swift */; };
 		3774AA0527BA763600C839E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3774AA0427BA763600C839E3 /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3716F98927C32A8200FB32CA /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		3774A9FD27BA763600C839E3 /* PhotFrame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotFrame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3774AA0027BA763600C839E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3774AA0227BA763600C839E3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				37D6499027BE424E00A4C8C0 /* RedViewController.swift */,
 				3774AA1427BB949000C839E3 /* OrangeViewController.swift */,
 				3774AA0627BA763600C839E3 /* Main.storyboard */,
+				3716F98927C32A8200FB32CA /* SecondViewController.swift */,
 				3774AA0927BA763700C839E3 /* Assets.xcassets */,
 				3774AA0B27BA763700C839E3 /* LaunchScreen.storyboard */,
 				3774AA0E27BA763700C839E3 /* Info.plist */,
@@ -144,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3716F98A27C32A8200FB32CA /* SecondViewController.swift in Sources */,
 				37D6499127BE424E00A4C8C0 /* RedViewController.swift in Sources */,
 				3774AA1527BB949000C839E3 /* OrangeViewController.swift in Sources */,
 				3774AA0527BA763600C839E3 /* ViewController.swift in Sources */,

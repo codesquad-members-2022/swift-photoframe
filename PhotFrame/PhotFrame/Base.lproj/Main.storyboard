@@ -11,18 +11,27 @@
         <!--Item 2-->
         <scene sceneID="Iay-6L-dAs">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Y4-z2-Hx9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="SlS-af-hyk" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NZn-IH-4lm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Photo Album" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ef-18-xN7">
+                                <rect key="frame" x="90" y="335" width="195" height="143"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Bj0-VD-kv9"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="3oN-5n-tD6"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9Y4-z2-Hx9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="548" y="417"/>
+            <point key="canvasLocation" x="548" y="416.74876847290642"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="oaH-tL-a7J">
