@@ -28,7 +28,6 @@ class SecondViewController: UIViewController {
         let vc = UIImagePickerController()
         vc.sourceType = .photoLibrary
         vc.delegate = self
-//        vc.allowsEditing = true
         present(vc, animated: true, completion: nil)
     }
     
@@ -36,7 +35,7 @@ class SecondViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        photoImageView.contentMode = .scaleAspectFit
+        photoImageView.contentMode = .scaleAspectFill
         
         imagePicker.delegate = self
     }

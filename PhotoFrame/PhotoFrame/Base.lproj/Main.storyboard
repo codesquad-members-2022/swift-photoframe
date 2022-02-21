@@ -16,7 +16,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zlc-B1-ZJN">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photoframe-border" translatesAutoresizingMaskIntoConstraints="NO" id="dh2-3g-vyk" userLabel="PhotoFrame">
+                                <rect key="frame" x="57" y="74" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="eJA-kO-mQ2"/>
+                                    <constraint firstAttribute="width" constant="300" id="odx-2A-Yuk"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zlc-B1-ZJN">
                                 <rect key="frame" x="87" y="104" width="240" height="240"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="PEt-tX-68E"/>
@@ -45,13 +52,6 @@
                                     <action selector="selectButtonTouched:" destination="DAT-BH-HV3" eventType="touchUpInside" id="OC6-bV-frA"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photoframe-border" translatesAutoresizingMaskIntoConstraints="NO" id="dh2-3g-vyk" userLabel="PhotoFrame">
-                                <rect key="frame" x="57" y="74" width="300" height="300"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="eJA-kO-mQ2"/>
-                                    <constraint firstAttribute="width" constant="300" id="odx-2A-Yuk"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ItR-GF-OlT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
