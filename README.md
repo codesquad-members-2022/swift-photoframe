@@ -17,7 +17,7 @@ iOS 포토프레임 프로젝트 저장소
 <Br>
 
     StoryBoard 라이브러리에서 TabBarController를 추가하고 TabBarViewController와 연결.
-
+    
     첫번째 Scene Custom Class를 ViewController로 설정
 
 
@@ -104,7 +104,7 @@ label을 커스터마이징 하기 위해서는 코드로 작성하거나, IB에
 
 <img src = "https://user-images.githubusercontent.com/59790540/154208692-def9b5a7-21bb-4608-9336-5121042b0de1.png" width="200" height= "420" />
 
-    
+​    
 
 
 # IBAction
@@ -417,3 +417,67 @@ let randomImageNumber: String = {
 - UIImageView 영역밖으로 나갈 수 있다. Clip to bounds 를 true로 설정한다면 짤리지 않음
 - UIImageView 내부에 여백이 생기지 않음
 - 이미지 일부가 짤려보일 수 있어 인물, 동물 사진에는 적합하지 않음
+
+
+
+
+
+
+
+step8
+
+## ✅**요구사항**
+
+- [x] 이미지 테두리 액자 화면 추가 
+- [x] 앨범에서 사진 가져오기 기능 
+  - [x] Info.plist 에서 라이브러리 접근 권한 설정 
+
+
+
+
+
+## 📔진행과정
+
+- 이미지를 다운받아 두번째 뷰에 PhotoFrame ImageView 추가하기 
+  - 사진이 보여지는 ImageView 보다 아래에 위치
+
+![스크린샷 2022-02-22 오전 12.46.41](/Users/choeyeju/Desktop/스크린샷 2022-02-22 오전 12.46.41.png)
+
+- 드래그앤 드롭으로 조절가능하다(같은 depth라면 상위에 있을수록 앞에 위치 )
+
+- 선택 버튼 추가하기 
+
+  ![스크린샷 2022-02-22 오전 12.45.42](/Users/choeyeju/Desktop/스크린샷 2022-02-22 오전 12.45.42.png)
+
+
+
+- 선택 버튼을 터치했을때 라이브러리에서 사진 선택해서 UIImageView에 로드 
+
+  - Info.plist 에서 `Privacy - Photo Library Usage Description` 을 추가해서 설정해준다 
+
+  - UIImagePickerControllerDelegate, UINavigationControllerDelegate 프로토콜을 채택한다. 
+
+  - 버튼을 터치했을때 photoLibrary 를 띄운다. 
+
+    ```swift
+        @IBAction func selectButtonTouched(_ sender: Any) {
+            
+            picker.sourceType = .photoLibrary
+            self.present(picker, animated: true, completion:  nil)
+            
+        }
+    
+    ```
+
+  - 이미지 선택을 완료했을때는, 프로토콜에 선언되어있는 메소드를 사용하여 구현할 수 있다. 
+
+    ```swift
+        func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+            if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+                photoImageView.image = image
+            }
+            self.dismiss(animated: true, completion: nil)
+        }
+    ```
+
+    
