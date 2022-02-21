@@ -11,6 +11,8 @@ class SecondViewController: UIViewController {
 
     @IBOutlet weak var photoImageView: UIImageView!
     
+    @IBOutlet weak var photoFrameView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
