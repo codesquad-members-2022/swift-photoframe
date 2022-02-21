@@ -60,11 +60,15 @@ PhotoFrame/ViewController.swift:18: Fatal error: Unexpectedly found nil while im
     - [x]  Main.storyboard에서 First Scene에 UIButton을 추가
     - [x]  버튼을 선택하고 ViewController 코드에 IBAction 연결
     - [x]  팝업에서 Connection 항목에서 IBOutlet → IBAction으로 변경
-- [ ]  연결한 액션에 대해 메서드 구현
-    - [ ]  ViewController 클래스에 추가된 nextButtonTouched()메서드 구현추가
-- [ ]  실행하고 버튼을 터치하기 이전/이후 화면 캡쳐해서 readme.md 파일에 포함
+- [x]  연결한 액션에 대해 메서드 구현
+    - [x]  ViewController 클래스에 추가된 nextButtonTouched()메서드 구현추가
+    - [x]  실행하고 버튼을 터치하기 이전/이후 화면 캡쳐해서 readme.md 파일에 포함
 ### Step3 - 1
 - 우측 유틸리티 영역과 좌측 네비게이터 영역이라고하며 Command + Option + 숫자0 단축키로 유틸리티 영역을 확인하였다.
 - 속성(Attributes)에서 Title 항목에서 '다음'으로 변경하였고
 - storyboard에서 ViewController 코드에 연결하였다.
-<img src="https://user-images.githubusercontent.com/92699723/154876613-d2e98616-0a13-478d-b36a-7bb9eb99910b.png" width="700" height="200"/>   
+<img src="https://user-images.githubusercontent.com/92699723/154876613-d2e98616-0a13-478d-b36a-7bb9eb99910b.png" width="700" height="200"/>      
+
+### Step3 - 2
+- Mission 메서드 요구사항에 맞춰 구현완료   
+<img src="https://user-images.githubusercontent.com/92699723/154877257-ef9ee795-9232-47ea-819d-6c624d18ef6d.png" width="400" height="400"/><img src="https://user-images.githubusercontent.com/92699723/154877262-3c5e744d-e082-4af6-8e10-98f82e04c435.png" width="400" height="400"/>      
