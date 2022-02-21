@@ -17,15 +17,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MhY-FG-LNW">
-                                <rect key="frame" x="87" y="328" width="240" height="240"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="240" id="7DS-Yg-oPC"/>
-                                    <constraint firstAttribute="width" constant="240" id="KMK-Af-6ml"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="VYv-6x-ehF"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="240" id="mSo-QN-4UH"/>
-                                </constraints>
-                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qsy-ys-f4a">
+                                <rect key="frame" x="174.5" y="241" width="65" height="47"/>
+                                <color key="tintColor" systemColor="systemBrownColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="선택" buttonSize="large"/>
+                                <connections>
+                                    <action selector="selectButtonTouched:" destination="Q4E-0C-ch4" eventType="touchUpInside" id="FF6-3J-E0q"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vwv-dT-fgO">
                                 <rect key="frame" x="161" y="608" width="92.5" height="47"/>
                                 <color key="tintColor" systemColor="systemBrownColor"/>
@@ -42,15 +42,15 @@
                                     <constraint firstAttribute="height" constant="260" id="G8H-xQ-wTK"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qsy-ys-f4a">
-                                <rect key="frame" x="174.5" y="241" width="65" height="47"/>
-                                <color key="tintColor" systemColor="systemBrownColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="선택" buttonSize="large"/>
-                                <connections>
-                                    <action selector="selectButtonTouched:" destination="Q4E-0C-ch4" eventType="touchUpInside" id="FF6-3J-E0q"/>
-                                </connections>
-                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MhY-FG-LNW">
+                                <rect key="frame" x="87" y="328" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="7DS-Yg-oPC"/>
+                                    <constraint firstAttribute="width" constant="240" id="KMK-Af-6ml"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="VYv-6x-ehF"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="240" id="mSo-QN-4UH"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="TAC-R9-lm8"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
