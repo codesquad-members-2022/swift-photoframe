@@ -18,9 +18,28 @@ class YellowViewController: UIViewController {
     }
     
     @IBAction func selectButtonTouched(_ sender: Any) {
+        let alert = UIAlertController(title: "사진을 어디서 가져올까요?", message: "", preferredStyle: .actionSheet)
+        
+        let library = UIAlertAction(title: "사진 앨범", style: .default) { _ in self.openLibrary() }
+        let camera = UIAlertAction(title: "카메라", style: .default) { _ in self.openCamera() }
+        let cancel = UIAlertAction(title: "취소", style: .cancel, handler: nil)
+        
+        alert.addAction(library)
+        alert.addAction(camera)
+        alert.addAction(cancel)
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func openLibrary() {
         imagePicker.sourceType = .photoLibrary
         self.present(imagePicker, animated: true, completion: nil)
     }
+    
+    func openCamera() {
+        imagePicker.sourceType = .camera
+        self.present(imagePicker, animated: true, completion: nil)
+    }
+
 
 }
 
