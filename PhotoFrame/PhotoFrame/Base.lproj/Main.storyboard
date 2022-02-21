@@ -11,7 +11,7 @@
         <!--Item 2-->
         <scene sceneID="1c3-Je-ctF">
             <objects>
-                <viewController id="eJw-0z-TMz" sceneMemberID="viewController">
+                <viewController id="eJw-0z-TMz" customClass="SecondViewController" customModule="PhotoFrame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EH4-fE-Aiv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -25,6 +25,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="다음"/>
+                                <connections>
+                                    <action selector="nextImageButtonTouched:" destination="eJw-0z-TMz" eventType="touchUpInside" id="EiF-xD-a1h"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Photo Album" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rat-X3-sEh">
                                 <rect key="frame" x="124" y="400" width="167" height="36"/>
@@ -38,6 +41,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="sIK-gM-Xk2"/>
+                    <connections>
+                        <outlet property="photoImageView" destination="nlx-ki-Q9q" id="74I-J3-xAH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dyZ-wu-jsS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
