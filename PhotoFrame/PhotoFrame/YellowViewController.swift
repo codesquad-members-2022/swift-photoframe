@@ -11,7 +11,7 @@ class YellowViewController: UIViewController {
     
     // MARK: - Properties
     @IBOutlet weak var nextButton: UIButton!
-
+    
     // MARK: - View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()

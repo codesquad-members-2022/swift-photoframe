@@ -314,55 +314,123 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="49" translatesAutoresizingMaskIntoConstraints="NO" id="Azo-Pf-xgP">
-                                <rect key="frame" x="50" y="205" width="314" height="486"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Azo-Pf-xgP">
+                                <rect key="frame" x="87" y="226.5" width="240" height="443"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JDF-ZG-0iW">
-                                        <rect key="frame" x="0.0" y="0.0" width="314" height="314"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="01" translatesAutoresizingMaskIntoConstraints="NO" id="ASH-p5-XKv">
-                                                <rect key="frame" x="36" y="36" width="242" height="242"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="01" translatesAutoresizingMaskIntoConstraints="NO" id="ASH-p5-XKv">
+                                                <rect key="frame" x="14" y="0.0" width="212" height="212.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="ASH-p5-XKv" secondAttribute="height" multiplier="1:1" id="2zk-yH-Ebl"/>
+                                                </constraints>
                                             </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photoframe-border" translatesAutoresizingMaskIntoConstraints="NO" id="afk-pC-5qW" userLabel="PhotoFrame">
-                                                <rect key="frame" x="0.0" y="0.0" width="314" height="314"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="240" id="XMC-Hn-HAO"/>
+                                                    <constraint firstAttribute="width" secondItem="afk-pC-5qW" secondAttribute="height" multiplier="1:1" id="d43-dJ-KbW"/>
+                                                </constraints>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="314" id="1dR-WT-VB9"/>
-                                            <constraint firstAttribute="bottom" secondItem="afk-pC-5qW" secondAttribute="bottom" id="52O-w6-2RX"/>
-                                            <constraint firstItem="afk-pC-5qW" firstAttribute="top" secondItem="JDF-ZG-0iW" secondAttribute="top" id="6lV-8F-V3a"/>
-                                            <constraint firstAttribute="bottom" secondItem="ASH-p5-XKv" secondAttribute="bottom" constant="36" id="OAZ-fX-HBx"/>
-                                            <constraint firstAttribute="height" constant="314" id="XLD-qK-K2t"/>
-                                            <constraint firstItem="ASH-p5-XKv" firstAttribute="leading" secondItem="JDF-ZG-0iW" secondAttribute="leading" constant="36" id="ZGk-AO-Fv6"/>
-                                            <constraint firstAttribute="trailing" secondItem="ASH-p5-XKv" secondAttribute="trailing" constant="36" id="dp4-aD-TAE"/>
-                                            <constraint firstItem="ASH-p5-XKv" firstAttribute="top" secondItem="JDF-ZG-0iW" secondAttribute="top" constant="36" id="f26-1e-ysG"/>
-                                            <constraint firstAttribute="trailing" secondItem="afk-pC-5qW" secondAttribute="trailing" id="fXp-qq-t2S"/>
-                                            <constraint firstItem="afk-pC-5qW" firstAttribute="leading" secondItem="JDF-ZG-0iW" secondAttribute="leading" id="v4l-8D-o8A"/>
+                                            <constraint firstItem="afk-pC-5qW" firstAttribute="top" secondItem="ASH-p5-XKv" secondAttribute="top" id="08x-cn-riM"/>
+                                            <constraint firstItem="afk-pC-5qW" firstAttribute="centerX" secondItem="ASH-p5-XKv" secondAttribute="centerX" id="0Tr-R4-HeI"/>
+                                            <constraint firstItem="afk-pC-5qW" firstAttribute="leading" secondItem="JDF-ZG-0iW" secondAttribute="leading" id="1K1-pj-GZG"/>
+                                            <constraint firstItem="afk-pC-5qW" firstAttribute="bottom" secondItem="ASH-p5-XKv" secondAttribute="bottom" multiplier="1.13" id="Kzv-rA-8CE"/>
+                                            <constraint firstAttribute="bottom" secondItem="afk-pC-5qW" secondAttribute="bottom" id="dlp-DL-OLY"/>
+                                            <constraint firstAttribute="trailing" secondItem="afk-pC-5qW" secondAttribute="trailing" id="feh-Xk-GAG"/>
+                                            <constraint firstItem="afk-pC-5qW" firstAttribute="top" secondItem="JDF-ZG-0iW" secondAttribute="top" id="sAf-xM-ppO"/>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photo Album" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QFP-bx-Ep5">
-                                        <rect key="frame" x="58" y="363" width="198.5" height="43"/>
+                                        <rect key="frame" x="21" y="270" width="198.5" height="43"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O4G-nz-GQn">
-                                        <rect key="frame" x="52.5" y="455" width="209" height="31"/>
+                                        <rect key="frame" x="10.5" y="343" width="219" height="100"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9fg-XM-Geu">
-                                                <rect key="frame" x="0.0" y="0.0" width="104.5" height="31"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="다른 사진 보기"/>
-                                                <connections>
-                                                    <action selector="selectButtonTouched:" destination="OeU-15-MY6" eventType="touchUpInside" id="aF1-Ux-NtA"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ux3-SV-BY3">
-                                                <rect key="frame" x="104.5" y="0.0" width="104.5" height="31"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="다음"/>
-                                            </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="4id-m2-SMH">
+                                                <rect key="frame" x="0.0" y="0.0" width="219" height="100"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="GN5-1M-7Kq">
+                                                        <rect key="frame" x="0.0" y="0.0" width="219" height="40"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9fg-XM-Geu" customClass="DesignableButton" customModule="PhotoFrame" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="104.5" height="40"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="40" id="dnL-Yy-wF8"/>
+                                                                </constraints>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="다른 사진 보기"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                        <color key="value" systemColor="tintColor"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                        <real key="value" value="1"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                        <real key="value" value="5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="selectButtonTouched:" destination="OeU-15-MY6" eventType="touchUpInside" id="aF1-Ux-NtA"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ux3-SV-BY3" customClass="DesignableButton" customModule="PhotoFrame" customModuleProvider="target">
+                                                                <rect key="frame" x="114.5" y="0.0" width="104.5" height="40"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="40" id="d26-eo-yzo"/>
+                                                                </constraints>
+                                                                <color key="tintColor" systemColor="systemGreenColor"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="다음"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                        <color key="value" systemColor="systemGreenColor"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                        <real key="value" value="1"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                        <real key="value" value="5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k47-dE-gek" customClass="DesignableButton" customModule="PhotoFrame" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="50" width="219" height="50"/>
+                                                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="eoi-7t-mwD"/>
+                                                        </constraints>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="사진 가져오기"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="disabled" value="NO"/>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="0.0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="selectPhoto:" destination="OeU-15-MY6" eventType="touchUpInside" id="PMg-UC-Ynw"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -372,6 +440,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Azo-Pf-xgP" firstAttribute="centerY" secondItem="nWM-qV-tNX" secondAttribute="centerY" id="NE7-SB-Bkc"/>
+                            <constraint firstItem="av8-0K-Bc8" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Azo-Pf-xgP" secondAttribute="bottom" constant="20" id="nZK-4q-HDn"/>
                             <constraint firstItem="Azo-Pf-xgP" firstAttribute="centerX" secondItem="nWM-qV-tNX" secondAttribute="centerX" id="p6A-vs-7pX"/>
                         </constraints>
                     </view>
@@ -514,6 +583,15 @@
         </scene>
     </scenes>
     <designables>
+        <designable name="9fg-XM-Geu">
+            <size key="intrinsicContentSize" width="104.5" height="31"/>
+        </designable>
+        <designable name="Ux3-SV-BY3">
+            <size key="intrinsicContentSize" width="48.5" height="31"/>
+        </designable>
+        <designable name="k47-dE-gek">
+            <size key="intrinsicContentSize" width="100.5" height="31"/>
+        </designable>
         <designable name="xaK-1S-cG1">
             <size key="intrinsicContentSize" width="221" height="41.5"/>
         </designable>
@@ -541,6 +619,9 @@
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
