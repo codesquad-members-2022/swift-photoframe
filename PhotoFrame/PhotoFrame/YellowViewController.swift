@@ -6,9 +6,9 @@ class YellowViewController: UIViewController {
 
     let imagePicker = UIImagePickerController()
     @IBOutlet weak var photoImageView: UIImageView!
-    
-    var albumPermission: Bool = false
-    var cameraPermission: Bool = false
+
+    let albumPermission = PHPhotoLibrary.authorizationStatus(for: .readWrite)
+    var cameraPermission = AVCaptureDevice.authorizationStatus(for: .video)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +25,7 @@ class YellowViewController: UIViewController {
     
     @IBAction func selectButtonTouched(_ sender: Any) {
         let alert = UIAlertController(title: "사진을 어디서 가져올까요?", message: "", preferredStyle: .actionSheet)
-        
+
         let library = UIAlertAction(title: "사진 앨범", style: .default) { _ in self.openLibrary() }
         let camera = UIAlertAction(title: "카메라", style: .default) { _ in self.openCamera() }
         let cancel = UIAlertAction(title: "취소", style: .cancel, handler: nil)
@@ -36,16 +36,27 @@ class YellowViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
+    func setAuthAlertAction() {
+        let authAlert = UIAlertController(title: "사진 앨범 권한 요청", message: "사진첩 권한을 허용해야만 기능을 사용하실 수 있습니다.", preferredStyle: .alert)
+        
+        let getAuthAction = UIAlertAction(title: "넵", style: .default, handler: { (UIAlertAction) in
+            if let appSettings = URL(string: UIApplication.openSettingsURLString) {
+                UIApplication.shared.open(appSettings, options: [:], completionHandler: nil)
+            }
+        })
+        
+        authAlert.addAction(getAuthAction)
+        self.present(authAlert, animated: true, completion: nil)
+    }
+    
     func checkAlbumPermission() {
         PHPhotoLibrary.requestAuthorization(for: .readWrite, handler: { status in
             switch status {
-            case .authorized:
-                self.albumPermission = true
+            case .authorized, .limited :
+                self.openLibrary()
             case .denied:
-                print("denied!")
-                self.albumPermission = false
+                self.setAuthAlertAction()
             default:
-                print("what?!")
                 break
             }
         })
@@ -54,32 +65,38 @@ class YellowViewController: UIViewController {
     func checkCameraPerimission() {
         AVCaptureDevice.requestAccess(for: .video, completionHandler: { granted in
             if granted {
-                self.cameraPermission = true
+                self.cameraPermission = .authorized
             } else {
-                self.cameraPermission = false
+                self.cameraPermission = .denied
             }
         })
     }
     
     func openLibrary() {
-        guard albumPermission else {
-            checkAlbumPermission()
-            return
+        if albumPermission == .authorized || albumPermission == .limited {
+            imagePicker.sourceType = .photoLibrary
+            self.present(imagePicker, animated: true, completion: nil)
         }
-        
-        imagePicker.sourceType = .photoLibrary
-        self.present(imagePicker, animated: true, completion: nil)
+        else if albumPermission == .denied {
+            self.setAuthAlertAction()
+        }
+        else if albumPermission == .notDetermined {
+            checkAlbumPermission()
+        }
     }
     
     func openCamera() {
-        guard cameraPermission else {
-            checkCameraPerimission()
-            return
-        }
-        
-        if(UIImagePickerController.isSourceTypeAvailable(.camera)) {
-            imagePicker.sourceType = .camera
-            self.present(imagePicker, animated: true, completion: nil)
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            if cameraPermission == .authorized {
+                imagePicker.sourceType = .camera
+                self.present(imagePicker, animated: true, completion: nil)
+            }
+            else if cameraPermission == .denied {
+                self.setAuthAlertAction()
+            }
+            else if cameraPermission == .notDetermined {
+                checkCameraPerimission()
+            }
         }
         else {
             let alert = UIAlertController(title: "Error!", message: "해당 기기에 카메라가 감지되지 않아요!", preferredStyle: .actionSheet)
@@ -87,7 +104,6 @@ class YellowViewController: UIViewController {
             dismiss(animated: true)
         }
     }
-
 }
 
 extension YellowViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
