@@ -96,7 +96,8 @@
 </details>
 
 
-## Step 7 다른 화면 연결하기 - 2월 18일 오후 6시
+<details>
+	<summary>Step 7 다른 화면 연결하기 - 2월 18일 오후 6시</summary>
 
 ### 작업 목록
 - [x] tab bar의 두번째 scene에 image view와 버튼 추가
@@ -104,5 +105,30 @@
 - [x] 버튼 클릭 시 랜덤한 이미지로 바뀌게 하기
 
 <img height="400" src="https://user-images.githubusercontent.com/45891045/154652882-e84b97a0-c14a-46ac-88d4-80448f9f4dbe.gif">
+
+</details>
+
+
+## Step 8 사진 앨범 선택하기 - 2월 21일 오후 6시
+
+### 작업 목록
+- [x] 액자 이미지 뷰 추가
+- [x] 선택 버튼 만들기
+- [x] UIImagePickerController를 사용하여 사진 앱에서 사진을 가져오도록 구현
+	- image picker의 delegate에 yellow view controller를 할당
+	- 할당하기 위해서 extension으로 yellow view controller에 UIImagePickerControllerDelegate와 UINavigationControllerDelegate 프로토콜을 채택
+- [x] Info.plist에서 사진 앨범 권한 설정
+- [x] 앨범 외에 카메라에서 사진을 가져오는 기능 추가
+	- 시뮬레이터에서는 카메라가 안되기 때문에 에러 처리
+
+| z index 설정 | 앨범에서 사진 가져오기 | 카메라에서 가져오기 추가 |
+|---|---|---|
+|<img height="400" src="https://user-images.githubusercontent.com/45891045/154880178-cccb4a0a-5690-4d84-b60c-69e47e3d75ee.png">|<img height="400" src="https://user-images.githubusercontent.com/45891045/154880417-b0bcb965-2b8b-4cc1-af0d-4460ffdc702e.gif">|<img height="400" src="https://user-images.githubusercontent.com/45891045/154913099-148b9e1c-afd8-4ba3-82f8-a70613966853.gif">|
+
+- [x] 사진 앨범 권한 얻기
+
+| 권한을 준 경우 | 권한을 거절 했을 때 재요청 하는 경우 |
+|---|---|
+|<img height="400" src="https://user-images.githubusercontent.com/45891045/154920518-8ab9275e-6d38-4d41-86b1-12dfee19889e.gif">|<img height="400" src="https://user-images.githubusercontent.com/45891045/154920503-bfdc735c-aa32-4157-9562-d8d67538bf4c.gif">| 
 
 
