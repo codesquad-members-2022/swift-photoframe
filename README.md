@@ -86,3 +86,5 @@ PhotoFrame/ViewController.swift:18: Fatal error: Unexpectedly found nil while im
 - Action Segue도 Show 항목으로 선택하였다.
 - 새로 추가한 Scene 속성에 배경색상을 바꾸고 새로운 화면이 나타나는지 확인하였다.
   <img src="https://user-images.githubusercontent.com/92699723/154891103-2dd6bf80-e3a8-41c0-b4e2-88aa86230d8e.gif" width="300" height="600">
+- Scene 하나를 더 추가하여 두 번째 Scene의 화면이 나오는 방식으로 기능 구현을 완료하였다.
+  <img src="https://user-images.githubusercontent.com/92699723/154891867-56c86838-1f66-4dfe-a713-0bc031d173eb.gif" width="300" height="600">
