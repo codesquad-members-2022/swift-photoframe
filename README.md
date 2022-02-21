@@ -561,3 +561,63 @@ git push
 ```
 
 <img alt="Github_Error_Solved_Complete" width="900" src="PhotoFrame/README_images/Github_Error_Solved_Complete.jpg"/>
+
+---
+
+## UIContainerViewController
+
+Root View에 Container ViewController에 추가하여 다른 뷰를 Master/Detail 구조로 관리해야 한다면, Detail 구조에 있는 뷰들 또한 뷰 컨트롤러로 관리해야 한다는 것을 이해해야 한다. 
+
+### 컨테이너와 고려해야 할 사항들
+
+* 컨테이너(부모) 역할은 무엇이고, 자식(들)의 역할은 무엇인가?
+* 동시에 얼마나 많은 자식들이 보이나?
+* 형제 계층에 있는 뷰 컨트롤러들 관계는 무엇인가?
+* 컨테이너에서 자식 뷰 컨트롤러를 어떻게 추가하고 삭제하나?
+* 자식 화면의 위치나 크기가 변할 수 있나? 변화가 생기는 조건은 무엇인가?
+* 컨테이너가 직접 꾸미거나 내비게이션을 위해 제공하는 뷰가 있나?
+* 컨테이너와 자식 사이에 어떤 통신이 필요한가? UIViewController 클래스에 선언된 표준 이벤트가 아니라 세부적으로 다른 이벤트가 필요한가?
+* 컨테이너만 별도 다른 방법으로 표시해야 한다면 어떻게 해야하나?
+
+### VC 계층과 View 계층 추가할 때
+
+1. 부모 컨트롤러에서 ```addChild(_:)``` 호출
+2. 자식 컨트롤러 root view를 컨테이너에 추가
+3. 자식 view에 대해 속성 변경
+4. 자식 컨트롤러에서 ```didMove(toParent:)``` 호출
+
+```swift
+private func frasmeForContent() -> CGRect {
+    return self.view.bounds
+}
+
+func displayContent(controller: UIViewController) {
+    self.addChild(controller)
+    self.view.addSubview(controller.view)
+    controller.view.frame = self.frameForContent()
+    controller.didMove(toParent: self)
+}
+```
+
+### VC 계층과 View 계층 제거할 때
+
+1. 자식 컨트롤러에서 ```willMove(toParent:)``` 호출
+2. 자식 view에 대한 제약 제거
+3. 자식 컨트롤러 root view를 컨테이너에서 제거
+4. 자식 컨트롤러에서 removeFromParent() 호출
+
+```swift
+func hideContent(controller: UIViewController) {
+    controller.willMove(toParent: nil)
+    controller.view.removeFromSuperView()
+    controller.removeFromParent()
+}
+```
+### 요약정리(야호!)
+
+* 뷰 계층 구조와 동일하게 뷰 컨트롤러 사이에도 계층 구조가 생긴다.
+* 다른 ViewController.view를 추가할 때는 컨테이너를 고려해야 한다.
+* 시스템 뷰 컨트롤러 중에는 컨테이너가 제공된다.
+* * 네비게이션 컨트롤러, 탭 바 컨트롤러, 스플릿 큐 컨트롤러, 페이지 뷰 컨트롤러
+* 일반 뷰 컨트롤러도 child 뷰 컨트롤러를 배열로 관리할 수 있다.
+* child 뷰 컨트롤러가 추가되거나 삭제될 때 추가적인 코드가 필요하다.
