@@ -26,7 +26,7 @@ class YellowViewController: UIViewController {
     @IBAction func selectButtonTouched(_ sender: Any) {
         let alert = UIAlertController(title: "사진을 어디서 가져올까요?", message: "", preferredStyle: .actionSheet)
 
-        let library = UIAlertAction(title: "사진 앨범", style: .default) { _ in self.openLibrary() }
+        let library = UIAlertAction(title: "사진 앨범", style: .default) { _ in self.checkAlbumPermission() }
         let camera = UIAlertAction(title: "카메라", style: .default) { _ in self.openCamera() }
         let cancel = UIAlertAction(title: "취소", style: .cancel, handler: nil)
         
@@ -53,9 +53,13 @@ class YellowViewController: UIViewController {
         PHPhotoLibrary.requestAuthorization(for: .readWrite, handler: { status in
             switch status {
             case .authorized, .limited :
-                self.openLibrary()
+                DispatchQueue.main.async {
+                    self.openLibrary()
+                }
             case .denied:
-                self.setAuthAlertAction()
+                DispatchQueue.main.async {
+                    self.setAuthAlertAction()
+                }
             default:
                 break
             }
@@ -73,16 +77,8 @@ class YellowViewController: UIViewController {
     }
     
     func openLibrary() {
-        if albumPermission == .authorized || albumPermission == .limited {
-            imagePicker.sourceType = .photoLibrary
-            self.present(imagePicker, animated: true, completion: nil)
-        }
-        else if albumPermission == .denied {
-            self.setAuthAlertAction()
-        }
-        else if albumPermission == .notDetermined {
-            checkAlbumPermission()
-        }
+        imagePicker.sourceType = .photoLibrary
+        self.present(imagePicker, animated: true, completion: nil)
     }
     
     func openCamera() {
