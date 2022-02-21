@@ -22,12 +22,11 @@
 # STEP2
 ## 기능 요구사항
 - [x] 사진액자 앱 - 시작하기 요구사항 구현내용 상태에서 시작
-- [ ] First Scene에 만들어져 있는 레이블 연결
-- [ ] 연결한 Outlet 변수에 값을 변경
+- [x] First Scene에 만들어져 있는 레이블 연결
+- [x] 연결한 Outlet 변수에 값을 변경
 ## 프로그래밍 요구사항
-- [ ] Xcode 프로젝트에 Assistant Editor 모드로 변경한다.
-- [ ] **control + Drag** 해서 ViewController 코드에 연결
-- [ ] 
+- [x] Xcode 프로젝트에 Assistant Editor 모드로 변경한다.
+- [x] **control + Drag** 해서 ViewController 코드에 연결
 
 ### First Scene에 레이블 연결
 Assistant Editor 모드로 변경하여 ViewController.swift파일에 레이블을 선택하고 연결하려고하였다.   
@@ -55,5 +54,12 @@ PhotoFrame/ViewController.swift:18: Fatal error: Unexpectedly found nil while im
 ### photoLabel 아래 레이블도 firstDescription Outlet 연결
 <img src="https://user-images.githubusercontent.com/92699723/154013944-ff568ccf-708f-4c8a-9c90-3c08eaf522ed.png" width="800" height="400"/>   
 
-# 추가 학습 내용
-- UILabel 클래스 속성(Property)는 어떤게 있는지 학습한다.
+# STEP3
+## IBAction 연결하기   
+- [ ]  First Scene에 버튼 (UIButton)을 추가하고 IBAction으로 연결한다.
+    - [ ]  Main.storyboard에서 First Scene에 UIButton을 추가
+    - [ ]  버튼을 선택하고 ViewController 코드에 IBAction 연결
+    - [ ]  팝업에서 Connection 항목에서 IBOutlet → IBAction으로 변경
+- [ ]  연결한 액션에 대해 메서드 구현
+    - [ ]  ViewController 클래스에 추가된 nextButtonTouched()메서드 구현추가
+- [ ]  실행하고 버튼을 터치하기 이전/이후 화면 캡쳐해서 readme.md 파일에 포함
