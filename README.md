@@ -72,3 +72,12 @@ PhotoFrame/ViewController.swift:18: Fatal error: Unexpectedly found nil while im
 ### Step3 - 2
 - Mission 메서드 요구사항에 맞춰 구현완료   
 <img src="https://user-images.githubusercontent.com/92699723/154877257-ef9ee795-9232-47ea-819d-6c624d18ef6d.png" width="400" height="400"/><img src="https://user-images.githubusercontent.com/92699723/154877262-3c5e744d-e082-4af6-8e10-98f82e04c435.png" width="400" height="400"/>      
+
+# STEP4
+## Scene을 Segue로 연결하기
+- [x]  IBAction 요구사항을 구현한 상태로 시작한다
+- [ ]  스토리보드 구성 요소에 대해 학습하고 새로운 Scene과 Segue를 추가한다.
+    - [ ]  Main StoryBoard에서 First Scene옆에 ViewController를 드래그해서 새로운 Scene추가
+    - [ ]  Action Segue에서 show 항목선택
+    - [ ]  Segue 속성변경
+- [ ]  실행하고 새로운 화면을 캡처해서 readme.md 파일에 포함한다.
