@@ -25,6 +25,11 @@ class SecondViewController: UIViewController {
     
     
     @IBAction func selectButtonTouched(_ sender: UIButton) {
+        let vc = UIImagePickerController()
+        vc.sourceType = .photoLibrary
+        vc.delegate = self
+        vc.allowsEditing = true
+        present(vc, animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
