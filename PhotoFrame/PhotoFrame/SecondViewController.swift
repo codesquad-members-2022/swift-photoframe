@@ -9,6 +9,8 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
+    let imagePicker = UIImagePickerController()
+    
     @IBOutlet weak var testLabel: UILabel!
     @IBOutlet weak var photoImageView: UIImageView!
     
@@ -29,5 +31,12 @@ class SecondViewController: UIViewController {
         super.viewDidLoad()
         
         photoImageView.contentMode = .scaleAspectFit
+        
+        imagePicker.delegate = self
     }
+}
+
+
+
+extension SecondViewController: UIImagePickerControllerDelegate & UINavigationControllerDelegate {
 }
