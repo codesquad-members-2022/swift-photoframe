@@ -468,20 +468,6 @@ Scene이란 하나의 화면, UIScene은 Scene을 직접 만들고 싶을 때 �
 
 ---
 
-## Segue란?
-
-출처: [PresentingaViewController](https://developer.apple.com/library/archive/featuredarticles/ViewControllerPGforiPhoneOS/PresentingaViewController.html#//apple_ref/doc/uid/TP40007457-CH14-SW1)
-
-### 이론
-
-UIViewController에 내장되어 있는 뷰 컨트롤러 presenting 기능은 UIKit에 의해 서로 다른 뷰 컨트롤러로 옮겨갈 수 있게 한다(물론 UIKit에 의한 강제 라우팅도 발생할 수 있다).
-
-뷰 컨트롤러를
-
-### Segue의 종류
-
----
-
 ## Transition Style
 
 출처: [PresentingaViewController](https://developer.apple.com/library/archive/featuredarticles/ViewControllerPGforiPhoneOS/PresentingaViewController.html#//apple_ref/doc/uid/TP40007457-CH14-SW1)
