@@ -36,5 +36,7 @@ class PhotoViewController: UIViewController {
         
     }
     
-
+    @IBAction func selectButtonTouched(_ sender: Any) {
+    }
+    
 }

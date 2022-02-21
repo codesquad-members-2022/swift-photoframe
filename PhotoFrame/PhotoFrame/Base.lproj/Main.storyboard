@@ -40,6 +40,17 @@
                                     <action selector="nextImageButtonTouched:" destination="TCf-uU-WlE" eventType="touchUpInside" id="m70-7A-fOc"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r4N-cO-CMK">
+                                <rect key="frame" x="151" y="673" width="112" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="선택">
+                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle2"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="selectButtonTouched:" destination="TCf-uU-WlE" eventType="touchUpInside" id="24d-or-Dz9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jf1-pg-YvA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
