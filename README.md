@@ -105,7 +105,13 @@ PhotoFrame/ViewController.swift:18: Fatal error: Unexpectedly found nil while im
 - [x]  ViewController 서브클래스를 생성
   - [x] Cocoa Touch Class를 서브클래스로 생성하여 UIViewController에 상속받도록 입력
   - [x] 새로 추가한 Scene 클래스 지정
-- [ ]  ViewController 콜백 함수들 역할과 실행 순서를 이해한다
-  - [ ]  강의 자료에 있는 화면 관련된 콜백 함수들에 모두 print코드를 추가
+- [x]  ViewController 콜백 함수들 역할과 실행 순서를 이해한다
+  - [x]  강의 자료에 있는 화면 관련된 콜백 함수들에 모두 print코드를 추가
 - [x]  ViewController 와 Scene을 연결
   - [x] IBAction 연결하여 메서드 코드작성
+
+<img src="https://user-images.githubusercontent.com/92699723/154985264-bf3aa7ca-8282-4a5e-bb82-009775743484.gif" width="300" height="600">
+
+<img src="https://user-images.githubusercontent.com/92699723/154985600-52e2f246-2fdf-44d8-9a9f-52fb1f3c13e1.jpg" width="400" height="600">
+
+<img src="https://user-images.githubusercontent.com/92699723/154985620-64eee45a-ba5b-4110-8b96-41e3cce64eac.jpg" width="400" height="600">
