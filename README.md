@@ -803,3 +803,47 @@ iOS가 콘텐츠를 화면에 배치하는데 사용하는 좌표계는 디스�
 - [UIImage](https://developer.apple.com/documentation/uikit/uiimage)
 - [Bundle Resource](https://developer.apple.com/documentation/bundleresources)
 - [View ContentMode](https://developer.apple.com/documentation/uikit/uiview/contentmode)
+
+
+# Step8. 사진 앨범 선택하기
+
+## 💻 작업 목록
+
+- [x] 화면 요소들을 겹쳐서 디자인 하는 경우 z축으로 위-아래를 구분해서 표시한다.
+- [x] 이미지 테두리 액자 화면을 추가한다.
+- [x] 사진 앨범에서 사진을 가져와서 보여줄 수 있도록 개선한다.
+- [x] UIImagePickerController처럼 이미 만들어놓은 시스템 컨트롤러 학습하기
+- [x] Delegate와 프로토콜의 상관 관계에 대해 학습하기
+- [x] Step8 README 작성하기
+
+
+## 📱 실행 화면
+
+![ezgif com-gif-maker (7)](https://user-images.githubusercontent.com/95578975/155000384-39a62b16-7f9a-4cd0-86ca-3a4bcdb2a7e1.gif)
+
+## 🤔 고민과 해결
+
+### 1️⃣ 권한 설정을 안해도 앨범이 잘 뜬다! 왜 그럴까..?
+
+찾아보니 UIImagePickerController를 사용하여 사용자의 이미지를 가져오는 경우는 권한을 설정하지 않아도 된다고 한다. 원래 이전에는 사용자가 사진이나 비디오를 선택하려면 라이브러리 전체에 대한 사용자의 승인을 받아야 했다. 이는 앱에 마찰을 일으키고, 사용자는 의도하지 않은 수준의 프라이버시를 포기하게 된다. iOS 11부터는 UIImagePickerController의 개인 정보 보호 및 보안 기반을 개선하였고, 더 이상 사용자에게 권한을 묻지 않아도 되게 되었다고 한다. iOS 11의 UIImagePickerController는 이제 out-of-process API이다. 사용자만 UIImagePickerController UI와 상호 작용할 수 있고, 사용자가 촬영한 사진이나 동영상을 선택하여 앱으로 전송한다. 권한이 없기 떄문에 어떤 것도 요구되지 않는다. 
+
+[WWDC2017](https://developer.apple.com/videos/play/wwdc2017/505)
+
+### 2️⃣ 이미지 선택 후 imagePicker를 dismiss하기
+
+- self.imagePicker.dismiss(animated: true, completion: nil)이 작동하지 않음
+- 아래와 같이 수정하니 동작.
+
+```swift
+func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+    if let selectedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+        self.photoImageView.image = selectedImage
+        self.dismiss(animated: true, completion: nil)
+    }
+}
+```
+
+
+## 💡 학습 키워드
+
+- [UIImagePickerController](https://developer.apple.com/documentation/uikit/uiimagepickercontroller)
