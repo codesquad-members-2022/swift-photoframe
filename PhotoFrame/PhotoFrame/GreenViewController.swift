@@ -58,6 +58,6 @@ class GreenViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         print("Prepare to peform Segue")
         let destinationVC = segue.destination as! SecondViewController
-        destinationVC.nickName = "Dog"
+        destinationVC.photoImageView.image = UIImage(named: "01.jpg")
     }
 }
