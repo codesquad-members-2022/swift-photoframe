@@ -28,9 +28,9 @@ class LightGrayViewController: UIViewController {
     override func viewDidDisappear(_ animated: Bool) {
         print(#file, #line, #function, #column)
     }
-    
-    @IBAction func closeButtonTouched(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
 
+    @IBAction func closeButtonTouched(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
 }
