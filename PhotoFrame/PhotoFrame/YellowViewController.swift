@@ -7,6 +7,7 @@ class YellowViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.photoImageView.layer.zPosition = 1
         self.photoImageView.image = UIImage(named: "01.jpg")
         imagePicker.delegate = self
     }
