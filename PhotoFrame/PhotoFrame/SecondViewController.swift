@@ -16,6 +16,7 @@ class SecondViewController: UIViewController {
     }
     
     @IBAction func nextImageButtonTouched(_ sender: Any) {
+        self.photoImageView.image = UIImage(named: "01.jpg")
     }
     
 }
