@@ -8,6 +8,7 @@
 import UIKit
 
 class FirstViewController: UIViewController {
+    
     // MARK: - Properties
     @IBOutlet weak var photoLabel: UILabel!
     

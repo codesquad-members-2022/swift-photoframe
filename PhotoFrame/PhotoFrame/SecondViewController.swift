@@ -62,7 +62,6 @@ class SecondViewController: UIViewController {
         self.view.backgroundColor = (segue.source as! GreenViewController).backgroundColor
     }
     
-    
     @IBAction func selectButtonTouched(_ sender: Any) {
         let number = Int.random(in: 0...22)
         self.photoImageView.image = UIImage(named: String(format: "%.2d.jpg", number))

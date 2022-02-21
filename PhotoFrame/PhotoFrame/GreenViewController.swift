@@ -47,16 +47,11 @@ class GreenViewController: UIViewController {
         self.closeButton.addTarget(self, action: #selector(self.closeScene), for: .touchUpInside)
     }
     
-    @objc func backToHome() {
-        print("Button")
-    }
-    
     @objc func closeScene() {
         self.dismiss(animated: true, completion: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print("Prepare to peform Segue")
         let destinationVC = segue.destination as! SecondViewController
         destinationVC.photoImageView.image = UIImage(named: "01.jpg")
     }
