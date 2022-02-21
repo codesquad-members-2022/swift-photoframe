@@ -1,12 +1,18 @@
 import UIKit
+import AVFoundation
+import Photos
 
 class YellowViewController: UIViewController {
 
     let imagePicker = UIImagePickerController()
     @IBOutlet weak var photoImageView: UIImageView!
     
+    var albumPermission: Bool = false
+    var cameraPermission: Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.photoImageView.layer.zPosition = 1
         self.photoImageView.image = UIImage(named: "01.jpg")
         imagePicker.delegate = self
@@ -30,12 +36,47 @@ class YellowViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
+    func checkAlbumPermission() {
+        PHPhotoLibrary.requestAuthorization(for: .readWrite, handler: { status in
+            switch status {
+            case .authorized:
+                self.albumPermission = true
+            case .denied:
+                print("denied!")
+                self.albumPermission = false
+            default:
+                print("what?!")
+                break
+            }
+        })
+    }
+    
+    func checkCameraPerimission() {
+        AVCaptureDevice.requestAccess(for: .video, completionHandler: { granted in
+            if granted {
+                self.cameraPermission = true
+            } else {
+                self.cameraPermission = false
+            }
+        })
+    }
+    
     func openLibrary() {
+        guard albumPermission else {
+            checkAlbumPermission()
+            return
+        }
+        
         imagePicker.sourceType = .photoLibrary
         self.present(imagePicker, animated: true, completion: nil)
     }
     
     func openCamera() {
+        guard cameraPermission else {
+            checkCameraPerimission()
+            return
+        }
+        
         if(UIImagePickerController.isSourceTypeAvailable(.camera)) {
             imagePicker.sourceType = .camera
             self.present(imagePicker, animated: true, completion: nil)
@@ -46,7 +87,6 @@ class YellowViewController: UIViewController {
             dismiss(animated: true)
         }
     }
-
 
 }
 
