@@ -14,7 +14,6 @@ class SecondViewController: UIViewController {
     // MARK: - Properties
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var nextButton: UIButton!
-    var nickName = "Cat"
     
     // MARK: - LifeCycle
     override func viewDidLoad() {
@@ -47,9 +46,13 @@ class SecondViewController: UIViewController {
     }
     
     // MARK: - Methods
-    func configureImagePickerController() {
-        self.imagePickerController.delegate = self
-        self.imagePickerController.allowsEditing = true
+    @IBAction func unwind(segue : UIStoryboardSegue) {
+        self.view.backgroundColor = (segue.source as! GreenViewController).backgroundColor
+    }
+    
+    @objc func presentScene() {
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "BlueViewController") else { return }
+        self.present(vc, animated: true, completion: nil)
     }
     
     @IBAction func selectButtonTouched(_ sender: Any) {
@@ -59,6 +62,11 @@ class SecondViewController: UIViewController {
     
     @IBAction func selectPhoto(_ sender: Any) {
         self.presentActionSheet()
+    }
+    
+    func configureImagePickerController() {
+        self.imagePickerController.delegate = self
+        self.imagePickerController.allowsEditing = true
     }
     
     func createAction(for type: UIImagePickerController.SourceType, title: String, style: UIAlertAction.Style? = .default) -> UIAlertAction? {
@@ -92,15 +100,16 @@ class SecondViewController: UIViewController {
         self.present(alertController, animated: true, completion: nil)
     }
     
-    @IBAction func unwind(segue : UIStoryboardSegue) {
-        print("Unwind Action")
-        self.view.backgroundColor = (segue.source as! GreenViewController).backgroundColor
+    func alert(message title: String, with description: String) {
+        let alertController = UIAlertController(title: title, message: description, preferredStyle: .alert)
+        
+        alertController.addAction(UIAlertAction(title: "확인", style: .default, handler: { action in
+            self.dismiss(animated: true, completion: nil)
+        }))
+        
+        self.present(alertController, animated: true, completion: nil)
     }
     
-    @objc func presentScene() {
-        guard let vc = storyboard?.instantiateViewController(withIdentifier: "BlueViewController") else { return }
-        self.present(vc, animated: true, completion: nil)
-    }
 }
 
 extension SecondViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
@@ -108,6 +117,7 @@ extension SecondViewController: UINavigationControllerDelegate, UIImagePickerCon
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         guard let image = info[.editedImage] as? UIImage else {
             self.dismiss(animated: true, completion: nil)
+            self.alert(message: "사진 불러오기 실패", with: "유효한 이미지가 아닙니다.")
             return
         }
         
@@ -116,7 +126,7 @@ extension SecondViewController: UINavigationControllerDelegate, UIImagePickerCon
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        print("Cancel")
         self.dismiss(animated: true, completion: nil)
+        self.alert(message: "사진 불러오기 취소", with: "사진 불러오기를 취소하였습니다.")
     }
 }
