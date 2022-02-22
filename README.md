@@ -564,20 +564,47 @@ git push
 
 ---
 
-## UIContainerViewController
+## iOS containerView
 
-Root View에 Container ViewController에 추가하여 다른 뷰를 Master/Detail 구조로 관리해야 한다면, Detail 구조에 있는 뷰들 또한 뷰 컨트롤러로 관리해야 한다는 것을 이해해야 한다. 
+iOS 의 화면은 Root 역할을 하는 View가 존재한다.   
+containerView라는 개념은 rootView를 소유한 Parent ViewController에 하위 뷰들을 넣고자 할 때,
+Parent/Child 구조로 정의하고, Child에 해당하는 구조에 뷰 만이 아닌 뷰 컨트롤러를 포함하여 관리하는 것이 용이하다는 것을 말한다.
+(Parent, Child 라는 명칭은 공식문서에 명시된 프로퍼티나 함수명을 참고하여 가져온 것임)
 
-### 컨테이너와 고려해야 할 사항들
+* 하위 컨트롤러 추가/삭제
+```swift   
+addChild(\_:)
+removeFromParent()
+```
 
-* 컨테이너(부모) 역할은 무엇이고, 자식(들)의 역할은 무엇인가?
-* 동시에 얼마나 많은 자식들이 보이나?
-* 형제 계층에 있는 뷰 컨트롤러들 관계는 무엇인가?
-* 컨테이너에서 자식 뷰 컨트롤러를 어떻게 추가하고 삭제하나?
-* 자식 화면의 위치나 크기가 변할 수 있나? 변화가 생기는 조건은 무엇인가?
-* 컨테이너가 직접 꾸미거나 내비게이션을 위해 제공하는 뷰가 있나?
-* 컨테이너와 자식 사이에 어떤 통신이 필요한가? UIViewController 클래스에 선언된 표준 이벤트가 아니라 세부적으로 다른 이벤트가 필요한가?
-* 컨테이너만 별도 다른 방법으로 표시해야 한다면 어떻게 해야하나?
+* 하위 컨트롤러 접근
+```swift
+var children: [UIViewController]
+```
+
+* 하위 콜백
+```swift
+willMove(toParent:)
+didMove(toParent:)
+```
+
+### 컨테이너(부모) 역할은 무엇이고, 자식(들)의 역할은 무엇인가?
+
+컨테이너도, 자식도 모두 뷰 컨트롤러이기 때문에 자신의 하위 뷰를 포함하고 있고, 이를 관리한다.
+
+하지만 컨테이너는 이와 더불어 컨테이너-자식 간의 인터페이스를 구축하고 자식 뷰 컨트롤러 및 자식 뷰 들이 어떻게 보여야 할지 결정하기도 한다.   
+앞에서 언급한 바와 같이 둘을 서로 연결하는 인터페이스를 구성하면 좀 더 복잡한 뷰를 손쉽게 구현할 수 있다.
+
+원한다면 많은 자식 뷰 컨트롤러를 보여줄 수도 있다.
+
+물론 컨테이너, 자식을 모두 뷰 컨트롤러로 만들어서 관리하지 않아도 된다.
+```swift
+// UIViewController.addChild(_ controller: UIViewController) 사용하지 않아 뷰 컨트롤러 종속관계 없음.
+self.view.addSubview(controller.view)
+```
+
+만약 이런 상황일 경우 부모 뷰 컨트롤러가 생성한 뷰는 부모 뷰 컨트롤러가 관리할 수 있지만, 자식 뷰 컨트롤러의 뷰는 부모 뷰 컨트롤러가 관리하기 어렵다.   
+원활한 뷰 관리를 위해서 컨테이너, 자식 뷰 컨트롤러 관계를 맺는 것이 좋다.
 
 ### VC 계층과 View 계층 추가할 때
 
@@ -599,6 +626,8 @@ func displayContent(controller: UIViewController) {
 }
 ```
 
+스토리보드에 추가할 때는 ContainerView를 뷰 컨트롤러 내에 추가하면 자동으로 ```var children: [UIViewController] { get }```에 추가됩니다.
+
 ### VC 계층과 View 계층 제거할 때
 
 1. 자식 컨트롤러에서 ```willMove(toParent:)``` 호출
@@ -613,11 +642,77 @@ func hideContent(controller: UIViewController) {
     controller.removeFromParent()
 }
 ```
-### 요약정리(야호!)
+
+스토리보드에서는 부모 뷰 컨트롤러에 존재하는 Container View를 삭제하면 된다.
+
+### 자식 화면의 위치나 크기가 변할 수 있나? 변화가 생기는 조건은 무엇인가?(https://medium.com/mj-studio/번역-ios-레이아웃의-미스터리를-파헤치다-2cfa99e942f9)
+
+> UIView에서 Layout은 위치나 크기를 뜻하고, Display는 그 이외(색, 텍스트, 이미지 등)을 뜻합니다. 여기서는 Layout만 다룹니다. 
+
+**iOS Main Run Loop**에 대한 깊은 이해가 필요하다.
+
+메인 런 루프는 각 애플리케이션마다 존재한다.  
+메인 런 루프 유저의 모든 이벤트를 응답하고 처리하는 것을 담당한다.   
+해당 루프가 멈추면 앱도 같이 종료한다.   
+Main Run Loop는 앱의 Update Cycle을 발생시켜서 View를 다시 그린다.
+
+<img alt="iOS_Main_Run_Loop" width="500" src="PhotoFrame/README_images/iOS_Main_Run_Loop.jpg"/>
+
+1. 앱에서 발생한 ```이벤트```는 ```iOS```를 거쳐 ```커널```을 통해 ```Event Queue```로 들어가게 된다.
+2. ```애플리케이션 객체```는 Event Queue에서 이벤트를 하나씩 꺼내어 자신이 가진 객체에게 전달하게 된다.
+3. 객체들은 이벤트를 해석하고 ```Core Objects```의 핸들러를 알맞게 호출한다.
+4. 핸들러들이 return 되면 ```Main Run Loop```에서 ```Update Cycle```을 발생시킨다. 이 과정은 메인 스레드에서 이루어져야 한다.
+5. Update Cycle이 발생됨과 동시에 View의 바뀐 속성에 따라 Layout을 ```Redraw``` 하게 된다.
+
+이렇게 View 속성이 바뀔 때 Main Run Loop에 알려주는(Update Cycle을 발생시키는) 메소드는 아래와 같다.
+
+| 이름               | 의미                                                                                                     | 작업부하                    | 콜백 메소드                                                 | trigger작업                                                                   |
+|------------------|:-------------------------------------------------------------------------------------------------------|:------------------------|:-------------------------------------------------------|:----------------------------------------------------------------------------|
+| layoutSubViews() | 호출하는 View 자신과 하위 View들의 위치와 크기를 재조정.                                                                   | 재귀적으로 업데이트하기 때문에 부하 높음. | 호출하는 View를 소유한 ViewController의 viewDidLayoutSubViews() | View 크기 변화, subView 추가, UIScrollView에서 스크롤 할 때, 기기 회전할 때, View의 제약조건을 변경할 때 |
+| setNeedsLayout() | 시스템에 View의 layoutSubViews() 호출이 필요하다고 알리고, 다음 Update Cycle에 같이 업데이트 될 수 있도록 Notify함                    | 즉시 반환되기 때문에 부하가 낮음      | 없음                                                     | 없음                                                                          |
+| layoutIfNeeded() | View의 layoutSubViews가 필요한지 판단하고 Layout 재조정이 필요하다고 판단되면 layoutSubViews() 호출함. 다음 Update Cycle을 기다리지 않음. | 보통. 특히 애니메이션에서 많이 사용됨   | 없음                                                     | 없음                                                                          |
+
+### 컨테이너가 직접 꾸미거나 내비게이션을 위해 제공하는 뷰가 있나? 
+
+1. UITabbarController(https://developer.apple.com/documentation/uikit/uitabbarcontroller/)   
+하단에 탭 바를 표시하고 탭을 터치할 때마다 다른 뷰 컨트롤러를 보여줄 수 있도록 기능을 제공하는 Container View이다.   
+탭 바 컨트롤러가 관리하는 뷰 컨트롤러 들은 ```var viewControllers: [UIViewController]?``` 로 저장 후 관리된다.   
+탭 바의 액션(탭을 선택하면 관리하는 뷰 컨트롤러의 뷰가 보임)에 대해서만 관여한다는 것에 주의.
+
+2. UINavigationController(https://developer.apple.com/documentation/uikit/uinavigationcontroller)   
+네비게이션 바를 표시하고 종속되는 뷰 컨트롤러들을 관리하는 형태이다.   
+표시 영역이 따로 존재해서 자식 뷰 컨트롤러들의 뷰를 종속 관계에 따라 차례대로 보여준다.
+뷰를 보여주는 방식은 스택 자료구조 처럼 LIFO를 따른다.
+ 
+3. UIPageViewController(https://developer.apple.com/documentation/uikit/uipageviewcontroller)   
+하위 뷰를 관리하는 여러 개의 뷰 컨트롤러의 화면들을 페이지처럼 돌려볼 수 있도록 인터페이스를 제공해주는 뷰 컨트롤러이다.   
+한번에 하나의
+
+5. UISplitViewController(https://developer.apple.com/documentation/uikit/uisplitviewcontroller)   
+Master/Detail을 한꺼번에 보여주는 rootViewController 관계를 구성해주는 Container이다.      
+Master의 액션에 따라 Detail의 내용이 달라진다.
+Master의 뷰는 UISplitViewController의 스타일에 따라 primary 혹은 primary/supplementary view로 분류되고, Detail의 뷰는 secondary view로 분류된다.
+관리되는 뷰 컨트롤러들은 ```var children: [UIViewController] { get }``` 변수에서 관리되는데 여기에는 Master의 뷰 컨트롤러도 포함된다.
+UIViewController Present 스타일 중 Replace로 secondary view를 바꿀 수 있다.
+
+### 네비게이션 컨트롤러
+
+UINavigationController는 대부분의 앱에서 화면전환에 유용하기 때문에 자주 쓰이는 Container View 이다.   
+뷰 컨트롤러의 계층 구조 중 root ViewController가 UINavigationController이고 컨테이너 뷰 컨트롤러일 경우 네비게이션 바를 이용하여 뷰 사이를 전환할 수 있다.
+
+UINavigationController의 공식 문서 Overview에는 다음과 같이 적혀 있다.
+
+> A container view controller that defines a stack-based scheme for navigating hierarchical content.
+> > 스택 자료구조 형태의 스키마로 컨텐츠의 계층을 관리하는 컨테이너 뷰 컨트롤러
+
+하위 뷰 컨트롤러들을 스택 구조로 관리하기 때문에 현재 보여지는 화면에 뷰 계층을 지정하는 것도 push/pop이라는 용어를 빌려와서 사용하는 것으로 보인다.
+
+<img alt="UINavigationController_Push_Pop" width="900" src="PhotoFrame/README_images/UINavigationController_Push_Pop.jpg"/>
+
+### 요약정리
 
 * 뷰 계층 구조와 동일하게 뷰 컨트롤러 사이에도 계층 구조가 생긴다.
 * 다른 ViewController.view를 추가할 때는 컨테이너를 고려해야 한다.
-* 시스템 뷰 컨트롤러 중에는 컨테이너가 제공된다.
-* * 네비게이션 컨트롤러, 탭 바 컨트롤러, 스플릿 큐 컨트롤러, 페이지 뷰 컨트롤러
+* 시스템 뷰 컨트롤러 중에는 컨테이너가 제공된다(UINavigationController, UITabBarController, UISplitViewController, UIPageViewController).
 * 일반 뷰 컨트롤러도 child 뷰 컨트롤러를 배열로 관리할 수 있다.
 * child 뷰 컨트롤러가 추가되거나 삭제될 때 추가적인 코드가 필요하다.
