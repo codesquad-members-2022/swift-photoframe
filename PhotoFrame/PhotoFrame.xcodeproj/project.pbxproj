@@ -15,6 +15,9 @@
 		1B6FABDE27C48675005A49CE /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6FABDD27C48675005A49CE /* UIViewController+Extension.swift */; };
 		1B6FABE227C4A5B7005A49CE /* UINavigationController_Push_Pop.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1B6FABE127C4A5B6005A49CE /* UINavigationController_Push_Pop.jpg */; };
 		1B6FABE427C4AE73005A49CE /* iOS_Main_Run_Loop.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1B6FABE327C4AE73005A49CE /* iOS_Main_Run_Loop.jpg */; };
+		1B6FABE827C4B6BF005A49CE /* Step6_Result_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1B6FABE527C4B6BF005A49CE /* Step6_Result_3.jpg */; };
+		1B6FABE927C4B6BF005A49CE /* Step6_Result_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1B6FABE627C4B6BF005A49CE /* Step6_Result_1.jpg */; };
+		1B6FABEA27C4B6BF005A49CE /* Step6_Result_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1B6FABE727C4B6BF005A49CE /* Step6_Result_2.jpg */; };
 		1B856B1127BE31E7000D28D2 /* ViewController_Using_Segue.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1B856B1027BE31E7000D28D2 /* ViewController_Using_Segue.jpg */; };
 		1B856B1327BE3492000D28D2 /* Connect_Exit_Object.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B856B1227BE3492000D28D2 /* Connect_Exit_Object.png */; };
 		1B856B1727BE6D2E000D28D2 /* Step4_Result_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B856B1427BE6D2E000D28D2 /* Step4_Result_1.png */; };
@@ -87,6 +90,9 @@
 		1B6FABDD27C48675005A49CE /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		1B6FABE127C4A5B6005A49CE /* UINavigationController_Push_Pop.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = UINavigationController_Push_Pop.jpg; sourceTree = "<group>"; };
 		1B6FABE327C4AE73005A49CE /* iOS_Main_Run_Loop.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = iOS_Main_Run_Loop.jpg; sourceTree = "<group>"; };
+		1B6FABE527C4B6BF005A49CE /* Step6_Result_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Step6_Result_3.jpg; sourceTree = "<group>"; };
+		1B6FABE627C4B6BF005A49CE /* Step6_Result_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Step6_Result_1.jpg; sourceTree = "<group>"; };
+		1B6FABE727C4B6BF005A49CE /* Step6_Result_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Step6_Result_2.jpg; sourceTree = "<group>"; };
 		1B856B1027BE31E7000D28D2 /* ViewController_Using_Segue.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ViewController_Using_Segue.jpg; sourceTree = "<group>"; };
 		1B856B1227BE3492000D28D2 /* Connect_Exit_Object.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Connect_Exit_Object.png; sourceTree = "<group>"; };
 		1B856B1427BE6D2E000D28D2 /* Step4_Result_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Step4_Result_1.png; sourceTree = "<group>"; };
@@ -223,6 +229,9 @@
 		1BAD84EB27BA7FB300640DF8 /* README_images */ = {
 			isa = PBXGroup;
 			children = (
+				1B6FABE627C4B6BF005A49CE /* Step6_Result_1.jpg */,
+				1B6FABE727C4B6BF005A49CE /* Step6_Result_2.jpg */,
+				1B6FABE527C4B6BF005A49CE /* Step6_Result_3.jpg */,
 				1B6FABE327C4AE73005A49CE /* iOS_Main_Run_Loop.jpg */,
 				1B6FABE127C4A5B6005A49CE /* UINavigationController_Push_Pop.jpg */,
 				1BEBFFB227C31CD2005738B5 /* Github_Error_Solved_Complete.jpg */,
@@ -401,9 +410,12 @@
 				1BAD850A27BA816900640DF8 /* FirstSceneViewController_CustomClass_Admit.png in Resources */,
 				1BAD84BF27B9EB7000640DF8 /* Assets.xcassets in Resources */,
 				1BE818B627BCC86900950731 /* Step3_Result_After.png in Resources */,
+				1B6FABE927C4B6BF005A49CE /* Step6_Result_1.jpg in Resources */,
 				1BBB4BBC27BB60B20002A9F7 /* After_Git_Stash.png in Resources */,
 				1BAD850627BA816900640DF8 /* Library_Search_UITabBarController.png in Resources */,
+				1B6FABE827C4B6BF005A49CE /* Step6_Result_3.jpg in Resources */,
 				1BAD850427BA816900640DF8 /* FirstSceneViewController.png in Resources */,
+				1B6FABEA27C4B6BF005A49CE /* Step6_Result_2.jpg in Resources */,
 				1B5B3B5D27BF63BF00678889 /* Valid_State_Transition.png in Resources */,
 				1BAD850827BA816900640DF8 /* Storyboard_Drag.png in Resources */,
 				1BAD84EA27BA730800640DF8 /* README.md in Resources */,
