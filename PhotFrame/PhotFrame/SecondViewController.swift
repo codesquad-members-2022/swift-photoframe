@@ -17,6 +17,7 @@ class SecondViewController: UIViewController, UIImagePickerControllerDelegate, U
     override func viewDidLoad() {
         super.viewDidLoad()
         self.photoImageView?.layer.zPosition = 999
+        imagePickerController.delegate = self
     }
 
     @IBAction func nextImageButtonTouched(_ sender: Any) {
@@ -31,6 +32,13 @@ class SecondViewController: UIViewController, UIImagePickerControllerDelegate, U
         
         imagePickerController.sourceType = type
         present(imagePickerController, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            photoImageView.image = image
+        }
+        dismiss(animated: true, completion: nil)
     }
     
 }
