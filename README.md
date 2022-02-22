@@ -716,3 +716,13 @@ UINavigationController의 공식 문서 Overview에는 다음과 같이 적혀 �
 * 시스템 뷰 컨트롤러 중에는 컨테이너가 제공된다(UINavigationController, UITabBarController, UISplitViewController, UIPageViewController).
 * 일반 뷰 컨트롤러도 child 뷰 컨트롤러를 배열로 관리할 수 있다.
 * child 뷰 컨트롤러가 추가되거나 삭제될 때 추가적인 코드가 필요하다.
+
+---
+
+## Step6 결과
+
+UINavigationController를 Embed하여 닫기 버튼이 없이도 이전 화면으로 전환 가능해졌다.
+
+<img alt="Step6_Result_1" height="300" src="PhotoFrame/README_images/Step6_Result_1.jpg" width="150"/>
+<img alt="Step6_Result_2" height="300" src="PhotoFrame/README_images/Step6_Result_2.jpg" width="150"/>
+<img alt="Step6_Result_3" height="300" src="PhotoFrame/README_images/Step6_Result_3.jpg" width="150"/>
