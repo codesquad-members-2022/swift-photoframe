@@ -10,7 +10,8 @@ import UIKit
 class BlueViewController: UIViewController {
     @IBOutlet weak var closeButtonNumTwo: UIButton!
     @IBAction func closeButtonTouchedNumTwo(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        //self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
     
     override func viewWillAppear(_ animated: Bool) {
