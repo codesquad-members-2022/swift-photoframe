@@ -8,7 +8,9 @@
 import UIKit
 
 class SecondViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-      
+    
+    let imagePickerController = UIImagePickerController()
+    
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var photoFrame: UIImageView!
     
@@ -23,4 +25,12 @@ class SecondViewController: UIViewController, UIImagePickerControllerDelegate, U
         self.photoImageView.image = UIImage(named: tempNumber)
     }
 
+    @IBAction func selectButtonTouched(_ sender: Any) {
+        let type = UIImagePickerController.SourceType.photoLibrary
+        guard UIImagePickerController.isSourceTypeAvailable(type) else { return }
+        
+        imagePickerController.sourceType = type
+        present(imagePickerController, animated: true, completion: nil)
+    }
+    
 }
