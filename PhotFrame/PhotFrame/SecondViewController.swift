@@ -10,9 +10,11 @@ import UIKit
 class SecondViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
       
     @IBOutlet weak var photoImageView: UIImageView!
-   
+    @IBOutlet weak var photoFrame: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.photoImageView?.layer.zPosition = 999
     }
 
     @IBAction func nextImageButtonTouched(_ sender: Any) {
