@@ -44,7 +44,8 @@ class SecondViewController: UIViewController {
     }
     
     func openAlbum() {
-        
+        picker.sourceType = .photoLibrary
+        present(picker, animated: true, completion: nil)
     }
 }
 
