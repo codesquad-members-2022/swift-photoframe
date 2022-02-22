@@ -1,17 +1,7 @@
-# swift-photoframe
+# swift-photoframe(1주차)
 iOS 포토프레임 프로젝트 저장소
 
-# 사진액자 앱(1주차)
-
-## 기능요구사항
-
-- 포토프레임 프로젝트 저장소를 본인 저장소로 fork하고 로컬에 clone한다.
-- iOS 프로젝트 중에 App 템플릿을 만들고, 프로젝트 이름을 "PhotoFrame"으로 지정하고, 위에 만든 로컬 저장소 경로에 생성한다.
-- 스토리보드에서 TabBar Controller를 직접 추가한다.
-- 특정한 시뮬레이터를 하나 골라서 실행한다.
-- readme.md 파일을 자신의 프로젝트에 대한 설명으로 변경한다.
-  - 단계별로 미션을 해결하고 리뷰를 받고나면 readme.md 파일에 주요 작업 내용(바뀐 화면 이미지, 핵심 기능 설명)과 완성 날짜시간을 기록한다.
-  - 실행한 화면을 캡처해서 readme.md 파일에 포함한다.
+------
 
 ### 데일리 체크
 
@@ -73,9 +63,11 @@ iOS 포토프레임 프로젝트 저장소
 
 ###### 사진 앨범 선택하기
 
-- [ ] 화면 요소들을 겹쳐서 디자인 하는 경우 z축으로 위-아래를 구분해서 표시한다.
-- [ ] 이미지 테두리 액자 화면을 추가한다.
-- [ ] 사진 앨범에서 사진을 가져와서 보여줄 수 있도록 개선한다.
+- [x] 화면 요소들을 겹쳐서 디자인 하는 경우 z축으로 위-아래를 구분해서 표시한다.
+- [x] 이미지 테두리 액자 화면을 추가한다.
+- [x] 사진 앨범에서 사진을 가져와서 보여줄 수 있도록 개선한다.
+
+------
 
 ### 출력 확인
 
@@ -86,6 +78,8 @@ iOS 포토프레임 프로젝트 저장소
 ###### 2. IBOutlet 연결하기(2022.02.15)
 
 <img width="330" alt="스크린샷 2022-02-15 오후 4 18 32" src="https://user-images.githubusercontent.com/84652513/154011809-e19d6959-6e5e-4a34-b4bb-f61542a0079e.png">
+
+
 
 ###### 3. IBAction 연결하기(2022.02.15)
 
@@ -107,7 +101,7 @@ iOS 포토프레임 프로젝트 저장소
 
 |                        1단계(첫화면)                         |                        2단계(주황색)                         |                        3단계(빨간색)                         |
 | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
-| ![Simulator Screen Shot - iPhone 13 mini - 2022-02-17 at 16 10 32](https://user-images.githubusercontent.com/84652513/154427482-ca6a5e82-993e-48c2-9194-40f9280c97f4.png) | ![Simulator Screen Shot - iPhone 13 mini - 2022-02-17 at 16.10.36](/Users/joobanglee/Desktop/01_LeeJoobang/002_0 코드스쿼드/002_2코드스쿼드 마스터즈/0002 iOS 클래스/스크린샷/1. 사진액자앱/20220217_5_ViewController연결하기/Simulator Screen Shot - iPhone 13 mini - 2022-02-17 at 16.10.36.png) | ![Simulator Screen Shot - iPhone 13 mini - 2022-02-17 at 16.10.42](/Users/joobanglee/Desktop/01_LeeJoobang/002_0 코드스쿼드/002_2코드스쿼드 마스터즈/0002 iOS 클래스/스크린샷/1. 사진액자앱/20220217_5_ViewController연결하기/Simulator Screen Shot - iPhone 13 mini - 2022-02-17 at 16.10.42.png) |
+| ![Simulator Screen Shot - iPhone 13 mini - 2022-02-17 at 16 10 32](https://user-images.githubusercontent.com/84652513/154427482-ca6a5e82-993e-48c2-9194-40f9280c97f4.png) | ![Simulator Screen Shot - iPhone 13 mini - 2022-02-17 at 16 10 36](https://user-images.githubusercontent.com/84652513/155093610-de9e4633-029f-4342-81b1-23f79d3939b1.png) | ![Simulator Screen Shot - iPhone 13 mini - 2022-02-17 at 16 10 42](https://user-images.githubusercontent.com/84652513/155093714-2b50878a-f119-4887-a134-fb354d1af8db.png) |
 
 |                   상태메세지(터미널 표시)                    |
 | :----------------------------------------------------------: |
@@ -131,10 +125,23 @@ iOS 포토프레임 프로젝트 저장소
 
 
 
+###### 7. 사진앨범 선택하기(20221.02.22)
+
+|                            1단계                             |                            2단계                             |                            3단계                             |
+| :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+| ![Simulator Screen Shot - iPhone 13 mini - 2022-02-22 at 17 27 53](https://user-images.githubusercontent.com/84652513/155093172-19ffbc3a-21cf-4131-9bd7-e8e627117dd1.png) | ![Simulator Screen Shot - iPhone 13 mini - 2022-02-22 at 17 27 59](https://user-images.githubusercontent.com/84652513/155093270-9008889c-8d30-486d-8c98-7352241a2113.png) | ![Simulator Screen Shot - iPhone 13 mini - 2022-02-22 at 17 28 03](https://user-images.githubusercontent.com/84652513/155093353-2a8cc8d9-345f-4143-93df-5f5d7f851379.png) |
+
+
+
+------
+
 ### 참조링크
 
 - 깃학습(https://learngitbranching.js.org/?locale=ko)
 - 뷰 상태변화(https://etst.tistory.com/90)
+- UIImagePickerController(https://zeddios.tistory.com/125)
+
+------
 
 ### 프로젝트 설명
 
