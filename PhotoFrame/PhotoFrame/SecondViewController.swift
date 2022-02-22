@@ -13,6 +13,8 @@ class SecondViewController: UIViewController {
     
     @IBOutlet weak var photoFrameView: UIImageView!
     
+    let picker = UIImagePickerController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -30,6 +32,17 @@ class SecondViewController: UIViewController {
     }
     
     @IBAction func selectButtonTouched(_ sender: Any) {
+        let alert = UIAlertController(title: "타이틀", message: "메시지", preferredStyle: .alert)
+        let album = UIAlertAction(title: "사진 앨범", style: .default) { (action) in
+            self.openAlbum()
+        }
+        let cancel = UIAlertAction(title: "취소", style: .cancel, handler: nil)
+        alert.addAction(album)
+        alert.addAction(cancel)
+        present(alert, animated: true, completion: nil)
+    }
+    
+    func openAlbum() {
         
     }
 }
