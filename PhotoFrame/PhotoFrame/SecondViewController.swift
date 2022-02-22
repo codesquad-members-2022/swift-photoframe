@@ -50,5 +50,11 @@ class SecondViewController: UIViewController {
 }
 
 extension SecondViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) { // 미디어 선택이 끝나면 할 일 지정. info가 선택된 미디어임.
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            photoImageView.image = image
+        }
+        
+        dismiss(animated: true, completion: nil)
+    }
 }
