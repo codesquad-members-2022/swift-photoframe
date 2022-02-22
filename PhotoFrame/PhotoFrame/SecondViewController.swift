@@ -17,6 +17,7 @@ class SecondViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        picker.delegate = self
     }
     
     @IBAction func nextImageButtonTouched(_ sender: Any) {
@@ -45,4 +46,8 @@ class SecondViewController: UIViewController {
     func openAlbum() {
         
     }
+}
+
+extension SecondViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
 }
