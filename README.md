@@ -121,5 +121,7 @@ PhotoFrame/ViewController.swift:18: Fatal error: Unexpectedly found nil while im
 - [x]  ViewController Container 역할에 대해 학습하고 이해한다
 - [x]  ViewController Contatiner 종류에 대해 학습하고 활용한다
 - [x]  ViewController Container를 구현하기 위해 필요한 내용을 학습한다.
-  - [ ]  Navigation Controller를 Embed시켜서 동작하도록 개선한다.
-  - [ ]  실행화면 readme에 포함한다.
+  - [x]  Navigation Controller를 Embed시켜서 동작하도록 개선한다.
+  - [x]  실행화면 readme에 포함한다.
+
+<img src="https://user-images.githubusercontent.com/92699723/155069321-b2279ae4-bdf2-4fa4-bd88-b0a7a51cf9be.gif" width="300" height="600">
