@@ -8,10 +8,6 @@
 import UIKit
 
 class SecondViewController: UIViewController {
-    
-//    override var shouldAutorotate: Bool {
-//        false
-//    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,10 +16,6 @@ class SecondViewController: UIViewController {
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         .landscapeLeft
     }
-    
-//    override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation {
-//        .landscapeLeft
-//    }
     
     @IBAction func dismissButtonTouchUpInside(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
