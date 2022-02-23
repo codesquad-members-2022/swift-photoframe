@@ -125,3 +125,20 @@ PhotoFrame/ViewController.swift:18: Fatal error: Unexpectedly found nil while im
   - [x]  실행화면 readme에 포함한다.
 
 <img src="https://user-images.githubusercontent.com/92699723/155069321-b2279ae4-bdf2-4fa4-bd88-b0a7a51cf9be.gif" width="300" height="600">
+
+# STEP7
+- [ ]  Step7 다른화면 연결하기
+    - [ ]  탭바에 Second Scene을 설정할 수 있다.
+    - [ ]  UImageView를 추가해서 원하는 이미지를 표시할 수 있다
+      - [ ] 화면 상단 중앙에 배치하고, photoImageView Outlet으로 연결
+      - [ ] [다음] 버튼을 추가하고 Action으로 연결
+    - [ ]  Xcode 프로젝트에 앱 번들 리소스를 추가할 수 있다.
+      - [ ]  이미지 다운로드받아 프로젝트에 추가한다.
+      - [ ]  [다음] 버튼에 연결된 파일에 랜덤 숫자를 선택해서 이미지뷰에 표시한다.
+
+# STEP8
+- [ ]  Step8 사진 앨범 선택하기
+    - [ ]  원하는 뷰를 앞-뒤로 배치할 수 있다.
+      - [ ] 화면 요소들을 겹쳐서 디자인 하는 경우 z축으로 위-아래를 구분해서 표시한다.
+    - [ ]  ImagePickerController 역할을 학습하고, 원하는 사진을 불러올 수 있다.
+      - [ ] [다음] 버튼 아래 [선택] 버튼을 추가하고 IBAction을 연결한다.
