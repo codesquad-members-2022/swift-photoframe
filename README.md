@@ -128,13 +128,15 @@ PhotoFrame/ViewController.swift:18: Fatal error: Unexpectedly found nil while im
 
 # STEP7
 - [ ]  Step7 다른화면 연결하기
-    - [ ]  탭바에 Second Scene을 설정할 수 있다.
-    - [ ]  UImageView를 추가해서 원하는 이미지를 표시할 수 있다
-      - [ ] 화면 상단 중앙에 배치하고, photoImageView Outlet으로 연결
-      - [ ] [다음] 버튼을 추가하고 Action으로 연결
-    - [ ]  Xcode 프로젝트에 앱 번들 리소스를 추가할 수 있다.
-      - [ ]  이미지 다운로드받아 프로젝트에 추가한다.
-      - [ ]  [다음] 버튼에 연결된 파일에 랜덤 숫자를 선택해서 이미지뷰에 표시한다.
+    - [x]  탭바에 Second Scene을 설정할 수 있다.
+    - [x]  UImageView를 추가해서 원하는 이미지를 표시할 수 있다
+      - [x] 화면 상단 중앙에 배치하고, photoImageView Outlet으로 연결
+      - [x] [다음] 버튼을 추가하고 Action으로 연결
+    - [x]  Xcode 프로젝트에 앱 번들 리소스를 추가할 수 있다.
+      - [x]  이미지 다운로드받아 프로젝트에 추가한다.
+      - [x]  [다음] 버튼에 연결된 파일에 랜덤 숫자를 선택해서 이미지뷰에 표시한다.   
+
+<img src="https://user-images.githubusercontent.com/92699723/155387063-24826bd0-b1ed-4dee-89a5-11f52763cb88.gif" width="300" height="600">
 
 # STEP8
 - [ ]  Step8 사진 앨범 선택하기
