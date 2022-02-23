@@ -26,21 +26,27 @@
             </objects>
             <point key="canvasLocation" x="-1315" y="181"/>
         </scene>
-        <!--Item-->
+        <!--Second-->
         <scene sceneID="6qk-IU-5Bc">
             <objects>
-                <viewController id="MWc-6L-N5u" customClass="FirstViewController" customModule="PhotoFrame" sceneMemberID="viewController">
+                <viewController id="MWc-6L-N5u" customClass="SecondViewController" customModule="PhotoFrame" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JCM-4G-RGy">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zye-Ls-pLJ">
+                                <rect key="frame" x="75" y="117" width="240" height="240"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="BHE-X3-eY7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="Xnh-Cx-HeN"/>
+                    <tabBarItem key="tabBarItem" title="Second" id="Xnh-Cx-HeN"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ByR-OK-5TU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-301" y="472"/>
+            <point key="canvasLocation" x="-301.53846153846155" y="471.32701421800948"/>
         </scene>
         <!--First View Controller-->
         <scene sceneID="mQw-XE-njG">
@@ -197,11 +203,11 @@
             </objects>
             <point key="canvasLocation" x="2209.2307692307691" y="-257.34597156398104"/>
         </scene>
-        <!--Item-->
+        <!--First-->
         <scene sceneID="td1-3y-dbh">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Rtf-Nb-5fU" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="FNW-YA-pmh"/>
+                    <tabBarItem key="tabBarItem" title="First" id="FNW-YA-pmh"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="mee-jn-297">
                         <rect key="frame" x="0.0" y="44" width="390" height="44"/>

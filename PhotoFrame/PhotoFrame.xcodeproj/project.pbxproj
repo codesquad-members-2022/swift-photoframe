@@ -15,6 +15,7 @@
 		5B7FD77027BA713E00A6C714 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B7FD76E27BA713E00A6C714 /* Main.storyboard */; };
 		5B7FD77227BA713F00A6C714 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B7FD77127BA713F00A6C714 /* Assets.xcassets */; };
 		5B7FD77527BA713F00A6C714 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B7FD77327BA713F00A6C714 /* LaunchScreen.storyboard */; };
+		5BA7A07127C6AEF0005254A4 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA7A07027C6AEF0005254A4 /* SecondViewController.swift */; };
 		5BFD6D4C27BF6F5900BB77DB /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFD6D4B27BF6F5800BB77DB /* FirstViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		5B7FD77127BA713F00A6C714 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B7FD77427BA713F00A6C714 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B7FD77627BA713F00A6C714 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BA7A07027C6AEF0005254A4 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		5BFD6D4B27BF6F5800BB77DB /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,6 +68,7 @@
 				5B7FD76A27BA713E00A6C714 /* SceneDelegate.swift */,
 				5B7FD76C27BA713E00A6C714 /* ViewController.swift */,
 				5BFD6D4B27BF6F5800BB77DB /* FirstViewController.swift */,
+				5BA7A07027C6AEF0005254A4 /* SecondViewController.swift */,
 				5B4C4A2B27C3CF94008AF841 /* YellowViewController.swift */,
 				5B4C4A2D27C3D4B6008AF841 /* BlueViewController.swift */,
 				5B7FD76E27BA713E00A6C714 /* Main.storyboard */,
@@ -151,6 +154,7 @@
 				5B7FD76927BA713E00A6C714 /* AppDelegate.swift in Sources */,
 				5B7FD76B27BA713E00A6C714 /* SceneDelegate.swift in Sources */,
 				5BFD6D4C27BF6F5900BB77DB /* FirstViewController.swift in Sources */,
+				5BA7A07127C6AEF0005254A4 /* SecondViewController.swift in Sources */,
 				5B4C4A2E27C3D4B6008AF841 /* BlueViewController.swift in Sources */,
 				5B4C4A2C27C3CF94008AF841 /* YellowViewController.swift in Sources */,
 			);
