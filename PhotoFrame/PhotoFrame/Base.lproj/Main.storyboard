@@ -43,6 +43,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Second" id="Xnh-Cx-HeN"/>
+                    <connections>
+                        <outlet property="photoImageView" destination="Zye-Ls-pLJ" id="cgb-F7-8S1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ByR-OK-5TU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
