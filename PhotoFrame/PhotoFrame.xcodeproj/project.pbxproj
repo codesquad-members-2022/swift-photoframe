@@ -31,6 +31,12 @@
 		1B55D96A27C5FC3F00001B52 /* 21.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1B55D95527C5FC3F00001B52 /* 21.jpg */; };
 		1B55D96B27C5FC3F00001B52 /* 06.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1B55D95627C5FC3F00001B52 /* 06.jpg */; };
 		1B55D96C27C5FC3F00001B52 /* 13.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1B55D95727C5FC3F00001B52 /* 13.jpg */; };
+		1B55D97127C60A6600001B52 /* Step7_Result_before.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1B55D96D27C60A6600001B52 /* Step7_Result_before.jpg */; };
+		1B55D97227C60A6600001B52 /* Resource_Copy_Check.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1B55D96E27C60A6600001B52 /* Resource_Copy_Check.jpg */; };
+		1B55D97327C60A6600001B52 /* Step7_Result_after.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1B55D96F27C60A6600001B52 /* Step7_Result_after.jpg */; };
+		1B55D97427C60A6600001B52 /* Resource_Copy_Not_Reference.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1B55D97027C60A6600001B52 /* Resource_Copy_Not_Reference.jpg */; };
+		1B55D97C27C60C0D00001B52 /* Assets_Memory_Check.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1B55D97B27C60C0D00001B52 /* Assets_Memory_Check.jpg */; };
+		1B55D97E27C60C9000001B52 /* ProjectFile_Memory_Check.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1B55D97D27C60C9000001B52 /* ProjectFile_Memory_Check.jpg */; };
 		1B5B3B5727BF5A6600678889 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5B3B5627BF5A6600678889 /* AppDelegate.swift */; };
 		1B5B3B5927BF5FF800678889 /* YellowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5B3B5827BF5FF800678889 /* YellowViewController.swift */; };
 		1B5B3B5B27BF604000678889 /* BrownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5B3B5A27BF604000678889 /* BrownViewController.swift */; };
@@ -129,6 +135,12 @@
 		1B55D95527C5FC3F00001B52 /* 21.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 21.jpg; sourceTree = "<group>"; };
 		1B55D95627C5FC3F00001B52 /* 06.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 06.jpg; sourceTree = "<group>"; };
 		1B55D95727C5FC3F00001B52 /* 13.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 13.jpg; sourceTree = "<group>"; };
+		1B55D96D27C60A6600001B52 /* Step7_Result_before.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Step7_Result_before.jpg; sourceTree = "<group>"; };
+		1B55D96E27C60A6600001B52 /* Resource_Copy_Check.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Resource_Copy_Check.jpg; sourceTree = "<group>"; };
+		1B55D96F27C60A6600001B52 /* Step7_Result_after.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Step7_Result_after.jpg; sourceTree = "<group>"; };
+		1B55D97027C60A6600001B52 /* Resource_Copy_Not_Reference.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Resource_Copy_Not_Reference.jpg; sourceTree = "<group>"; };
+		1B55D97B27C60C0D00001B52 /* Assets_Memory_Check.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Assets_Memory_Check.jpg; sourceTree = "<group>"; };
+		1B55D97D27C60C9000001B52 /* ProjectFile_Memory_Check.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ProjectFile_Memory_Check.jpg; sourceTree = "<group>"; };
 		1B5B3B5627BF5A6600678889 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1B5B3B5827BF5FF800678889 /* YellowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowViewController.swift; sourceTree = "<group>"; };
 		1B5B3B5A27BF604000678889 /* BrownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrownViewController.swift; sourceTree = "<group>"; };
@@ -306,6 +318,12 @@
 		1BAD84EB27BA7FB300640DF8 /* README_images */ = {
 			isa = PBXGroup;
 			children = (
+				1B55D97B27C60C0D00001B52 /* Assets_Memory_Check.jpg */,
+				1B55D97D27C60C9000001B52 /* ProjectFile_Memory_Check.jpg */,
+				1B55D96E27C60A6600001B52 /* Resource_Copy_Check.jpg */,
+				1B55D97027C60A6600001B52 /* Resource_Copy_Not_Reference.jpg */,
+				1B55D96F27C60A6600001B52 /* Step7_Result_after.jpg */,
+				1B55D96D27C60A6600001B52 /* Step7_Result_before.jpg */,
 				1B6FABE627C4B6BF005A49CE /* Step6_Result_1.jpg */,
 				1B6FABE727C4B6BF005A49CE /* Step6_Result_2.jpg */,
 				1B6FABE527C4B6BF005A49CE /* Step6_Result_3.jpg */,
@@ -462,11 +480,13 @@
 				1BBB4BB827BB60590002A9F7 /* Project_Forder_File_Missing.png in Resources */,
 				1B856B1327BE3492000D28D2 /* Connect_Exit_Object.png in Resources */,
 				1BEBFFB527C31E2D005738B5 /* Github_Error_Solved_Reason.jpg in Resources */,
+				1B55D97127C60A6600001B52 /* Step7_Result_before.jpg in Resources */,
 				1B856B1827BE6D2E000D28D2 /* Step4_Result_2.png in Resources */,
 				1BAD851327BB529B00640DF8 /* Git_Push_Error_First.jpg in Resources */,
 				1BEBFFB127C31A2A005738B5 /* Github_Error_Solved_Solving1.jpg in Resources */,
 				1BEBFFB327C31CD3005738B5 /* Github_Error_Solved_Complete.jpg in Resources */,
 				1BAD850227BA816900640DF8 /* New_File_Cocoa_Touch_Class_1.png in Resources */,
+				1B55D97427C60A6600001B52 /* Resource_Copy_Not_Reference.jpg in Resources */,
 				1BAD850127BA816900640DF8 /* Empty_Storyboard.png in Resources */,
 				1BBB4BBA27BB60840002A9F7 /* Correct_Files_Conflict.png in Resources */,
 				1B55D95A27C5FC3F00001B52 /* 08.jpg in Resources */,
@@ -474,6 +494,7 @@
 				1B55D95927C5FC3F00001B52 /* 02.jpg in Resources */,
 				1BAD850B27BA816900640DF8 /* Result_Image.png in Resources */,
 				1BAD84C227B9EB7000640DF8 /* LaunchScreen.storyboard in Resources */,
+				1B55D97327C60A6600001B52 /* Step7_Result_after.jpg in Resources */,
 				1BAD850727BA816900640DF8 /* Storyboard_UITabBarController_isInitialViewController_on.png in Resources */,
 				1BAD84EF27BA801900640DF8 /* Basic_Storyboard_Image_isInitialViewController_off.png in Resources */,
 				1B55D96127C5FC3F00001B52 /* 19.jpg in Resources */,
@@ -512,8 +533,11 @@
 				1B55D96527C5FC3F00001B52 /* 15.jpg in Resources */,
 				1B6FABEA27C4B6BF005A49CE /* Step6_Result_2.jpg in Resources */,
 				1B55D95B27C5FC3F00001B52 /* 17.jpg in Resources */,
+				1B55D97C27C60C0D00001B52 /* Assets_Memory_Check.jpg in Resources */,
 				1B5B3B5D27BF63BF00678889 /* Valid_State_Transition.png in Resources */,
+				1B55D97E27C60C9000001B52 /* ProjectFile_Memory_Check.jpg in Resources */,
 				1B55D96427C5FC3F00001B52 /* 09.jpg in Resources */,
+				1B55D97227C60A6600001B52 /* Resource_Copy_Check.jpg in Resources */,
 				1BAD850827BA816900640DF8 /* Storyboard_Drag.png in Resources */,
 				1BAD84EA27BA730800640DF8 /* README.md in Resources */,
 				1B55D96727C5FC3F00001B52 /* 12.jpg in Resources */,

@@ -723,6 +723,62 @@ UINavigationController의 공식 문서 Overview에는 다음과 같이 적혀 �
 
 UINavigationController를 Embed하여 닫기 버튼이 없이도 이전 화면으로 전환 가능해졌다.
 
-<img alt="Step6_Result_1" height="300" src="PhotoFrame/README_images/Step6_Result_1.jpg" width="150"/>
-<img alt="Step6_Result_2" height="300" src="PhotoFrame/README_images/Step6_Result_2.jpg" width="150"/>
-<img alt="Step6_Result_3" height="300" src="PhotoFrame/README_images/Step6_Result_3.jpg" width="150"/>
+<span>
+    <img alt="Step6_Result_1" src="PhotoFrame/README_images/Step6_Result_1.jpg" width="150"/>
+    <img alt="Step6_Result_2" src="PhotoFrame/README_images/Step6_Result_2.jpg" width="150"/>
+    <img alt="Step6_Result_3" src="PhotoFrame/README_images/Step6_Result_3.jpg" width="150"/>
+</span>
+
+---
+
+### Bundle의 사전적 의미와 iOS 프로그래밍에서의 의미
+
+> 사전적 의미로 Bundle은 무언가를 한데 묶어 모아둔 것을 의미한다. 서구권의 사람들에게 'Bundle'이라는 단어는 정교하지 않게 모아서 대충 묶어둔 주머니 같은 것을 연상시키는지 젊은이들이 뒹굴면서 싸우는 것도 의미한다.
+
+iOS 에서 Bundle(클래스)은 앱에서 사용하는 미리 지정된 Bundle 디렉토리에 저장된 Resource와 Code들을 표현하는 것을 뜻한다.
+
+또한, iOS 프로젝트 안에서 번들 구조를 가지고 있다는 것은 디렉토리 구조를 가지고 있다는 것이다.
+
+### Resource 추가 시 주의해야 할 점
+
+아래의 그림과 같이 처음 Resource를 프로젝트에 추가할 때 **Copy items if needed**(필요하다면 복사)할 것인지를 물어본다. 상황에 따라 다르지만 대부분 설정하고 넣는 편이다.
+
+물론 가장 확실한 방법은 프로젝트에 추가된 파일을 **Show in Finder** 기능으로 실제 프로젝트 디렉토리에 위치하고 있는지 확인하는 것이다.
+
+<span>
+    <img alt="Resource_Copy_Not_Reference" src="PhotoFrame/README_images/Resource_Copy_Not_Reference.jpg" width="400"/>
+    <img alt="Resource_Copy_Check" src="PhotoFrame/README_images/Resource_Copy_Check.jpg" width="400"/>
+</span>
+
+조심에 조심, 확인에 확인이 필요한 부분이다. 누구든 어떠한 이유로든 간에 실수할 수 있는 부분이다.
+
+### Asset에 이미지를 추가
+
+iOS를 사용하는 아이폰이란 기기의 디스플레이에 따라 세 개로 나뉜다.
+
+* 레티나 디스플레이 없음
+* 레티나 디스플레이 탑재
+* 레티나 HD 디스플레이 탑재
+
+레티나 디스플레이는 고해상도의 디스플레이이기 떄문에 여기에 대응하는 고해상도 이미지가 필요하고, 그렇지 않은 경우는 저해상도의 이미지로도 충분하다. 그렇기 때문에 Assets.xcassets에 이미지를 추가하면 @1x, @2x, @3x 순서로 같은 이미지이지만 해상도를 달리 하여 상태로 이미지가 추가된다.
+
+문제가 되는 상황은 고해상도 디스플레이를 가진 기기에서 저해상도의 이미지를 표현하기 위해 픽셀의 수를 더해서 배율을 맞추게 될 경우 이미지가 깨지는 것이다.
+
+이번에 과제를 수행하면서 그냥 프로젝트 파일에 넣으면 될 것을 굳이 해상도별로 이미지를 추출([App icon Generator](https://appicon.co))하여 앱의 Assets에 넣었다. 그냥 지울까도 생각하였지만 넣은 김에 성능차이라도 비교해보려고 UIImage의 animatedImage 클래스 함수로 이미지를 생성 후 메모리 부하 테스트를 진행해 보았다.
+
+<span>
+    <img alt="Assets_Memory_Check" src="PhotoFrame/README_images/Assets_Memory_Check.jpg" width="400"/>
+    <img alt="ProjectFile_Memory_Check" src="PhotoFrame/README_images/ProjectFile_Memory_Check.jpg" width="400"/>
+</span>
+
+---
+
+## Step7 결과
+
+앱의 컨테이너 뷰인 탭 바 컨트롤러의 두 번째 root ViewController에서 UIImageView에 프로젝트의 이미지를 코드로 삽입하였다.
+
+<span>
+    <img alt="Step7_Result_before" src="PhotoFrame/README_images/Step7_Result_before.jpg" width="150"/>
+    <img alt="Step7_Result_after" src="PhotoFrame/README_images/Step7_Result_after.jpg" width="150"/>
+</span>
+
