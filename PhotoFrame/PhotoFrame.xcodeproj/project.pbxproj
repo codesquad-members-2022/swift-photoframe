@@ -8,6 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		1B3B420227BF877A006DD842 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3B420127BF877A006DD842 /* SecondViewController.swift */; };
+		1B55D93F27C5F8FB00001B52 /* SecondSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B55D93E27C5F8FB00001B52 /* SecondSceneViewController.swift */; };
+		1B55D94227C5FC1700001B52 /* 01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1B55D94127C5FC1700001B52 /* 01.jpg */; };
+		1B55D95827C5FC3F00001B52 /* 05.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1B55D94327C5FC3E00001B52 /* 05.jpg */; };
+		1B55D95927C5FC3F00001B52 /* 02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1B55D94427C5FC3E00001B52 /* 02.jpg */; };
+		1B55D95A27C5FC3F00001B52 /* 08.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1B55D94527C5FC3E00001B52 /* 08.jpg */; };
+		1B55D95B27C5FC3F00001B52 /* 17.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1B55D94627C5FC3F00001B52 /* 17.jpg */; };
+		1B55D95C27C5FC3F00001B52 /* 18.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1B55D94727C5FC3F00001B52 /* 18.jpg */; };
+		1B55D95D27C5FC3F00001B52 /* 14.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1B55D94827C5FC3F00001B52 /* 14.jpg */; };
+		1B55D95E27C5FC3F00001B52 /* 10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1B55D94927C5FC3F00001B52 /* 10.jpg */; };
+		1B55D95F27C5FC3F00001B52 /* 20.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1B55D94A27C5FC3F00001B52 /* 20.jpg */; };
+		1B55D96027C5FC3F00001B52 /* 03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1B55D94B27C5FC3F00001B52 /* 03.jpg */; };
+		1B55D96127C5FC3F00001B52 /* 19.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1B55D94C27C5FC3F00001B52 /* 19.jpg */; };
+		1B55D96227C5FC3F00001B52 /* 11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1B55D94D27C5FC3F00001B52 /* 11.jpg */; };
+		1B55D96327C5FC3F00001B52 /* 07.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1B55D94E27C5FC3F00001B52 /* 07.jpg */; };
+		1B55D96427C5FC3F00001B52 /* 09.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1B55D94F27C5FC3F00001B52 /* 09.jpg */; };
+		1B55D96527C5FC3F00001B52 /* 15.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1B55D95027C5FC3F00001B52 /* 15.jpg */; };
+		1B55D96627C5FC3F00001B52 /* 22.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1B55D95127C5FC3F00001B52 /* 22.jpg */; };
+		1B55D96727C5FC3F00001B52 /* 12.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1B55D95227C5FC3F00001B52 /* 12.jpg */; };
+		1B55D96827C5FC3F00001B52 /* 04.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1B55D95327C5FC3F00001B52 /* 04.jpg */; };
+		1B55D96927C5FC3F00001B52 /* 16.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1B55D95427C5FC3F00001B52 /* 16.jpg */; };
+		1B55D96A27C5FC3F00001B52 /* 21.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1B55D95527C5FC3F00001B52 /* 21.jpg */; };
+		1B55D96B27C5FC3F00001B52 /* 06.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1B55D95627C5FC3F00001B52 /* 06.jpg */; };
+		1B55D96C27C5FC3F00001B52 /* 13.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1B55D95727C5FC3F00001B52 /* 13.jpg */; };
 		1B5B3B5727BF5A6600678889 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5B3B5627BF5A6600678889 /* AppDelegate.swift */; };
 		1B5B3B5927BF5FF800678889 /* YellowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5B3B5827BF5FF800678889 /* YellowViewController.swift */; };
 		1B5B3B5B27BF604000678889 /* BrownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5B3B5A27BF604000678889 /* BrownViewController.swift */; };
@@ -83,6 +106,29 @@
 
 /* Begin PBXFileReference section */
 		1B3B420127BF877A006DD842 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		1B55D93E27C5F8FB00001B52 /* SecondSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSceneViewController.swift; sourceTree = "<group>"; };
+		1B55D94127C5FC1700001B52 /* 01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 01.jpg; sourceTree = "<group>"; };
+		1B55D94327C5FC3E00001B52 /* 05.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 05.jpg; sourceTree = "<group>"; };
+		1B55D94427C5FC3E00001B52 /* 02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 02.jpg; sourceTree = "<group>"; };
+		1B55D94527C5FC3E00001B52 /* 08.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 08.jpg; sourceTree = "<group>"; };
+		1B55D94627C5FC3F00001B52 /* 17.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 17.jpg; sourceTree = "<group>"; };
+		1B55D94727C5FC3F00001B52 /* 18.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 18.jpg; sourceTree = "<group>"; };
+		1B55D94827C5FC3F00001B52 /* 14.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 14.jpg; sourceTree = "<group>"; };
+		1B55D94927C5FC3F00001B52 /* 10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 10.jpg; sourceTree = "<group>"; };
+		1B55D94A27C5FC3F00001B52 /* 20.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 20.jpg; sourceTree = "<group>"; };
+		1B55D94B27C5FC3F00001B52 /* 03.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 03.jpg; sourceTree = "<group>"; };
+		1B55D94C27C5FC3F00001B52 /* 19.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 19.jpg; sourceTree = "<group>"; };
+		1B55D94D27C5FC3F00001B52 /* 11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 11.jpg; sourceTree = "<group>"; };
+		1B55D94E27C5FC3F00001B52 /* 07.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 07.jpg; sourceTree = "<group>"; };
+		1B55D94F27C5FC3F00001B52 /* 09.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 09.jpg; sourceTree = "<group>"; };
+		1B55D95027C5FC3F00001B52 /* 15.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 15.jpg; sourceTree = "<group>"; };
+		1B55D95127C5FC3F00001B52 /* 22.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 22.jpg; sourceTree = "<group>"; };
+		1B55D95227C5FC3F00001B52 /* 12.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 12.jpg; sourceTree = "<group>"; };
+		1B55D95327C5FC3F00001B52 /* 04.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 04.jpg; sourceTree = "<group>"; };
+		1B55D95427C5FC3F00001B52 /* 16.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 16.jpg; sourceTree = "<group>"; };
+		1B55D95527C5FC3F00001B52 /* 21.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 21.jpg; sourceTree = "<group>"; };
+		1B55D95627C5FC3F00001B52 /* 06.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 06.jpg; sourceTree = "<group>"; };
+		1B55D95727C5FC3F00001B52 /* 13.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 13.jpg; sourceTree = "<group>"; };
 		1B5B3B5627BF5A6600678889 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1B5B3B5827BF5FF800678889 /* YellowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowViewController.swift; sourceTree = "<group>"; };
 		1B5B3B5A27BF604000678889 /* BrownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrownViewController.swift; sourceTree = "<group>"; };
@@ -168,9 +214,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B55D94027C5FBCF00001B52 /* PhotoFrame_images */ = {
+			isa = PBXGroup;
+			children = (
+				1B55D94127C5FC1700001B52 /* 01.jpg */,
+				1B55D94427C5FC3E00001B52 /* 02.jpg */,
+				1B55D94B27C5FC3F00001B52 /* 03.jpg */,
+				1B55D95327C5FC3F00001B52 /* 04.jpg */,
+				1B55D94327C5FC3E00001B52 /* 05.jpg */,
+				1B55D95627C5FC3F00001B52 /* 06.jpg */,
+				1B55D94E27C5FC3F00001B52 /* 07.jpg */,
+				1B55D94527C5FC3E00001B52 /* 08.jpg */,
+				1B55D94F27C5FC3F00001B52 /* 09.jpg */,
+				1B55D94927C5FC3F00001B52 /* 10.jpg */,
+				1B55D94D27C5FC3F00001B52 /* 11.jpg */,
+				1B55D95227C5FC3F00001B52 /* 12.jpg */,
+				1B55D95727C5FC3F00001B52 /* 13.jpg */,
+				1B55D94827C5FC3F00001B52 /* 14.jpg */,
+				1B55D95027C5FC3F00001B52 /* 15.jpg */,
+				1B55D95427C5FC3F00001B52 /* 16.jpg */,
+				1B55D94627C5FC3F00001B52 /* 17.jpg */,
+				1B55D94727C5FC3F00001B52 /* 18.jpg */,
+				1B55D94C27C5FC3F00001B52 /* 19.jpg */,
+				1B55D94A27C5FC3F00001B52 /* 20.jpg */,
+				1B55D95527C5FC3F00001B52 /* 21.jpg */,
+				1B55D95127C5FC3F00001B52 /* 22.jpg */,
+			);
+			name = PhotoFrame_images;
+			sourceTree = "<group>";
+		};
 		1BAD84A927B9EB6E00640DF8 = {
 			isa = PBXGroup;
 			children = (
+				1B55D94027C5FBCF00001B52 /* PhotoFrame_images */,
 				1BAD84E927BA730800640DF8 /* README.md */,
 				1BAD84EB27BA7FB300640DF8 /* README_images */,
 				1BAD84B427B9EB6E00640DF8 /* PhotoFrame */,
@@ -199,6 +275,7 @@
 				1BAD84B927B9EB6E00640DF8 /* ViewController.swift */,
 				1B3B420127BF877A006DD842 /* SecondViewController.swift */,
 				1BAD84BB27B9EB6E00640DF8 /* Main.storyboard */,
+				1B55D93E27C5F8FB00001B52 /* SecondSceneViewController.swift */,
 				1B5B3B5A27BF604000678889 /* BrownViewController.swift */,
 				1B5B3B5827BF5FF800678889 /* YellowViewController.swift */,
 				1BAD84E727BA701A00640DF8 /* FirstSceneViewController.swift */,
@@ -377,8 +454,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B55D96B27C5FC3F00001B52 /* 06.jpg in Resources */,
 				1BAD850C27BA816900640DF8 /* New_File_Cocoa_Touch_Class_2.png in Resources */,
 				1B6FABE227C4A5B7005A49CE /* UINavigationController_Push_Pop.jpg in Resources */,
+				1B55D96327C5FC3F00001B52 /* 07.jpg in Resources */,
 				1BAD850D27BA816900640DF8 /* New_File_Cocoa_Touch_Class_3.png in Resources */,
 				1BBB4BB827BB60590002A9F7 /* Project_Forder_File_Missing.png in Resources */,
 				1B856B1327BE3492000D28D2 /* Connect_Exit_Object.png in Resources */,
@@ -390,16 +469,25 @@
 				1BAD850227BA816900640DF8 /* New_File_Cocoa_Touch_Class_1.png in Resources */,
 				1BAD850127BA816900640DF8 /* Empty_Storyboard.png in Resources */,
 				1BBB4BBA27BB60840002A9F7 /* Correct_Files_Conflict.png in Resources */,
+				1B55D95A27C5FC3F00001B52 /* 08.jpg in Resources */,
 				1BAD850927BA816900640DF8 /* Library_Search_UIViewController.png in Resources */,
+				1B55D95927C5FC3F00001B52 /* 02.jpg in Resources */,
 				1BAD850B27BA816900640DF8 /* Result_Image.png in Resources */,
 				1BAD84C227B9EB7000640DF8 /* LaunchScreen.storyboard in Resources */,
 				1BAD850727BA816900640DF8 /* Storyboard_UITabBarController_isInitialViewController_on.png in Resources */,
 				1BAD84EF27BA801900640DF8 /* Basic_Storyboard_Image_isInitialViewController_off.png in Resources */,
+				1B55D96127C5FC3F00001B52 /* 19.jpg in Resources */,
+				1B55D95C27C5FC3F00001B52 /* 18.jpg in Resources */,
 				1BAD850027BA816900640DF8 /* Empty_Storyboard_Library.png in Resources */,
+				1B55D96A27C5FC3F00001B52 /* 21.jpg in Resources */,
 				1B6FABE427C4AE73005A49CE /* iOS_Main_Run_Loop.jpg in Resources */,
+				1B55D96927C5FC3F00001B52 /* 16.jpg in Resources */,
 				1B856B1927BE6D2E000D28D2 /* Step4_Result_3.png in Resources */,
+				1B55D96027C5FC3F00001B52 /* 03.jpg in Resources */,
 				1BAD850F27BA82C200640DF8 /* initialViewController_Error.png in Resources */,
 				1BBB4BC627BBD7050002A9F7 /* Step2_Git_Rebase_Complete.png in Resources */,
+				1B55D96827C5FC3F00001B52 /* 04.jpg in Resources */,
+				1B55D95E27C5FC3F00001B52 /* 10.jpg in Resources */,
 				1B856B1727BE6D2E000D28D2 /* Step4_Result_1.png in Resources */,
 				1BAD84ED27BA7FDB00640DF8 /* Basic_Storyboard_Image.png in Resources */,
 				1BAD84FF27BA816900640DF8 /* Storyboard_UITabBarController_isInitialViewController_off.png in Resources */,
@@ -412,15 +500,26 @@
 				1BE818B627BCC86900950731 /* Step3_Result_After.png in Resources */,
 				1B6FABE927C4B6BF005A49CE /* Step6_Result_1.jpg in Resources */,
 				1BBB4BBC27BB60B20002A9F7 /* After_Git_Stash.png in Resources */,
+				1B55D94227C5FC1700001B52 /* 01.jpg in Resources */,
 				1BAD850627BA816900640DF8 /* Library_Search_UITabBarController.png in Resources */,
 				1B6FABE827C4B6BF005A49CE /* Step6_Result_3.jpg in Resources */,
+				1B55D96C27C5FC3F00001B52 /* 13.jpg in Resources */,
+				1B55D96627C5FC3F00001B52 /* 22.jpg in Resources */,
+				1B55D95827C5FC3F00001B52 /* 05.jpg in Resources */,
+				1B55D95D27C5FC3F00001B52 /* 14.jpg in Resources */,
 				1BAD850427BA816900640DF8 /* FirstSceneViewController.png in Resources */,
+				1B55D96227C5FC3F00001B52 /* 11.jpg in Resources */,
+				1B55D96527C5FC3F00001B52 /* 15.jpg in Resources */,
 				1B6FABEA27C4B6BF005A49CE /* Step6_Result_2.jpg in Resources */,
+				1B55D95B27C5FC3F00001B52 /* 17.jpg in Resources */,
 				1B5B3B5D27BF63BF00678889 /* Valid_State_Transition.png in Resources */,
+				1B55D96427C5FC3F00001B52 /* 09.jpg in Resources */,
 				1BAD850827BA816900640DF8 /* Storyboard_Drag.png in Resources */,
 				1BAD84EA27BA730800640DF8 /* README.md in Resources */,
+				1B55D96727C5FC3F00001B52 /* 12.jpg in Resources */,
 				1BAD850327BA816900640DF8 /* Storyboard_UITabBarController_noChildViewController.png in Resources */,
 				1BAD84BD27B9EB6E00640DF8 /* Main.storyboard in Resources */,
+				1B55D95F27C5FC3F00001B52 /* 20.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,6 +548,7 @@
 				1BAD84BA27B9EB6E00640DF8 /* ViewController.swift in Sources */,
 				1B5B3B5B27BF604000678889 /* BrownViewController.swift in Sources */,
 				1BAD84E827BA701A00640DF8 /* FirstSceneViewController.swift in Sources */,
+				1B55D93F27C5F8FB00001B52 /* SecondSceneViewController.swift in Sources */,
 				1B5B3B5727BF5A6600678889 /* AppDelegate.swift in Sources */,
 				1B3B420227BF877A006DD842 /* SecondViewController.swift in Sources */,
 				1BAD84B827B9EB6E00640DF8 /* SceneDelegate.swift in Sources */,
