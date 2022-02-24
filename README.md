@@ -782,3 +782,117 @@ iOS를 사용하는 아이폰이란 기기의 디스플레이에 따라 세 개�
     <img alt="Step7_Result_after" src="PhotoFrame/README_images/Step7_Result_after.jpg" width="150"/>
 </span>
 
+---
+
+# 사진(기능이 포함된) 앱의 프라이버시 경험을 위한 지침
+
+> 출처: [Delivering an Enhanced Privacy Experience in Your Photos App](https://developer.apple.com/documentation/photokit/delivering_an_enhanced_privacy_experience_in_your_photos_app)
+> > 현재 시점에서는 앱의 권한 부여에 대한 부분만을 학습한다.
+
+사진 앱에서 가져오는 사진이나 비디오는 개인적인 데이터들이다. 내장된 프라이버시 보호정책에 의해 앱은 사용자의 승인 없인 사진 라이브러리에 접근해서는 안된다.      
+만약 사진 애셋(혹은 컬렉션)이나 사진 라이브러리 업데이트같은 기능을 구현한다면, 사용자의 승인이 우선적으로 반드시 필요하다.
+
+사용자에게 승인을 요청할 때는 미리 정의된 메시지를 표시하도록 설정해줘야 하는데, 이는 Info.plist에 키-값을 입력하면 된다.
+
+|키|용도|값|
+|---|:---|:---|
+|Privacy - Photo Library Additions Usage Description|사진을 라이브러리에 넣을 권한이 필요할 경우|해당 권한 요청 시 넣을 메시지|
+|Privacy - Photo Library Usage Description|사진 라이브러리에서 사진 애셋을 가지고 오고 싶을 때|해당 권한 요청 시 넣을 메시지|
+|Privacy - Camera Usage Description|카메라를 불러오는 뷰를 사용하고 싶을 때|해당 권한 요청시 넣을 메시지|
+
+<img alt="Info_Plist_Setting" src="PhotoFrame/README_images/Info_Plist_Setting.png" width="500" />
+
+자동완성 기능을 이용하여 실수를 방지하는 것이 좋다.
+
+<img alt="Info_Plist_Complete" src="PhotoFrame/README_images/Info_Plist_Complete.png" width="500" />
+
+---
+
+## Delegate & Protocol
+
+> *protocol*은 규약 혹은 규칙이다. 네트워크 통신 중 start/endPoint 간 같은 프로토콜을 지원하면 통신할 수 있는 것처럼, protocol을 이용하면 객체를 접근하고 이용하는데 공통적인 요소를 접근/이용할 수 있다.   
+> *delegate*는 위임이라는 뜻이다. protocol이나 super class에서 반드시 구현해야할 부분을 구현했다면, 구현한 상위객체의 역할을 위임받을 수 있다.
+
+protocol은 프로퍼티와 프로시저를 정의만 할 수 있다. 함수는 body 부분인 {} 도 제외한다.
+
+```swift
+protocol MedicalCertificate {
+    var graduateMedicalColleage: Graduate?
+    var internShip: InternShip
+    func workInHospital(like manner: DoctorManner)
+}
+```
+
+객체의 존재 이유는 필요한 역할을 수행하기 위함이다. 그것을 1원칙으로 가져가지 않으면 객체지향 프로그래밍을 할 때 문제가 생길 수 있으니 웬만하면 이 원칙을 지키는 것이 좋다. 이 역할을 수행함에 있어 필요한 규칙(protocol)이 있다면 이를 미리 지정해 놓고 객체들이 이 역할을 수행하도록 할 수 있다.
+
+같은 역할을 한다고 정의된 객체에게는 같은 역할을 기대할 수 있다.
+
+```swift
+class AmbitiousDoctor: MedicalCertificate {
+    
+    private let graduateMedicalColleage: Graduate?
+    private let internShip: InternShip
+    
+    init() {
+        graduateMedicalColleage = SeoulUniversity()
+        internShip = SeoulHospital()
+    }
+    
+    func workInHospital(like manner: DoctorManner) {
+        work(as: manner)
+    }
+    
+    func getHospitalWorking() {
+        progress()
+    }
+    
+    // ...
+}
+
+class BlackJack: MedicalCertificate {
+    
+    private let graduateMedicalColleage: Graduate?
+    private let internShip: InternShip
+    
+    init() {
+        graduateMedicalColleage = TokyoUniversity()
+        internShip = TokyoHospital()
+    }
+    
+    func workInHospital(like manner: DoctorManner) {
+        work(as: manner)
+    }
+    
+    func throwAwayGraduate() {
+        graduateMedicalColleage = nil
+    }
+    
+    func getOutOfHospital() {
+        goOut()
+    }
+    
+    func makeMyOwnBusiness() {
+        workAsFreelancerDoctor()
+    }
+    
+    // ...
+}
+```
+
+야망있는 의사와 블랙잭은 둘 다 의사면허를 저장한 변수에 접근 가능하고(원작을 훼손하지 않기 위해 Graduate를 옵셔널로 처리하였다), 어떤 인턴쉽을 진행하였는지 알 수 있다. 또한, 병원에서 일 할수도 있다.
+
+**의사면서라는 protocol을 위임(delegate)받은 AmbitiousDoctor와 BlackJack 객체는 protocol에 정의된 역할을 수행할 수 있다.**
+
+이를 델리게이트 패턴이라 한다.
+
+## Step8 결과
+
+앱 내에서 카메라, 사진 라이브러리 기능을 이용하여 이미지를 생성할 수 있었다.
+
+<span>
+    <img alt="Step8_Result_1" src="PhotoFrame/README_images/Step8_Result_1.jpg" width="150"/>
+    <img alt="Step8_Result_2" src="PhotoFrame/README_images/Step8_Result_2.jpg" width="150"/>
+    <img alt="Step8_Result_3" src="PhotoFrame/README_images/Step8_Result_3.jpg" width="150"/>
+    <img alt="Step8_Result_4" src="PhotoFrame/README_images/Step8_Result_4.jpg" width="150"/>
+    <img alt="Step8_Result_5" src="PhotoFrame/README_images/Step8_Result_5.jpg" width="150"/>
+</span>
