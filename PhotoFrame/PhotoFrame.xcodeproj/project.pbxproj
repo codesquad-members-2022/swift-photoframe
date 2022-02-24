@@ -92,6 +92,13 @@
 		1BEBFFB327C31CD3005738B5 /* Github_Error_Solved_Complete.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1BEBFFB227C31CD2005738B5 /* Github_Error_Solved_Complete.jpg */; };
 		1BEBFFB527C31E2D005738B5 /* Github_Error_Solved_Reason.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1BEBFFB427C31E2D005738B5 /* Github_Error_Solved_Reason.jpg */; };
 		1BF3F4CA27C74A0D0086FFB0 /* photoframe-border.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BF3F4C927C74A0D0086FFB0 /* photoframe-border.png */; };
+		1BF3F4CD27C75A540086FFB0 /* Info_Plist_Complete.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BF3F4CB27C75A540086FFB0 /* Info_Plist_Complete.png */; };
+		1BF3F4CE27C75A540086FFB0 /* Info_Plist_Setting.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BF3F4CC27C75A540086FFB0 /* Info_Plist_Setting.png */; };
+		1BF3F4D427C75C590086FFB0 /* Step8_Result_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1BF3F4CF27C75C590086FFB0 /* Step8_Result_4.jpg */; };
+		1BF3F4D527C75C590086FFB0 /* Step8_Result_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1BF3F4D027C75C590086FFB0 /* Step8_Result_3.jpg */; };
+		1BF3F4D627C75C590086FFB0 /* Step8_Result_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1BF3F4D127C75C590086FFB0 /* Step8_Result_2.jpg */; };
+		1BF3F4D727C75C590086FFB0 /* Step8_Result_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1BF3F4D227C75C590086FFB0 /* Step8_Result_1.jpg */; };
+		1BF3F4D827C75C590086FFB0 /* Step8_Result_5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1BF3F4D327C75C590086FFB0 /* Step8_Result_5.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -201,6 +208,13 @@
 		1BEBFFB227C31CD2005738B5 /* Github_Error_Solved_Complete.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Github_Error_Solved_Complete.jpg; sourceTree = "<group>"; };
 		1BEBFFB427C31E2D005738B5 /* Github_Error_Solved_Reason.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Github_Error_Solved_Reason.jpg; sourceTree = "<group>"; };
 		1BF3F4C927C74A0D0086FFB0 /* photoframe-border.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photoframe-border.png"; sourceTree = "<group>"; };
+		1BF3F4CB27C75A540086FFB0 /* Info_Plist_Complete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Info_Plist_Complete.png; sourceTree = "<group>"; };
+		1BF3F4CC27C75A540086FFB0 /* Info_Plist_Setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Info_Plist_Setting.png; sourceTree = "<group>"; };
+		1BF3F4CF27C75C590086FFB0 /* Step8_Result_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Step8_Result_4.jpg; sourceTree = "<group>"; };
+		1BF3F4D027C75C590086FFB0 /* Step8_Result_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Step8_Result_3.jpg; sourceTree = "<group>"; };
+		1BF3F4D127C75C590086FFB0 /* Step8_Result_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Step8_Result_2.jpg; sourceTree = "<group>"; };
+		1BF3F4D227C75C590086FFB0 /* Step8_Result_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Step8_Result_1.jpg; sourceTree = "<group>"; };
+		1BF3F4D327C75C590086FFB0 /* Step8_Result_5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Step8_Result_5.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -321,6 +335,13 @@
 		1BAD84EB27BA7FB300640DF8 /* README_images */ = {
 			isa = PBXGroup;
 			children = (
+				1BF3F4D227C75C590086FFB0 /* Step8_Result_1.jpg */,
+				1BF3F4D127C75C590086FFB0 /* Step8_Result_2.jpg */,
+				1BF3F4D027C75C590086FFB0 /* Step8_Result_3.jpg */,
+				1BF3F4CF27C75C590086FFB0 /* Step8_Result_4.jpg */,
+				1BF3F4D327C75C590086FFB0 /* Step8_Result_5.jpg */,
+				1BF3F4CB27C75A540086FFB0 /* Info_Plist_Complete.png */,
+				1BF3F4CC27C75A540086FFB0 /* Info_Plist_Setting.png */,
 				1B55D97B27C60C0D00001B52 /* Assets_Memory_Check.jpg */,
 				1B55D97D27C60C9000001B52 /* ProjectFile_Memory_Check.jpg */,
 				1B55D96E27C60A6600001B52 /* Resource_Copy_Check.jpg */,
@@ -476,6 +497,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B55D96B27C5FC3F00001B52 /* 06.jpg in Resources */,
+				1BF3F4CE27C75A540086FFB0 /* Info_Plist_Setting.png in Resources */,
 				1BAD850C27BA816900640DF8 /* New_File_Cocoa_Touch_Class_2.png in Resources */,
 				1B6FABE227C4A5B7005A49CE /* UINavigationController_Push_Pop.jpg in Resources */,
 				1B55D96327C5FC3F00001B52 /* 07.jpg in Resources */,
@@ -491,6 +513,7 @@
 				1BAD850227BA816900640DF8 /* New_File_Cocoa_Touch_Class_1.png in Resources */,
 				1B55D97427C60A6600001B52 /* Resource_Copy_Not_Reference.jpg in Resources */,
 				1BAD850127BA816900640DF8 /* Empty_Storyboard.png in Resources */,
+				1BF3F4D727C75C590086FFB0 /* Step8_Result_1.jpg in Resources */,
 				1BBB4BBA27BB60840002A9F7 /* Correct_Files_Conflict.png in Resources */,
 				1B55D95A27C5FC3F00001B52 /* 08.jpg in Resources */,
 				1BAD850927BA816900640DF8 /* Library_Search_UIViewController.png in Resources */,
@@ -501,7 +524,10 @@
 				1BAD850727BA816900640DF8 /* Storyboard_UITabBarController_isInitialViewController_on.png in Resources */,
 				1BAD84EF27BA801900640DF8 /* Basic_Storyboard_Image_isInitialViewController_off.png in Resources */,
 				1B55D96127C5FC3F00001B52 /* 19.jpg in Resources */,
+				1BF3F4D527C75C590086FFB0 /* Step8_Result_3.jpg in Resources */,
+				1BF3F4D627C75C590086FFB0 /* Step8_Result_2.jpg in Resources */,
 				1B55D95C27C5FC3F00001B52 /* 18.jpg in Resources */,
+				1BF3F4CD27C75A540086FFB0 /* Info_Plist_Complete.png in Resources */,
 				1BAD850027BA816900640DF8 /* Empty_Storyboard_Library.png in Resources */,
 				1B55D96A27C5FC3F00001B52 /* 21.jpg in Resources */,
 				1B6FABE427C4AE73005A49CE /* iOS_Main_Run_Loop.jpg in Resources */,
@@ -509,6 +535,7 @@
 				1B856B1927BE6D2E000D28D2 /* Step4_Result_3.png in Resources */,
 				1B55D96027C5FC3F00001B52 /* 03.jpg in Resources */,
 				1BAD850F27BA82C200640DF8 /* initialViewController_Error.png in Resources */,
+				1BF3F4D827C75C590086FFB0 /* Step8_Result_5.jpg in Resources */,
 				1BBB4BC627BBD7050002A9F7 /* Step2_Git_Rebase_Complete.png in Resources */,
 				1B55D96827C5FC3F00001B52 /* 04.jpg in Resources */,
 				1B55D95E27C5FC3F00001B52 /* 10.jpg in Resources */,
@@ -531,6 +558,7 @@
 				1B55D96627C5FC3F00001B52 /* 22.jpg in Resources */,
 				1B55D95827C5FC3F00001B52 /* 05.jpg in Resources */,
 				1B55D95D27C5FC3F00001B52 /* 14.jpg in Resources */,
+				1BF3F4D427C75C590086FFB0 /* Step8_Result_4.jpg in Resources */,
 				1BAD850427BA816900640DF8 /* FirstSceneViewController.png in Resources */,
 				1B55D96227C5FC3F00001B52 /* 11.jpg in Resources */,
 				1BF3F4CA27C74A0D0086FFB0 /* photoframe-border.png in Resources */,
