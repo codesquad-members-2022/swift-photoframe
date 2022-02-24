@@ -127,7 +127,7 @@ PhotoFrame/ViewController.swift:18: Fatal error: Unexpectedly found nil while im
 <img src="https://user-images.githubusercontent.com/92699723/155069321-b2279ae4-bdf2-4fa4-bd88-b0a7a51cf9be.gif" width="300" height="600">
 
 # STEP7
-- [ ]  Step7 다른화면 연결하기
+- [x]  Step7 다른화면 연결하기
     - [x]  탭바에 Second Scene을 설정할 수 있다.
     - [x]  UImageView를 추가해서 원하는 이미지를 표시할 수 있다
       - [x] 화면 상단 중앙에 배치하고, photoImageView Outlet으로 연결
@@ -139,8 +139,49 @@ PhotoFrame/ViewController.swift:18: Fatal error: Unexpectedly found nil while im
 <img src="https://user-images.githubusercontent.com/92699723/155387063-24826bd0-b1ed-4dee-89a5-11f52763cb88.gif" width="300" height="600">
 
 # STEP8
-- [ ]  Step8 사진 앨범 선택하기
-    - [ ]  원하는 뷰를 앞-뒤로 배치할 수 있다.
-      - [ ] 화면 요소들을 겹쳐서 디자인 하는 경우 z축으로 위-아래를 구분해서 표시한다.
-    - [ ]  ImagePickerController 역할을 학습하고, 원하는 사진을 불러올 수 있다.
-      - [ ] [다음] 버튼 아래 [선택] 버튼을 추가하고 IBAction을 연결한다.
+- [x]  Step8 사진 앨범 선택하기
+    - [x]  원하는 뷰를 앞-뒤로 배치할 수 있다.
+      - [x] 화면 요소들을 겹쳐서 디자인 하는 경우 z축으로 위-아래를 구분해서 표시한다.
+    - [x]  ImagePickerController 역할을 학습하고, 원하는 사진을 불러올 수 있다.
+      - [x] [다음] 버튼 아래 [선택] 버튼을 추가하고 IBAction을 연결한다.
+
+<img src="https://user-images.githubusercontent.com/92699723/155477030-19499107-4209-4678-9caf-07be2d5b5a78.gif" width="300" height="600">   
+
+## UIImagePickerController에 대하여
+UIPickerController는 UINavigationController로부터 상속을 받는다.
+- 세로 모드만 지원한다.
+- 더이상 하위클래스가 없으므로 UIPickerController 클래스의 인스턴스 메서드만 사용가능하다.
+- image picker controller를 사용하려면 UIImagePickerControllerDelegate 프로토콜을 준수하는 Delegate를 제공해야 합니다.
+    - UIImagePickerControllerDelegate는 protocal로 채택하여 사용한다.
+        - image picker interface와 상호 작용하기 위해 delegate 개체가 구현해야 하는 메서드 집합입니다.
+        - 사용자에게 UIImagePickerController 인터페이스가 표시되면 앱 제어는 UIImagePickerController에게 넘어간다.
+        - UIImagePickerController 인스턴스를 만드는 클래스는 반드시 자신을 객체의 델리게이트로 선언해야 한다. 이를 위해서 <UIImagePickerControllerDelegate, UINavigationControllerDelegate> 프로토콜을 채택 해야 한다.
+        - 선택기를 닫으려면 UIImagePickerController 개체 표시를 담당하는 상위 컨트롤러의dismissModalViewController(animated:) 메서드를 호출합니다.
+- iOS 4.1부터 Delegate를 사용하여 스틸 이미지 메타데이터를 이미지와 함께 카메라 롤에 저장할 수 있습니다.
+
+UIImagePickerController 옵션설정
+
+- 카메라 선택
+    
+    ```swift
+    imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    ```
+    
+- 갤러리의 모든 폴더에서 선택
+    
+    ```swift
+    imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibaray;
+    ```
+    
+- PhotosAlbum(카메라 롤)에서 선택
+    
+    ```swift
+    imagePicker.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+    ```
+    
+
+### 🌐 참고사이트   
+[Apple Developer Documentation](https://developer.apple.com/documentation/uikit/uiimagepickercontroller)   
+[Apple Developer Documentation](https://developer.apple.com/documentation/uikit/uiimagepickercontrollerdelegate)   
+[[iOS] UIImagePickerController](https://velog.io/@leeyoungwoozz/iOS-UIImagePickerController)   
+[ios UIImagePickerController 정리](https://qteveryday.tistory.com/120)   
