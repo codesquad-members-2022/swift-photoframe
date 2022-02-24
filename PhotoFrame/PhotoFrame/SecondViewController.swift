@@ -26,7 +26,22 @@ class SecondViewController: UIViewController {
     }
     
     @IBAction func selectButtonTouched(_ sender: UIButton) {
-        
+        let myPicker = UIImagePickerController()
+        myPicker.sourceType = .photoLibrary
+        myPicker.allowsEditing = true
+        myPicker.delegate = self
+        self.present(myPicker, animated: true)
     }
     
 }
+extension SecondViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController){
+        self.dismiss(animated: true)
+    }
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let selectedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
+        self.photoImageView.image = selectedImage
+        picker.dismiss(animated: true, completion: nil)
+    }
+}
+
